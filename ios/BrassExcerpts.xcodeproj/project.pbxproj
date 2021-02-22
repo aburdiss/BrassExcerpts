@@ -11,15 +11,15 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		28B176E68262F9EFB8C1CFC7 /* libPods-BrassExcerpts-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A524E04DCD629E3FF623AF /* libPods-BrassExcerpts-tvOSTests.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* BrassExcerptsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* BrassExcerptsTests.m */; };
-		4B496E21424CFD8E6904E45A /* libPods-BrassExcerpts.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94AB4A02A9AAC08C0B0F140E /* libPods-BrassExcerpts.a */; };
+		4CC484C0D623D5F294542EEA /* libPods-BrassExcerpts.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E630A100397CB0A9E098A8F /* libPods-BrassExcerpts.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		8CDEC3EF77EE5013AE9DD95C /* libPods-BrassExcerpts-BrassExcerptsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14FBDE345C4F58AE4D346DD4 /* libPods-BrassExcerpts-BrassExcerptsTests.a */; };
-		90EE70E74C08512D133F2190 /* libPods-BrassExcerpts-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92A71C4EF05570F9EC98C968 /* libPods-BrassExcerpts-tvOS.a */; };
+		963659C6B08551BC3E0CC53E /* libPods-BrassExcerpts-BrassExcerptsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82B167A64A566405E4A207CC /* libPods-BrassExcerpts-BrassExcerptsTests.a */; };
+		A8403C47781C9A09563A8A8F /* libPods-BrassExcerpts-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A98EF2B3FD67851FE7419FC /* libPods-BrassExcerpts-tvOS.a */; };
+		BF30C42F0560DFC64E9154F7 /* libPods-BrassExcerpts-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 934BB474432CDC79B2D6C708 /* libPods-BrassExcerpts-tvOSTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,27 +44,27 @@
 		00E356EE1AD99517003FC87E /* BrassExcerptsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrassExcerptsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* BrassExcerptsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BrassExcerptsTests.m; sourceTree = "<group>"; };
+		03422245DCC19BF87A45B2C9 /* Pods-BrassExcerpts-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrassExcerpts-tvOS.release.xcconfig"; path = "Target Support Files/Pods-BrassExcerpts-tvOS/Pods-BrassExcerpts-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* BrassExcerpts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrassExcerpts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = BrassExcerpts/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = BrassExcerpts/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = BrassExcerpts/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = BrassExcerpts/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = BrassExcerpts/main.m; sourceTree = "<group>"; };
-		14FBDE345C4F58AE4D346DD4 /* libPods-BrassExcerpts-BrassExcerptsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BrassExcerpts-BrassExcerptsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2176E5B8E750C859EAA89E78 /* Pods-BrassExcerpts-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrassExcerpts-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-BrassExcerpts-tvOS/Pods-BrassExcerpts-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* BrassExcerpts-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BrassExcerpts-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* BrassExcerpts-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BrassExcerpts-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2EF240818B345104893013E9 /* Pods-BrassExcerpts-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrassExcerpts-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-BrassExcerpts-tvOSTests/Pods-BrassExcerpts-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		4275FDD14F357975D4205084 /* Pods-BrassExcerpts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrassExcerpts.release.xcconfig"; path = "Target Support Files/Pods-BrassExcerpts/Pods-BrassExcerpts.release.xcconfig"; sourceTree = "<group>"; };
-		53A524E04DCD629E3FF623AF /* libPods-BrassExcerpts-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BrassExcerpts-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5D84776B6B1F30CED6786C8B /* Pods-BrassExcerpts-BrassExcerptsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrassExcerpts-BrassExcerptsTests.debug.xcconfig"; path = "Target Support Files/Pods-BrassExcerpts-BrassExcerptsTests/Pods-BrassExcerpts-BrassExcerptsTests.debug.xcconfig"; sourceTree = "<group>"; };
-		66EF67BADFC8889047AF90AD /* Pods-BrassExcerpts-BrassExcerptsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrassExcerpts-BrassExcerptsTests.release.xcconfig"; path = "Target Support Files/Pods-BrassExcerpts-BrassExcerptsTests/Pods-BrassExcerpts-BrassExcerptsTests.release.xcconfig"; sourceTree = "<group>"; };
-		7FF4CCBBE84EC4E00A2BD81F /* Pods-BrassExcerpts-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrassExcerpts-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-BrassExcerpts-tvOSTests/Pods-BrassExcerpts-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3DDC1750E7519D4873F51660 /* Pods-BrassExcerpts-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrassExcerpts-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-BrassExcerpts-tvOSTests/Pods-BrassExcerpts-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		5A98EF2B3FD67851FE7419FC /* libPods-BrassExcerpts-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BrassExcerpts-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7982B8A1CF3FC84B50814CFF /* Pods-BrassExcerpts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrassExcerpts.release.xcconfig"; path = "Target Support Files/Pods-BrassExcerpts/Pods-BrassExcerpts.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = BrassExcerpts/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		92A71C4EF05570F9EC98C968 /* libPods-BrassExcerpts-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BrassExcerpts-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		94AB4A02A9AAC08C0B0F140E /* libPods-BrassExcerpts.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BrassExcerpts.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CC72C16DC8C6D1BCC0C1499B /* Pods-BrassExcerpts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrassExcerpts.debug.xcconfig"; path = "Target Support Files/Pods-BrassExcerpts/Pods-BrassExcerpts.debug.xcconfig"; sourceTree = "<group>"; };
-		D1D4D53156BC9BBCC37E9AD5 /* Pods-BrassExcerpts-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrassExcerpts-tvOS.release.xcconfig"; path = "Target Support Files/Pods-BrassExcerpts-tvOS/Pods-BrassExcerpts-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		D9D29ED135DD12E4EDEBC8A2 /* Pods-BrassExcerpts-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrassExcerpts-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-BrassExcerpts-tvOS/Pods-BrassExcerpts-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		82B167A64A566405E4A207CC /* libPods-BrassExcerpts-BrassExcerptsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BrassExcerpts-BrassExcerptsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		892332C54B99068C01AE6BAA /* Pods-BrassExcerpts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrassExcerpts.debug.xcconfig"; path = "Target Support Files/Pods-BrassExcerpts/Pods-BrassExcerpts.debug.xcconfig"; sourceTree = "<group>"; };
+		934BB474432CDC79B2D6C708 /* libPods-BrassExcerpts-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BrassExcerpts-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E630A100397CB0A9E098A8F /* libPods-BrassExcerpts.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BrassExcerpts.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDD9BE7C27DE7F9AFDB9981A /* Pods-BrassExcerpts-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrassExcerpts-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-BrassExcerpts-tvOSTests/Pods-BrassExcerpts-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C09EB8490D8BE78AFB5CA5BF /* Pods-BrassExcerpts-BrassExcerptsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrassExcerpts-BrassExcerptsTests.release.xcconfig"; path = "Target Support Files/Pods-BrassExcerpts-BrassExcerptsTests/Pods-BrassExcerpts-BrassExcerptsTests.release.xcconfig"; sourceTree = "<group>"; };
+		C35646469C46A4FD53022EE1 /* Pods-BrassExcerpts-BrassExcerptsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrassExcerpts-BrassExcerptsTests.debug.xcconfig"; path = "Target Support Files/Pods-BrassExcerpts-BrassExcerptsTests/Pods-BrassExcerpts-BrassExcerptsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
@@ -74,7 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CDEC3EF77EE5013AE9DD95C /* libPods-BrassExcerpts-BrassExcerptsTests.a in Frameworks */,
+				963659C6B08551BC3E0CC53E /* libPods-BrassExcerpts-BrassExcerptsTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B496E21424CFD8E6904E45A /* libPods-BrassExcerpts.a in Frameworks */,
+				4CC484C0D623D5F294542EEA /* libPods-BrassExcerpts.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90EE70E74C08512D133F2190 /* libPods-BrassExcerpts-tvOS.a in Frameworks */,
+				A8403C47781C9A09563A8A8F /* libPods-BrassExcerpts-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,7 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28B176E68262F9EFB8C1CFC7 /* libPods-BrassExcerpts-tvOSTests.a in Frameworks */,
+				BF30C42F0560DFC64E9154F7 /* libPods-BrassExcerpts-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,10 +141,10 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				94AB4A02A9AAC08C0B0F140E /* libPods-BrassExcerpts.a */,
-				14FBDE345C4F58AE4D346DD4 /* libPods-BrassExcerpts-BrassExcerptsTests.a */,
-				92A71C4EF05570F9EC98C968 /* libPods-BrassExcerpts-tvOS.a */,
-				53A524E04DCD629E3FF623AF /* libPods-BrassExcerpts-tvOSTests.a */,
+				9E630A100397CB0A9E098A8F /* libPods-BrassExcerpts.a */,
+				82B167A64A566405E4A207CC /* libPods-BrassExcerpts-BrassExcerptsTests.a */,
+				5A98EF2B3FD67851FE7419FC /* libPods-BrassExcerpts-tvOS.a */,
+				934BB474432CDC79B2D6C708 /* libPods-BrassExcerpts-tvOSTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -159,16 +159,15 @@
 		83826370F1DB800EF593F8F2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				CC72C16DC8C6D1BCC0C1499B /* Pods-BrassExcerpts.debug.xcconfig */,
-				4275FDD14F357975D4205084 /* Pods-BrassExcerpts.release.xcconfig */,
-				5D84776B6B1F30CED6786C8B /* Pods-BrassExcerpts-BrassExcerptsTests.debug.xcconfig */,
-				66EF67BADFC8889047AF90AD /* Pods-BrassExcerpts-BrassExcerptsTests.release.xcconfig */,
-				D9D29ED135DD12E4EDEBC8A2 /* Pods-BrassExcerpts-tvOS.debug.xcconfig */,
-				D1D4D53156BC9BBCC37E9AD5 /* Pods-BrassExcerpts-tvOS.release.xcconfig */,
-				7FF4CCBBE84EC4E00A2BD81F /* Pods-BrassExcerpts-tvOSTests.debug.xcconfig */,
-				2EF240818B345104893013E9 /* Pods-BrassExcerpts-tvOSTests.release.xcconfig */,
+				892332C54B99068C01AE6BAA /* Pods-BrassExcerpts.debug.xcconfig */,
+				7982B8A1CF3FC84B50814CFF /* Pods-BrassExcerpts.release.xcconfig */,
+				C35646469C46A4FD53022EE1 /* Pods-BrassExcerpts-BrassExcerptsTests.debug.xcconfig */,
+				C09EB8490D8BE78AFB5CA5BF /* Pods-BrassExcerpts-BrassExcerptsTests.release.xcconfig */,
+				2176E5B8E750C859EAA89E78 /* Pods-BrassExcerpts-tvOS.debug.xcconfig */,
+				03422245DCC19BF87A45B2C9 /* Pods-BrassExcerpts-tvOS.release.xcconfig */,
+				BDD9BE7C27DE7F9AFDB9981A /* Pods-BrassExcerpts-tvOSTests.debug.xcconfig */,
+				3DDC1750E7519D4873F51660 /* Pods-BrassExcerpts-tvOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -205,11 +204,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "BrassExcerptsTests" */;
 			buildPhases = (
-				7531CF7C423D58BA2A9D2CDC /* [CP] Check Pods Manifest.lock */,
+				FCD7B30D146B0FB87E5BCA86 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				6DD1E9C3ADA25978FAD1DC64 /* [CP] Copy Pods Resources */,
+				13673C315308211E17C80821 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -225,13 +224,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "BrassExcerpts" */;
 			buildPhases = (
-				D92803D0C54A34AF05701A84 /* [CP] Check Pods Manifest.lock */,
+				5AACB83B522CFF2335A45C95 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				4E9915854672DD2A2CD08133 /* [CP] Copy Pods Resources */,
+				F6605A344C008A07BD275C36 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -246,7 +245,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "BrassExcerpts-tvOS" */;
 			buildPhases = (
-				3EFE6D389D5039C75633F981 /* [CP] Check Pods Manifest.lock */,
+				FDFFA79FC1ED9EDA51AE5B25 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F122414F3F0027D42C /* Start Packager */,
 				2D02E4771E0B4A5D006451C7 /* Sources */,
 				2D02E4781E0B4A5D006451C7 /* Frameworks */,
@@ -266,7 +265,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "BrassExcerpts-tvOSTests" */;
 			buildPhases = (
-				C271C786C26E99DF414EBB33 /* [CP] Check Pods Manifest.lock */,
+				E6D06675C8791BC90A972712 /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
 				2D02E48D1E0B4A5D006451C7 /* Frameworks */,
 				2D02E48E1E0B4A5D006451C7 /* Resources */,
@@ -377,61 +376,7 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
-		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Bundle React Native Code And Images";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
-		};
-		3EFE6D389D5039C75633F981 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BrassExcerpts-tvOS-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4E9915854672DD2A2CD08133 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BrassExcerpts/Pods-BrassExcerpts-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BrassExcerpts/Pods-BrassExcerpts-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6DD1E9C3ADA25978FAD1DC64 /* [CP] Copy Pods Resources */ = {
+		13673C315308211E17C80821 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -449,7 +394,21 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BrassExcerpts-BrassExcerptsTests/Pods-BrassExcerpts-BrassExcerptsTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7531CF7C423D58BA2A9D2CDC /* [CP] Check Pods Manifest.lock */ = {
+		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Bundle React Native Code And Images";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+		};
+		5AACB83B522CFF2335A45C95 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -464,14 +423,14 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BrassExcerpts-BrassExcerptsTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-BrassExcerpts-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C271C786C26E99DF414EBB33 /* [CP] Check Pods Manifest.lock */ = {
+		E6D06675C8791BC90A972712 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -493,7 +452,25 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D92803D0C54A34AF05701A84 /* [CP] Check Pods Manifest.lock */ = {
+		F6605A344C008A07BD275C36 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BrassExcerpts/Pods-BrassExcerpts-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BrassExcerpts/Pods-BrassExcerpts-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FCD7B30D146B0FB87E5BCA86 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -508,7 +485,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BrassExcerpts-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-BrassExcerpts-BrassExcerptsTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -551,6 +528,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "export RCT_METRO_PORT=\"${RCT_METRO_PORT:=8081}\"\necho \"export RCT_METRO_PORT=${RCT_METRO_PORT}\" > \"${SRCROOT}/../node_modules/react-native/scripts/.packager.env\"\nif [ -z \"${RCT_NO_LAUNCH_PACKAGER+xxx}\" ] ; then\n  if nc -w 5 -z localhost ${RCT_METRO_PORT} ; then\n    if ! curl -s \"http://localhost:${RCT_METRO_PORT}/status\" | grep -q \"packager-status:running\" ; then\n      echo \"Port ${RCT_METRO_PORT} already in use, packager is either not running or not running correctly\"\n      exit 2\n    fi\n  else\n    open \"$SRCROOT/../node_modules/react-native/scripts/launchPackager.command\" || echo \"Can't start packager automatically\"\n  fi\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FDFFA79FC1ED9EDA51AE5B25 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BrassExcerpts-tvOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -608,7 +607,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5D84776B6B1F30CED6786C8B /* Pods-BrassExcerpts-BrassExcerptsTests.debug.xcconfig */;
+			baseConfigurationReference = C35646469C46A4FD53022EE1 /* Pods-BrassExcerpts-BrassExcerptsTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -631,7 +630,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 66EF67BADFC8889047AF90AD /* Pods-BrassExcerpts-BrassExcerptsTests.release.xcconfig */;
+			baseConfigurationReference = C09EB8490D8BE78AFB5CA5BF /* Pods-BrassExcerpts-BrassExcerptsTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -651,12 +650,13 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CC72C16DC8C6D1BCC0C1499B /* Pods-BrassExcerpts.debug.xcconfig */;
+			baseConfigurationReference = 892332C54B99068C01AE6BAA /* Pods-BrassExcerpts.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = BrassExcerpts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -674,11 +674,12 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4275FDD14F357975D4205084 /* Pods-BrassExcerpts.release.xcconfig */;
+			baseConfigurationReference = 7982B8A1CF3FC84B50814CFF /* Pods-BrassExcerpts.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = BrassExcerpts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -695,7 +696,7 @@
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D9D29ED135DD12E4EDEBC8A2 /* Pods-BrassExcerpts-tvOS.debug.xcconfig */;
+			baseConfigurationReference = 2176E5B8E750C859EAA89E78 /* Pods-BrassExcerpts-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -723,7 +724,7 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D1D4D53156BC9BBCC37E9AD5 /* Pods-BrassExcerpts-tvOS.release.xcconfig */;
+			baseConfigurationReference = 03422245DCC19BF87A45B2C9 /* Pods-BrassExcerpts-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -751,7 +752,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7FF4CCBBE84EC4E00A2BD81F /* Pods-BrassExcerpts-tvOSTests.debug.xcconfig */;
+			baseConfigurationReference = BDD9BE7C27DE7F9AFDB9981A /* Pods-BrassExcerpts-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -778,7 +779,7 @@
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2EF240818B345104893013E9 /* Pods-BrassExcerpts-tvOSTests.release.xcconfig */;
+			baseConfigurationReference = 3DDC1750E7519D4873F51660 /* Pods-BrassExcerpts-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -835,6 +836,7 @@
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -895,6 +897,7 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
