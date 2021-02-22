@@ -10,8 +10,27 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@react-native-async-storage/async-storage": "^1.13.4",
+    "@react-native-community/masked-view": "^0.1.10",
+    "@react-native-picker/picker": "^1.9.2",
+    "@react-navigation/bottom-tabs": "^5.11.2",
+    "@react-navigation/native": "^5.8.10",
+    "@react-navigation/stack": "^5.12.8",
+    "i18n-js": "^3.8.0",
+    "lodash.memoize": "^4.1.2",
     "react": "16.13.1",
-    "react-native": "0.63.3"
+    "react-native": "0.63.3",
+    "react-native-device-info": "^7.0.2",
+    "react-native-dynamic": "^1.0.0",
+    "react-native-gesture-handler": "^1.8.0",
+    "react-native-localize": "^2.0.0",
+    "react-native-reanimated": "^1.13.1",
+    "react-native-safe-area-context": "^3.1.8",
+    "react-native-safe-area-view": "^1.1.1",
+    "react-native-screens": "^2.11.0",
+    "react-native-vector-icons": "^8.0.0",
+    "underscore": "^1.12.0",
+    "underscore.string": "^3.3.5"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
@@ -19,6 +38,7 @@
     "@react-native-community/eslint-config": "^1.1.0",
     "babel-jest": "^25.1.0",
     "eslint": "^6.5.1",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^25.1.0",
     "metro-react-native-babel-preset": "^0.59.0",
     "react-test-renderer": "16.13.1"
