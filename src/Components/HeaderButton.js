@@ -13,8 +13,8 @@ const translate = (text) => text;
  * navigation options in the app. This component handles translation of the
  * text that is passed in to it.
  * @author Alexander Burdiss
- * @since 1/3/21
- * @version 1.0.2
+ * @since 3/3/21
+ * @version 1.0.0
  * @param {Function} props.handler The function to call when the button is
  * pressed.
  * @param {String} props.children The Text to render in the header button.
