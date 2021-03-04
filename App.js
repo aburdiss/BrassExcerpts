@@ -1,114 +1,97 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
-
+import 'react-native-gesture-handler';
 import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import {createStackNavigator} from '@react-navigation/stack';
+import {SafeAreaProvider} from 'react-native-safe-area-context';
+import {useDarkMode} from 'react-native-dynamic';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+import Composers from './src/Composers/Composers';
+import Excerpts from './src/Excerpts/Excerpts';
+import Settings from './src/Settings/Settings';
+import {colors} from './src/Model/Model';
 
-const App: () => React$Node = () => {
+const translate = (text) => text;
+
+const Tab = createBottomTabNavigator();
+const Stack = createStackNavigator();
+
+const ExcerptsStack = () => {
+  const DARKMODE = useDarkMode();
   return (
-    <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
-          <Header />
-          {global.HermesInternal == null ? null : (
-            <View style={styles.engine}>
-              <Text style={styles.footer}>Engine: Hermes</Text>
-            </View>
-          )}
-          <View style={styles.body}>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Step One</Text>
-              <Text style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.js</Text> to change this
-                screen and then come back to see your edits.
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>See Your Changes</Text>
-              <Text style={styles.sectionDescription}>
-                <ReloadInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Debug</Text>
-              <Text style={styles.sectionDescription}>
-                <DebugInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Learn More</Text>
-              <Text style={styles.sectionDescription}>
-                Read the docs to discover what to do next:
-              </Text>
-            </View>
-            <LearnMoreLinks />
-          </View>
-        </ScrollView>
-      </SafeAreaView>
-    </>
+    <Stack.Navigator>
+      <Stack.Screen name="Excerpts" component={Excerpts} />
+    </Stack.Navigator>
   );
 };
 
-const styles = StyleSheet.create({
-  scrollView: {
-    backgroundColor: Colors.lighter,
-  },
-  engine: {
-    position: 'absolute',
-    right: 0,
-  },
-  body: {
-    backgroundColor: Colors.white,
-  },
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-    color: Colors.black,
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-    color: Colors.dark,
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-  footer: {
-    color: Colors.dark,
-    fontSize: 12,
-    fontWeight: '600',
-    padding: 4,
-    paddingRight: 12,
-    textAlign: 'right',
-  },
-});
+const ComposersStack = () => {
+  const DARKMODE = useDarkMode();
+  return (
+    <Stack.Navigator>
+      <Stack.Screen name="Composers" component={Composers} />
+    </Stack.Navigator>
+  );
+};
+
+const SettingsStack = () => {
+  const DARKMODE = useDarkMode();
+  return (
+    <Stack.Navigator>
+      <Stack.Screen name="Settings" component={Settings} />
+    </Stack.Navigator>
+  );
+};
+
+const App = () => {
+  const DARKMODE = useDarkMode();
+  return (
+    <SafeAreaProvider>
+      <NavigationContainer>
+        <Tab.Navigator
+          screenOptions={({route}) => ({
+            tabBarIcon: ({color, size}) => {
+              let iconName;
+              if (route.name === 'Excerpts') {
+                iconName = 'book';
+              } else if (route.name === 'Composers') {
+                iconName = 'list';
+              } else if (route.name === 'Settings') {
+                iconName = 'options';
+              }
+              return <Ionicons name={iconName} size={size} color={color} />;
+            },
+          })}
+          tabBarOptions={{
+            activeTintColor: DARKMODE ? colors.orangeDark : colors.orangeLight,
+            inactiveTintColor: colors.systemGray,
+            style: {
+              backgroundColor: DARKMODE ? colors.systemGray6Dark : colors.white,
+              borderTopColor: DARKMODE
+                ? colors.systemGray5Dark
+                : colors.systemGray5Light,
+            },
+          }}>
+          <Tab.Screen
+            name="Excerpts"
+            component={ExcerptsStack}
+            options={{title: translate('Excerpts')}}
+          />
+          <Tab.Screen
+            name="Composers"
+            component={ComposersStack}
+            options={{title: translate('Composers')}}
+          />
+          <Tab.Screen
+            name="Settings"
+            component={SettingsStack}
+            options={{title: translate('Settings')}}
+          />
+        </Tab.Navigator>
+      </NavigationContainer>
+    </SafeAreaProvider>
+  );
+};
 
 export default App;
