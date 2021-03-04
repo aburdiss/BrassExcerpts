@@ -7,39 +7,118 @@ import {SafeAreaProvider} from 'react-native-safe-area-context';
 import {useDarkMode} from 'react-native-dynamic';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-import Composers from './src/Composers/Composers';
-import Excerpts from './src/Excerpts/Excerpts';
-import Settings from './src/Settings/Settings';
+import HeaderButton from './src/Components/HeaderButton';
 import {colors} from './src/Model/Model';
+
+import Composers from './src/Composers/Composers';
+import ComposerDetail from './src/Composers/ComposerDetail';
+import Excerpts from './src/Excerpts/Excerpts';
+import ExcerptDetail from './src/Excerpts/ExcerptDetail';
+import RandomExcerpt from './src/Excerpts/RandomExcerpt';
+import More from './src/More/More';
 
 const translate = (text) => text;
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 
-const ExcerptsStack = () => {
+const ExcerptsStack = ({navigation}) => {
   const DARKMODE = useDarkMode();
   return (
-    <Stack.Navigator>
-      <Stack.Screen name="Excerpts" component={Excerpts} />
+    <Stack.Navigator
+      screenOptions={{
+        headerTintColor: DARKMODE ? colors.greenDark : colors.greenLight,
+        headerTitleStyle: {
+          color: DARKMODE ? colors.white : colors.black,
+        },
+        headerStyle: {
+          backgroundColor: DARKMODE ? colors.systemGray6Dark : colors.white,
+          borderBottomWidth: 1,
+          borderBottomColor: DARKMODE
+            ? colors.systemGray5Dark
+            : colors.systemGray5Light,
+          shadowColor: 'transparent',
+        },
+        headerBackTitle: translate('Back'),
+      }}>
+      <Stack.Screen
+        name="Excerpts"
+        component={Excerpts}
+        options={{
+          headerRight: () => (
+            <HeaderButton
+              handler={() => {
+                navigation.navigate('Random Excerpt');
+              }}>
+              Random
+            </HeaderButton>
+          ),
+          title: translate('Custom Routines'),
+        }}
+      />
+      <Stack.Screen
+        name="Excerpt Detail"
+        component={ExcerptDetail}
+        options={({route}) => ({
+          title: route.params.item,
+        })}
+      />
+      <Stack.Screen name="Random Excerpt" component={RandomExcerpt} />
     </Stack.Navigator>
   );
 };
 
-const ComposersStack = () => {
+const ComposersStack = ({navigation}) => {
   const DARKMODE = useDarkMode();
   return (
-    <Stack.Navigator>
+    <Stack.Navigator
+      screenOptions={{
+        headerTintColor: DARKMODE ? colors.greenDark : colors.greenLight,
+        headerTitleStyle: {
+          color: DARKMODE ? colors.white : colors.black,
+        },
+        headerStyle: {
+          backgroundColor: DARKMODE ? colors.systemGray6Dark : colors.white,
+          borderBottomWidth: 1,
+          borderBottomColor: DARKMODE
+            ? colors.systemGray5Dark
+            : colors.systemGray5Light,
+          shadowColor: 'transparent',
+        },
+        headerBackTitle: translate('Back'),
+      }}>
       <Stack.Screen name="Composers" component={Composers} />
+      <Stack.Screen
+        name="Composer Detail"
+        component={ComposerDetail}
+        options={({route}) => ({
+          title: route.params.item,
+        })}
+      />
     </Stack.Navigator>
   );
 };
 
-const SettingsStack = () => {
+const MoreStack = ({navigation}) => {
   const DARKMODE = useDarkMode();
   return (
-    <Stack.Navigator>
-      <Stack.Screen name="Settings" component={Settings} />
+    <Stack.Navigator
+      screenOptions={{
+        headerTintColor: DARKMODE ? colors.greenDark : colors.greenLight,
+        headerTitleStyle: {
+          color: DARKMODE ? colors.white : colors.black,
+        },
+        headerStyle: {
+          backgroundColor: DARKMODE ? colors.systemGray6Dark : colors.white,
+          borderBottomWidth: 1,
+          borderBottomColor: DARKMODE
+            ? colors.systemGray5Dark
+            : colors.systemGray5Light,
+          shadowColor: 'transparent',
+        },
+        headerBackTitle: translate('Back'),
+      }}>
+      <Stack.Screen name="More" component={More} />
     </Stack.Navigator>
   );
 };
@@ -57,14 +136,14 @@ const App = () => {
                 iconName = 'book';
               } else if (route.name === 'Composers') {
                 iconName = 'list';
-              } else if (route.name === 'Settings') {
+              } else if (route.name === 'More') {
                 iconName = 'options';
               }
               return <Ionicons name={iconName} size={size} color={color} />;
             },
           })}
           tabBarOptions={{
-            activeTintColor: DARKMODE ? colors.orangeDark : colors.orangeLight,
+            activeTintColor: DARKMODE ? colors.greenDark : colors.greenLight,
             inactiveTintColor: colors.systemGray,
             style: {
               backgroundColor: DARKMODE ? colors.systemGray6Dark : colors.white,
@@ -84,9 +163,9 @@ const App = () => {
             options={{title: translate('Composers')}}
           />
           <Tab.Screen
-            name="Settings"
-            component={SettingsStack}
-            options={{title: translate('Settings')}}
+            name="More"
+            component={MoreStack}
+            options={{title: translate('More')}}
           />
         </Tab.Navigator>
       </NavigationContainer>

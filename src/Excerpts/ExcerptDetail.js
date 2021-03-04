@@ -1,8 +1,8 @@
 import React from 'react';
 import {View} from 'react-native';
 
-const Composers = () => {
+const ExcerptDetail = () => {
   return <View />;
 };
 
-export default Composers;
+export default ExcerptDetail;

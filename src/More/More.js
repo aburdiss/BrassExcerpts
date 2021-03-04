@@ -1,8 +1,8 @@
 import React from 'react';
 import {View} from 'react-native';
 
-const Composers = () => {
+const Settings = () => {
   return <View />;
 };
 
-export default Composers;
+export default Settings;

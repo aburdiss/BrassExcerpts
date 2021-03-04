@@ -1,8 +1,8 @@
 import React from 'react';
 import {View} from 'react-native';
 
-const Excerpts = () => {
+const RandomExcerpt = () => {
   return <View />;
 };
 
-export default Excerpts;
+export default RandomExcerpt;
