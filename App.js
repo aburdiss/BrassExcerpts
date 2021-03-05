@@ -15,6 +15,7 @@ import ComposerDetail from './src/Composers/ComposerDetail';
 import Excerpts from './src/Excerpts/Excerpts';
 import ExcerptDetail from './src/Excerpts/ExcerptDetail';
 import RandomExcerpt from './src/Excerpts/RandomExcerpt';
+import Jobs from './src/Jobs/Jobs';
 import More from './src/More/More';
 
 const translate = (text) => text;
@@ -53,7 +54,7 @@ const ExcerptsStack = ({navigation}) => {
               Random
             </HeaderButton>
           ),
-          title: translate('Custom Routines'),
+          title: translate('BrassXcerpts'),
         }}
       />
       <Stack.Screen
@@ -99,6 +100,30 @@ const ComposersStack = ({navigation}) => {
   );
 };
 
+const JobsStack = ({navigation}) => {
+  const DARKMODE = useDarkMode();
+  return (
+    <Stack.Navigator
+      screenOptions={{
+        headerTintColor: DARKMODE ? colors.greenDark : colors.greenLight,
+        headerTitleStyle: {
+          color: DARKMODE ? colors.white : colors.black,
+        },
+        headerStyle: {
+          backgroundColor: DARKMODE ? colors.systemGray6Dark : colors.white,
+          borderBottomWidth: 1,
+          borderBottomColor: DARKMODE
+            ? colors.systemGray5Dark
+            : colors.systemGray5Light,
+          shadowColor: 'transparent',
+        },
+        headerBackTitle: translate('Back'),
+      }}>
+      <Stack.Screen name="Jobs" component={Jobs} />
+    </Stack.Navigator>
+  );
+};
+
 const MoreStack = ({navigation}) => {
   const DARKMODE = useDarkMode();
   return (
@@ -133,9 +158,11 @@ const App = () => {
             tabBarIcon: ({color, size}) => {
               let iconName;
               if (route.name === 'Excerpts') {
-                iconName = 'book';
+                iconName = 'musical-notes';
               } else if (route.name === 'Composers') {
-                iconName = 'list';
+                iconName = 'people-outline';
+              } else if (route.name === 'Jobs') {
+                iconName = 'logo-rss';
               } else if (route.name === 'More') {
                 iconName = 'options';
               }
@@ -161,6 +188,11 @@ const App = () => {
             name="Composers"
             component={ComposersStack}
             options={{title: translate('Composers')}}
+          />
+          <Tab.Screen
+            name="Jobs"
+            component={JobsStack}
+            options={{title: translate('Jobs')}}
           />
           <Tab.Screen
             name="More"

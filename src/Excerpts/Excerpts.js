@@ -2,7 +2,7 @@ import React from 'react';
 import {View, FlatList, Text} from 'react-native';
 
 import ExcerptListRow from './ExcerptListRow';
-import {excerpts as tromboneExcerpts} from '../Model/TromboneExcerpts';
+import {excerpts as tromboneExcerpts} from '../Model/Excerpts/TromboneExcerpts';
 import {useNavigation} from '@react-navigation/native';
 
 const Excerpts = () => {

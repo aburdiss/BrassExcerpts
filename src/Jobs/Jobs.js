@@ -1,8 +1,8 @@
 import React from 'react';
 import {View} from 'react-native';
 
-const More = () => {
+const Jobs = () => {
   return <View />;
 };
 
-export default More;
+export default Jobs;
