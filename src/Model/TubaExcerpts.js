@@ -2840,9 +2840,9 @@ let wagner = {
 };
 
 /**
-     An alphabetical list of all of the compositions in the app.
-     */
-const excerpts = [
+ * @description An alphabetical list of all of the compositions in the app.
+ */
+export const excerpts = [
   berliozBenvenuto,
   berliozFaust,
   berliozKingLear,
@@ -2898,9 +2898,9 @@ const excerpts = [
 ];
 
 /**
-     An alphabetical list of all of the composers in the app.
-     */
-const composers = [
+ * @description An alphabetical list of all of the composers in the app.
+ */
+export const composers = [
   berlioz,
   brahms,
   bruckner,

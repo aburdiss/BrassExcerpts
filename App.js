@@ -60,7 +60,7 @@ const ExcerptsStack = ({navigation}) => {
         name="Excerpt Detail"
         component={ExcerptDetail}
         options={({route}) => ({
-          title: route.params.item,
+          title: route.params.name,
         })}
       />
       <Stack.Screen name="Random Excerpt" component={RandomExcerpt} />

@@ -3107,9 +3107,9 @@ let weber = {
 };
 
 /**
-     An alphabetical list of all of the compositions in the app.
-     */
-const excerpts = [
+ * @description An alphabetical list of all of the compositions in the app.
+ */
+export const excerpts = [
   bachBrandenburgConcerto,
   bachMassB,
   beethovenFidelio,
@@ -3165,9 +3165,9 @@ const excerpts = [
 ];
 
 /**
-     An alphabetical list of all of the composers in the app.
-     */
-const composers = [
+ * @description An alphabetical list of all of the composers in the app.
+ */
+export const composers = [
   bach,
   beethoven,
   berlioz,
@@ -3186,7 +3186,8 @@ const composers = [
   schubert,
   schumann,
   rStrauss,
-  /*stravinsky,*/ tchaikovsky,
+  /*stravinsky,*/
+  tchaikovsky,
   wagner,
   weber,
 ];
