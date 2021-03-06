@@ -20,6 +20,7 @@
 		963659C6B08551BC3E0CC53E /* libPods-BrassExcerpts-BrassExcerptsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82B167A64A566405E4A207CC /* libPods-BrassExcerpts-BrassExcerptsTests.a */; };
 		A8403C47781C9A09563A8A8F /* libPods-BrassExcerpts-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A98EF2B3FD67851FE7419FC /* libPods-BrassExcerpts-tvOS.a */; };
 		BF30C42F0560DFC64E9154F7 /* libPods-BrassExcerpts-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 934BB474432CDC79B2D6C708 /* libPods-BrassExcerpts-tvOSTests.a */; };
+		CC9A357925F3D2C0001373B6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CC9A357825F3D2C0001373B6 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		CC09835F25F09446006C012D /* Fontisto.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Fontisto.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
 		CC09836025F09446006C012D /* Entypo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
 		CC09836125F09446006C012D /* Foundation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
+		CC9A357825F3D2C0001373B6 /* InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
@@ -148,6 +150,7 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				CC9A357825F3D2C0001373B6 /* InfoPlist.strings */,
 			);
 			name = BrassExcerpts;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				CC9A357925F3D2C0001373B6 /* InfoPlist.strings in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

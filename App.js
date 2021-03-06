@@ -18,8 +18,6 @@ import RandomExcerpt from './src/Excerpts/RandomExcerpt';
 import Jobs from './src/Jobs/Jobs';
 import More from './src/More/More';
 
-const translate = (text) => text;
-
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 
@@ -40,7 +38,7 @@ const ExcerptsStack = ({navigation}) => {
             : colors.systemGray5Light,
           shadowColor: 'transparent',
         },
-        headerBackTitle: translate('Back'),
+        headerBackTitle: 'Back',
       }}>
       <Stack.Screen
         name="Excerpts"
@@ -54,7 +52,7 @@ const ExcerptsStack = ({navigation}) => {
               Random
             </HeaderButton>
           ),
-          title: translate('BrassXcerpts'),
+          title: 'BrassXcerpts',
         }}
       />
       <Stack.Screen
@@ -86,7 +84,7 @@ const ComposersStack = ({navigation}) => {
             : colors.systemGray5Light,
           shadowColor: 'transparent',
         },
-        headerBackTitle: translate('Back'),
+        headerBackTitle: 'Back',
       }}>
       <Stack.Screen name="Composers" component={Composers} />
       <Stack.Screen
@@ -117,7 +115,7 @@ const JobsStack = ({navigation}) => {
             : colors.systemGray5Light,
           shadowColor: 'transparent',
         },
-        headerBackTitle: translate('Back'),
+        headerBackTitle: 'Back',
       }}>
       <Stack.Screen name="Jobs" component={Jobs} />
     </Stack.Navigator>
@@ -141,7 +139,7 @@ const MoreStack = ({navigation}) => {
             : colors.systemGray5Light,
           shadowColor: 'transparent',
         },
-        headerBackTitle: translate('Back'),
+        headerBackTitle: 'Back',
       }}>
       <Stack.Screen name="More" component={More} />
     </Stack.Navigator>
@@ -182,22 +180,22 @@ const App = () => {
           <Tab.Screen
             name="Excerpts"
             component={ExcerptsStack}
-            options={{title: translate('Excerpts')}}
+            options={{title: 'Excerpts'}}
           />
           <Tab.Screen
             name="Composers"
             component={ComposersStack}
-            options={{title: translate('Composers')}}
+            options={{title: 'Composers'}}
           />
           <Tab.Screen
             name="Jobs"
             component={JobsStack}
-            options={{title: translate('Jobs')}}
+            options={{title: 'Jobs'}}
           />
           <Tab.Screen
             name="More"
             component={MoreStack}
-            options={{title: translate('More')}}
+            options={{title: 'More'}}
           />
         </Tab.Navigator>
       </NavigationContainer>

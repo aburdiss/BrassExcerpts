@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  BrassExcerpts
+
+  Created by Alexander Burdiss on 3/6/21.
+  
+*/
+
+"CFBundleDisplayName" = "BrassXcerpts";
+"CFBundleName" = "BrassXcerpts";
