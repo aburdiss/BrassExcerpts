@@ -1,9 +1,10 @@
 import React from 'react';
 import {View, FlatList, Text} from 'react-native';
 
-import ExcerptListRow from './ExcerptListRow';
+import ExcerptListRow from './Excerpts/ExcerptListRow';
 import {excerpts as tromboneExcerpts} from '../Model/Excerpts/TromboneExcerpts';
 import {useNavigation} from '@react-navigation/native';
+import ExcerptListHeader from './Excerpts/ExcerptListHeader';
 
 const Excerpts = () => {
   const navigation = useNavigation();
@@ -14,6 +15,7 @@ const Excerpts = () => {
 
   return (
     <FlatList
+      ListHeaderComponent={ExcerptListHeader}
       data={tromboneExcerpts}
       renderItem={({item}) => (
         <ExcerptListRow

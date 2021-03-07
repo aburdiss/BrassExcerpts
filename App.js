@@ -17,6 +17,7 @@ import ExcerptDetail from './src/Excerpts/ExcerptDetail';
 import RandomExcerpt from './src/Excerpts/RandomExcerpt';
 import Jobs from './src/Jobs/Jobs';
 import More from './src/More/More';
+import TopExcerpts from './src/Excerpts/TopExcerpts';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -63,6 +64,7 @@ const ExcerptsStack = ({navigation}) => {
         })}
       />
       <Stack.Screen name="Random Excerpt" component={RandomExcerpt} />
+      <Stack.Screen name="Top Excerpts" component={TopExcerpts} />
     </Stack.Navigator>
   );
 };
