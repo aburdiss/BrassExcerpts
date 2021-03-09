@@ -33,17 +33,7 @@ let bachCelloSuite = {
   commonDifficulties: 'smooth leaps, breathing',
   professionalAdvice:
     '"As to tempo, we are left to find a comfortable tempo that communicates the gravity of the music without becoming glacial and static. Many trombonists play the Sarabande as if it was in six rather than three – such weighting of each note results in a dull, ponderous performance that is impossible to sustain musically. A tempo of quarter note = 50 is typical of that taken by many of the world’s great cello players and allows us to maintain forward motion without hurrying.\n\nKeep in mind that every measure contains a five note theme; the sixth note in several bars serves simply as a reinforcement of the cadence, a melodic movement to the key of the downbeat of the next bar, or resolution of a fifth note passing tone.\n\nBars 16-19 require a decision by the performer: whether or not to phrase over the bar lines. Many players (including myself in my 2001 version of this movement that was first posted on my website} have phrased over the bar line, making the sixth note a pickup to the next bar. But over time, I have become persuaded – as the earliest manuscripts of the Suites support – that playing all six notes in those bars as a phrase rather than giving each bar a five note theme with a pickup to the next bar makes the most cogent musical sense." -Douglas Yeo',
-  videos: [
-    ['Christian Jones', 'jO9BGyQveRY'],
-    ['Denson Paul Pollard', 'WYwDU-EoBA8'],
-    ['Mischa Maisky', 'oBFrEJK7oAg'],
-    ['Mstislav Rostropovich', 'gOk5Qtian1w'],
-    ['Pablo Casals', 'XEN-Xhx8aDA'],
-    ['Pierre Fournier', 'UJKByFsa8Fc'],
-    ['Yo-Yo Ma', 'd6vZx24Whjo'],
-    // Masterclasses
-    ['Inbal Segev Masterclass', 'gfPqOmp9p-0'],
-  ],
+  videos: 'bachCelloSuite',
 };
 
 let beethoven5 = {
@@ -93,17 +83,7 @@ let beethoven5 = {
   commonDifficulties: 'Range, Potential Alto Trombone',
   professionalAdvice:
     '"Beethoven also wrote for the alto trombone and it should be used whenever possible, especially in the fifth symphony. The alto certainly makes the high range easier, but more importantly, we can achieve the right sound and blend. Strive for a projected brilliant tone. Don\'t be afraid to see how loud your alto can play in the proper places. Of course, this is the first known use of trombones in a symphony so I\'m sure that the composer wanted them to be heard. If you must use the tenor, again consider using a smaller bore and a smaller mouthpiece to achieve brilliance without excessive volume." -Ralph Sauer',
-  videos: [
-    ['Bernard Haitink, London Symphony Orchestra', 'DAyUzxDB9eE'],
-    ['Christian Thielemann, Vienna Philharmonic Orchestra', 'olMPeiqoiic'],
-    ['Daniel Barenboim, West-Eastern Divan Orchestra', 'jv2WJMVPQi8'],
-    ['Gustavo Dudamel', 'msolhqi-PC0'],
-    ['Herbert von Karajan, Berlin Philharmonic (With Score}', 'yKl4T5BnhOA'],
-    ['Herbert von Karajan, Philharmonia Orchestra', 'OV6Lp7cnX7s'],
-    ['Leonard Bernstein, Wiener Philharmoniker', 'kHYBoG7hiZk'],
-    // Masterclasses
-    ['Ralph Sauer', 'DtDTnqxaV30'],
-  ],
+  videos: 'beethoven5',
 };
 
 let beethoven9 = {
@@ -131,21 +111,7 @@ let beethoven9 = {
   commonDifficulties: 'Range, Potential Alto Trombone',
   professionalAdvice:
     '"The trombone section in this work has very clearly delineated roles, based on the particular context and dynamic. For example, the trombones have a purely accompanying role in the Scherzo, and in that movement, the span of the parts tends to be wider, hovering around tenths, twelfths, and even as wide as two octaves. In the ending of the Finale, the trombones have more of a tutti supporting role, and the intervals tend to be closer, including sixths, fifths, and even unisons. The chords are all in close position, with the final chords in a tight root position triad, which, as was discussed earlier, has excellent projection qualities." -Daniel R. Cloutier',
-  videos: [
-    ['Arturo Toscanini, NBC Symphony Orchestra', 'DuK133dK6eQ'],
-    [
-      '정명훈 (Chung Myung-Whun}, The Orchestre Philharmonique de Radio France',
-      'KtRzuOSCOO0',
-    ],
-    ['Daniel Barenboim, West-Eastern Divan Orchestra', 'ChygZLpJDNE'],
-    ['Herbert von Karjan, Berlin Philharmonic (With Score}', 'ixpfgm_xxSE'],
-    ['Klaus Mäkelä, Oslo Philharmonic', 'QkQapdgAa7os'],
-    ['Osaka, Japan', 'X6s6YKlTpfw'],
-    ['Riccardo Muti, Chicago Symphony Orchestra', 'rOjHhS5MtvA'],
-    ['Seiji Ozawa, Saito Kinen Orchestra', 'VS6TEQ_z2wc'],
-    // Masterclasses
-    ['Southeast Trombone Symposium', 'Sd6es2t0eU4'],
-  ],
+  videos: 'beethoven9',
 };
 
 let beethovenFidelio = {
@@ -172,20 +138,7 @@ let beethovenFidelio = {
   commonDifficulties: 'Range, Potential Alto Trombone',
   professionalAdvice:
     '"In Fidelio, the trombones never double the chorus and rarely act independently, with the exception of the dungeon scene. The trombones almost exclusively are simply two more voices in large tutti sections, especially when diminished chords are involved." -Daniel R. Coutier',
-  videos: [
-    ['Claudio Abbado, Vienna Philharmonic Orchestra', 'fq7g6du9S3s'],
-    ['Herbert Von Karajan, Berliner Philharmoniker', '1FB7z2ki2MQ'],
-    ['James Levine, Metropolitan Opera Orchestra', 'NA3bi_evCZk'],
-    [
-      '강석희 (Kang Seok-Hee}, 전주시립교향악단 (Jeonju Symphony Orchestra}',
-      'ZkB9OgZvjSI',
-    ],
-    [
-      'Leonard Bernstein, Vienna State Opera Orchestra (With Score}',
-      'YI-CF_rOApI',
-    ],
-    ['Riccardo Muti, Philadelphia Orchestra', 'JC_wGFGYkjs'],
-  ],
+  videos: 'beethovenFidelio',
 };
 
 let berliozFaust = {
@@ -235,24 +188,7 @@ let berliozFaust = {
   commonDifficulties: 'Musical Style, Tempo, Intonation',
   professionalAdvice:
     '"In the Berlioz Hungarian March, rhythm is extremely important: keep it steady. Play this excerpt a little bit louder at an audition to simulate an entire trombone section, however don\'t play the eighth notes too short. The passage will sound louder and fuller to the audience when the notes are broader. All things being equal, long notes will sound louder to the listener, so use this auditory phenomenon to your advantage whenever possible. Just detach the notes from each other avoid being dry and allow the dynamics to build to the climax of the section." -Ralph Sauer',
-  videos: [
-    ['Antal Doráti, Royal Concertgebouw Orchestra', 'qfIspYcnpeY'],
-    ['Georg Solti, Chicago Symphony Orchestra', '9l9xZdiwOSk'],
-    ['George Szell, Cleveland Orchestra', '4hLcKfe-L_Y'],
-    ['Herbert von Karajan, Berliner Philharmoniker', 'O32PuoBWKC0'],
-    ['Igor Markevitch, Orchester Lamoureux', 'Ws_YvHfG1yQ'],
-    ['Leonard Bernstein, New York Philharmonic Orchestra', 'c-YA9fhcJQc'],
-    ['YouTube Symphony Orchestra', 'fuqu_eNO51M'],
-    // Band
-    [
-      'Col. John R. Bourgeois, "The President\'s Own" Marine Band',
-      'LkSbzdvKClM',
-    ],
-    // Masterclasses
-    ['Denson Paul Pollard', 'btjbSrM2jhQ'],
-    ['Ralph Sauer', 'tGkfrDcx0JI'],
-    ['Southeast Trombone Symposium', 'TBwYSOIscw0'],
-  ],
+  videos: 'berliozFaust',
 };
 
 let berliozRomanCarnival = {
@@ -290,23 +226,7 @@ let berliozRomanCarnival = {
   mutes: 'No',
   commonDifficulties: 'Alto Clef, Musical Style',
   professionalAdvice: '',
-  videos: [
-    ['Charles Dutoit, Orchestre symphonique de Montréal', 'LK8mdW0LF6I'],
-    [
-      '정명훈 (Chung Myung-Whun}, The Orchestre Philharmonique de Radio France',
-      '0nJUSHqSaV8',
-    ],
-    ['Jukka Pekka Saraste, WDR Sinfonieorchester Köln', 'g4qZrpGI-fk'],
-    ['YouTube Symphony Orchestra', 'uYqItMmwwKE'],
-    // Bands
-    [
-      'Major Larry H. Lang, US Air Force Heritage of America Band',
-      'OifAYPuJHsE',
-    ],
-    ['"The President\'s Own" U.S. Marine Band', '8GVLupxK9fI'],
-    // Masterclasses
-    ['Ralph Sauer', 'Ym0Ga_oZJAk'],
-  ],
+  videos: 'berliozRomanCarnival',
 };
 
 let berliozRomeoJuliet = {
@@ -333,22 +253,7 @@ let berliozRomeoJuliet = {
   mutes: 'No',
   commonDifficulties: 'Rhythm, Intonation',
   professionalAdvice: '',
-  videos: [
-    ['Arturo Toscanini, NBC Symphony Orchestra', 'zzlpOh6-Z1A?t=96'],
-    ['Carlo Maria Giulini, Koninklijk Concertgebouworkest', 'O-FN6NwGwF8'],
-    ['Daniele Gatti, The Orchestre National de France', 'zf7kGcB4VSQ'],
-    ['Sir Colin Davis, Wiener Philharmoniker', 'A1JBdePepGo'],
-    [
-      'Sir John Eliot Gardiner, Orchestra Révolutionnaire et Romantique',
-      '6JADiAECnRQ',
-    ],
-    [
-      'Stephan Tetzlaff, Simfonijski Orkestar i Zbor Hrvatske Radiotelevizije',
-      'OoWf3Mpmm2s',
-    ],
-    // Masterclasses
-    ['Ralph Sauer', 'b02PvPTGt9Y'],
-  ],
+  videos: 'berliozRomeoJuliet',
 };
 
 let berliozSymphonie = {
@@ -398,28 +303,7 @@ let berliozSymphonie = {
   commonDifficulties: 'Range, Potential Alto Trombone',
   professionalAdvice:
     '"Originally written for the alto trombone, the Symphonie Fantastique is better played on the tenor today. Most conductors demand a wider dynamic range than is possible from the alto. In Berlioz, strive for a ringing brilliant sound." -Ralph Sauer',
-  videos: [
-    [
-      'Andrés Orozco-Estrada, Frankfurt Radio Symphony Orchestra',
-      'AgXW-57UDMc',
-    ],
-    ['정명훈 (Chung Myung-Whun}', '5HgqPpjIH5c'],
-    [
-      'Gustavo Dudamel, Orchestre philharmonique de Radio France',
-      'HDHPgqv4hsw',
-    ],
-    ['Herbert von Karajan, Berlin Philharmonic Orchestra', 'sK4dz6Gbcdk'],
-    ['Leonard Bernstein, Orchestre National de France', 'rQXtC6B3CKQ'],
-    [
-      'Leopold Stokowski, New Philharmonia Orchestra (With Score}',
-      'ewoAW-Zyuj8',
-    ],
-    ['Mariss Jansons, Bavarian Radio Symphony Orchestra', 'yK6iAxe0oEc?t=284'],
-    // Masterclasses
-    ['Southeast Trombone Symposium', 'oYSnGq5wNxU'],
-    ['Joseph Alessi', 'Mm8lPg8O0vw'],
-    ['Ralph Sauer', 'tGkfrDcx0JI'],
-  ],
+  videos: 'berliozSymphonie',
 };
 
 let bizetLArlesienne = {
@@ -442,19 +326,7 @@ let bizetLArlesienne = {
   mutes: 'No',
   commonDifficulties: 'Range, Tempo',
   professionalAdvice: '',
-  videos: [
-    ['Eugene Ormandy, Philadelphia Orchestra', 'qOUy8FbFnG4'],
-    ['Herbert von Karajan, Berliner Philharmoniker', 'M7p74wVffpI'],
-    [
-      'Kiyotaka Teraoka, Hamamatsu International Wind Instrumet Academy Festival Orchesrta',
-      'jQIGPXu5ycU',
-    ],
-    [
-      'Kiyotaka Keraoka, Hamamatsu International Wind Instrument Academy Festival Orchestra (With Score}',
-      'QWEpO37VVNY',
-    ],
-    ['Nathalie Stutzmann, Stockholm Philharmonic Orchestra', 'hBlNa9_RCNw'],
-  ],
+  videos: 'bizetLArlesienne',
 };
 
 let borodinPolovetsian = {
@@ -5535,19 +5407,16 @@ let wagnerTannhauser = {
 //MARK: Composers
 
 let bach = {
-  id: 0,
   name: 'Bach',
   excerpts: [bachCelloSuite],
 };
 
 let beethoven = {
-  id: 1,
   name: 'Beethoven',
   excerpts: [beethoven5, beethoven9],
 };
 
 let berlioz = {
-  id: 2,
   name: 'Berlioz',
   excerpts: [
     berliozFaust,
@@ -5558,85 +5427,71 @@ let berlioz = {
 };
 
 let bizet = {
-  id: 3,
   name: 'Bizet',
   excerpts: [bizetLArlesienne],
 };
 
 let borodin = {
-  id: 4,
   name: 'Borodin',
   excerpts: [borodinPolovetsian],
 };
 
 let brahms = {
-  id: 5,
   name: 'Brahms',
   excerpts: [brahmsAcademic, brahms1, brahms2, brahms3, brahms4, brahmsTragic],
 };
 
 let bruckner = {
-  id: 6,
   name: 'Bruckner',
   excerpts: [bruckner4, bruckner7, bruckner8, bruckner9],
 };
 
 let dvorak = {
-  id: 7,
   name: 'Dvorak',
   excerpts: [dvorak8, dvorak9],
 };
 
 let franck = {
-  id: 8,
   name: 'Franck',
   excerpts: [franckD],
 };
 
 let haydn = {
-  id: 9,
   name: 'Haydn',
   excerpts: [haydnCreation],
 };
 
 let holst = {
-  id: 10,
   name: 'Holst',
   excerpts: [holstPlanets],
 };
 
 let mahler = {
-  id: 11,
   name: 'Mahler',
   excerpts: [mahler2, mahler3, mahler5, mahler7],
 };
 
 let mozart = {
-  id: 12,
   name: 'Mozart',
   excerpts: [mozartRequiem],
 };
 
 let mussorgsky = {
-  id: 13,
   name: 'Mussorgsky',
   excerpts: [mussorgskyPictures],
 };
 
 let ravel = {
-  id: 14,
   name: 'Ravel',
   excerpts: [ravelBolero],
 };
 
 let respighi = {
-  id: 15,
   name: 'Respighi',
   excerpts: [respighiFountains],
 };
 
 let rimskyKorsakov = {
-  id: 16,
   name: 'RimskyKorsakov',
   excerpts: [
     rimskyKorsakovCapriccio,
@@ -5647,37 +5502,31 @@ let rimskyKorsakov = {
 };
 
 let rossini = {
-  id: 17,
   name: 'Rossini',
   excerpts: [rossiniLaGazza, rossiniWilliamTell],
 };
 
 let saintSaens = {
-  id: 18,
   name: 'SaintSaens',
   excerpts: [saintSaens3],
 };
 
 let schubert = {
-  id: 19,
   name: 'Schubert',
   excerpts: [schubert8, schubert9],
 };
 
 let schumann = {
-  id: 20,
   name: 'Schumann',
   excerpts: [schumann1, schumann2, schumann3, schumann4],
 };
 
 let smetana = {
-  id: 21,
   name: 'Smetana',
   excerpts: [smetanaBarteredBride],
 };
 
 let rStrauss = {
-  id: 22,
   name: 'Strauss',
   excerpts: [
     straussAlpine,
@@ -5693,25 +5542,21 @@ let rStrauss = {
 };
 
 let stravinsky = {
-  id: 23,
   name: 'Stravinsky',
   excerpts: [stravinskyFirebird],
 };
 
 let tchaikovsky = {
-  id: 24,
   name: 'Tchaikovsky',
   excerpts: [tchaikovsky4, tchaikovsky5, tchaikovsky6, tchaikovskyFrancesca],
 };
 
 let verdi = {
-  id: 25,
   name: 'Verdi',
   excerpts: [verdiForza, verdiNabucco],
 };
 
 let wagner = {
-  id: 26,
   name: 'Wagner',
   excerpts: [
     wagnerRheingold,
@@ -5812,6 +5657,7 @@ export const composers = [
   holst,
   mahler,
   mozart,
+  mussorgsky,
   ravel,
   respighi,
   rimskyKorsakov,

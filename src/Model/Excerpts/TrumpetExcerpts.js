@@ -2809,14 +2809,7 @@ let wagnerTannhauser = {
 //MARK: Composers
 
 let bach = {
-  id: 0,
   name: 'Bach',
-  ipa: 'joˈhan zeˈbastjan bɑx',
-  image: 2000,
-  country: 'Germany',
-  dates: '1685-1750',
-  bio:
-    'Johann Sebastian Bach was a German Baroque composer and musician. He is most well known for is keyboard works, and works for voice and orchestra. Bach was a master of counterpoint and harmonic organization and his influences in these fields continue to affect composers to this day.',
   excerpts: [
     bachBrandenburg2,
     bachCantata,
@@ -2827,7 +2820,6 @@ let bach = {
 };
 
 let beethoven = {
-  id: 1,
   name: 'Beethoven',
   excerpts: [
     beethovenLeonore2,
@@ -2839,61 +2831,51 @@ let beethoven = {
 };
 
 let berlioz = {
-  id: 2,
   name: 'Berlioz',
   excerpts: [berliozRomanCarnival, berliozSymphonie],
 };
 
 let bizet = {
-  id: 3,
   name: 'Bizet',
   excerpts: [bizetCarmen],
 };
 
 let brahms = {
-  id: 4,
   name: 'Brahms',
   excerpts: [brahmsAcademic, brahms1, brahms2],
 };
 
 let bruckner = {
-  id: 5,
   name: 'Bruckner',
   excerpts: [bruckner4, bruckner7, bruckner8],
 };
 
 let debussy = {
-  id: 6,
   name: 'Debussy',
   excerpts: [debussyLaMer, debussyNocturnes],
 };
 
 let donizetti = {
-  id: 7,
   name: 'Donizetti',
   excerpts: [donizettiDonPasquale],
 };
 
 let dvorak = {
-  id: 8,
   name: 'Dvorak',
   excerpts: [dvorak8, dvorak9],
 };
 
 let handel = {
-  id: 9,
   name: 'Handel',
   excerpts: [handelMessiah],
 };
 
 let haydn = {
-  id: 10,
   name: 'Haydn',
   excerpts: [haydn100],
 };
 
 let mahler = {
-  id: 11,
   name: 'Mahler',
   excerpts: [
     mahlerDasLied,
@@ -2909,37 +2891,31 @@ let mahler = {
 };
 
 let mozart = {
-  id: 12,
   name: 'Mozart',
   excerpts: [mozartSerenade9],
 };
 
 let rimskyKorsakov = {
-  id: 14,
   name: 'RimskyKorsakov',
   excerpts: [rimskykorsakovCappricio, rimskyKorsakovScheherazade],
 };
 
 let schumann = {
-  id: 15,
   name: 'Schumann',
   excerpts: [schumann2],
 };
 
 let scriabin = {
-  id: 16,
   name: 'Scriabin',
   excerpts: [scriabin4],
 };
 
 let sibelius = {
-  id: 17,
   name: 'Sibelius',
   excerpts: [sibelius2],
 };
 
 let rStrauss = {
-  id: 18,
   name: 'Strauss',
   excerpts: [
     straussAlsoSprach,
@@ -2955,7 +2931,6 @@ let rStrauss = {
 };
 
 let stravinsky = {
-  id: 19,
   name: 'Stravinsky',
   excerpts: [
     stravinskySoldier,
@@ -2967,7 +2942,6 @@ let stravinsky = {
 };
 
 let tchaikovsky = {
-  id: 20,
   name: 'Tchaikovsky',
   excerpts: [
     tchaikovskyCapriccio,
@@ -2979,7 +2953,6 @@ let tchaikovsky = {
 };
 
 let wagner = {
-  id: 21,
   name: 'Wagner',
   excerpts: [
     wagnerMeistersinger,

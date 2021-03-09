@@ -2605,7 +2605,6 @@ let wagnerTannhauser = {
 //MARK: Composers
 
 let berlioz = {
-  id: 1,
   name: 'Berlioz',
   excerpts: [
     berliozBenvenuto,
@@ -2618,73 +2617,61 @@ let berlioz = {
 };
 
 let brahms = {
-  id: 2,
   name: 'Brahms',
   excerpts: [brahmsAcademic, brahms2, brahmsTragic],
 };
 
 let bruckner = {
-  id: 3,
   name: 'Bruckner',
   excerpts: [bruckner4, bruckner7, bruckner8, bruckner9],
 };
 
 let franck = {
-  id: 4,
   name: 'Franck',
   excerpts: [franckD],
 };
 
 let holst = {
-  id: 5,
   name: 'Holst',
   excerpts: [holstFirstSuite, holstPlanets],
 };
 
 let mahler = {
-  id: 7,
   name: 'Mahler',
   excerpts: [mahler1, mahler2, mahler3, mahler5, mahler6, mahler9],
 };
 
 let mendellsohn = {
-  id: 8,
   name: 'Mendelssohn',
   excerpts: [mendelssohnMidsummer],
 };
 
 let mussorgsky = {
-  id: 9,
   name: 'Mussorgsky',
   excerpts: [mussorgskyNightBald],
 };
 
 let respighi = {
-  id: 10,
   name: 'Respighi',
   excerpts: [respighiFountains],
 };
 
 let rimskyKorsakov = {
-  id: 11,
   name: 'RimskyKorsakov',
   excerpts: [rimskyKorsakovScheherazade],
 };
 
 let sibelius = {
-  id: 12,
   name: 'Sibelius',
   excerpts: [sibelius1, sibelius2],
 };
 
 let sousa = {
-  id: 13,
   name: 'Sousa',
   excerpts: [sousaStarsAndStripes],
 };
 
 let rStrauss = {
-  id: 14,
   name: 'Strauss',
   excerpts: [
     straussAlsoSprach,
@@ -2697,13 +2684,11 @@ let rStrauss = {
 };
 
 let stravinsky = {
-  id: 15,
   name: 'Stravinsky',
   excerpts: [stravinskyRite],
 };
 
 let tchaikovsky = {
-  id: 16,
   name: 'Tchaikovsky',
   excerpts: [
     tchaikRomeoAndJuliet,
@@ -2718,13 +2703,11 @@ let tchaikovsky = {
 };
 
 let verdi = {
-  id: 17,
   name: 'Verdi',
   excerpts: [verdiNabucco],
 };
 
 let wagner = {
-  id: 18,
   name: 'Wagner',
   excerpts: [
     wagnerRheingold,

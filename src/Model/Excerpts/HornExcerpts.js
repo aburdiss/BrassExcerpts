@@ -2822,13 +2822,11 @@ let weberOberon = {
 //MARK: Composers
 
 let bach = {
-  id: 0,
   name: 'Bach',
   excerpts: [bachBrandenburgConcerto, bachMassB],
 };
 
 let beethoven = {
-  id: 1,
   name: 'Beethoven',
   excerpts: [
     beethovenFidelio,
@@ -2842,13 +2840,11 @@ let beethoven = {
 };
 
 let berlioz = {
-  id: 2,
   name: 'Berlioz',
   excerpts: [berliozRomeoEtJuliet],
 };
 
 let brahms = {
-  id: 3,
   name: 'Brahms',
   excerpts: [
     brahmsAcademic,
@@ -2863,85 +2859,71 @@ let brahms = {
 };
 
 let bruckner = {
-  id: 4,
   name: 'Bruckner',
   excerpts: [bruckner4, bruckner7],
 };
 
 let dvorak = {
-  id: 5,
   name: 'Dvorak',
   excerpts: [dvorakCello, dvorak9],
 };
 
 let franck = {
-  id: 6,
   name: 'Franck',
   excerpts: [franckD],
 };
 
 let haydn = {
-  id: 7,
   name: 'Haydn',
   excerpts: [haydn31],
 };
 
 let liszt = {
-  id: 8,
   name: 'Liszt',
   excerpts: [lisztLesPreludes],
 };
 
 let mahler = {
-  id: 9,
   name: 'Mahler',
   excerpts: [mahler1, mahler3, mahler5, mahler9],
 };
 
 let mendellsohn = {
-  id: 10,
   name: 'Mendelssohn',
   excerpts: [mendelssohnMidsummer, mendelssohn3],
 };
 
 let mozart = {
-  id: 11,
   name: 'Mozart',
   excerpts: [mozart29, mozart40],
 };
 
 let rimskyKorsakov = {
-  id: 12,
   name: 'RimskyKorsakov',
   excerpts: [rimskyKorsakovScheherazade],
 };
 
 let rossini = {
-  id: 13,
   name: 'Rossini',
   excerpts: [rossiniSemiramide],
 };
 
 let saintSaens = {
-  id: 14,
   name: 'SaintSaens',
   excerpts: [saintSaens3],
 };
 
 let schubert = {
-  id: 15,
   name: 'Schubert',
   excerpts: [schubert9],
 };
 
 let schumann = {
-  id: 16,
   name: 'Schumann',
   excerpts: [schumann3],
 };
 
 let rStrauss = {
-  id: 17,
   name: 'Strauss',
   excerpts: [
     straussDonJuan,
@@ -2953,13 +2935,11 @@ let rStrauss = {
 };
 
 let tchaikovsky = {
-  id: 19,
   name: 'Tchaikovsky',
   excerpts: [tchaikovsky4, tchaikovsky5],
 };
 
 let wagner = {
-  id: 20,
   name: 'Wagner',
   excerpts: [
     wagnerWalkure,
@@ -2971,7 +2951,6 @@ let wagner = {
 };
 
 let weber = {
-  id: 21,
   name: 'Weber',
   excerpts: [weberFreischutz, weberOberon],
 };
