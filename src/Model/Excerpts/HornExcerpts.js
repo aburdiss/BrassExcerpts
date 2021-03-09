@@ -2823,25 +2823,13 @@ let weberOberon = {
 
 let bach = {
   id: 0,
-  name: 'Johann Sebastian Bach',
-  ipa: 'joˈhan zeˈbastjan bɑx',
-  image: 2000,
-  country: 'Germany',
-  dates: '1685-1750',
-  bio:
-    'Johann Sebastian Bach was a German Baroque composer and musician. He is most well known for is keyboard works, and works for voice and orchestra. Bach was a master of counterpoint and harmonic organization and his influences in these fields continue to affect composers to this day.',
+  name: 'Bach',
   excerpts: [bachBrandenburgConcerto, bachMassB],
 };
 
 let beethoven = {
   id: 1,
-  name: 'Ludwig Van Beethoven',
-  ipa: 'ˈlʊdvɪɡ væn ˈbeɪt(h}oʊvən',
-  image: 2001,
-  country: 'Germany',
-  dates: '1770-1827',
-  bio:
-    'Ludwig van Beethoven was a German composer and pianist. Beethoven began his compositional life firmly in the classical era, but was a key figure in the early romantic era. Beethoven grew to be mostly deaf in his lifetime, but never ceased composing. He was the first composer to incorporate trombones in a symphonic setting, and composed nine symphonies in his lifetime. He is considered to be one of the greatest composers of all time.',
+  name: 'Beethoven',
   excerpts: [
     beethovenFidelio,
     beethoven2,
@@ -2855,25 +2843,13 @@ let beethoven = {
 
 let berlioz = {
   id: 2,
-  name: 'Hector Berlioz',
-  ipa: 'ɛkˈtɔr bɛr liˌoʊz',
-  image: 2002,
-  country: 'France',
-  dates: '1803-1869',
-  bio:
-    'Hector Berlioz was a French Romantic composer, who gained his popularity through his unwillingness to accept traditional rules and formulas. He frequently employed extended techniques in many instruments, and developed his own forms and techniques for composition. He was internationally acclaimed as a conductor, and was also a prominant musical journalist.',
+  name: 'Berlioz',
   excerpts: [berliozRomeoEtJuliet],
 };
 
 let brahms = {
   id: 3,
-  name: 'Johannes Brahms',
-  ipa: 'joˈhanəs ˈbʁaːms',
-  image: 2003,
-  country: 'Germany',
-  dates: '1833-1897',
-  bio:
-    'Johannes Brahms was one of the most famous composers of all time. He is most famous for his four symphonies, but he wrote for many diverse ensembles. Brahms was a perfectionist in all that he did, and was known to occaisionally destroy some of his work to prevent it from being seen by the outside world.',
+  name: 'Brahms',
   excerpts: [
     brahmsAcademic,
     brahmsPiano1,
@@ -2888,169 +2864,85 @@ let brahms = {
 
 let bruckner = {
   id: 4,
-  name: 'Anton Bruckner',
-  ipa: " 'antɔn ˈbʁʊknɐ",
-  image: 2004,
-  country: 'Austria',
-  dates: '1824-1896',
-  bio:
-    'Anton Bruckner was an Austrian organist, music theorist, and composer of the romantic era. He is best known for his symphonies and religious music. Bruckner was unlike other composers of his time, in that he was very a very humble man.',
+  name: 'Bruckner',
   excerpts: [bruckner4, bruckner7],
 };
 
 let dvorak = {
   id: 5,
-  name: 'Antonín Dvořák',
-  ipa: 'ˈɑn tɔ nyin ˈdvɔr ʒɑk',
-  image: 2005,
-  country: 'Austrian Empire',
-  dates: '1841-1904',
-  bio:
-    'Dvořák was one of the first Czech composers to recieve worldwide recognition. Dvořák was an admirer of Richard Wagner, and took influence from him especially in his Operas. He frequently included folk music in his compositions, and his music often had nationalistic themes.',
+  name: 'Dvorak',
   excerpts: [dvorakCello, dvorak9],
 };
 
 let franck = {
   id: 6,
-  name: 'César Franck',
-  ipa: 'seɪˈzar frɑŋk',
-  image: 2006,
-  country: 'United Kingdom of the Netherlands (Now Belgium}',
-  dates: '1822 - 1890',
-  bio:
-    'Franck studied music in Paris at a young age. After his studies, he returned to Belgium and gained a terrible reputation for his oratorio "Ruth", and moved to Paris where he became an organist and teacher. Later in life, he became the organist for the Basilica of Saint Clotilde, where he remained for the rest of his life, composing in his free time pieces that are now considered standard repetoire.',
+  name: 'Franck',
   excerpts: [franckD],
 };
 
 let haydn = {
   id: 7,
-  name: 'Franz Joseph Haydn',
-  ipa: 'ˈfʁants ˈjoːzɛf ˈhaɪdn̩',
-  image: 2007,
-  country: 'Austria',
-  dates: '1732-1809',
-  bio:
-    'Haydn was a classical composer who is commonly known as "The father of the Symphony". He spent most of his life as a court musician for the Esterházy family. He was isolated in this role, with little to no contact with the rest of the music community, and was forced to create his own style because of this. Haydn was a prolific composer, producing 104 numbered symphonies and an immense amount of chamber music.',
+  name: 'Haydn',
   excerpts: [haydn31],
 };
 
 let liszt = {
   id: 8,
-  name: 'Franz Liszt',
-  ipa: 'ˈfɛrɛnt͡s ˈlist',
-  image: 2008,
-  country: 'Hungary',
-  dates: '1811-1886',
-  bio:
-    'Franz Liszt is regarded as one of the greatest pianists to ever live. A well known and travelled musician in his time, he invented what we now know as the recital, and set the precedent for memorizing solo compositions. Liszt also pioneered new paths in musical form and harmony, inventing the Symphonic Poem and made radical innovations in harmony.',
+  name: 'Liszt',
   excerpts: [lisztLesPreludes],
 };
 
 let mahler = {
   id: 9,
-  name: 'Gustav Mahler',
-  ipa: 'ˈgʊs tɑf ˈmɑ lər',
-  image: 2009,
-  country: 'Austrian Empire',
-  dates: '1860-1911',
-  bio:
-    'Mahler is one of the most popular composers of all time. In 2016, a BBC Music survey ranked three of his symphonies among the top ten symphonies of all time. His music continues to be among the top recorded and perfomed in all of classical music. During his day, he was also among one of the top conductors of his era, and was the first conductor of the New York Philharmonic Orchestra.',
+  name: 'Mahler',
   excerpts: [mahler1, mahler3, mahler5, mahler9],
 };
 
 let mendellsohn = {
   id: 10,
-  name: 'Felix Mendelssohn',
-  ipa: "'fi lɪks 'mɛn dl sən",
-  image: 2010,
-  country: 'Germany',
-  dates: '1809-1947',
-  bio:
-    'Mendelssohn was born into a Jewish family, but was baptised Reformed Christian at the age of seven. He was known as a child prodigy, but his parents did not seek to capitalize on his talents. Well known as a composer, conductor, and organist, Mendelssohn helped to bring fame to the music of Bach.',
+  name: 'Mendelssohn',
   excerpts: [mendelssohnMidsummer, mendelssohn3],
 };
 
 let mozart = {
   id: 11,
-  name: 'Wolfgang Amadeus Mozart',
-  ipa: 'ˈwʊlf gæŋ ˌæm əˈdeɪ əs ˈmoʊt sɑrt',
-  image: 2011,
-  country: 'Germany',
-  dates: '1756-1791',
-  bio:
-    "Mozart gained popularity as a pianist and composer at an early age. He gained employment as a court musician at the Salzburg court, but quickly lost interest and began traveling looking for other employment. In Vienna, he found great fame, but worked his whole life trying to achieve financial stability: a goal he was never able to achieve. Mozart's death is also very mysterious and controvercial.",
+  name: 'Mozart',
   excerpts: [mozart29, mozart40],
 };
 
 let rimskyKorsakov = {
   id: 12,
-  name: 'Nikolai Rimsky-Korsakov',
-  ipa: 'nʲɪkəˈlaj ˈrʲimskʲɪj ˈkorsəkəf',
-  image: 2012,
-  country: 'Russia',
-  dates: '1844-1908',
-  bio:
-    'Nikolai Rimsky-Korsakov was one of the most famous Russian composers. He was a master orchestrator, publishing a textbook on the subject using musical examples solely from his own compositions, and his most famous compositions are his orchestral works. Rimsky-Korsakov also spent a large portion of his musical life in association with the Russian military.',
+  name: 'RimskyKorsakov',
   excerpts: [rimskyKorsakovScheherazade],
 };
 
 let rossini = {
   id: 13,
-  name: 'Gioachino Rossini',
-  ipa: 'dʒɔ ɑkˈki nɔ roʊˈsi ni',
-  image: 2013,
-  country: 'Italy',
-  dates: '1792-1868',
-  bio:
-    'Rossini was an Italian composer from the romantic era. His 39 operas gained him great success early in life, but he unexplainably gave up music almost entirely for the last 40 years of his life.',
+  name: 'Rossini',
   excerpts: [rossiniSemiramide],
 };
 
 let saintSaens = {
   id: 14,
-  name: 'Camille Saint-Saëns',
-  ipa: 'kamij sɛ̃ sɑ̃(s}',
-  image: 2014,
-  country: 'France',
-  dates: '1835-1921',
-  bio:
-    'Saint-Saëns was a French composer, conductor, organist, and pianist during the romantic era. Revered as a genius, he lived a mostly conventional carreer as a church organist. His most notable student was Gabriel Fauré.',
+  name: 'SaintSaens',
   excerpts: [saintSaens3],
 };
 
 let schubert = {
   id: 15,
-  name: 'Franz Schubert',
-  ipa: 'ˈfʁant͡s ˈʃuːbɐt',
-  image: 2015,
-  country: 'Austria',
-  dates: '1797-1828',
-  bio:
-    'Schubert was a prolific Austrian composer during the late Classical and early Romantic eras. During his short lifetime he composed over 1500 works. During his lifetime, he recieved little fame and success. It was only after his lifetime when musicians such as Schumann, Mendelssohn, Liszt, and Brahms discovered and praised his music that it became well known and widely recieved.',
+  name: 'Schubert',
   excerpts: [schubert9],
 };
 
 let schumann = {
   id: 16,
-  name: 'Robert Schumann',
-  ipa: 'ˈrɒb ərt ˈʃu mɑn',
-  image: 2016,
-  country: 'Germany',
-  dates: '1810-1856',
-  bio:
-    "Schumann was one of the most popular composers of the romantic era. He gave up the study of law to become a concert pianist, but his dreams were crushed by a hand injury. He subsequently pursued a career in composition, and married his teacher's daughter, Clara Wieck. Schumann mainly composed for piano, but later in live began to compose lieder, orchestral works, and one opera.",
+  name: 'Schumann',
   excerpts: [schumann3],
 };
 
 let rStrauss = {
   id: 17,
-  name: 'Richard Strauss',
-  ipa: 'ˈʁɪçaʁt ˈʃtʁaʊs',
-  image: 2017,
-  country: 'Germany',
-  dates: '1864-1949',
-  bio:
-    "Richard Strauss was one of the leading composers of the Romantic Era. He, along with Gustav Mahler, were considered successors of Richard Wagner. Although Strauss composed music for almost every classical genre, he is most famous for his tone poems. Strauss' compositional output began when he was just six years old, and continued almost eighty years later until his death.",
+  name: 'Strauss',
   excerpts: [
     straussDonJuan,
     straussDonQuixote,
@@ -3060,31 +2952,15 @@ let rStrauss = {
   ],
 };
 
-//let stravinsky = {id: 18, name: "Igor Stravinsky", ipa: "ˈi gɔr strəˈvɪn ski", image: 2018, country: "Russia", dates: "1882-1971", bio: "Igor Stravinsky was one of the most influential composers of the twentieth century. Stravinsky's music is very unique from that of other composers, and often contains russian folk melodies. Throughout his life, the kinds of compositions that he composed also changed dramatically, from symphonies, to chamber music, to ballets.", excerpts: [
-//
-//]}
-
 let tchaikovsky = {
   id: 19,
-  name: 'Pyotr Ilyich Tchaikovsky',
-  ipa: 'ˈpyɔtr iˈlyitʃ tʃaɪˈkɒfski',
-  image: 2019,
-  country: 'Russia',
-  dates: '1840-1893',
-  bio:
-    "Tchaikovsky was the first Russian composer to gain international fame. Tchaikovsky recieved a western European style music education, which seemed to counter the traditional Russian music practices. This dichotomy posed a great challenge for Tchaikovsky, one that affected his self confidence a lot. Although Tchaikovsky's music gained popular support, his life was deeply affected by depression and personal crises.",
+  name: 'Tchaikovsky',
   excerpts: [tchaikovsky4, tchaikovsky5],
 };
 
 let wagner = {
   id: 20,
-  name: 'Richard Wagner',
-  ipa: 'ˈʁɪçaʁt ˈvaːɡnɐ',
-  image: 2020,
-  country: 'Germany',
-  dates: '1813-1883',
-  bio:
-    'Wagner is one of the most well known composers of all time. His music frequently appears in television shows and movies. He was most well known in his era for his operas, which usually run about four hours. Wagner was unusual as an opera composer because he himself wrote the liberetto for the operas he composed. Wagner had his own opera house constructed, which still stands to this day.',
+  name: 'Wagner',
   excerpts: [
     wagnerWalkure,
     wagnerRheingold,
@@ -3096,13 +2972,7 @@ let wagner = {
 
 let weber = {
   id: 21,
-  name: 'Carl Maria von Weber',
-  ipa: 'kɑrl məˈriə fən ˈvābər',
-  image: 2021,
-  country: 'Germany',
-  dates: '1786-1826',
-  bio:
-    'Carl Maria von Weber was a German composer, conductor, pianist, guitarist, and music critic. He is widely regarded as one of the first significant composers of the romantic school. His contributions to the field of Opera greatly influenced the development of Romantische Oper in Germany, and he was a major influence to Marschner, Meyerbeer and Wagner.',
+  name: 'Weber',
   excerpts: [weberFreischutz, weberOberon],
 };
 

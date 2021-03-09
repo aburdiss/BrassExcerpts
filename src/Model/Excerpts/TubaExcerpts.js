@@ -2606,13 +2606,7 @@ let wagnerTannhauser = {
 
 let berlioz = {
   id: 1,
-  name: 'Hector Berlioz',
-  ipa: 'ɛkˈtɔr bɛr liˌoʊz',
-  image: 2000,
-  country: 'France',
-  dates: '1803-1869',
-  bio:
-    'Hector Berlioz was a French Romantic composer, who gained his popularity through his unwillingness to accept traditional rules and formulas. He frequently employed extended techniques in many instruments, and developed his own forms and techniques for composition. He was internationally acclaimed as a conductor, and was also a prominant musical journalist.',
+  name: 'Berlioz',
   excerpts: [
     berliozBenvenuto,
     berliozFaust,
@@ -2625,145 +2619,73 @@ let berlioz = {
 
 let brahms = {
   id: 2,
-  name: 'Johannes Brahms',
-  ipa: 'joˈhanəs ˈbʁaːms',
-  image: 2001,
-  country: 'Germany',
-  dates: '1833-1897',
-  bio:
-    'Johannes Brahms was one of the most famous composers of all time. He is most famous for his four symphonies, but he wrote for many diverse ensembles. Brahms was a perfectionist in all that he did, and was known to occaisionally destroy some of his work to prevent it from being seen by the outside world.',
+  name: 'Brahms',
   excerpts: [brahmsAcademic, brahms2, brahmsTragic],
 };
 
 let bruckner = {
   id: 3,
-  name: 'Anton Bruckner',
-  ipa: " 'antɔn ˈbʁʊknɐ",
-  image: 2002,
-  country: 'Austria',
-  dates: '1824-1896',
-  bio:
-    'Anton Bruckner was an Austrian organist, music theorist, and composer of the romantic era. He is best known for his symphonies and religious music. Bruckner was unlike other composers of his time, in that he was very a very humble man.',
+  name: 'Bruckner',
   excerpts: [bruckner4, bruckner7, bruckner8, bruckner9],
 };
 
 let franck = {
   id: 4,
-  name: 'César Franck',
-  ipa: 'seɪˈzar frɑŋk',
-  image: 2003,
-  country: 'United Kingdom of the Netherlands (Now Belgium}',
-  dates: '1822 - 1890',
-  bio:
-    'Franck studied music in Paris at a young age. After his studies, he returned to Belgium and gained a terrible reputation for his oratorio "Ruth", and moved to Paris where he became an organist and teacher. Later in life, he became the organist for the Basilica of Saint Clotilde, where he remained for the rest of his life, composing in his free time pieces that are now considered standard repetoire.',
+  name: 'Franck',
   excerpts: [franckD],
 };
 
 let holst = {
   id: 5,
-  name: 'Gustav Holst',
-  ipa: 'ˈgʊs tɑv hoʊlst',
-  image: 2004,
-  country: 'England',
-  dates: '1874-1934',
-  bio:
-    'Holst was a popular English composer of the modern era. He aspired to become a concert pianist, but neuritis in his right arm prevented him. Against his father\'s wishes, he studied to become a composer. He was unable to support himself from his compositions alone, and started to play and teach the trombone professionally. He is most well known for his orchestral composition "The Planets".',
+  name: 'Holst',
   excerpts: [holstFirstSuite, holstPlanets],
 };
 
 let mahler = {
   id: 7,
-  name: 'Gustav Mahler',
-  ipa: 'ˈgʊs tɑf ˈmɑ lər',
-  image: 2006,
-  country: 'Austrian Empire',
-  dates: '1860-1911',
-  bio:
-    'Mahler is one of the most popular composers of all time. In 2016, a BBC Music survey ranked three of his symphonies among the top ten symphonies of all time. His music continues to be among the top recorded and perfomed in all of classical music. During his day, he was also among one of the top conductors of his era, and was the first conductor of the New York Philharmonic Orchestra.',
+  name: 'Mahler',
   excerpts: [mahler1, mahler2, mahler3, mahler5, mahler6, mahler9],
 };
 
 let mendellsohn = {
   id: 8,
-  name: 'Felix Mendelssohn',
-  ipa: "'fi lɪks 'mɛn dl sən",
-  image: 2007,
-  country: 'Germany',
-  dates: '1809-1947',
-  bio:
-    'Mendelssohn was born into a Jewish family, but was baptised Reformed Christian at the age of seven. He was known as a child prodigy, but his parents did not seek to capitalize on his talents. Well known as a composer, conductor, and organist, Mendelssohn helped to bring fame to the music of Bach.',
+  name: 'Mendelssohn',
   excerpts: [mendelssohnMidsummer],
 };
 
 let mussorgsky = {
   id: 9,
-  name: 'Modest Mussorgsky',
-  ipa: 'moʊˈdɛst mʊˈsɔrg ski',
-  image: 2008,
-  country: 'Russia',
-  dates: '1839-1881',
-  bio:
-    'Mussorgsky was one of the most important composers in Russia during his lifetime. He frequently incorporated folk music, and discarded western traditions in favor of Russian nationalism. Many of his works are most famous through arrangements by other composers.',
+  name: 'Mussorgsky',
   excerpts: [mussorgskyNightBald],
 };
 
 let respighi = {
   id: 10,
-  name: 'Ottorino Respighi',
-  ipa: 'ottoˈriːno reˈspiːɡi',
-  image: 2009,
-  country: 'Italy',
-  dates: '1879-1936',
-  bio:
-    'Respighi was an Italian violinist, composer, and musicologist. Hist interest in musicology led to the composition of his three most famous compositions: "Fountains of Rome", "Pines of Rome", and "Roman Festivals"',
+  name: 'Respighi',
   excerpts: [respighiFountains],
 };
 
 let rimskyKorsakov = {
   id: 11,
-  name: 'Nikolai Rimsky-Korsakov',
-  ipa: 'nʲɪkəˈlaj ˈrʲimskʲɪj ˈkorsəkəf',
-  image: 2010,
-  country: 'Russia',
-  dates: '1844-1908',
-  bio:
-    'Nikolai Rimsky-Korsakov was one of the most famous Russian composers. He was a master orchestrator, publishing a textbook on the subject using musical examples solely from his own compositions, and his most famous compositions are his orchestral works. Rimsky-Korsakov also spent a large portion of his musical life in association with the Russian military.',
+  name: 'RimskyKorsakov',
   excerpts: [rimskyKorsakovScheherazade],
 };
 
 let sibelius = {
   id: 12,
-  name: 'Jean Sibelius',
-  ipa: 'ʒɑn  sɪˈbeɪ li əs',
-  image: 2011,
-  country: 'Finland',
-  dates: '1865-1957',
-  bio:
-    'Sibelius is the most well known composer to come out of Finland. His music is credited with helping Finland to develop a national identity, and his most famous work "Finlandia" is known as Finland\'s unofficial national anthem. Sibelius mysteriously stopped composing in the last thirty years of his life, retiring to a quite life in Järvenpää.',
+  name: 'Sibelius',
   excerpts: [sibelius1, sibelius2],
 };
 
 let sousa = {
   id: 13,
-  name: 'John Philip Sousa',
-  ipa: "dʒɒn ˈfɪl ɪp 'su zə",
-  image: 2012,
-  country: 'The United States of America',
-  dates: '1854–1932',
-  bio:
-    'John Philip Sousa was an American composer of the late romantic era famous for his American military marches. He is known as "The March King". Sousa spent much of his career conducting The United States Marine Band, before starting his own band in 1892. Sousa also aided in the creation of the Sousaphone, a large brass instrument similar to the Helicon and Tuba.',
+  name: 'Sousa',
   excerpts: [sousaStarsAndStripes],
 };
 
 let rStrauss = {
   id: 14,
-  name: 'Richard Strauss',
-  ipa: 'ˈʁɪçaʁt ˈʃtʁaʊs',
-  image: 2013,
-  country: 'Germany',
-  dates: '1864-1949',
-  bio:
-    "Richard Strauss was one of the leading composers of the Romantic Era. He, along with Gustav Mahler, were considered successors of Richard Wagner. Although Strauss composed music for almost every classical genre, he is most famous for his tone poems. Strauss' compositional output began when he was just six years old, and continued almost eighty years later until his death.",
+  name: 'Strauss',
   excerpts: [
     straussAlsoSprach,
     straussDeathAndTransfiguration,
@@ -2776,25 +2698,13 @@ let rStrauss = {
 
 let stravinsky = {
   id: 15,
-  name: 'Igor Stravinsky',
-  ipa: 'ˈi gɔr strəˈvɪn ski',
-  image: 2014,
-  country: 'Russia',
-  dates: '1882-1971',
-  bio:
-    "Igor Stravinsky was one of the most influential composers of the twentieth century. Stravinsky's music is very unique from that of other composers, and often contains russian folk melodies. Throughout his life, the kinds of compositions that he composed also changed dramatically, from symphonies, to chamber music, to ballets.",
+  name: 'Stravinsky',
   excerpts: [stravinskyRite],
 };
 
 let tchaikovsky = {
   id: 16,
-  name: 'Pyotr Ilyich Tchaikovsky',
-  ipa: 'ˈpyɔtr iˈlyitʃ tʃaɪˈkɒfski',
-  image: 2015,
-  country: 'Russia',
-  dates: '1840-1893',
-  bio:
-    "Tchaikovsky was the first Russian composer to gain international fame. Tchaikovsky recieved a western European style music education, which seemed to counter the traditional Russian music practices. This dichotomy posed a great challenge for Tchaikovsky, one that affected his self confidence a lot. Although Tchaikovsky's music gained popular support, his life was deeply affected by depression and personal crises.",
+  name: 'Tchaikovsky',
   excerpts: [
     tchaikRomeoAndJuliet,
     tchaikovskySleepingBeauty,
@@ -2809,25 +2719,13 @@ let tchaikovsky = {
 
 let verdi = {
   id: 17,
-  name: 'Giuseppe Verdi',
-  ipa: 'dʒuˈzɛppe ˈverdi',
-  image: 2016,
-  country: 'Italy',
-  dates: '1813-1901',
-  bio:
-    'Giuseppe Verdi was an Italian opera composer who took after Rossini, Bellini, and Donizetti. Rossini had sympathy for the Risorgimento movement for the unification of Italy, and some choruses from his early operas were in the spirit of this movement. Verdi participated briefly as an elected politician, and sought to establish himself as a landowner in his native region.',
+  name: 'Verdi',
   excerpts: [verdiNabucco],
 };
 
 let wagner = {
   id: 18,
-  name: 'Richard Wagner',
-  ipa: 'ˈʁɪçaʁt ˈvaːɡnɐ',
-  image: 2017,
-  country: 'Germany',
-  dates: '1813-1883',
-  bio:
-    'Wagner is one of the most well known composers of all time. His music frequently appears in television shows and movies. He was most well known in his era for his operas, which usually run about four hours. Wagner was unusual as an opera composer because he himself wrote the liberetto for the operas he composed. Wagner had his own opera house constructed, which still stands to this day.',
+  name: 'Wagner',
   excerpts: [
     wagnerRheingold,
     wagnerMeistersinger,
