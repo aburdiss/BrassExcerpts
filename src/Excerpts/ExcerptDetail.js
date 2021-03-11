@@ -3,7 +3,7 @@ import {ScrollView, View, Text, StyleSheet} from 'react-native';
 import {useRoute} from '@react-navigation/native';
 
 import MetaLabel from './ExcerptDetail/MetaLabel';
-import YoutubeLink from './ExcerptDetail/YoutubeLink';
+import YoutubeSection from './ExcerptDetail/YoutubeSection';
 import {colors} from '../Model/Model';
 import {Image} from 'react-native';
 
@@ -15,7 +15,6 @@ import {Image} from 'react-native';
 const ExcerptDetail = () => {
   const route = useRoute();
   const item = route.params;
-  console.log(item.videos);
 
   return (
     <ScrollView>
@@ -51,10 +50,8 @@ const ExcerptDetail = () => {
         ))}
       </View>
       <View style={styles.youtubeLinksContainer}>
-        <Text style={styles.heading}>Listen</Text>
-        {item.videos.map((video) => (
-          <YoutubeLink key={video[1]} video={video} />
-        ))}
+        <Text style={styles.youtubeHeading}>Listen</Text>
+        <YoutubeSection data={item.videos} />
       </View>
     </ScrollView>
   );
@@ -80,6 +77,10 @@ const styles = StyleSheet.create({
   title: {
     fontStyle: 'italic',
     fontWeight: 'bold',
+  },
+  youtubeHeading: {
+    fontSize: 28,
+    paddingTop: 10,
   },
   youtubeLinksContainer: {
     marginHorizontal: 20,

@@ -1,4 +1,4 @@
-export const YouTubeModel = {
+export default YouTubeModel = {
   bachCelloSuite: {
     full: [
       ['Christian Jones', 'jO9BGyQveRY'],
@@ -54,12 +54,7 @@ export const YouTubeModel = {
 
       ['Riccardo Muti, Philadelphia Orchestra', 'JC_wGFGYkjs'],
     ],
-    score: [
-      [
-        'Leonard Bernstein, Vienna State Opera Orchestra (With Score)',
-        'YI-CF_rOApI',
-      ],
-    ],
+    score: [['Leonard Bernstein, Vienna State Opera Orchestra', 'YI-CF_rOApI']],
   },
 
   berliozFaust: {
