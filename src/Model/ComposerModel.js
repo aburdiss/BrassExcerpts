@@ -13,7 +13,7 @@ export const composers = {
   Beethoven: {
     id: 1,
     name: 'Ludwig Van Beethoven',
-    ipa: 'ˈlʊdvɪɡ væn ˈbeɪt(h}oʊvən',
+    ipa: 'ˈlʊdvɪɡ væn ˈbeɪt(h)oʊvən',
     image: 2001,
     country: 'Germany',
     dates: '1770-1827',
@@ -114,7 +114,7 @@ export const composers = {
     name: 'César Franck',
     ipa: 'seɪˈzar frɑŋk',
     image: 2008,
-    country: 'United Kingdom of the Netherlands (Now Belgium}',
+    country: 'United Kingdom of the Netherlands (Now Belgium)',
     dates: '1822 - 1890',
     bio:
       'Franck studied music in Paris at a young age. After his studies, he returned to Belgium and gained a terrible reputation for his oratorio "Ruth", and moved to Paris where he became an organist and teacher. Later in life, he became the organist for the Basilica of Saint Clotilde, where he remained for the rest of his life, composing in his free time pieces that are now considered standard repetoire.',
@@ -255,7 +255,7 @@ export const composers = {
   SaintSaens: {
     id: 23,
     name: 'Camille Saint-Saëns',
-    ipa: 'kamij sɛ̃ sɑ̃(s}',
+    ipa: 'kamij sɛ̃ sɑ̃(s)',
     image: 2018,
     country: 'France',
     dates: '1835-1921',
