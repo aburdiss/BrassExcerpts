@@ -72,7 +72,7 @@ let bachBrandenburgConcerto = {
     },
   ],
   mutes: '',
-  videos: 'bachBrandenburgConcerto',
+  videos: 'bachBrandenburg1',
 };
 
 let bachMassB = {

@@ -41,15 +41,7 @@ let bachBrandenburg2 = {
     },
   ],
   mutes: 'No',
-  videos: [
-    ['Freiburger Barockorchester', '3HSRIDtwsfM'],
-    ['Members of Los Angeles Philarmonic Orchestra', 'NYOWdONwSyY'],
-    ['Münchener Bach-Orchester', 'IETYYTMtL6U'],
-    ['The English Baroque Soloists', 'RNiKx8yHp1w'],
-    ['The English Concert (With Score}', 'haRanlw9eSg'],
-    // Masterclasses
-    ['Philip Smith', 'bEurgaV3Q9A'],
-  ],
+  videos: 'bachBrandenburg2',
 };
 
 let bachCantata = {
@@ -69,17 +61,7 @@ let bachCantata = {
     },
   ],
   mutes: 'No',
-  videos: [
-    ['Chambermusic Festival of Liza Ferschtman', 'Iw5wT0_42n0'],
-    ['Gustav Leonhardt, Leonhardt-Consort', 'xbbMKmYFml8'],
-    ['Helmuth Rilling, Real Filharmonia de Galicia', 'BFDtRn396WY'],
-    ['John Eliot Gardiner, English Baroque Soloists', 'oaH1Qbw7wYQ'],
-    ['Lars Ulrik Mortensen, European Union Baroque Orchestra', 'mM9lpVIC_JQ'],
-    [
-      'Somogyváry Ákos, Caritas Collectio Chamber Orchestra (With Score}',
-      'qrR3VmrQxrc',
-    ],
-  ],
+  videos: 'bachCantata51',
 };
 
 let bachChristmasOratorio = {
@@ -103,17 +85,7 @@ let bachChristmasOratorio = {
     },
   ],
   mutes: 'No',
-  videos: [
-    ['Hans-Christoph Rademann, Freiburg Baroque Orchestra', 'ocktBnecnC0'],
-    ['John Eliot Gardiner, English Baroque Soloists', 'zpaNo4mWRBE'],
-    ['Nikolaus Harnoncourt, Soloists of the Tolzer Knabenchor', '98UjjwzJBFE'],
-    ['Nikolaus Harnoncourt, Soloists of the Tolzer Knabenchor', 'LJts7bpW2VE'],
-    ['René Jacobs, Akademie für Alte Musik Berlin', 'vXNX6Ulzvn0'],
-    ['Thomaskantor Kurt Thomas, Gewandhaus Orchester', 'M0LNSAj3Xhc'],
-    // Masterclasses
-    ['Anthony Prisk', 'qEipimgVISg'],
-    ['Michael Attaway', 'F4NpABUw8wc'],
-  ],
+  videos: 'bachChristmasOratorio',
 };
 
 let bachMagnificant = {
@@ -137,18 +109,7 @@ let bachMagnificant = {
     },
   ],
   mutes: 'No',
-  videos: [
-    ['Avner Biron, The Isarel Camerata Jerusalem', 'P4CluTzJX9U'],
-    ['Emmanuelle Haïm, Frankfurt Radio Symphony', '3EPk6zOaLH0'],
-    ['John Eliot Gardiner, English Baroque Soloists', 'hJQJkZKay2Q'],
-    ['Karl Richter, Münchener Bach-Orchester', 'jxq3kMArYjo'],
-    ['Matthias Beckert, Monteverdi Ensemble', 'QQAWqqaUTHE'],
-    ['Michel Corboz (With Score}', 'q8Oeq12zjZk'],
-    ['Nikolaus Harnoncourt, Concentus Musicus Vienna', '41blIyHQ0hs'],
-    // Masterclass
-    ['Anthony Prisk', 'SHyp2CWDzP0'],
-    ['Philip Smith', 'eZnnz9-3KuE'],
-  ],
+  videos: 'bachMagnificant',
 };
 
 let bachMassB = {
@@ -178,19 +139,7 @@ let bachMassB = {
     },
   ],
   mutes: 'No',
-  videos: [
-    [
-      'Frans Brüggen, Orchestra of the 18th Century (With Score}',
-      'EH6wdRVqoXQ',
-    ],
-    ['Harry Bicket, The English Concert', '7F7TVM8m95Y'],
-    ['John Eliot Gardiner, English Baroque Soloists', 'm7obnfrlP0s'],
-    ['John Eliot Gardiner, Monteverdi Choir', 'CT6vRpmyiW0'],
-    ['Jordi Savall, Le Concert des Nations', 'tDteccEwZNI'],
-    ['Jos van Veldhoven, Netherlands Bach Society', '3FLbiDrn8IE'],
-    ['Karl Richter, Münchener Bach-Orchester', 'vw9eEIfohj4'],
-    ['René Jacobs, Akademie fur Alte Musik Berlin', 'So704KMhspk'],
-  ],
+  videos: 'bachMassB',
 };
 
 let beethovenLeonore2 = {
@@ -210,21 +159,7 @@ let beethovenLeonore2 = {
     },
   ],
   mutes: 'No',
-  videos: [
-    ['Bernard Haitink, London Philharmonic Orchestra', 'egp07RjNlQI'],
-    ['Claudio Abbado, Vienna Philhamonic Orchestra', 'drvzLKu9uI0'],
-    [
-      'Claudio Abbado, Vienna Philharmonic Orchestra (With Score}',
-      'UxB_28XuaO4',
-    ],
-    ['George Szell, Cleveland Orchestra', 'ykvxFeLYhWg'],
-    ['George Szell, Cleveland Orchestra', 'QEFOJQM3BNU'],
-    ['Herbert Blomstedt, Orchestre de Paris', 'TwwiBZh5Wys'],
-    ['Herbert von Karajan, Berliner Philharmoniker', 'g1o95TFXMDA'],
-    ['Roy Goodman, The Hanover Band', 'gGhv2RQ8P_I'],
-    // Masterclasses
-    ['Philip Smith', 'NmMCBiu1sno'],
-  ],
+  videos: 'beethovenLeonore2',
 };
 
 let beethovenLeonore3 = {
@@ -244,22 +179,7 @@ let beethovenLeonore3 = {
     },
   ],
   mutes: 'No',
-  videos: [
-    ['Anton Nanut, Radio-Symphonieorchester Wien (With Score}', '_0pz7zkKcA0'],
-    ['Franz Welser, Vienna Philharmonic', 'oodMxBMM0Dw'],
-    ['Karl Böhm, Wiener Philharmoniker', 'RpCNGTRvQVI'],
-    ['Kurt Masur, Gewandhaus Orchester Leipzig', 'JEcxF227xE0'],
-    ['Leonard Bernstein, Bavarian Broadcast Symphony Orchestra', 'dRhwyzJABvI'],
-    [
-      'Nicolás Pasquet, Orchestra of the University of Music FRANZ LISZT Weimar',
-      'OOIlQkANUxQ',
-    ],
-    ['Herbert von Karajan, Berliner Philharmoniker', '5OibQYjPUqc'],
-    ['Sir Georg Solti, Chicago Symphony Orchestra', 'yZzwA_dntCM'],
-    // Masterclasses
-    ['Peter Schuh', 'qKtpgkkWHk8'],
-    ['Philip Smith', 'NmMCBiu1sno'],
-  ],
+  videos: 'beethovenLeonore3',
 };
 
 let beethoven5 = {
@@ -291,15 +211,7 @@ let beethoven5 = {
     },
   ],
   mutes: 'No',
-  videos: [
-    ['Bernard Haitink, London Symphony Orchestra', 'DAyUzxDB9eE'],
-    ['Christian Thielemann, Vienna Philharmonic Orchestra', 'olMPeiqoiic'],
-    ['Daniel Barenboim, West-Eastern Divan Orchestra', 'jv2WJMVPQi8'],
-    ['Gustavo Dudamel', 'msolhqi-PC0'],
-    ['Herbert von Karajan, Berlin Philharmonic (With Score}', 'yKl4T5BnhOA'],
-    ['Herbert von Karajan, Philharmonia Orchestra', 'OV6Lp7cnX7s'],
-    ['Leonard Bernstein, Wiener Philharmoniker', 'kHYBoG7hiZk'],
-  ],
+  videos: 'beethoven5',
 };
 
 let beethoven9 = {
@@ -322,19 +234,7 @@ let beethoven9 = {
     },
   ],
   mutes: 'No',
-  videos: [
-    ['Arturo Toscanini, NBC Symphony Orchestra', 'DuK133dK6eQ'],
-    [
-      '정명훈 (Chung Myung-Whun}, The Orchestre Philharmonique de Radio France',
-      'KtRzuOSCOO0',
-    ],
-    ['Daniel Barenboim, West-Eastern Divan Orchestra', 'ChygZLpJDNE'],
-    ['Herbert von Karjan, Berlin Philharmonic (With Score}', 'ixpfgm_xxSE'],
-    ['Klaus Mäkelä, Oslo Philharmonic', 'QkQapdgAa7os'],
-    ['Osaka, Japan', 'X6s6YKlTpfw'],
-    ['Riccardo Muti, Chicago Symphony Orchestra', 'rOjHhS5MtvA'],
-    ['Seiji Ozawa, Saito Kinen Orchestra', 'VS6TEQ_z2wc'],
-  ],
+  videos: 'beethoven9',
 };
 
 let beethovenViolin = {
@@ -357,16 +257,7 @@ let beethovenViolin = {
     },
   ],
   mutes: 'No',
-  videos: [
-    ['Bernard Haitink, Royal Concertgebouw Orchestra', 'DoVwXtJkycU'],
-    ['Carlo Maria Giulini, Philharmonia Orchestra', 'iR8vHbiTADg'],
-    ['Joshua Bell, Orpheus Chamber Orchestra', 'WqWl8K3svoI'],
-    ['Leonard Slatkin, Detroit Symphony Orchestra', '0Cg_0jepxow'],
-    ['Marek Pijarowski, Poznań Philharmonic Orchestra', 'gIdqiis3Mts'],
-    ['Seiji Ozawa, Berliner Philharmoniker', 'ZQVs4MhX3xo'],
-    ['Walter Weller, Orquesta Sinfónica de RTVE', 'PvrPGO7ja3k'],
-    ['Yehudi Menuhin, Menuhin Festival Orchestra', '0qlcIdFd8X4'],
-  ],
+  videos: 'beethovenViolin',
 };
 
 let berliozRomanCarnival = {
@@ -402,21 +293,7 @@ let berliozRomanCarnival = {
     },
   ],
   mutes: 'No',
-  videos: [
-    ['Charles Dutoit, Orchestre symphonique de Montréal', 'LK8mdW0LF6I'],
-    [
-      '정명훈 (Chung Myung-Whun}, The Orchestre Philharmonique de Radio France',
-      '0nJUSHqSaV8',
-    ],
-    ['Jukka Pekka Saraste, WDR Sinfonieorchester Köln', 'g4qZrpGI-fk'],
-    ['YouTube Symphony Orchestra', 'uYqItMmwwKE'],
-    // Bands
-    [
-      'Major Larry H. Lang, US Air Force Heritage of America Band',
-      'OifAYPuJHsE',
-    ],
-    ['"The President\'s Own" U.S. Marine Band', '8GVLupxK9fI'],
-  ],
+  videos: 'berliozRomanCarnival',
 };
 
 let berliozSymphonie = {
@@ -477,24 +354,7 @@ let berliozSymphonie = {
     },
   ],
   mutes: 'No',
-  videos: [
-    [
-      'Andrés Orozco-Estrada, Frankfurt Radio Symphony Orchestra',
-      'AgXW-57UDMc',
-    ],
-    ['정명훈 (Chung Myung-Whun}', '5HgqPpjIH5c'],
-    [
-      'Gustavo Dudamel, Orchestre philharmonique de Radio France',
-      'HDHPgqv4hsw',
-    ],
-    ['Herbert von Karajan, Berlin Philharmonic Orchestra', 'sK4dz6Gbcdk'],
-    ['Leonard Bernstein, Orchestre National de France', 'rQXtC6B3CKQ'],
-    [
-      'Leopold Stokowski, New Philharmonia Orchestra (With Score}',
-      'ewoAW-Zyuj8',
-    ],
-    ['Mariss Jansons, Bavarian Radio Symphony Orchestra', 'yK6iAxe0oEc?t=284'],
-  ],
+  videos: 'berliozSymphonie',
 };
 
 let bizetCarmen = {
@@ -517,22 +377,7 @@ let bizetCarmen = {
     },
   ],
   mutes: 'No',
-  videos: [
-    ['Boian Videnoff, Mannheimer Philharmoniker', 'qvit0kufwZ4'],
-    ['Daniel Barenboim, Berliner Philharmoniker', 'wwwL15GQuss'],
-    [
-      "Jane Ezbicki, New England Conservatory's Youth Repertory Orchestra",
-      'tSpzenCTucA',
-    ],
-    [
-      'Lukasz Sidoruk, Symphony Orchestra of The Karol Szymanowski Music School',
-      'opMCCil4Pjk',
-    ],
-    ['Leonard Slatkin, Saint Louis Symphony Orchestra', 'Zoqpn_7I7Dw'],
-    ['Tan Wee Hsin, Singapore National Youth Orchestra', 'hh7dxdlTPU8'],
-    // Masterclasses
-    ['Philip Smith', 'w5yHjjepMV4'],
-  ],
+  videos: 'bizetCarmen',
 };
 
 let brahmsAcademic = {
@@ -556,22 +401,7 @@ let brahmsAcademic = {
     },
   ],
   mutes: 'No',
-  videos: [
-    [
-      'Bernard Haitink, Royal Concertgebouw Orchestra (With Score}',
-      '5AkQrnLPvC4',
-    ],
-    ['Claudio Abbado, Berliner Philharmoniker', 'iIss3Gca6Qo'],
-    ['Leonard Bernstein', 'Y1E6FBi-AJw'],
-    ['Otto Klemperer, Philharmonia Orchestra', 'bjLrZqYguFs'],
-    ['Paavo Järvi, Orchestre de Paris', 'R5pzr5655yw'],
-    ['Sir Georg Solti, Chicago Symphony Orchestra', 'JMIxE-tc6r0'],
-    // Bands
-    [
-      'Mark H. Hindsley, The University of Illinois Concert Band',
-      'fiW2N96aPoE',
-    ],
-  ],
+  videos: 'brahmsAcademic',
 };
 
 let brahms1 = {
@@ -594,20 +424,7 @@ let brahms1 = {
     },
   ],
   mutes: 'No',
-  videos: [
-    [
-      'Andrés Orozco-Estrada, Frankfurt Radio Symphony Orchestra',
-      'cqd4NQ-ppCY',
-    ],
-    ['Herbert von Karajan, Berliner Philharmoniker', '45mWi4qY5v0'],
-    ['Karl Böhm, Berliner Philharmoniker (With Score}', 'POW-u-RGspY'],
-    ['Leonard Bernstein, Vienna Philharmonic Orchestra', 'EGRqIGOAPcE'],
-    ['Paavo Järvi, Orchestre de Paris', 'BRdEgS_OHAk'],
-    [
-      'Stanisław Skrowaczewski, Frankfurt Radio Symphony Orchestra',
-      '9Ij6I_zhBdU',
-    ],
-  ],
+  videos: 'brahms1',
 };
 
 let brahms2 = {
@@ -648,18 +465,7 @@ let brahms2 = {
     },
   ],
   mutes: 'No',
-  videos: [
-    [
-      'Andrés Orozco-Estrada, Frankfurt Radio Symphony Orchestra',
-      'qbcfuMlNRWg',
-    ],
-    ['Carlos Kleiber, Wiener Philharmoniker', 'XHmkl7GM_es'],
-    ['Carlos Kleiber, Wiener Philharmoniker (With Score}', 'HCkSpCh4Wcw'],
-    ['Kurt Masur, Gewandhausorchester Leipzig', 'lSii-jC6-Uo'],
-    ['Leonard Bernstein, Wiener Philharmoniker', '6nKd-ia7_Lc'],
-    ['Philippe Herreweghe, Frankfurt Radio Symphony Orchestra', 'vMPP8DkVhk8'],
-    ['Seiji Ozawa, Saito Kinen Orchestra', 'QnTNiYTHQ90'],
-  ],
+  videos: 'brahms2',
 };
 
 let bruckner4 = {
@@ -683,15 +489,7 @@ let bruckner4 = {
     },
   ],
   mutes: 'No',
-  videos: [
-    ['Claudio Abbado, Wiener Philharmoniker', 'gcBg-tXn0fs'],
-    ['Daniel Barenboim, Royal Concertgebouw Orchestra', 'xdv-9RFZX2w'],
-    ['Eliahu Inbal, Frankfurt Radio Symphony', 'DEssCDEAyig'],
-    ['Gustavo Gimeno, The Radio Philharmonic Orchestra', 'G_VFA988d8s'],
-    ['Herbert von Karajan, Berliner Philharmoniker', 'rCvOXwgOvOo'],
-    ['Sergiu Celibidache, Münchner Philharmoniker', 'LY7m119eOys'],
-    ['Stanislaw Skrowaczewski, Orquesta Sinfónica de Galicia', 'P_BXBiHtIGM'],
-  ],
+  videos: 'bruckner4',
 };
 
 let bruckner7 = {
@@ -770,16 +568,7 @@ let bruckner7 = {
     },
   ],
   mutes: 'No',
-  videos: [
-    ['Andris Nelsons, Gewandhausorchester Leipzig', '_6sX6aIlgJk'],
-    ['Bernard Haitink, Wiener Philharmoniker', 'WiJH18Dmbu4'],
-    ['Christoph Eschenbach, Frankfurt Radio Symphony', 'uaV3eEJB55c'],
-    ['Christian Thielemann, Wiener Philharmoniker', 'cuXPkoOM2j8'],
-    ['Herbert von Karajan, Wiener Philharmoniker', '3pioV8yB3iA'],
-    ['Otto Klemperer, Philharmonia Orchestra', 'wGoYMjVagqQ'],
-    ['Sergiu Celibidache, Münchner Philharmoniker', '2X2bbusaOzI'],
-    ['Wilhelm Furtwängler, Berliner Philharmoniker', 'ihK5eDpP2vU'],
-  ],
+  videos: 'bruckner7',
 };
 
 let bruckner8 = {
@@ -803,16 +592,7 @@ let bruckner8 = {
     },
   ],
   mutes: 'No',
-  videos: [
-    ['Carlo Maria Giulini, Vienna Philharmonic Orchestra', 'xT5kreOhjxU'],
-    ['Herbert von Karajan, Vienna Philharmonic Orchestra', 'qqCsF_dIN5A'],
-    ['Paavo Järvi, Frankfurt Radio Symphony Orchestra', '-UPIEJAptcY'],
-    ['Pierre Boulez, Vienna Philharmonic Orchestra', 'ufqC1LCpHV4'],
-    ['Sergiu Celibidache, Münchner Philharmoniker', 'elVHvTrEM34'],
-    ['Wilhelm Furtwängler, Berliner Philharmoniker', '7aDNxyFgLXQ'],
-    ['Wilhelm Furtwängler, Wiener Philharmoniker', 'YNona1BCvkY'],
-    ['Zubin Mehta, Wiener Philharmoniker', 'razu3fSqnVE'],
-  ],
+  videos: 'bruckner8',
 };
 
 let debussyNocturnes = {
@@ -835,16 +615,7 @@ let debussyNocturnes = {
     },
   ],
   mutes: 'Straight',
-  videos: [
-    ['Charles Dutoit, Montreal Symphony Orchestra', 'spXwXLqFLvs'],
-    ['Mikko Franck, Orchestre philharmonique de Radio France', 'M0LR1Rw0W4c'],
-    ['Pablo Heras-Casado, Frankfurt Radio Symphony', 't20nBwcH3bQ'],
-    ['Pierre Boulez, Vienna Philharmonic', '1s4LZbr_h50'],
-    ['Sergiu Celibidache, Radio-Sinfonieorchester Stuttgart', 'uhUM6zSav08'],
-    ['Vladimir Ashkenazy, Cleveland Orchestra', 'obv33I2Kf10'],
-    // Masterclasses
-    ['Philip Smith', 'qwBbTvAeOss'],
-  ],
+  videos: 'debussyNocturnes',
 };
 
 let debussyLaMer = {
@@ -880,22 +651,7 @@ let debussyLaMer = {
     },
   ],
   mutes: 'Straight',
-  videos: [
-    [
-      '정명훈 (Chung Myung-Whun}, Orchestre Philharmonique de Radio France',
-      'ogYtW1Yb5s4',
-    ],
-    ['Herbert von Karajan, Philharmonia Orchestra', 'RLAIJjWdJRQ'],
-    ['Leonard Bernstein, New York Philharmonic', 'EtJ9FhwtthE'],
-    ['Paavo Järvi, Frankfurt Radio Symphony Orchestra', 'k8NJRyfnYZ8'],
-    ['Pierre Boulez, The Cleveland Orchestra', 'IoENgt1h4_A'],
-    ['Pierre Boulez, New York Philharmonic', '1mGqLaD_zaU'],
-    ['Valery Gergiev, London Symphony Orchestra', 'hlR9rDJMEiQ'],
-    ['Vladimir Ashkenazy, Cleveland Orchestra', 'FOCucJw7iT8'],
-    ['Vladimir Ashkenazy, Cleveland Orchestra (With Score}', 'KUFpcPEcwTo'],
-    // Masterclass
-    ['Philip Smith', 'N0__fUmoMT8'],
-  ],
+  videos: 'debussyLaMer',
 };
 
 let donizettiDonPasquale = {
@@ -915,17 +671,7 @@ let donizettiDonPasquale = {
     },
   ],
   mutes: 'No',
-  videos: [
-    ['Damiano Binetti, Rzesow Philharmonia', 'OoIiucpWzGk'],
-    ['Evelino Pido, Orchestra de la Suisse Romande', 'RS4TIsqr5lU'],
-    ['Gérard Korsten, Teatro Lirico di Cagliari', 'p7DDvMcDxDM'],
-    [
-      'Massimo Pradella, Orchestra sinfonica e coro di Milano della RAI',
-      '9ppmuOIKFPw',
-    ],
-    ['Nello Santi, Orchestra of the Zürich Opera', '_RZ-pOOgbL4'],
-    ['Ricardo Muti, Teatro alla Scala', 'gg9TsDjE0RM'],
-  ],
+  videos: 'donizettiDonPasquale',
 };
 
 let dvorak8 = {
@@ -966,14 +712,7 @@ let dvorak8 = {
     },
   ],
   mutes: 'Straight',
-  videos: [
-    ['George Szell, The Cleveland Orchestra', 'GgL8JTrGbuU'],
-    ['Herbert von Karajan, Wiener Philharmoniker', 'zfP29uN33L8'],
-    ['Manfred Honeck, Frankfurt Radio Symphony Orchestra', 'QXAv-NGppFw'],
-    ['Yannick Nézet-Séguin, Rotterdams Philharmonisch Orkest', 'XRmcSm-YVZc'],
-    ['Václav Neumann, Czech Philharmonic (With Score}', '6O6Nme3fw5k'],
-    ['Zubin Mehta, Los Angeles Philharmonic Orchestra', 'aoQ1Sh20pvE'],
-  ],
+  videos: 'dvorak8',
 };
 
 let dvorak9 = {
@@ -1005,17 +744,7 @@ let dvorak9 = {
     },
   ],
   mutes: 'No',
-  videos: [
-    ['Andrés Orozco-Estrada, Frankfurt Radio Symphony', 'jOofzffyDSA'],
-    ['Ferenc Fricsay, Berliner Philharmoniker (With Score}', 'oLWpgWuUaU4'],
-    ['George Szell, The Cleveland Orchestra', 'jxoygdpGET0'],
-    [
-      'Mariss Jansons, Symphonieorchester des Bayerischen Rundfunks',
-      '9_BlhOJp8RY',
-    ],
-    ['Sergiu Celibidache, Münchner Philharmoniker', '_9RT2nHD6CQ'],
-    ['Wolfgang Sawallisch, Philadelphia Orchestra', '_JsTuICpqI8'],
-  ],
+  videos: 'dvorak9',
 };
 
 let handelMessiah = {
@@ -1035,16 +764,7 @@ let handelMessiah = {
     },
   ],
   mutes: 'No',
-  videos: [
-    ['Barnaby Smith, Academy of Ancient Music', 'lFjQ77ol2DI'],
-    ['Brett Weymark, Sydney Philharmonia Orchestra', 'bR0cEOTpYSk'],
-    ['Christopher Hogwood, Academy of Ancient Music', 'fdlyoEpCV9k'],
-    ['London Philharmonic Orchestra', '71NCzuDNUcg'],
-    ['Mack Wilberg, Orchestra at Temple Square', '7hhcURZVx5k'],
-    ['Sir Colin Davis, London Symphony Orchestra', 'ZuGSOkYWfDQ'],
-    ['Stephen Cleobury, The Brandenburg Consort', '48NffKWvaQI'],
-    ['Vaclav Lucs, Collegium 1704', 'JH3T6YwwU9s'],
-  ],
+  videos: 'handelMessiah',
 };
 
 let haydn100 = {
