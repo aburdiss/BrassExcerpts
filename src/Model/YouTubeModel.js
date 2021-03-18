@@ -271,6 +271,63 @@ export default YouTubeModel = {
       ['Ralph Sauer', 'tGkfrDcx0JI'],
       ['Southeast Trombone Symposium', 'TBwYSOIscw0'],
     ],
+    tuba: [
+      ['Gene Pokorny', '6fzshngQtIA'],
+      ['Southeast Trombone Symposium', 'TBwYSOIscw0'],
+    ],
+  },
+
+  berliozBenvenuto: {
+    full: [
+      [
+        'Lorin Maazel, Symphonieorchester des Bayerischen Rundfunks',
+        'MkV8_QPfJt0',
+      ],
+      ['Sir Colin Davis, BBC Symphony Orchestra', 'jX-TmMo6TX0'],
+      ['Sir Mark Elder, The Hallé', '7iN9jroI_M4'],
+      ['Valery Gergiev, Vienna Philharmonic Orchestra', 'a82dmk0p5Rc'],
+    ],
+    band: [[' Ballylone Concert FB', '93mflHKmn60']],
+  },
+
+  berliozKingLear: {
+    full: [
+      ['Charles Dutoit, Orchestre Symphonique de Montréal', '_Zd3cxKOwhY'],
+      [
+        'Matthew Bishop, Florida State University Symphony Orchestra',
+        'EFxN_iRuJO8',
+      ],
+      ['Schalk Van Der Merwe, Cape Town Philharmonic Orchestra', 'EtYeilpRhlM'],
+      ['Andrew Davis, Bergen Filharmoniske Orkester', 'sEoyvkWVePE'],
+      ['Sir Colin Davis, Bavarian Radio Symphony Orchestra', '_Edm5ksKjCQ'],
+      ['Sir Colin Davis, London Symphony Orchestra', 'm7pDDv20Snc'],
+      ['Sir Colin Davis, Staatskapelle Dresden', 'StvrBVSKE_Y'],
+      ['Sir Thomas Beecham, Royal Philharmonic Orchestra', '8ydvfDD75Pc'],
+      ['Yuri Simonov, Moscow Philharmonic Orchestra', 'URjxfXvHAEo'],
+    ],
+    tuba: [
+      [
+        'Sir Colin Davis, Symphonieorchester des Bayerischen Rundfunks (Excerpts}',
+        '2IQNxs0jT8U',
+      ],
+    ],
+  },
+
+  berliozLeCorsaire: {
+    full: [
+      ['André Previn, NHK Symphony Orchestra', 'hLhuumLwmlA'],
+      ['大植 英次 (Eiji Oue), Osaka Philharmonic Orchestra', 'Erm2sZUji2c'],
+      ['Hans Vonk, St. Louis Symphony Orchestra', 'oxBogTLIjLQ'],
+      ['Kenneth Jean, Polish State Philharmonic Orchestra', 'bBqCB8Upia4'],
+      ['Paavo Järvi, Orchestre de Paris', 'd7kez0F0UJ4'],
+      ['Peter Holmann, The Hamburg Symphony Orquestra', '99J-zyAzTKo'],
+      ['Riccardo Muti, Orchestra Filarmonica della Scala', 'Zvh8AN0nx-U'],
+      ['Sir Colin Davis, London Symphony Orchestra', '-xB3pAPnmCE'],
+      ['Sir Colin Davis, Staatskapelle Dresden', 'Z_vTmS4pmus'],
+    ],
+    tuba: [
+      ['Sir Colin Davis, Staatskapelle Dresden (Excerpts)', 'uCEFN-BZidQ'],
+    ],
   },
 
   berliozRomanCarnival: {
@@ -309,6 +366,7 @@ export default YouTubeModel = {
       ],
     ],
     trombone: [['Ralph Sauer', 'b02PvPTGt9Y']],
+    tuba: [['Gene Pokorny', 'zL3d4OulBQE']],
   },
 
   berliozSymphonie: {
@@ -336,6 +394,7 @@ export default YouTubeModel = {
       ['Joseph Alessi', 'Mm8lPg8O0vw'],
       ['Ralph Sauer', 'tGkfrDcx0JI'],
     ],
+    tuba: [['Gene Pokorny', 'cVhYO0TZ5Bw']],
   },
 
   bizetCarmen: {
@@ -467,6 +526,10 @@ export default YouTubeModel = {
       ['NDR Elbphilharmonie Orchestra Trombones', 'xIM-R4zWO9w'],
       ['Ralph Sauer', '6p0_47CAmOg'],
     ],
+    tuba: [
+      ['Multiple Orchestras (Excerpts)', 'c7IZkVIH2D4'],
+      ['NDR Elbphilharmonie Orchestra Trombones', 'xIM-R4zWO9w'],
+    ],
   },
 
   brahms3: {
@@ -512,6 +575,12 @@ export default YouTubeModel = {
       ['Sir Georg Solti, Chicago Symphony Orchestra', 'xcyfLyR2QZk'],
     ],
     score: [['Herbert von Karajan, Berlin Philharmonic', '3ixfKBIkz1U']],
+    tuba: [
+      [
+        'Herbert von Karajan, Berliner Philharmoniker (Excerpts)',
+        'YNc_Zxv9gHk',
+      ],
+    ],
   },
 
   brahmsVariations: {
@@ -542,6 +611,7 @@ export default YouTubeModel = {
       ['Stanislaw Skrowaczewski, Orquesta Sinfónica de Galicia', 'P_BXBiHtIGM'],
     ],
     trombone: [['Ralph Sauer', 'zs1cgPnRxQ8']],
+    tuba: [['Sir Georg Solti, Chicago Symphony (Excerpts)', 'J-69mjD7WSg']],
   },
 
   bruckner7: {
@@ -559,6 +629,10 @@ export default YouTubeModel = {
       [' London Philharmonic Orchestra Trombones', 'D0SRo79T_Sw'],
       ['Ralph Sauer', 'zs1cgPnRxQ8'],
     ],
+    tuba: [
+      ['Gene Pokorny', 'bJ4hMBRdAhs'],
+      ['London Philharmonic Orchestra Trombones', 'D0SRo79T_Sw'],
+    ],
   },
 
   bruckner8: {
@@ -573,6 +647,10 @@ export default YouTubeModel = {
       ['Zubin Mehta, Wiener Philharmoniker', 'razu3fSqnVE'],
     ],
     trombone: [
+      ['London Philharmonic Orchestra Trombones', 'kQEKd0qA-XE'],
+      ['Southeast Trombone Symposium', '5fj7eri3NNY'],
+    ],
+    tuba: [
       ['London Philharmonic Orchestra Trombones', 'kQEKd0qA-XE'],
       ['Southeast Trombone Symposium', '5fj7eri3NNY'],
     ],
@@ -689,6 +767,7 @@ export default YouTubeModel = {
       ['Sergiu Celibidache, Munich Philharmonic Orchestra', 'ytdSWSE7zxo'],
     ],
     trombone: [['Ralph Sauer', '2sBTVcIJRYM']],
+    tuba: [['Pierre Monteux, Chicago Symphony (Excerpts)', 'HjjLcHIsGHM']],
   },
 
   handelMessiah: {
@@ -755,6 +834,28 @@ export default YouTubeModel = {
     ],
   },
 
+  holstFirstSuite: {
+    band: [
+      ['Dr. Eric Wilson, Baylor University Wind Ensemble', '8kFQ034Zd10'],
+      [
+        'Frederick Fennell, The Cleveland Symphonic Winds (With Condensed Score}',
+        'RrRwoD1Yx8A',
+      ],
+      [
+        'Frederick Fennell, The Cleveland Symphonic Winds (With Score}',
+        'Rp0ebn9WQIQ',
+      ],
+      ['Frederick Fennell, United States Marine Band', 'fLbP6qpI1YI'],
+      ['Gary Hill, The U.S. Army Concert Band', 'tKIGQi7flGA'],
+      ['Gerard Schwarz, The United States Marine Band', 'mKkD53fYhTs'],
+      [
+        'Michael Haithcock, University of Michigan Symphony Band',
+        'sdd71Nfb_Pk',
+      ],
+      ['Tatsuya Shimono, Tokyo Kosei wind Orchestra', 'AKIGs59nRc8'],
+    ],
+  },
+
   holstPlanets: {
     full: [
       ['Edward Gardner, National Youth Orchestra', 'be7uEyyNIT4'],
@@ -768,6 +869,13 @@ export default YouTubeModel = {
       ['Sir Adrian Boult, BBC Symphony Orchestra', 'eSqb7gD5acY'],
     ],
     trombone: [['Michael Mulcahy', 'JSQgvE-VF_8']],
+    tuba: [
+      ['Gene Pokorny', 'HOl0ZkDTKYY'],
+      ['James Levine, Chicago Symphony (Jupiter Excerpts)', 'vebfIgtgJ3M'],
+      ['James Levine, Chicago Symphony (Saturn Excerpts)', '8iAo5Bwl8qw'],
+      ['James Levine, Chicago Symphony (Uranus Excerpts)', 'e6xpgOQytKM'],
+      ['Michael Mulcahy', 'JSQgvE-VF_8'],
+    ],
   },
 
   lisztLesPreludes: {
@@ -819,6 +927,7 @@ export default YouTubeModel = {
       ],
     ],
     score: [['Leonard Bernstein, Concertgebouw Orchestra', 'ypClfhEwwCw']],
+    tuba: [['Gene Pokorny', 'nC0jlmSE5ls']],
   },
 
   mahler2: {
@@ -835,6 +944,11 @@ export default YouTubeModel = {
     trombone: [
       ['New York Philharmonic Trombones', 'jpngMjN6fmQ'],
       ['Ralph Sauer', '0y0uFEFPgHc'],
+      ['Southeast Trombone Symposium', 'IQgPSZq1bzs'],
+    ],
+    tuba: [
+      ['Claudio Abbado, Lucerne festival Orchestra', 'c7IZkVIH2D4'],
+      ['New York Philharmonic Trombones', 'jpngMjN6fmQ'],
       ['Southeast Trombone Symposium', 'IQgPSZq1bzs'],
     ],
   },
@@ -894,6 +1008,7 @@ export default YouTubeModel = {
       ['Philip Smith', 'GJZBXSFD8Gk'],
       ['Philip Smith (With Music)', 'f8Bg-4opNSs'],
     ],
+    tuba: [['Gene Pokorny', '8ARJnpoWTgw']],
   },
 
   mahler6: {
@@ -918,6 +1033,7 @@ export default YouTubeModel = {
       // TODO: Find the Excerpt that corresponds with this video.
       ['Rubén Marqués', 'anhyya7Bj28'],
     ],
+    tuba: [['Gene Pokorny', 'KfCz8iPL96I']],
   },
 
   mahler7: {
@@ -1032,6 +1148,22 @@ export default YouTubeModel = {
     score: [['Czech National Symphony Orchestra', 'BfcXoB9y4rc']],
   },
 
+  mussorgskyNightBald: {
+    full: [
+      ['Claudio Abbado, Berlinner Philharmoniker', 'tu1no7hOlSs'],
+      ['Eduardo Mata, Dallas Symphony Orchestra', 'Fizh0M8TczA'],
+
+      [
+        'Henryk Wierzchoń, Arthur Rubinstein School of Music Symphony Orchestra',
+        'WOdc6hwq5lE',
+      ],
+      ['Leonard Bernstein, New York Philharmonic Orchestra', 'JLncxpU1FjQ'],
+      ['Markus Stenz, Radio Filharmonisch Orkest', '52iOdAVU4C8'],
+      ['Thomas Ludwig, Ludwig Symphony Orchestra', 'XyR-poMsSWI'],
+    ],
+    score: [['Evgeny Svetlanov, USSR Academic State Orchestra', 'by4khgR7Q5k']],
+  },
+
   mussorgskyPictures: {
     full: [
       ['Georg Solti, Chicago Symphony Orchestra', 'syLm-9JyhuY'],
@@ -1077,6 +1209,7 @@ export default YouTubeModel = {
       ['Jerry Junkin, The University of Texas Wind Ensemble', 'PM_UjFqclIc'],
     ],
     trombone: [['Denson Paul Pollard', 'VLVwu9dtY6Y']],
+    tuba: [['Gene Pokorny', 'KfCz8iPL96I']],
   },
 
   rimskyKorsakovCapriccio: {
@@ -1333,6 +1466,21 @@ export default YouTubeModel = {
     ],
   },
 
+  sibelius1: {
+    full: [
+      ['David Robertson, Radio Philharmonic Orchestra', '-ilE1K09JoQ'],
+      ['Hannu Lintu, Singapore Symphony Orchestra', 'DZa0DHaEC8s'],
+      ['Herbert von Karajan, Berliner Philharmoniker', 'TxKob4TYWw0'],
+
+      ['Jukka-Pekka Saraste, Oslo Philharmonic Orchestra', 'eBBWvzHuC1k'],
+      ['Leonard Bernstein, Wiener Philharmoniker', 'trjVOodyNFE'],
+      ['Leonard Bernstein, Weiner Philharmoniker', 'UJGWzJHsOdE'],
+      ['Paavo Järvi, Orchestre de Paris', 'dCIw_4oJ4Gg'],
+      ['Vladimir Ashkenazy, Philharmonia Orchestra', 'qWE7_imNOzk'],
+    ],
+    score: [['Herbert von Karajan, Berliner Philharmoniker', 'GYQFCZvNTlo']],
+  },
+
   sibelius2: {
     full: [
       ['Dima Slobodeniouk, Orquesta Sinfónica de Galicia', 'g82t0AJ1FnY'],
@@ -1354,6 +1502,24 @@ export default YouTubeModel = {
       ['Mariss Jansons, Berliner Philharmoniker', 'QLUm_yvnyo4'],
       ['Theodore Kuchar, Janáček Philharmonic Orchestra', 'nk8g9VvD9M4'],
       ['Zděnek Košler, Česká filharmonie', 'nv1uDEg92-4'],
+    ],
+  },
+
+  sousaStarsAndStripes: {
+    full: [
+      ['Leonard Bernstein, New York Philharmonic', 'Pkli8XgjOAw'],
+      ['John Williams, Boston Pops Orchestra', 'QAnky-QJwII'],
+    ],
+    band: [
+      ['The Band of the Grenadier Guards', 'jyrmVBfe2Bg'],
+      ['"The President\'s Own" United States Marine Band', 'a-7XWhyvIpE'],
+
+      ['The United States Army Band "Pershing\'s Own"', 'ShUBdoE2ib0'],
+      ['The United States Army Field Band', 'M5bcpjUjLpU'],
+      ['United States Navy Band', '_K0uUhxThO4'],
+    ],
+    score: [
+      ['"The President\'s Own" United States Marine Band', 'DRQWP-TL4gk'],
     ],
   },
 
@@ -1398,6 +1564,7 @@ export default YouTubeModel = {
       ['Joseph Alessi', 'Mm8lPg8O0vw'],
       ['Ralph Sauer', 'BXPin-d-SXw'],
     ],
+    tuba: [['Gene Pokorny', 'KfCz8iPL96I']],
   },
 
   straussBorgeois: {
@@ -1440,6 +1607,7 @@ export default YouTubeModel = {
     ],
     score: [['Thomas Schippers, Cincinnati Symphony Orchestra', '8woshq-F21s']],
     trumpet: [['Philip Smith', '_YiZaERf5Is']],
+    tuba: [['Michael Mulcahy', 'oHsbvs-xn6o']],
   },
 
   straussDonQuixote: {
@@ -1499,6 +1667,11 @@ export default YouTubeModel = {
       ['John Wagner', '6QInSDAkWUk'],
       ['Philip Smith', 'IdyKj5wYh6E'],
     ],
+    tuba: [
+      ['Gene Pokorny', 'KfCz8iPL96I'],
+      ['Michael Mulcahy', '-f30y6mgIdw'],
+      ['Southeast Trombone Symposium', 'YqBPA00DBIU'],
+    ],
   },
 
   straussSalome: {
@@ -1540,6 +1713,7 @@ export default YouTubeModel = {
       ],
     ],
     trombone: [['Ralph Sauer', 'BXPin-d-SXw']],
+    tuba: [['Gene Pokorny', 'KfCz8iPL96I']],
   },
 
   stravinskySoldier: {
@@ -1652,6 +1826,23 @@ export default YouTubeModel = {
       ],
     ],
     trombone: [['Ralph Sauer', 'euTzqsloXoM']],
+  },
+
+  tchaikovskyRomeoAndJuliet: {
+    full: [
+      ['Claudio Abbado, Berliner Philharmoniker', 'znKS1QuCUI0'],
+      [
+        'Dmitri Slobodeniouk, Netherlands Radio Philharmonic Orchestra',
+        'f6qZUCi7ToQ',
+      ],
+      ['Gustavo Dudamel, Berliner Philharmoniker', '2l8llogGKto'],
+      ['Herbert von Karajan, Berliner Philharmoniker', 'tnyC2uwJ4qg'],
+      ['Herbert von Karajan, Wiener Philharmoniker', '2jTHmretpw4'],
+      ['Valery Gergiev, London Symphony Orchestra', 'Cxj8vSS2ELU'],
+      ['Yannick Nézet-Séguin, Rotterdam Philharmonic Orchestra', '_Y_tLuudGGk'],
+    ],
+    score: [['Valery Gergiev, Mariinsky Theatre Orchestra', 'cn3U8AVoWdY']],
+    tuba: [['Sir Georg Solti, Chicago Symphony', '-MInLxTHD_M']],
   },
 
   tchaikovskyCapriccio: {
