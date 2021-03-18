@@ -1,6 +1,7 @@
 export const composers = {
   Bach: {
     id: 0,
+    slug: 'Bach',
     name: 'Johann Sebastian Bach',
     ipa: 'joˈhan zeˈbastjan bɑx',
     image: 2000,
@@ -12,6 +13,7 @@ export const composers = {
 
   Beethoven: {
     id: 1,
+    slug: 'Beethoven',
     name: 'Ludwig Van Beethoven',
     ipa: 'ˈlʊdvɪɡ væn ˈbeɪt(h)oʊvən',
     image: 2001,
@@ -23,6 +25,7 @@ export const composers = {
 
   Berlioz: {
     id: 2,
+    slug: 'Berlioz',
     name: 'Hector Berlioz',
     ipa: 'ɛkˈtɔr bɛr liˌoʊz',
     image: 2002,
@@ -34,6 +37,7 @@ export const composers = {
 
   Bizet: {
     id: 3,
+    slug: 'Bizet',
     name: 'Georges Bizet',
     ipa: 'zhawrzh biˈzeɪ',
     image: 2003,
@@ -45,6 +49,7 @@ export const composers = {
 
   Borodin: {
     id: 4,
+    slug: 'Borodin',
     name: 'Alexander Borodin',
     ipa: 'ɐlʲɪkˈsandr bərɐˈdʲin',
     image: 2004,
@@ -56,6 +61,7 @@ export const composers = {
 
   Brahms: {
     id: 5,
+    slug: 'Brahms',
     name: 'Johannes Brahms',
     ipa: 'joˈhanəs ˈbʁaːms',
     image: 2005,
@@ -67,6 +73,7 @@ export const composers = {
 
   Bruckner: {
     id: 6,
+    slug: 'Bruckner',
     name: 'Anton Bruckner',
     ipa: " 'antɔn ˈbʁʊknɐ",
     image: 2006,
@@ -78,6 +85,7 @@ export const composers = {
 
   Debussy: {
     id: 7,
+    slug: 'Debussy',
     name: 'Claude Debussy',
     ipa: 'klod dəbysi',
     image: 2006,
@@ -89,6 +97,7 @@ export const composers = {
 
   Donizetti: {
     id: 8,
+    slug: 'Donizetti',
     name: 'Gaetano Donizetti',
     ipa: 'ɡaeˈtaːno donidˈdzetti',
     image: 2007,
@@ -100,6 +109,7 @@ export const composers = {
 
   Dvorak: {
     id: 9,
+    slug: 'Dvorak',
     name: 'Antonín Dvořák',
     ipa: 'ˈɑn tɔ nyin ˈdvɔr ʒɑk',
     image: 2007,
@@ -111,6 +121,7 @@ export const composers = {
 
   Franck: {
     id: 10,
+    slug: 'Franck',
     name: 'César Franck',
     ipa: 'seɪˈzar frɑŋk',
     image: 2008,
@@ -122,6 +133,7 @@ export const composers = {
 
   Handel: {
     id: 11,
+    slug: 'Handel',
     name: 'George Frideric Handel',
     ipa: 'ˈɡeːɔʁk ˈfʁiːdʁɪç ˈhɛndl̩',
     image: 2009,
@@ -133,6 +145,7 @@ export const composers = {
 
   Haydn: {
     id: 12,
+    slug: 'Haydn',
     name: 'Franz Joseph Haydn',
     ipa: 'ˈfʁants ˈjoːzɛf ˈhaɪdn̩',
     image: 2009,
@@ -144,6 +157,7 @@ export const composers = {
 
   Holst: {
     id: 13,
+    slug: 'Holst',
     name: 'Gustav Holst',
     ipa: 'ˈgʊs tɑv hoʊlst',
     image: 2010,
@@ -155,6 +169,7 @@ export const composers = {
 
   Liszt: {
     id: 14,
+    slug: 'Liszt',
     name: 'Franz Liszt',
     ipa: 'ˈfɛrɛnt͡s ˈlist',
     image: 2008,
@@ -166,6 +181,7 @@ export const composers = {
 
   Mahler: {
     id: 15,
+    slug: 'Mahler',
     name: 'Gustav Mahler',
     ipa: 'ˈgʊs tɑf ˈmɑ lər',
     image: 2011,
@@ -177,6 +193,7 @@ export const composers = {
 
   Mendellsohn: {
     id: 16,
+    slug: 'Mendellsohn',
     name: 'Felix Mendelssohn',
     ipa: "'fi lɪks 'mɛn dl sən",
     image: 2010,
@@ -188,6 +205,7 @@ export const composers = {
 
   Mozart: {
     id: 17,
+    slug: 'Mozart',
     name: 'Wolfgang Amadeus Mozart',
     ipa: 'ˈwʊlf gæŋ ˌæm əˈdeɪ əs ˈmoʊt sɑrt',
     image: 2012,
@@ -199,6 +217,7 @@ export const composers = {
 
   Mussorgsky: {
     id: 18,
+    slug: 'Mussorgsky',
     name: 'Modest Mussorgsky',
     ipa: 'moʊˈdɛst mʊˈsɔrg ski',
     image: 2013,
@@ -210,6 +229,7 @@ export const composers = {
 
   Ravel: {
     id: 19,
+    slug: 'Ravel',
     name: 'Maurice Ravel',
     ipa: 'moʊˈris rəˈvɛl',
     image: 2014,
@@ -221,6 +241,7 @@ export const composers = {
 
   Respighi: {
     id: 20,
+    slug: 'Respighi',
     name: 'Ottorino Respighi',
     ipa: 'ottoˈriːno reˈspiːɡi',
     image: 2015,
@@ -232,6 +253,7 @@ export const composers = {
 
   RimskyKorsakov: {
     id: 21,
+    slug: 'RimskyKorsakov',
     name: 'Nikolai Rimsky-Korsakov',
     ipa: 'nʲɪkəˈlaj ˈrʲimskʲɪj ˈkorsəkəf',
     image: 2016,
@@ -243,6 +265,7 @@ export const composers = {
 
   Rossini: {
     id: 22,
+    slug: 'Rossini',
     name: 'Gioachino Rossini',
     ipa: 'dʒɔ ɑkˈki nɔ roʊˈsi ni',
     image: 2017,
@@ -254,6 +277,7 @@ export const composers = {
 
   SaintSaens: {
     id: 23,
+    slug: 'SaintSaens',
     name: 'Camille Saint-Saëns',
     ipa: 'kamij sɛ̃ sɑ̃(s)',
     image: 2018,
@@ -265,6 +289,7 @@ export const composers = {
 
   Schubert: {
     id: 24,
+    slug: 'Schubert',
     name: 'Franz Schubert',
     ipa: 'ˈfʁant͡s ˈʃuːbɐt',
     image: 2019,
@@ -276,6 +301,7 @@ export const composers = {
 
   Schumann: {
     id: 25,
+    slug: 'Schumann',
     name: 'Robert Schumann',
     ipa: 'ˈrɒb ərt ˈʃu mɑn',
     image: 2020,
@@ -287,6 +313,7 @@ export const composers = {
 
   Scriabin: {
     id: 26,
+    slug: 'Scriabin',
     name: 'Alexander Nikolayevich Scriabin',
     ipa: 'ɐlʲɪˈksandr nʲɪkəˈɫaɪvʲɪtɕ ˈskrʲæbʲɪn',
     image: 2016,
@@ -298,6 +325,7 @@ export const composers = {
 
   Sibelius: {
     id: 27,
+    slug: 'Sibelius',
     name: 'Jean Sibelius',
     ipa: 'ʒɑn  sɪˈbeɪ li əs',
     image: 2017,
@@ -309,6 +337,7 @@ export const composers = {
 
   Smetana: {
     id: 28,
+    slug: 'Smetana',
     name: 'Bedřich Smetana',
     ipa: 'ˌbɛdərʒɪx ˈsmɛtənə',
     image: 2021,
@@ -320,6 +349,7 @@ export const composers = {
 
   Sousa: {
     id: 29,
+    slug: 'Sousa',
     name: 'John Philip Sousa',
     ipa: "dʒɒn ˈfɪl ɪp 'su zə",
     image: 2012,
@@ -331,6 +361,7 @@ export const composers = {
 
   Strauss: {
     id: 30,
+    slug: 'Strauss',
     name: 'Richard Strauss',
     ipa: 'ˈʁɪçaʁt ˈʃtʁaʊs',
     image: 2022,
@@ -342,6 +373,7 @@ export const composers = {
 
   Stravinsky: {
     id: 31,
+    slug: 'Stravinsky',
     name: 'Igor Stravinsky',
     ipa: 'ˈi gɔr strəˈvɪn ski',
     image: 2023,
@@ -353,6 +385,7 @@ export const composers = {
 
   Tchaikovsky: {
     id: 32,
+    slug: 'Tchaikovsky',
     name: 'Pyotr Ilyich Tchaikovsky',
     ipa: 'ˈpyɔtr iˈlyitʃ tʃaɪˈkɒfski',
     image: 2024,
@@ -364,6 +397,7 @@ export const composers = {
 
   Verdi: {
     id: 33,
+    slug: 'Verdi',
     name: 'Giuseppe Verdi',
     ipa: 'dʒuˈzɛppe ˈverdi',
     image: 2025,
@@ -375,6 +409,7 @@ export const composers = {
 
   Wagner: {
     id: 34,
+    slug: 'Wagner',
     name: 'Richard Wagner',
     ipa: 'ˈʁɪçaʁt ˈvaːɡnɐ',
     image: 2026,
@@ -386,6 +421,7 @@ export const composers = {
 
   Weber: {
     id: 35,
+    slug: 'Weber',
     name: 'Carl Maria von Weber',
     ipa: 'kɑrl məˈriə fən ˈvābər',
     image: 2021,
