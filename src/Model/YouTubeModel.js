@@ -1867,6 +1867,28 @@ export default YouTubeModel = {
     ],
   },
 
+  tchaikovsky1: {
+    full: [
+      ['Herbert von Karajan, Berliner Philharmoniker', '_krJMxZfZcQ'],
+      ['Mariss Jansons, BBC National Orchestra of Wales', 'PbaGmqA9qkM'],
+      ['Paavo Järvi, Frankfurt Radio Symphony Orchestra', 'ocIajFkPwyU'],
+      ['Yuri Simonov, Moscow Philharmonic Orchestra', 'J8IHZqFrtpA'],
+      ['Yuri Temirkanov, Royal Philharmonic Orchestra', '--0qNLlD6kI'],
+    ],
+    score: [['Evgeny Svetlanov, USSR State Symphony Orchestra', 'vZRsNzIwYAA']],
+  },
+
+  tchaikovsky2: {
+    full: [
+      ['Evgeny Svetlanov, USSR State Symphony Orchestra', 'rxyN1GHMatM'],
+      ['Herbert von Karajan, Berlin Philharmonic', 'CRGK4cv0k9c'],
+      ['Leonard Bernstein, New York Philharmonic Orchestra', 'Q2gnjbifvFU'],
+      ['Mariss Jansons, BBC National Orchestra of Wales', '7GkV6rQ0RPg'],
+      ['Nicholas Hersh, Stanford Summer Symphony Orchestra', 'WfAyIL8fb5I'],
+      ['Yuri Temirkanov, Royal Philharmonic Orchestra', 'Xm3F8SVaTls'],
+    ],
+  },
+
   tchaikovsky4: {
     full: [
       ['Carlos Miguel Prieto, Frankfurt Radio Symphony', 'Y7G5ithbFys'],
@@ -1883,6 +1905,7 @@ export default YouTubeModel = {
       ],
     ],
     trombone: [['Ralph Sauer', 'AeqdHj3ZPVc']],
+    tuba: [['Sir Georg Solti, Chicago Symphony', 'L6dZbi3TEAo']],
   },
 
   tchaikovsky5: {
@@ -1897,6 +1920,10 @@ export default YouTubeModel = {
     ],
     score: [
       ['Leonard Bernstein, New York Philharmonic Orchestra', '4_PSjr47AUo'],
+    ],
+    tuba: [
+      ['Sir Georg Solti, Chicago Symphony (Mov. II Excerpts)', 'eaC_StuAKf4'],
+      ['Sir Georg Solti, Chicago Symphony (Mov. IV Excerpts)', 'aoj9eWV_pyQ'],
     ],
   },
 
@@ -1915,6 +1942,7 @@ export default YouTubeModel = {
     ],
     score: [['Valery Gergiev, Mariinsky Theatre Orchestra', '8VswsTffasc']],
     trombone: [['Ralph Sauer', 'yOd1d7-qLXk']],
+    tuba: [['Sir Georg Solti, Chicago Symphony (Excerpts)', 'PCk1SBQMlJI']],
   },
 
   tchaikovskyFrancesca: {
@@ -1946,6 +1974,16 @@ export default YouTubeModel = {
     score: [
       ['Yannick Nezet-Seguin, Rotterdams Philharmonisch Orkest', 'E-XUpVjzehc'],
     ],
+  },
+
+  tchaikovskySleepingBeauty: {
+    full: [
+      ['Herbert von Karajan, Berlin Philharmonic', '450Tljmw0Q4'],
+      ['Herbert von Karajan, Wiener Philharmoniker', 'jTCKGn9XBkk'],
+      ['Mstislav Rostropovich, Berliner Philharmoniker', 'UA2R2QR19Bs'],
+      ['Yves Abel, The Nordwestdeutsche Philharmonie', '42WWTJgYcxc'],
+    ],
+    score: [['James Levine, Bécsi Filharmonikus Zenekar', 'GFR2kaKaIvo']],
   },
 
   tchaikovskySwanLake: {
@@ -2011,6 +2049,19 @@ export default YouTubeModel = {
     trombone: [['Denson Paul Pollard', 'I-FObGwz8-U']],
   },
 
+  wagnerFaust: {
+    full: [
+      ['Alexander Rahbari, Malaga Philharmonic Orchestra', 'O5rP4PfCraA'],
+      ['Arturo Toscanini, BBC Symphony Orchestra', '9LWOnIKzD2I'],
+      ['Arturo Toscanini, NBC Symphony Orchestra', '8snDlU9Cwm4'],
+      ['Christian Thielemann, Staatskapelle Dresden', 'j0Bici-m1KQ'],
+      ['George Szell, Concertgebouworkest Amsterdam', 'icAEmPqzfq8'],
+      ['Lorin Maazel, Berliner Philharmoniker', 'IrxGCsL5-RM'],
+    ],
+    score: [['Julian Armstrong, London Festival Orchestra', 'nk1towQ10WY']],
+    tuba: [['Gene Pokorny', 'KfCz8iPL96I']],
+  },
+
   wagnerFlying: {
     full: [
       ['Andris Nelsons, Orchestra of the Royal Opera House', 'EW1yXBl_aQA'],
@@ -2048,6 +2099,7 @@ export default YouTubeModel = {
         '80o8Q6G_HDQ',
       ],
     ],
+    tuba: [['Gene Pokorny', 'KfCz8iPL96I']],
   },
 
   wagnerGotterdammerung: {
@@ -2070,6 +2122,7 @@ export default YouTubeModel = {
       ['Silvio Varviso, Bayreuth Festival Orchestra and Chorus', '_ReY89_fM0g'],
     ],
     trombone: [['Ralph Sauer', 'b83be3aogOM']],
+    tuba: [['Gene Pokorny', 'KfCz8iPL96I']],
   },
 
   wagnerMeistersinger: {
@@ -2088,6 +2141,10 @@ export default YouTubeModel = {
     ],
     score: [
       ['Christian Thielemann, Vienna Philharmonic Orchestra', 'jPI420hngqw'],
+    ],
+    tuba: [
+      ['Gene Pokorny', 'KfCz8iPL96I'],
+      ['Michael Stephan', 'm4PapG5aWcE'],
     ],
   },
 
