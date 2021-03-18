@@ -2329,142 +2329,6 @@ let weberOberon = {
   videos: 'weberOberon',
 };
 
-//MARK: Composers
-
-let bach = {
-  name: 'Bach',
-  excerpts: [bachBrandenburgConcerto, bachMassB],
-};
-
-let beethoven = {
-  name: 'Beethoven',
-  excerpts: [
-    beethovenFidelio,
-    beethoven2,
-    beethoven3,
-    beethoven6,
-    beethoven7,
-    beethoven8,
-    beethoven9,
-  ],
-};
-
-let berlioz = {
-  name: 'Berlioz',
-  excerpts: [berliozRomeoEtJuliet],
-};
-
-let brahms = {
-  name: 'Brahms',
-  excerpts: [
-    brahmsAcademic,
-    brahmsPiano1,
-    brahmsPiano2,
-    brahms1,
-    brahms2,
-    brahms3,
-    brahms4,
-    brahmsVariations,
-  ],
-};
-
-let bruckner = {
-  name: 'Bruckner',
-  excerpts: [bruckner4, bruckner7],
-};
-
-let dvorak = {
-  name: 'Dvorak',
-  excerpts: [dvorakCello, dvorak9],
-};
-
-let franck = {
-  name: 'Franck',
-  excerpts: [franckD],
-};
-
-let haydn = {
-  name: 'Haydn',
-  excerpts: [haydn31],
-};
-
-let liszt = {
-  name: 'Liszt',
-  excerpts: [lisztLesPreludes],
-};
-
-let mahler = {
-  name: 'Mahler',
-  excerpts: [mahler1, mahler3, mahler5, mahler9],
-};
-
-let mendellsohn = {
-  name: 'Mendelssohn',
-  excerpts: [mendelssohnMidsummer, mendelssohn3],
-};
-
-let mozart = {
-  name: 'Mozart',
-  excerpts: [mozart29, mozart40],
-};
-
-let rimskyKorsakov = {
-  name: 'RimskyKorsakov',
-  excerpts: [rimskyKorsakovScheherazade],
-};
-
-let rossini = {
-  name: 'Rossini',
-  excerpts: [rossiniSemiramide],
-};
-
-let saintSaens = {
-  name: 'SaintSaens',
-  excerpts: [saintSaens3],
-};
-
-let schubert = {
-  name: 'Schubert',
-  excerpts: [schubert9],
-};
-
-let schumann = {
-  name: 'Schumann',
-  excerpts: [schumann3],
-};
-
-let rStrauss = {
-  name: 'Strauss',
-  excerpts: [
-    straussDonJuan,
-    straussDonQuixote,
-    straussHeldenleben,
-    straussSinfoniaDomestica,
-    straussEulenspiegel,
-  ],
-};
-
-let tchaikovsky = {
-  name: 'Tchaikovsky',
-  excerpts: [tchaikovsky4, tchaikovsky5],
-};
-
-let wagner = {
-  name: 'Wagner',
-  excerpts: [
-    wagnerWalkure,
-    wagnerRheingold,
-    wagnerGotterdammerung,
-    wagnerLohengrin,
-    wagnerSigfried,
-  ],
-};
-
-let weber = {
-  name: 'Weber',
-  excerpts: [weberFreischutz, weberOberon],
-};
-
 /**
  * @description An alphabetical list of all of the compositions in the app.
  */
@@ -2526,27 +2390,117 @@ export const excerpts = [
 /**
  * @description An alphabetical list of all of the composers in the app.
  */
-export const composers = [
-  bach,
-  beethoven,
-  berlioz,
-  brahms,
-  bruckner,
-  dvorak,
-  franck,
-  haydn,
-  liszt,
-  mahler,
-  mendellsohn,
-  mozart,
-  rimskyKorsakov,
-  rossini,
-  saintSaens,
-  schubert,
-  schumann,
-  rStrauss,
-  /*stravinsky,*/
-  tchaikovsky,
-  wagner,
-  weber,
-];
+export const composers = {
+  Bach: {
+    excerpts: [bachBrandenburgConcerto, bachMassB],
+  },
+
+  Beethoven: {
+    excerpts: [
+      beethovenFidelio,
+      beethoven2,
+      beethoven3,
+      beethoven6,
+      beethoven7,
+      beethoven8,
+      beethoven9,
+    ],
+  },
+
+  Berlioz: {
+    excerpts: [berliozRomeoEtJuliet],
+  },
+
+  Brahms: {
+    excerpts: [
+      brahmsAcademic,
+      brahmsPiano1,
+      brahmsPiano2,
+      brahms1,
+      brahms2,
+      brahms3,
+      brahms4,
+      brahmsVariations,
+    ],
+  },
+
+  Bruckner: {
+    excerpts: [bruckner4, bruckner7],
+  },
+
+  Dvorak: {
+    excerpts: [dvorakCello, dvorak9],
+  },
+
+  Franck: {
+    excerpts: [franckD],
+  },
+
+  Haydn: {
+    excerpts: [haydn31],
+  },
+
+  Liszt: {
+    excerpts: [lisztLesPreludes],
+  },
+
+  Mahler: {
+    excerpts: [mahler1, mahler3, mahler5, mahler9],
+  },
+
+  Mendelssohn: {
+    excerpts: [mendelssohnMidsummer, mendelssohn3],
+  },
+
+  Mozart: {
+    excerpts: [mozart29, mozart40],
+  },
+
+  RimskyKorsakov: {
+    excerpts: [rimskyKorsakovScheherazade],
+  },
+
+  Rossini: {
+    excerpts: [rossiniSemiramide],
+  },
+
+  SaintSaens: {
+    excerpts: [saintSaens3],
+  },
+
+  Schubert: {
+    excerpts: [schubert9],
+  },
+
+  Schumann: {
+    excerpts: [schumann3],
+  },
+
+  Strauss: {
+    excerpts: [
+      straussDonJuan,
+      straussDonQuixote,
+      straussHeldenleben,
+      straussSinfoniaDomestica,
+      straussEulenspiegel,
+    ],
+  },
+
+  Tchaikovsky: {
+    excerpts: [tchaikovsky4, tchaikovsky5],
+  },
+
+  Wagner: {
+    excerpts: [
+      wagnerWalkure,
+      wagnerRheingold,
+      wagnerGotterdammerung,
+      wagnerLohengrin,
+      wagnerSigfried,
+    ],
+  },
+
+  Weber: {
+    excerpts: [weberFreischutz, weberOberon],
+  },
+};

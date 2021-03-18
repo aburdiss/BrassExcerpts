@@ -1954,124 +1954,6 @@ let wagnerTannhauser = {
   videos: 'wagnerTannhauser',
 };
 
-//MARK: Composers
-
-let berlioz = {
-  name: 'Berlioz',
-  excerpts: [
-    berliozBenvenuto,
-    berliozFaust,
-    berliozKingLear,
-    berliozLeCorsaire,
-    berliozRomeo,
-    berliozSymphonie,
-  ],
-};
-
-let brahms = {
-  name: 'Brahms',
-  excerpts: [brahmsAcademic, brahms2, brahmsTragic],
-};
-
-let bruckner = {
-  name: 'Bruckner',
-  excerpts: [bruckner4, bruckner7, bruckner8, bruckner9],
-};
-
-let franck = {
-  name: 'Franck',
-  excerpts: [franckD],
-};
-
-let holst = {
-  name: 'Holst',
-  excerpts: [holstFirstSuite, holstPlanets],
-};
-
-let mahler = {
-  name: 'Mahler',
-  excerpts: [mahler1, mahler2, mahler3, mahler5, mahler6, mahler9],
-};
-
-let mendellsohn = {
-  name: 'Mendelssohn',
-  excerpts: [mendelssohnMidsummer],
-};
-
-let mussorgsky = {
-  name: 'Mussorgsky',
-  excerpts: [mussorgskyNightBald],
-};
-
-let respighi = {
-  name: 'Respighi',
-  excerpts: [respighiFountains],
-};
-
-let rimskyKorsakov = {
-  name: 'RimskyKorsakov',
-  excerpts: [rimskyKorsakovScheherazade],
-};
-
-let sibelius = {
-  name: 'Sibelius',
-  excerpts: [sibelius1, sibelius2],
-};
-
-let sousa = {
-  name: 'Sousa',
-  excerpts: [sousaStarsAndStripes],
-};
-
-let rStrauss = {
-  name: 'Strauss',
-  excerpts: [
-    straussAlsoSprach,
-    straussDeathAndTransfiguration,
-    straussDonJuan,
-    straussDonQuixote,
-    straussHeldenleben,
-    straussEulenspiegel,
-  ],
-};
-
-let stravinsky = {
-  name: 'Stravinsky',
-  excerpts: [stravinskyRite],
-};
-
-let tchaikovsky = {
-  name: 'Tchaikovsky',
-  excerpts: [
-    tchaikRomeoAndJuliet,
-    tchaikovskySleepingBeauty,
-    tchaikSwanLake,
-    tchaik1,
-    tchaik2,
-    tchaik4,
-    tchaik5,
-    tchaik6,
-  ],
-};
-
-let verdi = {
-  name: 'Verdi',
-  excerpts: [verdiNabucco],
-};
-
-let wagner = {
-  name: 'Wagner',
-  excerpts: [
-    wagnerRheingold,
-    wagnerMeistersinger,
-    wagnerRide,
-    wagnerFaust,
-    wagnerGotterdamerung,
-    wagnerLohengrin,
-    wagnerTannhauser,
-  ],
-};
-
 /**
  * @description An alphabetical list of all of the compositions in the app.
  */
@@ -2133,22 +2015,103 @@ export const excerpts = [
 /**
  * @description An alphabetical list of all of the composers in the app.
  */
-export const composers = [
-  berlioz,
-  brahms,
-  bruckner,
-  franck,
-  holst,
-  mahler,
-  mendellsohn,
-  mussorgsky,
-  respighi,
-  rimskyKorsakov,
-  sibelius,
-  sousa,
-  rStrauss,
-  stravinsky,
-  tchaikovsky,
-  verdi,
-  wagner,
-];
+export const composers = {
+  Berlioz: {
+    excerpts: [
+      berliozBenvenuto,
+      berliozFaust,
+      berliozKingLear,
+      berliozLeCorsaire,
+      berliozRomeo,
+      berliozSymphonie,
+    ],
+  },
+
+  Brahms: {
+    excerpts: [brahmsAcademic, brahms2, brahmsTragic],
+  },
+
+  Bruckner: {
+    excerpts: [bruckner4, bruckner7, bruckner8, bruckner9],
+  },
+
+  Franck: {
+    excerpts: [franckD],
+  },
+
+  Holst: {
+    excerpts: [holstFirstSuite, holstPlanets],
+  },
+
+  Mahler: {
+    excerpts: [mahler1, mahler2, mahler3, mahler5, mahler6, mahler9],
+  },
+
+  Mendelssohn: {
+    excerpts: [mendelssohnMidsummer],
+  },
+
+  Mussorgsky: {
+    excerpts: [mussorgskyNightBald],
+  },
+
+  Respighi: {
+    excerpts: [respighiFountains],
+  },
+
+  RimskyKorsakov: {
+    excerpts: [rimskyKorsakovScheherazade],
+  },
+
+  Sibelius: {
+    excerpts: [sibelius1, sibelius2],
+  },
+
+  Sousa: {
+    excerpts: [sousaStarsAndStripes],
+  },
+
+  Strauss: {
+    excerpts: [
+      straussAlsoSprach,
+      straussDeathAndTransfiguration,
+      straussDonJuan,
+      straussDonQuixote,
+      straussHeldenleben,
+      straussEulenspiegel,
+    ],
+  },
+
+  Stravinsky: {
+    excerpts: [stravinskyRite],
+  },
+
+  Tchaikovsky: {
+    excerpts: [
+      tchaikRomeoAndJuliet,
+      tchaikovskySleepingBeauty,
+      tchaikSwanLake,
+      tchaik1,
+      tchaik2,
+      tchaik4,
+      tchaik5,
+      tchaik6,
+    ],
+  },
+
+  Verdi: {
+    excerpts: [verdiNabucco],
+  },
+
+  Wagner: {
+    excerpts: [
+      wagnerRheingold,
+      wagnerMeistersinger,
+      wagnerRide,
+      wagnerFaust,
+      wagnerGotterdamerung,
+      wagnerLohengrin,
+      wagnerTannhauser,
+    ],
+  },
+};

@@ -2052,163 +2052,6 @@ let wagnerTannhauser = {
   videos: 'wagnerTannhauser',
 };
 
-//MARK: Composers
-
-let bach = {
-  name: 'Bach',
-  excerpts: [
-    bachBrandenburg2,
-    bachCantata,
-    bachChristmasOratorio,
-    bachMagnificant,
-    bachMassB,
-  ],
-};
-
-let beethoven = {
-  name: 'Beethoven',
-  excerpts: [
-    beethovenLeonore2,
-    beethovenLeonore3,
-    beethoven5,
-    beethoven9,
-    beethovenViolin,
-  ],
-};
-
-let berlioz = {
-  name: 'Berlioz',
-  excerpts: [berliozRomanCarnival, berliozSymphonie],
-};
-
-let bizet = {
-  name: 'Bizet',
-  excerpts: [bizetCarmen],
-};
-
-let brahms = {
-  name: 'Brahms',
-  excerpts: [brahmsAcademic, brahms1, brahms2],
-};
-
-let bruckner = {
-  name: 'Bruckner',
-  excerpts: [bruckner4, bruckner7, bruckner8],
-};
-
-let debussy = {
-  name: 'Debussy',
-  excerpts: [debussyLaMer, debussyNocturnes],
-};
-
-let donizetti = {
-  name: 'Donizetti',
-  excerpts: [donizettiDonPasquale],
-};
-
-let dvorak = {
-  name: 'Dvorak',
-  excerpts: [dvorak8, dvorak9],
-};
-
-let handel = {
-  name: 'Handel',
-  excerpts: [handelMessiah],
-};
-
-let haydn = {
-  name: 'Haydn',
-  excerpts: [haydn100],
-};
-
-let mahler = {
-  name: 'Mahler',
-  excerpts: [
-    mahlerDasLied,
-    mahler1,
-    mahler2,
-    mahler3,
-    mahler4,
-    mahler5,
-    mahler6,
-    mahler7,
-    mahler9,
-  ],
-};
-
-let mozart = {
-  name: 'Mozart',
-  excerpts: [mozartSerenade9],
-};
-
-let rimskyKorsakov = {
-  name: 'RimskyKorsakov',
-  excerpts: [rimskykorsakovCappricio, rimskyKorsakovScheherazade],
-};
-
-let schumann = {
-  name: 'Schumann',
-  excerpts: [schumann2],
-};
-
-let scriabin = {
-  name: 'Scriabin',
-  excerpts: [scriabin4],
-};
-
-let sibelius = {
-  name: 'Sibelius',
-  excerpts: [sibelius2],
-};
-
-let rStrauss = {
-  name: 'Strauss',
-  excerpts: [
-    straussAlsoSprach,
-    straussDonJuan,
-    straussDonQuixote,
-    straussHeldenleben,
-    straussAlpineSymphony,
-    straussBourgeois,
-    straussSymphoniaDomestica,
-    straussEulenspiegel,
-    straussDeathAndTransfiguration,
-  ],
-};
-
-let stravinsky = {
-  name: 'Stravinsky',
-  excerpts: [
-    stravinskySoldier,
-    stravinskyFireworks,
-    stravinskyPetrushka,
-    stravinskyRite,
-    stravinskyNightengale,
-  ],
-};
-
-let tchaikovsky = {
-  name: 'Tchaikovsky',
-  excerpts: [
-    tchaikovskyCapriccio,
-    tchaikovskySwanLake,
-    tchaikovsky4,
-    tchaikovsky5,
-    tchaikovskyNutcracker,
-  ],
-};
-
-let wagner = {
-  name: 'Wagner',
-  excerpts: [
-    wagnerMeistersinger,
-    wagnerGotterdamerung,
-    wagnerParsifal,
-    wagnerRienzi,
-    wagnerTannhauser,
-  ],
-};
-
 /**
  * @description An alphabetical list of all of the compositions in the app.
  */
@@ -2283,26 +2126,138 @@ export const excerpts = [
 /**
  * @description An alphabetical list of all of the composers in the app.
  */
-export const composers = [
-  bach,
-  beethoven,
-  berlioz,
-  bizet,
-  brahms,
-  bruckner,
-  debussy,
-  donizetti,
-  dvorak,
-  handel,
-  haydn,
-  mahler,
-  mozart,
-  rimskyKorsakov,
-  schumann,
-  scriabin,
-  sibelius,
-  rStrauss,
-  stravinsky,
-  tchaikovsky,
-  wagner,
-];
+export const composers = {
+  Bach: {
+    excerpts: [
+      bachBrandenburg2,
+      bachCantata,
+      bachChristmasOratorio,
+      bachMagnificant,
+      bachMassB,
+    ],
+  },
+
+  Beethoven: {
+    excerpts: [
+      beethovenLeonore2,
+      beethovenLeonore3,
+      beethoven5,
+      beethoven9,
+      beethovenViolin,
+    ],
+  },
+
+  Berlioz: {
+    excerpts: [berliozRomanCarnival, berliozSymphonie],
+  },
+
+  Bizet: {
+    excerpts: [bizetCarmen],
+  },
+
+  Brahms: {
+    excerpts: [brahmsAcademic, brahms1, brahms2],
+  },
+
+  Bruckner: {
+    excerpts: [bruckner4, bruckner7, bruckner8],
+  },
+
+  Debussy: {
+    excerpts: [debussyLaMer, debussyNocturnes],
+  },
+
+  Donizetti: {
+    excerpts: [donizettiDonPasquale],
+  },
+
+  Dvorak: {
+    excerpts: [dvorak8, dvorak9],
+  },
+
+  Handel: {
+    excerpts: [handelMessiah],
+  },
+
+  Haydn: {
+    excerpts: [haydn100],
+  },
+
+  Mahler: {
+    excerpts: [
+      mahlerDasLied,
+      mahler1,
+      mahler2,
+      mahler3,
+      mahler4,
+      mahler5,
+      mahler6,
+      mahler7,
+      mahler9,
+    ],
+  },
+
+  Mozart: {
+    excerpts: [mozartSerenade9],
+  },
+
+  RimskyKorsakov: {
+    excerpts: [rimskykorsakovCappricio, rimskyKorsakovScheherazade],
+  },
+
+  Schumann: {
+    excerpts: [schumann2],
+  },
+
+  Scriabin: {
+    excerpts: [scriabin4],
+  },
+
+  Sibelius: {
+    excerpts: [sibelius2],
+  },
+
+  Strauss: {
+    excerpts: [
+      straussAlsoSprach,
+      straussDonJuan,
+      straussDonQuixote,
+      straussHeldenleben,
+      straussAlpineSymphony,
+      straussBourgeois,
+      straussSymphoniaDomestica,
+      straussEulenspiegel,
+      straussDeathAndTransfiguration,
+    ],
+  },
+
+  Stravinsky: {
+    excerpts: [
+      stravinskySoldier,
+      stravinskyFireworks,
+      stravinskyPetrushka,
+      stravinskyRite,
+      stravinskyNightengale,
+    ],
+  },
+
+  Tchaikovsky: {
+    excerpts: [
+      tchaikovskyCapriccio,
+      tchaikovskySwanLake,
+      tchaikovsky4,
+      tchaikovsky5,
+      tchaikovskyNutcracker,
+    ],
+  },
+
+  Wagner: {
+    excerpts: [
+      wagnerMeistersinger,
+      wagnerGotterdamerung,
+      wagnerParsifal,
+      wagnerRienzi,
+      wagnerTannhauser,
+    ],
+  },
+};
