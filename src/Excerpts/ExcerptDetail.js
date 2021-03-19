@@ -5,6 +5,7 @@ import {useRoute} from '@react-navigation/native';
 import MetaLabel from './ExcerptDetail/MetaLabel';
 import YoutubeSection from './ExcerptDetail/YoutubeSection';
 import {colors} from '../Model/Model';
+import {composers} from '../Model/ComposerModel';
 import {Image} from 'react-native';
 
 /**
@@ -19,11 +20,19 @@ const ExcerptDetail = () => {
   return (
     <ScrollView>
       <View style={styles.metaInfoContainer}>
-        <Text style={styles.title}>{item.composer}</Text>
-        <MetaLabel label="Date" data={item.date} />
-        <MetaLabel label="Era" data={item.era} />
-        <MetaLabel label="Genre" data={item.genre} />
-        <MetaLabel label="Mutes" data={item.mutes} />
+        <View>
+          <Text style={styles.title}>{item.composer}</Text>
+          <MetaLabel label="Date" data={item.date} />
+          <MetaLabel label="Era" data={item.era} />
+          <MetaLabel label="Genre" data={item.genre} />
+          <MetaLabel label="Mutes" data={item.mutes} />
+        </View>
+        <Image
+          style={styles.composerImage}
+          source={
+            composers.find((object) => object.slug == item.composerLast).image
+          }
+        />
       </View>
       <View style={styles.excerptsContainer}>
         {item.excerpts.map((excerpt) => (
@@ -58,6 +67,12 @@ const ExcerptDetail = () => {
 };
 
 const styles = StyleSheet.create({
+  composerImage: {
+    aspectRatio: 1,
+    width: 95,
+    borderRadius: 50,
+    backgroundColor: 'white',
+  },
   excerptMetaContainer: {
     paddingHorizontal: 20,
   },
@@ -73,6 +88,8 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     marginHorizontal: 20,
     paddingVertical: 10,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
   },
   title: {
     fontStyle: 'italic',

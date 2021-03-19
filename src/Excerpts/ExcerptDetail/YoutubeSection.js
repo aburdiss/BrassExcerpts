@@ -32,10 +32,34 @@ const YoutubeSection = ({data}) => {
           ))}
         </View>
       ) : null}
+      {excerptVideos.horn ? (
+        <View>
+          <YoutubeSectionHeader>Horn Specific</YoutubeSectionHeader>
+          {excerptVideos.horn.map((video) => (
+            <YoutubeLink video={video} key={video[1]} type="instrument" />
+          ))}
+        </View>
+      ) : null}
+      {excerptVideos.trumpet ? (
+        <View>
+          <YoutubeSectionHeader>Trumpet Specific</YoutubeSectionHeader>
+          {excerptVideos.trumpet.map((video) => (
+            <YoutubeLink video={video} key={video[1]} type="instrument" />
+          ))}
+        </View>
+      ) : null}
       {excerptVideos.trombone ? (
         <View>
           <YoutubeSectionHeader>Trombone Specific</YoutubeSectionHeader>
           {excerptVideos.trombone.map((video) => (
+            <YoutubeLink video={video} key={video[1]} type="instrument" />
+          ))}
+        </View>
+      ) : null}
+      {excerptVideos.tuba ? (
+        <View>
+          <YoutubeSectionHeader>Tuba Specific</YoutubeSectionHeader>
+          {excerptVideos.tuba.map((video) => (
             <YoutubeLink video={video} key={video[1]} type="instrument" />
           ))}
         </View>
