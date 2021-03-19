@@ -1,14 +1,9 @@
 import React from 'react';
-import {StyleSheet} from 'react-native';
-import {View, Text, Image, Pressable} from 'react-native';
+import {View, Text, Image, Pressable, StyleSheet} from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+
 import {colors} from '../Model/Model';
 
-/**
- *
- * @param {*} param0
- * @returns
- */
 const ComposerListRow = ({name, index, imageSource, onPress}) => {
   const divider = index != 0 ? styles.notFirstTextContainer : null;
   return (

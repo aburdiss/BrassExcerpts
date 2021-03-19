@@ -2,8 +2,10 @@ import React from 'react';
 import {Text} from 'react-native';
 
 const MetaLabel = ({label, data}) => {
-  return (
-    data && (
+  if (!data) {
+    return null;
+  } else {
+    return (
       <Text
         style={{
           paddingTop: 3,
@@ -16,8 +18,8 @@ const MetaLabel = ({label, data}) => {
         </Text>
         {data}
       </Text>
-    )
-  );
+    );
+  }
 };
 
 export default MetaLabel;

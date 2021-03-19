@@ -96,6 +96,13 @@ const ComposersStack = ({navigation}) => {
           title: route.params.name,
         })}
       />
+      <Stack.Screen
+        name="Composer Excerpt Detail"
+        component={ExcerptDetail}
+        options={({route}) => ({
+          title: route.params.name,
+        })}
+      />
     </Stack.Navigator>
   );
 };
