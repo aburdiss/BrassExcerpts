@@ -93,7 +93,7 @@ const ComposersStack = ({navigation}) => {
         name="Composer Detail"
         component={ComposerDetail}
         options={({route}) => ({
-          title: route.params.item,
+          title: route.params.name,
         })}
       />
     </Stack.Navigator>
