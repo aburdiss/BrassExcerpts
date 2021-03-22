@@ -3,7 +3,11 @@ import {View, StyleSheet, ScrollView} from 'react-native';
 import SegmentedControl from '@react-native-segmented-control/segmented-control';
 
 /**
- * @todo Install React Query
+ * @todo Install React Query to deal with the API calls!
+ *
+ * @todo get top excerpts for each instrument (top 10 or 20)
+ * @todo Make section that has top excerpts
+ * @todo Make section that user can add their own lists of excerpts inside the app.
  */
 const Jobs = () => {
   const musicalChairsHornAPI = 'https://www.musicalchairs.info/rss/en/horn';

@@ -1,11 +1,12 @@
+import React, {useContext} from 'react';
+import {Text, View, Pressable, StyleSheet} from 'react-native';
 import {useNavigation} from '@react-navigation/core';
-import React from 'react';
-import {StyleSheet} from 'react-native';
-import {Pressable} from 'react-native';
-import {Text, View} from 'react-native';
 import {colors} from '../../Model/Model';
+import {PreferencesContext} from '../../Model/Preferences';
 
 /**
+ * @todo Style this component.
+ *
  * @description The header for the Excerpts list view.
  * @author Alexander Burdiss
  * @since 3/7/21
@@ -19,21 +20,15 @@ import {colors} from '../../Model/Model';
  */
 const ExcerptListHeader = () => {
   const navigation = useNavigation();
+  const {state} = useContext(PreferencesContext);
 
   return (
     <View style={styles.container}>
       <Pressable>
-        <Text style={styles.instrumentText}>Trombone</Text>
-      </Pressable>
-      <Pressable
-        onPress={function navigateToTopExcerpts() {
-          navigation.navigate('Top Excerpts');
-        }}
-        style={({pressed}) => ({
-          opacity: pressed ? 0.7 : 1,
-          ...styles.topButton,
-        })}>
-        <Text style={styles.topText}>Top Excerpts</Text>
+        {state.horn && <Text style={styles.instrumentText}>Horn</Text>}
+        {state.trumpet && <Text style={styles.instrumentText}>Trumpet</Text>}
+        {state.trombone && <Text style={styles.instrumentText}>Trombone</Text>}
+        {state.tuba && <Text style={styles.instrumentText}>Tuba</Text>}
       </Pressable>
     </View>
   );

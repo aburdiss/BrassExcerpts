@@ -12,6 +12,10 @@ import CompositionSectionHeader from './ComposerDetail/CompositionSectionHeader'
 import CompositionSection from './ComposerDetail/CompositionSection';
 import {colors} from '../Model/Model';
 
+/**
+ * @todo Style this component.
+ * @todo Make chevrons green accent color.
+ */
 const ComposerDetail = () => {
   const route = useRoute();
   const composer = route.params;

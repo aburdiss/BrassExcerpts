@@ -9,7 +9,6 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import HeaderButton from './src/Components/HeaderButton';
 import {colors} from './src/Model/Model';
-
 import Composers from './src/Composers/Composers';
 import ComposerDetail from './src/Composers/ComposerDetail';
 import Excerpts from './src/Excerpts/Excerpts';
@@ -18,6 +17,10 @@ import RandomExcerpt from './src/Excerpts/RandomExcerpt';
 import Jobs from './src/Jobs/Jobs';
 import More from './src/More/More';
 import TopExcerpts from './src/Excerpts/TopExcerpts';
+import Licenses from './src/More/Licenses';
+import Acknowledgements from './src/More/Acknowledgements';
+
+import {PreferencesContext, PreferencesProvider} from './src/Model/Preferences';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -64,7 +67,6 @@ const ExcerptsStack = ({navigation}) => {
         })}
       />
       <Stack.Screen name="Random Excerpt" component={RandomExcerpt} />
-      <Stack.Screen name="Top Excerpts" component={TopExcerpts} />
     </Stack.Navigator>
   );
 };
@@ -127,6 +129,7 @@ const JobsStack = ({navigation}) => {
         headerBackTitle: 'Back',
       }}>
       <Stack.Screen name="Jobs" component={Jobs} />
+      <Stack.Screen name="Top Excerpts" component={TopExcerpts} />
     </Stack.Navigator>
   );
 };
@@ -151,6 +154,8 @@ const MoreStack = ({navigation}) => {
         headerBackTitle: 'Back',
       }}>
       <Stack.Screen name="More" component={More} />
+      <Stack.Screen name="Licenses" component={Licenses} />
+      <Stack.Screen name="Acknowledgements" component={Acknowledgements} />
     </Stack.Navigator>
   );
 };
@@ -159,55 +164,59 @@ const App = () => {
   const DARKMODE = useDarkMode();
   return (
     <SafeAreaProvider>
-      <NavigationContainer>
-        <Tab.Navigator
-          screenOptions={({route}) => ({
-            tabBarIcon: ({color, size}) => {
-              let iconName;
-              if (route.name === 'Excerpts') {
-                iconName = 'musical-notes';
-              } else if (route.name === 'Composers') {
-                iconName = 'people-outline';
-              } else if (route.name === 'Jobs') {
-                iconName = 'logo-rss';
-              } else if (route.name === 'More') {
-                iconName = 'options';
-              }
-              return <Ionicons name={iconName} size={size} color={color} />;
-            },
-          })}
-          tabBarOptions={{
-            activeTintColor: DARKMODE ? colors.greenDark : colors.greenLight,
-            inactiveTintColor: colors.systemGray,
-            style: {
-              backgroundColor: DARKMODE ? colors.systemGray6Dark : colors.white,
-              borderTopColor: DARKMODE
-                ? colors.systemGray5Dark
-                : colors.systemGray5Light,
-            },
-          }}>
-          <Tab.Screen
-            name="Excerpts"
-            component={ExcerptsStack}
-            options={{title: 'Excerpts'}}
-          />
-          <Tab.Screen
-            name="Composers"
-            component={ComposersStack}
-            options={{title: 'Composers'}}
-          />
-          <Tab.Screen
-            name="Jobs"
-            component={JobsStack}
-            options={{title: 'Jobs'}}
-          />
-          <Tab.Screen
-            name="More"
-            component={MoreStack}
-            options={{title: 'More'}}
-          />
-        </Tab.Navigator>
-      </NavigationContainer>
+      <PreferencesProvider>
+        <NavigationContainer>
+          <Tab.Navigator
+            screenOptions={({route}) => ({
+              tabBarIcon: ({color, size}) => {
+                let iconName;
+                if (route.name === 'Excerpts') {
+                  iconName = 'musical-notes';
+                } else if (route.name === 'Composers') {
+                  iconName = 'people-outline';
+                } else if (route.name === 'Jobs') {
+                  iconName = 'logo-rss';
+                } else if (route.name === 'More') {
+                  iconName = 'options';
+                }
+                return <Ionicons name={iconName} size={size} color={color} />;
+              },
+            })}
+            tabBarOptions={{
+              activeTintColor: DARKMODE ? colors.greenDark : colors.greenLight,
+              inactiveTintColor: colors.systemGray,
+              style: {
+                backgroundColor: DARKMODE
+                  ? colors.systemGray6Dark
+                  : colors.white,
+                borderTopColor: DARKMODE
+                  ? colors.systemGray5Dark
+                  : colors.systemGray5Light,
+              },
+            }}>
+            <Tab.Screen
+              name="Excerpts"
+              component={ExcerptsStack}
+              options={{title: 'Excerpts'}}
+            />
+            <Tab.Screen
+              name="Composers"
+              component={ComposersStack}
+              options={{title: 'Composers'}}
+            />
+            <Tab.Screen
+              name="Jobs"
+              component={JobsStack}
+              options={{title: 'Jobs'}}
+            />
+            <Tab.Screen
+              name="More"
+              component={MoreStack}
+              options={{title: 'More'}}
+            />
+          </Tab.Navigator>
+        </NavigationContainer>
+      </PreferencesProvider>
     </SafeAreaProvider>
   );
 };
