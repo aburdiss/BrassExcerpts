@@ -16,7 +16,7 @@ import ExcerptDetail from './src/Excerpts/ExcerptDetail';
 import RandomExcerpt from './src/Excerpts/RandomExcerpt';
 import Jobs from './src/Jobs/Jobs';
 import More from './src/More/More';
-import TopExcerpts from './src/Excerpts/TopExcerpts';
+import TopExcerpts from './src/Jobs/TopExcerpts';
 import Licenses from './src/More/Licenses';
 import Acknowledgements from './src/More/Acknowledgements';
 

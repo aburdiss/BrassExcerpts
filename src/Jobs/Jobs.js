@@ -8,6 +8,12 @@ import SegmentedControl from '@react-native-segmented-control/segmented-control'
  * @todo get top excerpts for each instrument (top 10 or 20)
  * @todo Make section that has top excerpts
  * @todo Make section that user can add their own lists of excerpts inside the app.
+ *
+ * @todo Make the "Top Excerpt" button right below the picker, and have it only
+ * take you to the top excerpts for that insturment, depending on the picker.
+ *
+ * @todo Make the picker only start on instruments that are selected in the
+ * preferences (the starting value of useState())
  */
 const Jobs = () => {
   const musicalChairsHornAPI = 'https://www.musicalchairs.info/rss/en/horn';
