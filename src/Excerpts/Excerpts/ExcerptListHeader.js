@@ -25,10 +25,14 @@ const ExcerptListHeader = () => {
   return (
     <View style={styles.container}>
       <Pressable>
-        {state.horn && <Text style={styles.instrumentText}>Horn</Text>}
-        {state.trumpet && <Text style={styles.instrumentText}>Trumpet</Text>}
-        {state.trombone && <Text style={styles.instrumentText}>Trombone</Text>}
-        {state.tuba && <Text style={styles.instrumentText}>Tuba</Text>}
+        {state && state.horn && <Text style={styles.instrumentText}>Horn</Text>}
+        {state && state.trumpet && (
+          <Text style={styles.instrumentText}>Trumpet</Text>
+        )}
+        {state && state.trombone && (
+          <Text style={styles.instrumentText}>Trombone</Text>
+        )}
+        {state && state.tuba && <Text style={styles.instrumentText}>Tuba</Text>}
       </Pressable>
     </View>
   );

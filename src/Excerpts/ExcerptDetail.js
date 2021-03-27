@@ -1,21 +1,37 @@
-import React from 'react';
-import {ScrollView, View, Text, StyleSheet} from 'react-native';
+import React, {useEffect, useState} from 'react';
+import {
+  ScrollView,
+  View,
+  Text,
+  StyleSheet,
+  Image,
+  Dimensions,
+} from 'react-native';
 import {useRoute} from '@react-navigation/native';
 
 import MetaLabel from './ExcerptDetail/MetaLabel';
 import YoutubeSection from './ExcerptDetail/YoutubeSection';
 import {colors} from '../Model/Model';
 import {composers} from '../Model/ComposerModel';
-import {Image} from 'react-native';
+import AutoHeightImage from 'react-native-auto-height-image';
 
 /**
- * @todo Images: Load into this repo. Make this Repo public. Use
- * https://github.com/vivaxy/react-native-auto-height-image
- * to get them to display correctly.
+ * @todo Get the Image View to change width when you rotate the phone.
+ * @todo Add Loading State to images.
  */
 const ExcerptDetail = () => {
   const route = useRoute();
   const item = route.params;
+
+  const [screenWidth, setScreenWidth] = useState(0);
+
+  useEffect(
+    function updateScreenWidth() {
+      const {width} = Dimensions.get('window');
+      setScreenWidth(width);
+    },
+    [Dimensions],
+  );
 
   return (
     <ScrollView>
@@ -44,13 +60,12 @@ const ExcerptDetail = () => {
             {excerpt.pictures.map((picture) => (
               <View key={picture[1]}>
                 <Text>{picture[0]}</Text>
-                <Image
-                  style={{
-                    height: 100,
-                  }}
+                <AutoHeightImage
+                  width={screenWidth}
                   source={{
                     uri:
-                      'https://raw.githubusercontent.com/aburdiss/ScalePractice/master/img/ANPLogo.png',
+                      'https://github.com/aburdiss/BrassExcerpts/raw/master/img/External/' +
+                      picture[1],
                   }}
                 />
               </View>
