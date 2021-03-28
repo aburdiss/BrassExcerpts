@@ -22,6 +22,7 @@ import Acknowledgements from './src/More/Acknowledgements';
 
 import {PreferencesContext, PreferencesProvider} from './src/Model/Preferences';
 import PastJobs from './src/Jobs/PastJobs';
+import JobDetail from './src/Jobs/JobDetail';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -145,6 +146,20 @@ const JobsStack = ({navigation}) => {
         }}
       />
       <Stack.Screen name="Top Excerpts" component={TopExcerpts} />
+      <Stack.Screen
+        name="Job Detail"
+        component={JobDetail}
+        options={({route}) => ({
+          title: route.params.orchestra,
+        })}
+      />
+      <Stack.Screen
+        name="Jobs Excerpt Detail"
+        component={ExcerptDetail}
+        options={({route}) => ({
+          title: route.params.name,
+        })}
+      />
       <Stack.Screen name="Past Auditions" component={PastJobs} />
     </Stack.Navigator>
   );

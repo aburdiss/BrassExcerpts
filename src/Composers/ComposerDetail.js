@@ -3,7 +3,7 @@ import {View, Text, ScrollView, Image, StyleSheet} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import {useRoute} from '@react-navigation/core';
 
-import MetaLabel from '../Excerpts/ExcerptDetail/MetaLabel';
+import MetaLabel from '../Components/MetaLabel';
 import {composers as hornComposers} from '../Model/Excerpts/HornExcerpts';
 import {composers as trumpetComposers} from '../Model/Excerpts/TrumpetExcerpts';
 import {composers as tromboneComposers} from '../Model/Excerpts/TromboneExcerpts';

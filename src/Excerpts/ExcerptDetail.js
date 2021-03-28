@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import {useRoute} from '@react-navigation/native';
 
-import MetaLabel from './ExcerptDetail/MetaLabel';
+import MetaLabel from '../Components/MetaLabel';
 import YoutubeSection from './ExcerptDetail/YoutubeSection';
 import {colors} from '../Model/Model';
 import {composers} from '../Model/ComposerModel';

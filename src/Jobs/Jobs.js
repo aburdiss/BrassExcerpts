@@ -8,9 +8,12 @@ import {
   Linking,
 } from 'react-native';
 import SegmentedControl from '@react-native-segmented-control/segmented-control';
-import {colors} from '../Model/Model';
-import {PreferencesContext} from '../Model/Preferences';
 import {useNavigation} from '@react-navigation/core';
+
+import JobsListRow from './Jobs/JobsListRow';
+import ActionButton from '../Components/ActionButton';
+import {PreferencesContext} from '../Model/Preferences';
+import {colors} from '../Model/Model';
 
 /**
  * @todo Install React Query to deal with the API calls!
@@ -33,8 +36,38 @@ const Jobs = () => {
     'https://www.musicalchairs.info/trombone/jobs';
   const musicalChairsTubaLink = 'https://www.musicalchairs.info/tuba/jobs';
 
+  const internalHornJobsLink =
+    'https://github.com/aburdiss/BrassExcerpts/raw/master/src/Model/Jobs/HornJobs.json';
+  const internalTrumpetJobsLink =
+    'https://github.com/aburdiss/BrassExcerpts/raw/master/src/Model/Jobs/TrumpetJobs.json';
+  const internalTromboneJobsLink =
+    'https://github.com/aburdiss/BrassExcerpts/raw/master/src/Model/Jobs/TromboneJobs.json';
+  const internalTubaJobsLink =
+    'https://github.com/aburdiss/BrassExcerpts/raw/master/src/Model/Jobs/TubaJobs.json';
+
   const {state, dispatch} = useContext(PreferencesContext);
+  const [currentJobs, setCurrentJobs] = useState([]);
   const navigation = useNavigation();
+
+  useEffect(
+    function fetchCurrentJobs() {
+      fetch(
+        [
+          internalHornJobsLink,
+          internalTrumpetJobsLink,
+          internalTromboneJobsLink,
+          internalTubaJobsLink,
+        ][state.jobsIndex],
+      )
+        .then((resp) => {
+          return resp.json();
+        })
+        .then((data) => {
+          setCurrentJobs(data.Jobs);
+        });
+    },
+    [state.jobsIndex],
+  );
 
   let currentInstrument = ['horn', 'trumpet', 'trombone', 'tuba'][
     state.jobsIndex
@@ -71,22 +104,26 @@ const Jobs = () => {
               });
             }}
           />
-          <Pressable
-            onPress={openTopExcerptComponent}
-            style={({pressed}) => ({
-              opacity: pressed ? 0.7 : 1,
-              ...styles.topExcerptButton,
-            })}>
-            <Text style={styles.topExcerptButtonText}>
-              View top {currentInstrument} excerpts
-            </Text>
-          </Pressable>
-          <View style={styles.errorContainer}>
-            <Text style={styles.errorText}>
-              There are no {currentInstrument} jobs at this time.{'\n'}Check
-              back later!
-            </Text>
-          </View>
+          <ActionButton onPress={openTopExcerptComponent}>
+            View top {currentInstrument} excerpts
+          </ActionButton>
+          {currentJobs.length !== 0 ? (
+            <View>
+              {currentJobs.map((job, index) => {
+                const jobDate = new Date(job.closingDate);
+                if (jobDate > new Date()) {
+                  return <JobsListRow key={index} job={job} />;
+                }
+              })}
+            </View>
+          ) : (
+            <View style={styles.errorContainer}>
+              <Text style={styles.errorText}>
+                There are no {currentInstrument} jobs at this time.{'\n'}Check
+                back later!
+              </Text>
+            </View>
+          )}
           <Pressable
             onPress={openMusicalChairsLink}
             style={({pressed}) => ({opacity: pressed ? 0.7 : 1})}>
@@ -119,19 +156,6 @@ const styles = StyleSheet.create({
   },
   scrollView: {
     height: '100%',
-  },
-  topExcerptButton: {
-    backgroundColor: colors.greenLight,
-    borderRadius: 8,
-    marginVertical: 10,
-    borderBottomColor: colors.blueLight,
-    borderBottomWidth: 1,
-    borderRightColor: colors.blueLight,
-    borderRightWidth: 1,
-  },
-  topExcerptButtonText: {
-    textAlign: 'center',
-    padding: 15,
   },
 });
 
