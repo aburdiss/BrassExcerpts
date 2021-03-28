@@ -84,6 +84,7 @@ const initialPreferencesState = {
   trombone: true,
   tuba: true,
   favorites: [],
+  jobsIndex: 0,
 };
 
 /**

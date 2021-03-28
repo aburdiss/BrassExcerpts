@@ -25,7 +25,7 @@ let bachCelloSuite = {
       id: 0,
       description: 'Sarabande',
       avgTempo: '72bpm',
-      measures: '1-20 (All}',
+      measures: '1-20 (All)',
       pictures: [['', 'Trombone/BachCelloSuite/1000.png']],
     },
   ],
@@ -320,7 +320,7 @@ let bizetLArlesienne = {
       description: 'Excerpt 1',
       avgTempo: '',
       measures: 'Mov. IV, 1 mm. after [M] to [P]',
-      pictures: [['Trombone 3', '1042']],
+      pictures: [['Trombone 3', 'Trombone/BizetFarandole/1042.png']],
     },
   ],
   mutes: 'No',
@@ -344,9 +344,9 @@ let borodinPolovetsian = {
       avgTempo: '',
       measures: 'No. 17, 8 mm. before [D] to [D]',
       pictures: [
-        ['Trombone 1', '1043'],
-        ['Trombone 2', '1044'],
-        ['Trombone 3', '1045'],
+        ['Trombone 1', 'Trombone/BorodinPolovetsian/1043.png'],
+        ['Trombone 2', 'Trombone/BorodinPolovetsian/1044.png'],
+        ['Trombone 3', 'Trombone/BorodinPolovetsian/1045.png'],
       ],
     },
     {
@@ -355,9 +355,9 @@ let borodinPolovetsian = {
       avgTempo: '',
       measures: 'No. 17, 4 mm. after ‘Allegro’ to [G]',
       pictures: [
-        ['Trombone 1', '1046'],
-        ['Trombone 2', '1047'],
-        ['Trombone 3', '1048'],
+        ['Trombone 1', 'Trombone/BorodinPolovetsian/1046.png'],
+        ['Trombone 2', 'Trombone/BorodinPolovetsian/1047.png'],
+        ['Trombone 3', 'Trombone/BorodinPolovetsian/1048.png'],
       ],
     },
     {
@@ -366,9 +366,9 @@ let borodinPolovetsian = {
       avgTempo: '',
       measures: 'No. 17, [K] to 23 mm. before [M]',
       pictures: [
-        ['Trombone 1', '1049'],
-        ['Trombone 2', '1050'],
-        ['Trombone 3', '1051'],
+        ['Trombone 1', 'Trombone/BorodinPolovetsian/1049.png'],
+        ['Trombone 2', 'Trombone/BorodinPolovetsian/1050.png'],
+        ['Trombone 3', 'Trombone/BorodinPolovetsian/1051.png'],
       ],
     },
     {
@@ -377,9 +377,9 @@ let borodinPolovetsian = {
       avgTempo: '',
       measures: 'No. 17, [R] to 12 mm. after [S] ',
       pictures: [
-        ['Trombone 1', '1052'],
-        ['Trombone 2', '1053'],
-        ['Trombone 3', '1054'],
+        ['Trombone 1', 'Trombone/BorodinPolovetsian/1052.png'],
+        ['Trombone 2', 'Trombone/BorodinPolovetsian/1053.png'],
+        ['Trombone 3', 'Trombone/BorodinPolovetsian/1054.png'],
       ],
     },
     {
@@ -388,9 +388,9 @@ let borodinPolovetsian = {
       avgTempo: '',
       measures: 'No. 17, [U] to End',
       pictures: [
-        ['Trombone 1', '1055'],
-        ['Trombone 2', '1056'],
-        ['Trombone 3', '1057'],
+        ['Trombone 1', 'Trombone/BorodinPolovetsian/1055.png'],
+        ['Trombone 2', 'Trombone/BorodinPolovetsian/1056.png'],
+        ['Trombone 3', 'Trombone/BorodinPolovetsian/1057.png'],
       ],
     },
   ],
@@ -415,9 +415,9 @@ let brahmsAcademic = {
       avgTempo: '',
       measures: '[C] to 14 mm. before [E]',
       pictures: [
-        ['Trombone 1', '1073'],
-        ['Trombone 2', '1074'],
-        ['Trombone 3', '1075'],
+        ['Trombone 1', 'Trombone/BrahmsAcademic/1073.png'],
+        ['Trombone 2', 'Trombone/BrahmsAcademic/1074.png'],
+        ['Trombone 3', 'Trombone/BrahmsAcademic/1075.png'],
       ],
     },
     {
@@ -426,9 +426,9 @@ let brahmsAcademic = {
       avgTempo: '',
       measures: '10 mm. before [F] to 3 mm. after [F]',
       pictures: [
-        ['Trombone 1', '1076'],
-        ['Trombone 2', '1077'],
-        ['Trombone 3', '1078'],
+        ['Trombone 1', 'Trombone/BrahmsAcademic/1076.png'],
+        ['Trombone 2', 'Trombone/BrahmsAcademic/1077.png'],
+        ['Trombone 3', 'Trombone/BrahmsAcademic/1078.png'],
       ],
     },
     {
@@ -437,9 +437,9 @@ let brahmsAcademic = {
       avgTempo: '',
       measures: '[K] to 11 mm. before [L]',
       pictures: [
-        ['Trombone 1', '1079'],
-        ['Trombone 2', '1080'],
-        ['Trombone 3', '1081'],
+        ['Trombone 1', 'Trombone/BrahmsAcademic/1079.png'],
+        ['Trombone 2', 'Trombone/BrahmsAcademic/1080.png'],
+        ['Trombone 3', 'Trombone/BrahmsAcademic/1081.png'],
       ],
     },
     {
@@ -448,9 +448,9 @@ let brahmsAcademic = {
       avgTempo: '',
       measures: '[L] to 3 mm. after [M]',
       pictures: [
-        ['Trombone 1', '1082'],
-        ['Trombone 2', '1083'],
-        ['Trombone 3', '1084'],
+        ['Trombone 1', 'Trombone/BrahmsAcademic/1082.png'],
+        ['Trombone 2', 'Trombone/BrahmsAcademic/1083.png'],
+        ['Trombone 3', 'Trombone/BrahmsAcademic/1084.png'],
       ],
     },
     {
@@ -459,9 +459,9 @@ let brahmsAcademic = {
       avgTempo: '',
       measures: '[Maestoso] to End',
       pictures: [
-        ['Trombone 1', '1085'],
-        ['Trombone 2', '1086'],
-        ['Trombone 3', '1087'],
+        ['Trombone 1', 'Trombone/BrahmsAcademic/1085.png'],
+        ['Trombone 2', 'Trombone/BrahmsAcademic/1086.png'],
+        ['Trombone 3', 'Trombone/BrahmsAcademic/1087.png'],
       ],
     },
   ],
@@ -486,9 +486,9 @@ let brahms1 = {
       avgTempo: '',
       measures: 'Mov. IV, [C] to 14 mm. after [C]',
       pictures: [
-        ['Trombone 1', '1058'],
-        ['Trombone 2', '1059'],
-        ['Trombone 3', '1060'],
+        ['Trombone 1', 'Trombone/Brahms1/1058.png'],
+        ['Trombone 2', 'Trombone/Brahms1/1059.png'],
+        ['Trombone 3', 'Trombone/Brahms1/1060.png'],
       ],
     },
   ],
@@ -514,9 +514,9 @@ let brahms2 = {
       avgTempo: '',
       measures: 'Mov. IV, [O] to 14 mm. before [P], [P] to End',
       pictures: [
-        ['Trombone 1', '1061'],
-        ['Trombone 2', '1062'],
-        ['Trombone 3', '1063'],
+        ['Trombone 1', 'Trombone/Brahms2/1061.png'],
+        ['Trombone 2', 'Trombone/Brahms2/1062.png'],
+        ['Trombone 3', 'Trombone/Brahms2/1063.png'],
       ],
     },
   ],
@@ -542,9 +542,9 @@ let brahms3 = {
       avgTempo: '',
       measures: 'Mov. IV, 1 mm. after [I] to [K]',
       pictures: [
-        ['Trombone 1', '1064'],
-        ['Trombone 2', '1065'],
-        ['Trombone 3', '1066'],
+        ['Trombone 1', 'Trombone/Brahms3/1064.png'],
+        ['Trombone 2', 'Trombone/Brahms3/1065.png'],
+        ['Trombone 3', 'Trombone/Brahms3/1066.png'],
       ],
     },
     {
@@ -553,9 +553,9 @@ let brahms3 = {
       avgTempo: '',
       measures: 'Mov. IV, 4 mm. before [P] to 18 mm. after [P] ',
       pictures: [
-        ['Trombone 1', '1067'],
-        ['Trombone 2', '1068'],
-        ['Trombone 3', '1069'],
+        ['Trombone 1', 'Trombone/Brahms3/1067.png'],
+        ['Trombone 2', 'Trombone/Brahms3/1068.png'],
+        ['Trombone 3', 'Trombone/Brahms3/1069.png'],
       ],
     },
   ],
@@ -581,9 +581,9 @@ let brahms4 = {
       avgTempo: '',
       measures: 'Mov. IV, [E] to 23 after [E]',
       pictures: [
-        ['Trombone 1', '1070'],
-        ['Trombone 2', '1071'],
-        ['Trombone 3', '1072'],
+        ['Trombone 1', 'Trombone/Brahms4/1070.png'],
+        ['Trombone 2', 'Trombone/Brahms4/1071.png'],
+        ['Trombone 3', 'Trombone/Brahms4/1072.png'],
       ],
     },
   ],
@@ -609,9 +609,9 @@ let brahmsTragic = {
       avgTempo: '',
       measures: '[E] to 8 mm. after [E]',
       pictures: [
-        ['Trombone 1', '1088'],
-        ['Trombone 2', '1089'],
-        ['Trombone 3', '1090'],
+        ['Trombone 1', 'Trombone/BrahmsTragic/1088.png'],
+        ['Trombone 2', 'Trombone/BrahmsTragic/1089.png'],
+        ['Trombone 3', 'Trombone/BrahmsTragic/1090.png'],
       ],
     },
     {
@@ -620,9 +620,9 @@ let brahmsTragic = {
       avgTempo: '',
       measures: '[N] to 14 mm. before [P]',
       pictures: [
-        ['Trombone 1', '1091'],
-        ['Trombone 2', '1092'],
-        ['Trombone 3', '1093'],
+        ['Trombone 1', 'Trombone/BrahmsTragic/1091.png'],
+        ['Trombone 2', 'Trombone/BrahmsTragic/1092.png'],
+        ['Trombone 3', 'Trombone/BrahmsTragic/1093.png'],
       ],
     },
   ],
@@ -647,9 +647,9 @@ let bruckner4 = {
       avgTempo: '',
       measures: 'Mov. I, [A] to [B]',
       pictures: [
-        ['Trombone 1', '1094'],
-        ['Trombone 2', '1095'],
-        ['Trombone 3', '1096'],
+        ['Trombone 1', 'Trombone/Bruckner4/1094.png'],
+        ['Trombone 2', 'Trombone/Bruckner4/1095.png'],
+        ['Trombone 3', 'Trombone/Bruckner4/1096.png'],
       ],
     },
     {
@@ -658,9 +658,9 @@ let bruckner4 = {
       avgTempo: '',
       measures: 'Mov I, mm. 305 to mm. 327',
       pictures: [
-        ['Trombone 1', '1097'],
-        ['Trombone 2', '1098'],
-        ['Trombone 3', '1099'],
+        ['Trombone 1', 'Trombone/Bruckner4/1097.png'],
+        ['Trombone 2', 'Trombone/Bruckner4/1098.png'],
+        ['Trombone 3', 'Trombone/Bruckner4/1099.png'],
       ],
     },
     {
@@ -669,9 +669,9 @@ let bruckner4 = {
       avgTempo: '',
       measures: 'Mov. IV, [E] to [F]',
       pictures: [
-        ['Trombone 1', '1100'],
-        ['Trombone 2', '1101'],
-        ['Trombone 3', '1102'],
+        ['Trombone 1', 'Trombone/Bruckner4/1100.png'],
+        ['Trombone 2', 'Trombone/Bruckner4/1101.png'],
+        ['Trombone 3', 'Trombone/Bruckner4/1102.png'],
       ],
     },
     {
@@ -680,14 +680,14 @@ let bruckner4 = {
       avgTempo: '',
       measures: 'Mov. IV, [M] to [O]',
       pictures: [
-        ['Trombone 1', '1103'],
-        ['Trombone 2', '1104'],
-        ['Trombone 3', '1105'],
+        ['Trombone 1', 'Trombone/Bruckner4/1103.png'],
+        ['Trombone 2', 'Trombone/Bruckner4/1104.png'],
+        ['Trombone 3', 'Trombone/Bruckner4/1105.png'],
       ],
     },
   ],
   mutes: 'No',
-  commonDifficulties: 'Rhythm',
+  commonDifficulties: 'Rhythmic Clarity',
   professionalAdvice: '',
   videos: 'bruckner4',
 };
@@ -707,9 +707,9 @@ let bruckner7 = {
       avgTempo: '',
       measures: 'Mov I, to mm. 34 to mm. 43',
       pictures: [
-        ['Trombone 1', '1106'],
-        ['Trombone 2', '1107'],
-        ['Trombone 3', '1108'],
+        ['Trombone 1', 'Trombone/Bruckner7/1106.png'],
+        ['Trombone 2', 'Trombone/Bruckner7/1107.png'],
+        ['Trombone 3', 'Trombone/Bruckner7/1108.png'],
       ],
     },
     {
@@ -718,9 +718,9 @@ let bruckner7 = {
       avgTempo: '',
       measures: 'Mov I, mm. 114 to mm. 148',
       pictures: [
-        ['Trombone 1', '1109'],
-        ['Trombone 2', '1110'],
-        ['Trombone 3', '1111'],
+        ['Trombone 1', 'Trombone/Bruckner7/1109.png'],
+        ['Trombone 2', 'Trombone/Bruckner7/1110.png'],
+        ['Trombone 3', 'Trombone/Bruckner7/1111.png'],
       ],
     },
     {
@@ -729,9 +729,9 @@ let bruckner7 = {
       avgTempo: '',
       measures: 'Mov I, mm. 114 to mm. 148',
       pictures: [
-        ['Trombone 1', '1112'],
-        ['Trombone 2', '1113'],
-        ['Trombone 3', '1114'],
+        ['Trombone 1', 'Trombone/Bruckner7/1112.png'],
+        ['Trombone 2', 'Trombone/Bruckner7/1113.png'],
+        ['Trombone 3', 'Trombone/Bruckner7/1114.png'],
       ],
     },
     {
@@ -740,9 +740,9 @@ let bruckner7 = {
       avgTempo: '',
       measures: '',
       pictures: [
-        ['Trombone 1', '1115'],
-        ['Trombone 2', '1116'],
-        ['Trombone 3', '1117'],
+        ['Trombone 1', 'Trombone/Bruckner7/1115.png'],
+        ['Trombone 2', 'Trombone/Bruckner7/1116.png'],
+        ['Trombone 3', 'Trombone/Bruckner7/1117.png'],
       ],
     },
     {
@@ -751,9 +751,9 @@ let bruckner7 = {
       avgTempo: '',
       measures: 'Mov. I, mm. 235 to [N]',
       pictures: [
-        ['Trombone 1', '1118'],
-        ['Trombone 2', '1119'],
-        ['Trombone 3', '1120'],
+        ['Trombone 1', 'Trombone/Bruckner7/1118.png'],
+        ['Trombone 2', 'Trombone/Bruckner7/1119.png'],
+        ['Trombone 3', 'Trombone/Bruckner7/1120.png'],
       ],
     },
     {
@@ -762,9 +762,9 @@ let bruckner7 = {
       avgTempo: '',
       measures: 'Mov. I, [S] to mm. 362',
       pictures: [
-        ['Trombone 1', '1121'],
-        ['Trombone 2', '1122'],
-        ['Trombone 3', '1123'],
+        ['Trombone 1', 'Trombone/Bruckner7/1121.png'],
+        ['Trombone 2', 'Trombone/Bruckner7/1122.png'],
+        ['Trombone 3', 'Trombone/Bruckner7/1123.png'],
       ],
     },
     {
@@ -773,9 +773,9 @@ let bruckner7 = {
       avgTempo: '',
       measures: 'Mov. I, mm. 371 to mm. 386',
       pictures: [
-        ['Trombone 1', '1124'],
-        ['Trombone 2', '1125'],
-        ['Trombone 3', '1126'],
+        ['Trombone 1', 'Trombone/Bruckner7/1124.png'],
+        ['Trombone 2', 'Trombone/Bruckner7/1125.png'],
+        ['Trombone 3', 'Trombone/Bruckner7/1126.png'],
       ],
     },
     {
@@ -784,9 +784,9 @@ let bruckner7 = {
       avgTempo: '',
       measures: 'Mov. I, [X] to End',
       pictures: [
-        ['Trombone 1', '1127'],
-        ['Trombone 2', '1128'],
-        ['Trombone 3', '1129'],
+        ['Trombone 1', 'Trombone/Bruckner7/1127.png'],
+        ['Trombone 2', 'Trombone/Bruckner7/1128.png'],
+        ['Trombone 3', 'Trombone/Bruckner7/1129.png'],
       ],
     },
     {
@@ -795,9 +795,9 @@ let bruckner7 = {
       avgTempo: '',
       measures: 'Mov. II, mm. 25 to mm. 30',
       pictures: [
-        ['Trombone 1', '1130'],
-        ['Trombone 2', '1131'],
-        ['Trombone 3', '1132'],
+        ['Trombone 1', 'Trombone/Bruckner7/1130.png'],
+        ['Trombone 2', 'Trombone/Bruckner7/1131.png'],
+        ['Trombone 3', 'Trombone/Bruckner7/1132.png'],
       ],
     },
     {
@@ -806,9 +806,9 @@ let bruckner7 = {
       avgTempo: '',
       measures: 'Mov. II, mm. 120 to [P] ',
       pictures: [
-        ['Trombone 1', '1133'],
-        ['Trombone 2', '1134'],
-        ['Trombone 3', '1135'],
+        ['Trombone 1', 'Trombone/Bruckner7/1133.png'],
+        ['Trombone 2', 'Trombone/Bruckner7/1134.png'],
+        ['Trombone 3', 'Trombone/Bruckner7/1135.png'],
       ],
     },
     {
@@ -817,9 +817,9 @@ let bruckner7 = {
       avgTempo: '',
       measures: 'Mov. II, 1 mm. before [U] to [X]',
       pictures: [
-        ['Trombone 1', '1136'],
-        ['Trombone 2', '1137'],
-        ['Trombone 3', '1138'],
+        ['Trombone 1', 'Trombone/Bruckner7/1136.png'],
+        ['Trombone 2', 'Trombone/Bruckner7/1137.png'],
+        ['Trombone 3', 'Trombone/Bruckner7/1138.png'],
       ],
     },
     {
@@ -828,9 +828,9 @@ let bruckner7 = {
       avgTempo: '',
       measures: 'Mov. III, mm. 39 to mm. 90',
       pictures: [
-        ['Trombone 1', '1139'],
-        ['Trombone 2', '1140'],
-        ['Trombone 3', '1141'],
+        ['Trombone 1', 'Trombone/Bruckner7/1139.png'],
+        ['Trombone 2', 'Trombone/Bruckner7/1140.png'],
+        ['Trombone 3', 'Trombone/Bruckner7/1141.png'],
       ],
     },
     {
@@ -839,9 +839,9 @@ let bruckner7 = {
       avgTempo: '',
       measures: 'Mov. III, mm. 219 to mm. 270',
       pictures: [
-        ['Trombone 1', '1142'],
-        ['Trombone 2', '1143'],
-        ['Trombone 3', '1144'],
+        ['Trombone 1', 'Trombone/Bruckner7/1142.png'],
+        ['Trombone 2', 'Trombone/Bruckner7/1143.png'],
+        ['Trombone 3', 'Trombone/Bruckner7/1144.png'],
       ],
     },
     {
@@ -850,9 +850,9 @@ let bruckner7 = {
       avgTempo: '',
       measures: 'Mov. IV, [F] to mm. 112',
       pictures: [
-        ['Trombone 1', '1145'],
-        ['Trombone 2', '1146'],
-        ['Trombone 3', '1147'],
+        ['Trombone 1', 'Trombone/Bruckner7/1145.png'],
+        ['Trombone 2', 'Trombone/Bruckner7/1146.png'],
+        ['Trombone 3', 'Trombone/Bruckner7/1147.png'],
       ],
     },
     {
@@ -861,9 +861,9 @@ let bruckner7 = {
       avgTempo: '',
       measures: 'Mov. IV, [P] to [S]',
       pictures: [
-        ['Trombone 1', '1148'],
-        ['Trombone 2', '1149'],
-        ['Trombone 3', '1150'],
+        ['Trombone 1', 'Trombone/Bruckner7/1148.png'],
+        ['Trombone 2', 'Trombone/Bruckner7/1149.png'],
+        ['Trombone 3', 'Trombone/Bruckner7/1150.png'],
       ],
     },
     {
@@ -872,9 +872,9 @@ let bruckner7 = {
       avgTempo: '',
       measures: 'Mov. IV, mm. 251 to [X] ',
       pictures: [
-        ['Trombone 1', '1151'],
-        ['Trombone 2', '1152'],
-        ['Trombone 3', '1153'],
+        ['Trombone 1', 'Trombone/Bruckner7/1151.png'],
+        ['Trombone 2', 'Trombone/Bruckner7/1152.png'],
+        ['Trombone 3', 'Trombone/Bruckner7/1153.png'],
       ],
     },
     {
@@ -883,9 +883,9 @@ let bruckner7 = {
       avgTempo: '',
       measures: 'Mov. IV, mm. 308 to End',
       pictures: [
-        ['Trombone 1', '1154'],
-        ['Trombone 2', '1155'],
-        ['Trombone 3', '1156'],
+        ['Trombone 1', 'Trombone/Bruckner7/1154.png'],
+        ['Trombone 2', 'Trombone/Bruckner7/1155.png'],
+        ['Trombone 3', 'Trombone/Bruckner7/1156.png'],
       ],
     },
   ],

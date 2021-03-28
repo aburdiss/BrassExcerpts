@@ -1,6 +1,16 @@
-import React, {useEffect, useState} from 'react';
-import {View, StyleSheet, ScrollView} from 'react-native';
+import React, {useContext, useEffect, useState} from 'react';
+import {
+  View,
+  StyleSheet,
+  ScrollView,
+  Pressable,
+  Text,
+  Linking,
+} from 'react-native';
 import SegmentedControl from '@react-native-segmented-control/segmented-control';
+import {colors} from '../Model/Model';
+import {PreferencesContext} from '../Model/Preferences';
+import {useNavigation} from '@react-navigation/core';
 
 /**
  * @todo Install React Query to deal with the API calls!
@@ -16,45 +26,112 @@ import SegmentedControl from '@react-native-segmented-control/segmented-control'
  * preferences (the starting value of useState())
  */
 const Jobs = () => {
-  const musicalChairsHornAPI = 'https://www.musicalchairs.info/rss/en/horn';
-  const musicalChairsTrumpetAPI =
-    'https://www.musicalchairs.info/rss/en/trumpet';
-  const musicalChairsTromboneAPI =
-    'https://www.musicalchairs.info/rss/en/trombone';
-  const musicalChairsTubaAPI = 'https://www.musicalchairs.info/rss/en/tuba';
+  const musicalChairsHornLink = 'https://www.musicalchairs.info/horn/jobs';
+  const musicalChairsTrumpetLink =
+    'https://www.musicalchairs.info/trumpet/jobs';
+  const musicalChairsTromboneLink =
+    'https://www.musicalchairs.info/trombone/jobs';
+  const musicalChairsTubaLink = 'https://www.musicalchairs.info/tuba/jobs';
 
-  const [selectedInstrumentIndex, setSelectedInstrumentIndex] = useState(0);
+  const {state, dispatch} = useContext(PreferencesContext);
+  const navigation = useNavigation();
 
-  async function fetchJobs() {
-    const dataToFetch = [
-      musicalChairsHornAPI,
-      musicalChairsTrumpetAPI,
-      musicalChairsTromboneAPI,
-      musicalChairsTubaAPI,
-    ][selectedInstrumentIndex];
-    const response = await fetch(dataToFetch);
-    console.log(await response.text());
+  let currentInstrument = ['horn', 'trumpet', 'trombone', 'tuba'][
+    state.jobsIndex
+  ];
+
+  function openMusicalChairsLink() {
+    let urlToOpen = [
+      musicalChairsHornLink,
+      musicalChairsTrumpetLink,
+      musicalChairsTromboneLink,
+      musicalChairsTubaLink,
+    ][state.jobsIndex];
+
+    Linking.openURL(urlToOpen).catch((err) =>
+      console.warn("Couldn't load page", err),
+    );
+  }
+
+  function openTopExcerptComponent() {
+    navigation.navigate('Top Excerpts');
   }
 
   return (
     <View>
-      <View style={styles.segmentedControlWrapper}>
-        <SegmentedControl
-          values={['Horn', 'Trumpet', 'Trombone', 'Tuba']}
-          selectedIndex={selectedInstrumentIndex}
-          onChange={(event) => {
-            setSelectedInstrumentIndex(event.nativeEvent.selectedSegmentIndex);
-          }}
-        />
+      <View style={styles.container}>
+        <ScrollView style={styles.scrollView}>
+          <SegmentedControl
+            values={['Horn', 'Trumpet', 'Trombone', 'Tuba']}
+            selectedIndex={state.jobsIndex}
+            onChange={(event) => {
+              dispatch({
+                type: 'SET_SETTING',
+                payload: {jobsIndex: event.nativeEvent.selectedSegmentIndex},
+              });
+            }}
+          />
+          <Pressable
+            onPress={openTopExcerptComponent}
+            style={({pressed}) => ({
+              opacity: pressed ? 0.7 : 1,
+              ...styles.topExcerptButton,
+            })}>
+            <Text style={styles.topExcerptButtonText}>
+              View top {currentInstrument} excerpts
+            </Text>
+          </Pressable>
+          <View style={styles.errorContainer}>
+            <Text style={styles.errorText}>
+              There are no {currentInstrument} jobs at this time.{'\n'}Check
+              back later!
+            </Text>
+          </View>
+          <Pressable
+            onPress={openMusicalChairsLink}
+            style={({pressed}) => ({opacity: pressed ? 0.7 : 1})}>
+            <Text style={styles.linkText}>
+              View {currentInstrument} job openings on Musical Chairs
+            </Text>
+          </Pressable>
+        </ScrollView>
       </View>
-      <ScrollView></ScrollView>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  segmentedControlWrapper: {
+  container: {
     padding: 10,
+  },
+  errorContainer: {
+    // backgroundColor: colors.systemGray,
+    marginVertical: 10,
+    padding: 40,
+  },
+  errorText: {
+    textAlign: 'center',
+  },
+  linkText: {
+    color: colors.greenLight,
+    textDecorationLine: 'underline',
+    padding: 10,
+  },
+  scrollView: {
+    height: '100%',
+  },
+  topExcerptButton: {
+    backgroundColor: colors.greenLight,
+    borderRadius: 8,
+    marginVertical: 10,
+    borderBottomColor: colors.blueLight,
+    borderBottomWidth: 1,
+    borderRightColor: colors.blueLight,
+    borderRightWidth: 1,
+  },
+  topExcerptButtonText: {
+    textAlign: 'center',
+    padding: 15,
   },
 });
 

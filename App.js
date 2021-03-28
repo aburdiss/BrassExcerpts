@@ -21,6 +21,7 @@ import Licenses from './src/More/Licenses';
 import Acknowledgements from './src/More/Acknowledgements';
 
 import {PreferencesContext, PreferencesProvider} from './src/Model/Preferences';
+import PastJobs from './src/Jobs/PastJobs';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -128,8 +129,23 @@ const JobsStack = ({navigation}) => {
         },
         headerBackTitle: 'Back',
       }}>
-      <Stack.Screen name="Jobs" component={Jobs} />
+      <Stack.Screen
+        name="Jobs"
+        component={Jobs}
+        options={{
+          headerRight: () => (
+            <HeaderButton
+              handler={() => {
+                navigation.navigate('Past Auditions');
+              }}>
+              Past
+            </HeaderButton>
+          ),
+          title: 'Current Auditions',
+        }}
+      />
       <Stack.Screen name="Top Excerpts" component={TopExcerpts} />
+      <Stack.Screen name="Past Auditions" component={PastJobs} />
     </Stack.Navigator>
   );
 };
@@ -175,7 +191,7 @@ const App = () => {
                 } else if (route.name === 'Composers') {
                   iconName = 'people-outline';
                 } else if (route.name === 'Jobs') {
-                  iconName = 'logo-rss';
+                  iconName = 'briefcase';
                 } else if (route.name === 'More') {
                   iconName = 'options';
                 }

@@ -1,0 +1,73 @@
+{
+  "Jobs": [
+    {
+      "orchestra": "The Cleveland Orchestra",
+      "position": "Principal Trombone",
+      "link": "https://www.clevelandorchestra.com/contact/auditions-careers/musician-auditions/",
+      "country": "USA",
+      "closingDate": "May 3, 2021",
+      "excerpts": [
+        "Berg - Three Pieces for Orchestra",
+        "berliozFaust",
+        "brahms1",
+        "brahms2",
+        "brahms4",
+        "bruckner7",
+        "Hindemith - Symphonic Metamorphosis",
+        "mahler3",
+        "mozartRequiem",
+        "ravelBolero",
+        "Ravel - L’enfant et les Sortileges",
+        "rossiniWilliamTell",
+        "schumann3",
+        "schumann4",
+        "straussZarathustra",
+        "straussHeldenleben",
+        "straussEulenspiegel",
+        "Stravinsky - Pulcinella",
+        "wagnerLohengrin",
+        "wagnerTannhauser",
+        "wagnerValkyrie",
+        "saintSaens3",
+        "tchaikovsky6"
+      ]
+    },
+    {
+      "orchestra": "The Cleveland Orchestra",
+      "position": "Bass Trombone",
+      "link": "https://www.clevelandorchestra.com/contact/auditions-careers/musician-auditions/",
+      "country": "USA",
+      "closingDate": "May 3, 2021",
+      "excerpts": [
+        "Bartók - Concerto for Orchestra",
+        "Bartók - Miraculous Mandarin",
+        "beethoven9",
+        "berliozFaust",
+        "Berg - Violin Concerto",
+        "brahms1",
+        "brahms2",
+        "brahms4",
+        "franckD",
+        "haydnCreation",
+        "Kodaly - Háry János",
+        "Mahler - Symphony No. 6",
+        "mahler7",
+        "Mendelssohn - Symphony No. 5",
+        "Prokofiev - Symphony No. 5",
+        "respighiFountains",
+        "Respighi - Pines of Rome",
+        "rossiniWilliamTell",
+        "schubert9",
+        "schumann3",
+        "straussZarathustra",
+        "straussHeldenleben",
+        "straussEulenspiegel",
+        "tchaikovsky6",
+        "wagnerLohengrin",
+        "wagnerTannhauser",
+        "wagnerValkyrie",
+        "wagnerRheingold"
+      ]
+    }
+  ]
+}
