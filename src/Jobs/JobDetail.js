@@ -90,7 +90,7 @@ const JobDetail = () => {
             );
           } else {
             return (
-              <View style={styles.excerptButton}>
+              <View key={index} style={styles.excerptButton}>
                 <Text>{excerpt}</Text>
               </View>
             );

@@ -10,6 +10,6 @@
 export function getDaysUntilDate(date) {
   let futureDate = new Date(date);
   const oneDayInMilliseconds = 1000 * 60 * 60 * 24;
-  const differenceInMilliseconds = Math.abs(futureDate - new Date());
+  const differenceInMilliseconds = futureDate - new Date();
   return Math.round(differenceInMilliseconds / oneDayInMilliseconds);
 }
