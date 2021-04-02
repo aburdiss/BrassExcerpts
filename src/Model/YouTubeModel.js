@@ -1,4 +1,4 @@
-export default YouTubeModel = {
+const YouTubeModel = {
   bachBrandenburg1: {
     full: [
       ['Baroque Razzle-Dazzle', 'iHeyhXlsu6M'],
@@ -2232,3 +2232,5 @@ export default YouTubeModel = {
     ],
   },
 };
+
+export default YouTubeModel;
