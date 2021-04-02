@@ -90,6 +90,10 @@ const Jobs = () => {
     navigation.navigate('Top Excerpts');
   }
 
+  function openCreateCustomAudition() {
+    navigation.navigate('Create Custom Audition');
+  }
+
   return (
     <View>
       <View style={styles.container}>
@@ -124,6 +128,9 @@ const Jobs = () => {
               </Text>
             </View>
           )}
+          <ActionButton onPress={openCreateCustomAudition}>
+            Create a custom audition list!
+          </ActionButton>
           <Pressable
             onPress={openMusicalChairsLink}
             style={({pressed}) => ({opacity: pressed ? 0.7 : 1})}>

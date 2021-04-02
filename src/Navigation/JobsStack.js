@@ -10,6 +10,8 @@ import Jobs from '../Jobs/Jobs';
 import TopExcerpts from '../Jobs/TopExcerpts';
 import PastJobs from '../Jobs/PastJobs';
 import JobDetail from '../Jobs/JobDetail';
+import CreateCustomAudition from '../Jobs/CreateCustomAudition';
+import CustomAudition from '../Jobs/CustomAudition';
 
 const Stack = createStackNavigator();
 
@@ -63,6 +65,11 @@ const JobsStack = ({navigation}) => {
         })}
       />
       <Stack.Screen name="Past Auditions" component={PastJobs} />
+      <Stack.Screen
+        name="Create Custom Audition"
+        component={CreateCustomAudition}
+      />
+      <Stack.Screen name="Custom Audition" component={CustomAudition} />
     </Stack.Navigator>
   );
 };
