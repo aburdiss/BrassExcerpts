@@ -10,10 +10,10 @@ import {colors} from './src/Model/Model';
 
 import {PreferencesProvider} from './src/Model/Preferences';
 
-import ExcerptsStack from './src/Navigation/ExcerptsStack';
-import ComposersStack from './src/Navigation/ComposersStack';
-import JobsStack from './src/Navigation/JobsStack';
-import MoreStack from './src/Navigation/MoreStack';
+import ExcerptsStack from './src/ExcerptsStack/ExcerptsStack';
+import ComposersStack from './src/ComposersStack/ComposersStack';
+import JobsStack from './src/JobsStack/JobsStack';
+import MoreStack from './src/MoreStack/MoreStack';
 
 const Tab = createBottomTabNavigator();
 
