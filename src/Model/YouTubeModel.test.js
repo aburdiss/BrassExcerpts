@@ -1,8 +1,4 @@
 const fetch = require('node-fetch');
-const https = require('https');
-const httpsAgent = new https.Agent({
-  rejectUnauthorized: false,
-});
 
 import YouTubeModel from './YouTubeModel';
 
