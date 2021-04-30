@@ -145,12 +145,32 @@ const ExcerptDetail = () => {
           <MetaLabel label="Date" data={item.date} />
           <MetaLabel label="Era" data={item.era} />
           <MetaLabel label="Genre" data={item.genre} />
-          <MetaLabel label="Mutes" data={item.mutes} />
+          {getNumberOfInstruments(state) == 1 ? (
+            <MetaLabel label="Mutes" data={item.mutes} />
+          ) : (
+            <>
+              {hornExcerpt && (
+                <MetaLabel label="Horn Mutes" data={hornExcerpt.mutes} />
+              )}
+              {trumpetExcerpt && (
+                <MetaLabel label="Trumpet Mutes" data={trumpetExcerpt.mutes} />
+              )}
+              {tromboneExcerpt && (
+                <MetaLabel
+                  label="Trombone Mutes"
+                  data={tromboneExcerpt.mutes}
+                />
+              )}
+              {tubaExcerpt && (
+                <MetaLabel label="Tuba Mutes" data={tubaExcerpt.mutes} />
+              )}
+            </>
+          )}
         </View>
         <Image
           style={styles.composerImage}
           source={
-            composers.find((object) => object.slug == item.composerLast).image
+            composers.find((object) => object.slug == item.composerLast)?.image
           }
         />
       </View>

@@ -109,7 +109,7 @@ export const composers = [
 
   {
     id: 9,
-    slug: 'Dvorak',
+    slug: 'Dvořák',
     name: 'Antonín Dvořák',
     ipa: 'ˈɑn tɔ nyin ˈdvɔr ʒɑk',
     image: require('../../img/Composers/dvorak.jpg'),
