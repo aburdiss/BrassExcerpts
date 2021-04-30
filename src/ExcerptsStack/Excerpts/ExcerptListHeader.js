@@ -22,9 +22,13 @@ const ExcerptListHeader = () => {
   const navigation = useNavigation();
   const {state} = useContext(PreferencesContext);
 
+  function navigateToSettings() {
+    navigation.navigate('More');
+  }
+
   return (
     <View style={styles.container}>
-      <Pressable>
+      <Pressable onPress={navigateToSettings}>
         {state && state.horn && <Text style={styles.instrumentText}>Horn</Text>}
         {state && state.trumpet && (
           <Text style={styles.instrumentText}>Trumpet</Text>

@@ -63,7 +63,11 @@ const Jobs = () => {
           return resp.json();
         })
         .then((data) => {
-          setCurrentJobs(data.Jobs);
+          if (data.Jobs) {
+            setCurrentJobs(data.Jobs);
+          } else {
+            setCurrentJobs([]);
+          }
         });
     },
     [state.jobsIndex],

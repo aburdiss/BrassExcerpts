@@ -54,7 +54,7 @@ const preferencesReducer = (state, action) => {
   let newState;
   switch (action.type) {
     case 'SET_ALL_PREFERENCES':
-      newState = {...state, ...action.payload};
+      newState = {...action.payload};
       break;
     case 'SET_SETTING':
       newState = {...state, ...action.payload};

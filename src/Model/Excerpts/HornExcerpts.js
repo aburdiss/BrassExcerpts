@@ -2011,7 +2011,7 @@ let straussEulenspiegel = {
   id: 42,
   composer: 'Richard Strauss',
   composerLast: 'Strauss',
-  name: 'Till Eulenspiegels lustige Streiche',
+  name: "Till Eulenspiegel's Merry Pranks",
   date: '1895',
   era: 'Late Romantic',
   genre: 'Tone Poem',

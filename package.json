@@ -56,7 +56,10 @@
   },
   "eslintConfig": {
     "root": true,
-    "extends": "@react-native-community"
+    "extends": "@react-native-community",
+    "rules": {
+      "eqeqeq": 0
+    }
   },
   "babel": {
     "presets": [
