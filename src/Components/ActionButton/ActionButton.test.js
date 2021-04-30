@@ -14,15 +14,27 @@ test('ActionButton renders correctly', () => {
   expect(queryByText(/Press Me/)).toBeTruthy();
 });
 
-test('ActionButton calls function correctly', () => {
-  const buttonPress = jest.fn();
-  const {getByText} = render(
-    <ActionButton onPress={buttonPress}>
-      <Text>Press Me</Text>
-    </ActionButton>,
-  );
-  fireEvent.press(getByText(/Press Me/));
-  expect(buttonPress).toHaveBeenCalledTimes(1);
-  fireEvent.press(getByText(/Press Me/));
-  expect(buttonPress).toHaveBeenCalledTimes(2);
+describe('ActionButton calls function correctly', () => {
+  test('one time', () => {
+    const buttonPress = jest.fn();
+    const {getByText} = render(
+      <ActionButton onPress={buttonPress}>
+        <Text>Press Me</Text>
+      </ActionButton>,
+    );
+    fireEvent.press(getByText(/Press Me/));
+    expect(buttonPress).toHaveBeenCalledTimes(1);
+  });
+
+  test('two times', () => {
+    const buttonPress = jest.fn();
+    const {getByText} = render(
+      <ActionButton onPress={buttonPress}>
+        <Text>Press Me</Text>
+      </ActionButton>,
+    );
+    fireEvent.press(getByText(/Press Me/));
+    fireEvent.press(getByText(/Press Me/));
+    expect(buttonPress).toHaveBeenCalledTimes(2);
+  });
 });

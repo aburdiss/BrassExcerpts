@@ -11,13 +11,22 @@ test('HeaderButton renders correctly', () => {
   expect(queryByText(/Arpeggios/)).toBeTruthy();
 });
 
-test('HeaderButton calls function correctly', () => {
-  const buttonPress = jest.fn();
-  const {getByText} = render(
-    <HeaderButton handler={buttonPress}>Press Me</HeaderButton>,
-  );
-  fireEvent.press(getByText(/Press Me/));
-  expect(buttonPress).toHaveBeenCalledTimes(1);
-  fireEvent.press(getByText(/Press Me/));
-  expect(buttonPress).toHaveBeenCalledTimes(2);
+describe('HeaderButton calls function correctly', () => {
+  test('one time', () => {
+    const buttonPress = jest.fn();
+    const {getByText} = render(
+      <HeaderButton handler={buttonPress}>Press Me</HeaderButton>,
+    );
+    fireEvent.press(getByText(/Press Me/));
+    expect(buttonPress).toHaveBeenCalledTimes(1);
+  });
+  test('two times', () => {
+    const buttonPress = jest.fn();
+    const {getByText} = render(
+      <HeaderButton handler={buttonPress}>Press Me</HeaderButton>,
+    );
+    fireEvent.press(getByText(/Press Me/));
+    fireEvent.press(getByText(/Press Me/));
+    expect(buttonPress).toHaveBeenCalledTimes(2);
+  });
 });
