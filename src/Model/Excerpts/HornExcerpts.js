@@ -21,8 +21,8 @@ let bachBrandenburgConcerto = {
       description: 'Excerpt 1',
       measures: 'Mov. I, mm. 12 - 25',
       pictures: [
-        ['F Horn 1', '1000'],
-        ['F Horn 2', '1001'],
+        ['F Horn 1', 'Horn/BachBrandenburg/1000.png'],
+        ['F Horn 2', 'Horn/BachBrandenburg/1001.png'],
       ],
     },
     {
@@ -30,8 +30,8 @@ let bachBrandenburgConcerto = {
       description: 'Excerpt 2',
       measures: 'Mov. I, mm. 36 - 43',
       pictures: [
-        ['F Horn 1', '1002'],
-        ['F Horn 2', '1003'],
+        ['F Horn 1', 'Horn/BachBrandenburg/1002.png'],
+        ['F Horn 2', 'Horn/BachBrandenburg/1003.png'],
       ],
     },
     {
@@ -39,8 +39,8 @@ let bachBrandenburgConcerto = {
       description: 'Excerpt 3',
       measures: 'Mov. I, mm. 65 - 74',
       pictures: [
-        ['F Horn 1', '1004'],
-        ['F Horn 2', '1005'],
+        ['F Horn 1', 'Horn/BachBrandenburg/1004.png'],
+        ['F Horn 2', 'Horn/BachBrandenburg/1005.png'],
       ],
     },
     {
@@ -48,8 +48,8 @@ let bachBrandenburgConcerto = {
       description: 'Excerpt 4',
       measures: 'Mov. III, Beginning - mm. 17',
       pictures: [
-        ['F Horn 1', '1006'],
-        ['F Horn 2', '1007'],
+        ['F Horn 1', 'Horn/BachBrandenburg/1006.png'],
+        ['F Horn 2', 'Horn/BachBrandenburg/1007.png'],
       ],
     },
     {
@@ -57,8 +57,8 @@ let bachBrandenburgConcerto = {
       description: 'Excerpt 5',
       measures: 'Mov. III, mm. 84 - End',
       pictures: [
-        ['F Horn 1', '1008'],
-        ['F Horn 2', '1009'],
+        ['F Horn 1', 'Horn/BachBrandenburg/1008.png'],
+        ['F Horn 2', 'Horn/BachBrandenburg/1009.png'],
       ],
     },
     {
@@ -66,8 +66,8 @@ let bachBrandenburgConcerto = {
       description: 'Excerpt 6',
       measures: 'Mov. IV, Trio II',
       pictures: [
-        ['F Horn 1', '1010'],
-        ['F Horn 2', '1011'],
+        ['F Horn 1', 'Horn/BachBrandenburg/1010.png'],
+        ['F Horn 2', 'Horn/BachBrandenburg/1011.png'],
       ],
     },
   ],
@@ -88,7 +88,7 @@ let bachMassB = {
       id: 7,
       description: 'Excerpt 1',
       measures: 'Mov. X, mm. 1 - 15',
-      pictures: [['D Horn', '1012']],
+      pictures: [['D Horn', 'Horn/BachMass/1012.png']],
     },
   ],
   mutes: '',
@@ -109,10 +109,10 @@ let beethovenFidelio = {
       description: 'Excerpt 1',
       measures: 'Overture, mm. 1 - 16',
       pictures: [
-        ['E Horn 1', '1013'],
-        ['E Horn 2', '1014'],
-        ['E Horn 3', '1015'],
-        ['E Horn 4', '1016'],
+        ['E Horn 1', 'Horn/BeethovenFidelio/1013.png'],
+        ['E Horn 2', 'Horn/BeethovenFidelio/1014.png'],
+        ['E Horn 3', 'Horn/BeethovenFidelio/1015.png'],
+        ['E Horn 4', 'Horn/BeethovenFidelio/1016.png'],
       ],
     },
     {
@@ -120,10 +120,10 @@ let beethovenFidelio = {
       description: 'Excerpt 2',
       measures: 'Overture, mm. 45 - 55',
       pictures: [
-        ['E Horn 1', '1017'],
-        ['E Horn 2', '1018'],
-        ['E Horn 3', '1019'],
-        ['E Horn 4', '1020'],
+        ['E Horn 1', 'Horn/BeethovenFidelio/1017.png'],
+        ['E Horn 2', 'Horn/BeethovenFidelio/1018.png'],
+        ['E Horn 3', 'Horn/BeethovenFidelio/1019.png'],
+        ['E Horn 4', 'Horn/BeethovenFidelio/1020.png'],
       ],
     },
     {
@@ -131,8 +131,8 @@ let beethovenFidelio = {
       description: 'Excerpt 3',
       measures: 'Overture, mm. 136 - 151',
       pictures: [
-        ['E Horn 1', '1021'],
-        ['E Horn 2', '1022'],
+        ['E Horn 1', 'Horn/BeethovenFidelio/1021.png'],
+        ['E Horn 2', 'Horn/BeethovenFidelio/1022.png'],
       ],
     },
   ],
@@ -154,8 +154,8 @@ let beethoven2 = {
       description: 'Excerpt 1',
       measures: 'Mov. II, mm. 85 - 96',
       pictures: [
-        ['E Horn 1', '1023'],
-        ['E Horn 2', '1024'],
+        ['E Horn 1', 'Horn/Beethoven2/1023.png'],
+        ['E Horn 2', 'Horn/Beethoven2/1024.png'],
       ],
     },
     {
@@ -163,8 +163,8 @@ let beethoven2 = {
       description: 'Excerpt 2',
       measures: 'Mov. II, mm. 249 - 260',
       pictures: [
-        ['E Horn 1', '1025'],
-        ['E Horn 2', '1026'],
+        ['E Horn 1', 'Horn/Beethoven2/1025.png'],
+        ['E Horn 2', 'Horn/Beethoven2/1026.png'],
       ],
     },
   ],
@@ -186,9 +186,9 @@ let beethoven3 = {
       description: 'Excerpt 1',
       measures: 'Mov. I, 4 mm. before [M] - 19 mm. after [M]',
       pictures: [
-        ['E♭ Horn 1', '1027'],
-        ['E♭ Horn 2', '1028'],
-        ['E♭ Horn 3', '1029'],
+        ['E♭ Horn 1', 'Horn/Beethoven3/1027.png'],
+        ['E♭ Horn 2', 'Horn/Beethoven3/1028.png'],
+        ['E♭ Horn 3', 'Horn/Beethoven3/1029.png'],
       ],
     },
     {
@@ -196,9 +196,9 @@ let beethoven3 = {
       description: 'Excerpt 2',
       measures: 'Mov. I, 16 mm. before [U] – 9 mm. after [V]',
       pictures: [
-        ['E♭ Horn 1', '1030'],
-        ['E♭ Horn 2', '1031'],
-        ['E♭ Horn 3', '1032'],
+        ['E♭ Horn 1', 'Horn/Beethoven3/1030.png'],
+        ['E♭ Horn 2', 'Horn/Beethoven3/1031.png'],
+        ['E♭ Horn 3', 'Horn/Beethoven3/1032.png'],
       ],
     },
     {
@@ -206,9 +206,9 @@ let beethoven3 = {
       description: 'Excerpt 3',
       measures: 'Mov. III, mm. 169 - 205',
       pictures: [
-        ['E♭ Horn 1', '1033'],
-        ['E♭ Horn 2', '1034'],
-        ['E♭ Horn 3', '1035'],
+        ['E♭ Horn 1', 'Horn/Beethoven3/1033.png'],
+        ['E♭ Horn 2', 'Horn/Beethoven3/1034.png'],
+        ['E♭ Horn 3', 'Horn/Beethoven3/1035.png'],
       ],
     },
     {
@@ -216,9 +216,9 @@ let beethoven3 = {
       description: 'Excerpt 4',
       measures: 'Mov. IV, 9 mm. before [F] – 7 mm. after [G]',
       pictures: [
-        ['E♭ Horn 1', '1036'],
-        ['E♭ Horn 2', '1037'],
-        ['E♭ Horn 3', '1038'],
+        ['E♭ Horn 1', 'Horn/Beethoven3/1036.png'],
+        ['E♭ Horn 2', 'Horn/Beethoven3/1037.png'],
+        ['E♭ Horn 3', 'Horn/Beethoven3/1038.png'],
       ],
     },
     {
@@ -226,9 +226,9 @@ let beethoven3 = {
       description: 'Excerpt 5',
       measures: 'Mov. IV, mm. 433 - End',
       pictures: [
-        ['E♭ Horn 1', '1039'],
-        ['E♭ Horn 2', '1040'],
-        ['E♭ Horn 3', '1041'],
+        ['E♭ Horn 1', 'Horn/Beethoven3/1039.png'],
+        ['E♭ Horn 2', 'Horn/Beethoven3/1040.png'],
+        ['E♭ Horn 3', 'Horn/Beethoven3/1041.png'],
       ],
     },
   ],
@@ -250,15 +250,15 @@ let beethoven6 = {
       description: 'Excerpt 1',
       measures: 'Mov. III, 49 mm. after [A] - 78 mm. after [A] ',
       pictures: [
-        ['F Horn 1', '1042'],
-        ['F Horn 2', '1043'],
+        ['F Horn 1', 'Horn/Beethoven6/1042.png'],
+        ['F Horn 2', 'Horn/Beethoven6/1043.png'],
       ],
     },
     {
       id: 19,
       description: 'Excerpt 2',
       measures: 'Mov. V, mm. 1 - 10',
-      pictures: [['F Horn 1', '1044']],
+      pictures: [['F Horn 1', 'Horn/Beethoven6/1044.png']],
     },
   ],
   mutes: '',
@@ -279,8 +279,8 @@ let beethoven7 = {
       description: 'Excerpt 1',
       measures: 'Mov. I, 25 mm. before [C] - [C]',
       pictures: [
-        ['A Horn 1', '1045'],
-        ['A Horn 2', '1046'],
+        ['A Horn 1', 'Horn/Beethoven7/1045.png'],
+        ['A Horn 2', 'Horn/Beethoven7/1046.png'],
       ],
     },
     {
@@ -288,8 +288,8 @@ let beethoven7 = {
       description: 'Excerpt 2',
       measures: 'Mov. I, 23 mm. after [N] – End',
       pictures: [
-        ['A Horn 1', '1047'],
-        ['A Horn 2', '1048'],
+        ['A Horn 1', 'Horn/Beethoven7/1047.png'],
+        ['A Horn 2', 'Horn/Beethoven7/1048.png'],
       ],
     },
     {
@@ -297,8 +297,8 @@ let beethoven7 = {
       description: 'Excerpt 3',
       measures: 'Mov. III, mm. 153-239',
       pictures: [
-        ['D Horn 1', '1049'],
-        ['D Horn 2', '1050'],
+        ['D Horn 1', 'Horn/Beethoven7/1049.png'],
+        ['D Horn 2', 'Horn/Beethoven7/1050.png'],
       ],
     },
     {
@@ -306,8 +306,8 @@ let beethoven7 = {
       description: 'Excerpt 4',
       measures: 'Mov. IV, K – End',
       pictures: [
-        ['A Horn 1', '1051'],
-        ['A Horn 2', '1052'],
+        ['A Horn 1', 'Horn/Beethoven7/1051.png'],
+        ['A Horn 2', 'Horn/Beethoven7/1052.png'],
       ],
     },
   ],
@@ -329,8 +329,8 @@ let beethoven8 = {
       description: 'Excerpt 1',
       measures: 'Mov. III, mm. 45 - 78',
       pictures: [
-        ['F Horn 1', '1053'],
-        ['F Horn 2', '1054'],
+        ['F Horn 1', 'Horn/Beethoven8/1053.png'],
+        ['F Horn 2', 'Horn/Beethoven8/1054.png'],
       ],
     },
   ],
@@ -352,10 +352,10 @@ let beethoven9 = {
       description: 'Excerpt 1',
       measures: 'Mov. I, [Q] – 10 mm. after [Q]',
       pictures: [
-        ['D Horn 1', '1055'],
-        ['D Horn 2', '1056'],
-        ['B♭ basso Horn 3', '1057'],
-        ['B♭ basso Horn 4', '1058'],
+        ['D Horn 1', 'Horn/Beethoven9/1055.png'],
+        ['D Horn 2', 'Horn/Beethoven9/1056.png'],
+        ['B♭ basso Horn 3', 'Horn/Beethoven9/1057.png'],
+        ['B♭ basso Horn 4', 'Horn/Beethoven9/1058.png'],
       ],
     },
     {
@@ -363,8 +363,8 @@ let beethoven9 = {
       description: 'Excerpt 2',
       measures: 'Mov. II, [L] - 8 mm. after [L]',
       pictures: [
-        ['D Horn 1', '1059'],
-        ['D Horn 2', '1060'],
+        ['D Horn 1', 'Horn/Beethoven9/1059.png'],
+        ['D Horn 2', 'Horn/Beethoven9/1060.png'],
       ],
     },
     {
@@ -372,10 +372,10 @@ let beethoven9 = {
       description: 'Excerpt 3',
       measures: 'Mov. III, mm. 83 - 121',
       pictures: [
-        ['B Horn 1', '1061'],
-        ['B Horn 2', '1062'],
-        ['E♭ Horn 3', '1063'],
-        ['E♭ Horn 4', '1064'],
+        ['B Horn 1', 'Horn/Beethoven9/1061.png'],
+        ['B Horn 2', 'Horn/Beethoven9/1062.png'],
+        ['E♭ Horn 3', 'Horn/Beethoven9/1063.png'],
+        ['E♭ Horn 4', 'Horn/Beethoven9/1064.png'],
       ],
     },
   ],
@@ -397,10 +397,10 @@ let berliozRomeoEtJuliet = {
       description: 'Excerpt 1',
       measures: 'Mov. III, 9 mm. after 57 – 4 mm. after 62',
       pictures: [
-        ['F Horn 1', '1065'],
-        ['C Horn 2', '1066'],
-        ['B♭ Alto Horn 3', '1067'],
-        ['E♭ Horn 4', '1068'],
+        ['F Horn 1', 'Horn/BerliozRomeoAndJuliet/1065.png'],
+        ['C Horn 2', 'Horn/BerliozRomeoAndJuliet/1066.png'],
+        ['B♭ Alto Horn 3', 'Horn/BerliozRomeoAndJuliet/1067.png'],
+        ['E♭ Horn 4', 'Horn/BerliozRomeoAndJuliet/1068.png'],
       ],
     },
   ],
@@ -422,8 +422,8 @@ let brahmsAcademic = {
       description: 'Excerpt 1',
       measures: 'Beginning - [A]',
       pictures: [
-        ['C Horn 1', '1069'],
-        ['C Horn 2', '1070'],
+        ['C Horn 1', 'Horn/BrahmsAcademic/1069.png'],
+        ['C Horn 2', 'Horn/BrahmsAcademic/1070.png'],
       ],
     },
     {
@@ -431,10 +431,10 @@ let brahmsAcademic = {
       description: 'Excerpt 2',
       measures: '10 mm. after [F] – [G]',
       pictures: [
-        ['C Horn 1', '1071'],
-        ['C Horn 2', '1072'],
-        ['E Horn 3', '1073'],
-        ['E Horn 4', '1074'],
+        ['C Horn 1', 'Horn/BrahmsAcademic/1071.png'],
+        ['C Horn 2', 'Horn/BrahmsAcademic/1072.png'],
+        ['E Horn 3', 'Horn/BrahmsAcademic/1073.png'],
+        ['E Horn 4', 'Horn/BrahmsAcademic/1074.png'],
       ],
     },
   ],
