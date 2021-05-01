@@ -2,6 +2,7 @@ const fetch = require('node-fetch');
 
 import YouTubeModel from './YouTubeModel';
 
+// eslint-disable-next-line jest/no-disabled-tests
 describe.skip('youtube model', () => {
   for (let key in YouTubeModel) {
     for (let group in YouTubeModel[key]) {

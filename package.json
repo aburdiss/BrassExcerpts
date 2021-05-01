@@ -6,7 +6,8 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
-    "test": "jest",
+    "test": "jest --watch",
+    "coverage": "jest --coverage",
     "lint": "eslint ."
   },
   "dependencies": {
@@ -68,6 +69,14 @@
   },
   "jest": {
     "preset": "react-native",
+    "coverageThreshold": {
+      "global": {
+        "statements": 54,
+        "branches": 29,
+        "functions": 24,
+        "lines": 64
+      }
+    },
     "moduleFileExtensions": [
       "ts",
       "tsx",

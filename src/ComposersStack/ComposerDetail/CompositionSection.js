@@ -1,11 +1,14 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {View, Text, Pressable, StyleSheet} from 'react-native';
 import {useNavigation} from '@react-navigation/core';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import {colors} from '../../Model/Model';
+import {isFavorite} from '../../utils/isFavorite/isFavorite';
+import {PreferencesContext} from '../../Model/Preferences';
 
 const CompositionSection = ({excerpts}) => {
+  const {state} = useContext(PreferencesContext);
   const navigation = useNavigation();
 
   return (
@@ -24,11 +27,21 @@ const CompositionSection = ({excerpts}) => {
               navigation.navigate('Composer Excerpt Detail', excerpt);
             }}>
             <Text style={styles.text}>{excerpt.name}</Text>
-            <Ionicons
-              name="chevron-forward"
-              size={24}
-              color={colors.greenLight}
-            />
+            <View style={styles.iconContainer}>
+              {isFavorite(state, excerpt.composerLast, excerpt.name) && (
+                <Ionicons
+                  name="heart"
+                  size={24}
+                  color={colors.redLight}
+                  style={styles.favoriteIcon}
+                />
+              )}
+              <Ionicons
+                name="chevron-forward"
+                size={24}
+                color={colors.greenLight}
+              />
+            </View>
           </Pressable>
         );
       })}
@@ -55,6 +68,9 @@ const styles = StyleSheet.create({
     borderTopColor: colors.systemGray,
     backgroundColor: colors.white,
     marginBottom: 20,
+  },
+  iconContainer: {
+    flexDirection: 'row',
   },
   text: {
     fontSize: 15,
