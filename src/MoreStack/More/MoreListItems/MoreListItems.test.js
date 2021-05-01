@@ -7,7 +7,7 @@ import {
   SwitchListItem,
   ButtonListItem,
 } from './MoreListItems';
-import MockContext from '../../../jest/MockContext';
+import MockContext from '../../../../jest/MockContext';
 
 import {render} from '@testing-library/react-native';
 

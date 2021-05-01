@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text, Pressable, StyleSheet} from 'react-native';
 import {useNavigation} from '@react-navigation/core';
-import {colors} from '../../Model/Model';
+import {colors} from '../../../Model/Model';
 
 /**
  * @todo Add share modal when long press this job.

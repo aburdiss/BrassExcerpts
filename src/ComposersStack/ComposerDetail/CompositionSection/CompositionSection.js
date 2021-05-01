@@ -3,9 +3,9 @@ import {View, Text, Pressable, StyleSheet} from 'react-native';
 import {useNavigation} from '@react-navigation/core';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-import {colors} from '../../Model/Model';
-import {isFavorite} from '../../utils/isFavorite/isFavorite';
-import {PreferencesContext} from '../../Model/Preferences';
+import {colors} from '../../../Model/Model';
+import {isFavorite} from '../../../utils/isFavorite/isFavorite';
+import {PreferencesContext} from '../../../Model/Preferences';
 
 const CompositionSection = ({excerpts}) => {
   const {state} = useContext(PreferencesContext);

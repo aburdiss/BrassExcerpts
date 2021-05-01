@@ -12,7 +12,7 @@ Paste that data into ./Licenses/data.js
 
 import React from 'react';
 
-import LicensesList from './LicensesList';
+import LicensesList from './LicensesList/LicensesList';
 import {useDarkMode} from 'react-native-dynamic';
 import {colors} from '../../Model/Model';
 
@@ -67,7 +67,6 @@ let licenses = Object.keys(Data).map((key) => {
   let {licenses, ...license} = Data[key];
   let [name, version] = key.split('@');
 
-  const reg = /((https?:\/\/)?(www\.)?github\.com\/)?(@|#!\/)?([A-Za-z0-9_]{1,15})(\/([-a-z]{1,20}))?/i;
   let username =
     extractNameFromGithubUrl(license.repository) ||
     extractNameFromGithubUrl(license.licenseUrl);

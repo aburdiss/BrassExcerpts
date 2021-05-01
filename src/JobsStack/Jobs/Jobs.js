@@ -10,7 +10,7 @@ import {
 import SegmentedControl from '@react-native-segmented-control/segmented-control';
 import {useNavigation} from '@react-navigation/core';
 
-import JobsListRow from './JobsListRow';
+import JobsListRow from './JobsListRow/JobsListRow';
 import ActionButton from '../../Components/ActionButton/ActionButton';
 import {PreferencesContext} from '../../Model/Preferences';
 import {colors} from '../../Model/Model';

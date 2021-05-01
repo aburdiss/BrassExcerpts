@@ -1,6 +1,6 @@
 import React from 'react';
 import {FlatList, StyleSheet} from 'react-native';
-import LicensesListItem from './LicensesListItem';
+import LicensesListItem from '../LicensesListItem/LicensesListItem';
 
 /**
  * @description The list of licenses of dependencies used in this app.
@@ -9,7 +9,7 @@ import LicensesListItem from './LicensesListItem';
  * @since 12/17/2020
  * @version 1.0.1
  * @param {Array} props.licenses The list of licenses that will be displayed.
- * 
+ *
  * @component
  * @example
  * ```jsx

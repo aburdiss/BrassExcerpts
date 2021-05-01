@@ -9,7 +9,7 @@ import {
 import SegmentedControl from '@react-native-segmented-control/segmented-control';
 
 import {useNavigation} from '@react-navigation/native';
-import {colors} from '../../Model/Model';
+import {colors} from '../../../Model/Model';
 
 /**
  * @description A rendered Text list item. This will not translate 

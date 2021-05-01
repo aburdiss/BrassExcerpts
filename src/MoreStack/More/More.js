@@ -25,7 +25,7 @@ import {
   SwitchListItem,
   ButtonListItem,
   SegmentedFilterListItem,
-} from './MoreListItems';
+} from './MoreListItems/MoreListItems';
 
 /**
  * @description A View that allows the user to set custom settings, or view

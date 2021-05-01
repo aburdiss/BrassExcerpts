@@ -1,7 +1,7 @@
 import React from 'react';
-import {Text, Pressable, View, Linking, Image, StyleSheet} from 'react-native';
+import {Text, Pressable, View, Linking, Image} from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import {colors} from '../../Model/Model';
+import {colors} from '../../../Model/Model';
 import {
   DynamicStyleSheet,
   DynamicValue,

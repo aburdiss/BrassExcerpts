@@ -2,8 +2,8 @@ import React, {useContext} from 'react';
 import {Text, View, Pressable, StyleSheet} from 'react-native';
 import {useNavigation} from '@react-navigation/core';
 
-import {colors} from '../../Model/Model';
-import {PreferencesContext} from '../../Model/Preferences';
+import {colors} from '../../../Model/Model';
+import {PreferencesContext} from '../../../Model/Preferences';
 
 /**
  * @todo Style this component.

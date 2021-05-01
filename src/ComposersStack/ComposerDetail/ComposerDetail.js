@@ -3,8 +3,8 @@ import {View, Text, ScrollView, Image, StyleSheet} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import {useRoute} from '@react-navigation/core';
 
-import CompositionSectionHeader from './CompositionSectionHeader';
-import CompositionSection from './CompositionSection';
+import CompositionSectionHeader from './CompositionSectionHeader/CompositionSectionHeader';
+import CompositionSection from './CompositionSection/CompositionSection';
 import MetaLabel from '../../Components/MetaLabel/MetaLabel';
 import {composers as hornComposers} from '../../Model/Excerpts/HornExcerpts';
 import {composers as trumpetComposers} from '../../Model/Excerpts/TrumpetExcerpts';

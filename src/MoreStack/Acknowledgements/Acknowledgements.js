@@ -9,7 +9,7 @@ import {
 
 import {colors} from '../../Model/Model';
 import {TRANSLATIONS} from '../../Model/AcknowledgementsModel';
-import {TextListItem} from '../More/MoreListItems';
+import {TextListItem} from '../More/MoreListItems/MoreListItems';
 
 /**
  * @description A View that displays the people who directly assisted with
@@ -17,7 +17,7 @@ import {TextListItem} from '../More/MoreListItems';
  * @author Alexander Burdiss
  * @since 12/14/20
  * @version 1.0.2
- * 
+ *
  * @component
  * @example
  * ```jsx

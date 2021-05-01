@@ -2,8 +2,8 @@ import React, {useContext, useEffect, useState} from 'react';
 import {FlatList} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 
-import ExcerptListRow from './ExcerptListRow';
-import ExcerptListHeader from './ExcerptListHeader';
+import ExcerptListRow from './ExcerptListRow/ExcerptListRow';
+import ExcerptListHeader from './ExcerptListHeader/ExcerptListHeader';
 import {processListData} from './ExcerptsUtils';
 import {PreferencesContext} from '../../Model/Preferences';
 

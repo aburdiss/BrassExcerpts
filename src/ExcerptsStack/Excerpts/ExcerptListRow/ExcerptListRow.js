@@ -2,9 +2,9 @@ import React, {useContext} from 'react';
 import {Pressable, Text, StyleSheet} from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-import {colors} from '../../Model/Model';
-import {PreferencesContext} from '../../Model/Preferences';
-import {isFavorite} from '../../utils/isFavorite/isFavorite';
+import {colors} from '../../../Model/Model';
+import {PreferencesContext} from '../../../Model/Preferences';
+import {isFavorite} from '../../../utils/isFavorite/isFavorite';
 
 /**
  * @description One row in the Excerpts List.
