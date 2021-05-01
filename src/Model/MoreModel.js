@@ -43,6 +43,48 @@ export const FAVORITES = [
   },
 ];
 
+export const RANDOM = [
+  {
+    id: '10',
+    type: 'segmentedFilter',
+    setting: 'randomFavorites',
+  },
+
+  {
+    id: '10A',
+    type: 'switch',
+    setting: 'randomHorn',
+    value: 'Horn',
+  },
+  {
+    id: '10B',
+    type: 'switch',
+    setting: 'randomTrumpet',
+    value: 'Trumpet',
+  },
+  {
+    id: '10C',
+    type: 'switch',
+    setting: 'randomTrombone',
+    value: 'Trombone',
+  },
+  {
+    id: '10D',
+    type: 'switch',
+    setting: 'randomTuba',
+    value: 'Tuba',
+  },
+];
+
+export const SETTINGS = [
+  {
+    id: '7.5',
+    type: 'button',
+    value: 'Restore Defaults',
+    icon: 'refresh',
+  },
+];
+
 export const RESOURCES = [
   {
     id: '11',

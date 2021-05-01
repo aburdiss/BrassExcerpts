@@ -341,6 +341,11 @@ const ExcerptDetail = () => {
   );
 };
 
+/**
+ * @todo Separate into separate component
+ * @todo Fix Styles on header
+ * @todo Add Animated Chevron to right side
+ */
 const Excerpt = ({excerpt, startCollapsed}) => {
   const [screenWidth, setScreenWidth] = useState(0);
   useEffect(

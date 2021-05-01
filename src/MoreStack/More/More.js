@@ -9,7 +9,14 @@ import {
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import {colors} from '../../Model/Model';
-import {INSTRUMENT, FAVORITES, ABOUT, RESOURCES} from '../../Model/MoreModel';
+import {
+  INSTRUMENT,
+  FAVORITES,
+  ABOUT,
+  RESOURCES,
+  RANDOM,
+  SETTINGS,
+} from '../../Model/MoreModel';
 import {PreferencesContext} from '../../Model/Preferences';
 import {
   TextListItem,
@@ -17,6 +24,7 @@ import {
   InternalListItem,
   SwitchListItem,
   ButtonListItem,
+  SegmentedFilterListItem,
 } from './MoreListItems';
 
 /**
@@ -44,6 +52,8 @@ const More = () => {
         sections={[
           {title: 'Instrument', data: INSTRUMENT},
           {title: 'Favorites', data: FAVORITES},
+          {title: 'Random', data: RANDOM},
+          {title: 'Settings', data: SETTINGS},
           {title: 'Resources', data: RESOURCES},
           {title: 'About', data: ABOUT},
         ]}

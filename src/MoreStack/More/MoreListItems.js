@@ -6,6 +6,8 @@ import {
   DynamicValue,
   useDynamicValue,
 } from 'react-native-dynamic';
+import SegmentedControl from '@react-native-segmented-control/segmented-control';
+
 import {useNavigation} from '@react-navigation/native';
 import {colors} from '../../Model/Model';
 
@@ -128,6 +130,53 @@ export const InternalListItem = ({item}) => {
         />
       </View>
     </Pressable>
+  );
+};
+
+/**
+ * @description A rendered Segmented filter list item that updates saved
+ * preferences.
+ * @author Alexander Burdiss
+ * @since 12/17/20
+ * @version 1.0.1
+ * @param {Object} props.item The data to render in this list item
+ * @param {Object} props.state The current user app state
+ * @param {Function} props.dispatch A function to call to the reducer to
+ * update the user state of the app.
+ * 
+ * @component
+ * @example
+ * ```jsx
+<SegmentedFilterListItem
+  item={item}
+  state={state}
+  dispatch={dispatch}
+/>
+```
+ */
+export const SegmentedFilterListItem = ({item, state, dispatch}) => {
+  let choices;
+  switch (item.setting) {
+    case 'randomFavorites':
+      choices = ['Favorites Only', 'All Excerpts'];
+      break;
+    default:
+      throw new Error('Item Setting does not match any choices.');
+  }
+
+  const styles = useDynamicValue(dynamicStyles);
+  return (
+    <View style={styles.listSegmentedRowContainer}>
+      <SegmentedControl
+        values={choices}
+        selectedIndex={state[item.setting]}
+        onChange={(event) => {
+          let index = event.nativeEvent.selectedSegmentIndex;
+          let setting = {[item.setting]: index};
+          dispatch({type: 'SET_SETTING', payload: setting});
+        }}
+      />
+    </View>
   );
 };
 

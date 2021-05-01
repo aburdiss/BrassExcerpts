@@ -86,6 +86,11 @@ const initialPreferencesState = {
   tuba: true,
   favorites: [],
   jobsIndex: 0,
+  randomFavorites: 1,
+  randomHorn: true,
+  randomTrumpet: true,
+  randomTrombone: true,
+  randomTuba: true,
 };
 
 /**

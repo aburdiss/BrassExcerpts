@@ -1,6 +1,8 @@
 import React, {useContext} from 'react';
 import {Text, View, Pressable, StyleSheet} from 'react-native';
 import {useNavigation} from '@react-navigation/core';
+import LinearGradient from 'react-native-linear-gradient';
+
 import {colors} from '../../Model/Model';
 import {PreferencesContext} from '../../Model/Preferences';
 
@@ -27,20 +29,40 @@ const ExcerptListHeader = () => {
   }
 
   return (
-    <View style={styles.container}>
-      <Pressable onPress={navigateToSettings}>
-        {state && state.horn && <Text style={styles.instrumentText}>Horn</Text>}
-        {state && state.trumpet && (
-          <Text style={styles.instrumentText}>Trumpet</Text>
-        )}
-        {state && state.trombone && (
-          <Text style={styles.instrumentText}>Trombone</Text>
-        )}
-        {state && state.tuba && <Text style={styles.instrumentText}>Tuba</Text>}
-      </Pressable>
-    </View>
+    <LinearGradient
+      colors={[colors.greenLight, colors.white]}
+      style={styles.linearGradient}>
+      <View style={styles.container}>
+        <Pressable onPress={navigateToSettings}>
+          <Text style={styles.instrumentText}>
+            {getInstrumentsSelected(state)}
+          </Text>
+          <Text>Tap to change instrument selection</Text>
+        </Pressable>
+      </View>
+    </LinearGradient>
   );
 };
+
+function getInstrumentsSelected(state) {
+  if (state) {
+    let instruments = [];
+    if (state.horn) {
+      instruments.push('Horn');
+    }
+    if (state.trumpet) {
+      instruments.push('Trumpet');
+    }
+    if (state.trombone) {
+      instruments.push('Trombone');
+    }
+    if (state.tuba) {
+      instruments.push('Tuba');
+    }
+    let string = instruments.join(', ');
+    return string;
+  }
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -56,15 +78,6 @@ const styles = StyleSheet.create({
   instrumentText: {
     fontSize: 24,
     flex: 1,
-    fontWeight: 'bold',
-  },
-  topButton: {
-    backgroundColor: colors.greenDark,
-    padding: 10,
-    borderRadius: 8,
-  },
-  topText: {
-    fontSize: 16,
   },
 });
 
