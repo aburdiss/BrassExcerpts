@@ -75,6 +75,7 @@ const preferencesReducer = (state, action) => {
       throw new Error(`Unknown Action: ${action.type}`);
   }
   save(newState);
+  console.log(action.type, action.payload);
   return newState;
 };
 

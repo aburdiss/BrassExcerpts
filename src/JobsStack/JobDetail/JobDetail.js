@@ -18,7 +18,7 @@ import {excerpts as hornExcerpts} from '../../Model/Excerpts/HornExcerpts';
 import {excerpts as trumpetExcerpts} from '../../Model/Excerpts/TrumpetExcerpts';
 import {excerpts as tromboneExcerpts} from '../../Model/Excerpts/TromboneExcerpts';
 import {excerpts as tubaExcerpts} from '../../Model/Excerpts/TubaExcerpts';
-import {getDaysUntilDate} from '../utils/JobsUtils';
+import {getDaysUntilDate} from '../../utils/getDaysUntilDate/getDaysUntilDate';
 import {colors} from '../../Model/Model';
 
 /**

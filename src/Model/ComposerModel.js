@@ -253,7 +253,7 @@ export const composers = [
 
   {
     id: 21,
-    slug: 'RimskyKorsakov',
+    slug: 'Rimsky-Korsakov',
     name: 'Nikolai Rimsky-Korsakov',
     ipa: 'nʲɪkəˈlaj ˈrʲimskʲɪj ˈkorsəkəf',
     image: require('../../img/Composers/rimskyKorsakov.jpg'),
@@ -277,7 +277,7 @@ export const composers = [
 
   {
     id: 23,
-    slug: 'SaintSaens',
+    slug: 'Saint-Saëns',
     name: 'Camille Saint-Saëns',
     ipa: 'kamij sɛ̃ sɑ̃(s)',
     image: require('../../img/Composers/saintSaens.jpg'),

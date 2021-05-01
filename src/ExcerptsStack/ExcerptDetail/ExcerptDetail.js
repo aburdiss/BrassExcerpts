@@ -4,10 +4,12 @@ import {
   View,
   Text,
   StyleSheet,
+  Pressable,
   Image,
   Dimensions,
 } from 'react-native';
 import {useRoute} from '@react-navigation/native';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import MetaLabel from '../../Components/MetaLabel/MetaLabel';
 import YoutubeSection from './YoutubeSection';
@@ -20,6 +22,8 @@ import {excerpts as trumpetExcerpts} from '../../Model/Excerpts/TrumpetExcerpts'
 import {excerpts as tromboneExcerpts} from '../../Model/Excerpts/TromboneExcerpts';
 import {excerpts as tubaExcerpts} from '../../Model/Excerpts/TubaExcerpts';
 import {PreferencesContext} from '../../Model/Preferences';
+import {getNumberOfInstruments} from '../../utils/getNumberOfInstruments/getNumberOfInstruments';
+import {getActiveInstrument} from '../../utils/getActiveInstrument/getActiveInstrument';
 
 /**
  * @todo Get the Image View to change width when you rotate the phone.
@@ -29,7 +33,7 @@ const ExcerptDetail = () => {
   const route = useRoute();
   const item = route.params;
 
-  const {state} = useContext(PreferencesContext);
+  const {state, dispatch} = useContext(PreferencesContext);
 
   const [screenWidth, setScreenWidth] = useState(0);
 
@@ -37,23 +41,6 @@ const ExcerptDetail = () => {
   const [trumpetExcerpt, setTrumpetExcerpt] = useState(undefined);
   const [tromboneExcerpt, setTromboneExcerpt] = useState(undefined);
   const [tubaExcerpt, setTubaExcerpt] = useState(undefined);
-
-  function getNumberOfInstruments(state) {
-    let count = 0;
-    if (state.horn) {
-      count++;
-    }
-    if (state.trumpet) {
-      count++;
-    }
-    if (state.trombone) {
-      count++;
-    }
-    if (state.tuba) {
-      count++;
-    }
-    return count;
-  }
 
   useEffect(
     function getAllExcerptData() {
@@ -112,6 +99,46 @@ const ExcerptDetail = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [Dimensions],
   );
+
+  function addToFavorites(instrument) {
+    let activeInstrument = instrument;
+    if (getNumberOfInstruments(state) == 1) {
+      activeInstrument = getActiveInstrument(state);
+    }
+    const favoriteKey = activeInstrument + item.composerLast + item.name;
+    if (state?.favorites.includes(favoriteKey)) {
+      let tempFavorites = state?.favorites.filter((favorite) => {
+        return favorite != favoriteKey;
+      });
+      dispatch({
+        type: 'REMOVE_FROM_FAVORITES',
+        payload: tempFavorites,
+      });
+    } else {
+      dispatch({
+        type: 'ADD_TO_FAVORITES',
+        payload: [...state.favorites, favoriteKey],
+      });
+    }
+  }
+
+  function getSingleFavoritesIcon() {
+    const activeInstrument = getActiveInstrument(state);
+    const favoriteKey = activeInstrument + item.composerLast + item.name;
+    let highlighted;
+    if (state?.favorites) {
+      highlighted = state.favorites.includes(favoriteKey);
+    } else {
+      highlighted = false;
+    }
+    return (
+      <Ionicons
+        name={highlighted ? 'heart' : 'heart-outline'}
+        size={32}
+        color={highlighted ? colors.redLight : colors.greenLight}
+      />
+    );
+  }
 
   function displayExcerpts(instrumentExcerpt) {
     return instrumentExcerpt.excerpts.map((excerpt) => (
@@ -173,12 +200,44 @@ const ExcerptDetail = () => {
             composers.find((object) => object.slug == item.composerLast)?.image
           }
         />
+        {getNumberOfInstruments(state) == 1 && (
+          <Pressable
+            onPress={addToFavorites}
+            hitSlop={10}
+            style={styles.singleAddToFavoritesButton}>
+            {getSingleFavoritesIcon()}
+          </Pressable>
+        )}
       </View>
       <View>
         {hornExcerpt && (
           <View style={styles.instrumentExcerptContainer}>
             {getNumberOfInstruments(state) > 1 && (
-              <Text style={styles.instrumentHeading}>Horn</Text>
+              <View style={styles.instrumentHeadingContainer}>
+                <Text style={styles.instrumentHeading}>Horn</Text>
+                <Pressable
+                  onPress={() => {
+                    addToFavorites('horn');
+                  }}>
+                  <Ionicons
+                    name={
+                      state.favorites.includes(
+                        'horn' + item.composerLast + item.name,
+                      )
+                        ? 'heart'
+                        : 'heart-outline'
+                    }
+                    size={32}
+                    color={
+                      state.favorites.includes(
+                        'horn' + item.composerLast + item.name,
+                      )
+                        ? colors.redLight
+                        : colors.greenLight
+                    }
+                  />
+                </Pressable>
+              </View>
             )}
             {displayExcerpts(hornExcerpt)}
           </View>
@@ -186,7 +245,31 @@ const ExcerptDetail = () => {
         {trumpetExcerpt && (
           <View style={styles.instrumentExcerptContainer}>
             {getNumberOfInstruments(state) > 1 && (
-              <Text style={styles.instrumentHeading}>Trumpet</Text>
+              <View style={styles.instrumentHeadingContainer}>
+                <Text style={styles.instrumentHeading}>Trumpet</Text>
+                <Pressable
+                  onPress={() => {
+                    addToFavorites('trumpet');
+                  }}>
+                  <Ionicons
+                    name={
+                      state.favorites.includes(
+                        'trumpet' + item.composerLast + item.name,
+                      )
+                        ? 'heart'
+                        : 'heart-outline'
+                    }
+                    size={32}
+                    color={
+                      state.favorites.includes(
+                        'trumpet' + item.composerLast + item.name,
+                      )
+                        ? colors.redLight
+                        : colors.greenLight
+                    }
+                  />
+                </Pressable>
+              </View>
             )}
             {displayExcerpts(trumpetExcerpt)}
           </View>
@@ -194,7 +277,31 @@ const ExcerptDetail = () => {
         {tromboneExcerpt && (
           <View style={styles.instrumentExcerptContainer}>
             {getNumberOfInstruments(state) > 1 && (
-              <Text style={styles.instrumentHeading}>Trombone</Text>
+              <View style={styles.instrumentHeadingContainer}>
+                <Text style={styles.instrumentHeading}>Trombone</Text>
+                <Pressable
+                  onPress={() => {
+                    addToFavorites('trombone');
+                  }}>
+                  <Ionicons
+                    name={
+                      state.favorites.includes(
+                        'trombone' + item.composerLast + item.name,
+                      )
+                        ? 'heart'
+                        : 'heart-outline'
+                    }
+                    size={32}
+                    color={
+                      state.favorites.includes(
+                        'trombone' + item.composerLast + item.name,
+                      )
+                        ? colors.redLight
+                        : colors.greenLight
+                    }
+                  />
+                </Pressable>
+              </View>
             )}
             {displayExcerpts(tromboneExcerpt)}
           </View>
@@ -202,7 +309,31 @@ const ExcerptDetail = () => {
         {tubaExcerpt && (
           <View style={styles.instrumentExcerptContainer}>
             {getNumberOfInstruments(state) > 1 && (
-              <Text style={styles.instrumentHeading}>Tuba</Text>
+              <View style={styles.instrumentHeadingContainer}>
+                <Text style={styles.instrumentHeading}>Tuba</Text>
+                <Pressable
+                  onPress={() => {
+                    addToFavorites('tuba');
+                  }}>
+                  <Ionicons
+                    name={
+                      state.favorites.includes(
+                        'tuba' + item.composerLast + item.name,
+                      )
+                        ? 'heart'
+                        : 'heart-outline'
+                    }
+                    size={32}
+                    color={
+                      state.favorites.includes(
+                        'tuba' + item.composerLast + item.name,
+                      )
+                        ? colors.redLight
+                        : colors.greenLight
+                    }
+                  />
+                </Pressable>
+              </View>
             )}
             {displayExcerpts(tubaExcerpt)}
           </View>
@@ -217,6 +348,11 @@ const ExcerptDetail = () => {
 };
 
 const styles = StyleSheet.create({
+  singleAddToFavoritesButton: {
+    position: 'absolute',
+    top: 5,
+    right: 90,
+  },
   composerImage: {
     aspectRatio: 1,
     width: 95,
@@ -258,9 +394,13 @@ const styles = StyleSheet.create({
   },
   instrumentHeading: {
     fontSize: 28,
+  },
+  instrumentHeadingContainer: {
+    backgroundColor: colors.systemGray4Light,
     paddingHorizontal: 20,
     paddingVertical: 10,
-    backgroundColor: colors.systemGray4Light,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
   },
   metaInfoContainer: {
     marginHorizontal: 20,

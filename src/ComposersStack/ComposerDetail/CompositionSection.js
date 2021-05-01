@@ -27,7 +27,7 @@ const CompositionSection = ({excerpts}) => {
             <Ionicons
               name="chevron-forward"
               size={24}
-              color={colors.systemGray}
+              color={colors.greenLight}
             />
           </Pressable>
         );

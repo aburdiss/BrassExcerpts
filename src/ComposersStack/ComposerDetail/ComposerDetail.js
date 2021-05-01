@@ -1,24 +1,31 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {View, Text, ScrollView, Image, StyleSheet} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import {useRoute} from '@react-navigation/core';
 
+import CompositionSectionHeader from './CompositionSectionHeader';
+import CompositionSection from './CompositionSection';
 import MetaLabel from '../../Components/MetaLabel/MetaLabel';
 import {composers as hornComposers} from '../../Model/Excerpts/HornExcerpts';
 import {composers as trumpetComposers} from '../../Model/Excerpts/TrumpetExcerpts';
 import {composers as tromboneComposers} from '../../Model/Excerpts/TromboneExcerpts';
 import {composers as tubaComposers} from '../../Model/Excerpts/TubaExcerpts';
-import CompositionSectionHeader from './CompositionSectionHeader';
-import CompositionSection from './CompositionSection';
 import {colors} from '../../Model/Model';
+import {PreferencesContext} from '../../Model/Preferences';
+import {getNumberOfInstruments} from '../../utils/getNumberOfInstruments/getNumberOfInstruments';
 
 /**
- * @todo Style this component.
- * @todo Make chevrons green accent color.
+ * @description A listing of one composer, and the exerpts for the different
+ * instruments available for that composer.
+ * @author Alexander Burdiss
+ * @since 3/3/21
+ * @version 1.0.0
+ * @component
  */
 const ComposerDetail = () => {
   const route = useRoute();
   const composer = route.params;
+  const {state} = useContext(PreferencesContext);
 
   return (
     <ScrollView style={styles.container}>
@@ -29,7 +36,7 @@ const ComposerDetail = () => {
         </View>
         <LinearGradient
           colors={[colors.blueLight, colors.greenLight]}
-          style={{width: '100%', alignItems: 'center'}}>
+          style={styles.linearGradient}>
           <Image source={composer.image} style={styles.image} />
         </LinearGradient>
         <View style={styles.cardBottom}>
@@ -39,33 +46,41 @@ const ComposerDetail = () => {
           <Text style={styles.bio}>{composer.bio}</Text>
         </View>
       </View>
-      {hornComposers[composer.slug] ? (
+      {state?.horn && hornComposers[composer.slug] ? (
         <View>
-          <CompositionSectionHeader>Horn</CompositionSectionHeader>
+          {getNumberOfInstruments(state) > 1 && (
+            <CompositionSectionHeader>Horn</CompositionSectionHeader>
+          )}
           <CompositionSection
             excerpts={hornComposers[composer.slug].excerpts}
           />
         </View>
       ) : null}
-      {trumpetComposers[composer.slug] ? (
+      {state?.trumpet && trumpetComposers[composer.slug] ? (
         <View>
-          <CompositionSectionHeader>Trumpet</CompositionSectionHeader>
+          {getNumberOfInstruments(state) > 1 && (
+            <CompositionSectionHeader>Trumpet</CompositionSectionHeader>
+          )}
           <CompositionSection
             excerpts={trumpetComposers[composer.slug].excerpts}
           />
         </View>
       ) : null}
-      {tromboneComposers[composer.slug] ? (
+      {state?.trombone && tromboneComposers[composer.slug] ? (
         <View>
-          <CompositionSectionHeader>Trombone</CompositionSectionHeader>
+          {getNumberOfInstruments(state) > 1 && (
+            <CompositionSectionHeader>Trombone</CompositionSectionHeader>
+          )}
           <CompositionSection
             excerpts={tromboneComposers[composer.slug].excerpts}
           />
         </View>
       ) : null}
-      {tubaComposers[composer.slug] ? (
+      {state?.tuba && tubaComposers[composer.slug] ? (
         <View>
-          <CompositionSectionHeader>Tuba</CompositionSectionHeader>
+          {getNumberOfInstruments(state) > 1 && (
+            <CompositionSectionHeader>Tuba</CompositionSectionHeader>
+          )}
           <CompositionSection
             excerpts={tubaComposers[composer.slug].excerpts}
           />
@@ -112,11 +127,19 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
-  cardImageTopText: {fontWeight: 'bold'},
-  container: {},
+  cardImageTopText: {
+    fontWeight: 'bold',
+  },
+  container: {
+    paddingBottom: 50,
+  },
   image: {
     aspectRatio: 1,
     height: 200,
+  },
+  linearGradient: {
+    width: '100%',
+    alignItems: 'center',
   },
 });
 

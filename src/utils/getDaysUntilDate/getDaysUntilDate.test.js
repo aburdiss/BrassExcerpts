@@ -1,4 +1,4 @@
-import {getDaysUntilDate} from './JobsUtils';
+import {getDaysUntilDate} from './getDaysUntilDate';
 
 test('getDaysUntilDate returns correct number of days', () => {
   let today = new Date();
