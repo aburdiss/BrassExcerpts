@@ -18,8 +18,9 @@ import {excerpts as hornExcerpts} from '../../Model/Excerpts/HornExcerpts';
 import {excerpts as trumpetExcerpts} from '../../Model/Excerpts/TrumpetExcerpts';
 import {excerpts as tromboneExcerpts} from '../../Model/Excerpts/TromboneExcerpts';
 import {excerpts as tubaExcerpts} from '../../Model/Excerpts/TubaExcerpts';
-import {getDaysUntilDate} from '../../utils/getDaysUntilDate/getDaysUntilDate';
 import {colors} from '../../Model/Model';
+import {getDaysUntilDate} from '../../utils/getDaysUntilDate/getDaysUntilDate';
+import {isFavorite} from '../../utils/isFavorite/isFavorite';
 
 /**
  * @todo Update Excerpt list to look like composer Excerpts section.
@@ -81,11 +82,31 @@ const JobDetail = () => {
                   <Text>{excerptData.composerLast} - </Text>
                   <Text>{excerptData.name}</Text>
                 </Text>
-                <Ionicons
-                  name="chevron-forward"
-                  size={24}
-                  color={colors.greenLight}
-                />
+                <View style={styles.iconContainer}>
+                  {isFavorite(
+                    {
+                      ...state,
+                      horn: state.jobsIndex == 0,
+                      trumpet: state.jobsIndex == 1,
+                      trombone: state.jobsIndex == 2,
+                      tuba: state.jobsIndex == 3,
+                    },
+                    excerptData.composerLast,
+                    excerptData.name,
+                  ) && (
+                    <Ionicons
+                      name="heart"
+                      size={24}
+                      color={colors.redLight}
+                      style={styles.favoriteIcon}
+                    />
+                  )}
+                  <Ionicons
+                    name="chevron-forward"
+                    size={24}
+                    color={colors.greenLight}
+                  />
+                </View>
               </Pressable>
             );
           } else {
@@ -128,6 +149,9 @@ const styles = StyleSheet.create({
   },
   excerptLink: {
     color: colors.greenLight,
+  },
+  iconContainer: {
+    flexDirection: 'row',
   },
   metaContainer: {
     paddingHorizontal: 20,

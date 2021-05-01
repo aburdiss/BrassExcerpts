@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 import {useRoute} from '@react-navigation/native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import Collapsible from 'react-native-collapsible';
 
 import MetaLabel from '../../Components/MetaLabel/MetaLabel';
 import YoutubeSection from './YoutubeSection';
@@ -34,8 +35,6 @@ const ExcerptDetail = () => {
   const item = route.params;
 
   const {state, dispatch} = useContext(PreferencesContext);
-
-  const [screenWidth, setScreenWidth] = useState(0);
 
   const [hornExcerpt, setHornExcerpt] = useState(undefined);
   const [trumpetExcerpt, setTrumpetExcerpt] = useState(undefined);
@@ -91,15 +90,6 @@ const ExcerptDetail = () => {
     ],
   );
 
-  useEffect(
-    function updateScreenWidth() {
-      const {width} = Dimensions.get('window');
-      setScreenWidth(width);
-    },
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [Dimensions],
-  );
-
   function addToFavorites(instrument) {
     let activeInstrument = instrument;
     if (getNumberOfInstruments(state) == 1) {
@@ -140,28 +130,8 @@ const ExcerptDetail = () => {
     );
   }
 
-  function displayExcerpts(instrumentExcerpt) {
-    return instrumentExcerpt.excerpts.map((excerpt) => (
-      <View key={excerpt.id} style={styles.excerptContainer}>
-        <View style={styles.excerptMetaContainer}>
-          <Text style={styles.heading}>{excerpt.description}</Text>
-          <Text style={styles.excerptMeasures}>{excerpt.measures}</Text>
-        </View>
-        {excerpt.pictures.map((picture) => (
-          <View key={picture[1]}>
-            <Text style={styles.excerptCaption}>{picture[0]}</Text>
-            <AutoHeightImage
-              width={screenWidth}
-              source={{
-                uri:
-                  'https://github.com/aburdiss/BrassExcerpts/raw/master/img/External/' +
-                  picture[1],
-              }}
-            />
-          </View>
-        ))}
-      </View>
-    ));
+  function shouldStartCollapsed() {
+    return true;
   }
 
   return (
@@ -239,7 +209,13 @@ const ExcerptDetail = () => {
                 </Pressable>
               </View>
             )}
-            {displayExcerpts(hornExcerpt)}
+            {hornExcerpt.excerpts.map((excerpt) => (
+              <Excerpt
+                excerpt={excerpt}
+                key={excerpt.id}
+                startCollapsed={shouldStartCollapsed()}
+              />
+            ))}
           </View>
         )}
         {trumpetExcerpt && (
@@ -271,7 +247,13 @@ const ExcerptDetail = () => {
                 </Pressable>
               </View>
             )}
-            {displayExcerpts(trumpetExcerpt)}
+            {trumpetExcerpt.excerpts.map((excerpt) => (
+              <Excerpt
+                excerpt={excerpt}
+                key={excerpt.id}
+                startCollapsed={shouldStartCollapsed()}
+              />
+            ))}
           </View>
         )}
         {tromboneExcerpt && (
@@ -303,7 +285,13 @@ const ExcerptDetail = () => {
                 </Pressable>
               </View>
             )}
-            {displayExcerpts(tromboneExcerpt)}
+            {tromboneExcerpt.excerpts.map((excerpt) => (
+              <Excerpt
+                excerpt={excerpt}
+                key={excerpt.id}
+                startCollapsed={shouldStartCollapsed()}
+              />
+            ))}
           </View>
         )}
         {tubaExcerpt && (
@@ -335,7 +323,13 @@ const ExcerptDetail = () => {
                 </Pressable>
               </View>
             )}
-            {displayExcerpts(tubaExcerpt)}
+            {tubaExcerpt.excerpts.map((excerpt) => (
+              <Excerpt
+                excerpt={excerpt}
+                key={excerpt.id}
+                startCollapsed={shouldStartCollapsed()}
+              />
+            ))}
           </View>
         )}
       </View>
@@ -344,6 +338,49 @@ const ExcerptDetail = () => {
         <YoutubeSection data={item.videos} />
       </View>
     </ScrollView>
+  );
+};
+
+const Excerpt = ({excerpt, startCollapsed}) => {
+  const [screenWidth, setScreenWidth] = useState(0);
+  useEffect(
+    function updateScreenWidth() {
+      const {width} = Dimensions.get('window');
+      setScreenWidth(width);
+    },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [Dimensions],
+  );
+  const [excerptIsCollapsed, setExcerptIsCollapsed] = useState(startCollapsed);
+  return (
+    <View>
+      <Pressable
+        disabled={!startCollapsed}
+        onPress={() => {
+          setExcerptIsCollapsed((previous) => !previous);
+        }}
+        style={styles.excerptMetaContainer}>
+        <Text style={styles.heading}>{excerpt.description}</Text>
+        <Text style={styles.excerptMeasures}>{excerpt.measures}</Text>
+      </Pressable>
+      <Collapsible
+        collapsed={excerptIsCollapsed}
+        style={styles.excerptContainer}>
+        {excerpt.pictures.map((picture) => (
+          <View key={picture[1]}>
+            <Text style={styles.excerptCaption}>{picture[0]}</Text>
+            <AutoHeightImage
+              width={screenWidth}
+              source={{
+                uri:
+                  'https://github.com/aburdiss/BrassExcerpts/raw/master/img/External/' +
+                  picture[1],
+              }}
+            />
+          </View>
+        ))}
+      </Collapsible>
+    </View>
   );
 };
 
@@ -366,7 +403,7 @@ const styles = StyleSheet.create({
     paddingBottom: 2,
   },
   excerptContainer: {
-    marginBottom: 20,
+    paddingBottom: 20,
   },
   excerptMeasures: {
     fontSize: 18,
@@ -382,6 +419,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.systemGray5Light,
     borderTopColor: colors.greenDark,
     borderTopWidth: 0.2,
+    height: 40,
   },
   heading: {
     fontSize: 22,
