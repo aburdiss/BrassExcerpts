@@ -78,6 +78,12 @@ export const RANDOM = [
 
 export const SETTINGS = [
   {
+    id: '7.4',
+    type: 'switch',
+    setting: 'alwaysCollapse',
+    value: 'Always Collapse Excerpts',
+  },
+  {
     id: '7.5',
     type: 'button',
     value: 'Restore Defaults',

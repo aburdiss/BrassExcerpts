@@ -6,17 +6,15 @@ import {
   StyleSheet,
   Pressable,
   Image,
-  Dimensions,
 } from 'react-native';
 import {useRoute} from '@react-navigation/native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import Collapsible from 'react-native-collapsible';
 
 import MetaLabel from '../../Components/MetaLabel/MetaLabel';
-import YoutubeSection from './YoutubeSection';
+import YoutubeSection from './YoutubeSection/YoutubeSection';
+import ExcerptSection from './ExcerptSection/ExcerptSection';
 import {colors} from '../../Model/Model';
 import {composers} from '../../Model/ComposerModel';
-import AutoHeightImage from 'react-native-auto-height-image';
 
 import {excerpts as hornExcerpts} from '../../Model/Excerpts/HornExcerpts';
 import {excerpts as trumpetExcerpts} from '../../Model/Excerpts/TrumpetExcerpts';
@@ -131,7 +129,25 @@ const ExcerptDetail = () => {
   }
 
   function shouldStartCollapsed() {
-    return true;
+    let count = 0;
+
+    if (state.alwaysCollapse) {
+      return true;
+    } else {
+      if (hornExcerpt) {
+        count += hornExcerpt.excerpts.length;
+      }
+      if (trumpetExcerpt) {
+        count += trumpetExcerpt.excerpts.length;
+      }
+      if (tromboneExcerpt) {
+        count += tromboneExcerpt.excerpts.length;
+      }
+      if (tubaExcerpt) {
+        count += tubaExcerpt.excerpts.length;
+      }
+      return count > 5;
+    }
   }
 
   return (
@@ -180,212 +196,40 @@ const ExcerptDetail = () => {
         )}
       </View>
       <View>
-        {hornExcerpt && (
-          <View style={styles.instrumentExcerptContainer}>
-            {getNumberOfInstruments(state) > 1 && (
-              <View style={styles.instrumentHeadingContainer}>
-                <Text style={styles.instrumentHeading}>Horn</Text>
-                <Pressable
-                  onPress={() => {
-                    addToFavorites('horn');
-                  }}>
-                  <Ionicons
-                    name={
-                      state.favorites.includes(
-                        'horn' + item.composerLast + item.name,
-                      )
-                        ? 'heart'
-                        : 'heart-outline'
-                    }
-                    size={32}
-                    color={
-                      state.favorites.includes(
-                        'horn' + item.composerLast + item.name,
-                      )
-                        ? colors.redLight
-                        : colors.greenLight
-                    }
-                  />
-                </Pressable>
-              </View>
-            )}
-            {hornExcerpt.excerpts.map((excerpt) => (
-              <Excerpt
-                excerpt={excerpt}
-                key={excerpt.id}
-                startCollapsed={shouldStartCollapsed()}
-              />
-            ))}
-          </View>
-        )}
-        {trumpetExcerpt && (
-          <View style={styles.instrumentExcerptContainer}>
-            {getNumberOfInstruments(state) > 1 && (
-              <View style={styles.instrumentHeadingContainer}>
-                <Text style={styles.instrumentHeading}>Trumpet</Text>
-                <Pressable
-                  onPress={() => {
-                    addToFavorites('trumpet');
-                  }}>
-                  <Ionicons
-                    name={
-                      state.favorites.includes(
-                        'trumpet' + item.composerLast + item.name,
-                      )
-                        ? 'heart'
-                        : 'heart-outline'
-                    }
-                    size={32}
-                    color={
-                      state.favorites.includes(
-                        'trumpet' + item.composerLast + item.name,
-                      )
-                        ? colors.redLight
-                        : colors.greenLight
-                    }
-                  />
-                </Pressable>
-              </View>
-            )}
-            {trumpetExcerpt.excerpts.map((excerpt) => (
-              <Excerpt
-                excerpt={excerpt}
-                key={excerpt.id}
-                startCollapsed={shouldStartCollapsed()}
-              />
-            ))}
-          </View>
-        )}
-        {tromboneExcerpt && (
-          <View style={styles.instrumentExcerptContainer}>
-            {getNumberOfInstruments(state) > 1 && (
-              <View style={styles.instrumentHeadingContainer}>
-                <Text style={styles.instrumentHeading}>Trombone</Text>
-                <Pressable
-                  onPress={() => {
-                    addToFavorites('trombone');
-                  }}>
-                  <Ionicons
-                    name={
-                      state.favorites.includes(
-                        'trombone' + item.composerLast + item.name,
-                      )
-                        ? 'heart'
-                        : 'heart-outline'
-                    }
-                    size={32}
-                    color={
-                      state.favorites.includes(
-                        'trombone' + item.composerLast + item.name,
-                      )
-                        ? colors.redLight
-                        : colors.greenLight
-                    }
-                  />
-                </Pressable>
-              </View>
-            )}
-            {tromboneExcerpt.excerpts.map((excerpt) => (
-              <Excerpt
-                excerpt={excerpt}
-                key={excerpt.id}
-                startCollapsed={shouldStartCollapsed()}
-              />
-            ))}
-          </View>
-        )}
-        {tubaExcerpt && (
-          <View style={styles.instrumentExcerptContainer}>
-            {getNumberOfInstruments(state) > 1 && (
-              <View style={styles.instrumentHeadingContainer}>
-                <Text style={styles.instrumentHeading}>Tuba</Text>
-                <Pressable
-                  onPress={() => {
-                    addToFavorites('tuba');
-                  }}>
-                  <Ionicons
-                    name={
-                      state.favorites.includes(
-                        'tuba' + item.composerLast + item.name,
-                      )
-                        ? 'heart'
-                        : 'heart-outline'
-                    }
-                    size={32}
-                    color={
-                      state.favorites.includes(
-                        'tuba' + item.composerLast + item.name,
-                      )
-                        ? colors.redLight
-                        : colors.greenLight
-                    }
-                  />
-                </Pressable>
-              </View>
-            )}
-            {tubaExcerpt.excerpts.map((excerpt) => (
-              <Excerpt
-                excerpt={excerpt}
-                key={excerpt.id}
-                startCollapsed={shouldStartCollapsed()}
-              />
-            ))}
-          </View>
-        )}
+        <ExcerptSection
+          instrumentExcerpt={hornExcerpt}
+          instrumentName={'horn'}
+          addToFavorites={addToFavorites}
+          shouldStartCollapsed={shouldStartCollapsed}
+          item={item}
+        />
+        <ExcerptSection
+          instrumentExcerpt={trumpetExcerpt}
+          instrumentName={'trumpet'}
+          addToFavorites={addToFavorites}
+          shouldStartCollapsed={shouldStartCollapsed}
+          item={item}
+        />
+        <ExcerptSection
+          instrumentExcerpt={tromboneExcerpt}
+          instrumentName={'trombone'}
+          addToFavorites={addToFavorites}
+          shouldStartCollapsed={shouldStartCollapsed}
+          item={item}
+        />
+        <ExcerptSection
+          instrumentExcerpt={tubaExcerpt}
+          instrumentName={'tuba'}
+          addToFavorites={addToFavorites}
+          shouldStartCollapsed={shouldStartCollapsed}
+          item={item}
+        />
       </View>
       <View style={styles.youtubeLinksContainer}>
         <Text style={styles.youtubeHeading}>Listen</Text>
         <YoutubeSection data={item.videos} />
       </View>
     </ScrollView>
-  );
-};
-
-/**
- * @todo Separate into separate component
- * @todo Fix Styles on header
- * @todo Add Animated Chevron to right side
- */
-const Excerpt = ({excerpt, startCollapsed}) => {
-  const [screenWidth, setScreenWidth] = useState(0);
-  useEffect(
-    function updateScreenWidth() {
-      const {width} = Dimensions.get('window');
-      setScreenWidth(width);
-    },
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [Dimensions],
-  );
-  const [excerptIsCollapsed, setExcerptIsCollapsed] = useState(startCollapsed);
-  return (
-    <View>
-      <Pressable
-        disabled={!startCollapsed}
-        onPress={() => {
-          setExcerptIsCollapsed((previous) => !previous);
-        }}
-        style={styles.excerptMetaContainer}>
-        <Text style={styles.heading}>{excerpt.description}</Text>
-        <Text style={styles.excerptMeasures}>{excerpt.measures}</Text>
-      </Pressable>
-      <Collapsible
-        collapsed={excerptIsCollapsed}
-        style={styles.excerptContainer}>
-        {excerpt.pictures.map((picture) => (
-          <View key={picture[1]}>
-            <Text style={styles.excerptCaption}>{picture[0]}</Text>
-            <AutoHeightImage
-              width={screenWidth}
-              source={{
-                uri:
-                  'https://github.com/aburdiss/BrassExcerpts/raw/master/img/External/' +
-                  picture[1],
-              }}
-            />
-          </View>
-        ))}
-      </Collapsible>
-    </View>
   );
 };
 
@@ -401,49 +245,8 @@ const styles = StyleSheet.create({
     borderRadius: 50,
     backgroundColor: colors.white,
   },
-  excerptCaption: {
-    paddingLeft: 20,
-    paddingTop: 7,
-    fontSize: 16,
-    paddingBottom: 2,
-  },
   excerptContainer: {
     paddingBottom: 20,
-  },
-  excerptMeasures: {
-    fontSize: 18,
-    marginLeft: 20,
-    fontStyle: 'italic',
-  },
-  excerptMetaContainer: {
-    paddingVertical: 5,
-    marginBottom: 5,
-    paddingHorizontal: 20,
-    flexDirection: 'row',
-    alignItems: 'center',
-    backgroundColor: colors.systemGray5Light,
-    borderTopColor: colors.greenDark,
-    borderTopWidth: 0.2,
-    height: 40,
-  },
-  heading: {
-    fontSize: 22,
-  },
-  instrumentExcerptContainer: {
-    borderTopColor: colors.greenDark,
-    borderTopWidth: 2,
-    marginTop: 10,
-    paddingTop: 0,
-  },
-  instrumentHeading: {
-    fontSize: 28,
-  },
-  instrumentHeadingContainer: {
-    backgroundColor: colors.systemGray4Light,
-    paddingHorizontal: 20,
-    paddingVertical: 10,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
   },
   metaInfoContainer: {
     marginHorizontal: 20,

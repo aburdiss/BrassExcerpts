@@ -3,7 +3,7 @@ import {Pressable, Linking, Text} from 'react-native';
 import {useDarkMode} from 'react-native-dynamic';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-import {colors} from '../../Model/Model';
+import {colors} from '../../../Model/Model';
 
 const YoutubeLink = ({video, type}) => {
   const DARKMODE = useDarkMode();

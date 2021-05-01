@@ -1,7 +1,6 @@
 import React, {useContext} from 'react';
 import {Text, View, Pressable, StyleSheet} from 'react-native';
 import {useNavigation} from '@react-navigation/core';
-import LinearGradient from 'react-native-linear-gradient';
 
 import {colors} from '../../Model/Model';
 import {PreferencesContext} from '../../Model/Preferences';
@@ -29,18 +28,14 @@ const ExcerptListHeader = () => {
   }
 
   return (
-    <LinearGradient
-      colors={[colors.greenLight, colors.white]}
-      style={styles.linearGradient}>
-      <View style={styles.container}>
-        <Pressable onPress={navigateToSettings}>
-          <Text style={styles.instrumentText}>
-            {getInstrumentsSelected(state)}
-          </Text>
-          <Text>Tap to change instrument selection</Text>
-        </Pressable>
-      </View>
-    </LinearGradient>
+    <View style={styles.container}>
+      <Pressable onPress={navigateToSettings}>
+        <Text style={styles.instrumentText}>
+          {getInstrumentsSelected(state)}
+        </Text>
+        <Text>Tap to change instrument selection</Text>
+      </Pressable>
+    </View>
   );
 };
 
@@ -73,7 +68,8 @@ const styles = StyleSheet.create({
     paddingTop: 20,
     paddingBottom: 20,
     borderBottomWidth: 1,
-    borderBottomColor: colors.systemGray2Light,
+    borderBottomColor: colors.blueLight,
+    backgroundColor: colors.greenLight,
   },
   instrumentText: {
     fontSize: 24,

@@ -91,6 +91,7 @@ const initialPreferencesState = {
   randomTrumpet: true,
   randomTrombone: true,
   randomTuba: true,
+  alwaysCollapse: false,
 };
 
 /**
