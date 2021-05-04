@@ -48,6 +48,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     height: 44,
+    backgroundColor: colors.systemGray6Light,
   },
   composerText: {
     fontWeight: 'bold',

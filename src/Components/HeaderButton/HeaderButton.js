@@ -1,7 +1,11 @@
 import React from 'react';
 import {View} from 'react-native';
 import {Text, Pressable} from 'react-native';
-import {DynamicStyleSheet, DynamicValue} from 'react-native-dynamic';
+import {
+  DynamicStyleSheet,
+  DynamicValue,
+  useDynamicStyleSheet,
+} from 'react-native-dynamic';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import {colors} from '../../Model/Model';
@@ -24,6 +28,7 @@ import {colors} from '../../Model/Model';
  *   </HeaderButton />
  */
 const HeaderButton = ({children, handler}) => {
+  const styles = useDynamicStyleSheet(dynamicStyles);
   return (
     <Pressable
       android_ripple={{
@@ -43,7 +48,7 @@ const HeaderButton = ({children, handler}) => {
             <Ionicons
               name="cube-outline"
               size={25}
-              color={new DynamicValue(colors.greenLight, colors.greenDark)}
+              color={styles.text.color}
               style={styles.icon}
             />
           ) : null}
@@ -56,7 +61,7 @@ const HeaderButton = ({children, handler}) => {
   );
 };
 
-const styles = new DynamicStyleSheet({
+const dynamicStyles = new DynamicStyleSheet({
   buttonTextContainer: {
     flexDirection: 'row',
     alignItems: 'center',

@@ -99,59 +99,52 @@ const Jobs = () => {
   }
 
   return (
-    <View>
-      <View style={styles.container}>
-        <ScrollView style={styles.scrollView}>
-          <SegmentedControl
-            values={['Horn', 'Trumpet', 'Trombone', 'Tuba']}
-            selectedIndex={state.jobsIndex}
-            onChange={(event) => {
-              dispatch({
-                type: 'SET_SETTING',
-                payload: {jobsIndex: event.nativeEvent.selectedSegmentIndex},
-              });
-            }}
-          />
-          <ActionButton onPress={openTopExcerptComponent}>
-            View top {currentInstrument} excerpts
-          </ActionButton>
-          {currentJobs.length !== 0 ? (
-            <View>
-              {currentJobs.map((job, index) => {
-                const jobDate = new Date(job.closingDate);
-                if (jobDate > new Date()) {
-                  return <JobsListRow key={index} job={job} />;
-                }
-              })}
-            </View>
-          ) : (
-            <View style={styles.errorContainer}>
-              <Text style={styles.errorText}>
-                There are no {currentInstrument} jobs at this time.{'\n'}Check
-                back later!
-              </Text>
-            </View>
-          )}
-          <ActionButton onPress={openCreateCustomAudition}>
-            Create a custom audition list!
-          </ActionButton>
-          <Pressable
-            onPress={openMusicalChairsLink}
-            style={({pressed}) => ({opacity: pressed ? 0.7 : 1})}>
-            <Text style={styles.linkText}>
-              View {currentInstrument} job openings on Musical Chairs
-            </Text>
-          </Pressable>
-        </ScrollView>
-      </View>
-    </View>
+    <ScrollView style={styles.scrollView}>
+      <SegmentedControl
+        values={['Horn', 'Trumpet', 'Trombone', 'Tuba']}
+        selectedIndex={state.jobsIndex}
+        onChange={(event) => {
+          dispatch({
+            type: 'SET_SETTING',
+            payload: {jobsIndex: event.nativeEvent.selectedSegmentIndex},
+          });
+        }}
+      />
+      <ActionButton onPress={openTopExcerptComponent}>
+        View top {currentInstrument} excerpts
+      </ActionButton>
+      {currentJobs.length !== 0 ? (
+        <View>
+          {currentJobs.map((job, index) => {
+            const jobDate = new Date(job.closingDate);
+            if (jobDate > new Date()) {
+              return <JobsListRow key={index} job={job} />;
+            }
+          })}
+        </View>
+      ) : (
+        <View style={styles.errorContainer}>
+          <Text style={styles.errorText}>
+            There are no {currentInstrument} jobs at this time.{'\n'}Check back
+            later!
+          </Text>
+        </View>
+      )}
+      <ActionButton onPress={openCreateCustomAudition}>
+        Create a custom audition list!
+      </ActionButton>
+      <Pressable
+        onPress={openMusicalChairsLink}
+        style={({pressed}) => ({opacity: pressed ? 0.7 : 1})}>
+        <Text style={styles.linkText}>
+          View {currentInstrument} job openings on Musical Chairs
+        </Text>
+      </Pressable>
+    </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
-    padding: 10,
-  },
   errorContainer: {
     // backgroundColor: colors.systemGray,
     marginVertical: 10,
@@ -167,6 +160,7 @@ const styles = StyleSheet.create({
   },
   scrollView: {
     height: '100%',
+    padding: 10,
   },
 });
 
