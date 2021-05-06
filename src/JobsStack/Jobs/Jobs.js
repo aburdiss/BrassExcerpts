@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import SegmentedControl from '@react-native-segmented-control/segmented-control';
 import {useNavigation} from '@react-navigation/core';
+import {useQuery} from 'react-query';
 
 import JobsListRow from './JobsListRow/JobsListRow';
 import ActionButton from '../../Components/ActionButton/ActionButton';
@@ -49,28 +50,78 @@ const Jobs = () => {
   const [currentJobs, setCurrentJobs] = useState([]);
   const navigation = useNavigation();
 
+  async function fetchHornJobs() {
+    let response = await fetch(internalHornJobsLink);
+    let data = await response.json();
+    if (data.Jobs) {
+      return data.Jobs;
+    } else {
+      return [];
+    }
+  }
+
+  async function fetchTrumpetJobs() {
+    let response = await fetch(internalTrumpetJobsLink);
+    let data = await response.json();
+    if (data.Jobs) {
+      return data.Jobs;
+    } else {
+      return [];
+    }
+  }
+
+  async function fetchTromboneJobs() {
+    let response = await fetch(internalTromboneJobsLink);
+    let data = await response.json();
+    if (data.Jobs) {
+      return data.Jobs;
+    } else {
+      return [];
+    }
+  }
+
+  async function fetchTubaJobs() {
+    let response = await fetch(internalTubaJobsLink);
+    let data = await response.json();
+    if (data.Jobs) {
+      return data.Jobs;
+    } else {
+      return [];
+    }
+  }
+
+  const queryPreferences = {
+    staleTime: 1000 * 60 * 60, // One Hour
+  };
+
+  const hornJobs = useQuery('hornJobs', fetchHornJobs, queryPreferences);
+  const trumpetJobs = useQuery(
+    'trumpetJobs',
+    fetchTrumpetJobs,
+    queryPreferences,
+  );
+  const tromboneJobs = useQuery(
+    'tromboneJobs',
+    fetchTromboneJobs,
+    queryPreferences,
+  );
+  const tubaJobs = useQuery('tubaJobs', fetchTubaJobs, queryPreferences);
+
   useEffect(
     function fetchCurrentJobs() {
-      fetch(
-        [
-          internalHornJobsLink,
-          internalTrumpetJobsLink,
-          internalTromboneJobsLink,
-          internalTubaJobsLink,
-        ][state.jobsIndex],
-      )
-        .then((resp) => {
-          return resp.json();
-        })
-        .then((data) => {
-          if (data.Jobs) {
-            setCurrentJobs(data.Jobs);
-          } else {
-            setCurrentJobs([]);
-          }
-        });
+      setCurrentJobs(
+        [hornJobs.data, trumpetJobs.data, tromboneJobs.data, tubaJobs.data][
+          state.jobsIndex
+        ],
+      );
     },
-    [state.jobsIndex],
+    [
+      hornJobs.data,
+      trumpetJobs.data,
+      state.jobsIndex,
+      tromboneJobs.data,
+      tubaJobs.data,
+    ],
   );
 
   let currentInstrument = ['horn', 'trumpet', 'trombone', 'tuba'][
@@ -113,9 +164,9 @@ const Jobs = () => {
       <ActionButton onPress={openTopExcerptComponent}>
         View top {currentInstrument} excerpts
       </ActionButton>
-      {currentJobs.length !== 0 ? (
+      {currentJobs?.length !== 0 ? (
         <View>
-          {currentJobs.map((job, index) => {
+          {currentJobs?.map((job, index) => {
             const jobDate = new Date(job.closingDate);
             if (jobDate > new Date()) {
               return <JobsListRow key={index} job={job} />;
