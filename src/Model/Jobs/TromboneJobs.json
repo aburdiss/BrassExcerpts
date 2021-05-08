@@ -68,6 +68,24 @@
         "wagnerValkyrie",
         "wagnerRheingold"
       ]
+    },
+    {
+      "orchestra": "ICO Magna Grecia Orchestra",
+      "position": "Principal Trombone with obl. of tutti",
+      "link": "https://www.orchestramagnagrecia.info/vuoi-suonare-con-noi",
+      "country": "Italy",
+      "closingDate": "May 31, 2021",
+      "auditionDate": "",
+      "excerpts": [
+        "Bernstein - Symphonic Dances from West Side Story",
+        "brahms1",
+        "Gershwin - An American in Paris",
+        "ravelBolero",
+        "rossiniWilliamTell",
+        "mahler3",
+        "Stravinsky - Pulcinella",
+        "wagnerTannhauser"
+      ]
     }
   ]
 }
