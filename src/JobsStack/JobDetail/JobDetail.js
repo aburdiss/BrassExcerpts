@@ -25,6 +25,7 @@ import {isFavorite} from '../../utils/isFavorite/isFavorite';
 
 /**
  * @todo Update Excerpt list to look like composer Excerpts section.
+ * @todo Make Calendar not appear if current date is past the closing date.
  */
 const JobDetail = () => {
   const route = useRoute();
