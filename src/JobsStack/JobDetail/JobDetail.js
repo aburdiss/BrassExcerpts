@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import {useNavigation, useRoute} from '@react-navigation/core';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import CalendarStrip from 'react-native-calendar-strip';
 
 import ActionButton from '../../Components/ActionButton/ActionButton';
 import MetaLabel from '../../Components/MetaLabel/MetaLabel';
@@ -44,15 +45,69 @@ const JobDetail = () => {
     <ScrollView>
       <View style={styles.metaContainer}>
         <Text style={styles.position}>{route.params.position}</Text>
+        <MetaLabel label="Country" data={route.params.country} />
         <MetaLabel
           label="Closing Date"
+          labelColor={colors.orangeLight}
           data={
             route.params.closingDate +
             ` (${getDaysUntilDate(route.params.closingDate)} days from today)`
           }
         />
-        <MetaLabel label="Country" data={route.params.country} />
+        {route.params.auditionDate ? (
+          <MetaLabel
+            label="Audition Date"
+            labelColor={colors.redLight}
+            data={
+              route.params.auditionDate +
+              ` (${getDaysUntilDate(
+                route.params.auditionDate,
+              )} days from today)`
+            }
+          />
+        ) : (
+          <MetaLabel
+            label="Audition Date"
+            labelColor={colors.redLight}
+            data={'unknown'}
+          />
+        )}
       </View>
+      <CalendarStrip
+        style={styles.calendarStrip}
+        minDate={new Date()}
+        maxDate={
+          route.params.auditionDate
+            ? new Date(route.params.auditionDate)
+            : new Date(route.params.closingDate)
+        }
+        markedDates={[
+          {
+            date: new Date(),
+            lines: [
+              {
+                color: colors.greenLight,
+              },
+            ],
+          },
+          {
+            date: new Date(route.params.closingDate),
+            lines: [
+              {
+                color: colors.orangeLight,
+              },
+            ],
+          },
+          {
+            date: new Date(route.params.auditionDate),
+            lines: [
+              {
+                color: colors.redLight,
+              },
+            ],
+          },
+        ]}
+      />
       <View style={styles.actionButtonContainer}>
         <ActionButton onPress={openAuditionWebsite}>View Posting</ActionButton>
       </View>
@@ -125,6 +180,10 @@ const JobDetail = () => {
 const styles = StyleSheet.create({
   actionButtonContainer: {
     paddingHorizontal: 20,
+  },
+  calendarStrip: {
+    height: 80,
+    paddingVertical: 5,
   },
   excerptsHeader: {
     fontWeight: 'bold',

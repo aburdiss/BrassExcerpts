@@ -1,5 +1,6 @@
 import React from 'react';
 import {Text, StyleSheet} from 'react-native';
+import {colors} from '../../Model/Model';
 
 /**
  * @description Renders a bold label with a colon, and the meta data
@@ -9,14 +10,21 @@ import {Text, StyleSheet} from 'react-native';
  * @param props The JSX props passed to this React component
  * @param {String} props.label The meta label for this data
  * @param {String} props.data The meta data to render
+ * @param {String} [props.labelColor] The color to make the label
  */
-const MetaLabel = ({label, data}) => {
+const MetaLabel = ({label, data, labelColor}) => {
   if (!data) {
     return null;
   } else {
     return (
       <Text style={styles.textWrapper}>
-        <Text style={styles.labelText}>{label + ': '}</Text>
+        <Text
+          style={[
+            styles.labelText,
+            {color: labelColor ? labelColor : colors.black},
+          ]}>
+          {label + ': '}
+        </Text>
         {data}
       </Text>
     );
