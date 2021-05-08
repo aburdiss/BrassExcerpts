@@ -1,5 +1,4 @@
 import {shuffle} from 'underscore';
-import {capitalize} from 'underscore.string';
 
 import {excerpts as hornExcerpts} from '../../Model/Excerpts/HornExcerpts';
 import {excerpts as trumpetExcerpts} from '../../Model/Excerpts/TrumpetExcerpts';
@@ -10,7 +9,6 @@ import {excerpts as tubaExcerpts} from '../../Model/Excerpts/TubaExcerpts';
  * @todo Make work with only favorites as well
  *
  * @param {*} state
- * @param {*} setInstrument
  * @param {*} setComposition
  * @param {*} setExcerpt
  * @param {*} setPartIndex
@@ -18,7 +16,6 @@ import {excerpts as tubaExcerpts} from '../../Model/Excerpts/TubaExcerpts';
  */
 export function generateRandomExcerpt(
   state,
-  setInstrument,
   setComposition,
   setExcerptIndex,
   setPartIndex,
@@ -77,7 +74,6 @@ export function generateRandomExcerpt(
       randomComposition.excerpts[randomExcerptIndex].pictures.length,
   );
 
-  setInstrument(capitalize(randomSelectedInstrument));
   setComposition(randomComposition);
   setExcerptIndex(randomExcerptIndex);
   setPartIndex(randomPartIndex);

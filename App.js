@@ -5,13 +5,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
 import {useDarkMode} from 'react-native-dynamic';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import {
-  useQuery,
-  useMutation,
-  useQueryClient,
-  QueryClient,
-  QueryClientProvider,
-} from 'react-query';
+import {QueryClient, QueryClientProvider} from 'react-query';
 
 import {colors} from './src/Model/Model';
 

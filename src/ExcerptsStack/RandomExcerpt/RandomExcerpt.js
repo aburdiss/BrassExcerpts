@@ -6,6 +6,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import {PreferencesContext} from '../../Model/Preferences';
 import ActionButton from '../../Components/ActionButton/ActionButton';
+import RandomExcerptHeader from './RandomExcertHeader/RandomExcerptHeader';
 import {generateRandomExcerpt} from './generateRandomExcerpt';
 import {StyleSheet} from 'react-native';
 import {colors} from '../../Model/Model';
@@ -35,17 +36,14 @@ const RandomExcerpt = (props) => {
     [Dimensions],
   );
   const {state} = useContext(PreferencesContext);
-  const [instrument, setInstrument] = useState(undefined);
   const [composition, setComposition] = useState(undefined);
   const [excerptIndex, setExcerptIndex] = useState(undefined);
   const [partIndex, setPartIndex] = useState(undefined);
-  const navigation = useNavigation();
 
   useEffect(
     () =>
       generateRandomExcerpt(
         state,
-        setInstrument,
         setComposition,
         setExcerptIndex,
         setPartIndex,
@@ -58,30 +56,16 @@ const RandomExcerpt = (props) => {
   return (
     <View style={styles.randomExcerptContainer}>
       <View style={styles.excerptContainer}>
-        <Text>{instrument}</Text>
-        <Text>{composition?.composer}</Text>
-        <Text>{composition?.name}</Text>
-        <Pressable
-          style={styles.compositionPressable}
-          onPress={() => {
-            navigation.navigate('Excerpt Detail', composition);
-          }}>
-          <View>
-            <Text style={styles.pressableText}>View Full Excerpt</Text>
-          </View>
-          <Ionicons
-            name="chevron-forward"
-            color={colors.greenLight}
-            size={24}
-          />
-        </Pressable>
-        <Text>{composition?.excerpts[excerptIndex].description}</Text>
-        <Text>{composition?.excerpts[excerptIndex].measures}</Text>
-        <Text>
-          {composition?.excerpts[excerptIndex].pictures[partIndex][0]}
-        </Text>
+        <RandomExcerptHeader
+          composition={composition}
+          excerptIndex={excerptIndex}
+          partIndex={partIndex}
+        />
         <AutoHeightImage
           width={screenWidth}
+          accessibilityLabel={
+            composition?.excerpts[excerptIndex].pictures[partIndex][0]
+          }
           source={{
             uri:
               'https://github.com/aburdiss/BrassExcerpts/raw/master/img/External/' +
@@ -94,7 +78,6 @@ const RandomExcerpt = (props) => {
           onPress={() =>
             generateRandomExcerpt(
               state,
-              setInstrument,
               setComposition,
               setExcerptIndex,
               setPartIndex,
@@ -112,22 +95,8 @@ const styles = StyleSheet.create({
   actionButtonContainer: {
     paddingHorizontal: 10,
   },
-  compositionPressable: {
-    borderColor: colors.greenLight,
-    borderWidth: 1,
-    borderRadius: 8,
-    padding: 8,
-    margin: 10,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-  },
   excerptContainer: {
     flex: 1,
-  },
-  pressableText: {
-    color: colors.greenLight,
-    fontWeight: 'bold',
   },
   randomExcerptContainer: {
     flex: 1,

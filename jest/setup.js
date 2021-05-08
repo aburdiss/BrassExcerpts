@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import 'react-native-gesture-handler/jestSetup';
 import mockAsyncStorage from '@react-native-async-storage/async-storage/jest/async-storage-mock';
 import mockRNDeviceInfo from 'react-native-device-info/jest/react-native-device-info-mock';
@@ -26,6 +27,8 @@ jest.mock('react-native-localize', () => {
     // you can add other functions mock here that you are using
   };
 });
+
+jest.mock('react-native/Libraries/Animated/NativeAnimatedHelper');
 
 RNNativeModules.UIManager = RNNativeModules.UIManager || {};
 RNNativeModules.UIManager.RCTView = RNNativeModules.UIManager.RCTView || {};
