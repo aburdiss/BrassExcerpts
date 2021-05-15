@@ -25,21 +25,32 @@ import {getNumberOfInstruments} from '../../utils/getNumberOfInstruments/getNumb
 import {getActiveInstrument} from '../../utils/getActiveInstrument/getActiveInstrument';
 
 /**
- * @todo Get the Image View to change width when you rotate the phone.
  * @todo Add Loading State to images.
+ *
+ * @function ExcerptDetail
+ * @description A component that displays all of the details about one of the
+ * excerpts in the app. When clicking on each image, it opens a separate view
+ * where the image is rotated.
+ * @author Alexander Burdiss
+ * @since 3/3/21
+ * @version 1.0.0
  */
 const ExcerptDetail = () => {
   const route = useRoute();
   const item = route.params;
 
   const {state, dispatch} = useContext(PreferencesContext);
-
   const [hornExcerpt, setHornExcerpt] = useState(undefined);
   const [trumpetExcerpt, setTrumpetExcerpt] = useState(undefined);
   const [tromboneExcerpt, setTromboneExcerpt] = useState(undefined);
   const [tubaExcerpt, setTubaExcerpt] = useState(undefined);
 
   useEffect(
+    /**
+     * @function ExcerptDetail~useEffect~getAllExcerptData
+     * @description Collects all of the data about the current excerpt from the
+     * Model, and sets it as the state variables.
+     */
     function getAllExcerptData() {
       if (state.horn) {
         const hornData = hornExcerpts.find((excerpt) => {

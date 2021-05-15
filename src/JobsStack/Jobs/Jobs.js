@@ -5,6 +5,7 @@ import {useNavigation} from '@react-navigation/core';
 import {useQuery} from 'react-query';
 
 import JobsListRow from './JobsListRow/JobsListRow';
+// eslint-disable-next-line no-unused-vars
 import ActionButton from '../../Components/ActionButton/ActionButton';
 import {
   hasValidJobs,
@@ -17,10 +18,18 @@ import {colors} from '../../Model/Model';
 /**
  * @todo get top excerpts for each instrument (top 10 or 20)
  * @todo Make section that has top excerpts
- * @todo Make section that user can add their own lists of excerpts inside the app.
- *
+ * @todo Make section that user can add their own lists of excerpts inside the
+ * app.
  * @todo Make the "Top Excerpt" button right below the picker, and have it only
  * take you to the top excerpts for that insturment, depending on the picker.
+ *
+ * @function Jobs
+ * @description A component that lists recent jobs available for each
+ * instrument. When each item is clicked, it will open the JobDetail component
+ * and display more information about that Job to the user.
+ * @author Alexander Burdiss
+ * @since 3/5/21
+ * @version 1.0.0
  */
 const Jobs = () => {
   const internalHornJobsLink =
@@ -62,6 +71,14 @@ const Jobs = () => {
   );
 
   useEffect(
+    /**
+     * @function Jobs~useEffect~fetchCurrentJobs
+     * @description Fetches the current Jobs from the Github server, and sets
+     * the data to the current Job state variable.
+     * @author Alexander Burdiss
+     * @since 3/28/21
+     * @version 1.0.0
+     */
     function fetchCurrentJobs() {
       setCurrentJobs(
         [hornJobs.data, trumpetJobs.data, tromboneJobs.data, tubaJobs.data][
@@ -82,10 +99,27 @@ const Jobs = () => {
     state.jobsIndex
   ];
 
+  /**
+   * @function Jobs~openTopExcerptsComponent
+   * @description Opens the top excerpts component
+   * @author Alexander Burdiss
+   * @since 3/28/21
+   * @version 1.0.0
+   */
+  // eslint-disable-next-line no-unused-vars
   function openTopExcerptComponent() {
     navigation.navigate('Top Excerpts');
   }
 
+  /**
+   * @function Jobs~openCreateCustomAudition
+   * @description Opens the Create Custom page, so that custom auditions
+   * can be added to the list.
+   * @author Alexander Burdiss
+   * @since 3/28/21
+   * @version 1.0.0
+   */
+  // eslint-disable-next-line no-unused-vars
   function openCreateCustomAudition() {
     navigation.navigate('Create Custom Audition');
   }
@@ -102,9 +136,9 @@ const Jobs = () => {
           });
         }}
       />
-      <ActionButton onPress={openTopExcerptComponent}>
+      {/* <ActionButton onPress={openTopExcerptComponent}>
         View top {currentInstrument} excerpts
-      </ActionButton>
+      </ActionButton> */}
       <ScrollView style={styles.contentContainer}>
         {hasValidJobs(currentJobs) ? (
           <View>
@@ -124,9 +158,9 @@ const Jobs = () => {
           </View>
         )}
       </ScrollView>
-      <ActionButton onPress={openCreateCustomAudition}>
+      {/* <ActionButton onPress={openCreateCustomAudition}>
         Create a custom audition list!
-      </ActionButton>
+      </ActionButton> */}
       <Pressable
         onPress={() => openMusicalChairsLink(state)}
         style={({pressed}) => ({opacity: pressed ? 0.7 : 1})}>
@@ -145,6 +179,7 @@ const Jobs = () => {
 const styles = StyleSheet.create({
   contentContainer: {
     flex: 1,
+    marginTop: 10,
   },
   disclaimer: {
     fontSize: 12,

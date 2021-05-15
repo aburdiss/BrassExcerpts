@@ -1,7 +1,6 @@
 import React, {useContext, useState, useEffect} from 'react';
 import {ScrollView, StyleSheet, View} from 'react-native';
 import SegmentedControl from '@react-native-segmented-control/segmented-control';
-import {useNavigation} from '@react-navigation/core';
 import {useQuery} from 'react-query';
 
 import JobsListRow from '../Jobs/JobsListRow/JobsListRow';
@@ -9,6 +8,15 @@ import JobsListRow from '../Jobs/JobsListRow/JobsListRow';
 import {fetchInstrumentJobs} from '../Jobs/JobsUtils';
 import {PreferencesContext} from '../../Model/Preferences';
 
+/**
+ * @function PastJobs
+ * @description A component that displays the jobs that are available from the
+ * server, but are past their closing date, and won't be shown on the regular
+ * Jobs page.
+ * @author Alexander Burdiss
+ * @since 3/28/21
+ * @version 1.0.0
+ */
 const PastJobs = () => {
   const internalHornJobsLink =
     'https://github.com/aburdiss/BrassExcerpts/raw/master/src/Model/Jobs/HornJobs.json';
@@ -21,7 +29,6 @@ const PastJobs = () => {
 
   const {state, dispatch} = useContext(PreferencesContext);
   const [currentJobs, setCurrentJobs] = useState([]);
-  const navigation = useNavigation();
 
   const queryPreferences = {
     staleTime: 1000 * 60 * 60, // One Hour
@@ -48,6 +55,14 @@ const PastJobs = () => {
   );
 
   useEffect(
+    /**
+     * @function PastJobs~useEffect~fetchCurrentJobs
+     * @description Fetches the current jobs from the Github server, and stores
+     * the data in the state variable CurrentJobs
+     * @author Alexander Burdiss
+     * @since 5/8/21
+     * @version 1.0.0
+     */
     function fetchCurrentJobs() {
       setCurrentJobs(
         [hornJobs.data, trumpetJobs.data, tromboneJobs.data, tubaJobs.data][
