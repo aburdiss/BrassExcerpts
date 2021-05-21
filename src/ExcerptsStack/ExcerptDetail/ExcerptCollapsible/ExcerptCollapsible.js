@@ -11,6 +11,7 @@ import {
 import Collapsible from 'react-native-collapsible';
 import AutoHeightImage from 'react-native-auto-height-image';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import {useNavigation, useRoute} from '@react-navigation/core';
 
 import {colors} from '../../../Model/Model';
 
@@ -27,6 +28,9 @@ import {colors} from '../../../Model/Model';
  * @version 1.0.0
  */
 const ExcerptCollapsible = ({excerpt, startCollapsed, index}) => {
+  const EXTERNAL_GITHUB_URL =
+    'https://github.com/aburdiss/BrassExcerpts/raw/master/img/External/';
+
   const [screenWidth, setScreenWidth] = useState(0);
   useEffect(
     function updateScreenWidth() {
@@ -37,8 +41,9 @@ const ExcerptCollapsible = ({excerpt, startCollapsed, index}) => {
     [Dimensions],
   );
   const [excerptIsCollapsed, setExcerptIsCollapsed] = useState(startCollapsed);
-
   const animatedController = useRef(new Animated.Value(0)).current;
+  const navigation = useNavigation();
+  const route = useRoute();
 
   function toggleChevron() {
     if (excerptIsCollapsed) {
@@ -62,6 +67,13 @@ const ExcerptCollapsible = ({excerpt, startCollapsed, index}) => {
     inputRange: [0, 1],
     outputRange: ['0rad', `${Math.PI}rad`],
   });
+
+  function navigateToImageDetail(imageUrl) {
+    navigation.navigate('Image Detail', {
+      url: imageUrl,
+      name: route.params.name,
+    });
+  }
 
   return (
     <View>
@@ -94,14 +106,17 @@ const ExcerptCollapsible = ({excerpt, startCollapsed, index}) => {
         {excerpt.pictures.map((picture) => (
           <View key={picture[1]}>
             <Text style={styles.excerptCaption}>{picture[0]}</Text>
-            <AutoHeightImage
-              width={screenWidth}
-              source={{
-                uri:
-                  'https://github.com/aburdiss/BrassExcerpts/raw/master/img/External/' +
-                  picture[1],
-              }}
-            />
+            <Pressable
+              onPress={() =>
+                navigateToImageDetail(EXTERNAL_GITHUB_URL + picture[1])
+              }>
+              <AutoHeightImage
+                width={screenWidth}
+                source={{
+                  uri: EXTERNAL_GITHUB_URL + picture[1],
+                }}
+              />
+            </Pressable>
           </View>
         ))}
       </Collapsible>
