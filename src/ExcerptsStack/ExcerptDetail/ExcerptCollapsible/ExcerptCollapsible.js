@@ -1,21 +1,22 @@
-import React, {useEffect, useState, useRef} from 'react';
+import React, {useState, useRef} from 'react';
 import {
   View,
   Text,
   StyleSheet,
   Pressable,
-  Dimensions,
   Animated,
   Easing,
+  useWindowDimensions,
 } from 'react-native';
 import Collapsible from 'react-native-collapsible';
 import AutoHeightImage from 'react-native-auto-height-image';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import {useNavigation, useRoute} from '@react-navigation/core';
+import Pinchable from 'react-native-pinchable';
 
 import {colors} from '../../../Model/Model';
 
 /**
+ * @function ExcerptCollapsible
  * @description An animated collapsed section of excerpts, that can be disabled
  * @param props The JSX props passed to this react component
  * @param {Object} props.excerpt The excerpt to be rendered in this collapsible
@@ -26,25 +27,34 @@ import {colors} from '../../../Model/Model';
  * @author Alexander Burdiss
  * @since 5/1/21
  * @version 1.0.0
+ * @component
+ * @example
+ * ```jsx
+ * <ExcerptCollapsible
+ *   excerpt={excerpt}
+ *   startCollapsed={shouldStartCollapsed()}
+ *   index={index}
+ * />
+ * ```
  */
 const ExcerptCollapsible = ({excerpt, startCollapsed, index}) => {
   const EXTERNAL_GITHUB_URL =
     'https://github.com/aburdiss/BrassExcerpts/raw/master/img/External/';
 
-  const [screenWidth, setScreenWidth] = useState(0);
-  useEffect(
-    function updateScreenWidth() {
-      const {width} = Dimensions.get('window');
-      setScreenWidth(width);
-    },
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [Dimensions],
-  );
   const [excerptIsCollapsed, setExcerptIsCollapsed] = useState(startCollapsed);
   const animatedController = useRef(new Animated.Value(0)).current;
-  const navigation = useNavigation();
-  const route = useRoute();
 
+  const windowWidth = useWindowDimensions().width;
+
+  /**
+   * @function ExcerptCollapsible~toggleChevron
+   * @description Animates the chevron open or closed based on the position of
+   * the accordion. This will only show or be triggered if there are more
+   * than six excerpts showing for any one composition.
+   * @author Alexander Burdiss
+   * @since 5/1/21
+   * @version 1.0.0
+   */
   function toggleChevron() {
     if (excerptIsCollapsed) {
       Animated.timing(animatedController, {
@@ -67,13 +77,6 @@ const ExcerptCollapsible = ({excerpt, startCollapsed, index}) => {
     inputRange: [0, 1],
     outputRange: ['0rad', `${Math.PI}rad`],
   });
-
-  function navigateToImageDetail(imageUrl) {
-    navigation.navigate('Image Detail', {
-      url: imageUrl,
-      name: route.params.name,
-    });
-  }
 
   return (
     <View>
@@ -106,17 +109,14 @@ const ExcerptCollapsible = ({excerpt, startCollapsed, index}) => {
         {excerpt.pictures.map((picture) => (
           <View key={picture[1]}>
             <Text style={styles.excerptCaption}>{picture[0]}</Text>
-            <Pressable
-              onPress={() =>
-                navigateToImageDetail(EXTERNAL_GITHUB_URL + picture[1])
-              }>
+            <Pinchable>
               <AutoHeightImage
-                width={screenWidth}
+                width={windowWidth}
                 source={{
                   uri: EXTERNAL_GITHUB_URL + picture[1],
                 }}
               />
-            </Pressable>
+            </Pinchable>
           </View>
         ))}
       </Collapsible>
@@ -142,7 +142,6 @@ const styles = StyleSheet.create({
   excerptMetaContainer: {
     paddingVertical: 5,
     marginBottom: 5,
-
     height: 50,
   },
   excerptPressable: {

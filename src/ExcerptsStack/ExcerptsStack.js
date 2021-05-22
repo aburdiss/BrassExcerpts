@@ -8,7 +8,6 @@ import {colors} from '../Model/Model';
 import Excerpts from './Excerpts/Excerpts';
 import ExcerptDetail from './ExcerptDetail/ExcerptDetail';
 import RandomExcerpt from './RandomExcerpt/RandomExcerpt';
-import ImageDetail from './ImageDetail/ImageDetail';
 
 const Stack = createStackNavigator();
 
@@ -49,13 +48,6 @@ const ExcerptsStack = ({navigation}) => {
       <Stack.Screen
         name="Excerpt Detail"
         component={ExcerptDetail}
-        options={({route}) => ({
-          title: route.params.name,
-        })}
-      />
-      <Stack.Screen
-        name="Image Detail"
-        component={ImageDetail}
         options={({route}) => ({
           title: route.params.name,
         })}
