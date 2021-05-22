@@ -8,11 +8,21 @@ import {excerpts as tubaExcerpts} from '../../Model/Excerpts/TubaExcerpts';
 /**
  * @todo Make work with only favorites as well
  *
- * @param {*} state
- * @param {*} setComposition
- * @param {*} setExcerpt
- * @param {*} setPartIndex
- * @param {*} composition
+ * @function generateRandomExcerpt
+ * @description Takes the state, and generates a random excerpt that is
+ * different from the one that is currently showing.
+ * @param {Object} state The user state returned from the PreferencesContext
+ * @param {Function} setComposition A function to call with the randomly
+ * selected composition
+ * @param {Function} setExcerpt A function to call with the randomly selected
+ * excerpt from the composition.
+ * @param {Function} setPartIndex A function to call with the randomly
+ * selected part index from the excerpt from the composition.
+ * @param {Object} composition The current composition object that is showing,
+ * so that no duplicates are shown.
+ * @author Alexander Burdiss
+ * @since 5/4/21
+ * @version 1.0.0
  */
 export function generateRandomExcerpt(
   state,

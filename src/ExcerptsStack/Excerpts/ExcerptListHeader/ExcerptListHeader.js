@@ -4,10 +4,9 @@ import {useNavigation} from '@react-navigation/core';
 
 import {colors} from '../../../Model/Model';
 import {PreferencesContext} from '../../../Model/Preferences';
+import {getInstrumentsSelected} from '../../../utils/getInstrumentsSelected/getInstrumentsSelected';
 
 /**
- * @todo Style this component.
- *
  * @description The header for the Excerpts list view.
  * @author Alexander Burdiss
  * @since 3/7/21
@@ -38,26 +37,6 @@ const ExcerptListHeader = () => {
     </View>
   );
 };
-
-function getInstrumentsSelected(state) {
-  if (state) {
-    let instruments = [];
-    if (state.horn) {
-      instruments.push('Horn');
-    }
-    if (state.trumpet) {
-      instruments.push('Trumpet');
-    }
-    if (state.trombone) {
-      instruments.push('Trombone');
-    }
-    if (state.tuba) {
-      instruments.push('Tuba');
-    }
-    let string = instruments.join(', ');
-    return string;
-  }
-}
 
 const styles = StyleSheet.create({
   container: {

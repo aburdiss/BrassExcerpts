@@ -34,6 +34,11 @@ import {getActiveInstrument} from '../../utils/getActiveInstrument/getActiveInst
  * @author Alexander Burdiss
  * @since 3/3/21
  * @version 1.0.0
+ * @component
+ * @example
+ * ```jsx
+ * <ExcerptDetail />
+ * ```
  */
 const ExcerptDetail = () => {
   const route = useRoute();
@@ -50,6 +55,9 @@ const ExcerptDetail = () => {
      * @function ExcerptDetail~useEffect~getAllExcerptData
      * @description Collects all of the data about the current excerpt from the
      * Model, and sets it as the state variables.
+     * @author Alexander Burdiss
+     * @since 4/30/21
+     * @version 1.0.0
      */
     function getAllExcerptData() {
       if (state.horn) {
@@ -99,6 +107,16 @@ const ExcerptDetail = () => {
     ],
   );
 
+  /**
+   * @function ExcerptDetail~addToFavorites
+   * @description Adds a selected excerpt/instrument combo to the user's
+   * favorites.
+   * @param {String} instrument The current instrument attached to the excerpt,
+   * so that when added to the favorites it is only added for that instrument.
+   * @author Alexander Burdiss
+   * @since 4/30/21
+   * @version 1.0.0
+   */
   function addToFavorites(instrument) {
     let activeInstrument = instrument;
     if (getNumberOfInstruments(state) == 1) {
@@ -121,15 +139,28 @@ const ExcerptDetail = () => {
     }
   }
 
+  /**
+   * @function ExcerptDetail~getSingleFavoritesIcon
+   * @description If the excerpt is only showing for one instrument, this
+   * function returns the correct icon based on whether the excerpt is in the
+   * users' favorites or not.
+   * @author Alexander Burdiss
+   * @since 4/30/21
+   * @version 1.0.0
+   * @returns {React.Component} An icon to display on the excerpt Header.
+   */
   function getSingleFavoritesIcon() {
     const activeInstrument = getActiveInstrument(state);
     const favoriteKey = activeInstrument + item.composerLast + item.name;
+
     let highlighted;
+
     if (state?.favorites) {
       highlighted = state.favorites.includes(favoriteKey);
     } else {
       highlighted = false;
     }
+
     return (
       <Ionicons
         name={highlighted ? 'heart' : 'heart-outline'}
@@ -139,6 +170,13 @@ const ExcerptDetail = () => {
     );
   }
 
+  /**
+   * @function ExcerptDetail~shouldStartCollapsed
+   * @description Returns whether or not on the initial load the excerpt should
+   * start collapsed.
+   * @returns {Boolean} Whether or not the excerpt should be collapsed when the
+   * screen mounts.
+   */
   function shouldStartCollapsed() {
     let count = 0;
 

@@ -15,6 +15,7 @@ import {excerpts as tubaExcerpts} from '../../Model/Excerpts/TubaExcerpts';
 import {colors} from '../../Model/Model';
 
 /**
+ * @function Excerpts
  * @description A list of excerpts sorted in alphabetical order. When pressed,
  * each excerpt leads to the ExcerptDetail view with more information on each
  * excerpt.
@@ -22,6 +23,10 @@ import {colors} from '../../Model/Model';
  * @since 3/3/21
  * @version 1.0.0
  * @component
+ * @example
+ * ```jsx
+ * <Excerpts />
+ * ```
  */
 const Excerpts = () => {
   const {state} = useContext(PreferencesContext);
@@ -29,6 +34,14 @@ const Excerpts = () => {
 
   const [listData, setListData] = useState([]);
   useEffect(
+    /**
+     * @function Excerpts~useEffect~updateData
+     * @description Updates the data in the excerpts row if a different
+     * instrument is selected in the users' preferences.
+     * @author Alexander Burdiss
+     * @since 4/30/21
+     * @version 1.0.0
+     */
     function updateData() {
       setListData([]);
       // state is undefined initially.
@@ -54,6 +67,14 @@ const Excerpts = () => {
     [state?.horn, state?.trumpet, state?.trombone, state?.tuba],
   );
 
+  /**
+   * @function Excerpts~navigateToExcerptDetail
+   * @description Navigates to the Excerpt Detail view and passes in the
+   * appropriate data.
+   * @author Alexander Burdiss
+   * @since 3/5/21
+   * @param {Object} item The item to pass to the Excerpt Detail Screen.
+   */
   function navigateToExcerptDetail(item) {
     navigation.navigate('Excerpt Detail', item);
   }

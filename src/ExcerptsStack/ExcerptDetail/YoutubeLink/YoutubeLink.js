@@ -5,6 +5,24 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import {colors} from '../../../Model/Model';
 
+/**
+ * @function YoutubeLink
+ * @description One link in the YouTube link section.
+ * @param props The JSX props passed to this React component.
+ * @param {String[]} props.video An array, where the first index is the
+ * instrument part name, and the second is the YouTube code, to be attached
+ * to the end of a Youtube URL.
+ * @param {String} props.type The type of YouTube link that this is. This
+ * affects the color of the link button.
+ * @author Alexander Burdiss
+ * @since 3/10/21
+ * @version 1.0.0
+ * @component
+ * @example
+ * ```jsx
+ * <YoutubeLink video={video} type="band" />
+ * ```
+ */
 const YoutubeLink = ({video, type}) => {
   const DARKMODE = useDarkMode();
 
@@ -56,6 +74,7 @@ const YoutubeLink = ({video, type}) => {
         borderBottomWidth: 1,
       })}>
       <Text
+        // eslint-disable-next-line react-native/no-inline-styles
         style={{
           fontWeight: 'bold',
           flex: 1,

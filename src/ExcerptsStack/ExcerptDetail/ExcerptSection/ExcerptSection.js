@@ -3,12 +3,40 @@ import {View, Text, StyleSheet, Pressable} from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {capitalize} from 'underscore.string';
 
+import ExcerptCollapsible from '../ExcerptCollapsible/ExcerptCollapsible';
 import {colors} from '../../../Model/Model';
-
 import {PreferencesContext} from '../../../Model/Preferences';
 import {getNumberOfInstruments} from '../../../utils/getNumberOfInstruments/getNumberOfInstruments';
-import ExcerptCollapsible from '../ExcerptCollapsible/ExcerptCollapsible';
 
+/**
+ * @function ExcerptSection
+ * @description One Excerpt from a composition. If there are too many excerpts,
+ * they get collapsed, or if the user has set them to always collapse.
+ * @author Alexander Burdiss
+ * @since 5/1/21
+ * @version 1.0.0
+ * @param props The JSX props passed to this React component
+ * @param {Object} props.instrumentExcerpt The object that contains the excerpts
+ * for this instrument.
+ * @param {String} props.instrumentName The name of the instrument this excerpt
+ * is for.
+ * @param {Function} props.addToFavorites A function that adds the current
+ * excerpt/instrument to favorites.
+ * @param {Boolean} props.shouldStartCollapsed A flag that determines if the
+ * excerpts should start collapsed.
+ * @param {Object} props.item The Composition Item object.
+ * @component
+ * @example
+ * ```jsx
+ * <ExcerptSection
+ *   instrumentExcerpt={tubaExcerpt}
+ *   instrumentName={'tuba'}
+ *   addToFavorites={addToFavorites}
+ *   shouldStartCollapsed={shouldStartCollapsed}
+ *   item={item}
+ * />
+ * ```
+ */
 const ExcerptSection = ({
   instrumentExcerpt,
   instrumentName,

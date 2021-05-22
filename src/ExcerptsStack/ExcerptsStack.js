@@ -11,8 +11,20 @@ import RandomExcerpt from './RandomExcerpt/RandomExcerpt';
 
 const Stack = createStackNavigator();
 
+/**
+ * @function ExcerptsStack
+ * @description A Stack Navigator that handles all of the screens on the
+ * Excerpts stack.
+ * @param props The JSX props passed to this React Component
+ * @param {Object} props.navigation The navigation object passed directly to
+ * this screen from the Tab Navigator in App.js
+ * @author Alexander Burdiss
+ * @since 4/2/21
+ * @version 1.0.0
+ */
 const ExcerptsStack = ({navigation}) => {
   const DARKMODE = useDarkMode();
+
   return (
     <Stack.Navigator
       screenOptions={{

@@ -1,15 +1,12 @@
 import React, {useContext, useEffect, useState} from 'react';
-import {View, Text, Pressable, Dimensions} from 'react-native';
-import {useNavigation} from '@react-navigation/native';
+import {View, useWindowDimensions, StyleSheet} from 'react-native';
 import AutoHeightImage from 'react-native-auto-height-image';
-import Ionicons from 'react-native-vector-icons/Ionicons';
+import Pinchable from 'react-native-pinchable';
 
 import {PreferencesContext} from '../../Model/Preferences';
 import ActionButton from '../../Components/ActionButton/ActionButton';
 import RandomExcerptHeader from './RandomExcertHeader/RandomExcerptHeader';
 import {generateRandomExcerpt} from './generateRandomExcerpt';
-import {StyleSheet} from 'react-native';
-import {colors} from '../../Model/Model';
 
 /**
  * @todo Implement Pull to refresh
@@ -25,30 +22,31 @@ import {colors} from '../../Model/Model';
  * <RandomExcerpt />
  * ```
  */
-const RandomExcerpt = (props) => {
-  const [screenWidth, setScreenWidth] = useState(0);
-  useEffect(
-    function updateScreenWidth() {
-      const {width} = Dimensions.get('window');
-      setScreenWidth(width);
-    },
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [Dimensions],
-  );
+const RandomExcerpt = () => {
+  const windowWidth = useWindowDimensions().width;
   const {state} = useContext(PreferencesContext);
   const [composition, setComposition] = useState(undefined);
   const [excerptIndex, setExcerptIndex] = useState(undefined);
   const [partIndex, setPartIndex] = useState(undefined);
 
   useEffect(
-    () =>
+    /**
+     * @function RandomExcerpt~useEffect~updateRandomExcerpt
+     * @description Updates the random excerpt that is displaying if the state
+     * changes, so that a new excerpt is always present.
+     * @author Alexander Burdiss
+     * @since 5/4/21
+     * @version 1.0.0
+     */
+    function updateRandomExcerpt() {
       generateRandomExcerpt(
         state,
         setComposition,
         setExcerptIndex,
         setPartIndex,
         composition,
-      ),
+      );
+    },
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [state],
   );
@@ -61,17 +59,19 @@ const RandomExcerpt = (props) => {
           excerptIndex={excerptIndex}
           partIndex={partIndex}
         />
-        <AutoHeightImage
-          width={screenWidth}
-          accessibilityLabel={
-            composition?.excerpts[excerptIndex].pictures[partIndex][0]
-          }
-          source={{
-            uri:
-              'https://github.com/aburdiss/BrassExcerpts/raw/master/img/External/' +
-              composition?.excerpts[excerptIndex].pictures[partIndex][1],
-          }}
-        />
+        <Pinchable>
+          <AutoHeightImage
+            width={windowWidth}
+            accessibilityLabel={
+              composition?.excerpts[excerptIndex].pictures[partIndex][0]
+            }
+            source={{
+              uri:
+                'https://github.com/aburdiss/BrassExcerpts/raw/master/img/External/' +
+                composition?.excerpts[excerptIndex].pictures[partIndex][1],
+            }}
+          />
+        </Pinchable>
       </View>
       <View style={styles.actionButtonContainer}>
         <ActionButton
