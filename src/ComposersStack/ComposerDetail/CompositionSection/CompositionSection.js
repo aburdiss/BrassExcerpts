@@ -7,6 +7,17 @@ import {colors} from '../../../Model/Model';
 import {isFavorite} from '../../../utils/isFavorite/isFavorite';
 import {PreferencesContext} from '../../../Model/Preferences';
 
+/**
+ * @function CompositionSection
+ * @description A section of the different compositions that the composer has
+ * created.
+ * @param props The JSX props passed to this React component.
+ * @param {Object[]} props.excerpts The list of excerpts to be displayed in this
+ * section.
+ * @author Alexander Burdiss
+ * @since 3/9/21
+ * @version 1.0.0
+ */
 const CompositionSection = ({excerpts}) => {
   const {state} = useContext(PreferencesContext);
   const navigation = useNavigation();

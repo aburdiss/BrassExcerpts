@@ -3,7 +3,7 @@ import {View, Text, ScrollView, Image, StyleSheet} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import {useRoute} from '@react-navigation/core';
 
-import CompositionSectionHeader from './CompositionSectionHeader/CompositionSectionHeader';
+import SectionHeader from '../../Components/SectionHeader/SectionHeader';
 import CompositionSection from './CompositionSection/CompositionSection';
 import MetaLabel from '../../Components/MetaLabel/MetaLabel';
 import {composers as hornComposers} from '../../Model/Excerpts/HornExcerpts';
@@ -49,7 +49,7 @@ const ComposerDetail = () => {
       {state?.horn && hornComposers[composer.slug] ? (
         <View>
           {getNumberOfInstruments(state) > 1 && (
-            <CompositionSectionHeader>Horn</CompositionSectionHeader>
+            <SectionHeader>Horn</SectionHeader>
           )}
           <CompositionSection
             excerpts={hornComposers[composer.slug].excerpts}
@@ -59,7 +59,7 @@ const ComposerDetail = () => {
       {state?.trumpet && trumpetComposers[composer.slug] ? (
         <View>
           {getNumberOfInstruments(state) > 1 && (
-            <CompositionSectionHeader>Trumpet</CompositionSectionHeader>
+            <SectionHeader>Trumpet</SectionHeader>
           )}
           <CompositionSection
             excerpts={trumpetComposers[composer.slug].excerpts}
@@ -69,7 +69,7 @@ const ComposerDetail = () => {
       {state?.trombone && tromboneComposers[composer.slug] ? (
         <View>
           {getNumberOfInstruments(state) > 1 && (
-            <CompositionSectionHeader>Trombone</CompositionSectionHeader>
+            <SectionHeader>Trombone</SectionHeader>
           )}
           <CompositionSection
             excerpts={tromboneComposers[composer.slug].excerpts}
@@ -79,7 +79,7 @@ const ComposerDetail = () => {
       {state?.tuba && tubaComposers[composer.slug] ? (
         <View>
           {getNumberOfInstruments(state) > 1 && (
-            <CompositionSectionHeader>Tuba</CompositionSectionHeader>
+            <SectionHeader>Tuba</SectionHeader>
           )}
           <CompositionSection
             excerpts={tubaComposers[composer.slug].excerpts}

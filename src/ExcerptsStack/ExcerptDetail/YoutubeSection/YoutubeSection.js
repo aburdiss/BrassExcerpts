@@ -2,7 +2,7 @@ import React from 'react';
 import {View} from 'react-native';
 
 import YoutubeLink from '../YoutubeLink/YoutubeLink';
-import YoutubeSectionHeader from './YoutubeSectionHeader';
+import SectionHeader from '../../../Components/SectionHeader/SectionHeader';
 import YouTubeModel from '../../../Model/YouTubeModel';
 
 /**
@@ -27,7 +27,7 @@ const YoutubeSection = ({data}) => {
     <View>
       {excerptVideos.full ? (
         <View>
-          <YoutubeSectionHeader>Orchestra</YoutubeSectionHeader>
+          <SectionHeader>Orchestra</SectionHeader>
           {excerptVideos.full.map((video) => (
             <YoutubeLink video={video} key={video[1]} type="full" />
           ))}
@@ -35,7 +35,7 @@ const YoutubeSection = ({data}) => {
       ) : null}
       {excerptVideos.band ? (
         <View>
-          <YoutubeSectionHeader>Band</YoutubeSectionHeader>
+          <SectionHeader>Band</SectionHeader>
           {excerptVideos.band.map((video) => (
             <YoutubeLink video={video} key={video[1]} type="band" />
           ))}
@@ -43,7 +43,7 @@ const YoutubeSection = ({data}) => {
       ) : null}
       {excerptVideos.score ? (
         <View>
-          <YoutubeSectionHeader>Full Orchestra with Score</YoutubeSectionHeader>
+          <SectionHeader>Full Orchestra with Score</SectionHeader>
           {excerptVideos.score.map((video) => (
             <YoutubeLink video={video} key={video[1]} type="score" />
           ))}
@@ -51,7 +51,7 @@ const YoutubeSection = ({data}) => {
       ) : null}
       {excerptVideos.horn ? (
         <View>
-          <YoutubeSectionHeader>Horn Specific</YoutubeSectionHeader>
+          <SectionHeader>Horn Specific</SectionHeader>
           {excerptVideos.horn.map((video) => (
             <YoutubeLink video={video} key={video[1]} type="instrument" />
           ))}
@@ -59,7 +59,7 @@ const YoutubeSection = ({data}) => {
       ) : null}
       {excerptVideos.trumpet ? (
         <View>
-          <YoutubeSectionHeader>Trumpet Specific</YoutubeSectionHeader>
+          <SectionHeader>Trumpet Specific</SectionHeader>
           {excerptVideos.trumpet.map((video) => (
             <YoutubeLink video={video} key={video[1]} type="instrument" />
           ))}
@@ -67,7 +67,7 @@ const YoutubeSection = ({data}) => {
       ) : null}
       {excerptVideos.trombone ? (
         <View>
-          <YoutubeSectionHeader>Trombone Specific</YoutubeSectionHeader>
+          <SectionHeader>Trombone Specific</SectionHeader>
           {excerptVideos.trombone.map((video) => (
             <YoutubeLink video={video} key={video[1]} type="instrument" />
           ))}
@@ -75,7 +75,7 @@ const YoutubeSection = ({data}) => {
       ) : null}
       {excerptVideos.tuba ? (
         <View>
-          <YoutubeSectionHeader>Tuba Specific</YoutubeSectionHeader>
+          <SectionHeader>Tuba Specific</SectionHeader>
           {excerptVideos.tuba.map((video) => (
             <YoutubeLink video={video} key={video[1]} type="instrument" />
           ))}
