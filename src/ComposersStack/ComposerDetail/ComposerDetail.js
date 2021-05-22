@@ -15,12 +15,17 @@ import {PreferencesContext} from '../../Model/Preferences';
 import {getNumberOfInstruments} from '../../utils/getNumberOfInstruments/getNumberOfInstruments';
 
 /**
+ * @function ComposerDetail
  * @description A listing of one composer, and the exerpts for the different
  * instruments available for that composer.
  * @author Alexander Burdiss
  * @since 3/3/21
  * @version 1.0.0
  * @component
+ * @example
+ * ```jsx
+ * <ComposerDetail />
+ * ```
  */
 const ComposerDetail = () => {
   const route = useRoute();

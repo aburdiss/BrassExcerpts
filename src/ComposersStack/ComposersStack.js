@@ -7,10 +7,26 @@ import {colors} from '../Model/Model';
 import Composers from './Composers/Composers';
 import ComposerDetail from './ComposerDetail/ComposerDetail';
 import ExcerptDetail from '../ExcerptsStack/ExcerptDetail/ExcerptDetail';
+
 const Stack = createStackNavigator();
 
-const ComposersStack = ({navigation}) => {
+/**
+ * @function ComposersStack
+ * @description A react component that holds all of the different screens to
+ * display on the composers' stack, and provides them context and proper
+ * navigation
+ * @author Alexander Burdiss
+ * @since 4/2/21
+ * @version 1.0.0
+ * @component
+ * @example
+ * ```jsx
+ * <ComposersStack />
+ * ```
+ */
+const ComposersStack = () => {
   const DARKMODE = useDarkMode();
+
   return (
     <Stack.Navigator
       screenOptions={{
