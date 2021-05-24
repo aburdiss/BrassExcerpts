@@ -1,5 +1,6 @@
 import React, {createContext, useReducer, useEffect} from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import {Alert} from 'react-native';
 
 /**
  * @function load
@@ -41,16 +42,95 @@ export async function save(data) {
 const PreferencesContext = createContext();
 
 /**
+ * @function handleRandomFavoritesInstruments
+ * @description Handles changing the random selected instruments based on which
+ * favorites the user has selected.
+ * @author Alexander Burdiss
+ * @since 5/24/21
+ * @version 1.0.0
+ * @param {Object} state The state currently stored in the reducer
+ * @param {Object} action The action the user has selected.
+ * @returns {Object} The new state to store in the reducer, and save to storage.
+ * @see preferencesReducer
+ */
+function handleRandomFavoritesInstruments(state, action) {
+  if (action.payload.randomFavorites == 0) {
+    // Favorites Only
+    if (state.favorites.length == 0) {
+      // No Favorites
+      Alert.alert('No favorites selected');
+      return {
+        ...state,
+        ...action.payload,
+        randomHorn: false,
+        randomTrumpet: false,
+        randomTrombone: false,
+        randomTuba: false,
+      };
+    } else {
+      // Has Favorites
+      let hasHorn = false;
+      let hasTrumpet = false;
+      let hasTrombone = false;
+      let hasTuba = false;
+
+      for (let excerpt of state.favorites) {
+        if (excerpt.startsWith('horn')) {
+          hasHorn = true;
+        } else if (excerpt.startsWith('trumpet')) {
+          hasTrumpet = true;
+        } else if (excerpt.startsWith('trombone')) {
+          hasTrombone = true;
+        } else if (excerpt.startsWith('tuba')) {
+          hasTuba = true;
+        }
+      }
+
+      let newState = {
+        ...state,
+        ...action.payload,
+        randomHorn: hasHorn,
+        randomTrumpet: hasTrumpet,
+        randomTrombone: hasTrombone,
+        randomTuba: hasTuba,
+      };
+      save(newState);
+      return newState;
+    }
+  } else {
+    // All Excerpts
+    return {
+      ...state,
+      ...action.payload,
+      randomHorn: true,
+      randomTrumpet: true,
+      randomTrombone: true,
+      randomTuba: true,
+    };
+  }
+}
+
+/**
  * @function preferencesReducer
  * @description A reducer that handles updating the state stored in context,
  * and updates the same state in local storage on the device.
  * @author Alexander Burdiss
  * @since 12/14/20
- * @version 1.0.0
+ * @version 1.1.0
  * @param {*} state
  * @param {*} action
  */
 const preferencesReducer = (state, action) => {
+  // Deal with Random Favorites Instruments
+  if (
+    action.type == 'SET_SETTING' &&
+    Object.keys(action.payload)[0] == 'randomFavorites'
+  ) {
+    const newState = handleRandomFavoritesInstruments(state, action);
+    save(newState);
+    return newState;
+  }
+
   let newState;
   switch (action.type) {
     case 'SET_ALL_PREFERENCES':

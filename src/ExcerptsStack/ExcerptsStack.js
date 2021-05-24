@@ -1,5 +1,5 @@
 import 'react-native-gesture-handler';
-import React from 'react';
+import React, {useContext} from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import {useDarkMode} from 'react-native-dynamic';
 
@@ -8,6 +8,8 @@ import {colors} from '../Model/Model';
 import Excerpts from './Excerpts/Excerpts';
 import ExcerptDetail from './ExcerptDetail/ExcerptDetail';
 import RandomExcerpt from './RandomExcerpt/RandomExcerpt';
+import {PreferencesContext} from '../Model/Preferences';
+import {Alert} from 'react-native';
 
 const Stack = createStackNavigator();
 
@@ -24,6 +26,7 @@ const Stack = createStackNavigator();
  */
 const ExcerptsStack = ({navigation}) => {
   const DARKMODE = useDarkMode();
+  const {state} = useContext(PreferencesContext);
 
   return (
     <Stack.Navigator
@@ -49,7 +52,11 @@ const ExcerptsStack = ({navigation}) => {
           headerRight: () => (
             <HeaderButton
               handler={() => {
-                navigation.navigate('Random Excerpt');
+                if (state.randomFavorites == 0 && state.favorites.length == 0) {
+                  Alert.alert('No Favorites Selected!');
+                } else {
+                  navigation.navigate('Random Excerpt');
+                }
               }}>
               Random
             </HeaderButton>
