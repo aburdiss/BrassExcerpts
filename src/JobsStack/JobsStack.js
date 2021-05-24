@@ -15,8 +15,24 @@ import CustomAudition from './CustomAudition/CustomAudition';
 
 const Stack = createStackNavigator();
 
+/**
+ * @function JobsStack
+ * @description The stack of all of the screens on the Job stack of the app.
+ * @author Alexander Burdiss
+ * @since 4/2/21
+ * @version 1.0.0
+ * @param props The JSX props passed to this React Component
+ * @param {Object} props.navigation The navigation object passed to this stack
+ * from the Tab Navigator.
+ * @component
+ * @example
+ * ```jsx
+ * <JobsStack />
+ * ```
+ */
 const JobsStack = ({navigation}) => {
   const DARKMODE = useDarkMode();
+
   return (
     <Stack.Navigator
       screenOptions={{

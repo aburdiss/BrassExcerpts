@@ -1,13 +1,34 @@
 import React from 'react';
 import {View, Text, Pressable, StyleSheet} from 'react-native';
 import {useNavigation} from '@react-navigation/core';
+
 import {colors} from '../../../Model/Model';
 
 /**
  * @todo Add share modal when long press this job.
+ *
+ * @function JobsListRow
+ * @description One job item in the list of jobs.
+ * @author Alexander Burdiss
+ * @since 3/28/21
+ * @version 1.0.0
+ * @component
+ * @example
+ * ```jsx
+ * <JobsListRow job={job} />
+ * ```
  */
 const JobsListRow = ({job}) => {
   const navigation = useNavigation();
+
+  /**
+   * @function JobsListRow~navigateToJobDetail
+   * @description Navigates the user to the Job Detail page, passing in the
+   * appropriate job information
+   * @author Alexander Burdiss
+   * @since 3/28/21
+   * @version 1.0.0
+   */
   function navigateToJobDetail() {
     navigation.navigate('Job Detail', job);
   }

@@ -16,6 +16,11 @@ import {PreferencesContext} from '../../Model/Preferences';
  * @author Alexander Burdiss
  * @since 3/28/21
  * @version 1.0.0
+ * @component
+ * @example
+ * ```jsx
+ * <PastJobs />
+ * ```
  */
 const PastJobs = () => {
   const internalHornJobsLink =

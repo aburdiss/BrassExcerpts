@@ -30,6 +30,11 @@ import {colors} from '../../Model/Model';
  * @author Alexander Burdiss
  * @since 3/5/21
  * @version 1.0.0
+ * @component
+ * @example
+ * ```jsx
+ * <Jobs />
+ * ```
  */
 const Jobs = () => {
   const internalHornJobsLink =

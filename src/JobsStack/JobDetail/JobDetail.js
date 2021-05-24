@@ -26,18 +26,47 @@ import {isFavorite} from '../../utils/isFavorite/isFavorite';
 /**
  * @todo Update Excerpt list to look like composer Excerpts section.
  * @todo Make Calendar not appear if current date is past the closing date.
+ *
+ * @function JobDetail
+ * @description A detailed view of one of the jobs in the app, with a list of
+ * excerpts. When clicked, if the excerpt exists in the app, it will lead the
+ * user directly to that excerpt.
+ * @author Alexander Burdiss
+ * @since 3/28/21
+ * @version 1.0.0
+ * @component
+ * @example
+ * ```jsx
+ * <JobDetail />
+ * ```
  */
 const JobDetail = () => {
   const route = useRoute();
   const navigation = useNavigation();
   const {state} = useContext(PreferencesContext);
 
+  /**
+   * @function JobDetail~openAuditionWebsite
+   * @description Opens the audition website, if possible. Console logs if not.
+   * @author Alexander Burdiss
+   * @since 3/28/21
+   * @version 1.0.0
+   */
   function openAuditionWebsite() {
     Linking.openURL(route.params.link).catch((err) =>
       console.warn("Couldn't load page", err),
     );
   }
 
+  /**
+   * @function JobDetail~navigateToExcerptDetailPage
+   * @description Opens the excerpt detail page with the appropriate excerpt
+   * data passed in
+   * @author Alexander Burdiss
+   * @since 3/28/21
+   * @version 1.0.0
+   * @param {Object} excerpt The excerpt to display in detail
+   */
   function navigateToExcerptDetailPage(excerpt) {
     navigation.navigate('Jobs Excerpt Detail', excerpt);
   }
