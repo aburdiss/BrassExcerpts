@@ -12,21 +12,22 @@ import {useNavigation} from '@react-navigation/native';
 import {colors} from '../../../Model/Model';
 
 /**
- * @description A rendered Text list item. This will not translate 
+ * @description A rendered Text list item. This will not translate
  * copyright information.
  * @author Alexander Burdiss
  * @since 1/3/21
  * @version 1.1.0
  * @param {Object} props.item The text to be rendered in the list item.
- * 
+ *
  * @component
  * @example
  * ```jsx
-<TextListItem item={item} />
-```
+ * <TextListItem item={item} />
+ * ```
  */
 export const TextListItem = ({item}) => {
   const styles = useDynamicValue(dynamicStyles);
+
   return (
     <View style={styles.listRowContainer}>
       <Text
@@ -47,15 +48,15 @@ export const TextListItem = ({item}) => {
  * @param {Object} props.item The list item containing a link and some text.
  * @param {Object} props.state The app state, containing all of the user's
  * preferences.
- * 
+ *
  * @component
  * @example
  * jsx```
-<LinkListItem
-  item={item}
-  state={state}
-/>
-```
+ * <LinkListItem
+ *   item={item}
+ *   state={state}
+ * />
+ * ```
  */
 export const LinkListItem = ({item, state}) => {
   const styles = useDynamicValue(dynamicStyles);
@@ -97,12 +98,12 @@ export const LinkListItem = ({item, state}) => {
  * @version 1.0.2
  * @param {Object} props.item The Internal list item to be rendered containing
  * a Component name to render to, and the text to be rendered.
- * 
+ *
  * @component
  * @example
  * ```jsx
-<InternalListItem item={item} />
-```
+ * <InternalListItem item={item} />
+ * ```
  */
 export const InternalListItem = ({item}) => {
   const styles = useDynamicValue(dynamicStyles);
@@ -143,16 +144,16 @@ export const InternalListItem = ({item}) => {
  * @param {Object} props.state The current user app state
  * @param {Function} props.dispatch A function to call to the reducer to
  * update the user state of the app.
- * 
+ *
  * @component
  * @example
  * ```jsx
-<SegmentedFilterListItem
-  item={item}
-  state={state}
-  dispatch={dispatch}
-/>
-```
+ * <SegmentedFilterListItem
+ *   item={item}
+ *   state={state}
+ *   dispatch={dispatch}
+ * />
+ * ```
  */
 export const SegmentedFilterListItem = ({item, state, dispatch}) => {
   let choices;
@@ -165,6 +166,7 @@ export const SegmentedFilterListItem = ({item, state, dispatch}) => {
   }
 
   const styles = useDynamicValue(dynamicStyles);
+
   return (
     <View style={styles.listSegmentedRowContainer}>
       <SegmentedControl
@@ -190,16 +192,16 @@ export const SegmentedFilterListItem = ({item, state, dispatch}) => {
  * preferences.
  * @param {Function} props.dispatch A function to make a reducer call to update
  * state.
- * 
+ *
  * @component
  * @example
  * ```jsx
-<SwitchListItem
-  item={item}
-  state={state}
-  dispatch={dispatch}
-/>
-```
+ * <SwitchListItem
+ * item={item}
+ * state={state}
+ * dispatch={dispatch}
+ * />
+ * ```
  */
 export const SwitchListItem = ({item, state, dispatch}) => {
   const styles = useDynamicValue(dynamicStyles);
@@ -233,15 +235,15 @@ export const SwitchListItem = ({item, state, dispatch}) => {
  * @param {Object} props.item The data to be rendered in this list item
  * @param {Function} props.dispatch A function to call a reducer and update
  * app state.
- * 
+ *
  * @component
  * @example
  * ```jsx
-<ButtonListItem
-  item={item}
-  dispatch={dispatch}
-/>
-```
+ * <ButtonListItem
+ * item={item}
+ * dispatch={dispatch}
+ * />
+ * ```
  */
 export const ButtonListItem = ({item, dispatch}) => {
   const styles = useDynamicValue(dynamicStyles);

@@ -1,4 +1,4 @@
-import React, {useContext, useEffect} from 'react';
+import React, {useContext} from 'react';
 import {View, SectionList, Text} from 'react-native';
 import SafeAreaView from 'react-native-safe-area-view';
 import {
@@ -33,18 +33,16 @@ import {
  * @author Alexander Burdiss
  * @since 12/14/20
  * @version 1.0.1
- * 
+ *
  * @component
  * @example
  * ```jsx
-<Settings />
-```
+ * <Settings />
+ * ```
  */
 const More = () => {
   const styles = useDynamicValue(dynamicStyles);
   const {state, dispatch} = useContext(PreferencesContext);
-
-  useEffect(() => {}, []);
 
   return (
     <SafeAreaView style={styles.sectionList}>
@@ -79,10 +77,6 @@ const More = () => {
                   state={state}
                   dispatch={dispatch}
                 />
-              );
-            case 'picker':
-              return (
-                <PickerListItem dispatch={dispatch} state={state} item={item} />
               );
             default:
               return null;

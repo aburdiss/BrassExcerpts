@@ -10,8 +10,22 @@ import Acknowledgements from './Acknowledgements/Acknowledgements';
 
 const Stack = createStackNavigator();
 
-const MoreStack = ({navigation}) => {
+/**
+ * @function MoreStack
+ * @description All of the screens on the More Tab of the app, collected into
+ * a stack to be used by React Navigation
+ * @author Alexander Burdiss
+ * @since 4/2/21
+ * @version 1.0.0
+ * @component
+ * @example
+ * ```jsx
+ * <MoreStack />
+ * ```
+ */
+const MoreStack = () => {
   const DARKMODE = useDarkMode();
+
   return (
     <Stack.Navigator
       screenOptions={{

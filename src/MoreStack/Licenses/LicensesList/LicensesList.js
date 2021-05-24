@@ -13,8 +13,8 @@ import LicensesListItem from '../LicensesListItem/LicensesListItem';
  * @component
  * @example
  * ```jsx
-<LicensesList licenses={licenses} />
-```
+ * <LicensesList licenses={licenses} />
+ * ```
  */
 const LicensesList = ({licenses}) => {
   return (

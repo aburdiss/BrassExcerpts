@@ -11,14 +11,13 @@ Paste that data into ./Licenses/data.js
 */
 
 import React from 'react';
+import {useDarkMode} from 'react-native-dynamic';
+import {capitalize} from 'underscore.string';
+import SafeAreaView from 'react-native-safe-area-view';
 
 import LicensesList from './LicensesList/LicensesList';
-import {useDarkMode} from 'react-native-dynamic';
-import {colors} from '../../Model/Model';
-
 import Data from './data';
-import SafeAreaView from 'react-native-safe-area-view';
-import {capitalize} from 'underscore.string';
+import {colors} from '../../Model/Model';
 
 /**
  * @function extractNameFromGithubUrl
@@ -63,7 +62,7 @@ function sortDataByKey(data, key) {
   return data;
 }
 
-let licenses = Object.keys(Data).map((key) => {
+let allLicenses = Object.keys(Data).map((key) => {
   let {licenses, ...license} = Data[key];
   let [name, version] = key.split('@');
 
@@ -91,7 +90,7 @@ let licenses = Object.keys(Data).map((key) => {
   };
 });
 
-sortDataByKey(licenses, 'username');
+sortDataByKey(allLicenses, 'username');
 
 /**
  * @description A wrapper for the LicensesList component that processes the
@@ -100,22 +99,23 @@ sortDataByKey(licenses, 'username');
  * @author Alexander Burdiss
  * @since 12/17/20
  * @version 1.0.1
- * 
+ *
  * @component
  * @example
  * ```jsx
-<Licenses />
-```
+ * <Licenses />
+ * ```
  */
 const Licenses = () => {
   const DARKMODE = useDarkMode();
   return (
     <SafeAreaView
+      // eslint-disable-next-line react-native/no-inline-styles
       style={{
         flex: 1,
         backgroundColor: DARKMODE ? colors.black : colors.systemGray2Light,
       }}>
-      <LicensesList licenses={licenses} />
+      <LicensesList licenses={allLicenses} />
     </SafeAreaView>
   );
 };

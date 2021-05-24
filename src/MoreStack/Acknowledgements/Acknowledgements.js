@@ -12,6 +12,7 @@ import {TRANSLATIONS} from '../../Model/AcknowledgementsModel';
 import {TextListItem} from '../More/MoreListItems/MoreListItems';
 
 /**
+ * @function Acknowledgements
  * @description A View that displays the people who directly assisted with
  * this project
  * @author Alexander Burdiss
@@ -21,8 +22,8 @@ import {TextListItem} from '../More/MoreListItems/MoreListItems';
  * @component
  * @example
  * ```jsx
-<Acknowledgements />
-```
+ * <Acknowledgements />
+ * ```
  */
 const Acknowledgements = () => {
   const styles = useDynamicValue(dynamicStyles);
