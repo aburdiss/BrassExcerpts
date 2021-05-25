@@ -44,7 +44,7 @@ const PreferencesContext = createContext();
 /**
  * @function handleRandomFavoritesInstruments
  * @description Handles changing the random selected instruments based on which
- * favorites the user has selected.
+ * favorites the user has selected when they change the randomFavorites setting
  * @author Alexander Burdiss
  * @since 5/24/21
  * @version 1.0.0
@@ -86,7 +86,7 @@ function handleRandomFavoritesInstruments(state, action) {
         }
       }
 
-      let newState = {
+      return {
         ...state,
         ...action.payload,
         randomHorn: hasHorn,
@@ -94,8 +94,6 @@ function handleRandomFavoritesInstruments(state, action) {
         randomTrombone: hasTrombone,
         randomTuba: hasTuba,
       };
-      save(newState);
-      return newState;
     }
   } else {
     // All Excerpts
@@ -108,6 +106,46 @@ function handleRandomFavoritesInstruments(state, action) {
       randomTuba: true,
     };
   }
+}
+
+/**
+ * @function handleFavoritesUpdateInstruments
+ * @description Handles changing the random selected instruments based on which
+ * favorites the user has selected.
+ * @author Alexander Burdiss
+ * @since 5/24/21
+ * @version 1.0.0
+ * @param {Object} state The state currently stored in the reducer
+ * @param {Object} action The action the user has selected
+ * @returns {Object} The new state to store in the reducer, and save to storage.
+ * @see preferencesReducer
+ */
+function handleFavoritesUpdateInstruments(state, action) {
+  let hasHorn = false;
+  let hasTrumpet = false;
+  let hasTrombone = false;
+  let hasTuba = false;
+
+  for (let excerpt of action.payload) {
+    if (excerpt.startsWith('horn')) {
+      hasHorn = true;
+    } else if (excerpt.startsWith('trumpet')) {
+      hasTrumpet = true;
+    } else if (excerpt.startsWith('trombone')) {
+      hasTrombone = true;
+    } else if (excerpt.startsWith('tuba')) {
+      hasTuba = true;
+    }
+  }
+
+  return {
+    ...state,
+    favorites: action.payload,
+    randomHorn: hasHorn,
+    randomTrumpet: hasTrumpet,
+    randomTrombone: hasTrombone,
+    randomTuba: hasTuba,
+  };
 }
 
 /**
@@ -127,6 +165,18 @@ const preferencesReducer = (state, action) => {
     Object.keys(action.payload)[0] == 'randomFavorites'
   ) {
     const newState = handleRandomFavoritesInstruments(state, action);
+    save(newState);
+    return newState;
+  }
+
+  // Handle updating random instruments when favorites update
+  if (
+    state?.randomFavorites == 0 &&
+    (action.type == 'ADD_TO_FAVORITES' ||
+      action.type == 'REMOVE_FROM_FAVORITES')
+  ) {
+    console.log('RAN');
+    const newState = handleFavoritesUpdateInstruments(state, action);
     save(newState);
     return newState;
   }
