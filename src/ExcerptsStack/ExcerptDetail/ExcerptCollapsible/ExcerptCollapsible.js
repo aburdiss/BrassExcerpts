@@ -12,6 +12,7 @@ import Collapsible from 'react-native-collapsible';
 import AutoHeightImage from 'react-native-auto-height-image';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Pinchable from 'react-native-pinchable';
+import {SafeAreaView} from 'react-native-safe-area-context';
 
 import {colors} from '../../../Model/Model';
 
@@ -26,7 +27,7 @@ import {colors} from '../../../Model/Model';
  * purposes.
  * @author Alexander Burdiss
  * @since 5/1/21
- * @version 1.0.0
+ * @version 1.0.1
  * @component
  * @example
  * ```jsx
@@ -85,29 +86,36 @@ const ExcerptCollapsible = ({excerpt, startCollapsed, index}) => {
         onPress={() => {
           toggleChevron();
           setExcerptIsCollapsed((previous) => !previous);
-        }}
-        style={[
-          styles.excerptPressable,
-          !startCollapsed || index == 0 ? {} : styles.excerptPressableBorder,
-        ]}>
-        <View style={styles.excerptMetaContainer}>
-          <Text style={styles.excerptNumber}>{excerpt.description}</Text>
-          <Text style={styles.excerptMeasures}>{excerpt.measures}</Text>
-        </View>
-        {startCollapsed ? (
-          <Animated.View
-            style={{
-              transform: [{rotateZ: arrowAngle}],
-            }}>
-            <Ionicons name="chevron-down" size={32} color={colors.greenLight} />
-          </Animated.View>
-        ) : null}
+        }}>
+        <SafeAreaView
+          edges={['right', 'left']}
+          style={[
+            styles.excerptPressable,
+            !startCollapsed || index == 0 ? {} : styles.excerptPressableBorder,
+          ]}>
+          <View style={styles.excerptMetaContainer}>
+            <Text style={styles.excerptNumber}>{excerpt.description}</Text>
+            <Text style={styles.excerptMeasures}>{excerpt.measures}</Text>
+          </View>
+          {startCollapsed ? (
+            <Animated.View
+              style={{
+                transform: [{rotateZ: arrowAngle}],
+              }}>
+              <Ionicons
+                name="chevron-down"
+                size={32}
+                color={colors.greenLight}
+              />
+            </Animated.View>
+          ) : null}
+        </SafeAreaView>
       </Pressable>
       <Collapsible
         collapsed={excerptIsCollapsed}
         style={styles.excerptContainer}>
         {excerpt.pictures.map((picture) => (
-          <View key={picture[1]}>
+          <SafeAreaView key={picture[1]}>
             <Text style={styles.excerptCaption}>{picture[0]}</Text>
             <Pinchable>
               <AutoHeightImage
@@ -117,7 +125,7 @@ const ExcerptCollapsible = ({excerpt, startCollapsed, index}) => {
                 }}
               />
             </Pinchable>
-          </View>
+          </SafeAreaView>
         ))}
       </Collapsible>
     </View>

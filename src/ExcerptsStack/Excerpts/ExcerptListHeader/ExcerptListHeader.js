@@ -1,6 +1,7 @@
 import React, {useContext} from 'react';
 import {Text, View, Pressable, StyleSheet} from 'react-native';
 import {useNavigation} from '@react-navigation/core';
+import {SafeAreaView} from 'react-native-safe-area-context';
 
 import {colors} from '../../../Model/Model';
 import {PreferencesContext} from '../../../Model/Preferences';
@@ -10,7 +11,7 @@ import {getInstrumentsSelected} from '../../../utils/getInstrumentsSelected/getI
  * @description The header for the Excerpts list view.
  * @author Alexander Burdiss
  * @since 3/7/21
- * @version 1.0.0
+ * @version 1.0.1
  *
  * @component
  * @example
@@ -29,10 +30,12 @@ const ExcerptListHeader = () => {
   return (
     <View style={styles.container}>
       <Pressable onPress={navigateToSettings}>
-        <Text style={styles.instrumentText}>
-          {getInstrumentsSelected(state)}
-        </Text>
-        <Text>Tap to change instrument selection</Text>
+        <SafeAreaView edges={['right', 'left']}>
+          <Text style={styles.instrumentText}>
+            {getInstrumentsSelected(state)}
+          </Text>
+          <Text>Tap to change instrument selection</Text>
+        </SafeAreaView>
       </Pressable>
     </View>
   );

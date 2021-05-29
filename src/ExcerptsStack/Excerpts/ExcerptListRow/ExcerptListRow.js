@@ -1,6 +1,7 @@
 import React, {useContext} from 'react';
 import {Pressable, Text, StyleSheet} from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import {SafeAreaView} from 'react-native-safe-area-context';
 
 import {colors} from '../../../Model/Model';
 import {PreferencesContext} from '../../../Model/Preferences';
@@ -15,25 +16,27 @@ import {isFavorite} from '../../../utils/isFavorite/isFavorite';
  * pressed.
  * @author Alexander Burdiss
  * @since 3/6/21
- * @version 1.0.0
+ * @version 1.1.1
  */
 const ExcerptListRow = ({composer, composition, onPress}) => {
   const {state} = useContext(PreferencesContext);
 
   return (
-    <Pressable style={styles.button} onPress={onPress}>
-      <Text styles={styles.text}>
-        <Text style={styles.composerText}>{composer + '  '}</Text>
-        <Text style={styles.compositionText}>{composition}</Text>
-      </Text>
-      {isFavorite(state, composer, composition) && (
-        <Ionicons
-          name="heart"
-          size={24}
-          color={colors.redLight}
-          style={styles.favoriteIcon}
-        />
-      )}
+    <Pressable onPress={onPress}>
+      <SafeAreaView edges={['right', 'left']} style={styles.button}>
+        <Text styles={styles.text}>
+          <Text style={styles.composerText}>{composer + '  '}</Text>
+          <Text style={styles.compositionText}>{composition}</Text>
+        </Text>
+        {isFavorite(state, composer, composition) && (
+          <Ionicons
+            name="heart"
+            size={24}
+            color={colors.redLight}
+            style={styles.favoriteIcon}
+          />
+        )}
+      </SafeAreaView>
     </Pressable>
   );
 };

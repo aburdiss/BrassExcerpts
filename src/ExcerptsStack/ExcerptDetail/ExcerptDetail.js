@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import {useRoute} from '@react-navigation/native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import {SafeAreaView} from 'react-native-safe-area-context';
 
 import MetaLabel from '../../Components/MetaLabel/MetaLabel';
 import YoutubeSection from './YoutubeSection/YoutubeSection';
@@ -33,7 +34,7 @@ import {getActiveInstrument} from '../../utils/getActiveInstrument/getActiveInst
  * where the image is rotated.
  * @author Alexander Burdiss
  * @since 3/3/21
- * @version 1.0.0
+ * @version 1.0.1
  * @component
  * @example
  * ```jsx
@@ -201,49 +202,55 @@ const ExcerptDetail = () => {
 
   return (
     <ScrollView>
-      <View style={styles.metaInfoContainer}>
-        <View>
-          <Text style={styles.title}>{item.composer}</Text>
-          <MetaLabel label="Date" data={item.date} />
-          <MetaLabel label="Era" data={item.era} />
-          <MetaLabel label="Genre" data={item.genre} />
-          {getNumberOfInstruments(state) == 1 ? (
-            <MetaLabel label="Mutes" data={item.mutes} />
-          ) : (
-            <>
-              {hornExcerpt && (
-                <MetaLabel label="Horn Mutes" data={hornExcerpt.mutes} />
-              )}
-              {trumpetExcerpt && (
-                <MetaLabel label="Trumpet Mutes" data={trumpetExcerpt.mutes} />
-              )}
-              {tromboneExcerpt && (
-                <MetaLabel
-                  label="Trombone Mutes"
-                  data={tromboneExcerpt.mutes}
-                />
-              )}
-              {tubaExcerpt && (
-                <MetaLabel label="Tuba Mutes" data={tubaExcerpt.mutes} />
-              )}
-            </>
+      <SafeAreaView edges={['right', 'left']}>
+        <View style={styles.metaInfoContainer}>
+          <View>
+            <Text style={styles.title}>{item.composer}</Text>
+            <MetaLabel label="Date" data={item.date} />
+            <MetaLabel label="Era" data={item.era} />
+            <MetaLabel label="Genre" data={item.genre} />
+            {getNumberOfInstruments(state) == 1 ? (
+              <MetaLabel label="Mutes" data={item.mutes} />
+            ) : (
+              <>
+                {hornExcerpt && (
+                  <MetaLabel label="Horn Mutes" data={hornExcerpt.mutes} />
+                )}
+                {trumpetExcerpt && (
+                  <MetaLabel
+                    label="Trumpet Mutes"
+                    data={trumpetExcerpt.mutes}
+                  />
+                )}
+                {tromboneExcerpt && (
+                  <MetaLabel
+                    label="Trombone Mutes"
+                    data={tromboneExcerpt.mutes}
+                  />
+                )}
+                {tubaExcerpt && (
+                  <MetaLabel label="Tuba Mutes" data={tubaExcerpt.mutes} />
+                )}
+              </>
+            )}
+          </View>
+          <Image
+            style={styles.composerImage}
+            source={
+              composers.find((object) => object.slug == item.composerLast)
+                ?.image
+            }
+          />
+          {getNumberOfInstruments(state) == 1 && (
+            <Pressable
+              onPress={addToFavorites}
+              hitSlop={10}
+              style={styles.singleAddToFavoritesButton}>
+              {getSingleFavoritesIcon()}
+            </Pressable>
           )}
         </View>
-        <Image
-          style={styles.composerImage}
-          source={
-            composers.find((object) => object.slug == item.composerLast)?.image
-          }
-        />
-        {getNumberOfInstruments(state) == 1 && (
-          <Pressable
-            onPress={addToFavorites}
-            hitSlop={10}
-            style={styles.singleAddToFavoritesButton}>
-            {getSingleFavoritesIcon()}
-          </Pressable>
-        )}
-      </View>
+      </SafeAreaView>
       <View>
         <ExcerptSection
           instrumentExcerpt={hornExcerpt}
@@ -275,8 +282,10 @@ const ExcerptDetail = () => {
         />
       </View>
       <View style={styles.youtubeLinksContainer}>
-        <Text style={styles.youtubeHeading}>Listen</Text>
-        <YoutubeSection data={item.videos} />
+        <SafeAreaView edges={['right', 'left']}>
+          <Text style={styles.youtubeHeading}>Listen</Text>
+          <YoutubeSection data={item.videos} />
+        </SafeAreaView>
       </View>
     </ScrollView>
   );

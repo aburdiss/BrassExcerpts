@@ -2,6 +2,7 @@ import React, {useContext} from 'react';
 import {View, Text, StyleSheet, Pressable} from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {capitalize} from 'underscore.string';
+import {SafeAreaView} from 'react-native-safe-area-context';
 
 import ExcerptCollapsible from '../ExcerptCollapsible/ExcerptCollapsible';
 import {colors} from '../../../Model/Model';
@@ -14,7 +15,7 @@ import {getNumberOfInstruments} from '../../../utils/getNumberOfInstruments/getN
  * they get collapsed, or if the user has set them to always collapse.
  * @author Alexander Burdiss
  * @since 5/1/21
- * @version 1.0.0
+ * @version 1.0.1
  * @param props The JSX props passed to this React component
  * @param {Object} props.instrumentExcerpt The object that contains the excerpts
  * for this instrument.
@@ -49,7 +50,9 @@ const ExcerptSection = ({
   return instrumentExcerpt ? (
     <View style={styles.instrumentExcerptContainer}>
       {getNumberOfInstruments(state) > 1 && (
-        <View style={styles.instrumentHeadingContainer}>
+        <SafeAreaView
+          edges={['right', 'left']}
+          style={styles.instrumentHeadingContainer}>
           <Text style={styles.instrumentHeading}>
             {capitalize(instrumentName)}
           </Text>
@@ -75,7 +78,7 @@ const ExcerptSection = ({
               }
             />
           </Pressable>
-        </View>
+        </SafeAreaView>
       )}
       {instrumentExcerpt.excerpts.map((excerpt, index) => (
         <ExcerptCollapsible
