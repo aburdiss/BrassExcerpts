@@ -6,10 +6,12 @@ import {
   Pressable,
   StyleSheet,
   View,
+  useWindowDimensions,
 } from 'react-native';
 import {useNavigation, useRoute} from '@react-navigation/core';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import CalendarStrip from 'react-native-calendar-strip';
+import {SafeAreaView} from 'react-native-safe-area-context';
 
 import ActionButton from '../../Components/ActionButton/ActionButton';
 import MetaLabel from '../../Components/MetaLabel/MetaLabel';
@@ -25,7 +27,6 @@ import {isFavorite} from '../../utils/isFavorite/isFavorite';
 
 /**
  * @todo Update Excerpt list to look like composer Excerpts section.
- * @todo Make Calendar not appear if current date is past the closing date.
  *
  * @function JobDetail
  * @description A detailed view of one of the jobs in the app, with a list of
@@ -33,7 +34,7 @@ import {isFavorite} from '../../utils/isFavorite/isFavorite';
  * user directly to that excerpt.
  * @author Alexander Burdiss
  * @since 3/28/21
- * @version 1.0.0
+ * @version 1.1.0
  * @component
  * @example
  * ```jsx
@@ -42,6 +43,7 @@ import {isFavorite} from '../../utils/isFavorite/isFavorite';
  */
 const JobDetail = () => {
   const route = useRoute();
+  const width = useWindowDimensions().width;
   const navigation = useNavigation();
   const {state} = useContext(PreferencesContext);
 
@@ -59,6 +61,39 @@ const JobDetail = () => {
   }
 
   /**
+   * @function JobDetail~isPhonePortrait
+   * @description A function that determines if the display is a phone portrait
+   * or not.
+   * @returns {Boolean} Whether or not the display is a phone portrait.
+   * @author Alexander Burdiss
+   * @since 5/29/21
+   * @version 1.0.0
+   */
+  function isPhonePortrait() {
+    const maxPhonePortraitWidth = 650;
+    return width < maxPhonePortraitWidth;
+  }
+
+  /**
+   * @function JobDetail~shouldCalendarDisplay
+   * @description A function that determines whether or not the calendar should
+   * display on the Job Detail screen.
+   * @returns {Boolean} Whether or not the calendar should appear on the job
+   * view.
+   * @author Alexander Burdiss
+   * @since 5/29/21
+   * @version 1.0.0
+   */
+  function shouldCalendarDisplay() {
+    const closingDate = route.params.closingDate;
+    const auditionDate = route.params.auditionDate;
+    if (!auditionDate) {
+      return new Date(closingDate) > new Date();
+    }
+    return new Date(auditionDate) > new Date();
+  }
+
+  /**
    * @function JobDetail~navigateToExcerptDetailPage
    * @description Opens the excerpt detail page with the appropriate excerpt
    * data passed in
@@ -73,136 +108,219 @@ const JobDetail = () => {
 
   return (
     <ScrollView>
-      <View style={styles.metaContainer}>
+      <SafeAreaView>
         <Text style={styles.position}>{route.params.position}</Text>
-        <MetaLabel label="Country" data={route.params.country} />
-        <MetaLabel
-          label="Closing Date"
-          labelColor={colors.orangeLight}
-          data={
-            route.params.closingDate +
-            ` (${getDaysUntilDate(route.params.closingDate)} days from today)`
-          }
-        />
-        {route.params.auditionDate ? (
-          <MetaLabel
-            label="Audition Date"
-            labelColor={colors.redLight}
-            data={
-              route.params.auditionDate +
-              ` (${getDaysUntilDate(
-                route.params.auditionDate,
-              )} days from today)`
-            }
-          />
+        {isPhonePortrait() ? (
+          <View style={styles.metaContainer}>
+            <MetaLabel label="Country" data={route.params.country} />
+            <MetaLabel
+              label="Closing Date"
+              labelColor={colors.orangeLight}
+              data={
+                route.params.closingDate +
+                ` (${getDaysUntilDate(
+                  route.params.closingDate,
+                )} days from today)`
+              }
+            />
+            {route.params.auditionDate ? (
+              <MetaLabel
+                label="Audition Date"
+                labelColor={colors.redLight}
+                data={
+                  route.params.auditionDate +
+                  ` (${getDaysUntilDate(
+                    route.params.auditionDate,
+                  )} days from today)`
+                }
+              />
+            ) : (
+              <MetaLabel
+                label="Audition Date"
+                labelColor={colors.redLight}
+                data={'unknown'}
+              />
+            )}
+            {shouldCalendarDisplay() && (
+              <CalendarStrip
+                style={styles.calendarStrip}
+                minDate={new Date()}
+                maxDate={
+                  route.params.auditionDate
+                    ? new Date(route.params.auditionDate)
+                    : new Date(route.params.closingDate)
+                }
+                markedDates={[
+                  {
+                    date: new Date(),
+                    lines: [
+                      {
+                        color: colors.greenLight,
+                      },
+                    ],
+                  },
+                  {
+                    date: new Date(route.params.closingDate),
+                    lines: [
+                      {
+                        color: colors.orangeLight,
+                      },
+                    ],
+                  },
+                  {
+                    date: new Date(route.params.auditionDate),
+                    lines: [
+                      {
+                        color: colors.redLight,
+                      },
+                    ],
+                  },
+                ]}
+              />
+            )}
+          </View>
         ) : (
-          <MetaLabel
-            label="Audition Date"
-            labelColor={colors.redLight}
-            data={'unknown'}
-          />
-        )}
-      </View>
-      <CalendarStrip
-        style={styles.calendarStrip}
-        minDate={new Date()}
-        maxDate={
-          route.params.auditionDate
-            ? new Date(route.params.auditionDate)
-            : new Date(route.params.closingDate)
-        }
-        markedDates={[
-          {
-            date: new Date(),
-            lines: [
-              {
-                color: colors.greenLight,
-              },
-            ],
-          },
-          {
-            date: new Date(route.params.closingDate),
-            lines: [
-              {
-                color: colors.orangeLight,
-              },
-            ],
-          },
-          {
-            date: new Date(route.params.auditionDate),
-            lines: [
-              {
-                color: colors.redLight,
-              },
-            ],
-          },
-        ]}
-      />
-      <View style={styles.actionButtonContainer}>
-        <ActionButton onPress={openAuditionWebsite}>View Posting</ActionButton>
-      </View>
-      <Text style={styles.excerptsHeader}>Excerpts</Text>
-      <View style={styles.excerptsContainer}>
-        {route.params.excerpts.map((excerpt, index) => {
-          const excerptData = [
-            hornExcerpts,
-            trumpetExcerpts,
-            tromboneExcerpts,
-            tubaExcerpts,
-          ][state.jobsIndex].find((modelExcerpt) => {
-            return modelExcerpt.videos == excerpt;
-          });
-          if (excerptData) {
-            return (
-              <Pressable
-                key={index}
-                style={({pressed}) => ({
-                  opacity: pressed ? 0.7 : 1,
-                  ...styles.excerptButton,
-                })}
-                onPress={() => {
-                  navigateToExcerptDetailPage(excerptData);
-                }}>
-                <Text style={styles.excerptLink}>
-                  <Text>{excerptData.composerLast} - </Text>
-                  <Text>{excerptData.name}</Text>
-                </Text>
-                <View style={styles.iconContainer}>
-                  {isFavorite(
+          <View style={styles.metaContainerHorizontal}>
+            <View style={styles.metaContainerLeft}>
+              <MetaLabel label="Country" data={route.params.country} />
+              <MetaLabel
+                label="Closing Date"
+                labelColor={colors.orangeLight}
+                data={
+                  route.params.closingDate +
+                  ` (${getDaysUntilDate(
+                    route.params.closingDate,
+                  )} days from today)`
+                }
+              />
+              {route.params.auditionDate ? (
+                <MetaLabel
+                  label="Audition Date"
+                  labelColor={colors.redLight}
+                  data={
+                    route.params.auditionDate +
+                    ` (${getDaysUntilDate(
+                      route.params.auditionDate,
+                    )} days from today)`
+                  }
+                />
+              ) : (
+                <MetaLabel
+                  label="Audition Date"
+                  labelColor={colors.redLight}
+                  data={'unknown'}
+                />
+              )}
+            </View>
+            <View style={styles.metaContainerRight}>
+              {shouldCalendarDisplay() && (
+                <CalendarStrip
+                  style={styles.calendarStrip}
+                  minDate={new Date()}
+                  maxDate={
+                    route.params.auditionDate
+                      ? new Date(route.params.auditionDate)
+                      : new Date(route.params.closingDate)
+                  }
+                  markedDates={[
                     {
-                      ...state,
-                      horn: state.jobsIndex == 0,
-                      trumpet: state.jobsIndex == 1,
-                      trombone: state.jobsIndex == 2,
-                      tuba: state.jobsIndex == 3,
+                      date: new Date(),
+                      lines: [
+                        {
+                          color: colors.greenLight,
+                        },
+                      ],
                     },
-                    excerptData.composerLast,
-                    excerptData.name,
-                  ) && (
+                    {
+                      date: new Date(route.params.closingDate),
+                      lines: [
+                        {
+                          color: colors.orangeLight,
+                        },
+                      ],
+                    },
+                    {
+                      date: new Date(route.params.auditionDate),
+                      lines: [
+                        {
+                          color: colors.redLight,
+                        },
+                      ],
+                    },
+                  ]}
+                />
+              )}
+            </View>
+          </View>
+        )}
+        <View style={styles.actionButtonContainer}>
+          <ActionButton onPress={openAuditionWebsite}>
+            View Posting
+          </ActionButton>
+        </View>
+        <Text style={styles.excerptsHeader}>Excerpts</Text>
+        <View style={styles.excerptsContainer}>
+          {route.params.excerpts.map((excerpt, index) => {
+            const excerptData = [
+              hornExcerpts,
+              trumpetExcerpts,
+              tromboneExcerpts,
+              tubaExcerpts,
+            ][state.jobsIndex].find((modelExcerpt) => {
+              return modelExcerpt.videos == excerpt;
+            });
+            if (excerptData) {
+              return (
+                <Pressable
+                  key={index}
+                  style={({pressed}) => ({
+                    opacity: pressed ? 0.7 : 1,
+                    ...styles.excerptButton,
+                  })}
+                  onPress={() => {
+                    navigateToExcerptDetailPage(excerptData);
+                  }}>
+                  <Text style={styles.excerptLink}>
+                    <Text>{excerptData.composerLast} - </Text>
+                    <Text>{excerptData.name}</Text>
+                  </Text>
+                  <View style={styles.iconContainer}>
+                    {isFavorite(
+                      {
+                        ...state,
+                        horn: state.jobsIndex == 0,
+                        trumpet: state.jobsIndex == 1,
+                        trombone: state.jobsIndex == 2,
+                        tuba: state.jobsIndex == 3,
+                      },
+                      excerptData.composerLast,
+                      excerptData.name,
+                    ) && (
+                      <Ionicons
+                        name="heart"
+                        size={24}
+                        color={colors.redLight}
+                        style={styles.favoriteIcon}
+                      />
+                    )}
                     <Ionicons
-                      name="heart"
+                      name="chevron-forward"
                       size={24}
-                      color={colors.redLight}
-                      style={styles.favoriteIcon}
+                      color={colors.greenLight}
                     />
-                  )}
-                  <Ionicons
-                    name="chevron-forward"
-                    size={24}
-                    color={colors.greenLight}
-                  />
+                  </View>
+                </Pressable>
+              );
+            } else {
+              return (
+                <View key={index} style={styles.excerptButton}>
+                  <Text>{excerpt}</Text>
                 </View>
-              </Pressable>
-            );
-          } else {
-            return (
-              <View key={index} style={styles.excerptButton}>
-                <Text>{excerpt}</Text>
-              </View>
-            );
-          }
-        })}
-      </View>
+              );
+            }
+          })}
+        </View>
+      </SafeAreaView>
     </ScrollView>
   );
 };
@@ -244,9 +362,19 @@ const styles = StyleSheet.create({
   },
   metaContainer: {
     paddingHorizontal: 20,
-    paddingTop: 20,
+  },
+  metaContainerHorizontal: {
+    paddingHorizontal: 20,
+    flexDirection: 'row',
+  },
+  metaContainerLeft: {
+    width: '50%',
+  },
+  metaContainerRight: {
+    width: '50%',
   },
   position: {
+    paddingTop: 20,
     fontSize: 24,
     fontWeight: 'bold',
     textAlign: 'center',
