@@ -15,6 +15,7 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 
 import ActionButton from '../../Components/ActionButton/ActionButton';
 import MetaLabel from '../../Components/MetaLabel/MetaLabel';
+import SectionHeader from '../../Components/SectionHeader/SectionHeader';
 
 import {PreferencesContext} from '../../Model/Preferences';
 import {excerpts as hornExcerpts} from '../../Model/Excerpts/HornExcerpts';
@@ -108,7 +109,7 @@ const JobDetail = () => {
 
   return (
     <ScrollView>
-      <SafeAreaView>
+      <SafeAreaView edges={['left', 'right']}>
         <Text style={styles.position}>{route.params.position}</Text>
         {isPhonePortrait() ? (
           <View style={styles.metaContainer}>
@@ -258,24 +259,29 @@ const JobDetail = () => {
             View Posting
           </ActionButton>
         </View>
-        <Text style={styles.excerptsHeader}>Excerpts</Text>
-        <View style={styles.excerptsContainer}>
-          {route.params.excerpts.map((excerpt, index) => {
-            const excerptData = [
-              hornExcerpts,
-              trumpetExcerpts,
-              tromboneExcerpts,
-              tubaExcerpts,
-            ][state.jobsIndex].find((modelExcerpt) => {
-              return modelExcerpt.videos == excerpt;
-            });
-            if (excerptData) {
-              return (
+        <SectionHeader>Excerpts</SectionHeader>
+      </SafeAreaView>
+      <View style={styles.excerptsContainer}>
+        {route.params.excerpts.map((excerpt, index) => {
+          const borderTop = index != 0 ? styles.buttonBorder : null;
+
+          const excerptData = [
+            hornExcerpts,
+            trumpetExcerpts,
+            tromboneExcerpts,
+            tubaExcerpts,
+          ][state.jobsIndex].find((modelExcerpt) => {
+            return modelExcerpt.videos == excerpt;
+          });
+
+          if (excerptData) {
+            return (
+              <SafeAreaView edges={['left']} key={index}>
                 <Pressable
-                  key={index}
                   style={({pressed}) => ({
                     opacity: pressed ? 0.7 : 1,
                     ...styles.excerptButton,
+                    ...borderTop,
                   })}
                   onPress={() => {
                     navigateToExcerptDetailPage(excerptData);
@@ -284,7 +290,7 @@ const JobDetail = () => {
                     <Text>{excerptData.composerLast} - </Text>
                     <Text>{excerptData.name}</Text>
                   </Text>
-                  <View style={styles.iconContainer}>
+                  <SafeAreaView style={styles.iconContainer} edges={['right']}>
                     {isFavorite(
                       {
                         ...state,
@@ -308,19 +314,21 @@ const JobDetail = () => {
                       size={24}
                       color={colors.greenLight}
                     />
-                  </View>
+                  </SafeAreaView>
                 </Pressable>
-              );
-            } else {
-              return (
-                <View key={index} style={styles.excerptButton}>
+              </SafeAreaView>
+            );
+          } else {
+            return (
+              <SafeAreaView key={index} edges={['left']}>
+                <View style={[styles.excerptButton, borderTop]}>
                   <Text>{excerpt}</Text>
                 </View>
-              );
-            }
-          })}
-        </View>
-      </SafeAreaView>
+              </SafeAreaView>
+            );
+          }
+        })}
+      </View>
     </ScrollView>
   );
 };
@@ -328,6 +336,10 @@ const JobDetail = () => {
 const styles = StyleSheet.create({
   actionButtonContainer: {
     paddingHorizontal: 20,
+  },
+  buttonBorder: {
+    borderTopWidth: 1,
+    borderTopColor: colors.systemGray,
   },
   calendarStrip: {
     height: 80,
@@ -340,7 +352,8 @@ const styles = StyleSheet.create({
     fontSize: 24,
   },
   excerptButton: {
-    paddingHorizontal: 20,
+    marginLeft: 20,
+    paddingRight: 20,
     height: 45,
     backgroundColor: colors.white,
     borderTopColor: colors.systemGray6Light,
@@ -351,8 +364,11 @@ const styles = StyleSheet.create({
   },
   excerptsContainer: {
     marginBottom: 70,
-    borderBottomColor: colors.systemGray6Light,
     borderBottomWidth: 1,
+    borderBottomColor: colors.systemGray,
+    borderTopWidth: 1,
+    borderTopColor: colors.systemGray,
+    backgroundColor: colors.white,
   },
   excerptLink: {
     color: colors.greenLight,

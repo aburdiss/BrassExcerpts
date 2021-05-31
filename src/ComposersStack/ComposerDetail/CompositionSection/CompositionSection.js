@@ -28,18 +28,19 @@ const CompositionSection = ({excerpts}) => {
       {excerpts.map((excerpt, index) => {
         const borderTop = index != 0 ? styles.buttonBorder : null;
         return (
-          <Pressable
-            style={({pressed}) => ({
-              opacity: pressed ? 0.7 : 1,
-              ...borderTop,
-            })}
-            key={excerpt.id.toString()}
-            onPress={function navigateToExcerpt() {
-              navigation.navigate('Composer Excerpt Detail', excerpt);
-            }}>
-            <SafeAreaView edges={['right', 'left']} style={styles.button}>
+          <SafeAreaView edges={['left']} style={styles.buttonSafeArea}>
+            <Pressable
+              style={({pressed}) => ({
+                opacity: pressed ? 0.7 : 1,
+                ...borderTop,
+                ...styles.button,
+              })}
+              key={excerpt.id.toString()}
+              onPress={function navigateToExcerpt() {
+                navigation.navigate('Composer Excerpt Detail', excerpt);
+              }}>
               <Text style={styles.text}>{excerpt.name}</Text>
-              <View style={styles.iconContainer}>
+              <SafeAreaView style={styles.iconContainer} edges={['right']}>
                 {isFavorite(state, excerpt.composerLast, excerpt.name) && (
                   <Ionicons
                     name="heart"
@@ -53,9 +54,9 @@ const CompositionSection = ({excerpts}) => {
                   size={24}
                   color={colors.greenLight}
                 />
-              </View>
-            </SafeAreaView>
-          </Pressable>
+              </SafeAreaView>
+            </Pressable>
+          </SafeAreaView>
         );
       })}
     </View>
@@ -64,7 +65,8 @@ const CompositionSection = ({excerpts}) => {
 
 const styles = StyleSheet.create({
   button: {
-    padding: 10,
+    paddingVertical: 10,
+    paddingRight: 20,
     marginLeft: 20,
     flexDirection: 'row',
     alignItems: 'center',
