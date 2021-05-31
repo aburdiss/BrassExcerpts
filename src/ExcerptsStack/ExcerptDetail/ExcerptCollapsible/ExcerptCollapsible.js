@@ -12,7 +12,7 @@ import Collapsible from 'react-native-collapsible';
 import AutoHeightImage from 'react-native-auto-height-image';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Pinchable from 'react-native-pinchable';
-import {SafeAreaView} from 'react-native-safe-area-context';
+import {SafeAreaView, useSafeAreaInsets} from 'react-native-safe-area-context';
 
 import {colors} from '../../../Model/Model';
 
@@ -46,6 +46,7 @@ const ExcerptCollapsible = ({excerpt, startCollapsed, index}) => {
   const animatedController = useRef(new Animated.Value(0)).current;
 
   const windowWidth = useWindowDimensions().width;
+  const windowWidthInsets = useSafeAreaInsets();
 
   /**
    * @function ExcerptCollapsible~toggleChevron
@@ -119,7 +120,9 @@ const ExcerptCollapsible = ({excerpt, startCollapsed, index}) => {
             <Text style={styles.excerptCaption}>{picture[0]}</Text>
             <Pinchable>
               <AutoHeightImage
-                width={windowWidth}
+                width={
+                  windowWidth - windowWidthInsets.left - windowWidthInsets.right
+                }
                 source={{
                   uri: EXTERNAL_GITHUB_URL + picture[1],
                 }}

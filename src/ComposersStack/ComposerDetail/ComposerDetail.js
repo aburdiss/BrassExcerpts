@@ -2,6 +2,7 @@ import React, {useContext} from 'react';
 import {View, Text, ScrollView, Image, StyleSheet} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import {useRoute} from '@react-navigation/core';
+import {SafeAreaView} from 'react-native-safe-area-context';
 
 import SectionHeader from '../../Components/SectionHeader/SectionHeader';
 import CompositionSection from './CompositionSection/CompositionSection';
@@ -34,27 +35,31 @@ const ComposerDetail = () => {
 
   return (
     <ScrollView style={styles.container}>
-      <View style={styles.card}>
-        <View style={styles.cardImageTop}>
-          <Text style={styles.cardImageTopText}>/{composer.ipa}/</Text>
-          <Text style={styles.cardImageTopText}>{composer.dates}</Text>
-        </View>
-        <LinearGradient
-          colors={[colors.blueLight, colors.greenLight]}
-          style={styles.linearGradient}>
-          <Image source={composer.image} style={styles.image} />
-        </LinearGradient>
-        <View style={styles.cardBottom}>
-          <View style={styles.cardImageBottom}>
-            <MetaLabel label="Country" data={composer.country} />
+      <SafeAreaView edges={['left', 'right']}>
+        <View style={styles.card}>
+          <View style={styles.cardImageTop}>
+            <Text style={styles.cardImageTopText}>/{composer.ipa}/</Text>
+            <Text style={styles.cardImageTopText}>{composer.dates}</Text>
           </View>
-          <Text style={styles.bio}>{composer.bio}</Text>
+          <LinearGradient
+            colors={[colors.blueLight, colors.greenLight]}
+            style={styles.linearGradient}>
+            <Image source={composer.image} style={styles.image} />
+          </LinearGradient>
+          <View style={styles.cardBottom}>
+            <View style={styles.cardImageBottom}>
+              <MetaLabel label="Country" data={composer.country} />
+            </View>
+            <Text style={styles.bio}>{composer.bio}</Text>
+          </View>
         </View>
-      </View>
+      </SafeAreaView>
       {state?.horn && hornComposers[composer.slug] ? (
         <View>
           {getNumberOfInstruments(state) > 1 && (
-            <SectionHeader>Horn</SectionHeader>
+            <SafeAreaView edges={['right', 'left']}>
+              <SectionHeader>Horn</SectionHeader>
+            </SafeAreaView>
           )}
           <CompositionSection
             excerpts={hornComposers[composer.slug].excerpts}
@@ -64,7 +69,9 @@ const ComposerDetail = () => {
       {state?.trumpet && trumpetComposers[composer.slug] ? (
         <View>
           {getNumberOfInstruments(state) > 1 && (
-            <SectionHeader>Trumpet</SectionHeader>
+            <SafeAreaView edges={['right', 'left']}>
+              <SectionHeader>Trumpet</SectionHeader>
+            </SafeAreaView>
           )}
           <CompositionSection
             excerpts={trumpetComposers[composer.slug].excerpts}
@@ -74,7 +81,9 @@ const ComposerDetail = () => {
       {state?.trombone && tromboneComposers[composer.slug] ? (
         <View>
           {getNumberOfInstruments(state) > 1 && (
-            <SectionHeader>Trombone</SectionHeader>
+            <SafeAreaView edges={['right', 'left']}>
+              <SectionHeader>Trombone</SectionHeader>
+            </SafeAreaView>
           )}
           <CompositionSection
             excerpts={tromboneComposers[composer.slug].excerpts}
@@ -84,7 +93,9 @@ const ComposerDetail = () => {
       {state?.tuba && tubaComposers[composer.slug] ? (
         <View>
           {getNumberOfInstruments(state) > 1 && (
-            <SectionHeader>Tuba</SectionHeader>
+            <SafeAreaView edges={['right', 'left']}>
+              <SectionHeader>Tuba</SectionHeader>
+            </SafeAreaView>
           )}
           <CompositionSection
             excerpts={tubaComposers[composer.slug].excerpts}

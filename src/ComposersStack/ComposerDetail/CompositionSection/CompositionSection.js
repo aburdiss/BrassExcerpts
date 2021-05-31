@@ -2,6 +2,7 @@ import React, {useContext} from 'react';
 import {View, Text, Pressable, StyleSheet} from 'react-native';
 import {useNavigation} from '@react-navigation/core';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import {SafeAreaView} from 'react-native-safe-area-context';
 
 import {colors} from '../../../Model/Model';
 import {isFavorite} from '../../../utils/isFavorite/isFavorite';
@@ -30,29 +31,30 @@ const CompositionSection = ({excerpts}) => {
           <Pressable
             style={({pressed}) => ({
               opacity: pressed ? 0.7 : 1,
-              ...styles.button,
               ...borderTop,
             })}
             key={excerpt.id.toString()}
             onPress={function navigateToExcerpt() {
               navigation.navigate('Composer Excerpt Detail', excerpt);
             }}>
-            <Text style={styles.text}>{excerpt.name}</Text>
-            <View style={styles.iconContainer}>
-              {isFavorite(state, excerpt.composerLast, excerpt.name) && (
+            <SafeAreaView edges={['right', 'left']} style={styles.button}>
+              <Text style={styles.text}>{excerpt.name}</Text>
+              <View style={styles.iconContainer}>
+                {isFavorite(state, excerpt.composerLast, excerpt.name) && (
+                  <Ionicons
+                    name="heart"
+                    size={24}
+                    color={colors.redLight}
+                    style={styles.favoriteIcon}
+                  />
+                )}
                 <Ionicons
-                  name="heart"
+                  name="chevron-forward"
                   size={24}
-                  color={colors.redLight}
-                  style={styles.favoriteIcon}
+                  color={colors.greenLight}
                 />
-              )}
-              <Ionicons
-                name="chevron-forward"
-                size={24}
-                color={colors.greenLight}
-              />
-            </View>
+              </View>
+            </SafeAreaView>
           </Pressable>
         );
       })}

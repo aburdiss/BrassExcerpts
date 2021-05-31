@@ -1,5 +1,6 @@
 import React from 'react';
 import {View, Text, Image, Pressable, StyleSheet} from 'react-native';
+import {SafeAreaView} from 'react-native-safe-area-context';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import {colors} from '../../Model/Model';
@@ -39,14 +40,19 @@ const ComposerListRow = ({name, index, imageSource, onPress}) => {
     <Pressable
       style={({pressed}) => ({
         opacity: pressed ? 0.7 : 1,
-        ...styles.container,
       })}
       onPress={onPress}>
-      <Image source={imageSource} style={styles.image} />
-      <View style={{...styles.textContainer, ...divider}}>
-        <Text style={styles.text}>{name}</Text>
-        <Ionicons name="chevron-forward" size={24} color={colors.systemGray} />
-      </View>
+      <SafeAreaView style={styles.container} edges={['right', 'left']}>
+        <Image source={imageSource} style={styles.image} />
+        <View style={{...styles.textContainer, ...divider}}>
+          <Text style={styles.text}>{name}</Text>
+          <Ionicons
+            name="chevron-forward"
+            size={24}
+            color={colors.systemGray}
+          />
+        </View>
+      </SafeAreaView>
     </Pressable>
   );
 };
