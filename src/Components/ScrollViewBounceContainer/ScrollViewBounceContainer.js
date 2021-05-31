@@ -11,10 +11,16 @@ const ScrollViewBounceContainer = ({
     <View style={styles.container}>
       {children}
       <View style={styles.backgroundContainer}>
-        {/* eslint-disable-next-line react-native/no-inline-styles */}
-        <View style={{flex: 1, backgroundColor: topBounceColor}} />
-        {/* eslint-disable-next-line react-native/no-inline-styles */}
-        <View style={{flex: 1, backgroundColor: bottomBounceColor}} />
+        <View
+          // eslint-disable-next-line react-native/no-inline-styles
+          style={{flex: 1, backgroundColor: topBounceColor}}
+          testID="topBounce"
+        />
+        <View
+          // eslint-disable-next-line react-native/no-inline-styles
+          style={{flex: 1, backgroundColor: bottomBounceColor}}
+          testID="bottomBounce"
+        />
       </View>
     </View>
   );
