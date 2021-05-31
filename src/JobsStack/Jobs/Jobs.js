@@ -133,7 +133,9 @@ const Jobs = () => {
 
   return (
     <View style={styles.jobsContainer}>
-      <SafeAreaView edges={['left', 'right']}>
+      <SafeAreaView
+        edges={['left', 'right']}
+        style={styles.segmentedControlContainer}>
         <SegmentedControl
           values={['Horn', 'Trumpet', 'Trombone', 'Tuba']}
           selectedIndex={state.jobsIndex}
@@ -167,23 +169,23 @@ const Jobs = () => {
             </Text>
           </SafeAreaView>
         )}
-      </ScrollView>
-      <SafeAreaView edges={['left', 'right']}>
-        {/* <ActionButton onPress={openCreateCustomAudition}>
+        <SafeAreaView edges={['left', 'right']}>
+          {/* <ActionButton onPress={openCreateCustomAudition}>
         Create a custom audition list!
       </ActionButton> */}
-        <Pressable
-          onPress={() => openMusicalChairsLink(state)}
-          style={({pressed}) => ({opacity: pressed ? 0.7 : 1})}>
-          <Text style={styles.linkText}>
-            View {currentInstrument} job openings on Musical Chairs
+          <Pressable
+            onPress={() => openMusicalChairsLink(state)}
+            style={({pressed}) => ({opacity: pressed ? 0.7 : 1})}>
+            <Text style={styles.linkText}>
+              View {currentInstrument} job openings on Musical Chairs
+            </Text>
+          </Pressable>
+          <Text style={styles.disclaimer}>
+            Note: Although these jobs are regularly updated, there may be some
+            mistakes. Please check the orchestra website for official dates.
           </Text>
-        </Pressable>
-        <Text style={styles.disclaimer}>
-          Note: Although these jobs are regularly updated, there may be some
-          mistakes. Please check the orchestra website for official dates.
-        </Text>
-      </SafeAreaView>
+        </SafeAreaView>
+      </ScrollView>
     </View>
   );
 };
@@ -191,7 +193,8 @@ const Jobs = () => {
 const styles = StyleSheet.create({
   contentContainer: {
     flex: 1,
-    marginTop: 10,
+    paddingHorizontal: 10,
+    paddingBottom: 10,
   },
   disclaimer: {
     fontSize: 12,
@@ -212,6 +215,8 @@ const styles = StyleSheet.create({
   },
   jobsContainer: {
     height: '100%',
+  },
+  segmentedControlContainer: {
     padding: 10,
   },
 });

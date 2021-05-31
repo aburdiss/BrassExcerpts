@@ -40,11 +40,11 @@ const JobsListRow = ({job}) => {
         opacity: pressed ? 0.7 : 1,
         ...styles.container,
       })}>
-      <View>
+      <View style={styles.orchestraContainer}>
         <Text style={styles.orchestra}>{job.orchestra}</Text>
         <Text>{job.position}</Text>
       </View>
-      <Text>
+      <Text style={styles.closingDate}>
         Closing Date:{'\n'}
         {job.closingDate}
       </Text>
@@ -53,6 +53,10 @@ const JobsListRow = ({job}) => {
 };
 
 const styles = StyleSheet.create({
+  closingDate: {
+    width: '40%',
+    textAlign: 'right',
+  },
   container: {
     backgroundColor: colors.greenLight,
     marginVertical: 8,
@@ -63,6 +67,10 @@ const styles = StyleSheet.create({
   },
   orchestra: {
     fontWeight: 'bold',
+    flexWrap: 'wrap',
+  },
+  orchestraContainer: {
+    width: '60%',
   },
 });
 
