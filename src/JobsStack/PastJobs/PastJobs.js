@@ -1,4 +1,4 @@
-import React, {useContext, useState, useEffect} from 'react';
+import React, {useContext, useState, useEffect, useRef} from 'react';
 import {ScrollView, StyleSheet, View} from 'react-native';
 import SegmentedControl from '@react-native-segmented-control/segmented-control';
 import {useQuery} from 'react-query';
@@ -35,6 +35,7 @@ const PastJobs = () => {
 
   const {state, dispatch} = useContext(PreferencesContext);
   const [currentJobs, setCurrentJobs] = useState([]);
+  const scrollViewRef = useRef(null);
 
   const queryPreferences = {
     staleTime: 1000 * 60 * 60, // One Hour
@@ -92,6 +93,7 @@ const PastJobs = () => {
           values={['Horn', 'Trumpet', 'Trombone', 'Tuba']}
           selectedIndex={state.jobsIndex}
           onChange={(event) => {
+            scrollViewRef.current.scrollTo({x: 0, y: 0});
             dispatch({
               type: 'SET_SETTING',
               payload: {jobsIndex: event.nativeEvent.selectedSegmentIndex},
@@ -99,7 +101,7 @@ const PastJobs = () => {
           }}
         />
       </SafeAreaView>
-      <ScrollView style={styles.contentContainer}>
+      <ScrollView style={styles.contentContainer} ref={scrollViewRef}>
         <View>
           {currentJobs?.map((job, index) => {
             const jobDate = new Date(job.closingDate);

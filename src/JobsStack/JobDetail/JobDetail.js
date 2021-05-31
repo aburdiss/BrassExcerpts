@@ -261,9 +261,9 @@ const JobDetail = () => {
         </View>
         <SectionHeader>Excerpts</SectionHeader>
       </SafeAreaView>
-      <View style={styles.excerptsContainer}>
-        {route.params.excerpts.length > 0 ? (
-          route.params.excerpts.map((excerpt, index) => {
+      {route.params.excerpts.length > 0 ? (
+        <View style={styles.excerptsContainer}>
+          {route.params.excerpts.map((excerpt, index) => {
             const borderTop = index != 0 ? styles.buttonBorder : null;
 
             const excerptData = [
@@ -330,13 +330,15 @@ const JobDetail = () => {
                 </SafeAreaView>
               );
             }
-          })
-        ) : (
-          <View>
-            <Text>No excerpts available for this job.</Text>
-          </View>
-        )}
-      </View>
+          })}
+        </View>
+      ) : (
+        <SafeAreaView
+          style={styles.noExcerptsContainer}
+          edges={['left', 'right']}>
+          <Text>No excerpts available for this job.</Text>
+        </SafeAreaView>
+      )}
     </ScrollView>
   );
 };
@@ -396,6 +398,9 @@ const styles = StyleSheet.create({
   },
   metaContainerRight: {
     width: '50%',
+  },
+  noExcerptsContainer: {
+    padding: 20,
   },
   position: {
     paddingTop: 20,

@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState} from 'react';
+import React, {useContext, useEffect, useRef, useState} from 'react';
 import {View, StyleSheet, ScrollView, Pressable, Text} from 'react-native';
 import SegmentedControl from '@react-native-segmented-control/segmented-control';
 import {useNavigation} from '@react-navigation/core';
@@ -50,6 +50,7 @@ const Jobs = () => {
   const {state, dispatch} = useContext(PreferencesContext);
   const [currentJobs, setCurrentJobs] = useState([]);
   const navigation = useNavigation();
+  const scrollViewRef = useRef(null);
 
   const queryPreferences = {
     staleTime: 1000 * 60 * 60, // One Hour
@@ -137,6 +138,7 @@ const Jobs = () => {
           values={['Horn', 'Trumpet', 'Trombone', 'Tuba']}
           selectedIndex={state.jobsIndex}
           onChange={(event) => {
+            scrollViewRef.current.scrollTo({x: 0, y: 0});
             dispatch({
               type: 'SET_SETTING',
               payload: {jobsIndex: event.nativeEvent.selectedSegmentIndex},
@@ -147,7 +149,7 @@ const Jobs = () => {
       {/* <ActionButton onPress={openTopExcerptComponent}>
         View top {currentInstrument} excerpts
       </ActionButton> */}
-      <ScrollView style={styles.contentContainer}>
+      <ScrollView style={styles.contentContainer} ref={scrollViewRef}>
         {hasValidJobs(currentJobs) ? (
           <SafeAreaView edges={['left', 'right']}>
             {currentJobs?.map((job, index) => {
