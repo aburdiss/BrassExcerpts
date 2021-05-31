@@ -3,6 +3,7 @@ import {View, StyleSheet, ScrollView, Pressable, Text} from 'react-native';
 import SegmentedControl from '@react-native-segmented-control/segmented-control';
 import {useNavigation} from '@react-navigation/core';
 import {useQuery} from 'react-query';
+import {SafeAreaView} from 'react-native-safe-area-context';
 
 import JobsListRow from './JobsListRow/JobsListRow';
 // eslint-disable-next-line no-unused-vars
@@ -131,52 +132,56 @@ const Jobs = () => {
 
   return (
     <View style={styles.jobsContainer}>
-      <SegmentedControl
-        values={['Horn', 'Trumpet', 'Trombone', 'Tuba']}
-        selectedIndex={state.jobsIndex}
-        onChange={(event) => {
-          dispatch({
-            type: 'SET_SETTING',
-            payload: {jobsIndex: event.nativeEvent.selectedSegmentIndex},
-          });
-        }}
-      />
+      <SafeAreaView edges={['left', 'right']}>
+        <SegmentedControl
+          values={['Horn', 'Trumpet', 'Trombone', 'Tuba']}
+          selectedIndex={state.jobsIndex}
+          onChange={(event) => {
+            dispatch({
+              type: 'SET_SETTING',
+              payload: {jobsIndex: event.nativeEvent.selectedSegmentIndex},
+            });
+          }}
+        />
+      </SafeAreaView>
       {/* <ActionButton onPress={openTopExcerptComponent}>
         View top {currentInstrument} excerpts
       </ActionButton> */}
       <ScrollView style={styles.contentContainer}>
         {hasValidJobs(currentJobs) ? (
-          <View>
+          <SafeAreaView edges={['left', 'right']}>
             {currentJobs?.map((job, index) => {
               const jobDate = new Date(job.closingDate);
               if (jobDate > new Date()) {
                 return <JobsListRow key={index} job={job} />;
               }
             })}
-          </View>
+          </SafeAreaView>
         ) : (
-          <View style={styles.errorContainer}>
+          <SafeAreaView style={styles.errorContainer}>
             <Text style={styles.errorText}>
               There are no {currentInstrument} jobs at this time.{'\n'}Check
               back later!
             </Text>
-          </View>
+          </SafeAreaView>
         )}
       </ScrollView>
-      {/* <ActionButton onPress={openCreateCustomAudition}>
+      <SafeAreaView edges={['left', 'right']}>
+        {/* <ActionButton onPress={openCreateCustomAudition}>
         Create a custom audition list!
       </ActionButton> */}
-      <Pressable
-        onPress={() => openMusicalChairsLink(state)}
-        style={({pressed}) => ({opacity: pressed ? 0.7 : 1})}>
-        <Text style={styles.linkText}>
-          View {currentInstrument} job openings on Musical Chairs
+        <Pressable
+          onPress={() => openMusicalChairsLink(state)}
+          style={({pressed}) => ({opacity: pressed ? 0.7 : 1})}>
+          <Text style={styles.linkText}>
+            View {currentInstrument} job openings on Musical Chairs
+          </Text>
+        </Pressable>
+        <Text style={styles.disclaimer}>
+          Note: Although these jobs are regularly updated, there may be some
+          mistakes. Please check the orchestra website for official dates.
         </Text>
-      </Pressable>
-      <Text style={styles.disclaimer}>
-        Note: Although these jobs are regularly updated, there may be some
-        mistakes. Please check the orchestra website for official dates.
-      </Text>
+      </SafeAreaView>
     </View>
   );
 };

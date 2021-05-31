@@ -7,6 +7,7 @@ import JobsListRow from '../Jobs/JobsListRow/JobsListRow';
 
 import {fetchInstrumentJobs} from '../Jobs/JobsUtils';
 import {PreferencesContext} from '../../Model/Preferences';
+import {SafeAreaView} from 'react-native-safe-area-context';
 
 /**
  * @function PastJobs
@@ -86,22 +87,28 @@ const PastJobs = () => {
 
   return (
     <View style={styles.pastJobsContainer}>
-      <SegmentedControl
-        values={['Horn', 'Trumpet', 'Trombone', 'Tuba']}
-        selectedIndex={state.jobsIndex}
-        onChange={(event) => {
-          dispatch({
-            type: 'SET_SETTING',
-            payload: {jobsIndex: event.nativeEvent.selectedSegmentIndex},
-          });
-        }}
-      />
+      <SafeAreaView edges={['left', 'right']}>
+        <SegmentedControl
+          values={['Horn', 'Trumpet', 'Trombone', 'Tuba']}
+          selectedIndex={state.jobsIndex}
+          onChange={(event) => {
+            dispatch({
+              type: 'SET_SETTING',
+              payload: {jobsIndex: event.nativeEvent.selectedSegmentIndex},
+            });
+          }}
+        />
+      </SafeAreaView>
       <ScrollView style={styles.contentContainer}>
         <View>
           {currentJobs?.map((job, index) => {
             const jobDate = new Date(job.closingDate);
             if (jobDate < new Date()) {
-              return <JobsListRow key={index} job={job} />;
+              return (
+                <SafeAreaView key={index} edges={['left', 'right']}>
+                  <JobsListRow job={job} />
+                </SafeAreaView>
+              );
             }
           })}
         </View>
