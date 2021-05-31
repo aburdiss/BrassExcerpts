@@ -1,3 +1,129 @@
 {
-  "Jobs": []
+  "Jobs": [
+    {
+      "orchestra": "Kuopio Symphony Orchestra",
+      "position": "Trumpet Assistant Principal",
+      "link": "https://www.kuopio.fi/kuntarekry",
+      "country": "Finland",
+      "closingDate": "August 4, 2021",
+      "auditionDate": "August 27, 2021",
+      "excerpts": []
+    },
+    {
+      "orchestra": "Orquesta Sinfónica del Instituto Politécnico Nacional",
+      "position": "Principal Trumpet",
+      "link": "https://www.ipn.mx/assets/files/cultura/docs/2021-conv-osipn-trompeta.pdf",
+      "country": "Mexico",
+      "closingDate": "June 10, 2021",
+      "auditionDate": "July 7, 2021",
+      "excerpts": [
+        "bachChristmasOratorio",
+        "beethovenLeonore2",
+        "bizetCarmen",
+        "brahmsAcademic",
+        "mahler5",
+        "mahler3",
+        "Bartók - Concerto for Orchestra",
+        "Ravel - Piano Concerto",
+        "Respighi - Pines of Rome",
+        "mussorgskyPictures",
+        "straussHeldenleben",
+        "Silvestre Revueltas - Redes",
+        "wagnerParsifal",
+        "stravinskyPetrushka"
+      ]
+    },
+    {
+      "orchestra": "Orquesta y Coro Nacionales de España",
+      "position": "Trumpet",
+      "link": "https://www.musicalchairs.info/lib?psection=jo&pid=34642&file_id=3686",
+      "country": "Spain",
+      "closingDate": "June 11, 2021",
+      "auditionDate": "",
+      "excerpts": []
+    },
+    {
+      "orchestra": "Arkansas Symphony Orchestra",
+      "position": "Principal Trumpet",
+      "link": "https://www.arkansassymphony.org/principal-trumpet",
+      "country": "USA",
+      "closingDate": "August 6, 2021",
+      "auditionDate": "August 22, 2021",
+      "excerpts": []
+    },
+    {
+      "orchestra": "Royal Australian Air Force Band",
+      "position": "Trumpet",
+      "link": "https://www.defencejobs.gov.au/jobs/air-force/musician",
+      "country": "Australia",
+      "closingDate": "June 10, 2021",
+      "auditionDate": "July 2, 2021",
+      "excerpts": []
+    },
+    {
+      "orchestra": "Janáček Philharmonic Orchestra",
+      "position": "International Orchestra Academy",
+      "link": "https://www.jfo.cz/en/international-orchestral-academy/",
+      "country": "Czech Republic",
+      "closingDate": "June 11, 2021",
+      "auditionDate": "",
+      "excerpts": []
+    },
+    {
+      "orchestra": "Antwerp Symphony Orchestra",
+      "position": "Principal Trumpet",
+      "link": "https://www.antwerpsymphonyorchestra.be/nl/audities-vacatures",
+      "country": "Belgium",
+      "closingDate": "June 6, 2021",
+      "auditionDate": "August 19, 2021",
+      "excerpts": [
+        "Bartók - Concerto for Orchestra",
+        "beethovenLeonore2",
+        "beethovenLeonore3",
+        "brahms2",
+        "mahler3",
+        "mahler5",
+        "mussorgskyPictures",
+        "Ravel - Piano Concerto",
+        "Respighi - Pines of Rome",
+        "straussHeldenleben",
+        "straussDonJuan",
+        "stravinskyPetrushka",
+        "stravinskyFirebird",
+        "wagnerParsifal"
+      ]
+    },
+    {
+      "orchestra": "Slovak National Theatre",
+      "position": "First Trumpet Player",
+      "link": "https://snd.sk/prvy-hrac-v-skupine-trubok",
+      "country": "Slovakia",
+      "closingDate": "August 10, 2021",
+      "auditionDate": "August 23, 2021",
+      "excerpts": []
+    },
+    {
+      "orchestra": "Orchestre national de Metz",
+      "position": "1 Trompette solo",
+      "link": "https://www.muvac.com/en/vac/orchestre-national-de-metz-162dd3c",
+      "country": "France",
+      "closingDate": "June 28, 2021 ",
+      "auditionDate": "July 5, 2021",
+      "excerpts": [
+        "mahler5",
+        "mahler3",
+        "wagnerParsifal",
+        "schumann2",
+        "stravinskyPetrushka",
+        "Stravinsky - Pulcinella",
+        "Bartók - Concerto for Orchestra",
+        "debussyLaMer",
+        "Respighi - Pines of Rome",
+        "rimskyKorsakovScheherazade",
+        "donizettiDonPasquale",
+        "mussorgskyPictures",
+        "ravelBolero"
+      ]
+    }
+  ]
 }

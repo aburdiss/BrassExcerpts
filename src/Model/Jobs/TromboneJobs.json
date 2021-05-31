@@ -86,6 +86,42 @@
         "Stravinsky - Pulcinella",
         "wagnerTannhauser"
       ]
+    },
+    {
+      "orchestra": "Kuopio Symphony Orchestra",
+      "position": "Principal Trombone",
+      "link": "https://www.kuopio.fi/kuntarekry",
+      "country": "Finland",
+      "closingDate": "September 1, 2021",
+      "auditionDate": "October 1, 2021",
+      "excerpts": []
+    },
+    {
+      "orchestra": "Slovene National Theater",
+      "position": "1. Trombone",
+      "link": "https://www.sng-mb.si/",
+      "country": "Slovenia",
+      "closingDate": "June 13, 2021",
+      "auditionDate": "July 5, 2021",
+      "excerpts": []
+    },
+    {
+      "orchestra": "Tokyo Metropolitan Symphony Orchestra",
+      "position": "2nd Trombone",
+      "link": "https://tmso.or.jp/e/tmso/audition/audition_tb210709/",
+      "country": "Japan",
+      "closingDate": "July 9, 2021",
+      "auditionDate": "September 28, 2021",
+      "excerpts": ["rossiniWilliamTell", "wagnerValkyrie", "mozartRequiem"]
+    },
+    {
+      "orchestra": "United States Air Force Band of the Golden Wes",
+      "position": "Trombone",
+      "link": "https://www.music.af.mil/Auditions/Upcoming-Vacancies/",
+      "country": "USA",
+      "closingDate": "June 20, 2021",
+      "auditionDate": "August 6, 2021",
+      "excerpts": []
     }
   ]
 }

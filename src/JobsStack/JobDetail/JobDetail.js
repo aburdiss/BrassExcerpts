@@ -262,72 +262,80 @@ const JobDetail = () => {
         <SectionHeader>Excerpts</SectionHeader>
       </SafeAreaView>
       <View style={styles.excerptsContainer}>
-        {route.params.excerpts.map((excerpt, index) => {
-          const borderTop = index != 0 ? styles.buttonBorder : null;
+        {route.params.excerpts.length > 0 ? (
+          route.params.excerpts.map((excerpt, index) => {
+            const borderTop = index != 0 ? styles.buttonBorder : null;
 
-          const excerptData = [
-            hornExcerpts,
-            trumpetExcerpts,
-            tromboneExcerpts,
-            tubaExcerpts,
-          ][state.jobsIndex].find((modelExcerpt) => {
-            return modelExcerpt.videos == excerpt;
-          });
+            const excerptData = [
+              hornExcerpts,
+              trumpetExcerpts,
+              tromboneExcerpts,
+              tubaExcerpts,
+            ][state.jobsIndex].find((modelExcerpt) => {
+              return modelExcerpt.videos == excerpt;
+            });
 
-          if (excerptData) {
-            return (
-              <SafeAreaView edges={['left']} key={index}>
-                <Pressable
-                  style={({pressed}) => ({
-                    opacity: pressed ? 0.7 : 1,
-                    ...styles.excerptButton,
-                    ...borderTop,
-                  })}
-                  onPress={() => {
-                    navigateToExcerptDetailPage(excerptData);
-                  }}>
-                  <Text style={styles.excerptLink}>
-                    <Text>{excerptData.composerLast} - </Text>
-                    <Text>{excerptData.name}</Text>
-                  </Text>
-                  <SafeAreaView style={styles.iconContainer} edges={['right']}>
-                    {isFavorite(
-                      {
-                        ...state,
-                        horn: state.jobsIndex == 0,
-                        trumpet: state.jobsIndex == 1,
-                        trombone: state.jobsIndex == 2,
-                        tuba: state.jobsIndex == 3,
-                      },
-                      excerptData.composerLast,
-                      excerptData.name,
-                    ) && (
+            if (excerptData) {
+              return (
+                <SafeAreaView edges={['left']} key={index}>
+                  <Pressable
+                    style={({pressed}) => ({
+                      opacity: pressed ? 0.7 : 1,
+                      ...styles.excerptButton,
+                      ...borderTop,
+                    })}
+                    onPress={() => {
+                      navigateToExcerptDetailPage(excerptData);
+                    }}>
+                    <Text style={styles.excerptLink}>
+                      <Text>{excerptData.composerLast} - </Text>
+                      <Text>{excerptData.name}</Text>
+                    </Text>
+                    <SafeAreaView
+                      style={styles.iconContainer}
+                      edges={['right']}>
+                      {isFavorite(
+                        {
+                          ...state,
+                          horn: state.jobsIndex == 0,
+                          trumpet: state.jobsIndex == 1,
+                          trombone: state.jobsIndex == 2,
+                          tuba: state.jobsIndex == 3,
+                        },
+                        excerptData.composerLast,
+                        excerptData.name,
+                      ) && (
+                        <Ionicons
+                          name="heart"
+                          size={24}
+                          color={colors.redLight}
+                          style={styles.favoriteIcon}
+                        />
+                      )}
                       <Ionicons
-                        name="heart"
+                        name="chevron-forward"
                         size={24}
-                        color={colors.redLight}
-                        style={styles.favoriteIcon}
+                        color={colors.greenLight}
                       />
-                    )}
-                    <Ionicons
-                      name="chevron-forward"
-                      size={24}
-                      color={colors.greenLight}
-                    />
-                  </SafeAreaView>
-                </Pressable>
-              </SafeAreaView>
-            );
-          } else {
-            return (
-              <SafeAreaView key={index} edges={['left']}>
-                <View style={[styles.excerptButton, borderTop]}>
-                  <Text>{excerpt}</Text>
-                </View>
-              </SafeAreaView>
-            );
-          }
-        })}
+                    </SafeAreaView>
+                  </Pressable>
+                </SafeAreaView>
+              );
+            } else {
+              return (
+                <SafeAreaView key={index} edges={['left']}>
+                  <View style={[styles.excerptButton, borderTop]}>
+                    <Text>{excerpt}</Text>
+                  </View>
+                </SafeAreaView>
+              );
+            }
+          })
+        ) : (
+          <View>
+            <Text>No excerpts available for this job.</Text>
+          </View>
+        )}
       </View>
     </ScrollView>
   );

@@ -18,6 +18,36 @@
         "mahler1",
         "mahler9"
       ]
+    },
+    {
+      "orchestra": "Arkansas Symphony Orchestra",
+      "position": "4th Horn",
+      "link": "https://www.arkansassymphony.org/horn-4",
+      "country": "USA",
+      "closingDate": "August 6, 2021",
+      "auditionDate": "August 21, 2021",
+      "excerpts": []
+    },
+    {
+      "orchestra": "Opéra Orchestre National Montpellier Occitanie Pyrénées-Méditerrané",
+      "position": "1 cor co-soliste",
+      "link": "https://www.opera-orchestre-montpellier.fr/page/concours-et-recrutements",
+      "country": "France",
+      "closingDate": "June 4, 2021",
+      "auditionDate": "June 19, 2021",
+      "excerpts": [
+        "straussEulenspiegel",
+        "straussEinHeldenleben",
+        "wagnerLohengrin",
+        "wagnerRheingold",
+        "brahmsPiano1",
+        "Rossini - The Barber of Seville",
+        "saintSaens3",
+        "tchaikovsky5",
+        "Mozart - Cosi fan tutti",
+        "beethoven7",
+        "mahler4"
+      ]
     }
   ]
 }
