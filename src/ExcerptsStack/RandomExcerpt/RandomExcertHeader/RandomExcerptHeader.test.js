@@ -2,17 +2,9 @@ import 'react-native';
 import React from 'react';
 import RandomExcerptHeader from './RandomExcerptHeader';
 import MockContext from '../../../../jest/MockContext';
-
-import {render} from '@testing-library/react-native';
 import MockNavigator from '../../../../jest/MockNavigator';
 
-test('RandomExcerptHeader renders correctly', () => {
-  render(
-    <MockContext>
-      <RandomExcerptHeader />
-    </MockContext>,
-  );
-});
+import {render} from '@testing-library/react-native';
 
 describe('RandomExcerptHeader renders all text components', () => {
   const testComposer = 'Bach';

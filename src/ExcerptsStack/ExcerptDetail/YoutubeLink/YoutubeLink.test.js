@@ -8,7 +8,7 @@ import {render} from '@testing-library/react-native';
 test('YouTubeLink renders correctly', () => {
   render(
     <MockContext>
-      <YouTubeLink />
+      <YouTubeLink video={['Test', 'Test1']} />
     </MockContext>,
   );
 });

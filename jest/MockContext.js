@@ -1,5 +1,6 @@
 import React from 'react';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
+import {QueryClientProvider, QueryClient} from 'react-query';
 import {PreferencesContext} from '../src/Model/Preferences';
 
 /**
@@ -22,6 +23,8 @@ const MockContext = ({children}) => {
   // eslint-disable-next-line no-undef
   let dispatch = jest.fn();
 
+  const queryClient = new QueryClient();
+
   return (
     <SafeAreaProvider
       initialMetrics={{
@@ -29,7 +32,9 @@ const MockContext = ({children}) => {
         insets: {top: 0, left: 0, right: 0, bottom: 0},
       }}>
       <PreferencesContext.Provider value={{state, dispatch}}>
-        {children}
+        <QueryClientProvider client={queryClient}>
+          {children}
+        </QueryClientProvider>
       </PreferencesContext.Provider>
     </SafeAreaProvider>
   );

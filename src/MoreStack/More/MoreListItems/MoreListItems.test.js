@@ -8,13 +8,14 @@ import {
   ButtonListItem,
 } from './MoreListItems';
 import MockContext from '../../../../jest/MockContext';
+import MockNavigator from '../../../../jest/MockNavigator';
 
 import {render} from '@testing-library/react-native';
 
 test('TextListItem renders correctly', () => {
   render(
     <MockContext>
-      <TextListItem />
+      <TextListItem item={{value: ''}} />
     </MockContext>,
   );
 });
@@ -22,23 +23,25 @@ test('TextListItem renders correctly', () => {
 test('LinkListItem renders correctly', () => {
   render(
     <MockContext>
-      <LinkListItem />
+      <LinkListItem item={{instrument: undefined}} />
     </MockContext>,
   );
 });
 
 test('InternalListItem renders correctly', () => {
   render(
-    <MockContext>
-      <InternalListItem />
-    </MockContext>,
+    <MockNavigator>
+      <MockContext>
+        <InternalListItem item={{value: ''}} />
+      </MockContext>
+    </MockNavigator>,
   );
 });
 
 test('SwitchListItem renders correctly', () => {
   render(
     <MockContext>
-      <SwitchListItem />
+      <SwitchListItem item={{value: '', setting: ''}} />
     </MockContext>,
   );
 });
@@ -46,7 +49,7 @@ test('SwitchListItem renders correctly', () => {
 test('ButtonListItem renders correctly', () => {
   render(
     <MockContext>
-      <ButtonListItem />
+      <ButtonListItem item={{value: ''}} />
     </MockContext>,
   );
 });

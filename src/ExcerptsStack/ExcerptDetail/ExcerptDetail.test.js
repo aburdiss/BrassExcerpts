@@ -4,11 +4,14 @@ import ExcerptDetail from './ExcerptDetail';
 import MockContext from '../../../jest/MockContext';
 
 import {render} from '@testing-library/react-native';
+import MockNavigator from '../../../jest/MockNavigator';
 
 test('ExcerptDetail renders correctly', () => {
   render(
-    <MockContext>
-      <ExcerptDetail />
-    </MockContext>,
+    <MockNavigator>
+      <MockContext>
+        <ExcerptDetail />
+      </MockContext>
+    </MockNavigator>,
   );
 });

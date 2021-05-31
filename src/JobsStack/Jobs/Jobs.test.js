@@ -3,15 +3,18 @@ import React from 'react';
 import {render} from '@testing-library/react-native';
 
 import MockContext from '../../../jest/MockContext';
+import MockNavigator from '../../../jest/MockNavigator';
 
 import Jobs from './Jobs';
 import {hasValidJobs} from './JobsUtils';
 
 test('Jobs renders correctly', () => {
   render(
-    <MockContext>
-      <Jobs />
-    </MockContext>,
+    <MockNavigator>
+      <MockContext>
+        <Jobs />
+      </MockContext>
+    </MockNavigator>,
   );
 });
 
