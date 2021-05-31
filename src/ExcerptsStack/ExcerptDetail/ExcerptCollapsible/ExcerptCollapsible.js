@@ -46,7 +46,7 @@ const ExcerptCollapsible = ({excerpt, startCollapsed, index}) => {
   const animatedController = useRef(new Animated.Value(0)).current;
 
   const windowWidth = useWindowDimensions().width;
-  const windowWidthInsets = useSafeAreaInsets();
+  const windowInsets = useSafeAreaInsets();
 
   /**
    * @function ExcerptCollapsible~toggleChevron
@@ -120,9 +120,7 @@ const ExcerptCollapsible = ({excerpt, startCollapsed, index}) => {
             <Text style={styles.excerptCaption}>{picture[0]}</Text>
             <Pinchable>
               <AutoHeightImage
-                width={
-                  windowWidth - windowWidthInsets.left - windowWidthInsets.right
-                }
+                width={windowWidth - windowInsets.left - windowInsets.right}
                 source={{
                   uri: EXTERNAL_GITHUB_URL + picture[1],
                 }}

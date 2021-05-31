@@ -1,6 +1,7 @@
 import React, {useContext, useEffect, useState} from 'react';
-import {View, useWindowDimensions, StyleSheet} from 'react-native';
+import {View, useWindowDimensions, StyleSheet, ScrollView} from 'react-native';
 import AutoHeightImage from 'react-native-auto-height-image';
+import {SafeAreaView, useSafeAreaInsets} from 'react-native-safe-area-context';
 import Pinchable from 'react-native-pinchable';
 
 import {PreferencesContext} from '../../Model/Preferences';
@@ -24,6 +25,7 @@ import {generateRandomExcerpt} from './generateRandomExcerpt';
  */
 const RandomExcerpt = () => {
   const windowWidth = useWindowDimensions().width;
+  const windowInsets = useSafeAreaInsets();
   const {state} = useContext(PreferencesContext);
   const [composition, setComposition] = useState(undefined);
   const [excerptIndex, setExcerptIndex] = useState(undefined);
@@ -52,16 +54,30 @@ const RandomExcerpt = () => {
   );
 
   return (
-    <View style={styles.randomExcerptContainer}>
-      <View style={styles.excerptContainer}>
+    <ScrollView style={styles.randomExcerptContainer}>
+      <SafeAreaView style={styles.excerptContainer}>
         <RandomExcerptHeader
           composition={composition}
           excerptIndex={excerptIndex}
           partIndex={partIndex}
         />
+        <View style={styles.actionButtonContainer}>
+          <ActionButton
+            onPress={() =>
+              generateRandomExcerpt(
+                state,
+                setComposition,
+                setExcerptIndex,
+                setPartIndex,
+                composition,
+              )
+            }>
+            Randomize
+          </ActionButton>
+        </View>
         <Pinchable>
           <AutoHeightImage
-            width={windowWidth}
+            width={windowWidth - windowInsets.right - windowInsets.left}
             accessibilityLabel={
               composition?.excerpts[excerptIndex].pictures[partIndex][0]
             }
@@ -72,28 +88,15 @@ const RandomExcerpt = () => {
             }}
           />
         </Pinchable>
-      </View>
-      <View style={styles.actionButtonContainer}>
-        <ActionButton
-          onPress={() =>
-            generateRandomExcerpt(
-              state,
-              setComposition,
-              setExcerptIndex,
-              setPartIndex,
-              composition,
-            )
-          }>
-          Randomize
-        </ActionButton>
-      </View>
-    </View>
+      </SafeAreaView>
+    </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
   actionButtonContainer: {
     paddingHorizontal: 10,
+    paddingBottom: 10,
   },
   excerptContainer: {
     flex: 1,
