@@ -1,12 +1,5 @@
 import React, {useContext, useEffect, useState} from 'react';
-import {
-  ScrollView,
-  View,
-  Text,
-  StyleSheet,
-  Pressable,
-  Image,
-} from 'react-native';
+import {ScrollView, View, Text, Pressable, Image} from 'react-native';
 import {useRoute} from '@react-navigation/native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {SafeAreaView} from 'react-native-safe-area-context';
@@ -17,6 +10,7 @@ import ExcerptSection from './ExcerptSection/ExcerptSection';
 import {colors} from '../../Model/Model';
 import {composers} from '../../Model/ComposerModel';
 
+import {styles} from './ExcerptDetail.style';
 import {excerpts as hornExcerpts} from '../../Model/Excerpts/HornExcerpts';
 import {excerpts as trumpetExcerpts} from '../../Model/Excerpts/TrumpetExcerpts';
 import {excerpts as tromboneExcerpts} from '../../Model/Excerpts/TromboneExcerpts';
@@ -205,7 +199,9 @@ const ExcerptDetail = () => {
       <SafeAreaView edges={['right', 'left']}>
         <View style={styles.metaInfoContainer}>
           <View>
-            <Text style={styles.title}>{item.composer}</Text>
+            <Text accessibilityRole="text" style={styles.title}>
+              {item.composer}
+            </Text>
             <MetaLabel label="Date" data={item.date} />
             <MetaLabel label="Era" data={item.era} />
             <MetaLabel label="Genre" data={item.genre} />
@@ -243,6 +239,8 @@ const ExcerptDetail = () => {
           />
           {getNumberOfInstruments(state) == 1 && (
             <Pressable
+              accessibilityRole="imagebutton"
+              accessibilityHint="Adds excerpt to favorites"
               onPress={addToFavorites}
               hitSlop={10}
               style={styles.singleAddToFavoritesButton}>
@@ -290,43 +288,5 @@ const ExcerptDetail = () => {
     </ScrollView>
   );
 };
-
-const styles = StyleSheet.create({
-  singleAddToFavoritesButton: {
-    position: 'absolute',
-    top: 5,
-    right: 90,
-  },
-  composerImage: {
-    aspectRatio: 1,
-    width: 95,
-    borderRadius: 50,
-    backgroundColor: colors.white,
-  },
-  excerptContainer: {
-    paddingBottom: 20,
-  },
-  metaInfoContainer: {
-    marginHorizontal: 20,
-    paddingVertical: 10,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-  },
-  title: {
-    fontStyle: 'italic',
-    fontWeight: 'bold',
-  },
-  youtubeHeading: {
-    fontSize: 28,
-    paddingTop: 10,
-  },
-  youtubeLinksContainer: {
-    paddingHorizontal: 20,
-    marginTop: 20,
-    marginBottom: 70,
-    borderTopColor: colors.greenDark,
-    borderTopWidth: 2,
-  },
-});
 
 export default ExcerptDetail;

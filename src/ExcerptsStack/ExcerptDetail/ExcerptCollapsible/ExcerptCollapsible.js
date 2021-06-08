@@ -83,6 +83,11 @@ const ExcerptCollapsible = ({excerpt, startCollapsed, index}) => {
   return (
     <View>
       <Pressable
+        accessibilityRole="spinbutton"
+        accessible={true}
+        accessibilityLabel={excerpt.description + ' ' + excerpt.measures}
+        accessibilityState={{expanded: !excerptIsCollapsed}}
+        accessibilityHint={'Opens ' + excerpt.description}
         disabled={!startCollapsed}
         onPress={() => {
           toggleChevron();
@@ -120,6 +125,14 @@ const ExcerptCollapsible = ({excerpt, startCollapsed, index}) => {
             <Text style={styles.excerptCaption}>{picture[0]}</Text>
             <Pinchable>
               <AutoHeightImage
+                accessibilityRole="image"
+                accessibilityLabel={
+                  excerpt.description +
+                  ' ' +
+                  excerpt.measuers +
+                  ' ' +
+                  picture[0]
+                }
                 width={windowWidth - windowInsets.left - windowInsets.right}
                 source={{
                   uri: EXTERNAL_GITHUB_URL + picture[1],

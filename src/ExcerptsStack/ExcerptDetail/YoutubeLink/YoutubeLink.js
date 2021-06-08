@@ -4,6 +4,7 @@ import {useDarkMode} from 'react-native-dynamic';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import {colors} from '../../../Model/Model';
+import {styles} from './YoutubeLink.style';
 
 /**
  * @function YoutubeLink
@@ -16,7 +17,7 @@ import {colors} from '../../../Model/Model';
  * affects the color of the link button.
  * @author Alexander Burdiss
  * @since 3/10/21
- * @version 1.0.0
+ * @version 1.1.0
  * @component
  * @example
  * ```jsx
@@ -49,6 +50,10 @@ const YoutubeLink = ({video, type}) => {
 
   return (
     <Pressable
+      accessible="true"
+      accessibilityRole="button"
+      accessibilityLabel={video[0]}
+      accessibilityHint={'Opens YouTube video in separate app'}
       onPress={function openYouTubeLink() {
         const url = video[1];
         Linking.canOpenURL(url).then((supported) => {
@@ -61,25 +66,16 @@ const YoutubeLink = ({video, type}) => {
         });
       }}
       style={({pressed}) => ({
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'space-between',
         opacity: pressed ? 0.7 : 1,
         backgroundColor: backgroundColors[type],
-        marginVertical: 4,
-        paddingVertical: 12,
-        paddingHorizontal: 20,
-        borderRadius: 15,
         borderBottomColor: bottomBorderColors[type],
-        borderBottomWidth: 1,
+        ...styles.button,
       })}>
       <Text
         // eslint-disable-next-line react-native/no-inline-styles
         style={{
-          fontWeight: 'bold',
-          flex: 1,
           color: textColors[type],
-          paddingRight: 10,
+          ...styles.text,
         }}>
         {video[0]}
       </Text>

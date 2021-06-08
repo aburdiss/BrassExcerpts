@@ -46,6 +46,9 @@ const ExcerptSection = ({
   item,
 }) => {
   const {state} = useContext(PreferencesContext);
+  const isFavorite = state.favorites.includes(
+    instrumentName + item.composerLast + item.name,
+  );
 
   return instrumentExcerpt ? (
     <View style={styles.instrumentExcerptContainer}>
@@ -53,29 +56,26 @@ const ExcerptSection = ({
         <SafeAreaView
           edges={['right', 'left']}
           style={styles.instrumentHeadingContainer}>
-          <Text style={styles.instrumentHeading}>
+          <Text style={styles.instrumentHeading} accessibilityRole="header">
             {capitalize(instrumentName)}
           </Text>
           <Pressable
+            accessible={true}
+            accessibilityRole="imagebutton"
+            accessibilityLabel={isFavorite ? 'Favorite' : 'Not Favorite'}
+            accessibilityHint={
+              isFavorite
+                ? 'Remove excercise from favorites'
+                : 'Add excercise to favorites'
+            }
+            accessibilityState={{selected: isFavorite}}
             onPress={() => {
               addToFavorites(instrumentName);
             }}>
             <Ionicons
-              name={
-                state.favorites.includes(
-                  instrumentName + item.composerLast + item.name,
-                )
-                  ? 'heart'
-                  : 'heart-outline'
-              }
+              name={isFavorite ? 'heart' : 'heart-outline'}
               size={32}
-              color={
-                state.favorites.includes(
-                  instrumentName + item.composerLast + item.name,
-                )
-                  ? colors.redLight
-                  : colors.greenLight
-              }
+              color={isFavorite ? colors.redLight : colors.greenLight}
             />
           </Pressable>
         </SafeAreaView>
