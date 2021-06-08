@@ -17,7 +17,7 @@ import {Text, View, StyleSheet} from 'react-native';
  */
 const SectionHeader = ({children}) => {
   return (
-    <View>
+    <View accessibilityRole="header">
       <Text style={styles.text}>{children}</Text>
     </View>
   );

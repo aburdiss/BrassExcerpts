@@ -30,12 +30,18 @@ const CompositionSection = ({excerpts}) => {
         return (
           <SafeAreaView edges={['left']} style={styles.buttonSafeArea}>
             <Pressable
+              key={excerpt.id.toString()}
+              accessible={true}
+              accessibilityRole="button"
+              accessibilityLabel={excerpt.name}
+              accessibilityHint={
+                'Navigates to Excerpt Detail for' + excerpt.name
+              }
               style={({pressed}) => ({
                 opacity: pressed ? 0.7 : 1,
                 ...borderTop,
                 ...styles.button,
               })}
-              key={excerpt.id.toString()}
               onPress={function navigateToExcerpt() {
                 navigation.navigate('Composer Excerpt Detail', excerpt);
               }}>

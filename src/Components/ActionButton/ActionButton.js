@@ -19,7 +19,8 @@ const ActionButton = ({onPress, children}) => {
       style={({pressed}) => ({
         opacity: pressed ? 0.7 : 1,
         ...styles.button,
-      })}>
+      })}
+      accessibilityRole="button">
       <Text style={styles.text}>{children}</Text>
     </Pressable>
   );

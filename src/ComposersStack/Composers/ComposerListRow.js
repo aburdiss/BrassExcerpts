@@ -38,6 +38,10 @@ const ComposerListRow = ({name, index, imageSource, onPress}) => {
 
   return (
     <Pressable
+      accessible={true}
+      accessibilityLabel={name}
+      accessibilityHint={'Navigates to Composer ' + name}
+      accessibilityRole="button"
       style={({pressed}) => ({
         opacity: pressed ? 0.7 : 1,
       })}

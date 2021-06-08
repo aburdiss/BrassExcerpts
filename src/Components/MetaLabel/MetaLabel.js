@@ -17,7 +17,11 @@ const MetaLabel = ({label, data, labelColor}) => {
     return null;
   } else {
     return (
-      <Text style={styles.textWrapper}>
+      <Text
+        style={styles.textWrapper}
+        accessible={true}
+        accessibilityRole="text"
+        accessibilityLabel={label + ': ' + data}>
         <Text
           style={[
             styles.labelText,

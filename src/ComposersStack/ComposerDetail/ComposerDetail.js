@@ -38,19 +38,30 @@ const ComposerDetail = () => {
       <SafeAreaView edges={['left', 'right']}>
         <View style={styles.card}>
           <View style={styles.cardImageTop}>
-            <Text style={styles.cardImageTopText}>/{composer.ipa}/</Text>
-            <Text style={styles.cardImageTopText}>{composer.dates}</Text>
+            <Text accessibilityRole="text" style={styles.cardImageTopText}>
+              /{composer.ipa}/
+            </Text>
+            <Text accessibilityRole="text" style={styles.cardImageTopText}>
+              {composer.dates}
+            </Text>
           </View>
           <LinearGradient
             colors={[colors.blueLight, colors.greenLight]}
             style={styles.linearGradient}>
-            <Image source={composer.image} style={styles.image} />
+            <Image
+              source={composer.image}
+              style={styles.image}
+              accessibilityRole="image"
+              accessibilityLabel={'A picture of ' + composer.name}
+            />
           </LinearGradient>
           <View style={styles.cardBottom}>
             <View style={styles.cardImageBottom}>
               <MetaLabel label="Country" data={composer.country} />
             </View>
-            <Text style={styles.bio}>{composer.bio}</Text>
+            <Text accessibilityRole="text" style={styles.bio}>
+              {composer.bio}
+            </Text>
           </View>
         </View>
       </SafeAreaView>

@@ -8,7 +8,10 @@ const ScrollViewBounceContainer = ({
   bottomBounceColor,
 }) => {
   return (
-    <View style={styles.container}>
+    <View
+      style={styles.container}
+      accessibilityElementsHidden={true}
+      importantForAccessibility="no-hide-descendants">
       {children}
       <View style={styles.backgroundContainer}>
         <View
