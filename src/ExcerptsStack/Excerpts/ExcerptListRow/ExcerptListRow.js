@@ -22,7 +22,12 @@ const ExcerptListRow = ({composer, composition, onPress}) => {
   const {state} = useContext(PreferencesContext);
 
   return (
-    <Pressable onPress={onPress}>
+    <Pressable
+      onPress={onPress}
+      accessible
+      accessibilityRole="button"
+      accessibilityLabel={composer + ' ' + composition}
+      accessibilityHint={'Navigates to ' + composer + ' ' + composition}>
       <SafeAreaView edges={['right', 'left']} style={styles.button}>
         <Text styles={styles.text}>
           <Text style={styles.composerText}>{composer + '  '}</Text>

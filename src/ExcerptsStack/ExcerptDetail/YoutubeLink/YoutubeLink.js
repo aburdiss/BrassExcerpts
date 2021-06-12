@@ -1,10 +1,9 @@
 import React from 'react';
-import {Pressable, Linking, Text} from 'react-native';
+import {Pressable, Linking, Text, StyleSheet} from 'react-native';
 import {useDarkMode} from 'react-native-dynamic';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import {colors} from '../../../Model/Model';
-import {styles} from './YoutubeLink.style';
 
 /**
  * @function YoutubeLink
@@ -83,5 +82,23 @@ const YoutubeLink = ({video, type}) => {
     </Pressable>
   );
 };
+
+export const styles = StyleSheet.create({
+  button: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginVertical: 4,
+    paddingVertical: 12,
+    paddingHorizontal: 20,
+    borderRadius: 15,
+    borderBottomWidth: 1,
+  },
+  text: {
+    fontWeight: 'bold',
+    flex: 1,
+    paddingRight: 10,
+  },
+});
 
 export default YoutubeLink;

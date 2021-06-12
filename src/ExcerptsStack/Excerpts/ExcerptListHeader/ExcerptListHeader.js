@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import {Text, View, Pressable, StyleSheet} from 'react-native';
 import {useNavigation} from '@react-navigation/core';
 import {SafeAreaView} from 'react-native-safe-area-context';
@@ -8,10 +8,11 @@ import {PreferencesContext} from '../../../Model/Preferences';
 import {getInstrumentsSelected} from '../../../utils/getInstrumentsSelected/getInstrumentsSelected';
 
 /**
+ * @function ExcerptListHeader
  * @description The header for the Excerpts list view.
  * @author Alexander Burdiss
  * @since 3/7/21
- * @version 1.0.1
+ * @version 1.1.0
  *
  * @component
  * @example
@@ -19,27 +20,52 @@ import {getInstrumentsSelected} from '../../../utils/getInstrumentsSelected/getI
  * <ExcerptListHeader />
  * ```
  */
-const ExcerptListHeader = () => {
+function ExcerptListHeader() {
   const navigation = useNavigation();
   const {state} = useContext(PreferencesContext);
 
+  const [instrumentsSelected, setInstrumentsSelected] = useState(
+    getInstrumentsSelected(state),
+  );
+  useEffect(
+    function updateInstrumentsSelected() {
+      const newInstrumentsSelected = getInstrumentsSelected(state);
+      setInstrumentsSelected(newInstrumentsSelected);
+    },
+    [state],
+  );
+
+  /**
+   * @function ExcerptListHeader~navigateToSettings
+   * @description Navigates the user from the home tab to the settings tab so
+   * that they can change instruments.
+   * @author Alexander Burdiss
+   * @since 6/11/21
+   * @version 1.0.1
+   */
   function navigateToSettings() {
     navigation.navigate('More');
   }
 
   return (
     <View style={styles.container}>
-      <Pressable onPress={navigateToSettings}>
+      <Pressable
+        onPress={navigateToSettings}
+        accessibilityRole="button"
+        accessibilityLabel={instrumentsSelected}
+        accessibilityHint="Navigates to Settings screen change instrument">
         <SafeAreaView edges={['right', 'left']}>
-          <Text style={styles.instrumentText}>
-            {getInstrumentsSelected(state)}
+          <Text style={styles.instrumentText} accessibilityRole="header">
+            {instrumentsSelected}
           </Text>
-          <Text>Tap to change instrument selection</Text>
+          <Text accessibilityRole="text">
+            Tap to change instrument selection
+          </Text>
         </SafeAreaView>
       </Pressable>
     </View>
   );
-};
+}
 
 const styles = StyleSheet.create({
   container: {
