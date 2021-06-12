@@ -24,6 +24,7 @@ import {excerpts as tubaExcerpts} from '../../Model/Excerpts/TubaExcerpts';
 import {PreferencesContext} from '../../Model/Preferences';
 import {getNumberOfInstruments} from '../../utils/getNumberOfInstruments/getNumberOfInstruments';
 import {getActiveInstrument} from '../../utils/getActiveInstrument/getActiveInstrument';
+import {isFavorite} from '../../utils/isFavorite/isFavorite';
 
 /**
  * @todo Add Loading State to images.
@@ -34,7 +35,7 @@ import {getActiveInstrument} from '../../utils/getActiveInstrument/getActiveInst
  * where the image is rotated.
  * @author Alexander Burdiss
  * @since 3/3/21
- * @version 1.0.1
+ * @version 1.1.0
  * @component
  * @example
  * ```jsx
@@ -141,37 +142,6 @@ const ExcerptDetail = () => {
   }
 
   /**
-   * @function ExcerptDetail~getSingleFavoritesIcon
-   * @description If the excerpt is only showing for one instrument, this
-   * function returns the correct icon based on whether the excerpt is in the
-   * users' favorites or not.
-   * @author Alexander Burdiss
-   * @since 4/30/21
-   * @version 1.0.0
-   * @returns {React.Component} An icon to display on the excerpt Header.
-   */
-  function getSingleFavoritesIcon() {
-    const activeInstrument = getActiveInstrument(state);
-    const favoriteKey = activeInstrument + item.composerLast + item.name;
-
-    let highlighted;
-
-    if (state?.favorites) {
-      highlighted = state.favorites.includes(favoriteKey);
-    } else {
-      highlighted = false;
-    }
-
-    return (
-      <Ionicons
-        name={highlighted ? 'heart' : 'heart-outline'}
-        size={32}
-        color={highlighted ? colors.redLight : colors.greenLight}
-      />
-    );
-  }
-
-  /**
    * @function ExcerptDetail~shouldStartCollapsed
    * @description Returns whether or not on the initial load the excerpt should
    * start collapsed.
@@ -254,17 +224,30 @@ const ExcerptDetail = () => {
                 ' ' +
                 item.name +
                 ' is ' +
-                (state?.favorites.includes(
-                  getActiveInstrument(state) + item.composerLast + item.name,
-                )
-                  ? ''
-                  : 'not') +
+                (isFavorite(state, item.composerLast, item.name) ? '' : 'not') +
                 ' a favorite excerpt'
               }
+              android_ripple={{
+                color: isFavorite(state, item.composerLast, item.name)
+                  ? colors.greenLight
+                  : colors.redLight,
+              }}
               onPress={addToFavorites}
               hitSlop={10}
               style={styles.singleAddToFavoritesButton}>
-              {getSingleFavoritesIcon()}
+              <Ionicons
+                name={
+                  isFavorite(state, item.composerLast, item.name)
+                    ? 'heart'
+                    : 'heart-outline'
+                }
+                size={32}
+                color={
+                  isFavorite(state, item.composerLast, item.name)
+                    ? colors.redLight
+                    : colors.greenLight
+                }
+              />
             </Pressable>
           )}
         </View>

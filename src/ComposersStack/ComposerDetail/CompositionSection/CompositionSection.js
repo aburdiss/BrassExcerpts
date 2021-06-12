@@ -17,7 +17,7 @@ import {PreferencesContext} from '../../../Model/Preferences';
  * section.
  * @author Alexander Burdiss
  * @since 3/9/21
- * @version 1.0.0
+ * @version 1.0.1
  */
 const CompositionSection = ({excerpts}) => {
   const {state} = useContext(PreferencesContext);
@@ -28,9 +28,11 @@ const CompositionSection = ({excerpts}) => {
       {excerpts.map((excerpt, index) => {
         const borderTop = index != 0 ? styles.buttonBorder : null;
         return (
-          <SafeAreaView edges={['left']} style={styles.buttonSafeArea}>
+          <SafeAreaView
+            edges={['left']}
+            key={excerpt.id.toString()}
+            style={styles.buttonSafeArea}>
             <Pressable
-              key={excerpt.id.toString()}
               accessible={true}
               accessibilityRole="button"
               accessibilityLabel={excerpt.name}
@@ -42,6 +44,9 @@ const CompositionSection = ({excerpts}) => {
                 ...borderTop,
                 ...styles.button,
               })}
+              android_ripple={{
+                color: styles.accentColor.color,
+              }}
               onPress={function navigateToExcerpt() {
                 navigation.navigate('Composer Excerpt Detail', excerpt);
               }}>
@@ -58,7 +63,7 @@ const CompositionSection = ({excerpts}) => {
                 <Ionicons
                   name="chevron-forward"
                   size={24}
-                  color={colors.greenLight}
+                  color={styles.accentColor.color}
                 />
               </SafeAreaView>
             </Pressable>
@@ -70,6 +75,9 @@ const CompositionSection = ({excerpts}) => {
 };
 
 const styles = StyleSheet.create({
+  accentColor: {
+    color: colors.greenLight,
+  },
   button: {
     paddingVertical: 10,
     paddingRight: 20,

@@ -88,6 +88,9 @@ const ExcerptCollapsible = ({excerpt, startCollapsed, index}) => {
         accessibilityLabel={excerpt.description + ' ' + excerpt.measures}
         accessibilityState={{expanded: !excerptIsCollapsed}}
         accessibilityHint={'Opens ' + excerpt.description}
+        android_ripple={{
+          color: styles.excerptPressableBorder.borderTopColor,
+        }}
         disabled={!startCollapsed}
         onPress={() => {
           toggleChevron();
@@ -111,7 +114,7 @@ const ExcerptCollapsible = ({excerpt, startCollapsed, index}) => {
               <Ionicons
                 name="chevron-down"
                 size={32}
-                color={colors.greenLight}
+                color={styles.excerptPressableBorder.borderTopColor}
               />
             </Animated.View>
           ) : null}

@@ -25,7 +25,7 @@ const YoutubeSection = ({data}) => {
 
   return (
     <View>
-      {excerptVideos.full ? (
+      {excerptVideos?.full ? (
         <View>
           <SectionHeader>Orchestra</SectionHeader>
           {excerptVideos.full.map((video) => (
@@ -33,7 +33,7 @@ const YoutubeSection = ({data}) => {
           ))}
         </View>
       ) : null}
-      {excerptVideos.band ? (
+      {excerptVideos?.band ? (
         <View>
           <SectionHeader>Band</SectionHeader>
           {excerptVideos.band.map((video) => (
@@ -41,7 +41,7 @@ const YoutubeSection = ({data}) => {
           ))}
         </View>
       ) : null}
-      {excerptVideos.score ? (
+      {excerptVideos?.score ? (
         <View>
           <SectionHeader>Full Orchestra with Score</SectionHeader>
           {excerptVideos.score.map((video) => (
@@ -49,7 +49,7 @@ const YoutubeSection = ({data}) => {
           ))}
         </View>
       ) : null}
-      {excerptVideos.horn ? (
+      {excerptVideos?.horn ? (
         <View>
           <SectionHeader>Horn Specific</SectionHeader>
           {excerptVideos.horn.map((video) => (
@@ -57,7 +57,7 @@ const YoutubeSection = ({data}) => {
           ))}
         </View>
       ) : null}
-      {excerptVideos.trumpet ? (
+      {excerptVideos?.trumpet ? (
         <View>
           <SectionHeader>Trumpet Specific</SectionHeader>
           {excerptVideos.trumpet.map((video) => (
@@ -65,7 +65,7 @@ const YoutubeSection = ({data}) => {
           ))}
         </View>
       ) : null}
-      {excerptVideos.trombone ? (
+      {excerptVideos?.trombone ? (
         <View>
           <SectionHeader>Trombone Specific</SectionHeader>
           {excerptVideos.trombone.map((video) => (
@@ -73,7 +73,7 @@ const YoutubeSection = ({data}) => {
           ))}
         </View>
       ) : null}
-      {excerptVideos.tuba ? (
+      {excerptVideos?.tuba ? (
         <View>
           <SectionHeader>Tuba Specific</SectionHeader>
           {excerptVideos.tuba.map((video) => (

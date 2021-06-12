@@ -17,7 +17,7 @@ import {colors} from '../../../Model/Model';
  * randomly chosen
  * @author Alexander Burdiss
  * @since 5/8/21
- * @version 1.0.0
+ * @version 1.1.0
  */
 const RandomExcerptHeader = ({composition, excerptIndex, partIndex}) => {
   const navigation = useNavigation();
@@ -43,6 +43,13 @@ const RandomExcerptHeader = ({composition, excerptIndex, partIndex}) => {
           </Text>
         </View>
         <Pressable
+          accessible
+          accessibilityRole="button"
+          accessibilityLabel="View Full Excerpt"
+          accessibilityHint={'Navigates to Excerpt page ' + composition?.name}
+          android_ripple={{
+            color: styles.pressableText.color,
+          }}
           style={styles.compositionPressable}
           onPress={() => {
             navigation.navigate('Excerpt Detail', composition);

@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import {Pressable, Text, StyleSheet} from 'react-native';
+import {Pressable, Text, StyleSheet, View} from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {SafeAreaView} from 'react-native-safe-area-context';
 
@@ -16,7 +16,7 @@ import {isFavorite} from '../../../utils/isFavorite/isFavorite';
  * pressed.
  * @author Alexander Burdiss
  * @since 3/6/21
- * @version 1.1.1
+ * @version 1.2.0
  */
 const ExcerptListRow = ({composer, composition, onPress}) => {
   const {state} = useContext(PreferencesContext);
@@ -27,26 +27,39 @@ const ExcerptListRow = ({composer, composition, onPress}) => {
       accessible
       accessibilityRole="button"
       accessibilityLabel={composer + ' ' + composition}
-      accessibilityHint={'Navigates to ' + composer + ' ' + composition}>
+      accessibilityHint={'Navigates to ' + composer + ' ' + composition}
+      android_ripple={{
+        color: styles.accentColor.color,
+      }}>
       <SafeAreaView edges={['right', 'left']} style={styles.button}>
         <Text styles={styles.text}>
           <Text style={styles.composerText}>{composer + '  '}</Text>
           <Text style={styles.compositionText}>{composition}</Text>
         </Text>
-        {isFavorite(state, composer, composition) && (
+        <View style={styles.iconContainer}>
+          {isFavorite(state, composer, composition) && (
+            <Ionicons
+              name="heart"
+              size={24}
+              color={colors.redLight}
+              style={styles.favoriteIcon}
+            />
+          )}
           <Ionicons
-            name="heart"
+            name="chevron-forward"
             size={24}
-            color={colors.redLight}
-            style={styles.favoriteIcon}
+            color={styles.accentColor.color}
           />
-        )}
+        </View>
       </SafeAreaView>
     </Pressable>
   );
 };
 
 const styles = StyleSheet.create({
+  accentColor: {
+    color: colors.greenLight,
+  },
   button: {
     paddingVertical: 10,
     paddingLeft: 25,
@@ -61,8 +74,12 @@ const styles = StyleSheet.create({
   composerText: {
     fontWeight: 'bold',
   },
-  favoriteIcon: {
+  iconContainer: {
+    flexDirection: 'row',
     paddingRight: 20,
+  },
+  favoriteIcon: {
+    paddingRight: 5,
   },
   text: {
     fontSize: 16,

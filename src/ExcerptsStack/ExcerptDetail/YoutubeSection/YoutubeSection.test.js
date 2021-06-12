@@ -8,7 +8,7 @@ import {render} from '@testing-library/react-native';
 test('YouTubeSection renders correctly', () => {
   render(
     <MockContext>
-      <YouTubeSection data={'mahler1'} />
+      <YouTubeSection data={'straussHeldenleben'} />
     </MockContext>,
   );
 });

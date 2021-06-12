@@ -16,7 +16,7 @@ import {colors} from '../../../Model/Model';
  * affects the color of the link button.
  * @author Alexander Burdiss
  * @since 3/10/21
- * @version 1.1.0
+ * @version 1.1.1
  * @component
  * @example
  * ```jsx
@@ -53,6 +53,9 @@ const YoutubeLink = ({video, type}) => {
       accessibilityRole="button"
       accessibilityLabel={video[0]}
       accessibilityHint={'Opens YouTube video in separate app'}
+      android_ripple={{
+        color: textColors[type],
+      }}
       onPress={function openYouTubeLink() {
         const url = video[1];
         Linking.canOpenURL(url).then((supported) => {

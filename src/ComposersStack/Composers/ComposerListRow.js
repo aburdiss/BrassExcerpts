@@ -1,5 +1,6 @@
 import React from 'react';
 import {View, Text, Image, Pressable, StyleSheet} from 'react-native';
+import {DynamicValue, useDarkMode} from 'react-native-dynamic';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
@@ -19,7 +20,7 @@ import {colors} from '../../Model/Model';
  * pressed.
  * @author Alexander Burdiss
  * @since 3/18/21
- * @version 1.0.0
+ * @version 1.0.1
  * @component
  * @example
  * ```jsx
@@ -36,12 +37,17 @@ import {colors} from '../../Model/Model';
 const ComposerListRow = ({name, index, imageSource, onPress}) => {
   const divider = index != 0 ? styles.notFirstTextContainer : null;
 
+  const DARKMODE = useDarkMode();
+
   return (
     <Pressable
       accessible={true}
       accessibilityLabel={name}
       accessibilityHint={'Navigates to Composer ' + name}
       accessibilityRole="button"
+      android_ripple={{
+        color: DARKMODE ? colors.greenDark : colors.greenLight,
+      }}
       style={({pressed}) => ({
         opacity: pressed ? 0.7 : 1,
       })}
@@ -72,7 +78,7 @@ const styles = StyleSheet.create({
     height: 54,
     width: 54,
     borderRadius: 29,
-    backgroundColor: 'white',
+    backgroundColor: colors.white,
   },
   text: {
     fontSize: 15,

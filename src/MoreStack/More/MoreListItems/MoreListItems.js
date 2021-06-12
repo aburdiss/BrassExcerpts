@@ -117,6 +117,9 @@ export const InternalListItem = ({item}) => {
       accessible={true}
       accessibilityLabel={item.value}
       accessibilityRole="link"
+      android_ripple={{
+        color: styles.linkText.color,
+      }}
       onPress={() => {
         navigation.navigate(item.component);
       }}>
@@ -216,13 +219,16 @@ export const SwitchListItem = ({item, state, dispatch}) => {
       onPress={updateValue}
       accessible={true}
       accessibilityLabel={item.value}
-      accessibilityState={{checked: state[item.setting]}}
+      accessibilityState={{checked: state && state[item.setting]}}
       accessibilityRole="switch"
       accessibilityHint={'Toggles setting' + ' ' + item.value}>
       <Text maxFontSizeMultiplier={1.8} style={styles.listRowText}>
         {item.value}
       </Text>
-      <Switch value={state[item.setting]} onValueChange={updateValue} />
+      <Switch
+        value={state && state[item.setting]}
+        onValueChange={updateValue}
+      />
     </Pressable>
   );
 };
@@ -291,6 +297,9 @@ export const ButtonListItem = ({item, dispatch}) => {
       }}
       accessible={true}
       accessibilityLabel={item.value}
+      android_ripple={{
+        color: styles.linkText.color,
+      }}
       style={({pressed}) => ({
         opacity: pressed ? 0.7 : 1,
       })}>

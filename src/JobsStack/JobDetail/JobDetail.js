@@ -237,7 +237,7 @@ const JobDetail = () => {
         </View>
         <SectionHeader>Excerpts</SectionHeader>
       </SafeAreaView>
-      {route.params.excerpts.length > 0 ? (
+      {route.params.excerpts?.length > 0 ? (
         <View style={styles.excerptsContainer}>
           {route.params.excerpts.map((excerpt, index) => {
             const borderTop = index != 0 ? styles.buttonBorder : null;

@@ -73,6 +73,9 @@ const LicensesListItem = ({
           )}
           <Pressable
             onPress={() => Linking.openURL(repository)}
+            android_ripple={{
+              color: DARKMODE ? colors.greenDark : colors.greenLight,
+            }}
             style={({pressed}) => ({
               opacity: pressed ? 0.7 : 1,
               ...styles.item,

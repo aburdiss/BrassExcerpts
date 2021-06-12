@@ -53,7 +53,10 @@ function ExcerptListHeader() {
         onPress={navigateToSettings}
         accessibilityRole="button"
         accessibilityLabel={instrumentsSelected}
-        accessibilityHint="Navigates to Settings screen change instrument">
+        accessibilityHint="Navigates to Settings screen change instrument"
+        android_ripple={{
+          color: styles.instrumentText.color,
+        }}>
         <SafeAreaView edges={['right', 'left']}>
           <Text style={styles.instrumentText} accessibilityRole="header">
             {instrumentsSelected}
@@ -82,6 +85,7 @@ const styles = StyleSheet.create({
   instrumentText: {
     fontSize: 24,
     flex: 1,
+    color: colors.black,
   },
 });
 

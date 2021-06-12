@@ -3,7 +3,7 @@ import React from 'react';
 import PastJobs from './PastJobs';
 import MockContext from '../../../jest/MockContext';
 
-import {render} from '@testing-library/react-native';
+import {act, render} from '@testing-library/react-native';
 
 test('PastJobs renders correctly', () => {
   render(

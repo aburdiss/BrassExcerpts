@@ -37,22 +37,25 @@ const JobsListRow = ({job}) => {
     <Pressable
       accessible
       accessibilityRole="button"
-      accessibilityLabel={job.position + ' ' + job.orchestra}
+      accessibilityLabel={job?.position + ' ' + job?.orchestra}
       accessibilityHint={
-        'Opens Job details for ' + job.position + ' ' + job.orchestra
+        'Opens Job details for ' + job?.position + ' ' + job?.orchestra
       }
+      android_ripple={{
+        color: styles.orchestra.color,
+      }}
       onPress={navigateToJobDetail}
       style={({pressed}) => ({
         opacity: pressed ? 0.7 : 1,
         ...styles.container,
       })}>
       <View style={styles.orchestraContainer}>
-        <Text style={styles.orchestra}>{job.orchestra}</Text>
-        <Text>{job.position}</Text>
+        <Text style={styles.orchestra}>{job?.orchestra}</Text>
+        <Text>{job?.position}</Text>
       </View>
       <Text style={styles.closingDate}>
         Closing Date:{'\n'}
-        {job.closingDate}
+        {job?.closingDate}
       </Text>
     </Pressable>
   );
@@ -74,6 +77,7 @@ const styles = StyleSheet.create({
   orchestra: {
     fontWeight: 'bold',
     flexWrap: 'wrap',
+    color: colors.black,
   },
   orchestraContainer: {
     width: '60%',

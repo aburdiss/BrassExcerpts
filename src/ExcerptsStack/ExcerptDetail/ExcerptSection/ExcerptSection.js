@@ -15,7 +15,7 @@ import {getNumberOfInstruments} from '../../../utils/getNumberOfInstruments/getN
  * they get collapsed, or if the user has set them to always collapse.
  * @author Alexander Burdiss
  * @since 5/1/21
- * @version 1.0.1
+ * @version 1.0.2
  * @param props The JSX props passed to this React component
  * @param {Object} props.instrumentExcerpt The object that contains the excerpts
  * for this instrument.
@@ -63,6 +63,9 @@ const ExcerptSection = ({
             accessible={true}
             accessibilityRole="imagebutton"
             accessibilityLabel={isFavorite ? 'Favorite' : 'Not Favorite'}
+            android_ripple={{
+              color: isFavorite ? colors.greenLight : colors.redLight,
+            }}
             accessibilityHint={
               isFavorite
                 ? 'Remove excercise from favorites'
