@@ -17,7 +17,7 @@ import {TextListItem} from '../More/MoreListItems/MoreListItems';
  * this project
  * @author Alexander Burdiss
  * @since 12/14/20
- * @version 1.0.2
+ * @version 1.1.0
  *
  * @component
  * @example
@@ -35,7 +35,9 @@ const Acknowledgements = () => {
         keyExtractor={(item, index) => index}
         renderItem={({item}) => <TextListItem item={item} />}
         renderSectionHeader={({section: {title}}) => (
-          <Text style={styles.listHeader}>{title}</Text>
+          <Text accessibilityRole="text" style={styles.listHeader}>
+            {title}
+          </Text>
         )}
         stickySectionHeadersEnabled={false}
       />

@@ -16,7 +16,7 @@ import {
  * [Created with help from an online article]{@link https://blog.expo.io/licenses-the-best-part-of-your-app-29e7285b544f}
  * @author Alexander Burdiss
  * @date 12/17/20
- * @version 1.0.2
+ * @version 1.1.0
  * @param {String} props.image The url of the image to display.
  * @param {String} props.userUrl The url of the author of this software.
  * @param {String} props.username The username of the author of the software
@@ -63,6 +63,9 @@ const LicensesListItem = ({
         <View style={styles.card}>
           {image && (
             <Pressable
+              accessibilityRole="link"
+              accessibilityHint={'Opens github account for ' + title}
+              accessibilityValue={title}
               onPress={() => Linking.openURL(userUrl)}
               style={({pressed}) => ({opacity: pressed ? 0.7 : 1})}>
               <Image source={{uri: image}} style={styles.image} />
@@ -75,7 +78,9 @@ const LicensesListItem = ({
               ...styles.item,
             })}>
             <View style={{maxWidth: '90%'}}>
-              <Text style={styles.name}>{title}</Text>
+              <Text accessibilityRole="text" style={styles.name}>
+                {title}
+              </Text>
               <Link style={styles.text} url={licenseUrl}>
                 {licenses}
               </Link>
@@ -117,6 +122,9 @@ const Link = ({url, style, children}) => (
   <Text
     style={style}
     numberOfLines={1}
+    accessibilityRole="link"
+    accessibilityValue={children}
+    accessibilityHint={'Opens in default browser'}
     onPress={() => url && Linking.openURL(url)}>
     {children}
   </Text>

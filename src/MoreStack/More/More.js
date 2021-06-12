@@ -32,7 +32,7 @@ import {
  * additional resources.
  * @author Alexander Burdiss
  * @since 12/14/20
- * @version 1.0.1
+ * @version 1.1.0
  *
  * @component
  * @example
@@ -83,7 +83,9 @@ const More = () => {
           }
         }}
         renderSectionHeader={({section: {title}}) => (
-          <Text style={styles.listHeader}>{title}</Text>
+          <Text accessibilityRole="header" style={styles.listHeader}>
+            {title}
+          </Text>
         )}
         stickySectionHeadersEnabled={false}
         ListFooterComponent={
@@ -91,6 +93,7 @@ const More = () => {
             <View style={styles.iconContainer}>
               <Ionicons
                 accessibilityLabel={'React Native Icon'}
+                accessibilityRole="image"
                 style={styles.icon}
                 name="logo-react"
                 size={24}
@@ -100,6 +103,7 @@ const More = () => {
                 <View style={styles.javascriptBackground} />
                 <Ionicons
                   accessibilityLabel={'JavaScript Icon'}
+                  accessibilityRole="image"
                   style={styles.icon}
                   name="logo-javascript"
                   size={24}
@@ -107,7 +111,10 @@ const More = () => {
                 />
               </View>
             </View>
-            <Text style={styles.footerText}>
+            <Text
+              style={styles.footerText}
+              accessibilityRole="text"
+              accessibilityLabel="Made with love in Dayton, Ohio">
               {'Made with ❤️ in Dayton, Ohio'}
             </Text>
           </View>
