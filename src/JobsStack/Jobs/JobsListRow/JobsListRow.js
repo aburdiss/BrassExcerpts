@@ -11,7 +11,7 @@ import {colors} from '../../../Model/Model';
  * @description One job item in the list of jobs.
  * @author Alexander Burdiss
  * @since 3/28/21
- * @version 1.0.0
+ * @version 1.1.0
  * @component
  * @example
  * ```jsx
@@ -35,6 +35,12 @@ const JobsListRow = ({job}) => {
 
   return (
     <Pressable
+      accessible
+      accessibilityRole="button"
+      accessibilityLabel={job.position + ' ' + job.orchestra}
+      accessibilityHint={
+        'Opens Job details for ' + job.position + ' ' + job.orchestra
+      }
       onPress={navigateToJobDetail}
       style={({pressed}) => ({
         opacity: pressed ? 0.7 : 1,

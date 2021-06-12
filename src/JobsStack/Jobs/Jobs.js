@@ -52,6 +52,8 @@ const Jobs = () => {
   const navigation = useNavigation();
   const scrollViewRef = useRef(null);
 
+  const possibleInstruments = ['Horn', 'Trumpet', 'Trombone', 'Tuba'];
+
   const queryPreferences = {
     staleTime: 1000 * 60 * 60, // One Hour
   };
@@ -137,7 +139,9 @@ const Jobs = () => {
         edges={['left', 'right']}
         style={styles.segmentedControlContainer}>
         <SegmentedControl
-          values={['Horn', 'Trumpet', 'Trombone', 'Tuba']}
+          accessibilityRole="menu"
+          accessibilityValue={{now: possibleInstruments[state.jobsIndex]}}
+          values={possibleInstruments}
           selectedIndex={state.jobsIndex}
           onChange={(event) => {
             scrollViewRef.current.scrollTo({x: 0, y: 0});
@@ -163,7 +167,7 @@ const Jobs = () => {
           </SafeAreaView>
         ) : (
           <SafeAreaView style={styles.errorContainer}>
-            <Text style={styles.errorText}>
+            <Text style={styles.errorText} accessibilityRole="text">
               There are no {currentInstrument} jobs at this time.{'\n'}Check
               back later!
             </Text>
@@ -174,13 +178,15 @@ const Jobs = () => {
         Create a custom audition list!
       </ActionButton> */}
           <Pressable
+            accessibilityRole="link"
+            accessibilityHint="Opens Musical Chairs in default web browser"
             onPress={() => openMusicalChairsLink(state)}
             style={({pressed}) => ({opacity: pressed ? 0.7 : 1})}>
             <Text style={styles.linkText}>
               View {currentInstrument} job openings on Musical Chairs
             </Text>
           </Pressable>
-          <Text style={styles.disclaimer}>
+          <Text style={styles.disclaimer} accessibilityRole="text">
             Note: Although these jobs are regularly updated, there may be some
             mistakes. Please check the orchestra website for official dates.
           </Text>

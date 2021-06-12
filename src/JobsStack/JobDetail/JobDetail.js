@@ -107,150 +107,126 @@ const JobDetail = () => {
     navigation.navigate('Jobs Excerpt Detail', excerpt);
   }
 
+  /**
+   * @function JobDetail~Calendar
+   * @description The calendar from the display, removed from the display so
+   * that props only need to be updated once when the component is rendered
+   * in two different modes.
+   * @author Alexander Burdiss
+   * @since 6/11/21
+   * @version 1.0.0
+   * @component
+   * @example
+   * ```jsx
+   * <Calendar />
+   * ```
+   */
+  function Calendar() {
+    return (
+      <CalendarStrip
+        style={styles.calendarStrip}
+        minDate={new Date()}
+        maxDate={
+          route.params.auditionDate
+            ? new Date(route.params.auditionDate)
+            : new Date(route.params.closingDate)
+        }
+        markedDates={[
+          {
+            date: new Date(),
+            lines: [
+              {
+                color: colors.greenLight,
+              },
+            ],
+          },
+          {
+            date: new Date(route.params.closingDate),
+            lines: [
+              {
+                color: colors.orangeLight,
+              },
+            ],
+          },
+          {
+            date: new Date(route.params.auditionDate),
+            lines: [
+              {
+                color: colors.redLight,
+              },
+            ],
+          },
+        ]}
+      />
+    );
+  }
+
+  /**
+   * @function JobDetail~MetaContainer
+   * @description The Meta Container pulled out into a separate conainer so that
+   * it only needs updated once when props change, because it is rendered in
+   * two different modes.
+   * @author Alexander Burdiss
+   * @since 6/11/21
+   * @version 1.0.0
+   * @component
+   * @example
+   * ```jsx
+   * <MetaContainer />
+   * ```
+   */
+  function MetaContainer() {
+    return (
+      <View>
+        <MetaLabel label="Country" data={route.params.country} />
+        <MetaLabel
+          label="Closing Date"
+          labelColor={colors.orangeLight}
+          data={
+            route.params.closingDate +
+            ` (${getDaysUntilDate(route.params.closingDate)} days from today)`
+          }
+        />
+        {route.params.auditionDate ? (
+          <MetaLabel
+            label="Audition Date"
+            labelColor={colors.redLight}
+            data={
+              route.params.auditionDate +
+              ` (${getDaysUntilDate(
+                route.params.auditionDate,
+              )} days from today)`
+            }
+          />
+        ) : (
+          <MetaLabel
+            label="Audition Date"
+            labelColor={colors.redLight}
+            data={'unknown'}
+          />
+        )}
+      </View>
+    );
+  }
+
   return (
     <ScrollView>
       <SafeAreaView edges={['left', 'right']}>
-        <Text style={styles.position}>{route.params.position}</Text>
+        <Text accessibilityRole="text" style={styles.position}>
+          {route.params.position}
+        </Text>
         {isPhonePortrait() ? (
           <View style={styles.metaContainer}>
-            <MetaLabel label="Country" data={route.params.country} />
-            <MetaLabel
-              label="Closing Date"
-              labelColor={colors.orangeLight}
-              data={
-                route.params.closingDate +
-                ` (${getDaysUntilDate(
-                  route.params.closingDate,
-                )} days from today)`
-              }
-            />
-            {route.params.auditionDate ? (
-              <MetaLabel
-                label="Audition Date"
-                labelColor={colors.redLight}
-                data={
-                  route.params.auditionDate +
-                  ` (${getDaysUntilDate(
-                    route.params.auditionDate,
-                  )} days from today)`
-                }
-              />
-            ) : (
-              <MetaLabel
-                label="Audition Date"
-                labelColor={colors.redLight}
-                data={'unknown'}
-              />
-            )}
-            {shouldCalendarDisplay() && (
-              <CalendarStrip
-                style={styles.calendarStrip}
-                minDate={new Date()}
-                maxDate={
-                  route.params.auditionDate
-                    ? new Date(route.params.auditionDate)
-                    : new Date(route.params.closingDate)
-                }
-                markedDates={[
-                  {
-                    date: new Date(),
-                    lines: [
-                      {
-                        color: colors.greenLight,
-                      },
-                    ],
-                  },
-                  {
-                    date: new Date(route.params.closingDate),
-                    lines: [
-                      {
-                        color: colors.orangeLight,
-                      },
-                    ],
-                  },
-                  {
-                    date: new Date(route.params.auditionDate),
-                    lines: [
-                      {
-                        color: colors.redLight,
-                      },
-                    ],
-                  },
-                ]}
-              />
-            )}
+            <MetaContainer />
+            {shouldCalendarDisplay() && <Calendar />}
           </View>
         ) : (
           <View style={styles.metaContainerHorizontal}>
             <View style={styles.metaContainerLeft}>
-              <MetaLabel label="Country" data={route.params.country} />
-              <MetaLabel
-                label="Closing Date"
-                labelColor={colors.orangeLight}
-                data={
-                  route.params.closingDate +
-                  ` (${getDaysUntilDate(
-                    route.params.closingDate,
-                  )} days from today)`
-                }
-              />
-              {route.params.auditionDate ? (
-                <MetaLabel
-                  label="Audition Date"
-                  labelColor={colors.redLight}
-                  data={
-                    route.params.auditionDate +
-                    ` (${getDaysUntilDate(
-                      route.params.auditionDate,
-                    )} days from today)`
-                  }
-                />
-              ) : (
-                <MetaLabel
-                  label="Audition Date"
-                  labelColor={colors.redLight}
-                  data={'unknown'}
-                />
-              )}
+              <MetaContainer />
             </View>
             <View style={styles.metaContainerRight}>
-              {shouldCalendarDisplay() && (
-                <CalendarStrip
-                  style={styles.calendarStrip}
-                  minDate={new Date()}
-                  maxDate={
-                    route.params.auditionDate
-                      ? new Date(route.params.auditionDate)
-                      : new Date(route.params.closingDate)
-                  }
-                  markedDates={[
-                    {
-                      date: new Date(),
-                      lines: [
-                        {
-                          color: colors.greenLight,
-                        },
-                      ],
-                    },
-                    {
-                      date: new Date(route.params.closingDate),
-                      lines: [
-                        {
-                          color: colors.orangeLight,
-                        },
-                      ],
-                    },
-                    {
-                      date: new Date(route.params.auditionDate),
-                      lines: [
-                        {
-                          color: colors.redLight,
-                        },
-                      ],
-                    },
-                  ]}
-                />
-              )}
+              {shouldCalendarDisplay() && <Calendar />}
             </View>
           </View>
         )}
@@ -279,6 +255,17 @@ const JobDetail = () => {
               return (
                 <SafeAreaView edges={['left']} key={index}>
                   <Pressable
+                    accessible
+                    accessibilityRole="button"
+                    accessibilityLabel={
+                      excerptData.composerLast + ' ' + excerptData.name
+                    }
+                    accessibilityHint={
+                      'Navigates to excerpt ' +
+                      excerptData.composerLast +
+                      ' ' +
+                      excerptData.name
+                    }
                     style={({pressed}) => ({
                       opacity: pressed ? 0.7 : 1,
                       ...styles.excerptButton,
@@ -324,7 +311,9 @@ const JobDetail = () => {
             } else {
               return (
                 <SafeAreaView key={index} edges={['left']}>
-                  <View style={[styles.excerptButton, borderTop]}>
+                  <View
+                    accessibilityRole="text"
+                    style={[styles.excerptButton, borderTop]}>
                     <Text>{excerpt}</Text>
                   </View>
                 </SafeAreaView>
@@ -336,7 +325,9 @@ const JobDetail = () => {
         <SafeAreaView
           style={styles.noExcerptsContainer}
           edges={['left', 'right']}>
-          <Text>No excerpts available for this job.</Text>
+          <Text accessibilityRole="text">
+            No excerpts available for this job.
+          </Text>
         </SafeAreaView>
       )}
     </ScrollView>

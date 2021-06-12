@@ -37,6 +37,8 @@ const PastJobs = () => {
   const [currentJobs, setCurrentJobs] = useState([]);
   const scrollViewRef = useRef(null);
 
+  const possibleInstruments = ['Horn', 'Trumpet', 'Trombone', 'Tuba'];
+
   const queryPreferences = {
     staleTime: 1000 * 60 * 60, // One Hour
   };
@@ -90,7 +92,9 @@ const PastJobs = () => {
     <View style={styles.pastJobsContainer}>
       <SafeAreaView edges={['left', 'right']}>
         <SegmentedControl
-          values={['Horn', 'Trumpet', 'Trombone', 'Tuba']}
+          accessibilityRole="menu"
+          accessibilityValue={{now: possibleInstruments[state.jobsIndex]}}
+          values={possibleInstruments}
           selectedIndex={state.jobsIndex}
           onChange={(event) => {
             scrollViewRef.current.scrollTo({x: 0, y: 0});
