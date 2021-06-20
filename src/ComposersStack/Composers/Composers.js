@@ -1,9 +1,16 @@
-import React from 'react';
 import {FlatList} from 'react-native';
 import {useNavigation} from '@react-navigation/core';
+import React from 'react';
 
-import ComposerListRow from './ComposerListRow';
+import {colors} from '../../Model/Model';
 import {composers} from '../../Model/ComposerModel';
+import ComposerListRow from './ComposerListRow';
+
+import {
+  DynamicStyleSheet,
+  DynamicValue,
+  useDynamicStyleSheet,
+} from 'react-native-dynamic';
 
 /**
  * @function Composers
@@ -11,7 +18,7 @@ import {composers} from '../../Model/ComposerModel';
  * app.
  * @author Alexander Burdiss
  * @since 3/3/21
- * @version 1.0.0
+ * @version 1.1.0
  * @component
  * @example
  * ```jsx
@@ -20,6 +27,7 @@ import {composers} from '../../Model/ComposerModel';
  */
 const Composers = () => {
   const navigation = useNavigation();
+  const styles = useDynamicStyleSheet(dynamicStyles);
 
   /**
    * @function Composers~navigateToComposerDetail
@@ -36,6 +44,7 @@ const Composers = () => {
 
   return (
     <FlatList
+      style={styles.list}
       data={composers}
       renderItem={({item, index}) => (
         <ComposerListRow
@@ -51,5 +60,11 @@ const Composers = () => {
     />
   );
 };
+
+const dynamicStyles = new DynamicStyleSheet({
+  list: {
+    backgroundColor: new DynamicValue(colors.systemGray6Light, colors.black),
+  },
+});
 
 export default Composers;

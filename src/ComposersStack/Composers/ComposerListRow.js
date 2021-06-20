@@ -1,6 +1,11 @@
+import {View, Text, Image, Pressable} from 'react-native';
 import React from 'react';
-import {View, Text, Image, Pressable, StyleSheet} from 'react-native';
-import {DynamicValue, useDarkMode} from 'react-native-dynamic';
+
+import {
+  DynamicStyleSheet,
+  DynamicValue,
+  useDynamicStyleSheet,
+} from 'react-native-dynamic';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
@@ -20,7 +25,7 @@ import {colors} from '../../Model/Model';
  * pressed.
  * @author Alexander Burdiss
  * @since 3/18/21
- * @version 1.0.1
+ * @version 1.1.0
  * @component
  * @example
  * ```jsx
@@ -35,9 +40,8 @@ import {colors} from '../../Model/Model';
  * ```
  */
 const ComposerListRow = ({name, index, imageSource, onPress}) => {
+  const styles = useDynamicStyleSheet(dynamicStyles);
   const divider = index != 0 ? styles.notFirstTextContainer : null;
-
-  const DARKMODE = useDarkMode();
 
   return (
     <Pressable
@@ -46,7 +50,7 @@ const ComposerListRow = ({name, index, imageSource, onPress}) => {
       accessibilityHint={'Navigates to Composer ' + name}
       accessibilityRole="button"
       android_ripple={{
-        color: DARKMODE ? colors.greenDark : colors.greenLight,
+        color: styles.androidRipple.color,
       }}
       style={({pressed}) => ({
         opacity: pressed ? 0.7 : 1,
@@ -59,7 +63,7 @@ const ComposerListRow = ({name, index, imageSource, onPress}) => {
           <Ionicons
             name="chevron-forward"
             size={24}
-            color={colors.systemGray}
+            color={styles.chevron.color}
           />
         </View>
       </SafeAreaView>
@@ -67,7 +71,13 @@ const ComposerListRow = ({name, index, imageSource, onPress}) => {
   );
 };
 
-const styles = StyleSheet.create({
+const dynamicStyles = new DynamicStyleSheet({
+  androidRipple: {
+    color: new DynamicValue(colors.greenLight, colors.greenDark),
+  },
+  chevron: {
+    color: new DynamicValue(colors.systemGray, colors.systemGray),
+  },
   container: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -83,9 +93,13 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 15,
     fontWeight: 'bold',
+    color: new DynamicValue(colors.black, colors.white),
   },
   notFirstTextContainer: {
-    borderTopColor: 'lightgray',
+    borderTopColor: new DynamicValue(
+      colors.systemGray5Light,
+      colors.systemGray5Dark,
+    ),
     borderTopWidth: 1,
   },
   textContainer: {
