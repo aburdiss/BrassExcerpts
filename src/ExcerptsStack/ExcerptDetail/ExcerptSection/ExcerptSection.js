@@ -1,13 +1,19 @@
-import React, {useContext} from 'react';
-import {View, Text, StyleSheet, Pressable} from 'react-native';
-import Ionicons from 'react-native-vector-icons/Ionicons';
-import {capitalize} from 'underscore.string';
+import {
+  DynamicStyleSheet,
+  DynamicValue,
+  useDynamicStyleSheet,
+} from 'react-native-dynamic';
 import {SafeAreaView} from 'react-native-safe-area-context';
+import {View, Text, Pressable} from 'react-native';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import React, {useContext} from 'react';
 
-import ExcerptCollapsible from '../ExcerptCollapsible/ExcerptCollapsible';
+import {capitalize} from 'underscore.string';
+
 import {colors} from '../../../Model/Model';
-import {PreferencesContext} from '../../../Model/Preferences';
 import {getNumberOfInstruments} from '../../../utils/getNumberOfInstruments/getNumberOfInstruments';
+import {PreferencesContext} from '../../../Model/Preferences';
+import ExcerptCollapsible from '../ExcerptCollapsible/ExcerptCollapsible';
 
 /**
  * @function ExcerptSection
@@ -15,7 +21,7 @@ import {getNumberOfInstruments} from '../../../utils/getNumberOfInstruments/getN
  * they get collapsed, or if the user has set them to always collapse.
  * @author Alexander Burdiss
  * @since 5/1/21
- * @version 1.0.2
+ * @version 1.1.0
  * @param props The JSX props passed to this React component
  * @param {Object} props.instrumentExcerpt The object that contains the excerpts
  * for this instrument.
@@ -46,6 +52,8 @@ const ExcerptSection = ({
   item,
 }) => {
   const {state} = useContext(PreferencesContext);
+  const styles = useDynamicStyleSheet(dynamicStyles);
+
   const isFavorite = state.favorites.includes(
     instrumentName + item.composerLast + item.name,
   );
@@ -64,7 +72,9 @@ const ExcerptSection = ({
             accessibilityRole="imagebutton"
             accessibilityLabel={isFavorite ? 'Favorite' : 'Not Favorite'}
             android_ripple={{
-              color: isFavorite ? colors.greenLight : colors.redLight,
+              color: isFavorite
+                ? styles.accentColor.color
+                : styles.favoriteColor.color,
             }}
             accessibilityHint={
               isFavorite
@@ -78,7 +88,11 @@ const ExcerptSection = ({
             <Ionicons
               name={isFavorite ? 'heart' : 'heart-outline'}
               size={32}
-              color={isFavorite ? colors.redLight : colors.greenLight}
+              color={
+                isFavorite
+                  ? styles.favoriteColor.color
+                  : styles.accentColor.color
+              }
             />
           </Pressable>
         </SafeAreaView>
@@ -95,18 +109,28 @@ const ExcerptSection = ({
   ) : null;
 };
 
-const styles = StyleSheet.create({
+const dynamicStyles = new DynamicStyleSheet({
+  accentColor: {
+    color: new DynamicValue(colors.greenLight, colors.greenDark),
+  },
+  favoriteColor: {
+    color: new DynamicValue(colors.redLight, colors.redDark),
+  },
   instrumentExcerptContainer: {
-    borderTopColor: colors.greenDark,
+    borderTopColor: new DynamicValue(colors.greenLight, colors.greenDark),
     borderTopWidth: 2,
     marginTop: 10,
     paddingTop: 0,
   },
   instrumentHeading: {
     fontSize: 28,
+    color: new DynamicValue(colors.black, colors.white),
   },
   instrumentHeadingContainer: {
-    backgroundColor: colors.systemGray4Light,
+    backgroundColor: new DynamicValue(
+      colors.systemGray4Light,
+      colors.systemGray4Dark,
+    ),
     paddingHorizontal: 20,
     paddingVertical: 10,
     flexDirection: 'row',

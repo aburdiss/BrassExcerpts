@@ -1,8 +1,8 @@
 import React, {useState, useRef} from 'react';
+
 import {
   View,
   Text,
-  StyleSheet,
   Pressable,
   Animated,
   Easing,
@@ -15,6 +15,11 @@ import Pinchable from 'react-native-pinchable';
 import {SafeAreaView, useSafeAreaInsets} from 'react-native-safe-area-context';
 
 import {colors} from '../../../Model/Model';
+import {
+  DynamicStyleSheet,
+  useDynamicStyleSheet,
+  DynamicValue,
+} from 'react-native-dynamic';
 
 /**
  * @function ExcerptCollapsible
@@ -27,7 +32,7 @@ import {colors} from '../../../Model/Model';
  * purposes.
  * @author Alexander Burdiss
  * @since 5/1/21
- * @version 1.0.2
+ * @version 1.1.0
  * @component
  * @example
  * ```jsx
@@ -47,6 +52,8 @@ const ExcerptCollapsible = ({excerpt, startCollapsed, index}) => {
 
   const windowWidth = useWindowDimensions().width;
   const windowInsets = useSafeAreaInsets();
+
+  const styles = useDynamicStyleSheet(dynamicStyles);
 
   /**
    * @function ExcerptCollapsible~toggleChevron
@@ -149,12 +156,13 @@ const ExcerptCollapsible = ({excerpt, startCollapsed, index}) => {
   );
 };
 
-const styles = StyleSheet.create({
+const dynamicStyles = new DynamicStyleSheet({
   excerptCaption: {
     paddingLeft: 20,
     paddingTop: 7,
     fontSize: 16,
     paddingBottom: 2,
+    color: new DynamicValue(colors.black, colors.white),
   },
   excerptContainer: {
     paddingBottom: 20,
@@ -163,6 +171,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
     marginLeft: 10,
     fontStyle: 'italic',
+    color: new DynamicValue(colors.black, colors.white),
   },
   excerptMetaContainer: {
     paddingVertical: 5,
@@ -171,18 +180,22 @@ const styles = StyleSheet.create({
   },
   excerptPressable: {
     paddingHorizontal: 20,
-    backgroundColor: colors.systemGray5Light,
+    backgroundColor: new DynamicValue(
+      colors.systemGray5Light,
+      colors.systemGray5Dark,
+    ),
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
     maxWidth: '100%',
   },
   excerptPressableBorder: {
-    borderTopColor: colors.greenDark,
+    borderTopColor: new DynamicValue(colors.greenLight, colors.greenDark),
     borderTopWidth: 1,
   },
   excerptNumber: {
     fontSize: 22,
+    color: new DynamicValue(colors.black, colors.white),
   },
 });
 

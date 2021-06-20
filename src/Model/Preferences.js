@@ -175,7 +175,6 @@ const preferencesReducer = (state, action) => {
     (action.type == 'ADD_TO_FAVORITES' ||
       action.type == 'REMOVE_FROM_FAVORITES')
   ) {
-    console.log('RAN');
     const newState = handleFavoritesUpdateInstruments(state, action);
     save(newState);
     return newState;

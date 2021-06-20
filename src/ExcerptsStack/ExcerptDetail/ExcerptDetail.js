@@ -1,11 +1,4 @@
-import {
-  Image,
-  Pressable,
-  ScrollView,
-  StyleSheet,
-  Text,
-  View,
-} from 'react-native';
+import {Image, Pressable, ScrollView, Text, View} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {useRoute} from '@react-navigation/native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -25,6 +18,12 @@ import ExcerptSection from './ExcerptSection/ExcerptSection';
 import MetaLabel from '../../Components/MetaLabel/MetaLabel';
 import YoutubeSection from './YoutubeSection/YoutubeSection';
 
+import {
+  DynamicStyleSheet,
+  useDynamicStyleSheet,
+  DynamicValue,
+} from 'react-native-dynamic';
+
 /**
  * @function ExcerptDetail
  * @description A component that displays all of the details about one of the
@@ -32,7 +31,7 @@ import YoutubeSection from './YoutubeSection/YoutubeSection';
  * where the image is rotated.
  * @author Alexander Burdiss
  * @since 3/3/21
- * @version 1.1.1
+ * @version 1.2.0
  * @component
  * @example
  * ```jsx
@@ -48,6 +47,7 @@ const ExcerptDetail = () => {
   const [trumpetExcerpt, setTrumpetExcerpt] = useState(undefined);
   const [tromboneExcerpt, setTromboneExcerpt] = useState(undefined);
   const [tubaExcerpt, setTubaExcerpt] = useState(undefined);
+  const styles = useDynamicStyleSheet(dynamicStyles);
 
   useEffect(
     /**
@@ -144,6 +144,9 @@ const ExcerptDetail = () => {
    * start collapsed.
    * @returns {Boolean} Whether or not the excerpt should be collapsed when the
    * screen mounts.
+   * @author Alexander Burdiss
+   * @since 5/1/21
+   * @version 1.0.0
    */
   function shouldStartCollapsed() {
     let count = 0;
@@ -168,7 +171,7 @@ const ExcerptDetail = () => {
   }
 
   return (
-    <ScrollView>
+    <ScrollView style={styles.excerptDetailContainer}>
       <SafeAreaView edges={['right', 'left']}>
         <View style={styles.metaInfoContainer}>
           <View>
@@ -291,15 +294,18 @@ const ExcerptDetail = () => {
   );
 };
 
-export const styles = StyleSheet.create({
+export const dynamicStyles = new DynamicStyleSheet({
   composerImage: {
     aspectRatio: 1,
     width: 95,
     borderRadius: 50,
-    backgroundColor: colors.white,
+    backgroundColor: new DynamicValue(colors.white, colors.black),
   },
   excerptContainer: {
     paddingBottom: 20,
+  },
+  excerptDetailContainer: {
+    backgroundColor: new DynamicValue(colors.systemGray6Light, colors.black),
   },
   metaInfoContainer: {
     marginHorizontal: 20,
@@ -319,12 +325,13 @@ export const styles = StyleSheet.create({
   youtubeHeading: {
     fontSize: 28,
     paddingTop: 10,
+    color: new DynamicValue(colors.black, colors.white),
   },
   youtubeLinksContainer: {
     paddingHorizontal: 20,
     marginTop: 20,
     marginBottom: 70,
-    borderTopColor: colors.greenDark,
+    borderTopColor: new DynamicValue(colors.greenLight, colors.greenDark),
     borderTopWidth: 2,
   },
 });
