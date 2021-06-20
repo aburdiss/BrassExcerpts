@@ -1,7 +1,12 @@
 import React, {useContext} from 'react';
-import {Pressable, Text, StyleSheet, View} from 'react-native';
+import {Pressable, Text, View} from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {SafeAreaView} from 'react-native-safe-area-context';
+import {
+  DynamicStyleSheet,
+  DynamicValue,
+  useDynamicStyleSheet,
+} from 'react-native-dynamic';
 
 import {colors} from '../../../Model/Model';
 import {PreferencesContext} from '../../../Model/Preferences';
@@ -16,9 +21,10 @@ import {isFavorite} from '../../../utils/isFavorite/isFavorite';
  * pressed.
  * @author Alexander Burdiss
  * @since 3/6/21
- * @version 1.2.0
+ * @version 1.3.0
  */
 const ExcerptListRow = ({composer, composition, onPress}) => {
+  const styles = useDynamicStyleSheet(dynamicStyles);
   const {state} = useContext(PreferencesContext);
 
   return (
@@ -32,10 +38,10 @@ const ExcerptListRow = ({composer, composition, onPress}) => {
         color: styles.accentColor.color,
       }}>
       <SafeAreaView edges={['right', 'left']} style={styles.button}>
-        <Text styles={styles.text}>
+        <View style={styles.text}>
           <Text style={styles.composerText}>{composer + '  '}</Text>
           <Text style={styles.compositionText}>{composition}</Text>
-        </Text>
+        </View>
         <View style={styles.iconContainer}>
           {isFavorite(state, composer, composition) && (
             <Ionicons
@@ -56,23 +62,31 @@ const ExcerptListRow = ({composer, composition, onPress}) => {
   );
 };
 
-const styles = StyleSheet.create({
+const dynamicStyles = new DynamicStyleSheet({
   accentColor: {
-    color: colors.greenLight,
+    color: new DynamicValue(colors.greenLight, colors.greenDark),
   },
   button: {
     paddingVertical: 10,
     paddingLeft: 25,
-    borderBottomColor: colors.systemGray2Light,
+    borderBottomColor: new DynamicValue(
+      colors.systemGray5Light,
+      colors.systemGray5Dark,
+    ),
     borderBottomWidth: 1,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
     height: 44,
-    backgroundColor: colors.systemGray6Light,
+    backgroundColor: new DynamicValue(colors.white, colors.systemGray6Dark),
   },
   composerText: {
     fontWeight: 'bold',
+    color: new DynamicValue(colors.black, colors.white),
+  },
+  compositionText: {
+    color: new DynamicValue(colors.black, colors.white),
+    flexWrap: 'wrap',
   },
   iconContainer: {
     flexDirection: 'row',
@@ -83,6 +97,9 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 16,
+    flexDirection: 'row',
+    maxWidth: '85%',
+    flexWrap: 'wrap',
   },
 });
 

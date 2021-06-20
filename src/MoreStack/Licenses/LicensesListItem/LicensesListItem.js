@@ -65,7 +65,7 @@ const LicensesListItem = ({
             <Pressable
               accessibilityRole="link"
               accessibilityHint={'Opens github account for ' + title}
-              accessibilityValue={title}
+              accessibilityLabel={title}
               onPress={() => Linking.openURL(userUrl)}
               style={({pressed}) => ({opacity: pressed ? 0.7 : 1})}>
               <Image source={{uri: image}} style={styles.image} />
@@ -126,7 +126,7 @@ const Link = ({url, style, children}) => (
     style={style}
     numberOfLines={1}
     accessibilityRole="link"
-    accessibilityValue={children}
+    accessibilityLabel={children}
     accessibilityHint={'Opens in default browser'}
     onPress={() => url && Linking.openURL(url)}>
     {children}

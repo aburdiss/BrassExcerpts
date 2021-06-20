@@ -1,6 +1,7 @@
 import React, {useContext, useEffect, useState} from 'react';
 import {FlatList} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
+import {useDarkMode} from 'react-native-dynamic';
 
 import ExcerptListRow from './ExcerptListRow/ExcerptListRow';
 import ExcerptListHeader from './ExcerptListHeader/ExcerptListHeader';
@@ -21,7 +22,7 @@ import {colors} from '../../Model/Model';
  * excerpt.
  * @author Alexander Burdiss
  * @since 3/3/21
- * @version 1.0.0
+ * @version 1.1.0
  * @component
  * @example
  * ```jsx
@@ -31,6 +32,7 @@ import {colors} from '../../Model/Model';
 const Excerpts = () => {
   const {state} = useContext(PreferencesContext);
   const navigation = useNavigation();
+  const DARKMODE = useDarkMode();
 
   const [listData, setListData] = useState([]);
   useEffect(
@@ -81,8 +83,8 @@ const Excerpts = () => {
 
   return (
     <ScrollViewBounceContainer
-      topBounceColor={colors.greenLight}
-      bottomBounceColor={colors.systemGray6Light}>
+      topBounceColor={DARKMODE ? colors.greenDark : colors.greenLight}
+      bottomBounceColor={DARKMODE ? colors.black : colors.systemGray6Light}>
       <FlatList
         ListHeaderComponent={ExcerptListHeader}
         data={listData}

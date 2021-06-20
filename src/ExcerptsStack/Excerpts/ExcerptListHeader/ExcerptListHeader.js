@@ -1,18 +1,23 @@
 import React, {useContext, useEffect, useState} from 'react';
-import {Text, View, Pressable, StyleSheet} from 'react-native';
+import {Text, View, Pressable} from 'react-native';
 import {useNavigation} from '@react-navigation/core';
 import {SafeAreaView} from 'react-native-safe-area-context';
 
 import {colors} from '../../../Model/Model';
 import {PreferencesContext} from '../../../Model/Preferences';
 import {getInstrumentsSelected} from '../../../utils/getInstrumentsSelected/getInstrumentsSelected';
+import {
+  DynamicStyleSheet,
+  useDynamicStyleSheet,
+  DynamicValue,
+} from 'react-native-dynamic';
 
 /**
  * @function ExcerptListHeader
  * @description The header for the Excerpts list view.
  * @author Alexander Burdiss
  * @since 3/7/21
- * @version 1.1.0
+ * @version 1.2.0
  *
  * @component
  * @example
@@ -23,6 +28,7 @@ import {getInstrumentsSelected} from '../../../utils/getInstrumentsSelected/getI
 function ExcerptListHeader() {
   const navigation = useNavigation();
   const {state} = useContext(PreferencesContext);
+  const styles = useDynamicStyleSheet(dynamicStyles);
 
   const [instrumentsSelected, setInstrumentsSelected] = useState(
     getInstrumentsSelected(state),
@@ -61,7 +67,7 @@ function ExcerptListHeader() {
           <Text style={styles.instrumentText} accessibilityRole="header">
             {instrumentsSelected}
           </Text>
-          <Text accessibilityRole="text">
+          <Text accessibilityRole="text" style={styles.descriptionText}>
             Tap to change instrument selection
           </Text>
         </SafeAreaView>
@@ -70,7 +76,7 @@ function ExcerptListHeader() {
   );
 }
 
-const styles = StyleSheet.create({
+const dynamicStyles = new DynamicStyleSheet({
   container: {
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -79,13 +85,16 @@ const styles = StyleSheet.create({
     paddingTop: 20,
     paddingBottom: 20,
     borderBottomWidth: 1,
-    borderBottomColor: colors.blueLight,
-    backgroundColor: colors.greenLight,
+    borderBottomColor: new DynamicValue(colors.blueLight, colors.blueDark),
+    backgroundColor: new DynamicValue(colors.greenLight, colors.greenDark),
+  },
+  descriptionText: {
+    color: new DynamicValue(colors.black, colors.black),
   },
   instrumentText: {
     fontSize: 24,
     flex: 1,
-    color: colors.black,
+    color: new DynamicValue(colors.black, colors.black),
   },
 });
 

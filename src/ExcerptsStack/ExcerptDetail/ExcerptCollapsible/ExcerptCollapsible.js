@@ -27,7 +27,7 @@ import {colors} from '../../../Model/Model';
  * purposes.
  * @author Alexander Burdiss
  * @since 5/1/21
- * @version 1.0.1
+ * @version 1.0.2
  * @component
  * @example
  * ```jsx
@@ -124,7 +124,7 @@ const ExcerptCollapsible = ({excerpt, startCollapsed, index}) => {
         collapsed={excerptIsCollapsed}
         style={styles.excerptContainer}>
         {excerpt.pictures.map((picture) => (
-          <SafeAreaView key={picture[1]}>
+          <SafeAreaView key={picture[1]} edges={['right', 'left']}>
             <Text style={styles.excerptCaption}>{picture[0]}</Text>
             <Pinchable>
               <AutoHeightImage

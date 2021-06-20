@@ -35,7 +35,7 @@ import {isFavorite} from '../../utils/isFavorite/isFavorite';
  * where the image is rotated.
  * @author Alexander Burdiss
  * @since 3/3/21
- * @version 1.1.0
+ * @version 1.1.1
  * @component
  * @example
  * ```jsx
@@ -217,7 +217,7 @@ const ExcerptDetail = () => {
             <Pressable
               accessibilityRole="imagebutton"
               accessibilityHint="Adds excerpt to favorites"
-              accessibilityValue={
+              accessibilityLabel={
                 getActiveInstrument(state) +
                 ' ' +
                 item.composerLast +
