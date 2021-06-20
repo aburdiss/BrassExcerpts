@@ -80,7 +80,7 @@ const LicensesListItem = ({
               opacity: pressed ? 0.7 : 1,
               ...styles.item,
             })}>
-            <View style={{maxWidth: '90%'}}>
+            <View style={styles.licenseText}>
               <Text accessibilityRole="text" style={styles.name}>
                 {title}
               </Text>
@@ -90,7 +90,7 @@ const LicensesListItem = ({
               <Link style={styles.text}>{version}</Link>
             </View>
             <Ionicons
-              style={{alignSelf: 'center'}}
+              style={styles.arrow}
               color={DARKMODE ? colors.greenDark : colors.greenLight}
               size={25}
               name={'chevron-forward-outline'}
@@ -134,6 +134,7 @@ const Link = ({url, style, children}) => (
 );
 
 const dynamicStyles = new DynamicStyleSheet({
+  arrow: {alignSelf: 'center'},
   card: {
     overflow: 'hidden',
     flexDirection: 'row',
@@ -157,6 +158,7 @@ const dynamicStyles = new DynamicStyleSheet({
     ),
     borderBottomWidth: 1,
   },
+  licenseText: {maxWidth: '90%'},
   name: {
     color: new DynamicValue(colors.black, colors.white),
     fontWeight: 'bold',

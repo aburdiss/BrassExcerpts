@@ -1,34 +1,31 @@
-import React, {useContext, useEffect, useState} from 'react';
 import {
-  ScrollView,
-  View,
-  Text,
-  Pressable,
   Image,
+  Pressable,
+  ScrollView,
   StyleSheet,
+  Text,
+  View,
 } from 'react-native';
+import {SafeAreaView} from 'react-native-safe-area-context';
 import {useRoute} from '@react-navigation/native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import {SafeAreaView} from 'react-native-safe-area-context';
+import React, {useContext, useEffect, useState} from 'react';
 
-import MetaLabel from '../../Components/MetaLabel/MetaLabel';
-import YoutubeSection from './YoutubeSection/YoutubeSection';
-import ExcerptSection from './ExcerptSection/ExcerptSection';
 import {colors} from '../../Model/Model';
 import {composers} from '../../Model/ComposerModel';
-
 import {excerpts as hornExcerpts} from '../../Model/Excerpts/HornExcerpts';
-import {excerpts as trumpetExcerpts} from '../../Model/Excerpts/TrumpetExcerpts';
 import {excerpts as tromboneExcerpts} from '../../Model/Excerpts/TromboneExcerpts';
+import {excerpts as trumpetExcerpts} from '../../Model/Excerpts/TrumpetExcerpts';
 import {excerpts as tubaExcerpts} from '../../Model/Excerpts/TubaExcerpts';
-import {PreferencesContext} from '../../Model/Preferences';
-import {getNumberOfInstruments} from '../../utils/getNumberOfInstruments/getNumberOfInstruments';
 import {getActiveInstrument} from '../../utils/getActiveInstrument/getActiveInstrument';
+import {getNumberOfInstruments} from '../../utils/getNumberOfInstruments/getNumberOfInstruments';
 import {isFavorite} from '../../utils/isFavorite/isFavorite';
+import {PreferencesContext} from '../../Model/Preferences';
+import ExcerptSection from './ExcerptSection/ExcerptSection';
+import MetaLabel from '../../Components/MetaLabel/MetaLabel';
+import YoutubeSection from './YoutubeSection/YoutubeSection';
 
 /**
- * @todo Add Loading State to images.
- *
  * @function ExcerptDetail
  * @description A component that displays all of the details about one of the
  * excerpts in the app. When clicking on each image, it opens a separate view
@@ -295,11 +292,6 @@ const ExcerptDetail = () => {
 };
 
 export const styles = StyleSheet.create({
-  singleAddToFavoritesButton: {
-    position: 'absolute',
-    top: 5,
-    right: 90,
-  },
   composerImage: {
     aspectRatio: 1,
     width: 95,
@@ -314,6 +306,11 @@ export const styles = StyleSheet.create({
     paddingVertical: 10,
     flexDirection: 'row',
     justifyContent: 'space-between',
+  },
+  singleAddToFavoritesButton: {
+    position: 'absolute',
+    top: 5,
+    right: 90,
   },
   title: {
     fontStyle: 'italic',

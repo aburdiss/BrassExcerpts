@@ -1,7 +1,12 @@
-import React from 'react';
-import {View, Text, Pressable, StyleSheet} from 'react-native';
-import Ionicons from 'react-native-vector-icons/Ionicons';
+import {
+  DynamicStyleSheet,
+  DynamicValue,
+  useDynamicStyleSheet,
+} from 'react-native-dynamic';
+import {Pressable, Text, View} from 'react-native';
 import {useNavigation} from '@react-navigation/core';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import React from 'react';
 
 import {colors} from '../../../Model/Model';
 
@@ -17,10 +22,11 @@ import {colors} from '../../../Model/Model';
  * randomly chosen
  * @author Alexander Burdiss
  * @since 5/8/21
- * @version 1.1.0
+ * @version 1.2.0
  */
 const RandomExcerptHeader = ({composition, excerptIndex, partIndex}) => {
   const navigation = useNavigation();
+  const styles = useDynamicStyleSheet(dynamicStyles);
 
   return (
     <View>
@@ -68,9 +74,10 @@ const RandomExcerptHeader = ({composition, excerptIndex, partIndex}) => {
   );
 };
 
-const styles = StyleSheet.create({
+const dynamicStyles = new DynamicStyleSheet({
   composer: {
     fontStyle: 'italic',
+    color: new DynamicValue(colors.black, colors.white),
   },
   composerInstrumentWrapper: {
     justifyContent: 'center',
@@ -86,9 +93,10 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'left',
     maxWidth: '50%',
+    color: new DynamicValue(colors.black, colors.white),
   },
   compositionPressable: {
-    borderColor: colors.greenLight,
+    borderColor: new DynamicValue(colors.greenLight, colors.greenDark),
     borderWidth: 1,
     borderRadius: 8,
     padding: 8,
@@ -100,6 +108,7 @@ const styles = StyleSheet.create({
   excerptDetail: {
     flexWrap: 'wrap',
     textAlign: 'right',
+    color: new DynamicValue(colors.black, colors.white),
   },
   excerptDetailContainer: {
     alignItems: 'flex-end',
@@ -115,8 +124,11 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start',
     padding: 10,
   },
+  instrument: {
+    color: new DynamicValue(colors.black, colors.white),
+  },
   pressableText: {
-    color: colors.greenLight,
+    color: new DynamicValue(colors.greenLight, colors.greenDark),
     fontWeight: 'bold',
   },
 });

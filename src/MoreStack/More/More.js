@@ -1,6 +1,7 @@
-import React, {useContext} from 'react';
 import {View, SectionList, Text} from 'react-native';
+import React, {useContext} from 'react';
 import SafeAreaView from 'react-native-safe-area-view';
+
 import {
   DynamicStyleSheet,
   DynamicValue,
