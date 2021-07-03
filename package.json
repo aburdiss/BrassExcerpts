@@ -55,8 +55,6 @@
     "react-test-renderer": "17.0.1"
   },
   "prettier": {
-    "bracketSpacing": false,
-    "jsxBracketSameLine": true,
     "singleQuote": true,
     "trailingComma": "all"
   },

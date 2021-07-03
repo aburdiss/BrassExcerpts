@@ -1,9 +1,9 @@
-import {FlatList} from 'react-native';
-import {useNavigation} from '@react-navigation/core';
+import { FlatList } from 'react-native';
+import { useNavigation } from '@react-navigation/core';
 import React from 'react';
 
-import {colors} from '../../Model/Model';
-import {composers} from '../../Model/ComposerModel';
+import { colors } from '../../Model/Model';
+import { composers } from '../../Model/ComposerModel';
 import ComposerListRow from './ComposerListRow';
 
 import {
@@ -46,7 +46,7 @@ const Composers = () => {
     <FlatList
       style={styles.list}
       data={composers}
-      renderItem={({item, index}) => (
+      renderItem={({ item, index }) => (
         <ComposerListRow
           name={item.name}
           index={index}

@@ -1,19 +1,25 @@
-import React, {useContext} from 'react';
-import {View, Text, ScrollView, Image, StyleSheet} from 'react-native';
+import React, { useContext } from 'react';
+import { View, Text, ScrollView, Image } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
-import {useRoute} from '@react-navigation/core';
-import {SafeAreaView} from 'react-native-safe-area-context';
+import { useRoute } from '@react-navigation/core';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import {
+  DynamicStyleSheet,
+  DynamicValue,
+  useDarkMode,
+  useDynamicStyleSheet,
+} from 'react-native-dynamic';
 
 import SectionHeader from '../../Components/SectionHeader/SectionHeader';
 import CompositionSection from './CompositionSection/CompositionSection';
 import MetaLabel from '../../Components/MetaLabel/MetaLabel';
-import {composers as hornComposers} from '../../Model/Excerpts/HornExcerpts';
-import {composers as trumpetComposers} from '../../Model/Excerpts/TrumpetExcerpts';
-import {composers as tromboneComposers} from '../../Model/Excerpts/TromboneExcerpts';
-import {composers as tubaComposers} from '../../Model/Excerpts/TubaExcerpts';
-import {colors} from '../../Model/Model';
-import {PreferencesContext} from '../../Model/Preferences';
-import {getNumberOfInstruments} from '../../utils/getNumberOfInstruments/getNumberOfInstruments';
+import { composers as hornComposers } from '../../Model/Excerpts/HornExcerpts';
+import { composers as trumpetComposers } from '../../Model/Excerpts/TrumpetExcerpts';
+import { composers as tromboneComposers } from '../../Model/Excerpts/TromboneExcerpts';
+import { composers as tubaComposers } from '../../Model/Excerpts/TubaExcerpts';
+import { colors } from '../../Model/Model';
+import { PreferencesContext } from '../../Model/Preferences';
+import { getNumberOfInstruments } from '../../utils/getNumberOfInstruments/getNumberOfInstruments';
 
 /**
  * @function ComposerDetail
@@ -31,7 +37,9 @@ import {getNumberOfInstruments} from '../../utils/getNumberOfInstruments/getNumb
 const ComposerDetail = () => {
   const route = useRoute();
   const composer = route.params;
-  const {state} = useContext(PreferencesContext);
+  const { state } = useContext(PreferencesContext);
+  const styles = useDynamicStyleSheet(dynamicStyles);
+  const DARKMODE = useDarkMode();
 
   return (
     <ScrollView style={styles.container}>
@@ -46,8 +54,12 @@ const ComposerDetail = () => {
             </Text>
           </View>
           <LinearGradient
-            colors={[colors.blueLight, colors.greenLight]}
-            style={styles.linearGradient}>
+            colors={[
+              DARKMODE ? colors.blueDark : colors.blueLight,
+              DARKMODE ? colors.greenDark : colors.greenLight,
+            ]}
+            style={styles.linearGradient}
+          >
             <Image
               source={composer.image}
               style={styles.image}
@@ -117,15 +129,16 @@ const ComposerDetail = () => {
   );
 };
 
-const styles = StyleSheet.create({
+const dynamicStyles = new DynamicStyleSheet({
   bio: {
     padding: 20,
+    color: new DynamicValue(colors.black, colors.white),
   },
   card: {
     margin: 20,
-    backgroundColor: colors.blueLight,
+    backgroundColor: new DynamicValue(colors.blueLight, colors.blueDark),
     alignItems: 'center',
-    shadowColor: '#000',
+    shadowColor: new DynamicValue(colors.black, colors.white),
     shadowOffset: {
       width: 0,
       height: 3,
@@ -137,16 +150,16 @@ const styles = StyleSheet.create({
     borderRadius: 4,
   },
   cardBottom: {
-    backgroundColor: colors.white,
+    backgroundColor: new DynamicValue(colors.white, colors.black),
     width: '100%',
     borderRadius: 4,
   },
   cardImageBottom: {
-    backgroundColor: colors.greenLight,
+    backgroundColor: new DynamicValue(colors.greenLight, colors.greenDark),
     padding: 10,
   },
   cardImageTop: {
-    backgroundColor: colors.blueLight,
+    backgroundColor: new DynamicValue(colors.blueLight, colors.blueDark),
     width: '100%',
     padding: 10,
     borderTopLeftRadius: 4,
@@ -156,9 +169,11 @@ const styles = StyleSheet.create({
   },
   cardImageTopText: {
     fontWeight: 'bold',
+    color: new DynamicValue(colors.black, colors.white),
   },
   container: {
     paddingBottom: 50,
+    backgroundColor: new DynamicValue(colors.systemGray6Light, colors.black),
   },
   image: {
     aspectRatio: 1,

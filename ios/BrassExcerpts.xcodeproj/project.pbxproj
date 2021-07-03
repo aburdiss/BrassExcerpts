@@ -173,6 +173,22 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				CC09835325F09446006C012D /* AntDesign.ttf */,
+				CC09836025F09446006C012D /* Entypo.ttf */,
+				CC09835925F09446006C012D /* EvilIcons.ttf */,
+				CC09835D25F09446006C012D /* Feather.ttf */,
+				CC09835825F09446006C012D /* FontAwesome.ttf */,
+				CC09835625F09446006C012D /* FontAwesome5_Brands.ttf */,
+				CC09835A25F09446006C012D /* FontAwesome5_Regular.ttf */,
+				CC09835C25F09446006C012D /* FontAwesome5_Solid.ttf */,
+				CC09835F25F09446006C012D /* Fontisto.ttf */,
+				CC09836125F09446006C012D /* Foundation.ttf */,
+				CC09835B25F09446006C012D /* Ionicons.ttf */,
+				CC09835225F09446006C012D /* MaterialCommunityIcons.ttf */,
+				CC09835725F09446006C012D /* MaterialIcons.ttf */,
+				CC09835525F09446006C012D /* Octicons.ttf */,
+				CC09835E25F09446006C012D /* SimpleLineIcons.ttf */,
+				CC09835425F09446006C012D /* Zocial.ttf */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -195,22 +211,6 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				CC09835325F09446006C012D /* AntDesign.ttf */,
-				CC09836025F09446006C012D /* Entypo.ttf */,
-				CC09835925F09446006C012D /* EvilIcons.ttf */,
-				CC09835D25F09446006C012D /* Feather.ttf */,
-				CC09835825F09446006C012D /* FontAwesome.ttf */,
-				CC09835625F09446006C012D /* FontAwesome5_Brands.ttf */,
-				CC09835A25F09446006C012D /* FontAwesome5_Regular.ttf */,
-				CC09835C25F09446006C012D /* FontAwesome5_Solid.ttf */,
-				CC09835F25F09446006C012D /* Fontisto.ttf */,
-				CC09836125F09446006C012D /* Foundation.ttf */,
-				CC09835B25F09446006C012D /* Ionicons.ttf */,
-				CC09835225F09446006C012D /* MaterialCommunityIcons.ttf */,
-				CC09835725F09446006C012D /* MaterialIcons.ttf */,
-				CC09835525F09446006C012D /* Octicons.ttf */,
-				CC09835E25F09446006C012D /* SimpleLineIcons.ttf */,
-				CC09835425F09446006C012D /* Zocial.ttf */,
 				13B07FAE1A68108700A75B9A /* BrassExcerpts */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* BrassExcerptsTests */,
