@@ -1,9 +1,14 @@
-import React, {useContext, useEffect, useRef, useState} from 'react';
-import {View, StyleSheet, ScrollView, Pressable, Text} from 'react-native';
+import React, { useContext, useEffect, useRef, useState } from 'react';
+import { View, ScrollView, Pressable, Text } from 'react-native';
 import SegmentedControl from '@react-native-segmented-control/segmented-control';
-import {useNavigation} from '@react-navigation/core';
-import {useQuery} from 'react-query';
-import {SafeAreaView} from 'react-native-safe-area-context';
+import { useNavigation } from '@react-navigation/core';
+import { useQuery } from 'react-query';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import {
+  DynamicStyleSheet,
+  DynamicValue,
+  useDynamicStyleSheet,
+} from 'react-native-dynamic';
 
 import JobsListRow from './JobsListRow/JobsListRow';
 // eslint-disable-next-line no-unused-vars
@@ -13,8 +18,8 @@ import {
   fetchInstrumentJobs,
   openMusicalChairsLink,
 } from './JobsUtils';
-import {PreferencesContext} from '../../Model/Preferences';
-import {colors} from '../../Model/Model';
+import { PreferencesContext } from '../../Model/Preferences';
+import { colors } from '../../Model/Model';
 
 /**
  * @todo get top excerpts for each instrument (top 10 or 20)
@@ -30,7 +35,7 @@ import {colors} from '../../Model/Model';
  * and display more information about that Job to the user.
  * @author Alexander Burdiss
  * @since 3/5/21
- * @version 1.0.0
+ * @version 1.1.0
  * @component
  * @example
  * ```jsx
@@ -47,10 +52,11 @@ const Jobs = () => {
   const internalTubaJobsLink =
     'https://github.com/aburdiss/BrassExcerpts/raw/master/src/Model/Jobs/TubaJobs.json';
 
-  const {state, dispatch} = useContext(PreferencesContext);
+  const { state, dispatch } = useContext(PreferencesContext);
   const [currentJobs, setCurrentJobs] = useState([]);
   const navigation = useNavigation();
   const scrollViewRef = useRef(null);
+  const styles = useDynamicStyleSheet(dynamicStyles);
 
   const possibleInstruments = ['Horn', 'Trumpet', 'Trombone', 'Tuba'];
 
@@ -137,17 +143,18 @@ const Jobs = () => {
     <View style={styles.jobsContainer}>
       <SafeAreaView
         edges={['left', 'right']}
-        style={styles.segmentedControlContainer}>
+        style={styles.segmentedControlContainer}
+      >
         <SegmentedControl
           accessibilityRole="menu"
-          accessibilityValue={{now: possibleInstruments[state.jobsIndex]}}
+          accessibilityValue={{ now: possibleInstruments[state.jobsIndex] }}
           values={possibleInstruments}
           selectedIndex={state.jobsIndex}
           onChange={(event) => {
-            scrollViewRef.current.scrollTo({x: 0, y: 0});
+            scrollViewRef.current.scrollTo({ x: 0, y: 0 });
             dispatch({
               type: 'SET_SETTING',
-              payload: {jobsIndex: event.nativeEvent.selectedSegmentIndex},
+              payload: { jobsIndex: event.nativeEvent.selectedSegmentIndex },
             });
           }}
         />
@@ -181,7 +188,8 @@ const Jobs = () => {
             accessibilityRole="link"
             accessibilityHint="Opens Musical Chairs in default web browser"
             onPress={() => openMusicalChairsLink(state)}
-            style={({pressed}) => ({opacity: pressed ? 0.7 : 1})}>
+            style={({ pressed }) => ({ opacity: pressed ? 0.7 : 1 })}
+          >
             <Text style={styles.linkText}>
               View {currentInstrument} job openings on Musical Chairs
             </Text>
@@ -196,7 +204,7 @@ const Jobs = () => {
   );
 };
 
-const styles = StyleSheet.create({
+const dynamicStyles = new DynamicStyleSheet({
   contentContainer: {
     flex: 1,
     paddingHorizontal: 10,
@@ -213,14 +221,16 @@ const styles = StyleSheet.create({
   },
   errorText: {
     textAlign: 'center',
+    color: new DynamicValue(colors.black, colors.white),
   },
   linkText: {
-    color: colors.greenLight,
+    color: new DynamicValue(colors.greenLight, colors.greenDark),
     textDecorationLine: 'underline',
     padding: 10,
   },
   jobsContainer: {
     height: '100%',
+    backgroundColor: new DynamicValue(colors.systemGray6Light, colors.black),
   },
   segmentedControlContainer: {
     padding: 10,

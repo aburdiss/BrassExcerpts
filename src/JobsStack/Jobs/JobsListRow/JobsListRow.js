@@ -1,8 +1,13 @@
 import React from 'react';
-import {View, Text, Pressable, StyleSheet} from 'react-native';
-import {useNavigation} from '@react-navigation/core';
+import { View, Text, Pressable } from 'react-native';
+import { useNavigation } from '@react-navigation/core';
+import {
+  DynamicStyleSheet,
+  DynamicValue,
+  useDynamicStyleSheet,
+} from 'react-native-dynamic';
 
-import {colors} from '../../../Model/Model';
+import { colors } from '../../../Model/Model';
 
 /**
  * @todo Add share modal when long press this job.
@@ -18,8 +23,9 @@ import {colors} from '../../../Model/Model';
  * <JobsListRow job={job} />
  * ```
  */
-const JobsListRow = ({job}) => {
+const JobsListRow = ({ job }) => {
   const navigation = useNavigation();
+  const styles = useDynamicStyleSheet(dynamicStyles);
 
   /**
    * @function JobsListRow~navigateToJobDetail
@@ -45,10 +51,11 @@ const JobsListRow = ({job}) => {
         color: styles.orchestra.color,
       }}
       onPress={navigateToJobDetail}
-      style={({pressed}) => ({
+      style={({ pressed }) => ({
         opacity: pressed ? 0.7 : 1,
         ...styles.container,
-      })}>
+      })}
+    >
       <View style={styles.orchestraContainer}>
         <Text style={styles.orchestra}>{job?.orchestra}</Text>
         <Text>{job?.position}</Text>
@@ -61,13 +68,13 @@ const JobsListRow = ({job}) => {
   );
 };
 
-const styles = StyleSheet.create({
+const dynamicStyles = new DynamicStyleSheet({
   closingDate: {
     width: '40%',
     textAlign: 'right',
   },
   container: {
-    backgroundColor: colors.greenLight,
+    backgroundColor: new DynamicValue(colors.greenLight, colors.greenDark),
     marginVertical: 8,
     padding: 15,
     borderRadius: 8,
@@ -77,7 +84,7 @@ const styles = StyleSheet.create({
   orchestra: {
     fontWeight: 'bold',
     flexWrap: 'wrap',
-    color: colors.black,
+    color: new DynamicValue(colors.black, colors.black),
   },
   orchestraContainer: {
     width: '60%',

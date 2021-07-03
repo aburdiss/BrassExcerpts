@@ -6,7 +6,6 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import {
   DynamicStyleSheet,
   DynamicValue,
-  useDarkMode,
   useDynamicStyleSheet,
 } from 'react-native-dynamic';
 
@@ -23,7 +22,7 @@ import { PreferencesContext } from '../../../Model/Preferences';
  * section.
  * @author Alexander Burdiss
  * @since 3/9/21
- * @version 1.0.1
+ * @version 1.0.2
  */
 const CompositionSection = ({ excerpts }) => {
   const { state } = useContext(PreferencesContext);

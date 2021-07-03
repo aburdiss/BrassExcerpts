@@ -1,30 +1,35 @@
-import React, {useContext} from 'react';
+import React, { useContext } from 'react';
 import {
   ScrollView,
   Text,
   Linking,
   Pressable,
-  StyleSheet,
   View,
   useWindowDimensions,
 } from 'react-native';
-import {useNavigation, useRoute} from '@react-navigation/core';
+import { useNavigation, useRoute } from '@react-navigation/core';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import CalendarStrip from 'react-native-calendar-strip';
-import {SafeAreaView} from 'react-native-safe-area-context';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import {
+  DynamicStyleSheet,
+  DynamicValue,
+  useDynamicStyleSheet,
+  useDarkMode,
+} from 'react-native-dynamic';
 
 import ActionButton from '../../Components/ActionButton/ActionButton';
 import MetaLabel from '../../Components/MetaLabel/MetaLabel';
 import SectionHeader from '../../Components/SectionHeader/SectionHeader';
 
-import {PreferencesContext} from '../../Model/Preferences';
-import {excerpts as hornExcerpts} from '../../Model/Excerpts/HornExcerpts';
-import {excerpts as trumpetExcerpts} from '../../Model/Excerpts/TrumpetExcerpts';
-import {excerpts as tromboneExcerpts} from '../../Model/Excerpts/TromboneExcerpts';
-import {excerpts as tubaExcerpts} from '../../Model/Excerpts/TubaExcerpts';
-import {colors} from '../../Model/Model';
-import {getDaysUntilDate} from '../../utils/getDaysUntilDate/getDaysUntilDate';
-import {isFavorite} from '../../utils/isFavorite/isFavorite';
+import { PreferencesContext } from '../../Model/Preferences';
+import { excerpts as hornExcerpts } from '../../Model/Excerpts/HornExcerpts';
+import { excerpts as trumpetExcerpts } from '../../Model/Excerpts/TrumpetExcerpts';
+import { excerpts as tromboneExcerpts } from '../../Model/Excerpts/TromboneExcerpts';
+import { excerpts as tubaExcerpts } from '../../Model/Excerpts/TubaExcerpts';
+import { colors } from '../../Model/Model';
+import { getDaysUntilDate } from '../../utils/getDaysUntilDate/getDaysUntilDate';
+import { isFavorite } from '../../utils/isFavorite/isFavorite';
 
 /**
  * @todo Update Excerpt list to look like composer Excerpts section.
@@ -35,7 +40,7 @@ import {isFavorite} from '../../utils/isFavorite/isFavorite';
  * user directly to that excerpt.
  * @author Alexander Burdiss
  * @since 3/28/21
- * @version 1.1.0
+ * @version 1.2.0
  * @component
  * @example
  * ```jsx
@@ -46,7 +51,9 @@ const JobDetail = () => {
   const route = useRoute();
   const width = useWindowDimensions().width;
   const navigation = useNavigation();
-  const {state} = useContext(PreferencesContext);
+  const { state } = useContext(PreferencesContext);
+  const styles = useDynamicStyleSheet(dynamicStyles);
+  const DARKMODE = useDarkMode();
 
   /**
    * @function JobDetail~openAuditionWebsite
@@ -124,6 +131,29 @@ const JobDetail = () => {
   function Calendar() {
     return (
       <CalendarStrip
+        calendarHeaderStyle={{ color: DARKMODE ? colors.white : colors.black }}
+        dateNumberStyle={{ color: DARKMODE ? colors.white : colors.black }}
+        dateNameStyle={{ color: DARKMODE ? colors.white : colors.black }}
+        highlightDateNumberStyle={{
+          color: DARKMODE ? colors.white : colors.black,
+        }}
+        highlightDateNameStyle={{
+          color: DARKMODE ? colors.white : colors.black,
+        }}
+        rightSelector={
+          <Ionicons
+            name="chevron-forward"
+            color={DARKMODE ? colors.white : colors.black}
+            size={24}
+          />
+        }
+        leftSelector={
+          <Ionicons
+            name="chevron-back"
+            color={DARKMODE ? colors.white : colors.black}
+            size={24}
+          />
+        }
         style={styles.calendarStrip}
         minDate={new Date()}
         maxDate={
@@ -136,7 +166,7 @@ const JobDetail = () => {
             date: new Date(),
             lines: [
               {
-                color: colors.greenLight,
+                color: DARKMODE ? colors.greenDark : colors.greenLight,
               },
             ],
           },
@@ -144,7 +174,7 @@ const JobDetail = () => {
             date: new Date(route.params.closingDate),
             lines: [
               {
-                color: colors.orangeLight,
+                color: DARKMODE ? colors.orangeDark : colors.orangeLight,
               },
             ],
           },
@@ -152,7 +182,7 @@ const JobDetail = () => {
             date: new Date(route.params.auditionDate),
             lines: [
               {
-                color: colors.redLight,
+                color: DARKMODE ? colors.redDark : colors.redLight,
               },
             ],
           },
@@ -210,7 +240,7 @@ const JobDetail = () => {
   }
 
   return (
-    <ScrollView>
+    <ScrollView style={styles.jobDetailContainer}>
       <SafeAreaView edges={['left', 'right']}>
         <Text accessibilityRole="text" style={styles.position}>
           {route.params.position}
@@ -266,21 +296,23 @@ const JobDetail = () => {
                       ' ' +
                       excerptData.name
                     }
-                    style={({pressed}) => ({
+                    style={({ pressed }) => ({
                       opacity: pressed ? 0.7 : 1,
                       ...styles.excerptButton,
                       ...borderTop,
                     })}
                     onPress={() => {
                       navigateToExcerptDetailPage(excerptData);
-                    }}>
+                    }}
+                  >
                     <Text style={styles.excerptLink}>
                       <Text>{excerptData.composerLast} - </Text>
                       <Text>{excerptData.name}</Text>
                     </Text>
                     <SafeAreaView
                       style={styles.iconContainer}
-                      edges={['right']}>
+                      edges={['right']}
+                    >
                       {isFavorite(
                         {
                           ...state,
@@ -313,7 +345,8 @@ const JobDetail = () => {
                 <SafeAreaView key={index} edges={['left']}>
                   <View
                     accessibilityRole="text"
-                    style={[styles.excerptButton, borderTop]}>
+                    style={[styles.excerptButton, borderTop]}
+                  >
                     <Text>{excerpt}</Text>
                   </View>
                 </SafeAreaView>
@@ -324,7 +357,8 @@ const JobDetail = () => {
       ) : (
         <SafeAreaView
           style={styles.noExcerptsContainer}
-          edges={['left', 'right']}>
+          edges={['left', 'right']}
+        >
           <Text accessibilityRole="text">
             No excerpts available for this job.
           </Text>
@@ -334,13 +368,16 @@ const JobDetail = () => {
   );
 };
 
-const styles = StyleSheet.create({
+const dynamicStyles = new DynamicStyleSheet({
   actionButtonContainer: {
     paddingHorizontal: 20,
   },
   buttonBorder: {
     borderTopWidth: 1,
-    borderTopColor: colors.systemGray,
+    borderTopColor: new DynamicValue(
+      colors.systemGray5Light,
+      colors.systemGray5Dark,
+    ),
   },
   calendarStrip: {
     height: 80,
@@ -356,9 +393,7 @@ const styles = StyleSheet.create({
     marginLeft: 20,
     paddingRight: 20,
     height: 45,
-    backgroundColor: colors.white,
-    borderTopColor: colors.systemGray6Light,
-    borderTopWidth: 1,
+    backgroundColor: new DynamicValue(colors.white, colors.systemGray6Dark),
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -366,16 +401,25 @@ const styles = StyleSheet.create({
   excerptsContainer: {
     marginBottom: 70,
     borderBottomWidth: 1,
-    borderBottomColor: colors.systemGray,
+    borderBottomColor: new DynamicValue(
+      colors.systemGray5Light,
+      colors.systemGray5Dark,
+    ),
     borderTopWidth: 1,
-    borderTopColor: colors.systemGray,
-    backgroundColor: colors.white,
+    borderTopColor: new DynamicValue(
+      colors.systemGray5Light,
+      colors.systemGray5Dark,
+    ),
+    backgroundColor: new DynamicValue(colors.white, colors.systemGray6Dark),
   },
   excerptLink: {
-    color: colors.greenLight,
+    color: new DynamicValue(colors.greenLight, colors.greenDark),
   },
   iconContainer: {
     flexDirection: 'row',
+  },
+  jobDetailContainer: {
+    backgroundColor: new DynamicValue(colors.systemGray6Light, colors.black),
   },
   metaContainer: {
     paddingHorizontal: 20,
@@ -399,6 +443,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
     marginBottom: 10,
+    color: new DynamicValue(colors.black, colors.white),
   },
 });
 

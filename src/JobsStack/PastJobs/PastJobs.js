@@ -1,13 +1,19 @@
-import React, {useContext, useState, useEffect, useRef} from 'react';
-import {ScrollView, StyleSheet, View} from 'react-native';
+import React, { useContext, useState, useEffect, useRef } from 'react';
+import { ScrollView, View } from 'react-native';
 import SegmentedControl from '@react-native-segmented-control/segmented-control';
-import {useQuery} from 'react-query';
+import { useQuery } from 'react-query';
+import {
+  DynamicStyleSheet,
+  DynamicValue,
+  useDynamicStyleSheet,
+} from 'react-native-dynamic';
 
 import JobsListRow from '../Jobs/JobsListRow/JobsListRow';
 
-import {fetchInstrumentJobs} from '../Jobs/JobsUtils';
-import {PreferencesContext} from '../../Model/Preferences';
-import {SafeAreaView} from 'react-native-safe-area-context';
+import { fetchInstrumentJobs } from '../Jobs/JobsUtils';
+import { PreferencesContext } from '../../Model/Preferences';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { colors } from '../../Model/Model';
 
 /**
  * @function PastJobs
@@ -16,7 +22,7 @@ import {SafeAreaView} from 'react-native-safe-area-context';
  * Jobs page.
  * @author Alexander Burdiss
  * @since 3/28/21
- * @version 1.0.0
+ * @version 1.1.0
  * @component
  * @example
  * ```jsx
@@ -33,9 +39,10 @@ const PastJobs = () => {
   const internalTubaJobsLink =
     'https://github.com/aburdiss/BrassExcerpts/raw/master/src/Model/Jobs/TubaJobs.json';
 
-  const {state, dispatch} = useContext(PreferencesContext);
+  const { state, dispatch } = useContext(PreferencesContext);
   const [currentJobs, setCurrentJobs] = useState([]);
   const scrollViewRef = useRef(null);
+  const styles = useDynamicStyleSheet(dynamicStyles);
 
   const possibleInstruments = ['Horn', 'Trumpet', 'Trombone', 'Tuba'];
 
@@ -93,14 +100,14 @@ const PastJobs = () => {
       <SafeAreaView edges={['left', 'right']}>
         <SegmentedControl
           accessibilityRole="menu"
-          accessibilityValue={{now: possibleInstruments[state.jobsIndex]}}
+          accessibilityValue={{ now: possibleInstruments[state.jobsIndex] }}
           values={possibleInstruments}
           selectedIndex={state.jobsIndex}
           onChange={(event) => {
-            scrollViewRef.current.scrollTo({x: 0, y: 0});
+            scrollViewRef.current.scrollTo({ x: 0, y: 0 });
             dispatch({
               type: 'SET_SETTING',
-              payload: {jobsIndex: event.nativeEvent.selectedSegmentIndex},
+              payload: { jobsIndex: event.nativeEvent.selectedSegmentIndex },
             });
           }}
         />
@@ -123,13 +130,14 @@ const PastJobs = () => {
   );
 };
 
-const styles = StyleSheet.create({
+const dynamicStyles = new DynamicStyleSheet({
   contentContainer: {
     marginTop: 10,
     height: '100%',
   },
   pastJobsContainer: {
     padding: 10,
+    backgroundColor: new DynamicValue(colors.systemGray6Light, colors.black),
   },
 });
 

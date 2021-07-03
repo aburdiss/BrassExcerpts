@@ -1,4 +1,4 @@
-import {View, Text, Image, Pressable} from 'react-native';
+import { View, Text, Image, Pressable } from 'react-native';
 import React from 'react';
 
 import {
@@ -6,10 +6,10 @@ import {
   DynamicValue,
   useDynamicStyleSheet,
 } from 'react-native-dynamic';
-import {SafeAreaView} from 'react-native-safe-area-context';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-import {colors} from '../../Model/Model';
+import { colors } from '../../Model/Model';
 
 /**
  * @function ComposerListRow
@@ -25,7 +25,7 @@ import {colors} from '../../Model/Model';
  * pressed.
  * @author Alexander Burdiss
  * @since 3/18/21
- * @version 1.1.0
+ * @version 1.1.1
  * @component
  * @example
  * ```jsx
@@ -39,7 +39,7 @@ import {colors} from '../../Model/Model';
  * />
  * ```
  */
-const ComposerListRow = ({name, index, imageSource, onPress}) => {
+const ComposerListRow = ({ name, index, imageSource, onPress }) => {
   const styles = useDynamicStyleSheet(dynamicStyles);
   const divider = index != 0 ? styles.notFirstTextContainer : null;
 
@@ -52,13 +52,14 @@ const ComposerListRow = ({name, index, imageSource, onPress}) => {
       android_ripple={{
         color: styles.androidRipple.color,
       }}
-      style={({pressed}) => ({
+      style={({ pressed }) => ({
         opacity: pressed ? 0.7 : 1,
       })}
-      onPress={onPress}>
+      onPress={onPress}
+    >
       <SafeAreaView style={styles.container} edges={['right', 'left']}>
         <Image source={imageSource} style={styles.image} />
-        <View style={{...styles.textContainer, ...divider}}>
+        <View style={{ ...styles.textContainer, ...divider }}>
           <Text style={styles.text}>{name}</Text>
           <Ionicons
             name="chevron-forward"
