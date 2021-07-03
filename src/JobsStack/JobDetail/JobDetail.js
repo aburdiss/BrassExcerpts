@@ -40,7 +40,7 @@ import { isFavorite } from '../../utils/isFavorite/isFavorite';
  * user directly to that excerpt.
  * @author Alexander Burdiss
  * @since 3/28/21
- * @version 1.2.0
+ * @version 1.2.1
  * @component
  * @example
  * ```jsx
@@ -347,7 +347,7 @@ const JobDetail = () => {
                     accessibilityRole="text"
                     style={[styles.excerptButton, borderTop]}
                   >
-                    <Text>{excerpt}</Text>
+                    <Text style={styles.excerptName}>{excerpt}</Text>
                   </View>
                 </SafeAreaView>
               );
@@ -383,12 +383,6 @@ const dynamicStyles = new DynamicStyleSheet({
     height: 80,
     paddingVertical: 5,
   },
-  excerptsHeader: {
-    fontWeight: 'bold',
-    paddingHorizontal: 20,
-    paddingVertical: 10,
-    fontSize: 24,
-  },
   excerptButton: {
     marginLeft: 20,
     paddingRight: 20,
@@ -397,6 +391,18 @@ const dynamicStyles = new DynamicStyleSheet({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
+  },
+  excerptName: {
+    color: new DynamicValue(colors.black, colors.white),
+  },
+  excerptsHeader: {
+    fontWeight: 'bold',
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+    fontSize: 24,
+  },
+  excerptLink: {
+    color: new DynamicValue(colors.greenLight, colors.greenDark),
   },
   excerptsContainer: {
     marginBottom: 70,
@@ -411,9 +417,6 @@ const dynamicStyles = new DynamicStyleSheet({
       colors.systemGray5Dark,
     ),
     backgroundColor: new DynamicValue(colors.white, colors.systemGray6Dark),
-  },
-  excerptLink: {
-    color: new DynamicValue(colors.greenLight, colors.greenDark),
   },
   iconContainer: {
     flexDirection: 'row',
