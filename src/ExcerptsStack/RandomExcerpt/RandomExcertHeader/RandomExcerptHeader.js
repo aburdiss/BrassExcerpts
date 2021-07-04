@@ -3,7 +3,7 @@ import {
   DynamicValue,
   useDynamicStyleSheet,
 } from 'react-native-dynamic';
-import { Pressable, Text, View } from 'react-native';
+import { Pressable, Text, View, useWindowDimensions } from 'react-native';
 import { useNavigation } from '@react-navigation/core';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import React from 'react';
@@ -27,6 +27,7 @@ import { colors } from '../../../Model/Model';
 const RandomExcerptHeader = ({ composition, excerptIndex, partIndex }) => {
   const navigation = useNavigation();
   const styles = useDynamicStyleSheet(dynamicStyles);
+  const windowWidth = useWindowDimensions().width;
 
   return (
     <View>
@@ -70,11 +71,13 @@ const RandomExcerptHeader = ({ composition, excerptIndex, partIndex }) => {
               View Full Excerpt
             </Text>
           </View>
-          <Ionicons
-            name="chevron-forward"
-            color={colors.greenLight}
-            size={24}
-          />
+          {windowWidth > 500 && (
+            <Ionicons
+              name="chevron-forward"
+              color={colors.greenLight}
+              size={24}
+            />
+          )}
         </Pressable>
       </View>
     </View>
@@ -141,7 +144,7 @@ const dynamicStyles = new DynamicStyleSheet({
     flex: 1,
     flexWrap: 'wrap',
   },
-  pressableTextContainer: { flexDirection: 'row', maxWidth: '50%' },
+  pressableTextContainer: { flexDirection: 'row' },
 });
 
 export default RandomExcerptHeader;

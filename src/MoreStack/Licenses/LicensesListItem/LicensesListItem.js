@@ -1,7 +1,7 @@
 import React from 'react';
-import {Text, Pressable, View, Linking, Image} from 'react-native';
+import { Text, Pressable, View, Linking, Image } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import {colors} from '../../../Model/Model';
+import { colors } from '../../../Model/Model';
 import {
   DynamicStyleSheet,
   DynamicValue,
@@ -16,7 +16,7 @@ import {
  * [Created with help from an online article]{@link https://blog.expo.io/licenses-the-best-part-of-your-app-29e7285b544f}
  * @author Alexander Burdiss
  * @date 12/17/20
- * @version 1.1.0
+ * @version 1.1.1
  * @param {String} props.image The url of the image to display.
  * @param {String} props.userUrl The url of the author of this software.
  * @param {String} props.username The username of the author of the software
@@ -67,8 +67,9 @@ const LicensesListItem = ({
               accessibilityHint={'Opens github account for ' + title}
               accessibilityLabel={title}
               onPress={() => Linking.openURL(userUrl)}
-              style={({pressed}) => ({opacity: pressed ? 0.7 : 1})}>
-              <Image source={{uri: image}} style={styles.image} />
+              style={({ pressed }) => ({ opacity: pressed ? 0.7 : 1 })}
+            >
+              <Image source={{ uri: image }} style={styles.image} />
             </Pressable>
           )}
           <Pressable
@@ -76,10 +77,11 @@ const LicensesListItem = ({
             android_ripple={{
               color: DARKMODE ? colors.greenDark : colors.greenLight,
             }}
-            style={({pressed}) => ({
+            style={({ pressed }) => ({
               opacity: pressed ? 0.7 : 1,
               ...styles.item,
-            })}>
+            })}
+          >
             <View style={styles.licenseText}>
               <Text accessibilityRole="text" style={styles.name}>
                 {title}
@@ -121,20 +123,21 @@ const LicensesListItem = ({
 </Link>
 ```
  */
-const Link = ({url, style, children}) => (
+const Link = ({ url, style, children }) => (
   <Text
     style={style}
     numberOfLines={1}
     accessibilityRole="link"
     accessibilityLabel={children}
     accessibilityHint={'Opens in default browser'}
-    onPress={() => url && Linking.openURL(url)}>
+    onPress={() => url && Linking.openURL(url)}
+  >
     {children}
   </Text>
 );
 
 const dynamicStyles = new DynamicStyleSheet({
-  arrow: {alignSelf: 'center'},
+  arrow: { alignSelf: 'center' },
   card: {
     overflow: 'hidden',
     flexDirection: 'row',
@@ -158,7 +161,7 @@ const dynamicStyles = new DynamicStyleSheet({
     ),
     borderBottomWidth: 1,
   },
-  licenseText: {maxWidth: '90%'},
+  licenseText: { maxWidth: '88%' },
   name: {
     color: new DynamicValue(colors.black, colors.white),
     fontWeight: 'bold',

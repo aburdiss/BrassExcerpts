@@ -3,24 +3,27 @@ import {
   DynamicValue,
   useDynamicStyleSheet,
 } from 'react-native-dynamic';
-import React, {useContext, useEffect, useState} from 'react';
-import {SafeAreaView, useSafeAreaInsets} from 'react-native-safe-area-context';
-import {ScrollView, View, useWindowDimensions} from 'react-native';
+import React, { useContext, useEffect, useState } from 'react';
+import {
+  SafeAreaView,
+  useSafeAreaInsets,
+} from 'react-native-safe-area-context';
+import { ScrollView, View, useWindowDimensions } from 'react-native';
 
 import ActionButton from '../../Components/ActionButton/ActionButton';
 import AutoHeightImage from 'react-native-auto-height-image';
 import Pinchable from 'react-native-pinchable';
-import {PreferencesContext} from '../../Model/Preferences';
+import { PreferencesContext } from '../../Model/Preferences';
 import RandomExcerptHeader from './RandomExcertHeader/RandomExcerptHeader';
-import {colors} from '../../Model/Model';
-import {generateRandomExcerpt} from './generateRandomExcerpt';
+import { colors } from '../../Model/Model';
+import { generateRandomExcerpt } from './generateRandomExcerpt';
 
 /**
  * @description Displays a random excerpt based on the settings the user has
  * chosen.
  * @author Alexander Burdiss
  * @since 5/3/21
- * @version 1.1.0
+ * @version 1.1.1
  * @component
  * @example
  * ```jsx
@@ -30,7 +33,7 @@ import {generateRandomExcerpt} from './generateRandomExcerpt';
 const RandomExcerpt = () => {
   const windowWidth = useWindowDimensions().width;
   const windowInsets = useSafeAreaInsets();
-  const {state} = useContext(PreferencesContext);
+  const { state } = useContext(PreferencesContext);
   const [composition, setComposition] = useState(undefined);
   const [excerptIndex, setExcerptIndex] = useState(undefined);
   const [partIndex, setPartIndex] = useState(undefined);
@@ -76,7 +79,8 @@ const RandomExcerpt = () => {
                 setPartIndex,
                 composition,
               )
-            }>
+            }
+          >
             Randomize
           </ActionButton>
         </View>

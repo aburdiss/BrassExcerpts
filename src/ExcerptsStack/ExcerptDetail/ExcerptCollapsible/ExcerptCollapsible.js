@@ -35,7 +35,7 @@ import {
  * purposes.
  * @author Alexander Burdiss
  * @since 5/1/21
- * @version 1.1.1
+ * @version 1.1.2
  * @component
  * @example
  * ```jsx
@@ -190,6 +190,7 @@ const dynamicStyles = new DynamicStyleSheet({
     paddingVertical: 5,
     marginBottom: 5,
     minHeight: 50,
+    maxWidth: '90%',
   },
   excerptPressable: {
     paddingHorizontal: 20,
