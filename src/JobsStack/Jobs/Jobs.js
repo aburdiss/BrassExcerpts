@@ -35,7 +35,7 @@ import { colors } from '../../Model/Model';
  * and display more information about that Job to the user.
  * @author Alexander Burdiss
  * @since 3/5/21
- * @version 1.1.0
+ * @version 1.1.1
  * @component
  * @example
  * ```jsx
@@ -174,7 +174,11 @@ const Jobs = () => {
           </SafeAreaView>
         ) : (
           <SafeAreaView style={styles.errorContainer}>
-            <Text style={styles.errorText} accessibilityRole="text">
+            <Text
+              style={styles.errorText}
+              accessibilityRole="text"
+              maxFontSizeMultiplier={2.0}
+            >
               There are no {currentInstrument} jobs at this time.{'\n'}Check
               back later!
             </Text>
@@ -190,11 +194,15 @@ const Jobs = () => {
             onPress={() => openMusicalChairsLink(state)}
             style={({ pressed }) => ({ opacity: pressed ? 0.7 : 1 })}
           >
-            <Text style={styles.linkText}>
+            <Text style={styles.linkText} maxFontSizeMultiplier={2.0}>
               View {currentInstrument} job openings on Musical Chairs
             </Text>
           </Pressable>
-          <Text style={styles.disclaimer} accessibilityRole="text">
+          <Text
+            style={styles.disclaimer}
+            accessibilityRole="text"
+            maxFontSizeMultiplier={2.0}
+          >
             Note: Although these jobs are regularly updated, there may be some
             mistakes. Please check the orchestra website for official dates.
           </Text>
@@ -214,6 +222,7 @@ const dynamicStyles = new DynamicStyleSheet({
     fontSize: 12,
     textAlign: 'center',
     paddingHorizontal: 10,
+    color: new DynamicValue(colors.black, colors.white),
   },
   errorContainer: {
     marginVertical: 10,

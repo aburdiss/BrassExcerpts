@@ -16,7 +16,7 @@ import { colors } from '../../../Model/Model';
  * @description One job item in the list of jobs.
  * @author Alexander Burdiss
  * @since 3/28/21
- * @version 1.1.0
+ * @version 1.1.1
  * @component
  * @example
  * ```jsx
@@ -57,10 +57,12 @@ const JobsListRow = ({ job }) => {
       })}
     >
       <View style={styles.orchestraContainer}>
-        <Text style={styles.orchestra}>{job?.orchestra}</Text>
-        <Text>{job?.position}</Text>
+        <Text style={styles.orchestra} maxFontSizeMultiplier={1.8}>
+          {job?.orchestra}
+        </Text>
+        <Text maxFontSizeMultiplier={1.8}>{job?.position}</Text>
       </View>
-      <Text style={styles.closingDate}>
+      <Text style={styles.closingDate} maxFontSizeMultiplier={2.0}>
         Closing Date:{'\n'}
         {job?.closingDate}
       </Text>
