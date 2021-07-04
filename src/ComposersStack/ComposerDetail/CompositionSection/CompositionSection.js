@@ -58,7 +58,9 @@ const CompositionSection = ({ excerpts }) => {
                 navigation.navigate('Composer Excerpt Detail', excerpt);
               }}
             >
-              <Text style={styles.text}>{excerpt.name}</Text>
+              <Text style={styles.text} maxFontSizeMultiplier={1.8}>
+                {excerpt.name}
+              </Text>
               <SafeAreaView style={styles.iconContainer} edges={['right']}>
                 {isFavorite(state, excerpt.composerLast, excerpt.name) && (
                   <Ionicons

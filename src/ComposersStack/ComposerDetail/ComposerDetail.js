@@ -27,7 +27,7 @@ import { getNumberOfInstruments } from '../../utils/getNumberOfInstruments/getNu
  * instruments available for that composer.
  * @author Alexander Burdiss
  * @since 3/3/21
- * @version 1.0.0
+ * @version 1.0.1
  * @component
  * @example
  * ```jsx
@@ -46,10 +46,18 @@ const ComposerDetail = () => {
       <SafeAreaView edges={['left', 'right']}>
         <View style={styles.card}>
           <View style={styles.cardImageTop}>
-            <Text accessibilityRole="text" style={styles.cardImageTopText}>
+            <Text
+              accessibilityRole="text"
+              style={styles.cardImageTopText}
+              maxFontSizeMultiplier={1.4}
+            >
               /{composer.ipa}/
             </Text>
-            <Text accessibilityRole="text" style={styles.cardImageTopText}>
+            <Text
+              accessibilityRole="text"
+              style={styles.cardImageTopText}
+              maxFontSizeMultiplier={1.4}
+            >
               {composer.dates}
             </Text>
           </View>
@@ -71,7 +79,11 @@ const ComposerDetail = () => {
             <View style={styles.cardImageBottom}>
               <MetaLabel label="Country" data={composer.country} />
             </View>
-            <Text accessibilityRole="text" style={styles.bio}>
+            <Text
+              accessibilityRole="text"
+              style={styles.bio}
+              maxFontSizeMultiplier={1.8}
+            >
               {composer.bio}
             </Text>
           </View>

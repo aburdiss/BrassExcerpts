@@ -9,7 +9,7 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-import { colors } from '../../Model/Model';
+import { colors } from '../../../Model/Model';
 
 /**
  * @function ComposerListRow
@@ -25,7 +25,7 @@ import { colors } from '../../Model/Model';
  * pressed.
  * @author Alexander Burdiss
  * @since 3/18/21
- * @version 1.1.1
+ * @version 1.1.2
  * @component
  * @example
  * ```jsx
@@ -60,7 +60,9 @@ const ComposerListRow = ({ name, index, imageSource, onPress }) => {
       <SafeAreaView style={styles.container} edges={['right', 'left']}>
         <Image source={imageSource} style={styles.image} />
         <View style={{ ...styles.textContainer, ...divider }}>
-          <Text style={styles.text}>{name}</Text>
+          <Text style={styles.text} maxFontSizeMultiplier={1.8}>
+            {name}
+          </Text>
           <Ionicons
             name="chevron-forward"
             size={24}
