@@ -71,7 +71,7 @@ const RandomExcerptHeader = ({ composition, excerptIndex, partIndex }) => {
               View Full Excerpt
             </Text>
           </View>
-          {windowWidth > 500 && (
+          {windowWidth > 330 && (
             <Ionicons
               name="chevron-forward"
               color={colors.greenLight}
