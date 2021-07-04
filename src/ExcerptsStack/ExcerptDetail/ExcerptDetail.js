@@ -1,19 +1,19 @@
-import {Image, Pressable, ScrollView, Text, View} from 'react-native';
-import {SafeAreaView} from 'react-native-safe-area-context';
-import {useRoute} from '@react-navigation/native';
+import { Image, Pressable, ScrollView, Text, View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { useRoute } from '@react-navigation/native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import React, {useContext, useEffect, useState} from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 
-import {colors} from '../../Model/Model';
-import {composers} from '../../Model/ComposerModel';
-import {excerpts as hornExcerpts} from '../../Model/Excerpts/HornExcerpts';
-import {excerpts as tromboneExcerpts} from '../../Model/Excerpts/TromboneExcerpts';
-import {excerpts as trumpetExcerpts} from '../../Model/Excerpts/TrumpetExcerpts';
-import {excerpts as tubaExcerpts} from '../../Model/Excerpts/TubaExcerpts';
-import {getActiveInstrument} from '../../utils/getActiveInstrument/getActiveInstrument';
-import {getNumberOfInstruments} from '../../utils/getNumberOfInstruments/getNumberOfInstruments';
-import {isFavorite} from '../../utils/isFavorite/isFavorite';
-import {PreferencesContext} from '../../Model/Preferences';
+import { colors } from '../../Model/Model';
+import { composers } from '../../Model/ComposerModel';
+import { excerpts as hornExcerpts } from '../../Model/Excerpts/HornExcerpts';
+import { excerpts as tromboneExcerpts } from '../../Model/Excerpts/TromboneExcerpts';
+import { excerpts as trumpetExcerpts } from '../../Model/Excerpts/TrumpetExcerpts';
+import { excerpts as tubaExcerpts } from '../../Model/Excerpts/TubaExcerpts';
+import { getActiveInstrument } from '../../utils/getActiveInstrument/getActiveInstrument';
+import { getNumberOfInstruments } from '../../utils/getNumberOfInstruments/getNumberOfInstruments';
+import { isFavorite } from '../../utils/isFavorite/isFavorite';
+import { PreferencesContext } from '../../Model/Preferences';
 import ExcerptSection from './ExcerptSection/ExcerptSection';
 import MetaLabel from '../../Components/MetaLabel/MetaLabel';
 import YoutubeSection from './YoutubeSection/YoutubeSection';
@@ -31,7 +31,7 @@ import {
  * where the image is rotated.
  * @author Alexander Burdiss
  * @since 3/3/21
- * @version 1.2.0
+ * @version 1.2.1
  * @component
  * @example
  * ```jsx
@@ -42,7 +42,7 @@ const ExcerptDetail = () => {
   const route = useRoute();
   const item = route.params;
 
-  const {state, dispatch} = useContext(PreferencesContext);
+  const { state, dispatch } = useContext(PreferencesContext);
   const [hornExcerpt, setHornExcerpt] = useState(undefined);
   const [trumpetExcerpt, setTrumpetExcerpt] = useState(undefined);
   const [tromboneExcerpt, setTromboneExcerpt] = useState(undefined);
@@ -175,7 +175,11 @@ const ExcerptDetail = () => {
       <SafeAreaView edges={['right', 'left']}>
         <View style={styles.metaInfoContainer}>
           <View>
-            <Text accessibilityRole="text" style={styles.title}>
+            <Text
+              accessibilityRole="text"
+              style={styles.title}
+              maxFontSizeMultiplier={2.3}
+            >
               {item.composer}
             </Text>
             <MetaLabel label="Date" data={item.date} />
@@ -234,7 +238,8 @@ const ExcerptDetail = () => {
               }}
               onPress={addToFavorites}
               hitSlop={10}
-              style={styles.singleAddToFavoritesButton}>
+              style={styles.singleAddToFavoritesButton}
+            >
               <Ionicons
                 name={
                   isFavorite(state, item.composerLast, item.name)
@@ -284,7 +289,11 @@ const ExcerptDetail = () => {
       </View>
       <View style={styles.youtubeLinksContainer}>
         <SafeAreaView edges={['right', 'left']}>
-          <Text accessibilityRole="header" style={styles.youtubeHeading}>
+          <Text
+            accessibilityRole="header"
+            style={styles.youtubeHeading}
+            maxFontSizeMultiplier={1.8}
+          >
             Listen
           </Text>
           <YoutubeSection data={item.videos} />
@@ -321,6 +330,7 @@ export const dynamicStyles = new DynamicStyleSheet({
   title: {
     fontStyle: 'italic',
     fontWeight: 'bold',
+    color: new DynamicValue(colors.black, colors.white),
   },
   youtubeHeading: {
     fontSize: 28,

@@ -1,4 +1,4 @@
-import React, {useState, useRef} from 'react';
+import React, { useState, useRef } from 'react';
 
 import {
   View,
@@ -12,9 +12,12 @@ import Collapsible from 'react-native-collapsible';
 import AutoHeightImage from 'react-native-auto-height-image';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Pinchable from 'react-native-pinchable';
-import {SafeAreaView, useSafeAreaInsets} from 'react-native-safe-area-context';
+import {
+  SafeAreaView,
+  useSafeAreaInsets,
+} from 'react-native-safe-area-context';
 
-import {colors} from '../../../Model/Model';
+import { colors } from '../../../Model/Model';
 import {
   DynamicStyleSheet,
   useDynamicStyleSheet,
@@ -32,7 +35,7 @@ import {
  * purposes.
  * @author Alexander Burdiss
  * @since 5/1/21
- * @version 1.1.0
+ * @version 1.1.1
  * @component
  * @example
  * ```jsx
@@ -43,7 +46,7 @@ import {
  * />
  * ```
  */
-const ExcerptCollapsible = ({excerpt, startCollapsed, index}) => {
+const ExcerptCollapsible = ({ excerpt, startCollapsed, index }) => {
   const EXTERNAL_GITHUB_URL =
     'https://github.com/aburdiss/BrassExcerpts/raw/master/img/External/';
 
@@ -93,7 +96,7 @@ const ExcerptCollapsible = ({excerpt, startCollapsed, index}) => {
         accessibilityRole="spinbutton"
         accessible={true}
         accessibilityLabel={excerpt.description + ' ' + excerpt.measures}
-        accessibilityState={{expanded: !excerptIsCollapsed}}
+        accessibilityState={{ expanded: !excerptIsCollapsed }}
         accessibilityHint={'Opens ' + excerpt.description}
         android_ripple={{
           color: styles.excerptPressableBorder.borderTopColor,
@@ -102,22 +105,29 @@ const ExcerptCollapsible = ({excerpt, startCollapsed, index}) => {
         onPress={() => {
           toggleChevron();
           setExcerptIsCollapsed((previous) => !previous);
-        }}>
+        }}
+      >
         <SafeAreaView
           edges={['right', 'left']}
           style={[
             styles.excerptPressable,
             !startCollapsed || index == 0 ? {} : styles.excerptPressableBorder,
-          ]}>
+          ]}
+        >
           <View style={styles.excerptMetaContainer}>
-            <Text style={styles.excerptNumber}>{excerpt.description}</Text>
-            <Text style={styles.excerptMeasures}>{excerpt.measures}</Text>
+            <Text style={styles.excerptNumber} maxFontSizeMultiplier={1.4}>
+              {excerpt.description}
+            </Text>
+            <Text style={styles.excerptMeasures} maxFontSizeMultiplier={1.8}>
+              {excerpt.measures}
+            </Text>
           </View>
           {startCollapsed ? (
             <Animated.View
               style={{
-                transform: [{rotateZ: arrowAngle}],
-              }}>
+                transform: [{ rotateZ: arrowAngle }],
+              }}
+            >
               <Ionicons
                 name="chevron-down"
                 size={32}
@@ -129,10 +139,13 @@ const ExcerptCollapsible = ({excerpt, startCollapsed, index}) => {
       </Pressable>
       <Collapsible
         collapsed={excerptIsCollapsed}
-        style={styles.excerptContainer}>
+        style={styles.excerptContainer}
+      >
         {excerpt.pictures.map((picture) => (
           <SafeAreaView key={picture[1]} edges={['right', 'left']}>
-            <Text style={styles.excerptCaption}>{picture[0]}</Text>
+            <Text style={styles.excerptCaption} maxFontSizeMultiplier={2.0}>
+              {picture[0]}
+            </Text>
             <Pinchable>
               <AutoHeightImage
                 accessibilityRole="image"
@@ -176,7 +189,7 @@ const dynamicStyles = new DynamicStyleSheet({
   excerptMetaContainer: {
     paddingVertical: 5,
     marginBottom: 5,
-    height: 50,
+    minHeight: 50,
   },
   excerptPressable: {
     paddingHorizontal: 20,

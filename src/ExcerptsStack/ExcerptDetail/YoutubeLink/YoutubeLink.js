@@ -1,9 +1,9 @@
 import React from 'react';
-import {Pressable, Linking, Text, StyleSheet} from 'react-native';
-import {useDarkMode} from 'react-native-dynamic';
+import { Pressable, Linking, Text, StyleSheet } from 'react-native';
+import { useDarkMode } from 'react-native-dynamic';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-import {colors} from '../../../Model/Model';
+import { colors } from '../../../Model/Model';
 
 /**
  * @function YoutubeLink
@@ -16,14 +16,14 @@ import {colors} from '../../../Model/Model';
  * affects the color of the link button.
  * @author Alexander Burdiss
  * @since 3/10/21
- * @version 1.1.1
+ * @version 1.1.2
  * @component
  * @example
  * ```jsx
  * <YoutubeLink video={video} type="band" />
  * ```
  */
-const YoutubeLink = ({video, type}) => {
+const YoutubeLink = ({ video, type }) => {
   const DARKMODE = useDarkMode();
 
   const backgroundColors = {
@@ -67,18 +67,20 @@ const YoutubeLink = ({video, type}) => {
           return false;
         });
       }}
-      style={({pressed}) => ({
+      style={({ pressed }) => ({
         opacity: pressed ? 0.7 : 1,
         backgroundColor: backgroundColors[type],
         borderBottomColor: bottomBorderColors[type],
         ...styles.button,
-      })}>
+      })}
+    >
       <Text
-        // eslint-disable-next-line react-native/no-inline-styles
         style={{
           color: textColors[type],
           ...styles.text,
-        }}>
+        }}
+        maxFontSizeMultiplier={1.8}
+      >
         {video[0]}
       </Text>
       <Ionicons name="open-outline" size={20} color={textColors[type]} />

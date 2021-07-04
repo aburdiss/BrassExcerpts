@@ -3,12 +3,12 @@ import {
   DynamicValue,
   useDynamicStyleSheet,
 } from 'react-native-dynamic';
-import {Pressable, Text, View} from 'react-native';
-import {useNavigation} from '@react-navigation/core';
+import { Pressable, Text, View } from 'react-native';
+import { useNavigation } from '@react-navigation/core';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import React from 'react';
 
-import {colors} from '../../../Model/Model';
+import { colors } from '../../../Model/Model';
 
 /**
  * @function RandomExcerptHeader
@@ -22,29 +22,33 @@ import {colors} from '../../../Model/Model';
  * randomly chosen
  * @author Alexander Burdiss
  * @since 5/8/21
- * @version 1.2.0
+ * @version 1.2.1
  */
-const RandomExcerptHeader = ({composition, excerptIndex, partIndex}) => {
+const RandomExcerptHeader = ({ composition, excerptIndex, partIndex }) => {
   const navigation = useNavigation();
   const styles = useDynamicStyleSheet(dynamicStyles);
 
   return (
     <View>
       <View style={styles.excerptTitleContainer}>
-        <Text style={styles.composition}>{composition?.name}</Text>
+        <Text style={styles.composition} maxFontSizeMultiplier={1.4}>
+          {composition?.name}
+        </Text>
         <View style={styles.excerptDetailContainer}>
-          <Text style={styles.excerptDetail}>
+          <Text style={styles.excerptDetail} maxFontSizeMultiplier={1.6}>
             {composition?.excerpts[excerptIndex]?.description}
           </Text>
-          <Text style={styles.excerptDetail}>
+          <Text style={styles.excerptDetail} maxFontSizeMultiplier={1.6}>
             {composition?.excerpts[excerptIndex]?.measures}
           </Text>
         </View>
       </View>
       <View style={styles.composerInstrumentButtonWrapper}>
         <View style={styles.composerInstrumentWrapper}>
-          <Text style={styles.composer}>{composition?.composer}</Text>
-          <Text style={styles.instrument}>
+          <Text style={styles.composer} maxFontSizeMultiplier={1.4}>
+            {composition?.composer}
+          </Text>
+          <Text style={styles.instrument} maxFontSizeMultiplier={1.4}>
             {composition?.excerpts[excerptIndex]?.pictures[partIndex][0]}
           </Text>
         </View>
@@ -59,9 +63,12 @@ const RandomExcerptHeader = ({composition, excerptIndex, partIndex}) => {
           style={styles.compositionPressable}
           onPress={() => {
             navigation.navigate('Excerpt Detail', composition);
-          }}>
-          <View>
-            <Text style={styles.pressableText}>View Full Excerpt</Text>
+          }}
+        >
+          <View style={styles.pressableTextContainer}>
+            <Text style={styles.pressableText} maxFontSizeMultiplier={1.4}>
+              View Full Excerpt
+            </Text>
           </View>
           <Ionicons
             name="chevron-forward"
@@ -104,6 +111,7 @@ const dynamicStyles = new DynamicStyleSheet({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
+    maxWidth: '50%',
   },
   excerptDetail: {
     flexWrap: 'wrap',
@@ -130,7 +138,10 @@ const dynamicStyles = new DynamicStyleSheet({
   pressableText: {
     color: new DynamicValue(colors.greenLight, colors.greenDark),
     fontWeight: 'bold',
+    flex: 1,
+    flexWrap: 'wrap',
   },
+  pressableTextContainer: { flexDirection: 'row', maxWidth: '50%' },
 });
 
 export default RandomExcerptHeader;

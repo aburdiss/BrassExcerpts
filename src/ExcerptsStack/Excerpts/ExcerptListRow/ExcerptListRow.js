@@ -1,16 +1,16 @@
-import React, {useContext} from 'react';
-import {Pressable, Text, View} from 'react-native';
+import React, { useContext } from 'react';
+import { Pressable, Text, View } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import {SafeAreaView} from 'react-native-safe-area-context';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import {
   DynamicStyleSheet,
   DynamicValue,
   useDynamicStyleSheet,
 } from 'react-native-dynamic';
 
-import {colors} from '../../../Model/Model';
-import {PreferencesContext} from '../../../Model/Preferences';
-import {isFavorite} from '../../../utils/isFavorite/isFavorite';
+import { colors } from '../../../Model/Model';
+import { PreferencesContext } from '../../../Model/Preferences';
+import { isFavorite } from '../../../utils/isFavorite/isFavorite';
 
 /**
  * @description One row in the Excerpts List.
@@ -23,9 +23,9 @@ import {isFavorite} from '../../../utils/isFavorite/isFavorite';
  * @since 3/6/21
  * @version 1.3.0
  */
-const ExcerptListRow = ({composer, composition, onPress}) => {
+const ExcerptListRow = ({ composer, composition, onPress }) => {
   const styles = useDynamicStyleSheet(dynamicStyles);
-  const {state} = useContext(PreferencesContext);
+  const { state } = useContext(PreferencesContext);
 
   return (
     <Pressable
@@ -36,11 +36,16 @@ const ExcerptListRow = ({composer, composition, onPress}) => {
       accessibilityHint={'Navigates to ' + composer + ' ' + composition}
       android_ripple={{
         color: styles.accentColor.color,
-      }}>
+      }}
+    >
       <SafeAreaView edges={['right', 'left']} style={styles.button}>
         <View style={styles.text}>
-          <Text style={styles.composerText}>{composer + '  '}</Text>
-          <Text style={styles.compositionText}>{composition}</Text>
+          <Text style={styles.composerText} maxFontSizeMultiplier={1.7}>
+            {composer + '  '}
+          </Text>
+          <Text style={styles.compositionText} maxFontSizeMultiplier={1.8}>
+            {composition}
+          </Text>
         </View>
         <View style={styles.iconContainer}>
           {isFavorite(state, composer, composition) && (
@@ -77,7 +82,7 @@ const dynamicStyles = new DynamicStyleSheet({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    height: 44,
+    minHeight: 44,
     backgroundColor: new DynamicValue(colors.white, colors.systemGray6Dark),
   },
   composerText: {

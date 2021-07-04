@@ -11,7 +11,7 @@ import {
  * @description A styled button that is used for actions throughout the app.
  * @author Alexander Burdiss
  * @since 3/28/21
- * @version 1.1.0
+ * @version 1.1.1
  * @param props The JSX props passed to this React component
  * @param {Function} props.onPress The function to call when this component is
  * pressed
@@ -31,7 +31,9 @@ const ActionButton = ({ onPress, children }) => {
       }}
       accessibilityRole="button"
     >
-      <Text style={styles.text}>{children}</Text>
+      <Text style={styles.text} maxFontSizeMultiplier={1.8}>
+        {children}
+      </Text>
     </Pressable>
   );
 };

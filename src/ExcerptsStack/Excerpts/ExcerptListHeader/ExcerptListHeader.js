@@ -1,11 +1,11 @@
-import React, {useContext, useEffect, useState} from 'react';
-import {Text, View, Pressable} from 'react-native';
-import {useNavigation} from '@react-navigation/core';
-import {SafeAreaView} from 'react-native-safe-area-context';
+import React, { useContext, useEffect, useState } from 'react';
+import { Text, View, Pressable } from 'react-native';
+import { useNavigation } from '@react-navigation/core';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
-import {colors} from '../../../Model/Model';
-import {PreferencesContext} from '../../../Model/Preferences';
-import {getInstrumentsSelected} from '../../../utils/getInstrumentsSelected/getInstrumentsSelected';
+import { colors } from '../../../Model/Model';
+import { PreferencesContext } from '../../../Model/Preferences';
+import { getInstrumentsSelected } from '../../../utils/getInstrumentsSelected/getInstrumentsSelected';
 import {
   DynamicStyleSheet,
   useDynamicStyleSheet,
@@ -17,7 +17,7 @@ import {
  * @description The header for the Excerpts list view.
  * @author Alexander Burdiss
  * @since 3/7/21
- * @version 1.2.0
+ * @version 1.2.1
  *
  * @component
  * @example
@@ -27,7 +27,7 @@ import {
  */
 function ExcerptListHeader() {
   const navigation = useNavigation();
-  const {state} = useContext(PreferencesContext);
+  const { state } = useContext(PreferencesContext);
   const styles = useDynamicStyleSheet(dynamicStyles);
 
   const [instrumentsSelected, setInstrumentsSelected] = useState(
@@ -62,12 +62,21 @@ function ExcerptListHeader() {
         accessibilityHint="Navigates to Settings screen change instrument"
         android_ripple={{
           color: styles.instrumentText.color,
-        }}>
+        }}
+      >
         <SafeAreaView edges={['right', 'left']}>
-          <Text style={styles.instrumentText} accessibilityRole="header">
+          <Text
+            style={styles.instrumentText}
+            accessibilityRole="header"
+            maxFontSizeMultiplier={1.8}
+          >
             {instrumentsSelected}
           </Text>
-          <Text accessibilityRole="text" style={styles.descriptionText}>
+          <Text
+            accessibilityRole="text"
+            style={styles.descriptionText}
+            maxFontSizeMultiplier={2.4}
+          >
             Tap to change instrument selection
           </Text>
         </SafeAreaView>

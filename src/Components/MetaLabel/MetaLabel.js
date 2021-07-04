@@ -1,4 +1,4 @@
-import {Text} from 'react-native';
+import { Text } from 'react-native';
 import React from 'react';
 
 import {
@@ -6,19 +6,19 @@ import {
   DynamicValue,
   useDynamicStyleSheet,
 } from 'react-native-dynamic';
-import {colors} from '../../Model/Model';
+import { colors } from '../../Model/Model';
 
 /**
  * @description Renders a bold label with a colon, and the meta data
  * @author Alexander Burdiss
  * @since 3/6/21
- * @version 1.2.0
+ * @version 1.2.1
  * @param props The JSX props passed to this React component
  * @param {String} props.label The meta label for this data
  * @param {String} props.data The meta data to render
  * @param {String} [props.labelColor] The color to make the label
  */
-const MetaLabel = ({label, data, labelColor}) => {
+const MetaLabel = ({ label, data, labelColor }) => {
   const styles = useDynamicStyleSheet(dynamicStyles);
   if (!data) {
     return null;
@@ -28,12 +28,15 @@ const MetaLabel = ({label, data, labelColor}) => {
         style={styles.textWrapper}
         accessible={true}
         accessibilityRole="text"
-        accessibilityLabel={label + ': ' + data}>
+        accessibilityLabel={label + ': ' + data}
+        maxFontSizeMultiplier={1.8}
+      >
         <Text
           style={[
             styles.labelText,
-            {color: labelColor ? labelColor : styles.textWrapper.color},
-          ]}>
+            { color: labelColor ? labelColor : styles.textWrapper.color },
+          ]}
+        >
           {label + ': '}
         </Text>
         {data}

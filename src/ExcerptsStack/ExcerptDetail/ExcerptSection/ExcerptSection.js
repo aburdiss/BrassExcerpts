@@ -3,16 +3,16 @@ import {
   DynamicValue,
   useDynamicStyleSheet,
 } from 'react-native-dynamic';
-import {SafeAreaView} from 'react-native-safe-area-context';
-import {View, Text, Pressable} from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { View, Text, Pressable } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import React, {useContext} from 'react';
+import React, { useContext } from 'react';
 
-import {capitalize} from 'underscore.string';
+import { capitalize } from 'underscore.string';
 
-import {colors} from '../../../Model/Model';
-import {getNumberOfInstruments} from '../../../utils/getNumberOfInstruments/getNumberOfInstruments';
-import {PreferencesContext} from '../../../Model/Preferences';
+import { colors } from '../../../Model/Model';
+import { getNumberOfInstruments } from '../../../utils/getNumberOfInstruments/getNumberOfInstruments';
+import { PreferencesContext } from '../../../Model/Preferences';
 import ExcerptCollapsible from '../ExcerptCollapsible/ExcerptCollapsible';
 
 /**
@@ -21,7 +21,7 @@ import ExcerptCollapsible from '../ExcerptCollapsible/ExcerptCollapsible';
  * they get collapsed, or if the user has set them to always collapse.
  * @author Alexander Burdiss
  * @since 5/1/21
- * @version 1.1.0
+ * @version 1.1.1
  * @param props The JSX props passed to this React component
  * @param {Object} props.instrumentExcerpt The object that contains the excerpts
  * for this instrument.
@@ -51,7 +51,7 @@ const ExcerptSection = ({
   shouldStartCollapsed,
   item,
 }) => {
-  const {state} = useContext(PreferencesContext);
+  const { state } = useContext(PreferencesContext);
   const styles = useDynamicStyleSheet(dynamicStyles);
 
   const isFavorite = state.favorites.includes(
@@ -63,8 +63,13 @@ const ExcerptSection = ({
       {getNumberOfInstruments(state) > 1 && (
         <SafeAreaView
           edges={['right', 'left']}
-          style={styles.instrumentHeadingContainer}>
-          <Text style={styles.instrumentHeading} accessibilityRole="header">
+          style={styles.instrumentHeadingContainer}
+        >
+          <Text
+            style={styles.instrumentHeading}
+            accessibilityRole="header"
+            maxFontSizeMultiplier={1.8}
+          >
             {capitalize(instrumentName)}
           </Text>
           <Pressable
@@ -81,10 +86,11 @@ const ExcerptSection = ({
                 ? 'Remove excercise from favorites'
                 : 'Add excercise to favorites'
             }
-            accessibilityState={{selected: isFavorite}}
+            accessibilityState={{ selected: isFavorite }}
             onPress={() => {
               addToFavorites(instrumentName);
-            }}>
+            }}
+          >
             <Ionicons
               name={isFavorite ? 'heart' : 'heart-outline'}
               size={32}
