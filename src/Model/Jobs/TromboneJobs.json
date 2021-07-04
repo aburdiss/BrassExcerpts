@@ -122,6 +122,103 @@
       "closingDate": "June 20, 2021",
       "auditionDate": "August 6, 2021",
       "excerpts": []
+    },
+    {
+      "orchestra": "Boise Philharmonic Orchestra",
+      "position": "Trombone II",
+      "link": "https://boisephil.org/about/auditions/",
+      "country": "USA",
+      "closingDate": "September 10, 2021",
+      "auditionDate": "September 24, 2021",
+      "excerpts": [
+        "berliozFaust",
+        "holstPlanets",
+        "mahler5",
+        "mozartRequiem",
+        "ravelBolero",
+        "rimskyKorsakovRussianEaster",
+        "rossiniWilliamTell",
+        "rossiniLaGazza",
+        "straussHeldenleben",
+        "wagnerValkyrie"
+      ]
+    },
+    {
+      "orchestra": "Orchestre Philharmonique de Radio France",
+      "position": "Second trombone, playing third trombone, playing bass trombone",
+      "link": "https://www.maisondelaradio.fr/page/concours-de-recrutement-recrutement-auditions",
+      "country": "France",
+      "closingDate": "September 8, 2021",
+      "auditionDate": "",
+      "excerpts": [
+        "mozartRequiem",
+        "rossiniLaGazza",
+        "straussHeldenleben",
+        "rimskyKorsakovRussianEaster",
+        "haydnCreation",
+        "berliozFaust",
+        "schumann3",
+        "Bartók - Miraculous Mandarin",
+        "rimskyKorsakovScheherazade",
+        "straussEulenspiegel",
+        "mahler5",
+        "Berg - Three Pieces for Orchestra",
+        "mahler2",
+        "straussZarathustra",
+        "rossiniWilliamTell",
+        "straussAlpine",
+        "Mahler - Symphony No. 6",
+        "stravinskyFirebird",
+        "saintSaens3",
+        "beethoven9",
+        "straussBorgeois",
+        "wagnerRheingold",
+        "bruckner7",
+        "wagnerValkyrie",
+        "wagnerLohengrin",
+        "Berg - Wozzeck"
+      ]
+    },
+    {
+      "orchestra": "Euskadiko Orkestra - Basque National Orchestra",
+      "position": "Trombón Tutti (1)",
+      "link": "https://www.muvac.com/en/vac/euskadiko-orkestra-basque-national-orchestra-8460682",
+      "country": "Spain",
+      "closingDate": "September 17, 2021",
+      "auditionDate": "October 14, 2021",
+      "excerpts": [
+        "mozartRequiem",
+        "straussZarathustra",
+        "straussHeldenleben",
+        "rimskyKorsakovScheherazade",
+        "rossiniWilliamTell",
+        "schumann3",
+        "berliozFaust",
+        "wagnerValkyrie",
+        "straussEulenspiegel",
+        "bruckner7",
+        "brahms4",
+        "schumann4",
+        "Mahler - Symphony No. 9"
+      ]
+    },
+    {
+      "orchestra": "Vanemuine Theater",
+      "position": "TROMBONE GROUP 3rd PLAYER",
+      "link": "https://www.vanemuine.ee/en/inimesed/vacant-positions/",
+      "country": "Estonia",
+      "closingDate": "August 1, 2021",
+      "auditionDate": "August 30, 2021",
+      "excerpts": []
+    },
+    {
+      "orchestra": "The Norwegian National Opera & Ballet",
+      "position": "Basstrombone",
+      "link": "https://operaen.no/en/about-us-oslo-operahouse/Vacancies/",
+      "country": "",
+      "closingDate": "September 10, 2021",
+      "auditionDate": "October 25, 2021",
+      "excerpts": ["wagnerRheingold", "haydnCreation", "respighiFountains"]
     }
   ]
 }

@@ -1,3 +1,35 @@
 {
-  "Jobs": []
+  "Jobs": [
+    {
+      "orchestra": "United States Navy Concert/Ceremonial Band",
+      "position": "Tuba",
+      "link": "https://www.navyband.navy.mil/auditions",
+      "country": "USA",
+      "closingDate": "August 27, 2021",
+      "auditionDate": "October 27, 2021",
+      "excerpts": [
+        "Bernstein: Symphonic Dancesfrom West Side Story",
+        "Fucik-Laurendeau: Thunder and Blazes",
+        "Grainger: Lincolnshire Posy",
+        "Hindemith: Symphony in Bb",
+        "holstFirstSuite",
+        "Liszt/arr. Brown: Les Preludes",
+        "Liszt/King: Mazeppa",
+        "Snedecor: Etude #4 from Low Etudes for Tuba",
+        "sousaStarsAndStripes",
+        "V. Williams: Toccata Marziale",
+        "V. Williams: English Folk Song Suite",
+        "Verdi/arr. Lake: La Forza del Destino"
+      ]
+    },
+    {
+      "orchestra": "Frankfurt Radio Symphony",
+      "position": "Basstuba mit Verpflichtung zur B-Kontrabasstuba",
+      "link": "https://www.hr-sinfonieorchester.de/orchester/offene-stellen/offene-stellen-,offene-stellen-102.html",
+      "country": "Germany",
+      "closingDate": "July 9, 2021",
+      "auditionDate": "",
+      "excerpts": []
+    }
+  ]
 }

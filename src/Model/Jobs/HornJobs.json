@@ -37,7 +37,7 @@
       "auditionDate": "June 19, 2021",
       "excerpts": [
         "straussEulenspiegel",
-        "straussEinHeldenleben",
+        "straussHeldenleben",
         "wagnerLohengrin",
         "wagnerRheingold",
         "brahmsPiano1",
@@ -47,6 +47,185 @@
         "Mozart - Cosi fan tutti",
         "beethoven7",
         "mahler4"
+      ]
+    },
+    {
+      "orchestra": "Vogtland Philharmonie Greiz/Reichenbach",
+      "position": "3. Horn ",
+      "link": "https://v-ph.de/jobs",
+      "country": "Germany",
+      "closingDate": "August 13, 2021",
+      "auditionDate": "September 6, 2021",
+      "excerpts": [
+        "straussEulenspiegel",
+        "beethoven7",
+        "franckD",
+        "tchaikovsky5",
+        "Rossini - The Barber of Seville"
+      ]
+    },
+    {
+      "orchestra": "Boise Philharmonic Orchestra",
+      "position": "Horn II",
+      "link": "https://boisephil.org/about/auditions/",
+      "country": "USA",
+      "closingDate": "September 9, 2021",
+      "auditionDate": "September 23, 2021",
+      "excerpts": [
+        "beethovenFidelio",
+        "beethoven3",
+        "beethoven7",
+        "beethoven8",
+        "dvorakCello",
+        "haydn31",
+        "mahler1",
+        "Prokofiev - Romeo and Juliet Suite No. 2",
+        "Shostakovich - Symphony No. 5",
+        "straussDonQuixote",
+        "straussHeldenleben",
+        "tchaikovsky4"
+      ]
+    },
+    {
+      "orchestra": "Boise Philharmonic Orchestra",
+      "position": "Associate Principal Horn",
+      "link": "https://boisephil.org/about/auditions/",
+      "country": "USA",
+      "closingDate": "September 8, 2021",
+      "auditionDate": "September 22, 2021",
+      "excerpts": [
+        "berliozRomeoJuliet",
+        "brahmsAcademic",
+        "brahmsPiano1",
+        "dvorak9",
+        "mendelssohn3",
+        "saintSaens3",
+        "straussEulenspiegel",
+        "Shostakovich - Symphony No. 5",
+        "tchaikovsky5",
+        "wagnerGotterdammerung",
+        "beethoven7",
+        "beethoven8"
+      ]
+    },
+    {
+      "orchestra": "Evansville Philharmonic Orchestra",
+      "position": "Principal Horn",
+      "link": "https://evansvillephilharmonic.org/job-opportunities/",
+      "country": "USA",
+      "closingDate": "July 9, 2021",
+      "auditionDate": "August 2, 2021",
+      "excerpts": [
+        "beethoven9",
+        "mahler1",
+        "mahler3",
+        "Shostakovich - Symphony No. 5",
+        "brahmsPiano2",
+        "brahms4",
+        "weberFreischutz"
+      ]
+    },
+    {
+      "orchestra": "La Fondazione Teatro del Maggio Musicale Fiorentino",
+      "position": "Secondo Corno",
+      "link": "https://maggiofiorentino.trasparenza.info/audizioni-selezioni-e-bandi-di-concorso",
+      "country": "Italy",
+      "closingDate": "September 12, 2021",
+      "auditionDate": "September 26, 2021",
+      "excerpts": [
+        "beethoven3",
+        "beethoven7",
+        "beethoven8",
+        "beethoven9",
+        "beethovenFidelio",
+        "brahms4",
+        "bruckner7",
+        "Mozart - Cosi fan tutti",
+        "mahler1",
+        "Mahler - Symphony No. 9",
+        "mendelssohn3",
+        "Puccini - Tosca",
+        "Shostakovich - Symphony No. 5",
+        "straussDonJuan",
+        "straussEinHeldenleben",
+        "wagnerRheingold",
+        "wagnerGotterdammerung",
+        "wagnerRienzi"
+      ]
+    },
+    {
+      "orchestra": "Berliner Philharmoniker",
+      "position": "Ein Solo-Horn",
+      "link": "https://www.berliner-philharmoniker.de/offene-stellen/solo-horn/",
+      "country": "Germany",
+      "closingDate": "September 2, 2021",
+      "auditionDate": "October 14, 2021",
+      "excerpts": []
+    },
+    {
+      "orchestra": "Berliner Philharmoniker",
+      "position": "Ein tiefes Horn",
+      "link": "https://www.berliner-philharmoniker.de/offene-stellen/tiefes-horn/",
+      "country": "Germany",
+      "closingDate": "December 8, 2021",
+      "auditionDate": "January 20, 2022",
+      "excerpts": []
+    },
+    {
+      "orchestra": "Berliner Philharmoniker",
+      "position": "Ein hohes Horn",
+      "link": "https://www.berliner-philharmoniker.de/offene-stellen/hohes-horn/",
+      "country": "Germany",
+      "closingDate": "December 8, 2021",
+      "auditionDate": "January 20, 2022",
+      "excerpts": []
+    },
+    {
+      "orchestra": "Norrköping Symphony Orchestra",
+      "position": "1. Principal Horn",
+      "link": "https://norrkopingssymfoniorkester.se/en/the-orchestra/vacancies",
+      "country": "Sweden",
+      "closingDate": "September 12, 2021",
+      "auditionDate": "October 16, 2021 ",
+      "excerpts": []
+    },
+    {
+      "orchestra": "Midland-Odessa Symphony and Chorale",
+      "position": "Section Horn",
+      "link": "https://www.mosc.org/musicians/orchestra/auditions.html",
+      "country": "USA",
+      "closingDate": "August 27, 2021",
+      "auditionDate": "September 10, 2021",
+      "excerpts": [
+        "brahms3",
+        "Ravel - Pavane",
+        "Shostakovich - Symphony No. 5",
+        "straussEulenspiegel",
+        "wagnerGotterdammerung",
+        "beethoven3",
+        "mahler1",
+        "tchaikovsky4",
+        "mendelssohn3"
+      ]
+    },
+    {
+      "orchestra": "Orchestre Philharmonique de Liège",
+      "position": "Cor solo 1er soliste ",
+      "link": "https://www.oprl.be/fr/recrutement-dune-cor-solo-1er-soliste",
+      "country": "Belgium",
+      "closingDate": "October 15, 2021",
+      "auditionDate": "October 25, 2021",
+      "excerpts": [
+        "beethoven6",
+        "brahms2",
+        "mendelssohnMidsummer",
+        "Ravel - Pavane",
+        "Schoenberg - Chamber Symphony No. 1",
+        "beethoven7",
+        "franckD",
+        "mahler5",
+        "straussHeldenleben",
+        "tchaikovsky5"
       ]
     }
   ]
