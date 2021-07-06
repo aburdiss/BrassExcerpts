@@ -57,10 +57,10 @@ const YoutubeLink = ({ video, type }) => {
         color: textColors[type],
       }}
       onPress={function openYouTubeLink() {
-        const url = video[1];
+        const url = `https://youtu.be/${video[1]}`;
         Linking.canOpenURL(url).then((supported) => {
           if (supported) {
-            Linking.openURL(`https://youtu.be/${url}`);
+            Linking.openURL(url);
           } else {
             console.log("Can't open url: " + url);
           }

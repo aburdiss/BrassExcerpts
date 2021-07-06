@@ -3989,7 +3989,7 @@ let tchaikovsky4 = {
   mutes: 'No',
   commonDifficulties: '',
   professionalAdvice: '',
-  videos: 'tchaikovksy4',
+  videos: 'tchaikovsky4',
 };
 
 let tchaikovsky5 = {
@@ -4537,7 +4537,7 @@ let wagnerValkyrie = {
       id: 317,
       description: 'Excerpt 1',
       avgTempo: '',
-      measures: '',
+      measures: '[3] to [6]',
       pictures: [
         ['Trombone 1', 'Trombone/WagnerValkyries/1912.png'],
         ['Trombone 2', 'Trombone/WagnerValkyries/1913.png'],

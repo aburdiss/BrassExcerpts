@@ -114,7 +114,7 @@ const dynamicStyles = new DynamicStyleSheet({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    maxWidth: '50%',
+    width: '50%',
   },
   excerptDetail: {
     flexWrap: 'wrap',
@@ -141,7 +141,6 @@ const dynamicStyles = new DynamicStyleSheet({
   pressableText: {
     color: new DynamicValue(colors.greenLight, colors.greenDark),
     fontWeight: 'bold',
-    flex: 1,
     flexWrap: 'wrap',
   },
   pressableTextContainer: { flexDirection: 'row' },
