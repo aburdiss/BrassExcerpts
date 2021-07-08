@@ -9,13 +9,13 @@ Run this command to update the data.
 */
 
 import React from 'react';
-import {useDarkMode} from 'react-native-dynamic';
-import {capitalize} from 'underscore.string';
+import { useDarkMode } from 'react-native-dynamic';
+import { capitalize } from 'underscore.string';
 import SafeAreaView from 'react-native-safe-area-view';
 
 import LicensesList from './LicensesList/LicensesList';
 import Data from './licenses.json';
-import {colors} from '../../Model/Model';
+import { colors } from '../../Model/Model';
 
 /**
  * @function extractNameFromGithubUrl
@@ -33,7 +33,7 @@ function extractNameFromGithubUrl(url) {
     return null;
   }
 
-  const reg = /((https?:\/\/)?(www\.)?github\.com\/)?(@|#!\/)?([A-Za-z0-9_]{1,15})(\/([-a-z]{1,20}))?/i;
+  const reg = /((https?:\/\/)?(www\.)?github\.com\/)?(@|#!\/)?([A-Za-z0-9_-]{1,30})(\/([-a-z]{1,40}))?/i;
   const components = reg.exec(url);
 
   if (components && components.length > 5) {
@@ -61,8 +61,14 @@ function sortDataByKey(data, key) {
 }
 
 let allLicenses = Object.keys(Data).map((key) => {
-  let {licenses, ...license} = Data[key];
-  let [name, version] = key.split('@');
+  let { licenses, ...license } = Data[key];
+
+  let name, version;
+  if (key[0] == '@') {
+    [, name, version] = key.split('@');
+  } else {
+    [name, version] = key.split('@');
+  }
 
   let username =
     extractNameFromGithubUrl(license.repository) ||
@@ -112,7 +118,8 @@ const Licenses = () => {
       style={{
         flex: 1,
         backgroundColor: DARKMODE ? colors.black : colors.systemGray2Light,
-      }}>
+      }}
+    >
       <LicensesList licenses={allLicenses} />
     </SafeAreaView>
   );
