@@ -13,6 +13,7 @@ import { excerpts as tubaExcerpts } from '../../Model/Excerpts/TubaExcerpts';
 import { getActiveInstrument } from '../../utils/getActiveInstrument/getActiveInstrument';
 import { getNumberOfInstruments } from '../../utils/getNumberOfInstruments/getNumberOfInstruments';
 import { isFavorite } from '../../utils/isFavorite/isFavorite';
+import { useIdleScreen } from '../../utils/CustomHooks/useIdleScreen/useIdleScreen';
 import { PreferencesContext } from '../../Model/Preferences';
 import ExcerptSection from './ExcerptSection/ExcerptSection';
 import MetaLabel from '../../Components/MetaLabel/MetaLabel';
@@ -31,7 +32,7 @@ import {
  * where the image is rotated.
  * @author Alexander Burdiss
  * @since 3/3/21
- * @version 1.2.1
+ * @version 1.3.0
  * @component
  * @example
  * ```jsx
@@ -39,6 +40,7 @@ import {
  * ```
  */
 const ExcerptDetail = () => {
+  useIdleScreen();
   const route = useRoute();
   const item = route.params;
 

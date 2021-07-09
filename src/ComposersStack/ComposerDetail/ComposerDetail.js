@@ -20,6 +20,7 @@ import { composers as tubaComposers } from '../../Model/Excerpts/TubaExcerpts';
 import { colors } from '../../Model/Model';
 import { PreferencesContext } from '../../Model/Preferences';
 import { getNumberOfInstruments } from '../../utils/getNumberOfInstruments/getNumberOfInstruments';
+import { useIdleScreen } from '../../utils/CustomHooks/useIdleScreen/useIdleScreen';
 
 /**
  * @function ComposerDetail
@@ -27,7 +28,7 @@ import { getNumberOfInstruments } from '../../utils/getNumberOfInstruments/getNu
  * instruments available for that composer.
  * @author Alexander Burdiss
  * @since 3/3/21
- * @version 1.0.1
+ * @version 1.1.0
  * @component
  * @example
  * ```jsx
@@ -35,6 +36,7 @@ import { getNumberOfInstruments } from '../../utils/getNumberOfInstruments/getNu
  * ```
  */
 const ComposerDetail = () => {
+  useIdleScreen();
   const route = useRoute();
   const composer = route.params;
   const { state } = useContext(PreferencesContext);

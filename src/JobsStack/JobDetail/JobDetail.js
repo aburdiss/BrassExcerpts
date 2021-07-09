@@ -30,6 +30,7 @@ import { excerpts as tubaExcerpts } from '../../Model/Excerpts/TubaExcerpts';
 import { colors } from '../../Model/Model';
 import { getDaysUntilDate } from '../../utils/getDaysUntilDate/getDaysUntilDate';
 import { isFavorite } from '../../utils/isFavorite/isFavorite';
+import { useIdleScreen } from '../../utils/CustomHooks/useIdleScreen/useIdleScreen';
 
 /**
  * @function JobDetail
@@ -46,6 +47,8 @@ import { isFavorite } from '../../utils/isFavorite/isFavorite';
  * ```
  */
 const JobDetail = () => {
+  useIdleScreen();
+
   const route = useRoute();
   const width = useWindowDimensions().width;
   const navigation = useNavigation();

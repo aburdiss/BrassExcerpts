@@ -1,6 +1,6 @@
-import React, {createContext, useReducer, useEffect} from 'react';
+import React, { createContext, useReducer, useEffect } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import {Alert} from 'react-native';
+import { Alert } from 'react-native';
 
 /**
  * @function load
@@ -183,19 +183,19 @@ const preferencesReducer = (state, action) => {
   let newState;
   switch (action.type) {
     case 'SET_ALL_PREFERENCES':
-      newState = {...action.payload};
+      newState = { ...action.payload };
       break;
     case 'SET_SETTING':
-      newState = {...state, ...action.payload};
+      newState = { ...state, ...action.payload };
       break;
     case 'ADD_TO_FAVORITES':
-      newState = {...state, favorites: action.payload};
+      newState = { ...state, favorites: action.payload };
       break;
     case 'REMOVE_FROM_FAVORITES':
-      newState = {...state, favorites: action.payload};
+      newState = { ...state, favorites: action.payload };
       break;
     case 'RESET_FAVORITES':
-      newState = {...state, favorites: []};
+      newState = { ...state, favorites: [] };
       break;
     case 'RESET_PREFERENCES':
       newState = initialPreferencesState;
@@ -221,6 +221,7 @@ const initialPreferencesState = {
   randomTrombone: true,
   randomTuba: true,
   alwaysCollapse: false,
+  keepScreenOn: false,
 };
 
 /**
@@ -236,13 +237,13 @@ const initialPreferencesState = {
  *     {..}
  *   </PreferencesProvider>
  */
-const PreferencesProvider = ({children}) => {
+const PreferencesProvider = ({ children }) => {
   const [state, dispatch] = useReducer(preferencesReducer);
 
   useEffect(() => {
     load().then((data) => {
       if (data !== null) {
-        dispatch({type: 'SET_ALL_PREFERENCES', payload: data});
+        dispatch({ type: 'SET_ALL_PREFERENCES', payload: data });
       } else {
         dispatch({
           type: 'SET_ALL_PREFERENCES',
@@ -253,10 +254,10 @@ const PreferencesProvider = ({children}) => {
   }, []);
 
   return (
-    <PreferencesContext.Provider value={{state, dispatch}}>
+    <PreferencesContext.Provider value={{ state, dispatch }}>
       {children}
     </PreferencesContext.Provider>
   );
 };
 
-export {PreferencesContext, PreferencesProvider};
+export { PreferencesContext, PreferencesProvider };

@@ -9,21 +9,22 @@ import {
   useSafeAreaInsets,
 } from 'react-native-safe-area-context';
 import { ScrollView, View, useWindowDimensions } from 'react-native';
-
-import ActionButton from '../../Components/ActionButton/ActionButton';
 import AutoHeightImage from 'react-native-auto-height-image';
 import Pinchable from 'react-native-pinchable';
+
+import ActionButton from '../../Components/ActionButton/ActionButton';
 import { PreferencesContext } from '../../Model/Preferences';
 import RandomExcerptHeader from './RandomExcertHeader/RandomExcerptHeader';
 import { colors } from '../../Model/Model';
 import { generateRandomExcerpt } from './generateRandomExcerpt';
+import { useIdleScreen } from '../../utils/CustomHooks/useIdleScreen/useIdleScreen';
 
 /**
  * @description Displays a random excerpt based on the settings the user has
  * chosen.
  * @author Alexander Burdiss
  * @since 5/3/21
- * @version 1.1.1
+ * @version 1.2.0
  * @component
  * @example
  * ```jsx
@@ -31,6 +32,7 @@ import { generateRandomExcerpt } from './generateRandomExcerpt';
  * ```
  */
 const RandomExcerpt = () => {
+  useIdleScreen();
   const windowWidth = useWindowDimensions().width;
   const windowInsets = useSafeAreaInsets();
   const { state } = useContext(PreferencesContext);

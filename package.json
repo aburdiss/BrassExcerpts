@@ -29,6 +29,7 @@
     "react-native-device-info": "^7.0.2",
     "react-native-dynamic": "^1.0.0",
     "react-native-gesture-handler": "^1.8.0",
+    "react-native-idle-timer": "^2.1.6",
     "react-native-linear-gradient": "^2.5.6",
     "react-native-localize": "^2.0.0",
     "react-native-pinchable": "^0.2.1",

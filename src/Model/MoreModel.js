@@ -84,6 +84,12 @@ export const SETTINGS = [
     value: 'Always Collapse Excerpts',
   },
   {
+    id: '7.6',
+    type: 'switch',
+    setting: 'keepScreenOn',
+    value: 'Keep Screen On',
+  },
+  {
     id: '7.5',
     type: 'button',
     value: 'Restore Defaults',
