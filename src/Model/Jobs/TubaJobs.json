@@ -1,6 +1,15 @@
 {
   "Jobs": [
     {
+      "orchestra": "Frankfurt Radio Symphony",
+      "position": "Basstuba mit Verpflichtung zur B-Kontrabasstuba",
+      "link": "https://www.hr-sinfonieorchester.de/orchester/offene-stellen/offene-stellen-,offene-stellen-102.html",
+      "country": "Germany",
+      "closingDate": "July 9, 2021",
+      "auditionDate": "",
+      "excerpts": []
+    },
+    {
       "orchestra": "United States Navy Concert/Ceremonial Band",
       "position": "Tuba",
       "link": "https://www.navyband.navy.mil/auditions",
@@ -23,13 +32,18 @@
       ]
     },
     {
-      "orchestra": "Frankfurt Radio Symphony",
-      "position": "Basstuba mit Verpflichtung zur B-Kontrabasstuba",
-      "link": "https://www.hr-sinfonieorchester.de/orchester/offene-stellen/offene-stellen-,offene-stellen-102.html",
-      "country": "Germany",
-      "closingDate": "July 9, 2021",
-      "auditionDate": "",
-      "excerpts": []
+      "orchestra": "Tonhalle-Orchester Zürich",
+      "position": "Solo-Tuba (1) – Fest ",
+      "link": "https://www.muvac.com/de/vac/tonhalle-orchester-zuerich-f812658",
+      "country": "Switzerland",
+      "closingDate": "November 17, 2021",
+      "auditionDate": "January 27, 2022",
+      "excerpts": [
+        "berliozFaust",
+        "mahler1",
+        "Prokofiev - Symphony No. 5",
+        "respighiFountains"
+      ]
     }
   ]
 }

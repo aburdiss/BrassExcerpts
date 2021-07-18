@@ -1,12 +1,36 @@
 {
   "Jobs": [
     {
-      "orchestra": "Kuopio Symphony Orchestra",
-      "position": "Trumpet Assistant Principal",
-      "link": "https://www.kuopio.fi/kuntarekry",
-      "country": "Finland",
-      "closingDate": "August 4, 2021",
-      "auditionDate": "August 27, 2021",
+      "orchestra": "Antwerp Symphony Orchestra",
+      "position": "Principal Trumpet",
+      "link": "https://www.antwerpsymphonyorchestra.be/nl/audities-vacatures",
+      "country": "Belgium",
+      "closingDate": "June 6, 2021",
+      "auditionDate": "August 19, 2021",
+      "excerpts": [
+        "Bartók - Concerto for Orchestra",
+        "beethovenLeonore2",
+        "beethovenLeonore3",
+        "brahms2",
+        "mahler3",
+        "mahler5",
+        "mussorgskyPictures",
+        "Ravel - Piano Concerto",
+        "Respighi - Pines of Rome",
+        "straussHeldenleben",
+        "straussDonJuan",
+        "stravinskyPetrushka",
+        "stravinskyFirebird",
+        "wagnerParsifal"
+      ]
+    },
+    {
+      "orchestra": "Royal Australian Air Force Band",
+      "position": "Trumpet",
+      "link": "https://www.defencejobs.gov.au/jobs/air-force/musician",
+      "country": "Australia",
+      "closingDate": "June 10, 2021",
+      "auditionDate": "July 2, 2021",
       "excerpts": []
     },
     {
@@ -43,24 +67,6 @@
       "excerpts": []
     },
     {
-      "orchestra": "Arkansas Symphony Orchestra",
-      "position": "Principal Trumpet",
-      "link": "https://www.arkansassymphony.org/principal-trumpet",
-      "country": "USA",
-      "closingDate": "August 6, 2021",
-      "auditionDate": "August 22, 2021",
-      "excerpts": []
-    },
-    {
-      "orchestra": "Royal Australian Air Force Band",
-      "position": "Trumpet",
-      "link": "https://www.defencejobs.gov.au/jobs/air-force/musician",
-      "country": "Australia",
-      "closingDate": "June 10, 2021",
-      "auditionDate": "July 2, 2021",
-      "excerpts": []
-    },
-    {
       "orchestra": "Janáček Philharmonic Orchestra",
       "position": "International Orchestra Academy",
       "link": "https://www.jfo.cz/en/international-orchestral-academy/",
@@ -70,37 +76,31 @@
       "excerpts": []
     },
     {
-      "orchestra": "Antwerp Symphony Orchestra",
-      "position": "Principal Trumpet",
-      "link": "https://www.antwerpsymphonyorchestra.be/nl/audities-vacatures",
-      "country": "Belgium",
-      "closingDate": "June 6, 2021",
-      "auditionDate": "August 19, 2021",
+      "orchestra": "Sydney Symphony Orchestra",
+      "position": "Tutti Trumpet",
+      "link": "https://www.sydneysymphony.com/about-us/work-with-us",
+      "country": "Australia",
+      "closingDate": "June 25, 2021",
+      "auditionDate": "August 6, 2021",
       "excerpts": [
+        "Abreu - Tico-tico no fubá",
         "Bartók - Concerto for Orchestra",
-        "beethovenLeonore2",
+        "Bartók - The Miraculous Mandarin",
         "beethovenLeonore3",
+        "beethovenLeonore2",
         "brahms2",
-        "mahler3",
-        "mahler5",
-        "mussorgskyPictures",
-        "Ravel - Piano Concerto",
+        "debussyNocturnes",
+        "dvorak8",
+        "mahler2",
+        "Prokofiev - Cinderella: Suite No.1",
         "Respighi - Pines of Rome",
+        "rimskyKorsakovScheherazade",
+        "Rimsky-Korsakov - The Legend of the Invisible City  of Kitezh and the Maiden Fevroniya",
+        "schumann2",
+        "Shostakovich - Symphony No. 1",
         "straussHeldenleben",
-        "straussDonJuan",
-        "stravinskyPetrushka",
-        "stravinskyFirebird",
-        "wagnerParsifal"
+        "stravinskyPetrushka"
       ]
-    },
-    {
-      "orchestra": "Slovak National Theatre",
-      "position": "First Trumpet Player",
-      "link": "https://snd.sk/prvy-hrac-v-skupine-trubok",
-      "country": "Slovakia",
-      "closingDate": "August 10, 2021",
-      "auditionDate": "August 23, 2021",
-      "excerpts": []
     },
     {
       "orchestra": "Orchestre national de Metz",
@@ -126,19 +126,79 @@
       ]
     },
     {
-      "orchestra": "United States Air Force Band of Mid-America",
-      "position": "TRUMPET",
-      "link": "https://www.music.af.mil/Auditions/Upcoming-Vacancies/",
+      "orchestra": "The Venice Symphony",
+      "position": "Second Trumpet",
+      "link": "https://www.thevenicesymphony.org/muscians-personnel/",
       "country": "USA",
-      "closingDate": "August 23, 2021",
-      "auditionDate": "September 27, 2021",
+      "closingDate": "August 1, 2021",
+      "auditionDate": "",
+      "excerpts": []
+    },
+    {
+      "orchestra": "City of Birmingham Symphony Orchestra",
+      "position": "Section Leader Trumpet",
+      "link": "https://cbso.co.uk/job/section-leader-trumpet-75",
+      "country": "United Kingdom",
+      "closingDate": "August 2, 2021",
+      "auditionDate": "September 6, 2021",
+      "excerpts": []
+    },
+    {
+      "orchestra": "United States Naval Academy Band",
+      "position": "Jazz/ceremonial trumpet",
+      "link": "https://www.usna.edu/USNABand/vacancies/index.php",
+      "country": "USA",
+      "closingDate": "August 2, 2021",
+      "auditionDate": "September 13, 2021",
+      "excerpts": []
+    },
+    {
+      "orchestra": "Kuopio Symphony Orchestra",
+      "position": "Trumpet Assistant Principal",
+      "link": "https://www.kuopio.fi/kuntarekry",
+      "country": "Finland",
+      "closingDate": "August 4, 2021",
+      "auditionDate": "August 27, 2021",
+      "excerpts": []
+    },
+    {
+      "orchestra": "Sydney Symphony Orchestra",
+      "position": "Associate Principal Trumpet",
+      "link": "https://www.sydneysymphony.com/about-us/work-with-us",
+      "country": "",
+      "closingDate": "August 4, 2021",
+      "auditionDate": "September 8, 2021",
+      "excerpts": []
+    },
+    {
+      "orchestra": "New Zealand Symphony Orchestra",
+      "position": "Associate Principal Trumpet",
+      "link": "https://www.nzso.co.nz/new-zealands-orchestra/work-with-us/associate-principal-trumpet/",
+      "country": "New Zealand",
+      "closingDate": "August 5, 2021",
+      "auditionDate": "",
       "excerpts": [
-        "Smith - Festival Variations",
-        "Sousa - Gallant Seventh",
-        "Shostakovich - Festive Overture",
-        "Rimsky-Korsakov - Procession of the Nobles",
-        "Copland - Outdoor Overture"
+        "mahler5",
+        "bizetCarmen",
+        "Respighi - Pines of Rome",
+        "mussorgskyPictures",
+        "brahmsAcademic",
+        "beethoven9",
+        "rimskyKorsakovScheherazade",
+        "Bartók - Concerto for Orchestra",
+        "Ravel - Piano Concerto",
+        "stravinskyPetrushka",
+        "handelMessiah"
       ]
+    },
+    {
+      "orchestra": "Arkansas Symphony Orchestra",
+      "position": "Principal Trumpet",
+      "link": "https://www.arkansassymphony.org/principal-trumpet",
+      "country": "USA",
+      "closingDate": "August 6, 2021",
+      "auditionDate": "August 22, 2021",
+      "excerpts": []
     },
     {
       "orchestra": "Turku Philharmonic Orchestra",
@@ -165,48 +225,22 @@
       ]
     },
     {
-      "orchestra": "New Zealand Symphony Orchestra",
-      "position": "Associate Principal Trumpet",
-      "link": "https://www.nzso.co.nz/new-zealands-orchestra/work-with-us/associate-principal-trumpet/",
-      "country": "New Zealand",
-      "closingDate": "August 5, 2021",
-      "auditionDate": "",
-      "excerpts": [
-        "mahler5",
-        "bizetCarmen",
-        "Respighi - Pines of Rome",
-        "mussorgskyPictures",
-        "brahmsAcademic",
-        "beethoven9",
-        "rimskyKorsakovScheherazade",
-        "Bartók - Concerto for Orchestra",
-        "Ravel - Piano Concerto",
-        "stravinskyPetrushka",
-        "handelMessiah"
-      ]
+      "orchestra": "Slovak National Theatre",
+      "position": "First Trumpet Player",
+      "link": "https://snd.sk/prvy-hrac-v-skupine-trubok",
+      "country": "Slovakia",
+      "closingDate": "August 10, 2021",
+      "auditionDate": "August 23, 2021",
+      "excerpts": []
     },
     {
-      "orchestra": "Orchestre national d’Île-de-France",
-      "position": "2e trompette jouant la 3e, la 4e trompette et le cornet",
-      "link": "https://www.orchestre-ile.com/page/concours",
-      "country": "France",
-      "closingDate": "September 23, 2021",
-      "auditionDate": "October 4, 2021",
-      "excerpts": [
-        "mahler5",
-        "Bartók - Concerto for Orchestra",
-        "Prokofiev - Symphony No. 5",
-        "rimskyKorsakovScheherazade",
-        "bizetCarmen",
-        "Ravel - Rapsodie espagnole",
-        "stravinskyPetrushka",
-        "stravinskyFirebird",
-        "Verdi - Otello",
-        "Humperdinck - Hansel & Gretel",
-        "bruckner7",
-        "straussDonQuixote",
-        "mahler2"
-      ]
+      "orchestra": "Berliner Philharmoniker",
+      "position": "Eine Solo-Trompete",
+      "link": "https://www.berliner-philharmoniker.de/offene-stellen/solo-trompete/",
+      "country": "Germany",
+      "closingDate": "August 12, 2021",
+      "auditionDate": "September 23, 2021",
+      "excerpts": []
     },
     {
       "orchestra": "Vaasa City Orchestra",
@@ -226,68 +260,29 @@
       ]
     },
     {
-      "orchestra": "Berliner Philharmoniker",
-      "position": "Eine Solo-Trompete",
-      "link": "https://www.berliner-philharmoniker.de/offene-stellen/solo-trompete/",
-      "country": "Germany",
-      "closingDate": "August 12, 2021",
-      "auditionDate": "September 23, 2021",
-      "excerpts": []
-    },
-    {
-      "orchestra": "Préfecture de Police",
-      "position": "Trompette basse/clairon basse jouant en service protocolaire",
-      "link": "https://www.prefecturedepolice.interieur.gouv.fr/concours-et-recrutements/concours/musiciens-session-2021",
-      "country": "France",
-      "closingDate": "September 8, 2021",
-      "auditionDate": "October 11, 2021",
-      "excerpts": []
-    },
-    {
-      "orchestra": "Préfecture de Police",
-      "position": "Trompette jouant le bugle et cornet",
-      "link": "https://www.prefecturedepolice.interieur.gouv.fr/concours-et-recrutements/concours/musiciens-session-2021",
-      "country": "France",
-      "closingDate": "September 8, 2021",
-      "auditionDate": "October 11, 2021",
-      "excerpts": []
-    },
-    {
-      "orchestra": "Frankfurt Radio Symphony",
-      "position": "Solo-Trompete mit Verpflichtung zur Piccolotrompete und zum Kornett",
-      "link": "https://www.hr-sinfonieorchester.de/orchester/offene-stellen/index.html",
-      "country": "Germany",
-      "closingDate": "",
-      "auditionDate": "October 4, 2021",
-      "excerpts": []
-    },
-    {
-      "orchestra": "Prague Symphony Orchestra",
-      "position": "Trumpet tutti",
-      "link": "https://www.fok.cz/en/auditions",
-      "country": "Czech Republic",
-      "closingDate": "September 19, 2021",
-      "auditionDate": "October 4, 2021",
-      "excerpts": [
-        "dvorak9",
-        "Dvořák: Slavonic dance No. 4",
-        "Dvořák: Slavonic dances No. 5 and 9",
-        "Suk: V nový život/Towards a New Life",
-        "stravinskyPetrushka",
-        "mussorgskyPictures",
-        "rimskyKorsakovScheherazade",
-        "straussAlpine",
-        "mahler5"
-      ]
-    },
-    {
-      "orchestra": "United States Naval Academy Band",
-      "position": "Jazz/ceremonial trumpet",
-      "link": "https://www.usna.edu/USNABand/vacancies/index.php",
+      "orchestra": "South Dakota Symphony Orchestra",
+      "position": "Second Trumpet / Associate Principal",
+      "link": "http://www.sdsymphony.org/about-us/career-opportunities/",
       "country": "USA",
-      "closingDate": "August 2, 2021",
-      "auditionDate": "September 13, 2021",
-      "excerpts": []
+      "closingDate": "August 20, 2021",
+      "auditionDate": "September 8, 2021",
+      "excerpts": [
+        "bachMagnificant",
+        "beethovenLeonore2",
+        "bizetCarmen",
+        "mussorgskyPictures",
+        "Ravel - Piano Concerto",
+        "Respighi - Pines of Rome",
+        "stravinskyPetrushka",
+        "Bartók - Concerto for Orchestra",
+        "brahmsAcademic",
+        "brahms2",
+        "debussyNocturnes",
+        "mahler4",
+        "rimskyKorsakovScheherazade",
+        "schumann2",
+        "Shostakovich - Symphony No. 5"
+      ]
     },
     {
       "orchestra": "Czech Philharmonic",
@@ -314,6 +309,119 @@
         "straussDonJuan",
         "bruckner7"
       ]
+    },
+    {
+      "orchestra": "United States Air Force Band of Mid-America",
+      "position": "TRUMPET",
+      "link": "https://www.music.af.mil/Auditions/Upcoming-Vacancies/",
+      "country": "USA",
+      "closingDate": "August 23, 2021",
+      "auditionDate": "September 27, 2021",
+      "excerpts": [
+        "Smith - Festival Variations",
+        "Sousa - Gallant Seventh",
+        "Shostakovich - Festive Overture",
+        "Rimsky-Korsakov - Procession of the Nobles",
+        "Copland - Outdoor Overture"
+      ]
+    },
+    {
+      "orchestra": "Préfecture de Police",
+      "position": "Trompette basse/clairon basse jouant en service protocolaire",
+      "link": "https://www.prefecturedepolice.interieur.gouv.fr/concours-et-recrutements/concours/musiciens-session-2021",
+      "country": "France",
+      "closingDate": "September 8, 2021",
+      "auditionDate": "October 11, 2021",
+      "excerpts": []
+    },
+    {
+      "orchestra": "Préfecture de Police",
+      "position": "Trompette jouant le bugle et cornet",
+      "link": "https://www.prefecturedepolice.interieur.gouv.fr/concours-et-recrutements/concours/musiciens-session-2021",
+      "country": "France",
+      "closingDate": "September 8, 2021",
+      "auditionDate": "October 11, 2021",
+      "excerpts": []
+    },
+    {
+      "orchestra": "Fondazione Teatro alla Scala",
+      "position": "2nd, 3rd, 4th TRUMPET and following",
+      "link": "https://www.teatroallascala.org/en/work-with-us/orchestra.html",
+      "country": "Italy",
+      "closingDate": "September 18, 2021",
+      "auditionDate": "",
+      "excerpts": [
+        "Bartók - The Miraculous Mandarin",
+        "Bartók - Concerto for Orchestra",
+        "bizetCarmen",
+        "Leoncavallo - Pagliacci",
+        "Respighi - Pines of Rome",
+        "beethovenLeonore2",
+        "rimskyKorsakovScheherazade",
+        "straussHeldenleben",
+        "straussSinfoniaDomestica",
+        "Strauss - Elektra",
+        "Strauss - Salome",
+        "straussAlpine",
+        "stravinskyPetrushka",
+        "Verdi - Don Carlo",
+        "Verdi - Otello",
+        "wagnerMeistersinger",
+        "wagnerGotterdamerung",
+        "Donizetti - Lucia di Lammermoor",
+        "donizettiDonPasquale"
+      ]
+    },
+    {
+      "orchestra": "Prague Symphony Orchestra",
+      "position": "Trumpet tutti",
+      "link": "https://www.fok.cz/en/auditions",
+      "country": "Czech Republic",
+      "closingDate": "September 19, 2021",
+      "auditionDate": "October 4, 2021",
+      "excerpts": [
+        "dvorak9",
+        "Dvořák: Slavonic dance No. 4",
+        "Dvořák: Slavonic dances No. 5 and 9",
+        "Suk: V nový život/Towards a New Life",
+        "stravinskyPetrushka",
+        "mussorgskyPictures",
+        "rimskyKorsakovScheherazade",
+        "straussAlpine",
+        "mahler5"
+      ]
+    },
+    {
+      "orchestra": "Orchestre national d’Île-de-France",
+      "position": "2e trompette jouant la 3e, la 4e trompette et le cornet",
+      "link": "https://www.orchestre-ile.com/page/concours",
+      "country": "France",
+      "closingDate": "September 23, 2021",
+      "auditionDate": "October 4, 2021",
+      "excerpts": [
+        "mahler5",
+        "Bartók - Concerto for Orchestra",
+        "Prokofiev - Symphony No. 5",
+        "rimskyKorsakovScheherazade",
+        "bizetCarmen",
+        "Ravel - Rapsodie espagnole",
+        "stravinskyPetrushka",
+        "stravinskyFirebird",
+        "Verdi - Otello",
+        "Humperdinck - Hansel & Gretel",
+        "bruckner7",
+        "straussDonQuixote",
+        "mahler2"
+      ]
+    },
+    {
+      "orchestra": "Frankfurt Radio Symphony",
+      "position": "Solo-Trompete mit Verpflichtung zur Piccolotrompete und zum Kornett",
+      "link": "https://www.hr-sinfonieorchester.de/orchester/offene-stellen/index.html",
+      "country": "Germany",
+      "closingDate": "",
+      "auditionDate": "October 4, 2021",
+      "excerpts": []
     }
   ]
 }
