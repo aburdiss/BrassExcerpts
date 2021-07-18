@@ -1,6 +1,6 @@
 import React from 'react';
-import {View} from 'react-native';
-import {Text, Pressable} from 'react-native';
+import { View } from 'react-native';
+import { Text, Pressable } from 'react-native';
 import {
   DynamicStyleSheet,
   DynamicValue,
@@ -8,7 +8,7 @@ import {
 } from 'react-native-dynamic';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-import {colors} from '../../Model/Model';
+import { colors } from '../../Model/Model';
 
 /**
  * @description A simple button to live on the header and provide additional
@@ -27,7 +27,7 @@ import {colors} from '../../Model/Model';
  *     Hello, World!
  *   </HeaderButton />
  */
-const HeaderButton = ({children, handler}) => {
+const HeaderButton = ({ children, handler }) => {
   const styles = useDynamicStyleSheet(dynamicStyles);
   return (
     <Pressable
@@ -39,11 +39,13 @@ const HeaderButton = ({children, handler}) => {
       accessible={true}
       accessibilityLabel={children}
       accessibilityHint={'Navigates to' + ' ' + children}
-      style={styles.containerButton}>
-      {({pressed}) => (
+      style={styles.containerButton}
+    >
+      {({ pressed }) => (
         <View
           // eslint-disable-next-line react-native/no-inline-styles
-          style={{...styles.buttonTextContainer, opacity: pressed ? 0.7 : 1}}>
+          style={{ ...styles.buttonTextContainer, opacity: pressed ? 0.7 : 1 }}
+        >
           {children == 'Random' ? (
             <Ionicons
               name="cube-outline"

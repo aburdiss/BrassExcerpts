@@ -35,8 +35,9 @@ const ExcerptListRow = ({ composer, composition, onPress }) => {
       accessibilityLabel={composer + ' ' + composition}
       accessibilityHint={'Navigates to ' + composer + ' ' + composition}
       android_ripple={{
-        color: styles.accentColor.color,
+        color: new DynamicValue(colors.greenLight, colors.greenDark),
       }}
+      style={{}}
     >
       <SafeAreaView edges={['right', 'left']} style={styles.button}>
         <View style={styles.text}>

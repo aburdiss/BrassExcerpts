@@ -76,11 +76,6 @@ const ExcerptSection = ({
             accessible={true}
             accessibilityRole="imagebutton"
             accessibilityLabel={isFavorite ? 'Favorite' : 'Not Favorite'}
-            android_ripple={{
-              color: isFavorite
-                ? styles.accentColor.color
-                : styles.favoriteColor.color,
-            }}
             accessibilityHint={
               isFavorite
                 ? 'Remove excercise from favorites'

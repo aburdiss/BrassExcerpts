@@ -19,9 +19,7 @@ import { colors } from '../../../Model/Model';
  * @version 1.1.2
  * @component
  * @example
- * ```jsx
  * <YoutubeLink video={video} type="band" />
- * ```
  */
 const YoutubeLink = ({ video, type }) => {
   const DARKMODE = useDarkMode();

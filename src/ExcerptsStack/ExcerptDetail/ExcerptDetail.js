@@ -35,9 +35,7 @@ import {
  * @version 1.3.0
  * @component
  * @example
- * ```jsx
  * <ExcerptDetail />
- * ```
  */
 const ExcerptDetail = () => {
   useIdleScreen();
@@ -233,11 +231,6 @@ const ExcerptDetail = () => {
                 (isFavorite(state, item.composerLast, item.name) ? '' : 'not') +
                 ' a favorite excerpt'
               }
-              android_ripple={{
-                color: isFavorite(state, item.composerLast, item.name)
-                  ? colors.greenLight
-                  : colors.redLight,
-              }}
               onPress={addToFavorites}
               hitSlop={10}
               style={styles.singleAddToFavoritesButton}
