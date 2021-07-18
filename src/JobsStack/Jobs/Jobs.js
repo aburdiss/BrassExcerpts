@@ -13,13 +13,11 @@ import {
 import JobsListRow from './JobsListRow/JobsListRow';
 // eslint-disable-next-line no-unused-vars
 import ActionButton from '../../Components/ActionButton/ActionButton';
-import {
-  hasValidJobs,
-  fetchInstrumentJobs,
-  openMusicalChairsLink,
-} from './JobsUtils';
 import { PreferencesContext } from '../../Model/Preferences';
 import { colors } from '../../Model/Model';
+import { openMusicalChairsLink } from './utils/openMusicalChairsLink/openMusicalChairsLink';
+import { fetchInstrumentJobs } from '../../utils/fetchInstrumentJobs/fetchInstrumentJobs';
+import { hasValidJobs } from './utils/hasValidJobs/hasValidJobs';
 
 /**
  * @todo get top excerpts for each instrument (top 10 or 20)

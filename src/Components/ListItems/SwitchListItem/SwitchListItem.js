@@ -6,7 +6,7 @@ import {
   useDynamicValue,
 } from 'react-native-dynamic';
 
-import { colors } from '../../../../Model/Model';
+import { colors } from '../../../Model/Model';
 
 /**
  * @description A rendered Switch list item that updates saved preferences.

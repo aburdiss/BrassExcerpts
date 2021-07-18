@@ -19,12 +19,12 @@ import {
   SETTINGS,
 } from '../../Model/MoreModel';
 import { PreferencesContext } from '../../Model/Preferences';
-import ButtonListItem from './MoreListItems/ButtonListItem/ButtonListItem';
-import TextListItem from './MoreListItems/TextListItem/TextListItem';
-import SwitchListItem from './MoreListItems/SwitchListItem/SwitchListItem';
-import LinkListItem from './MoreListItems/LinkListItem/LinkListItem';
-import InternalListItem from './MoreListItems/InternalListItem/InternalListItem';
-import SegmentedFilterListItem from './MoreListItems/SegmentedFilterListItem/SegmentedFilterListItem';
+import ButtonListItem from '../../Components/ListItems/ButtonListItem/ButtonListItem';
+import TextListItem from '../../Components/ListItems/TextListItem/TextListItem';
+import SwitchListItem from '../../Components/ListItems/SwitchListItem/SwitchListItem';
+import LinkListItem from '../../Components/ListItems/LinkListItem/LinkListItem';
+import InternalListItem from '../../Components/ListItems/InternalListItem/InternalListItem';
+import SegmentedFilterListItem from '../../Components/ListItems/SegmentedFilterListItem/SegmentedFilterListItem';
 
 /**
  * @description A View that allows the user to set custom settings, or view

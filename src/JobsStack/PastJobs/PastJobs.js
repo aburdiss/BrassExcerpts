@@ -10,7 +10,7 @@ import {
 
 import JobsListRow from '../Jobs/JobsListRow/JobsListRow';
 
-import { fetchInstrumentJobs } from '../Jobs/JobsUtils';
+import { fetchInstrumentJobs } from '../../utils/fetchInstrumentJobs/fetchInstrumentJobs';
 import { PreferencesContext } from '../../Model/Preferences';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { colors } from '../../Model/Model';
@@ -25,9 +25,7 @@ import { colors } from '../../Model/Model';
  * @version 1.1.0
  * @component
  * @example
- * ```jsx
  * <PastJobs />
- * ```
  */
 const PastJobs = () => {
   const internalHornJobsLink =

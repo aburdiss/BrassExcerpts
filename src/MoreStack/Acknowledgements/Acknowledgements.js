@@ -9,7 +9,7 @@ import {
 
 import { colors } from '../../Model/Model';
 import { TRANSLATIONS } from '../../Model/AcknowledgementsModel';
-import TextListItem from '../More/MoreListItems/TextListItem/TextListItem';
+import TextListItem from '../../Components/ListItems/TextListItem/TextListItem';
 
 /**
  * @function Acknowledgements

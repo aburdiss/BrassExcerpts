@@ -1,56 +1,36 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, Text } from 'react-native';
 import {
   DynamicStyleSheet,
   DynamicValue,
   useDynamicValue,
 } from 'react-native-dynamic';
-import SegmentedControl from '@react-native-segmented-control/segmented-control';
 
-import { colors } from '../../../../Model/Model';
-
+import { colors } from '../../../Model/Model';
 /**
- * @description A rendered Segmented filter list item that updates saved
- * preferences.
+ * @description A rendered Text list item. This will not translate
+ * copyright information.
  * @author Alexander Burdiss
- * @since 12/17/20
- * @version 1.0.1
- * @param {Object} props.item The data to render in this list item
- * @param {Object} props.state The current user app state
- * @param {Function} props.dispatch A function to call to the reducer to
- * update the user state of the app.
+ * @since 1/3/21
+ * @version 1.1.0
+ * @param {Object} props.item The text to be rendered in the list item.
  *
  * @component
  * @example
- * <SegmentedFilterListItem
- *   item={item}
- *   state={state}
- *   dispatch={dispatch}
- * />
+ * <TextListItem item={item} />
  */
-export default function SegmentedFilterListItem({ item, state, dispatch }) {
-  let choices;
-  switch (item.setting) {
-    case 'randomFavorites':
-      choices = ['Favorites Only', 'All Excerpts'];
-      break;
-    default:
-      throw new Error('Item Setting does not match any choices.');
-  }
-
+export default function TextListItem({ item }) {
   const styles = useDynamicValue(dynamicStyles);
 
   return (
-    <View style={styles.listSegmentedRowContainer}>
-      <SegmentedControl
-        values={choices}
-        selectedIndex={state[item.setting]}
-        onChange={(event) => {
-          let index = event.nativeEvent.selectedSegmentIndex;
-          let setting = { [item.setting]: index };
-          dispatch({ type: 'SET_SETTING', payload: setting });
-        }}
-      />
+    <View style={styles.listRowContainer}>
+      <Text
+        maxFontSizeMultiplier={1.8}
+        style={styles.listRowText}
+        accessibilityRole="text"
+      >
+        {item.value.includes('Alexander Burdiss') ? item.value : item.value}
+      </Text>
     </View>
   );
 }

@@ -1,59 +1,57 @@
 import React from 'react';
-import { View, Pressable, Text, Linking } from 'react-native';
-import Ionicons from 'react-native-vector-icons/Ionicons';
+import { View } from 'react-native';
 import {
   DynamicStyleSheet,
   DynamicValue,
   useDynamicValue,
 } from 'react-native-dynamic';
+import SegmentedControl from '@react-native-segmented-control/segmented-control';
 
-import { colors } from '../../../../Model/Model';
+import { colors } from '../../../Model/Model';
 
 /**
- * @description A rendered Link list item with a chevron and theme colored text
- * @author Alexander Burdiss
- * @since 11/15/20
- * @version 1.0.2
- * @param {Object} props.item The list item containing a link and some text.
- * @param {Object} props.state The app state, containing all of the user's
+ * @description A rendered Segmented filter list item that updates saved
  * preferences.
+ * @author Alexander Burdiss
+ * @since 12/17/20
+ * @version 1.0.1
+ * @param {Object} props.item The data to render in this list item
+ * @param {Object} props.state The current user app state
+ * @param {Function} props.dispatch A function to call to the reducer to
+ * update the user state of the app.
  *
  * @component
  * @example
- * <LinkListItem
+ * <SegmentedFilterListItem
  *   item={item}
  *   state={state}
+ *   dispatch={dispatch}
  * />
  */
-export default function LinkListItem({ item, state }) {
-  const styles = useDynamicValue(dynamicStyles);
-  const isHidden = item.instrument && state.instrument != item.instrument;
+export default function SegmentedFilterListItem({ item, state, dispatch }) {
+  let choices;
+  switch (item.setting) {
+    case 'randomFavorites':
+      choices = ['Favorites Only', 'All Excerpts'];
+      break;
+    default:
+      throw new Error('Item Setting does not match any choices.');
+  }
 
-  return isHidden ? null : (
-    <Pressable
-      style={({ pressed }) => ({
-        opacity: pressed ? 0.7 : 1,
-      })}
-      accessible={true}
-      accessibilityLabel={item.value}
-      accessibilityRole="link"
-      onPress={() => {
-        Linking.openURL(item.link).catch((err) =>
-          console.warn("Couldn't load page", err),
-        );
-      }}
-    >
-      <View style={styles.listRowContainer}>
-        <Text maxFontSizeMultiplier={1.8} style={styles.linkText}>
-          {item.value}
-        </Text>
-        <Ionicons
-          name={'chevron-forward-outline'}
-          size={25}
-          color={styles.linkText.color}
-        />
-      </View>
-    </Pressable>
+  const styles = useDynamicValue(dynamicStyles);
+
+  return (
+    <View style={styles.listSegmentedRowContainer}>
+      <SegmentedControl
+        values={choices}
+        selectedIndex={state[item.setting]}
+        onChange={(event) => {
+          let index = event.nativeEvent.selectedSegmentIndex;
+          let setting = { [item.setting]: index };
+          dispatch({ type: 'SET_SETTING', payload: setting });
+        }}
+      />
+    </View>
   );
 }
 
