@@ -13,7 +13,7 @@ import { capitalize } from 'underscore.string';
 import { colors } from '../../../Model/Model';
 import { getNumberOfInstruments } from '../../../utils/getNumberOfInstruments/getNumberOfInstruments';
 import { PreferencesContext } from '../../../Model/Preferences';
-import ExcerptCollapsible from '../ExcerptCollapsible/ExcerptCollapsible';
+import ExcerptCollapsible from './ExcerptCollapsible/ExcerptCollapsible';
 
 /**
  * @function ExcerptSection

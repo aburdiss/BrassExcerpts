@@ -1,7 +1,7 @@
 import React from 'react';
-import {View} from 'react-native';
+import { View } from 'react-native';
 
-import YoutubeLink from '../YoutubeLink/YoutubeLink';
+import YoutubeLink from './YoutubeLink/YoutubeLink';
 import SectionHeader from '../../../Components/SectionHeader/SectionHeader';
 import YouTubeModel from '../../../Model/YouTubeModel';
 
@@ -20,7 +20,7 @@ import YouTubeModel from '../../../Model/YouTubeModel';
  * <YoutubeSection data={item.videos} />
  * ```
  */
-const YoutubeSection = ({data}) => {
+const YoutubeSection = ({ data }) => {
   const excerptVideos = YouTubeModel[data];
 
   return (

@@ -1,19 +1,19 @@
-import React, {useContext, useEffect, useState} from 'react';
-import {FlatList} from 'react-native';
-import {useNavigation} from '@react-navigation/native';
-import {useDarkMode} from 'react-native-dynamic';
+import React, { useContext, useEffect, useState } from 'react';
+import { FlatList } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import { useDarkMode } from 'react-native-dynamic';
 
 import ExcerptListRow from './ExcerptListRow/ExcerptListRow';
 import ExcerptListHeader from './ExcerptListHeader/ExcerptListHeader';
-import {processListData} from './ExcerptsUtils';
+import { processListData } from './utils/processListData/processListData';
 import ScrollViewBounceContainer from '../../Components/ScrollViewBounceContainer/ScrollViewBounceContainer';
-import {PreferencesContext} from '../../Model/Preferences';
+import { PreferencesContext } from '../../Model/Preferences';
 
-import {excerpts as hornExcerpts} from '../../Model/Excerpts/HornExcerpts';
-import {excerpts as trumpetExcerpts} from '../../Model/Excerpts/TrumpetExcerpts';
-import {excerpts as tromboneExcerpts} from '../../Model/Excerpts/TromboneExcerpts';
-import {excerpts as tubaExcerpts} from '../../Model/Excerpts/TubaExcerpts';
-import {colors} from '../../Model/Model';
+import { excerpts as hornExcerpts } from '../../Model/Excerpts/HornExcerpts';
+import { excerpts as trumpetExcerpts } from '../../Model/Excerpts/TrumpetExcerpts';
+import { excerpts as tromboneExcerpts } from '../../Model/Excerpts/TromboneExcerpts';
+import { excerpts as tubaExcerpts } from '../../Model/Excerpts/TubaExcerpts';
+import { colors } from '../../Model/Model';
 
 /**
  * @function Excerpts
@@ -30,7 +30,7 @@ import {colors} from '../../Model/Model';
  * ```
  */
 const Excerpts = () => {
-  const {state} = useContext(PreferencesContext);
+  const { state } = useContext(PreferencesContext);
   const navigation = useNavigation();
   const DARKMODE = useDarkMode();
 
@@ -84,11 +84,12 @@ const Excerpts = () => {
   return (
     <ScrollViewBounceContainer
       topBounceColor={DARKMODE ? colors.greenDark : colors.greenLight}
-      bottomBounceColor={DARKMODE ? colors.black : colors.systemGray6Light}>
+      bottomBounceColor={DARKMODE ? colors.black : colors.systemGray6Light}
+    >
       <FlatList
         ListHeaderComponent={ExcerptListHeader}
         data={listData}
-        renderItem={({item}) => (
+        renderItem={({ item }) => (
           <ExcerptListRow
             composer={item.composerLast}
             composition={item.name}

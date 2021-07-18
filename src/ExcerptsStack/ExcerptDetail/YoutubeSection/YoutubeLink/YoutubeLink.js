@@ -3,7 +3,7 @@ import { Pressable, Linking, Text, StyleSheet } from 'react-native';
 import { useDarkMode } from 'react-native-dynamic';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-import { colors } from '../../../Model/Model';
+import { colors } from '../../../../Model/Model';
 
 /**
  * @function YoutubeLink

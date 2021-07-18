@@ -1,5 +1,5 @@
 import React from 'react';
-import {SectionList, Text} from 'react-native';
+import { SectionList, Text } from 'react-native';
 import SafeAreaView from 'react-native-safe-area-view';
 import {
   DynamicStyleSheet,
@@ -7,9 +7,9 @@ import {
   useDynamicValue,
 } from 'react-native-dynamic';
 
-import {colors} from '../../Model/Model';
-import {TRANSLATIONS} from '../../Model/AcknowledgementsModel';
-import {TextListItem} from '../More/MoreListItems/MoreListItems';
+import { colors } from '../../Model/Model';
+import { TRANSLATIONS } from '../../Model/AcknowledgementsModel';
+import TextListItem from '../More/MoreListItems/TextListItem/TextListItem';
 
 /**
  * @function Acknowledgements
@@ -21,9 +21,7 @@ import {TextListItem} from '../More/MoreListItems/MoreListItems';
  *
  * @component
  * @example
- * ```jsx
  * <Acknowledgements />
- * ```
  */
 const Acknowledgements = () => {
   const styles = useDynamicValue(dynamicStyles);
@@ -31,10 +29,10 @@ const Acknowledgements = () => {
   return (
     <SafeAreaView style={styles.sectionList}>
       <SectionList
-        sections={[{title: 'Translations', data: TRANSLATIONS}]}
+        sections={[{ title: 'Translations', data: TRANSLATIONS }]}
         keyExtractor={(item, index) => index}
-        renderItem={({item}) => <TextListItem item={item} />}
-        renderSectionHeader={({section: {title}}) => (
+        renderItem={({ item }) => <TextListItem item={item} />}
+        renderSectionHeader={({ section: { title } }) => (
           <Text accessibilityRole="text" style={styles.listHeader}>
             {title}
           </Text>

@@ -1,5 +1,5 @@
-import {View, SectionList, Text} from 'react-native';
-import React, {useContext} from 'react';
+import { View, SectionList, Text } from 'react-native';
+import React, { useContext } from 'react';
 import SafeAreaView from 'react-native-safe-area-view';
 
 import {
@@ -9,7 +9,7 @@ import {
 } from 'react-native-dynamic';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-import {colors} from '../../Model/Model';
+import { colors } from '../../Model/Model';
 import {
   INSTRUMENT,
   FAVORITES,
@@ -18,15 +18,13 @@ import {
   RANDOM,
   SETTINGS,
 } from '../../Model/MoreModel';
-import {PreferencesContext} from '../../Model/Preferences';
-import {
-  TextListItem,
-  LinkListItem,
-  InternalListItem,
-  SwitchListItem,
-  ButtonListItem,
-  SegmentedFilterListItem,
-} from './MoreListItems/MoreListItems';
+import { PreferencesContext } from '../../Model/Preferences';
+import ButtonListItem from './MoreListItems/ButtonListItem/ButtonListItem';
+import TextListItem from './MoreListItems/TextListItem/TextListItem';
+import SwitchListItem from './MoreListItems/SwitchListItem/SwitchListItem';
+import LinkListItem from './MoreListItems/LinkListItem/LinkListItem';
+import InternalListItem from './MoreListItems/InternalListItem/InternalListItem';
+import SegmentedFilterListItem from './MoreListItems/SegmentedFilterListItem/SegmentedFilterListItem';
 
 /**
  * @description A View that allows the user to set custom settings, or view
@@ -43,21 +41,21 @@ import {
  */
 const More = () => {
   const styles = useDynamicValue(dynamicStyles);
-  const {state, dispatch} = useContext(PreferencesContext);
+  const { state, dispatch } = useContext(PreferencesContext);
 
   return (
     <SafeAreaView style={styles.sectionList}>
       <SectionList
         sections={[
-          {title: 'Instrument', data: INSTRUMENT},
-          {title: 'Favorites', data: FAVORITES},
-          {title: 'Random', data: RANDOM},
-          {title: 'Settings', data: SETTINGS},
-          {title: 'Resources', data: RESOURCES},
-          {title: 'About', data: ABOUT},
+          { title: 'Instrument', data: INSTRUMENT },
+          { title: 'Favorites', data: FAVORITES },
+          { title: 'Random', data: RANDOM },
+          { title: 'Settings', data: SETTINGS },
+          { title: 'Resources', data: RESOURCES },
+          { title: 'About', data: ABOUT },
         ]}
         keyExtractor={(item, index) => index}
-        renderItem={({item}) => {
+        renderItem={({ item }) => {
           switch (item.type) {
             case 'link':
               return <LinkListItem item={item} state={state} />;
@@ -83,7 +81,7 @@ const More = () => {
               return null;
           }
         }}
-        renderSectionHeader={({section: {title}}) => (
+        renderSectionHeader={({ section: { title } }) => (
           <Text accessibilityRole="header" style={styles.listHeader}>
             {title}
           </Text>
@@ -115,7 +113,8 @@ const More = () => {
             <Text
               style={styles.footerText}
               accessibilityRole="text"
-              accessibilityLabel="Made with love in Dayton, Ohio">
+              accessibilityLabel="Made with love in Dayton, Ohio"
+            >
               {'Made with ❤️ in Dayton, Ohio'}
             </Text>
           </View>

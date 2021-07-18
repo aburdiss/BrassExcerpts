@@ -16,7 +16,7 @@ import ActionButton from '../../Components/ActionButton/ActionButton';
 import { PreferencesContext } from '../../Model/Preferences';
 import RandomExcerptHeader from './RandomExcertHeader/RandomExcerptHeader';
 import { colors } from '../../Model/Model';
-import { generateRandomExcerpt } from './generateRandomExcerpt';
+import { generateRandomExcerpt } from './utils/generateRandomExcerpt/generateRandomExcerpt';
 import { useIdleScreen } from '../../utils/CustomHooks/useIdleScreen/useIdleScreen';
 
 /**

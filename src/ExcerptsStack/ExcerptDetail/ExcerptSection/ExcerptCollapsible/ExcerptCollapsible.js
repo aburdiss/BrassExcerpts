@@ -17,7 +17,7 @@ import {
   useSafeAreaInsets,
 } from 'react-native-safe-area-context';
 
-import { colors } from '../../../Model/Model';
+import { colors } from '../../../../Model/Model';
 import {
   DynamicStyleSheet,
   useDynamicStyleSheet,
