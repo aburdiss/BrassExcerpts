@@ -2306,7 +2306,7 @@ let weberFreischutz = {
     },
   ],
   mutes: '',
-  videos: [],
+  videos: 'weberFreischutz',
 };
 
 let weberOberon = {
