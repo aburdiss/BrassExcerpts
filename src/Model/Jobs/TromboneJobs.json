@@ -1,221 +1,6 @@
 {
   "Jobs": [
     {
-      "orchestra": "ICO Magna Grecia Orchestra",
-      "position": "Principal Trombone with obl. of tutti",
-      "link": "https://www.orchestramagnagrecia.info/vuoi-suonare-con-noi",
-      "country": "Italy",
-      "closingDate": "May 31, 2021",
-      "auditionDate": "",
-      "excerpts": [
-        "Bernstein - Symphonic Dances from West Side Story",
-        "brahms1",
-        "Gershwin - An American in Paris",
-        "ravelBolero",
-        "rossiniWilliamTell",
-        "mahler3",
-        "Stravinsky - Pulcinella",
-        "wagnerTannhauser"
-      ]
-    },
-    {
-      "orchestra": "Slovene National Theater",
-      "position": "1. Trombone",
-      "link": "https://www.sng-mb.si/",
-      "country": "Slovenia",
-      "closingDate": "June 13, 2021",
-      "auditionDate": "July 5, 2021",
-      "excerpts": []
-    },
-    {
-      "orchestra": "United States Air Force Band of the Golden West",
-      "position": "Trombone",
-      "link": "https://www.music.af.mil/Auditions/Upcoming-Vacancies/",
-      "country": "USA",
-      "closingDate": "June 20, 2021",
-      "auditionDate": "August 6, 2021",
-      "excerpts": []
-    },
-    {
-      "orchestra": "Austin Symphony Orchestra",
-      "position": "Principal Trombone",
-      "link": "https://austinsymphony.org/about/orchestra-auditions/",
-      "country": "USA",
-      "closingDate": "August 1, 2021",
-      "auditionDate": "August 25, 2021",
-      "excerpts": [
-        "berliozFaust",
-        "brahms1",
-        "brahms2",
-        "mahler3",
-        "mozartRequiem",
-        "ravelBolero",
-        "rossiniLaGazza",
-        "rossiniWilliamTell",
-        "schumann3",
-        "straussEulenspiegel",
-        "Stravinsky - Pulcinella",
-        "wagnerValkyrie",
-        "wagnerTannhauser"
-      ]
-    },
-    {
-      "orchestra": "Richardson Symphony Orchestra",
-      "position": "Principal Trombone",
-      "link": "https://richardsonsymphony.org/auditions/",
-      "country": "USA",
-      "closingDate": "August 1, 2021",
-      "auditionDate": "August 28, 2021",
-      "excerpts": [
-        "berliozFaust",
-        "mozartRequiem",
-        "ravelBolero",
-        "rossiniLaGazza",
-        "wagnerValkyrie"
-      ]
-    },
-    {
-      "orchestra": "Vanemuine Theater",
-      "position": "TROMBONE GROUP 3rd PLAYER",
-      "link": "https://www.vanemuine.ee/en/inimesed/vacant-positions/",
-      "country": "Estonia",
-      "closingDate": "August 1, 2021",
-      "auditionDate": "August 30, 2021",
-      "excerpts": []
-    },
-    {
-      "orchestra": "Noord Nederlands Orkest",
-      "position": "2nd Trombone",
-      "link": "https://nno.nu/nno-en/jobs-en/2nd-trombone-90-3",
-      "country": "Netherlands",
-      "closingDate": "September 6, 2021",
-      "auditionDate": "October 25, 2021",
-      "excerpts": []
-    },
-    {
-      "orchestra": "Orchestre Philharmonique de Radio France",
-      "position": "Second trombone, playing third trombone, playing bass trombone",
-      "link": "https://www.maisondelaradio.fr/page/concours-de-recrutement-recrutement-auditions",
-      "country": "France",
-      "closingDate": "September 8, 2021",
-      "auditionDate": "",
-      "excerpts": [
-        "mozartRequiem",
-        "rossiniLaGazza",
-        "straussHeldenleben",
-        "rimskyKorsakovRussianEaster",
-        "haydnCreation",
-        "berliozFaust",
-        "schumann3",
-        "Bartók - Miraculous Mandarin",
-        "rimskyKorsakovScheherazade",
-        "straussEulenspiegel",
-        "mahler5",
-        "Berg - Three Pieces for Orchestra",
-        "mahler2",
-        "straussZarathustra",
-        "rossiniWilliamTell",
-        "straussAlpine",
-        "Mahler - Symphony No. 6",
-        "stravinskyFirebird",
-        "saintSaens3",
-        "beethoven9",
-        "straussBorgeois",
-        "wagnerRheingold",
-        "bruckner7",
-        "wagnerValkyrie",
-        "wagnerLohengrin",
-        "Berg - Wozzeck"
-      ]
-    },
-    {
-      "orchestra": "Boise Philharmonic Orchestra",
-      "position": "Trombone II",
-      "link": "https://boisephil.org/about/auditions/",
-      "country": "USA",
-      "closingDate": "September 10, 2021",
-      "auditionDate": "September 24, 2021",
-      "excerpts": [
-        "berliozFaust",
-        "holstPlanets",
-        "mahler5",
-        "mozartRequiem",
-        "ravelBolero",
-        "rimskyKorsakovRussianEaster",
-        "rossiniWilliamTell",
-        "rossiniLaGazza",
-        "straussHeldenleben",
-        "wagnerValkyrie"
-      ]
-    },
-    {
-      "orchestra": "Tokyo Metropolitan Symphony Orchestra",
-      "position": "2nd Trombone",
-      "link": "https://tmso.or.jp/e/tmso/audition/audition_tb210709/",
-      "country": "Japan",
-      "closingDate": "July 9, 2021",
-      "auditionDate": "September 28, 2021",
-      "excerpts": ["rossiniWilliamTell", "wagnerValkyrie", "mozartRequiem"]
-    },
-    {
-      "orchestra": "Kuopio Symphony Orchestra",
-      "position": "Principal Trombone",
-      "link": "https://www.kuopio.fi/kuntarekry",
-      "country": "Finland",
-      "closingDate": "September 1, 2021",
-      "auditionDate": "October 1, 2021",
-      "excerpts": []
-    },
-    {
-      "orchestra": "Gewandhausorchester",
-      "position": "Solo-Bassposaune 100% (1) – Permanent",
-      "link": "https://www.muvac.com/en/vac/gewandhausorchester-0090436",
-      "country": "Germany",
-      "closingDate": "August 25, 2021",
-      "auditionDate": "October 12, 2021",
-      "excerpts": [
-        "brahms1",
-        "haydnCreation",
-        "schumann3",
-        "rossiniWilliamTell",
-        "straussHeldenleben",
-        "straussEulenspiegel",
-        "wagnerLohengrin",
-        "wagnerValkyrie",
-        "Wagner - Die Meistersinger von Nürnberg",
-        "wagnerTannhauser",
-        "franckD",
-        "Leoncavallo - Bajazzo",
-        "Strauss - Rosenkavalier",
-        "wagnerRheingold",
-        "Strauss - Elektra",
-        "Strauss - Die Frau ohne Schatten"
-      ]
-    },
-    {
-      "orchestra": "Euskadiko Orkestra - Basque National Orchestra",
-      "position": "Trombón Tutti (1)",
-      "link": "https://www.muvac.com/en/vac/euskadiko-orkestra-basque-national-orchestra-8460682",
-      "country": "Spain",
-      "closingDate": "September 17, 2021",
-      "auditionDate": "October 14, 2021",
-      "excerpts": [
-        "mozartRequiem",
-        "straussZarathustra",
-        "straussHeldenleben",
-        "rimskyKorsakovScheherazade",
-        "rossiniWilliamTell",
-        "schumann3",
-        "berliozFaust",
-        "wagnerValkyrie",
-        "straussEulenspiegel",
-        "bruckner7",
-        "brahms4",
-        "schumann4",
-        "Mahler - Symphony No. 9"
-      ]
-    },
-    {
       "orchestra": "The Cleveland Orchestra",
       "position": "Principal Trombone",
       "link": "https://www.clevelandorchestra.com/contact/auditions-careers/musician-auditions/",
@@ -287,6 +72,198 @@
       ]
     },
     {
+      "orchestra": "ICO Magna Grecia Orchestra",
+      "position": "Principal Trombone with obl. of tutti",
+      "link": "https://www.orchestramagnagrecia.info/vuoi-suonare-con-noi",
+      "country": "Italy",
+      "closingDate": "May 31, 2021",
+      "auditionDate": "",
+      "excerpts": [
+        "Bernstein - Symphonic Dances from West Side Story",
+        "brahms1",
+        "Gershwin - An American in Paris",
+        "ravelBolero",
+        "rossiniWilliamTell",
+        "mahler3",
+        "Stravinsky - Pulcinella",
+        "wagnerTannhauser"
+      ]
+    },
+    {
+      "orchestra": "Slovene National Theater",
+      "position": "1. Trombone",
+      "link": "https://www.sng-mb.si/",
+      "country": "Slovenia",
+      "closingDate": "June 13, 2021",
+      "auditionDate": "July 5, 2021",
+      "excerpts": []
+    },
+    {
+      "orchestra": "United States Air Force Band of the Golden West",
+      "position": "Trombone",
+      "link": "https://www.music.af.mil/Auditions/Upcoming-Vacancies/",
+      "country": "USA",
+      "closingDate": "June 20, 2021",
+      "auditionDate": "August 6, 2021",
+      "excerpts": []
+    },
+    {
+      "orchestra": "Tokyo Metropolitan Symphony Orchestra",
+      "position": "2nd Trombone",
+      "link": "https://tmso.or.jp/e/tmso/audition/audition_tb210709/",
+      "country": "Japan",
+      "closingDate": "July 9, 2021",
+      "auditionDate": "September 28, 2021",
+      "excerpts": ["rossiniWilliamTell", "wagnerValkyrie", "mozartRequiem"]
+    },
+    {
+      "orchestra": "Austin Symphony Orchestra",
+      "position": "Principal Trombone",
+      "link": "https://austinsymphony.org/about/orchestra-auditions/",
+      "country": "USA",
+      "closingDate": "August 1, 2021",
+      "auditionDate": "August 25, 2021",
+      "excerpts": [
+        "berliozFaust",
+        "brahms1",
+        "brahms2",
+        "mahler3",
+        "mozartRequiem",
+        "ravelBolero",
+        "rossiniLaGazza",
+        "rossiniWilliamTell",
+        "schumann3",
+        "straussEulenspiegel",
+        "Stravinsky - Pulcinella",
+        "wagnerValkyrie",
+        "wagnerTannhauser"
+      ]
+    },
+    {
+      "orchestra": "Richardson Symphony Orchestra",
+      "position": "Principal Trombone",
+      "link": "https://richardsonsymphony.org/auditions/",
+      "country": "USA",
+      "closingDate": "August 1, 2021",
+      "auditionDate": "August 28, 2021",
+      "excerpts": [
+        "berliozFaust",
+        "mozartRequiem",
+        "ravelBolero",
+        "rossiniLaGazza",
+        "wagnerValkyrie"
+      ]
+    },
+    {
+      "orchestra": "Vanemuine Theater",
+      "position": "TROMBONE GROUP 3rd PLAYER",
+      "link": "https://www.vanemuine.ee/en/inimesed/vacant-positions/",
+      "country": "Estonia",
+      "closingDate": "August 1, 2021",
+      "auditionDate": "August 30, 2021",
+      "excerpts": []
+    },
+    {
+      "orchestra": "Gewandhausorchester",
+      "position": "Solo-Bassposaune 100% (1) – Permanent",
+      "link": "https://www.muvac.com/en/vac/gewandhausorchester-0090436",
+      "country": "Germany",
+      "closingDate": "August 25, 2021",
+      "auditionDate": "October 12, 2021",
+      "excerpts": [
+        "brahms1",
+        "haydnCreation",
+        "schumann3",
+        "rossiniWilliamTell",
+        "straussHeldenleben",
+        "straussEulenspiegel",
+        "wagnerLohengrin",
+        "wagnerValkyrie",
+        "Wagner - Die Meistersinger von Nürnberg",
+        "wagnerTannhauser",
+        "franckD",
+        "Leoncavallo - Bajazzo",
+        "Strauss - Rosenkavalier",
+        "wagnerRheingold",
+        "Strauss - Elektra",
+        "Strauss - Die Frau ohne Schatten"
+      ]
+    },
+    {
+      "orchestra": "Kuopio Symphony Orchestra",
+      "position": "Principal Trombone",
+      "link": "https://www.kuopio.fi/kuntarekry",
+      "country": "Finland",
+      "closingDate": "September 1, 2021",
+      "auditionDate": "October 1, 2021",
+      "excerpts": []
+    },
+    {
+      "orchestra": "Noord Nederlands Orkest",
+      "position": "2nd Trombone",
+      "link": "https://nno.nu/nno-en/jobs-en/2nd-trombone-90-3",
+      "country": "Netherlands",
+      "closingDate": "September 6, 2021",
+      "auditionDate": "October 25, 2021",
+      "excerpts": []
+    },
+    {
+      "orchestra": "Orchestre Philharmonique de Radio France",
+      "position": "Second trombone, playing third trombone, playing bass trombone",
+      "link": "https://www.maisondelaradio.fr/page/concours-de-recrutement-recrutement-auditions",
+      "country": "France",
+      "closingDate": "September 8, 2021",
+      "auditionDate": "",
+      "excerpts": [
+        "mozartRequiem",
+        "rossiniLaGazza",
+        "straussHeldenleben",
+        "rimskyKorsakovRussianEaster",
+        "haydnCreation",
+        "berliozFaust",
+        "schumann3",
+        "Bartók - Miraculous Mandarin",
+        "rimskyKorsakovScheherazade",
+        "straussEulenspiegel",
+        "mahler5",
+        "Berg - Three Pieces for Orchestra",
+        "mahler2",
+        "straussZarathustra",
+        "rossiniWilliamTell",
+        "straussAlpine",
+        "Mahler - Symphony No. 6",
+        "stravinskyFirebird",
+        "saintSaens3",
+        "beethoven9",
+        "straussBorgeois",
+        "wagnerRheingold",
+        "bruckner7",
+        "wagnerValkyrie",
+        "wagnerLohengrin",
+        "Berg - Wozzeck"
+      ]
+    },
+    {
+      "orchestra": "Boise Philharmonic Orchestra",
+      "position": "Trombone II",
+      "link": "https://boisephil.org/about/auditions/",
+      "country": "USA",
+      "closingDate": "September 10, 2021",
+      "auditionDate": "September 24, 2021",
+      "excerpts": [
+        "berliozFaust",
+        "holstPlanets",
+        "mahler5",
+        "mozartRequiem",
+        "ravelBolero",
+        "rimskyKorsakovRussianEaster",
+        "rossiniWilliamTell",
+        "rossiniLaGazza",
+        "straussHeldenleben",
+        "wagnerValkyrie"
+      ]
+    },
+    {
       "orchestra": "The Norwegian National Opera & Ballet",
       "position": "Basstrombone",
       "link": "https://operaen.no/en/about-us-oslo-operahouse/Vacancies/",
@@ -294,6 +271,29 @@
       "closingDate": "September 10, 2021",
       "auditionDate": "October 25, 2021",
       "excerpts": ["wagnerRheingold", "haydnCreation", "respighiFountains"]
+    },
+    {
+      "orchestra": "Euskadiko Orkestra - Basque National Orchestra",
+      "position": "Trombón Tutti (1)",
+      "link": "https://www.muvac.com/en/vac/euskadiko-orkestra-basque-national-orchestra-8460682",
+      "country": "Spain",
+      "closingDate": "September 17, 2021",
+      "auditionDate": "October 14, 2021",
+      "excerpts": [
+        "mozartRequiem",
+        "straussZarathustra",
+        "straussHeldenleben",
+        "rimskyKorsakovScheherazade",
+        "rossiniWilliamTell",
+        "schumann3",
+        "berliozFaust",
+        "wagnerValkyrie",
+        "straussEulenspiegel",
+        "bruckner7",
+        "brahms4",
+        "schumann4",
+        "Mahler - Symphony No. 9"
+      ]
     }
   ]
 }
