@@ -67,6 +67,42 @@
       "excerpts": []
     },
     {
+      "orchestra": "Bozeman Symphony",
+      "position": "Principal Horn, Horn 3",
+      "link": "https://www.bozemansymphony.org/auditions.html",
+      "country": "USA",
+      "closingDate": "August 11, 2021",
+      "auditionDate": "August 14, 2021",
+      "excerpts": [
+        "beethoven3",
+        "brahms2",
+        "haydn31",
+        "mendelssohnMidsummer",
+        "Shostakovich - Symphony No. 5",
+        "straussEulenspiegel",
+        "tchaikovsky4",
+        "tchaikovsky5",
+        "Williams - Jurassic Park"
+      ]
+    },
+    {
+      "orchestra": "Bozeman Symphony",
+      "position": "Horn 2, Horn 4",
+      "link": "https://www.bozemansymphony.org/auditions.html",
+      "country": "USA",
+      "closingDate": "August 11, 2021",
+      "auditionDate": "August 14, 2021",
+      "excerpts": [
+        "beethoven3",
+        "beethoven9",
+        "haydn31",
+        "mahler1",
+        "mahler3",
+        "Shostakovich - Symphony No. 5",
+        "tchaikovsky4"
+      ]
+    },
+    {
       "orchestra": "Vogtland Philharmonie Greiz/Reichenbach",
       "position": "3. Horn ",
       "link": "https://v-ph.de/jobs",
@@ -80,6 +116,15 @@
         "tchaikovsky5",
         "Rossini - The Barber of Seville"
       ]
+    },
+    {
+      "orchestra": "Fort Worth Symphony Orchestra",
+      "position": "Principal Horn",
+      "link": "https://fwsymphony.org/careers/orchestra-auditions/principal-horn",
+      "country": "USA",
+      "closingDate": "August 19, 2021",
+      "auditionDate": "October 4, 2021",
+      "excerpts": []
     },
     {
       "orchestra": "Midland-Odessa Symphony and Chorale",
@@ -206,6 +251,37 @@
       "closingDate": "September 12, 2021",
       "auditionDate": "October 16, 2021 ",
       "excerpts": []
+    },
+    {
+      "orchestra": "Auckland Philharmonia Orchestra",
+      "position": "Principal Horn",
+      "link": "https://www.apo.co.nz/about/work-with-us/principal-horn/",
+      "country": "New Zealand",
+      "closingDate": "September 20, 2021",
+      "auditionDate": "",
+      "excerpts": []
+    },
+    {
+      "orchestra": "Orchestre de Cannes Provence alpes côte d'azur",
+      "position": "Un.e Cor Solo pouvant jouer Deuxième Cor",
+      "link": "",
+      "country": "France",
+      "closingDate": "September 22, 2021",
+      "auditionDate": "October 2, 2021",
+      "excerpts": [
+        "bachBrandenburg1",
+        "Ravel - Pavane",
+        "Shostakovich - Cello Concerto",
+        "Rossini - The Barber of Seville",
+        "mendelssohnMidsummer",
+        "Ravel - Piano Concerto",
+        "beethoven6",
+        "dvorakCello",
+        "rossiniSemiramide",
+        "L. Mozart - Promenade en traineau",
+        "beethoven8",
+        "Poulenc - Sextet"
+      ]
     },
     {
       "orchestra": "Orchestre Philharmonique de Liège",
