@@ -17,6 +17,7 @@ import { PreferencesContext } from '../../Model/Preferences';
 import { colors } from '../../Model/Model';
 import { openMusicalChairsLink } from './utils/openMusicalChairsLink/openMusicalChairsLink';
 import { fetchInstrumentJobs } from '../../utils/fetchInstrumentJobs/fetchInstrumentJobs';
+import { getDateFromString } from '../../utils/getDateFromString/getDateFromString';
 import { hasValidJobs } from './utils/hasValidJobs/hasValidJobs';
 
 /**
@@ -33,12 +34,10 @@ import { hasValidJobs } from './utils/hasValidJobs/hasValidJobs';
  * and display more information about that Job to the user.
  * @author Alexander Burdiss
  * @since 3/5/21
- * @version 1.1.1
+ * @version 1.1.2
  * @component
  * @example
- * ```jsx
  * <Jobs />
- * ```
  */
 const Jobs = () => {
   const internalHornJobsLink =
@@ -164,7 +163,7 @@ const Jobs = () => {
         {hasValidJobs(currentJobs) ? (
           <SafeAreaView edges={['left', 'right']}>
             {currentJobs?.map((job, index) => {
-              const jobDate = new Date(job.closingDate);
+              const jobDate = getDateFromString(job.closingDate);
               if (jobDate > new Date()) {
                 return <JobsListRow key={index} job={job} />;
               }

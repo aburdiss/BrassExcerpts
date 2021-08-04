@@ -154,7 +154,7 @@ function handleFavoritesUpdateInstruments(state, action) {
  * and updates the same state in local storage on the device.
  * @author Alexander Burdiss
  * @since 12/14/20
- * @version 1.1.0
+ * @version 1.1.1
  * @param {*} state
  * @param {*} action
  */
@@ -204,7 +204,6 @@ const preferencesReducer = (state, action) => {
       throw new Error(`Unknown Action: ${action.type}`);
   }
   save(newState);
-  console.log(action.type, action.payload);
   return newState;
 };
 

@@ -1,3 +1,5 @@
+import { getDateFromString } from '../../../../utils/getDateFromString/getDateFromString';
+
 /**
  * @function isJobValidReducer
  * @see hasValidJobs
@@ -11,14 +13,15 @@
  * valid.
  * @author Alexander Burdiss
  * @since 5/8/21
- * @version 1.0.0
+ * @version 1.0.1
  */
 function isJobValidReducer(areAnyJobsValid, thisJob) {
   if (areAnyJobsValid) {
     return true;
   }
 
-  const jobDate = new Date(thisJob.closingDate);
+  const jobDate = getDateFromString(thisJob.closingDate);
+
   if (jobDate > new Date()) {
     return true;
   }
