@@ -31,20 +31,21 @@ import { colors } from '../../Model/Model';
 import { getDaysUntilDate } from '../../utils/getDaysUntilDate/getDaysUntilDate';
 import { isFavorite } from '../../utils/isFavorite/isFavorite';
 import { useIdleScreen } from '../../utils/CustomHooks/useIdleScreen/useIdleScreen';
+import { getDateFromString } from '../../utils/getDateFromString/getDateFromString';
 
 /**
+ * @todo Separate out these internal components to separate files.
+ *
  * @function JobDetail
  * @description A detailed view of one of the jobs in the app, with a list of
  * excerpts. When clicked, if the excerpt exists in the app, it will lead the
  * user directly to that excerpt.
  * @author Alexander Burdiss
  * @since 3/28/21
- * @version 1.2.2
+ * @version 1.2.3
  * @component
  * @example
- * ```jsx
  * <JobDetail />
- * ```
  */
 const JobDetail = () => {
   useIdleScreen();
@@ -91,15 +92,15 @@ const JobDetail = () => {
    * view.
    * @author Alexander Burdiss
    * @since 5/29/21
-   * @version 1.0.0
+   * @version 1.0.1
    */
   function shouldCalendarDisplay() {
     const closingDate = route.params.closingDate;
     const auditionDate = route.params.auditionDate;
     if (!auditionDate) {
-      return new Date(closingDate) > new Date();
+      return getDateFromString(closingDate) > new Date();
     }
-    return new Date(auditionDate) > new Date();
+    return getDateFromString(auditionDate) > new Date();
   }
 
   /**
@@ -122,12 +123,10 @@ const JobDetail = () => {
    * in two different modes.
    * @author Alexander Burdiss
    * @since 6/11/21
-   * @version 1.0.0
+   * @version 1.0.1
    * @component
    * @example
-   * ```jsx
    * <Calendar />
-   * ```
    */
   function Calendar() {
     return (
@@ -160,8 +159,8 @@ const JobDetail = () => {
         minDate={new Date()}
         maxDate={
           route.params.auditionDate
-            ? new Date(route.params.auditionDate)
-            : new Date(route.params.closingDate)
+            ? getDateFromString(route.params.auditionDate)
+            : getDateFromString(route.params.closingDate)
         }
         markedDates={[
           {
@@ -173,7 +172,7 @@ const JobDetail = () => {
             ],
           },
           {
-            date: new Date(route.params.closingDate),
+            date: getDateFromString(route.params.closingDate),
             lines: [
               {
                 color: DARKMODE ? colors.orangeDark : colors.orangeLight,
@@ -181,7 +180,7 @@ const JobDetail = () => {
             ],
           },
           {
-            date: new Date(route.params.auditionDate),
+            date: getDateFromString(route.params.auditionDate),
             lines: [
               {
                 color: DARKMODE ? colors.redDark : colors.redLight,
