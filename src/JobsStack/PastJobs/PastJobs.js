@@ -14,6 +14,7 @@ import { fetchInstrumentJobs } from '../../utils/fetchInstrumentJobs/fetchInstru
 import { PreferencesContext } from '../../Model/Preferences';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { colors } from '../../Model/Model';
+import { getDateFromString } from '../../utils/getDateFromString/getDateFromString';
 
 /**
  * @function PastJobs
@@ -113,7 +114,7 @@ const PastJobs = () => {
       <ScrollView style={styles.contentContainer} ref={scrollViewRef}>
         <View>
           {currentJobs?.map((job, index) => {
-            const jobDate = new Date(job.closingDate);
+            const jobDate = new getDateFromString(job.closingDate);
             if (jobDate < new Date()) {
               return (
                 <SafeAreaView key={index} edges={['left', 'right']}>

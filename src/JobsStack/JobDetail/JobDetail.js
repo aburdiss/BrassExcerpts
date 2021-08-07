@@ -215,7 +215,11 @@ const JobDetail = () => {
           labelColor={colors.orangeLight}
           data={
             route.params.closingDate +
-            ` (${getDaysUntilDate(route.params.closingDate)} days from today)`
+            (getDateFromString(route.params.closingDate) > new Date()
+              ? ` (${getDaysUntilDate(
+                  route.params.closingDate,
+                )} days from today)`
+              : '')
           }
         />
         {route.params.auditionDate ? (
@@ -224,9 +228,11 @@ const JobDetail = () => {
             labelColor={colors.redLight}
             data={
               route.params.auditionDate +
-              ` (${getDaysUntilDate(
-                route.params.auditionDate,
-              )} days from today)`
+              (getDateFromString(route.params.auditionDate) > new Date()
+                ? ` (${getDaysUntilDate(
+                    route.params.auditionDate,
+                  )} days from today)`
+                : '')
             }
           />
         ) : (
