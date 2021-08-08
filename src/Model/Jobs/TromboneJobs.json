@@ -179,6 +179,19 @@
       ]
     },
     {
+      "orchestra": "United States Air Force Academy Band",
+      "position": "Classical/Jazz Bass Trombone",
+      "link": "https://www.music.af.mil/Auditions/Upcoming-Vacancies/",
+      "country": "USA",
+      "closingDate": "August 16, 2021",
+      "auditionDate": "October 4, 2021",
+      "excerpts": [
+        "wagnerValkyrie",
+        "wagnerTannhauser",
+        "Fillmore - Rolling Thunder"
+      ]
+    },
+    {
       "orchestra": "Gewandhausorchester",
       "position": "Solo-Bassposaune 100% (1) – Permanent",
       "link": "https://www.muvac.com/en/vac/gewandhausorchester-0090436",
@@ -309,6 +322,24 @@
         "schumann4",
         "Mahler - Symphony No. 9"
       ]
+    },
+    {
+      "orchestra": "Polizeiorchester Niedersachsen",
+      "position": "1. Posaune",
+      "link": "https://www.zpd.polizei-nds.de/startseite/zpd_als_arbeitgeber/stellenangebote/musikerin-oder-musiker-m-w-d-fur-1-posaune-115673.html",
+      "country": "Germany",
+      "closingDate": "September 30, 2021",
+      "auditionDate": "",
+      "excerpts": []
+    },
+    {
+      "orchestra": "Orchestre Philharmonique de Nice",
+      "position": "Un trombone solo",
+      "link": "www.opera-nice.org",
+      "country": "France",
+      "closingDate": "October 18, 2021",
+      "auditionDate": "November 15, 2021",
+      "excerpts": []
     }
   ]
 }

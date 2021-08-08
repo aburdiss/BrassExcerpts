@@ -146,12 +146,35 @@
       ]
     },
     {
+      "orchestra": "The United States Air Force Academy Band",
+      "position": "French Horn",
+      "link": "https://www.music.af.mil/Auditions/Upcoming-Vacancies/",
+      "country": "USA",
+      "closingDate": "August 30, 2021",
+      "auditionDate": "October 18, 2021",
+      "excerpts": [
+        "straussEulenspiegel",
+        "Shostakovich - Symphony No. 5",
+        "straussHeldenleben",
+        "Sparke - Jubilee Overture"
+      ]
+    },
+    {
       "orchestra": "Berliner Philharmoniker",
       "position": "Ein Solo-Horn",
       "link": "https://www.berliner-philharmoniker.de/offene-stellen/solo-horn/",
       "country": "Germany",
       "closingDate": "September 2, 2021",
       "auditionDate": "October 14, 2021",
+      "excerpts": []
+    },
+    {
+      "orchestra": "Teatro Comunale di Bologna",
+      "position": "Primo Corno",
+      "link": "https://www.tcbo.it/bandi-di-gara/concorsi-e-audizioni/",
+      "country": "Italy",
+      "closingDate": "September 7, 2021",
+      "auditionDate": "September 15, 2021",
       "excerpts": []
     },
     {
