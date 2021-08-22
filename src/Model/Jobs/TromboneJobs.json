@@ -272,6 +272,35 @@
       ]
     },
     {
+      "orchestra": "State Opera - Rousse",
+      "position": "Tenor Trombone",
+      "link": "https://ruseopera.com/",
+      "country": "Bulgaria",
+      "closingDate": "September 10, 2021",
+      "auditionDate": "September 11, 2021",
+      "excerpts": [
+        "mozartRequiem",
+        "ravelBolero",
+        "rossiniLaGazza",
+        "rossiniWilliamTell"
+      ]
+    },
+    {
+      "orchestra": "State Opera - Rousse",
+      "position": "Bass Trombone",
+      "link": "https://ruseopera.com/",
+      "country": "Bulgaria",
+      "closingDate": "September 10, 2021",
+      "auditionDate": "September 11, 2021",
+      "excerpts": [
+        "bachCelloSuite",
+        "berliozFaust",
+        "wagnerValkyrie",
+        "rossiniWilliamTell",
+        "Kodaly - Háry János"
+      ]
+    },
+    {
       "orchestra": "Boise Philharmonic Orchestra",
       "position": "Trombone II",
       "link": "https://boisephil.org/about/auditions/",

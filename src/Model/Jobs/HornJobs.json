@@ -222,6 +222,21 @@
       ]
     },
     {
+      "orchestra": "State Opera - Rousse",
+      "position": "French horn",
+      "link": "https://ruseopera.com/",
+      "country": "Bulgaria",
+      "closingDate": "September 10, 2021",
+      "auditionDate": "September 11, 2021",
+      "excerpts": [
+        "brahms2",
+        "beethoven7",
+        "beethoven8",
+        "beethoven9",
+        "Puccini - Tosca"
+      ]
+    },
+    {
       "orchestra": "Morovian Philharmonic Olomouc",
       "position": "3rd FRENCH HORN with the duty of 1st and 2nd FRENCH HORN",
       "link": "https://www.mfo.cz/orchestreng",
@@ -276,6 +291,15 @@
       "excerpts": []
     },
     {
+      "orchestra": "Copenhagen Philharmonic Orchestra",
+      "position": "Principal Horn",
+      "link": "https://www.copenhagenphil.dk/jobs",
+      "country": "Denmark",
+      "closingDate": "September 12, 2021",
+      "auditionDate": "",
+      "excerpts": []
+    },
+    {
       "orchestra": "Auckland Philharmonia Orchestra",
       "position": "Principal Horn",
       "link": "https://www.apo.co.nz/about/work-with-us/principal-horn/",
@@ -283,6 +307,27 @@
       "closingDate": "September 20, 2021",
       "auditionDate": "",
       "excerpts": []
+    },
+    {
+      "orchestra": "Cape Symphony",
+      "position": "Second Horn",
+      "link": "https://capesymphony.org/about/employment",
+      "country": "USA",
+      "closingDate": "September 20, 2021",
+      "auditionDate": "October 19, 2021",
+      "excerpts": [
+        "beethoven3",
+        "beethoven7",
+        "beethoven8",
+        "haydn31",
+        "Shostakovich - Symphony No. 5",
+        "straussDonQuixote",
+        "straussHeldenleben",
+        "mahler1",
+        "mahler3",
+        "tchaikovsky4",
+        "wagnerRheingold"
+      ]
     },
     {
       "orchestra": "Orchestre de Cannes Provence alpes côte d'azur",
@@ -307,6 +352,15 @@
       ]
     },
     {
+      "orchestra": "Royal Stockholm Philharmonic Orchestra",
+      "position": "Tutti horn 3rd and 2nd",
+      "link": "https://www.konserthuset.se/en/about-us/available-positions/horn/",
+      "country": "Sweden",
+      "closingDate": "October 4, 2021",
+      "auditionDate": "November 4, 2021",
+      "excerpts": []
+    },
+    {
       "orchestra": "Orchestre Philharmonique de Liège",
       "position": "Cor solo 1er soliste ",
       "link": "https://www.oprl.be/fr/recrutement-dune-cor-solo-1er-soliste",
@@ -324,6 +378,31 @@
         "mahler5",
         "straussHeldenleben",
         "tchaikovsky5"
+      ]
+    },
+    {
+      "orchestra": "United States Army Band Pershing’s Own",
+      "position": "Horn",
+      "link": "https://www.usarmyband.com/vacancies/horn-the-u-s-army-concert-band",
+      "country": "USA",
+      "closingDate": "November 29, 2021",
+      "auditionDate": "December 13, 2021",
+      "excerpts": [
+        "Bass - Shenandoah",
+        "beethoven3",
+        "Bernstein - Overture to Candide",
+        "Bernstein - Symphonic Dances from West Side Story",
+        "brahms1",
+        "Hindemith - Symphonic Metamorphosis",
+        "mahler1",
+        "Mussorgsky - Pictures at an Exhibition",
+        "Prokofiev - Romeo and Juliet Suite No. 2",
+        "Schoenberg - Theme and Variations, Op. 43",
+        "Shostakovich - Symphony No. 5",
+        "straussDonJuan",
+        "straussHeldenleben",
+        "straussEulenspiegel",
+        "wagnerGotterdammerung"
       ]
     },
     {
