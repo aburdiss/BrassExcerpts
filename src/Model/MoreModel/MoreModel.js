@@ -147,4 +147,10 @@ export const ABOUT = [
     value: 'Send Feedback',
     link: 'mailto:aburdiss@icloud.com?subject=Brass%20Excerpts%20Feedback',
   },
+  {
+    id: '9',
+    type: 'link',
+    value: 'Open Source. Feel free to contribute!',
+    link: 'https://github.com/aburdiss/BrassExcerpts',
+  },
 ];

@@ -3,7 +3,7 @@ import { View } from 'react-native';
 
 import YoutubeLink from './YoutubeLink/YoutubeLink';
 import SectionHeader from '../../../Components/SectionHeader/SectionHeader';
-import YouTubeModel from '../../../Model/YouTubeModel';
+import YouTubeModel from '../../../Model/YouTubeModel/YouTubeModel';
 
 /**
  * @function YoutubeSection

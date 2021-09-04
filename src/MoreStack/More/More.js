@@ -17,7 +17,7 @@ import {
   RESOURCES,
   RANDOM,
   SETTINGS,
-} from '../../Model/MoreModel';
+} from '../../Model/MoreModel/MoreModel';
 import { PreferencesContext } from '../../Model/Preferences';
 import ButtonListItem from '../../Components/ListItems/ButtonListItem/ButtonListItem';
 import TextListItem from '../../Components/ListItems/TextListItem/TextListItem';

@@ -1,13 +1,10 @@
-import 'react-native';
-import React from 'react';
-
 const fetch = require('node-fetch');
 const https = require('https');
 const httpsAgent = new https.Agent({
   rejectUnauthorized: false,
 });
 
-import {RESOURCES, ABOUT} from './MoreModel';
+import { RESOURCES, ABOUT } from './MoreModel';
 
 describe('resource links', () => {
   RESOURCES.map(async (resource) => {

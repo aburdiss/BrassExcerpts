@@ -5,7 +5,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import React, { useContext, useEffect, useState } from 'react';
 
 import { colors } from '../../Model/Model';
-import { composers } from '../../Model/ComposerModel';
+import { composers } from '../../Model/ComposerModel/ComposerModel';
 import { excerpts as hornExcerpts } from '../../Model/Excerpts/HornExcerpts';
 import { excerpts as tromboneExcerpts } from '../../Model/Excerpts/TromboneExcerpts';
 import { excerpts as trumpetExcerpts } from '../../Model/Excerpts/TrumpetExcerpts';

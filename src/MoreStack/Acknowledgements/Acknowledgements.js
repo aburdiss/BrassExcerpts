@@ -8,7 +8,7 @@ import {
 } from 'react-native-dynamic';
 
 import { colors } from '../../Model/Model';
-import { TRANSLATIONS } from '../../Model/AcknowledgementsModel';
+import { TRANSLATIONS } from '../../Model/AcknowledgementsModel/AcknowledgementsModel';
 import TextListItem from '../../Components/ListItems/TextListItem/TextListItem';
 
 /**

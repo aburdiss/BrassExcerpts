@@ -1,9 +1,9 @@
 import 'react-native-gesture-handler';
 import React from 'react';
-import {createStackNavigator} from '@react-navigation/stack';
-import {useDarkMode} from 'react-native-dynamic';
+import { createStackNavigator } from '@react-navigation/stack';
+import { useDarkMode } from 'react-native-dynamic';
 
-import {colors} from '../Model/Model';
+import { colors } from '../Model/Model';
 import More from './More/More';
 import Licenses from './Licenses/Licenses';
 import Acknowledgements from './Acknowledgements/Acknowledgements';
@@ -42,7 +42,8 @@ const MoreStack = () => {
           shadowColor: 'transparent',
         },
         headerBackTitle: 'Back',
-      }}>
+      }}
+    >
       <Stack.Screen name="More" component={More} />
       <Stack.Screen name="Licenses" component={Licenses} />
       <Stack.Screen name="Acknowledgements" component={Acknowledgements} />

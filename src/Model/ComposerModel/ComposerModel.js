@@ -4,7 +4,7 @@ export const composers = [
     slug: 'Bach',
     name: 'Johann Sebastian Bach',
     ipa: 'joˈhan zeˈbastjan bɑx',
-    image: require('../../img/Composers/bach.jpg'),
+    image: require('../../../img/Composers/bach.jpg'),
     country: 'Germany',
     dates: '1685-1750',
     bio:
@@ -16,7 +16,7 @@ export const composers = [
     slug: 'Beethoven',
     name: 'Ludwig Van Beethoven',
     ipa: 'ˈlʊdvɪɡ væn ˈbeɪt(h)oʊvən',
-    image: require('../../img/Composers/beethoven.jpg'),
+    image: require('../../../img/Composers/beethoven.jpg'),
     country: 'Germany',
     dates: '1770-1827',
     bio:
@@ -28,7 +28,7 @@ export const composers = [
     slug: 'Berlioz',
     name: 'Hector Berlioz',
     ipa: 'ɛkˈtɔr bɛr liˌoʊz',
-    image: require('../../img/Composers/berlioz.jpg'),
+    image: require('../../../img/Composers/berlioz.jpg'),
     country: 'France',
     dates: '1803-1869',
     bio:
@@ -40,7 +40,7 @@ export const composers = [
     slug: 'Bizet',
     name: 'Georges Bizet',
     ipa: 'zhawrzh biˈzeɪ',
-    image: require('../../img/Composers/bizet.jpg'),
+    image: require('../../../img/Composers/bizet.jpg'),
     country: 'France',
     dates: '1838-1875',
     bio:
@@ -52,7 +52,7 @@ export const composers = [
     slug: 'Borodin',
     name: 'Alexander Borodin',
     ipa: 'ɐlʲɪkˈsandr bərɐˈdʲin',
-    image: require('../../img/Composers/borodin.jpg'),
+    image: require('../../../img/Composers/borodin.jpg'),
     country: 'Russia',
     dates: '1833-1887',
     bio:
@@ -64,7 +64,7 @@ export const composers = [
     slug: 'Brahms',
     name: 'Johannes Brahms',
     ipa: 'joˈhanəs ˈbʁaːms',
-    image: require('../../img/Composers/brahms.jpg'),
+    image: require('../../../img/Composers/brahms.jpg'),
     country: 'Germany',
     dates: '1833-1897',
     bio:
@@ -76,7 +76,7 @@ export const composers = [
     slug: 'Bruckner',
     name: 'Anton Bruckner',
     ipa: " 'antɔn ˈbʁʊknɐ",
-    image: require('../../img/Composers/bruckner.jpg'),
+    image: require('../../../img/Composers/bruckner.jpg'),
     country: 'Austria',
     dates: '1824-1896',
     bio:
@@ -88,7 +88,7 @@ export const composers = [
     slug: 'Debussy',
     name: 'Claude Debussy',
     ipa: 'klod dəbysi',
-    image: require('../../img/Composers/debussy.jpg'),
+    image: require('../../../img/Composers/debussy.jpg'),
     country: 'France',
     dates: '1862-1918',
     bio:
@@ -100,7 +100,7 @@ export const composers = [
     slug: 'Donizetti',
     name: 'Gaetano Donizetti',
     ipa: 'ɡaeˈtaːno donidˈdzetti',
-    image: require('../../img/Composers/donizetti.jpg'),
+    image: require('../../../img/Composers/donizetti.jpg'),
     country: 'Italy',
     dates: '1797-1848',
     bio:
@@ -112,7 +112,7 @@ export const composers = [
     slug: 'Dvořák',
     name: 'Antonín Dvořák',
     ipa: 'ˈɑn tɔ nyin ˈdvɔr ʒɑk',
-    image: require('../../img/Composers/dvorak.jpg'),
+    image: require('../../../img/Composers/dvorak.jpg'),
     country: 'Austrian Empire',
     dates: '1841-1904',
     bio:
@@ -124,7 +124,7 @@ export const composers = [
     slug: 'Franck',
     name: 'César Franck',
     ipa: 'seɪˈzar frɑŋk',
-    image: require('../../img/Composers/franck.jpg'),
+    image: require('../../../img/Composers/franck.jpg'),
     country: 'United Kingdom of the Netherlands (Now Belgium)',
     dates: '1822 - 1890',
     bio:
@@ -136,7 +136,7 @@ export const composers = [
     slug: 'Handel',
     name: 'George Frideric Handel',
     ipa: 'ˈɡeːɔʁk ˈfʁiːdʁɪç ˈhɛndl̩',
-    image: require('../../img/Composers/handel.jpg'),
+    image: require('../../../img/Composers/handel.jpg'),
     country: 'England',
     dates: '1685-1759',
     bio:
@@ -148,7 +148,7 @@ export const composers = [
     slug: 'Haydn',
     name: 'Franz Joseph Haydn',
     ipa: 'ˈfʁants ˈjoːzɛf ˈhaɪdn̩',
-    image: require('../../img/Composers/haydn.jpg'),
+    image: require('../../../img/Composers/haydn.jpg'),
     country: 'Austria',
     dates: '1732-1809',
     bio:
@@ -160,7 +160,7 @@ export const composers = [
     slug: 'Holst',
     name: 'Gustav Holst',
     ipa: 'ˈgʊs tɑv hoʊlst',
-    image: require('../../img/Composers/holst.jpg'),
+    image: require('../../../img/Composers/holst.jpg'),
     country: 'England',
     dates: '1874-1934',
     bio:
@@ -172,7 +172,7 @@ export const composers = [
     slug: 'Liszt',
     name: 'Franz Liszt',
     ipa: 'ˈfɛrɛnt͡s ˈlist',
-    image: require('../../img/Composers/liszt.jpg'),
+    image: require('../../../img/Composers/liszt.jpg'),
     country: 'Hungary',
     dates: '1811-1886',
     bio:
@@ -184,7 +184,7 @@ export const composers = [
     slug: 'Mahler',
     name: 'Gustav Mahler',
     ipa: 'ˈgʊs tɑf ˈmɑ lər',
-    image: require('../../img/Composers/mahler.jpg'),
+    image: require('../../../img/Composers/mahler.jpg'),
     country: 'Austrian Empire',
     dates: '1860-1911',
     bio:
@@ -196,7 +196,7 @@ export const composers = [
     slug: 'Mendelssohn',
     name: 'Felix Mendelssohn',
     ipa: "'fi lɪks 'mɛn dl sən",
-    image: require('../../img/Composers/mendelssohn.jpg'),
+    image: require('../../../img/Composers/mendelssohn.jpg'),
     country: 'Germany',
     dates: '1809-1947',
     bio:
@@ -208,7 +208,7 @@ export const composers = [
     slug: 'Mozart',
     name: 'Wolfgang Amadeus Mozart',
     ipa: 'ˈwʊlf gæŋ ˌæm əˈdeɪ əs ˈmoʊt sɑrt',
-    image: require('../../img/Composers/mozart.jpg'),
+    image: require('../../../img/Composers/mozart.jpg'),
     country: 'Germany',
     dates: '1756-1791',
     bio:
@@ -220,7 +220,7 @@ export const composers = [
     slug: 'Mussorgsky',
     name: 'Modest Mussorgsky',
     ipa: 'moʊˈdɛst mʊˈsɔrg ski',
-    image: require('../../img/Composers/mussorgsky.jpg'),
+    image: require('../../../img/Composers/mussorgsky.jpg'),
     country: 'Russia',
     dates: '1839-1881',
     bio:
@@ -232,7 +232,7 @@ export const composers = [
     slug: 'Ravel',
     name: 'Maurice Ravel',
     ipa: 'moʊˈris rəˈvɛl',
-    image: require('../../img/Composers/ravel.jpg'),
+    image: require('../../../img/Composers/ravel.jpg'),
     country: 'France',
     dates: '1875-1937',
     bio:
@@ -244,7 +244,7 @@ export const composers = [
     slug: 'Respighi',
     name: 'Ottorino Respighi',
     ipa: 'ottoˈriːno reˈspiːɡi',
-    image: require('../../img/Composers/respighi.jpg'),
+    image: require('../../../img/Composers/respighi.jpg'),
     country: 'Italy',
     dates: '1879-1936',
     bio:
@@ -256,7 +256,7 @@ export const composers = [
     slug: 'RimskyKorsakov',
     name: 'Nikolai Rimsky-Korsakov',
     ipa: 'nʲɪkəˈlaj ˈrʲimskʲɪj ˈkorsəkəf',
-    image: require('../../img/Composers/rimskyKorsakov.jpg'),
+    image: require('../../../img/Composers/rimskyKorsakov.jpg'),
     country: 'Russia',
     dates: '1844-1908',
     bio:
@@ -268,7 +268,7 @@ export const composers = [
     slug: 'Rossini',
     name: 'Gioachino Rossini',
     ipa: 'dʒɔ ɑkˈki nɔ roʊˈsi ni',
-    image: require('../../img/Composers/rossini.jpg'),
+    image: require('../../../img/Composers/rossini.jpg'),
     country: 'Italy',
     dates: '1792-1868',
     bio:
@@ -280,7 +280,7 @@ export const composers = [
     slug: 'Saint-Saëns',
     name: 'Camille Saint-Saëns',
     ipa: 'kamij sɛ̃ sɑ̃(s)',
-    image: require('../../img/Composers/saintSaens.jpg'),
+    image: require('../../../img/Composers/saintSaens.jpg'),
     country: 'France',
     dates: '1835-1921',
     bio:
@@ -292,7 +292,7 @@ export const composers = [
     slug: 'Schubert',
     name: 'Franz Schubert',
     ipa: 'ˈfʁant͡s ˈʃuːbɐt',
-    image: require('../../img/Composers/schubert.jpg'),
+    image: require('../../../img/Composers/schubert.jpg'),
     country: 'Austria',
     dates: '1797-1828',
     bio:
@@ -304,7 +304,7 @@ export const composers = [
     slug: 'Schumann',
     name: 'Robert Schumann',
     ipa: 'ˈrɒb ərt ˈʃu mɑn',
-    image: require('../../img/Composers/schumann.jpg'),
+    image: require('../../../img/Composers/schumann.jpg'),
     country: 'Germany',
     dates: '1810-1856',
     bio:
@@ -316,7 +316,7 @@ export const composers = [
     slug: 'Scriabin',
     name: 'Alexander Nikolayevich Scriabin',
     ipa: 'ɐlʲɪˈksandr nʲɪkəˈɫaɪvʲɪtɕ ˈskrʲæbʲɪn',
-    image: require('../../img/Composers/scriabin.jpg'),
+    image: require('../../../img/Composers/scriabin.jpg'),
     country: 'Russia',
     dates: '1872-1915',
     bio:
@@ -328,7 +328,7 @@ export const composers = [
     slug: 'Sibelius',
     name: 'Jean Sibelius',
     ipa: 'ʒɑn  sɪˈbeɪ li əs',
-    image: require('../../img/Composers/sibelius.jpg'),
+    image: require('../../../img/Composers/sibelius.jpg'),
     country: 'Finland',
     dates: '1865-1957',
     bio:
@@ -340,7 +340,7 @@ export const composers = [
     slug: 'Smetana',
     name: 'Bedřich Smetana',
     ipa: 'ˌbɛdərʒɪx ˈsmɛtənə',
-    image: require('../../img/Composers/smetana.jpg'),
+    image: require('../../../img/Composers/smetana.jpg'),
     country: 'Austrian Empire, Austria-Hugary (Now Czech Republic}',
     dates: '1824-1884',
     bio:
@@ -352,7 +352,7 @@ export const composers = [
     slug: 'Sousa',
     name: 'John Philip Sousa',
     ipa: "dʒɒn ˈfɪl ɪp 'su zə",
-    image: require('../../img/Composers/sousa.jpg'),
+    image: require('../../../img/Composers/sousa.jpg'),
     country: 'The United States of America',
     dates: '1854–1932',
     bio:
@@ -364,7 +364,7 @@ export const composers = [
     slug: 'Strauss',
     name: 'Richard Strauss',
     ipa: 'ˈʁɪçaʁt ˈʃtʁaʊs',
-    image: require('../../img/Composers/strauss.jpg'),
+    image: require('../../../img/Composers/strauss.jpg'),
     country: 'Germany',
     dates: '1864-1949',
     bio:
@@ -376,7 +376,7 @@ export const composers = [
     slug: 'Stravinsky',
     name: 'Igor Stravinsky',
     ipa: 'ˈi gɔr strəˈvɪn ski',
-    image: require('../../img/Composers/stravinsky.jpg'),
+    image: require('../../../img/Composers/stravinsky.jpg'),
     country: 'Russia',
     dates: '1882-1971',
     bio:
@@ -388,7 +388,7 @@ export const composers = [
     slug: 'Tchaikovsky',
     name: 'Pyotr Ilyich Tchaikovsky',
     ipa: 'ˈpyɔtr iˈlyitʃ tʃaɪˈkɒfski',
-    image: require('../../img/Composers/tchaikovsky.jpg'),
+    image: require('../../../img/Composers/tchaikovsky.jpg'),
     country: 'Russia',
     dates: '1840-1893',
     bio:
@@ -400,7 +400,7 @@ export const composers = [
     slug: 'Verdi',
     name: 'Giuseppe Verdi',
     ipa: 'dʒuˈzɛppe ˈverdi',
-    image: require('../../img/Composers/verdi.jpg'),
+    image: require('../../../img/Composers/verdi.jpg'),
     country: 'Italy',
     dates: '1813-1901',
     bio:
@@ -412,7 +412,7 @@ export const composers = [
     slug: 'Wagner',
     name: 'Richard Wagner',
     ipa: 'ˈʁɪçaʁt ˈvaːɡnɐ',
-    image: require('../../img/Composers/wagner.jpg'),
+    image: require('../../../img/Composers/wagner.jpg'),
     country: 'Germany',
     dates: '1813-1883',
     bio:
@@ -424,7 +424,7 @@ export const composers = [
     slug: 'Weber',
     name: 'Carl Maria von Weber',
     ipa: 'kɑrl məˈriə fən ˈvābər',
-    image: require('../../img/Composers/weber.jpg'),
+    image: require('../../../img/Composers/weber.jpg'),
     country: 'Germany',
     dates: '1786-1826',
     bio:
