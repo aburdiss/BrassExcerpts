@@ -725,7 +725,7 @@ let bruckner7 = {
     },
     {
       id: 39,
-      description: 'Excerpt 2 (continued}',
+      description: 'Excerpt 2 (continued)',
       avgTempo: '',
       measures: 'Mov I, mm. 114 to mm. 148',
       pictures: [
@@ -738,7 +738,7 @@ let bruckner7 = {
       id: 40,
       description: 'Excerpt 3',
       avgTempo: '',
-      measures: '',
+      measures: 'Mov. I, 2 mm. after [H] to mm. 180',
       pictures: [
         ['Trombone 1', 'Trombone/Bruckner7/1115.png'],
         ['Trombone 2', 'Trombone/Bruckner7/1116.png'],
