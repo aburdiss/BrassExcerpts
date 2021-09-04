@@ -253,7 +253,7 @@ export const composers = [
 
   {
     id: 21,
-    slug: 'Rimsky-Korsakov',
+    slug: 'RimskyKorsakov',
     name: 'Nikolai Rimsky-Korsakov',
     ipa: 'nʲɪkəˈlaj ˈrʲimskʲɪj ˈkorsəkəf',
     image: require('../../img/Composers/rimskyKorsakov.jpg'),
