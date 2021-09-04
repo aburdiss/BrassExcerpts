@@ -237,6 +237,15 @@
       ]
     },
     {
+      "orchestra": "Opera Ballet Vlaanderen",
+      "position": "2./4. Horn (with natural horn)",
+      "link": "https://www.muvac.com/en/vac/opera-ballet-vlaanderen-3fae80f",
+      "country": "Belgium",
+      "closingDate": "September 10, 2021",
+      "auditionDate": "October 1, 2021",
+      "excerpts": []
+    },
+    {
       "orchestra": "Morovian Philharmonic Olomouc",
       "position": "3rd FRENCH HORN with the duty of 1st and 2nd FRENCH HORN",
       "link": "https://www.mfo.cz/orchestreng",
@@ -300,6 +309,15 @@
       "excerpts": []
     },
     {
+      "orchestra": "Theatre Vanemuine",
+      "position": "Principal Horn",
+      "link": "https://www.vanemuine.ee/en/inimesed/vacant-positions/",
+      "country": "Estonia",
+      "closingDate": "September 13, 2021",
+      "auditionDate": "October 9, 2021",
+      "excerpts": []
+    },
+    {
       "orchestra": "Auckland Philharmonia Orchestra",
       "position": "Principal Horn",
       "link": "https://www.apo.co.nz/about/work-with-us/principal-horn/",
@@ -358,6 +376,37 @@
       "country": "Sweden",
       "closingDate": "October 4, 2021",
       "auditionDate": "November 4, 2021",
+      "excerpts": []
+    },
+    {
+      "orchestra": "West Australian Symphony Orchestra",
+      "position": "Associate Principal Horn",
+      "link": "https://www.waso.com.au/about-waso/work-with-us/work-with-waso-orchestral-vacancies/associate-principal-horn/",
+      "country": "Australia",
+      "closingDate": "October 10, 2021",
+      "auditionDate": "",
+      "excerpts": [
+        "beethoven2",
+        "beethoven7",
+        "brahms2",
+        "Ravel - Pavane pour une infant défunte",
+        "bachBrandenburg1",
+        "Shostakovich - Symphony No. 5",
+        "straussHeldenleben",
+        "tchaikovsky5",
+        "brahmsPiano2",
+        "straussEulenspiegel",
+        "Ravel - Piano Concerto",
+        "wagnerSigfried"
+      ]
+    },
+    {
+      "orchestra": "Adelaide Symphony Orchestra",
+      "position": "Tutti Horn",
+      "link": "www.aso.com.au/employment",
+      "country": "Australia",
+      "closingDate": "October 14, 2021",
+      "auditionDate": "October 29, 2021",
       "excerpts": []
     },
     {

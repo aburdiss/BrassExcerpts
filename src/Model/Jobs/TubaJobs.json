@@ -17,18 +17,71 @@
       "closingDate": "August 27, 2021",
       "auditionDate": "October 27, 2021",
       "excerpts": [
-        "Bernstein: Symphonic Dancesfrom West Side Story",
-        "Fucik-Laurendeau: Thunder and Blazes",
-        "Grainger: Lincolnshire Posy",
-        "Hindemith: Symphony in Bb",
+        "Bernstein - Symphonic Dancesfrom West Side Story",
+        "Fucik-Laurendeau - Thunder and Blazes",
+        "Grainger - Lincolnshire Posy",
+        "Hindemith - Symphony in Bb",
         "holstFirstSuite",
         "Liszt/arr. Brown: Les Preludes",
-        "Liszt/King: Mazeppa",
-        "Snedecor: Etude #4 from Low Etudes for Tuba",
+        "Liszt/King - Mazeppa",
+        "Snedecor - Etude #4 from Low Etudes for Tuba",
         "sousaStarsAndStripes",
-        "V. Williams: Toccata Marziale",
-        "V. Williams: English Folk Song Suite",
-        "Verdi/arr. Lake: La Forza del Destino"
+        "V. Williams - Toccata Marziale",
+        "V. Williams - English Folk Song Suite",
+        "Verdi/arr. Lake - La Forza del Destino"
+      ]
+    },
+    {
+      "orchestra": "Kyoto Symphony Orchestra",
+      "position": "Tuba",
+      "link": "https://kyoto-symphony.jp/en/audition/",
+      "country": "Japan",
+      "closingDate": "October 28, 2021",
+      "auditionDate": "December 21, 2021",
+      "excerpts": ["wagnerMeistersinger", "wagnerValkyrie"]
+    },
+    {
+      "orchestra": "United States Military Academy Band",
+      "position": "Tuba",
+      "link": "https://westpointband.com/auditions.html",
+      "country": "USA",
+      "closingDate": "November 1, 2021",
+      "auditionDate": "",
+      "excerpts": [
+        "sousaStarsAndStripes",
+        "Grantham – J’ai ete au bal",
+        "V. Williams – Toccata Marziale",
+        "King – Barnum & Bailey’s Favorite"
+      ]
+    },
+    {
+      "orchestra": "St. Louis Symphony Orchestra",
+      "position": "Principal Tuba",
+      "link": "https://www.slso.org/auditions",
+      "country": "USA",
+      "closingDate": "October 31, 2021",
+      "auditionDate": "January 10, 2022",
+      "excerpts": [
+        "Bartók - Concerto for Orchestra",
+        "berliozFaust",
+        "berliozSymphonie",
+        "bruckner4",
+        "bruckner7",
+        "holstPlanets",
+        "Gershwin - An American in Paris",
+        "mahler1",
+        "mahler2",
+        "mahler5",
+        "Prokofiev - Symphony No. 5",
+        "Prokofiev - Lieutenant Kijé",
+        "respighiFountains",
+        "straussHeldenleben",
+        "straussEulenspiegel",
+        "Stravinsky - Petrouchka",
+        "tchaikovsky6",
+        "wagnerMeistersinger",
+        "wagnerValkyrie",
+        "Williams - Overture to The Cowboys"
       ]
     },
     {
