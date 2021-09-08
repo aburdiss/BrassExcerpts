@@ -1,6 +1,5 @@
 import React from 'react';
-import { View } from 'react-native';
-import { Text, Pressable } from 'react-native';
+import { View, Text, Pressable } from 'react-native';
 import {
   DynamicStyleSheet,
   DynamicValue,
@@ -16,7 +15,7 @@ import { colors } from '../../Model/Model';
  * text that is passed in to it.
  * @author Alexander Burdiss
  * @since 3/3/21
- * @version 1.1.0
+ * @version 1.1.1
  * @param {Function} props.handler The function to call when the button is
  * pressed.
  * @param {String} props.children The Text to render in the header button.

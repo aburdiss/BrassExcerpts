@@ -1,12 +1,12 @@
 import 'react-native';
 import React from 'react';
-import {Text} from 'react-native';
-import {fireEvent, render} from '@testing-library/react-native';
+import { Text } from 'react-native';
+import { fireEvent, render } from '@testing-library/react-native';
 
 import ActionButton from './ActionButton';
 
 test('ActionButton renders correctly', () => {
-  const {queryByText} = render(
+  const { queryByText } = render(
     <ActionButton onPress={() => {}}>
       <Text>Press Me</Text>
     </ActionButton>,
@@ -17,7 +17,7 @@ test('ActionButton renders correctly', () => {
 describe('ActionButton calls function correctly', () => {
   test('one time', () => {
     const buttonPress = jest.fn();
-    const {getByText} = render(
+    const { getByText } = render(
       <ActionButton onPress={buttonPress}>
         <Text>Press Me</Text>
       </ActionButton>,
@@ -28,7 +28,7 @@ describe('ActionButton calls function correctly', () => {
 
   test('two times', () => {
     const buttonPress = jest.fn();
-    const {getByText} = render(
+    const { getByText } = render(
       <ActionButton onPress={buttonPress}>
         <Text>Press Me</Text>
       </ActionButton>,
