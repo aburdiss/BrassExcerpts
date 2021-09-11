@@ -1,19 +1,16 @@
 import React from 'react';
-import { View, Pressable, Text, Alert } from 'react-native';
+import { View, Pressable, Text, Alert, StyleSheet } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import {
-  DynamicStyleSheet,
-  DynamicValue,
-  useDynamicValue,
-} from 'react-native-dynamic';
 
-import { colors } from '../../../Model/Model';
+import { useColors } from '../../../utils/CustomHooks/useColors/useColors';
 
 /**
+ * @namespace ButtonListItem
+ * @function ButtonlistItem
  * @description A rendered Button list item that updates saved preferences.
  * @author Alexander Burdiss
  * @since 12/17/20
- * @version 1.0.2
+ * @version 1.1.0
  * @param {Object} props.item The data to be rendered in this list item
  * @param {Function} props.dispatch A function to call a reducer and update
  * app state.
@@ -26,7 +23,24 @@ import { colors } from '../../../Model/Model';
  * />
  */
 export default function ButtonListItem({ item, dispatch }) {
-  const styles = useDynamicValue(dynamicStyles);
+  const colors = useColors();
+  const styles = StyleSheet.create({
+    listButtonRowContainer: {
+      flexDirection: 'row',
+      justifyContent: 'flex-start',
+      alignItems: 'center',
+      backgroundColor: colors.background2,
+      paddingVertical: 8,
+      paddingHorizontal: 20,
+      borderBottomWidth: 1,
+      borderBottomColor: colors.systemGray5,
+      height: 45,
+    },
+    linkText: {
+      color: colors.green,
+      paddingRight: 5,
+    },
+  });
 
   return (
     <Pressable
@@ -87,66 +101,3 @@ export default function ButtonListItem({ item, dispatch }) {
     </Pressable>
   );
 }
-
-const dynamicStyles = new DynamicStyleSheet({
-  listItemSeparator: {
-    height: 0.5,
-    width: '100%',
-    backgroundColor: new DynamicValue(
-      colors.systemGray3Light,
-      colors.systemGray3Dark,
-    ),
-  },
-  listSegmentedRowContainer: {
-    backgroundColor: new DynamicValue(colors.white, colors.systemGray6Dark),
-    justifyContent: 'center',
-    paddingHorizontal: 20,
-    borderBottomWidth: 1,
-    borderBottomColor: new DynamicValue(
-      colors.systemGray5Light,
-      colors.systemGray5Dark,
-    ),
-    height: 45,
-  },
-  listButtonRowContainer: {
-    flexDirection: 'row',
-    justifyContent: 'flex-start',
-    alignItems: 'center',
-    backgroundColor: new DynamicValue(colors.white, colors.systemGray6Dark),
-    paddingVertical: 8,
-    paddingHorizontal: 20,
-    borderBottomWidth: 1,
-    borderBottomColor: new DynamicValue(
-      colors.systemGray5Light,
-      colors.systemGray5Dark,
-    ),
-    height: 45,
-  },
-  listPickerContainer: {
-    flexDirection: 'row',
-    backgroundColor: new DynamicValue(colors.white, colors.systemGray6Dark),
-    height: 45,
-    alignItems: 'center',
-  },
-  listRowContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    backgroundColor: new DynamicValue(colors.white, colors.systemGray6Dark),
-    paddingVertical: 8,
-    paddingHorizontal: 20,
-    borderBottomWidth: 1,
-    borderBottomColor: new DynamicValue(
-      colors.systemGray5Light,
-      colors.systemGray5Dark,
-    ),
-  },
-  listRowText: {
-    color: new DynamicValue(colors.black, colors.white),
-    paddingVertical: 5,
-  },
-  linkText: {
-    color: new DynamicValue(colors.greenLight, colors.greenDark),
-    paddingRight: 5,
-  },
-});

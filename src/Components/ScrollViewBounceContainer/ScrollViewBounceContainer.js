@@ -1,46 +1,60 @@
 import React from 'react';
-import {StyleSheet} from 'react-native';
-import {View} from 'react-native';
+import { View, StyleSheet } from 'react-native';
 
-const ScrollViewBounceContainer = ({
+/**
+ * @namespace ScrollViewBounceContainer
+ * @function ScrollViewBounceContainer
+ * @description A container for a scrollview that provides different colors
+ * on the top and the bottom. This is useful for making the bounce look better
+ * on top and bottom.
+ * @param {*} props The JSX props passed to this React component
+ * @param {React.Component} props.children Any child to be rendered inside this
+ * wrapper
+ * @param {string} props.topBounceColor
+ * @param {string} props.bottomBounceColor
+ * @author Alexander Burdiss
+ * @since 5/4/21
+ * @version 1.1.0
+ * @component
+ */
+export default function ScrollViewBounceContainer({
   children,
   topBounceColor,
   bottomBounceColor,
-}) => {
+}) {
+  const styles = StyleSheet.create({
+    backgroundContainer: {
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      width: '100%',
+      height: '100%',
+      zIndex: -1,
+    },
+    container: {
+      position: 'relative',
+    },
+  });
+
   return (
     <View
       style={styles.container}
       accessibilityElementsHidden={true}
-      importantForAccessibility="no-hide-descendants">
+      importantForAccessibility="no-hide-descendants"
+    >
       {children}
       <View style={styles.backgroundContainer}>
         <View
           // eslint-disable-next-line react-native/no-inline-styles
-          style={{flex: 1, backgroundColor: topBounceColor}}
+          style={{ flex: 1, backgroundColor: topBounceColor }}
           testID="topBounce"
         />
         <View
           // eslint-disable-next-line react-native/no-inline-styles
-          style={{flex: 1, backgroundColor: bottomBounceColor}}
+          style={{ flex: 1, backgroundColor: bottomBounceColor }}
           testID="bottomBounce"
         />
       </View>
     </View>
   );
-};
-
-const styles = StyleSheet.create({
-  backgroundContainer: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    width: '100%',
-    height: '100%',
-    zIndex: -1,
-  },
-  container: {
-    position: 'relative',
-  },
-});
-
-export default ScrollViewBounceContainer;
+}

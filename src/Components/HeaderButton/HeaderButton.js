@@ -1,38 +1,53 @@
 import React from 'react';
-import { View, Text, Pressable } from 'react-native';
-import {
-  DynamicStyleSheet,
-  DynamicValue,
-  useDynamicStyleSheet,
-} from 'react-native-dynamic';
+import { View, Text, Pressable, StyleSheet } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-import { colors } from '../../Model/Model';
+import { useColors } from '../../utils/CustomHooks/useColors/useColors';
 
 /**
+ * @namespace HeaderButton
+ * @function HeaderButton
  * @description A simple button to live on the header and provide additional
  * navigation options in the app. This component handles translation of the
  * text that is passed in to it.
  * @author Alexander Burdiss
  * @since 3/3/21
- * @version 1.1.1
+ * @version 1.2.0
  * @param {Function} props.handler The function to call when the button is
  * pressed.
  * @param {String} props.children The Text to render in the header button.
  *
  * @component
  * @example
- *   <HeaderButton handler={handler}>
- *     Hello, World!
- *   </HeaderButton />
+ * <HeaderButton handler={handler}>
+ *   Hello, World!
+ * </HeaderButton />
  */
-const HeaderButton = ({ children, handler }) => {
-  const styles = useDynamicStyleSheet(dynamicStyles);
+export default function HeaderButton({ children, handler }) {
+  const colors = useColors();
+  const styles = StyleSheet.create({
+    buttonTextContainer: {
+      flexDirection: 'row',
+      alignItems: 'center',
+    },
+    containerButton: {
+      padding: 8,
+      marginRight: 4,
+    },
+    icon: {
+      marginBottom: -10,
+      marginTop: -8,
+      paddingRight: 3,
+    },
+    text: {
+      color: colors.green,
+      fontSize: 16,
+    },
+  });
+
   return (
     <Pressable
-      android_ripple={{
-        color: new DynamicValue(colors.greenLight, colors.greenDark),
-      }}
+      android_ripple={{ color: colors.green }}
       onPress={handler}
       accessibilityRole="link"
       accessible={true}
@@ -60,26 +75,4 @@ const HeaderButton = ({ children, handler }) => {
       )}
     </Pressable>
   );
-};
-
-const dynamicStyles = new DynamicStyleSheet({
-  buttonTextContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  containerButton: {
-    padding: 8,
-    marginRight: 4,
-  },
-  icon: {
-    marginBottom: -10,
-    marginTop: -8,
-    paddingRight: 3,
-  },
-  text: {
-    color: new DynamicValue(colors.greenLight, colors.greenDark),
-    fontSize: 16,
-  },
-});
-
-export default HeaderButton;
+}

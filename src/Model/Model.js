@@ -48,6 +48,7 @@ export const colors = {
 export const light = {
   alwaysBlack: colors.black,
   alwaysWhite: colors.white,
+  background2: colors.white,
   text: colors.black,
   systemGray: colors.systemGray,
   systemGray2: colors.systemGray2Light,
@@ -71,6 +72,7 @@ export const light = {
 export const dark = {
   alwaysBlack: colors.black,
   alwaysWhite: colors.white,
+  background2: colors.systemGray6Dark,
   text: colors.white,
   systemGray: colors.systemGray,
   systemGray2: colors.systemGray2Dark,

@@ -1,25 +1,30 @@
-import { Text } from 'react-native';
 import React from 'react';
+import { StyleSheet, Text } from 'react-native';
 
-import {
-  DynamicStyleSheet,
-  DynamicValue,
-  useDynamicStyleSheet,
-} from 'react-native-dynamic';
-import { colors } from '../../Model/Model';
+import { useColors } from '../../utils/CustomHooks/useColors/useColors';
 
 /**
  * @description Renders a bold label with a colon, and the meta data
  * @author Alexander Burdiss
  * @since 3/6/21
- * @version 1.2.1
+ * @version 1.3.0
  * @param props The JSX props passed to this React component
  * @param {String} props.label The meta label for this data
  * @param {String} props.data The meta data to render
  * @param {String} [props.labelColor] The color to make the label
  */
-const MetaLabel = ({ label, data, labelColor }) => {
-  const styles = useDynamicStyleSheet(dynamicStyles);
+export default function MetaLabel({ label, data, labelColor }) {
+  const colors = useColors();
+  const styles = StyleSheet.create({
+    labelText: {
+      fontWeight: 'bold',
+    },
+    textWrapper: {
+      paddingTop: 3,
+      color: colors.text,
+    },
+  });
+
   if (!data) {
     return null;
   } else {
@@ -43,16 +48,4 @@ const MetaLabel = ({ label, data, labelColor }) => {
       </Text>
     );
   }
-};
-
-const dynamicStyles = new DynamicStyleSheet({
-  labelText: {
-    fontWeight: 'bold',
-  },
-  textWrapper: {
-    paddingTop: 3,
-    color: new DynamicValue(colors.black, colors.white),
-  },
-});
-
-export default MetaLabel;
+}
