@@ -350,6 +350,7 @@ const JobDetail = () => {
                         name="chevron-forward"
                         size={24}
                         color={colors.greenLight}
+                        style={styles.forwardIcon}
                       />
                     </SafeAreaView>
                   </Pressable>
@@ -427,6 +428,8 @@ const dynamicStyles = new DynamicStyleSheet({
   },
   excerptLink: {
     color: new DynamicValue(colors.greenLight, colors.greenDark),
+    width: '85%',
+    paddingVertical: 13,
   },
   excerptsContainer: {
     marginBottom: 70,
@@ -442,8 +445,13 @@ const dynamicStyles = new DynamicStyleSheet({
     ),
     backgroundColor: new DynamicValue(colors.white, colors.systemGray6Dark),
   },
+  forwardIcon: {
+    paddingRight: 5,
+  },
   iconContainer: {
     flexDirection: 'row',
+    width: '20%',
+    justifyContent: 'flex-end',
   },
   jobDetailContainer: {
     backgroundColor: new DynamicValue(colors.systemGray6Light, colors.black),
