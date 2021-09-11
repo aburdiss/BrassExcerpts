@@ -9,7 +9,7 @@ Run this command to update the data.
 */
 
 import React from 'react';
-import { capitalize } from 'underscore.string';
+import { capitalize } from '../../utils/captiatlize/capitalize';
 import SafeAreaView from 'react-native-safe-area-view';
 
 import Data from './licenses.json';

@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { View, Text, Pressable, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import { capitalize } from 'underscore.string';
+import { capitalize } from '../../../utils/captiatlize/capitalize';
 
 import { getNumberOfInstruments } from '../../../utils/getNumberOfInstruments/getNumberOfInstruments';
 import { PreferencesContext } from '../../../Model/Preferences';
