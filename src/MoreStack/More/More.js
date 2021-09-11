@@ -1,6 +1,6 @@
 import { View, SectionList, Text, StyleSheet } from 'react-native';
 import React, { useContext } from 'react';
-import SafeAreaView from 'react-native-safe-area-view';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
@@ -76,7 +76,7 @@ export default function More() {
   const { state, dispatch } = useContext(PreferencesContext);
 
   return (
-    <SafeAreaView style={styles.sectionList}>
+    <SafeAreaView style={styles.sectionList} edges={['right', 'left']}>
       <SectionList
         sections={[
           { title: 'Instrument', data: INSTRUMENT },

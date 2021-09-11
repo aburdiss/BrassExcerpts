@@ -10,7 +10,7 @@ Run this command to update the data.
 
 import React from 'react';
 import { capitalize } from '../../utils/captiatlize/capitalize';
-import SafeAreaView from 'react-native-safe-area-view';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 import Data from './licenses.json';
 
@@ -91,7 +91,7 @@ export default function Licenses() {
   const colors = useColors();
   return (
     <SafeAreaView
-      // eslint-disable-next-line react-native/no-inline-styles
+      edges={['left', 'right']}
       style={{
         flex: 1,
         backgroundColor: colors.background,

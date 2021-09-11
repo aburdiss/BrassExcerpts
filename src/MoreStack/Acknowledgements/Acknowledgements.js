@@ -1,6 +1,6 @@
 import React from 'react';
 import { SectionList, StyleSheet, Text } from 'react-native';
-import SafeAreaView from 'react-native-safe-area-view';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { TRANSLATIONS } from '../../Model/AcknowledgementsModel/AcknowledgementsModel';
 import TextListItem from '../../Components/ListItems/TextListItem/TextListItem';
@@ -51,7 +51,7 @@ export default function Acknowledgements() {
   });
 
   return (
-    <SafeAreaView style={styles.sectionList}>
+    <SafeAreaView style={styles.sectionList} edges={['right', 'left']}>
       <SectionList
         sections={[{ title: 'Translations', data: TRANSLATIONS }]}
         keyExtractor={(item, index) => index}
