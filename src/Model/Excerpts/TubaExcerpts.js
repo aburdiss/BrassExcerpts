@@ -1,4 +1,5 @@
 /**
+ * @file TubaExcerpts.js
  * @namespace TubaExcerpts
  * @description Tuba Excerpts to be used in the app.
  * @author Alexander Burdiss
@@ -123,7 +124,7 @@ let berliozLeCorsaire = {
   videos: 'berliozLeCorsaire',
 };
 
-let berliozRomeo = {
+let berliozRomeoJuliet = {
   id: 5,
   composer: 'Hector Berlioz',
   composerLast: 'Berlioz',
@@ -1191,7 +1192,7 @@ let sousaStarsAndStripes = {
   videos: 'sousaStarsAndStripes',
 };
 
-let straussAlsoSprach = {
+let straussZarathustra = {
   id: 30,
   composer: 'Richard Strauss',
   composerLast: 'Strauss',
@@ -1514,7 +1515,7 @@ let stravinskyRite = {
   videos: 'stravinskyRite',
 };
 
-let tchaikRomeoAndJuliet = {
+let tchaikovskyRomeoAndJuliet = {
   id: 37,
   composer: 'Pyotr Ilyich Tchaikovsky',
   composerLast: 'Tchaikovsky',
@@ -1554,7 +1555,7 @@ let tchaikovskySleepingBeauty = {
   videos: 'tchaikovskySleepingBeauty',
 };
 
-let tchaikSwanLake = {
+let tchaikovskySwanLake = {
   id: 39,
   composer: 'Pyotr Ilyich Tchaikovsky',
   composerLast: 'Tchaikovsky',
@@ -1574,7 +1575,7 @@ let tchaikSwanLake = {
   videos: 'tchaikovskySwanLake',
 };
 
-let tchaik1 = {
+let tchaikovsky1 = {
   id: 40,
   composer: 'Pyotr Ilyich Tchaikovsky',
   composerLast: 'Tchaikovsky',
@@ -1594,7 +1595,7 @@ let tchaik1 = {
   videos: 'tchaikovsky1',
 };
 
-let tchaik2 = {
+let tchaikovsky2 = {
   id: 41,
   composer: 'Pyotr Ilyich Tchaikovsky',
   composerLast: 'Tchaikovsky',
@@ -1614,7 +1615,7 @@ let tchaik2 = {
   videos: 'tchaikovsky2',
 };
 
-let tchaik4 = {
+let tchaikovsky4 = {
   id: 42,
   composer: 'Pyotr Ilyich Tchaikovsky',
   composerLast: 'Tchaikovsky',
@@ -1664,7 +1665,7 @@ let tchaik4 = {
   videos: 'tchaikovsky4',
 };
 
-let tchaik5 = {
+let tchaikovsky5 = {
   id: 43,
   composer: 'Pyotr Ilyich Tchaikovsky',
   composerLast: 'Tchaikovsky',
@@ -1714,7 +1715,7 @@ let tchaik5 = {
   videos: 'tchaikovsky5',
 };
 
-let tchaik6 = {
+let tchaikovsky6 = {
   id: 44,
   composer: 'Pyotr Ilyich Tchaikovsky',
   composerLast: 'Tchaikovsky',
@@ -1824,7 +1825,7 @@ let wagnerMeistersinger = {
   videos: 'wagnerMeistersinger',
 };
 
-let wagnerRide = {
+let wagnerValkyrie = {
   id: 48,
   composer: 'Richard Wagner',
   composerLast: 'Wagner',
@@ -1962,7 +1963,7 @@ export const excerpts = [
   berliozFaust,
   berliozKingLear,
   berliozLeCorsaire,
-  berliozRomeo,
+  berliozRomeoJuliet,
   berliozSymphonie,
   brahmsAcademic,
   brahms2,
@@ -1987,25 +1988,25 @@ export const excerpts = [
   sibelius1,
   sibelius2,
   sousaStarsAndStripes,
-  straussAlsoSprach,
+  straussZarathustra,
   straussDeathAndTransfiguration,
   straussDonJuan,
   straussDonQuixote,
   straussHeldenleben,
   straussEulenspiegel,
   stravinskyRite,
-  tchaikRomeoAndJuliet,
+  tchaikovskyRomeoAndJuliet,
   tchaikovskySleepingBeauty,
-  tchaikSwanLake,
-  tchaik1,
-  tchaik2,
-  tchaik4,
-  tchaik5,
-  tchaik6,
+  tchaikovskySwanLake,
+  tchaikovsky1,
+  tchaikovsky2,
+  tchaikovsky4,
+  tchaikovsky5,
+  tchaikovsky6,
   verdiNabucco,
   wagnerRheingold,
   wagnerMeistersinger,
-  wagnerRide,
+  wagnerValkyrie,
   wagnerFaust,
   wagnerGotterdamerung,
   wagnerLohengrin,
@@ -2022,7 +2023,7 @@ export const composers = {
       berliozFaust,
       berliozKingLear,
       berliozLeCorsaire,
-      berliozRomeo,
+      berliozRomeoJuliet,
       berliozSymphonie,
     ],
   },
@@ -2073,7 +2074,7 @@ export const composers = {
 
   Strauss: {
     excerpts: [
-      straussAlsoSprach,
+      straussZarathustra,
       straussDeathAndTransfiguration,
       straussDonJuan,
       straussDonQuixote,
@@ -2088,14 +2089,14 @@ export const composers = {
 
   Tchaikovsky: {
     excerpts: [
-      tchaikRomeoAndJuliet,
+      tchaikovskyRomeoAndJuliet,
       tchaikovskySleepingBeauty,
-      tchaikSwanLake,
-      tchaik1,
-      tchaik2,
-      tchaik4,
-      tchaik5,
-      tchaik6,
+      tchaikovskySwanLake,
+      tchaikovsky1,
+      tchaikovsky2,
+      tchaikovsky4,
+      tchaikovsky5,
+      tchaikovsky6,
     ],
   },
 
@@ -2107,7 +2108,7 @@ export const composers = {
     excerpts: [
       wagnerRheingold,
       wagnerMeistersinger,
-      wagnerRide,
+      wagnerValkyrie,
       wagnerFaust,
       wagnerGotterdamerung,
       wagnerLohengrin,

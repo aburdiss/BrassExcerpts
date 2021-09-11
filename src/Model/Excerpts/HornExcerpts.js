@@ -1,4 +1,5 @@
 /**
+ * @file HornExcerpts.js
  * @namespace HornExcerpts
  * @description Horn Excerpts to be used in the app.
  * @author Alexander Burdiss
@@ -7,7 +8,7 @@
  * @copyright 2021 Alexander Burdiss
  */
 
-let bachBrandenburgConcerto = {
+let bachBrandenburg1 = {
   id: 0,
   composer: 'Johann Sebastian Bach',
   composerLast: 'Bach',
@@ -383,7 +384,7 @@ let beethoven9 = {
   videos: 'beethoven9',
 };
 
-let berliozRomeoEtJuliet = {
+let berliozRomeoJuliet = {
   id: 9,
   composer: 'Hector Berlioz',
   composerLast: 'Berlioz',
@@ -2140,7 +2141,7 @@ let tchaikovsky5 = {
   videos: 'tchaikovsky5',
 };
 
-let wagnerWalkure = {
+let wagnerValkyrie = {
   id: 45,
   composer: 'Richard Wagner',
   composerLast: 'Wagner',
@@ -2154,23 +2155,23 @@ let wagnerWalkure = {
       description: 'Excerpt 1',
       measures: 'Act I Scene III, 6 mm. before [49] - 3 mm. after [50]',
       pictures: [
-        ['E and F Horn 1 and 2', 'Horn/WagnerValyrie/1531.png'],
-        ['E Horn 3 and 4', 'Horn/WagnerValyrie/1532.png'],
+        ['E and F Horn 1 and 2', 'Horn/WagnerValkyrie/1531.png'],
+        ['E Horn 3 and 4', 'Horn/WagnerValkyrie/1532.png'],
       ],
     },
     {
       id: 144,
       description: 'Excerpt 2',
       measures: 'Act II Scene II, 10 mm. before [30] - 5 mm. after [31]',
-      pictures: [['E Horn 2', 'Horn/WagnerValyrie/1533.png']],
+      pictures: [['E Horn 2', 'Horn/WagnerValkyrie/1533.png']],
     },
     {
       id: 145,
       description: 'Excerpt 3',
       measures: 'Act II Scene II, 3 mm. before [41] - 4 mm. before [42]',
       pictures: [
-        ['F Horn 1 and 2', 'Horn/WagnerValyrie/1534.png'],
-        ['F Horn 3 and 4', 'Horn/WagnerValyrie/1535.png'],
+        ['F Horn 1 and 2', 'Horn/WagnerValkyrie/1534.png'],
+        ['F Horn 3 and 4', 'Horn/WagnerValkyrie/1535.png'],
       ],
     },
     {
@@ -2178,9 +2179,9 @@ let wagnerWalkure = {
       description: 'Excerpt 4',
       measures: 'Act III Introduction, [8] - 3 mm. after [12]',
       pictures: [
-        ['E Horn 1 and 2', 'Horn/WagnerValyrie/1536.png'],
-        ['E Horn 3 and 4', 'Horn/WagnerValyrie/1537.png'],
-        ['E Horn 5 and 6', 'Horn/WagnerValyrie/1538.png'],
+        ['E Horn 1 and 2', 'Horn/WagnerValkyrie/1536.png'],
+        ['E Horn 3 and 4', 'Horn/WagnerValkyrie/1537.png'],
+        ['E Horn 5 and 6', 'Horn/WagnerValkyrie/1538.png'],
       ],
     },
   ],
@@ -2333,7 +2334,7 @@ let weberOberon = {
  * @description An alphabetical list of all of the compositions in the app.
  */
 export const excerpts = [
-  bachBrandenburgConcerto,
+  bachBrandenburg1,
   bachMassB,
   beethovenFidelio,
   beethoven2,
@@ -2342,7 +2343,7 @@ export const excerpts = [
   beethoven7,
   beethoven8,
   beethoven9,
-  berliozRomeoEtJuliet,
+  berliozRomeoJuliet,
   brahmsAcademic,
   brahmsPiano1,
   brahmsPiano2,
@@ -2378,7 +2379,7 @@ export const excerpts = [
   straussEulenspiegel,
   tchaikovsky4,
   tchaikovsky5,
-  wagnerWalkure,
+  wagnerValkyrie,
   wagnerRheingold,
   wagnerGotterdammerung,
   wagnerLohengrin,
@@ -2392,7 +2393,7 @@ export const excerpts = [
  */
 export const composers = {
   Bach: {
-    excerpts: [bachBrandenburgConcerto, bachMassB],
+    excerpts: [bachBrandenburg1, bachMassB],
   },
 
   Beethoven: {
@@ -2408,7 +2409,7 @@ export const composers = {
   },
 
   Berlioz: {
-    excerpts: [berliozRomeoEtJuliet],
+    excerpts: [berliozRomeoJuliet],
   },
 
   Brahms: {
@@ -2492,7 +2493,7 @@ export const composers = {
 
   Wagner: {
     excerpts: [
-      wagnerWalkure,
+      wagnerValkyrie,
       wagnerRheingold,
       wagnerGotterdammerung,
       wagnerLohengrin,

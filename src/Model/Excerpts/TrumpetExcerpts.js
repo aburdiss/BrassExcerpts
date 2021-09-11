@@ -1,4 +1,5 @@
 /**
+ * @file TrumpetExcerpts.js
  * @namespace TrumpetExcerpts
  * @description Trumpet Excerpts to be used in the app.
  * @author Alexander Burdiss
@@ -44,7 +45,7 @@ let bachBrandenburg2 = {
   videos: 'bachBrandenburg2',
 };
 
-let bachCantata = {
+let bachCantata51 = {
   id: 1,
   composer: 'Johann Sebastian Bach',
   composerLast: 'Bach',
@@ -1286,7 +1287,7 @@ let sibelius2 = {
   videos: 'sibelius2',
 };
 
-let straussAlsoSprach = {
+let straussZarathustra = {
   id: 41,
   composer: 'Richard Strauss',
   composerLast: 'Strauss',
@@ -1516,7 +1517,7 @@ let straussHeldenleben = {
   videos: 'straussHeldenleben',
 };
 
-let straussAlpineSymphony = {
+let straussAlpine = {
   id: 46,
   composer: 'Richard Strauss',
   composerLast: 'Strauss',
@@ -2073,7 +2074,7 @@ let wagnerTannhauser = {
  */
 export const excerpts = [
   bachBrandenburg2,
-  bachCantata,
+  bachCantata51,
   bachMagnificant,
   bachMassB,
   bachChristmasOratorio,
@@ -2113,11 +2114,11 @@ export const excerpts = [
   schumann2,
   scriabin4,
   sibelius2,
-  straussAlsoSprach,
+  straussZarathustra,
   straussDonJuan,
   straussDonQuixote,
   straussHeldenleben,
-  straussAlpineSymphony,
+  straussAlpine,
   straussBourgeois,
   straussSymphoniaDomestica,
   straussEulenspiegel,
@@ -2146,7 +2147,7 @@ export const composers = {
   Bach: {
     excerpts: [
       bachBrandenburg2,
-      bachCantata,
+      bachCantata51,
       bachChristmasOratorio,
       bachMagnificant,
       bachMassB,
@@ -2235,11 +2236,11 @@ export const composers = {
 
   Strauss: {
     excerpts: [
-      straussAlsoSprach,
+      straussZarathustra,
       straussDonJuan,
       straussDonQuixote,
       straussHeldenleben,
-      straussAlpineSymphony,
+      straussAlpine,
       straussBourgeois,
       straussSymphoniaDomestica,
       straussEulenspiegel,

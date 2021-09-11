@@ -1,4 +1,5 @@
 /**
+ * @file TromboneExcerpts.js
  * @namespace TromboneExcerpts
  * @description Trombone Excerpts to be used in the app.
  * @author Alexander Burdiss
