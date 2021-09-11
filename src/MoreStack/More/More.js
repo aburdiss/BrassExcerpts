@@ -128,7 +128,7 @@ export default function More() {
                 style={styles.icon}
                 name="logo-react"
                 size={24}
-                color={colors.reactColor}
+                color={colors.react}
               />
               <View>
                 <View style={styles.javascriptBackground} />
@@ -138,7 +138,7 @@ export default function More() {
                   style={styles.icon}
                   name="logo-javascript"
                   size={24}
-                  color={colors.javascriptColor}
+                  color={colors.javascript}
                 />
               </View>
             </View>
