@@ -11,20 +11,19 @@ import ExcerptDetail from '../ExcerptsStack/ExcerptDetail/ExcerptDetail';
 const Stack = createStackNavigator();
 
 /**
+ * @namespace ComposersStack
  * @function ComposersStack
  * @description A react component that holds all of the different screens to
  * display on the composers' stack, and provides them context and proper
  * navigation
  * @author Alexander Burdiss
  * @since 4/2/21
- * @version 1.0.0
+ * @version 1.0.1
  * @component
  * @example
- * ```jsx
  * <ComposersStack />
- * ```
  */
-const ComposersStack = () => {
+export default function ComposersStack() {
   const darkMode = useDarkMode();
 
   return (
@@ -62,6 +61,4 @@ const ComposersStack = () => {
       />
     </Stack.Navigator>
   );
-};
-
-export default ComposersStack;
+}

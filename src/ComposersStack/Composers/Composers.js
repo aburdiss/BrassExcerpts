@@ -1,33 +1,32 @@
-import { FlatList } from 'react-native';
+import { FlatList, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/core';
 import React from 'react';
 
-import { colors } from '../../Model/Model';
 import { composers } from '../../Model/ComposerModel/ComposerModel';
+import { useColors } from '../../utils/CustomHooks/useColors/useColors';
 import ComposerListRow from './ComposerListRow/ComposerListRow';
 
-import {
-  DynamicStyleSheet,
-  DynamicValue,
-  useDynamicStyleSheet,
-} from 'react-native-dynamic';
-
 /**
+ * @namespace Composers
  * @function Composers
  * @description A list of composers of all of the different compositions in the
  * app.
  * @author Alexander Burdiss
  * @since 3/3/21
- * @version 1.1.1
+ * @version 1.2.0
  * @component
  * @example
- * ```jsx
  * <Composers />
- * ```
  */
-const Composers = () => {
+export default function Composers() {
+  const colors = useColors();
+  const styles = StyleSheet.create({
+    list: {
+      backgroundColor: colors.background,
+    },
+  });
+
   const navigation = useNavigation();
-  const styles = useDynamicStyleSheet(dynamicStyles);
 
   /**
    * @function Composers~navigateToComposerDetail
@@ -59,12 +58,4 @@ const Composers = () => {
       keyExtractor={(item) => item.id.toString()}
     />
   );
-};
-
-const dynamicStyles = new DynamicStyleSheet({
-  list: {
-    backgroundColor: new DynamicValue(colors.systemGray6Light, colors.black),
-  },
-});
-
-export default Composers;
+}

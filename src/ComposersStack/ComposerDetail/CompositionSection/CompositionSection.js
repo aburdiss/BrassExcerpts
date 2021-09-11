@@ -1,19 +1,15 @@
 import React, { useContext } from 'react';
-import { View, Text, Pressable } from 'react-native';
+import { View, Text, Pressable, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/core';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import {
-  DynamicStyleSheet,
-  DynamicValue,
-  useDynamicStyleSheet,
-} from 'react-native-dynamic';
 
-import { colors } from '../../../Model/Model';
+import { useColors } from '../../../utils/CustomHooks/useColors/useColors';
 import { isFavorite } from '../../../utils/isFavorite/isFavorite';
 import { PreferencesContext } from '../../../Model/Preferences';
 
 /**
+ * @namespace CompositionSection
  * @function CompositionSection
  * @description A section of the different compositions that the composer has
  * created.
@@ -22,12 +18,43 @@ import { PreferencesContext } from '../../../Model/Preferences';
  * section.
  * @author Alexander Burdiss
  * @since 3/9/21
- * @version 1.0.2
+ * @version 1.1.0
  */
-const CompositionSection = ({ excerpts }) => {
+export default function CompositionSection({ excerpts }) {
+  const colors = useColors();
+  const styles = StyleSheet.create({
+    accentColor: { color: colors.green },
+    button: {
+      paddingVertical: 10,
+      paddingRight: 20,
+      marginLeft: 20,
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+    },
+    buttonBorder: {
+      borderTopWidth: 1,
+      borderTopColor: colors.systemGray5,
+    },
+    container: {
+      borderBottomWidth: 1,
+      borderBottomColor: colors.systemGray5,
+      borderTopWidth: 1,
+      borderTopColor: colors.systemGray5,
+      backgroundColor: colors.background2,
+      marginBottom: 20,
+    },
+    iconContainer: {
+      flexDirection: 'row',
+    },
+    text: {
+      fontSize: 15,
+      color: colors.text,
+    },
+  });
+
   const { state } = useContext(PreferencesContext);
   const navigation = useNavigation();
-  const styles = useDynamicStyleSheet(dynamicStyles);
 
   return (
     <View style={styles.container}>
@@ -82,48 +109,4 @@ const CompositionSection = ({ excerpts }) => {
       })}
     </View>
   );
-};
-
-const dynamicStyles = new DynamicStyleSheet({
-  accentColor: {
-    color: new DynamicValue(colors.greenLight, colors.greenDark),
-  },
-  button: {
-    paddingVertical: 10,
-    paddingRight: 20,
-    marginLeft: 20,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-  },
-  buttonBorder: {
-    borderTopWidth: 1,
-    borderTopColor: new DynamicValue(
-      colors.systemGray5Light,
-      colors.systemGray5Dark,
-    ),
-  },
-  container: {
-    borderBottomWidth: 1,
-    borderBottomColor: new DynamicValue(
-      colors.systemGray5Light,
-      colors.systemGray5Dark,
-    ),
-    borderTopWidth: 1,
-    borderTopColor: new DynamicValue(
-      colors.systemGray5Light,
-      colors.systemGray5Dark,
-    ),
-    backgroundColor: new DynamicValue(colors.white, colors.systemGray6Dark),
-    marginBottom: 20,
-  },
-  iconContainer: {
-    flexDirection: 'row',
-  },
-  text: {
-    fontSize: 15,
-    color: new DynamicValue(colors.black, colors.white),
-  },
-});
-
-export default CompositionSection;
+}

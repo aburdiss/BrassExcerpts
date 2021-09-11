@@ -1,13 +1,8 @@
 import React, { useContext } from 'react';
-import { View, Text, ScrollView, Image } from 'react-native';
+import { View, Text, ScrollView, Image, StyleSheet } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import { useRoute } from '@react-navigation/core';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import {
-  DynamicStyleSheet,
-  DynamicValue,
-  useDynamicStyleSheet,
-} from 'react-native-dynamic';
 
 import SectionHeader from '../../Components/SectionHeader/SectionHeader';
 import CompositionSection from './CompositionSection/CompositionSection';
@@ -16,32 +11,87 @@ import { composers as hornComposers } from '../../Model/Excerpts/HornExcerpts';
 import { composers as trumpetComposers } from '../../Model/Excerpts/TrumpetExcerpts';
 import { composers as tromboneComposers } from '../../Model/Excerpts/TromboneExcerpts';
 import { composers as tubaComposers } from '../../Model/Excerpts/TubaExcerpts';
-import { colors } from '../../Model/Model';
 import { PreferencesContext } from '../../Model/Preferences';
 import { getNumberOfInstruments } from '../../utils/getNumberOfInstruments/getNumberOfInstruments';
 import { useIdleScreen } from '../../utils/CustomHooks/useIdleScreen/useIdleScreen';
 import { useDarkMode } from '../../utils/CustomHooks/useDarkMode/useDarkMode';
+import { useColors } from '../../utils/CustomHooks/useColors/useColors';
 
 /**
+ * @namespace ComposerDetail
  * @function ComposerDetail
  * @description A listing of one composer, and the exerpts for the different
  * instruments available for that composer.
  * @author Alexander Burdiss
  * @since 3/3/21
- * @version 1.1.0
+ * @version 1.2.0
  * @component
  * @example
- * ```jsx
  * <ComposerDetail />
- * ```
  */
-const ComposerDetail = () => {
+export default function ComposerDetail() {
+  const colors = useColors();
+  const darkMode = useDarkMode();
+  const styles = StyleSheet.create({
+    bio: {
+      padding: 20,
+      color: colors.text,
+    },
+    card: {
+      margin: 20,
+      backgroundColor: colors.blue,
+      alignItems: 'center',
+      shadowColor: colors.text,
+      shadowOffset: {
+        width: 0,
+        height: 3,
+      },
+      shadowOpacity: 0.27,
+      shadowRadius: 4.65,
+
+      elevation: 6,
+      borderRadius: 4,
+    },
+    cardBottom: {
+      backgroundColor: colors.textInverse,
+      width: '100%',
+      borderRadius: 4,
+    },
+    cardImageBottom: {
+      backgroundColor: colors.green,
+      padding: 10,
+    },
+    cardImageTop: {
+      backgroundColor: colors.blue,
+      width: '100%',
+      padding: 10,
+      borderTopLeftRadius: 4,
+      borderTopRightRadius: 4,
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+    },
+    cardImageTopText: {
+      fontWeight: 'bold',
+      color: colors.text,
+    },
+    container: {
+      paddingBottom: 50,
+      backgroundColor: colors.background,
+    },
+    image: {
+      aspectRatio: 1,
+      height: 200,
+    },
+    linearGradient: {
+      width: '100%',
+      alignItems: 'center',
+    },
+  });
+
   useIdleScreen();
   const route = useRoute();
   const composer = route.params;
   const { state } = useContext(PreferencesContext);
-  const styles = useDynamicStyleSheet(dynamicStyles);
-  const darkMode = useDarkMode();
 
   return (
     <ScrollView style={styles.container}>
@@ -141,62 +191,4 @@ const ComposerDetail = () => {
       ) : null}
     </ScrollView>
   );
-};
-
-const dynamicStyles = new DynamicStyleSheet({
-  bio: {
-    padding: 20,
-    color: new DynamicValue(colors.black, colors.white),
-  },
-  card: {
-    margin: 20,
-    backgroundColor: new DynamicValue(colors.blueLight, colors.blueDark),
-    alignItems: 'center',
-    shadowColor: new DynamicValue(colors.black, colors.white),
-    shadowOffset: {
-      width: 0,
-      height: 3,
-    },
-    shadowOpacity: 0.27,
-    shadowRadius: 4.65,
-
-    elevation: 6,
-    borderRadius: 4,
-  },
-  cardBottom: {
-    backgroundColor: new DynamicValue(colors.white, colors.black),
-    width: '100%',
-    borderRadius: 4,
-  },
-  cardImageBottom: {
-    backgroundColor: new DynamicValue(colors.greenLight, colors.greenDark),
-    padding: 10,
-  },
-  cardImageTop: {
-    backgroundColor: new DynamicValue(colors.blueLight, colors.blueDark),
-    width: '100%',
-    padding: 10,
-    borderTopLeftRadius: 4,
-    borderTopRightRadius: 4,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-  },
-  cardImageTopText: {
-    fontWeight: 'bold',
-    color: new DynamicValue(colors.black, colors.white),
-  },
-  container: {
-    paddingBottom: 50,
-    backgroundColor: new DynamicValue(colors.systemGray6Light, colors.black),
-  },
-  image: {
-    aspectRatio: 1,
-    height: 200,
-  },
-  linearGradient: {
-    width: '100%',
-    alignItems: 'center',
-  },
-});
-
-export default ComposerDetail;
+}

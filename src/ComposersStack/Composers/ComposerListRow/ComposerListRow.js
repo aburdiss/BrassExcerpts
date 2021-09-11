@@ -1,17 +1,12 @@
-import { View, Text, Image, Pressable } from 'react-native';
+import { View, Text, Image, Pressable, StyleSheet } from 'react-native';
 import React from 'react';
-
-import {
-  DynamicStyleSheet,
-  DynamicValue,
-  useDynamicStyleSheet,
-} from 'react-native-dynamic';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-import { colors } from '../../../Model/Model';
+import { useColors } from '../../../utils/CustomHooks/useColors/useColors';
 
 /**
+ * @namespace ComposerListRow
  * @function ComposerListRow
  * @description A styled list row, designed to look like a contact on an iOS
  * device. This is used when displaying a list of composers.
@@ -25,10 +20,9 @@ import { colors } from '../../../Model/Model';
  * pressed.
  * @author Alexander Burdiss
  * @since 3/18/21
- * @version 1.1.2
+ * @version 1.2.0
  * @component
  * @example
- * ```jsx
  * <ComposerListRow
  *   name={item.name}
  *   index={index}
@@ -37,10 +31,48 @@ import { colors } from '../../../Model/Model';
  *     navigateToComposerDetail(item);
  *   }}
  * />
- * ```
  */
-const ComposerListRow = ({ name, index, imageSource, onPress }) => {
-  const styles = useDynamicStyleSheet(dynamicStyles);
+export default function ComposerListRow({ name, index, imageSource, onPress }) {
+  const colors = useColors();
+  const styles = StyleSheet.create({
+    androidRipple: {
+      color: colors.green,
+    },
+    chevron: {
+      color: colors.systemGray,
+    },
+    container: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      marginLeft: 20,
+    },
+    image: {
+      aspectRatio: 1,
+      height: 54,
+      width: 54,
+      borderRadius: 29,
+      backgroundColor: colors.alwaysWhite,
+    },
+    text: {
+      fontSize: 15,
+      fontWeight: 'bold',
+      color: colors.text,
+    },
+    notFirstTextContainer: {
+      borderTopColor: colors.systemGray5,
+      borderTopWidth: 1,
+    },
+    textContainer: {
+      marginLeft: 15,
+      flex: 1,
+      height: 78,
+      justifyContent: 'space-between',
+      flexDirection: 'row',
+      alignItems: 'center',
+      paddingRight: 15,
+    },
+  });
+
   const divider = index != 0 ? styles.notFirstTextContainer : null;
 
   return (
@@ -72,48 +104,4 @@ const ComposerListRow = ({ name, index, imageSource, onPress }) => {
       </SafeAreaView>
     </Pressable>
   );
-};
-
-const dynamicStyles = new DynamicStyleSheet({
-  androidRipple: {
-    color: new DynamicValue(colors.greenLight, colors.greenDark),
-  },
-  chevron: {
-    color: new DynamicValue(colors.systemGray, colors.systemGray),
-  },
-  container: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    marginLeft: 20,
-  },
-  image: {
-    aspectRatio: 1,
-    height: 54,
-    width: 54,
-    borderRadius: 29,
-    backgroundColor: colors.white,
-  },
-  text: {
-    fontSize: 15,
-    fontWeight: 'bold',
-    color: new DynamicValue(colors.black, colors.white),
-  },
-  notFirstTextContainer: {
-    borderTopColor: new DynamicValue(
-      colors.systemGray5Light,
-      colors.systemGray5Dark,
-    ),
-    borderTopWidth: 1,
-  },
-  textContainer: {
-    marginLeft: 15,
-    flex: 1,
-    height: 78,
-    justifyContent: 'space-between',
-    flexDirection: 'row',
-    alignItems: 'center',
-    paddingRight: 15,
-  },
-});
-
-export default ComposerListRow;
+}
