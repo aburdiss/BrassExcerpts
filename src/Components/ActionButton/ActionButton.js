@@ -4,6 +4,8 @@ import { Pressable, Text, StyleSheet } from 'react-native';
 import { useColors } from '../../utils/CustomHooks/useColors/useColors';
 
 /**
+ * @namespace ActionButton
+ * @function ActionButton
  * @description A styled button that is used for actions throughout the app.
  * @author Alexander Burdiss
  * @since 3/28/21

@@ -10,14 +10,37 @@ path=$1
 component=$2
 date=`date +"%D"`
 
+GREEN="\033[01;32m"
+BLUE="\033[01;36m"
+RED="\033[01;31m"
+YELLOW="\033[01;33m"
+NC="\033[00m"
+
+echo
+echo -e "${GREEN}██████╗ ██████╗  █████╗ ███████╗███████╗${BLUE}██╗  ██╗${NC}"
+echo -e "${GREEN}██╔══██╗██╔══██╗██╔══██╗██╔════╝██╔════╝${BLUE}╚██╗██╔╝${NC}"
+echo -e "${GREEN}██████╔╝██████╔╝███████║███████╗███████╗${BLUE} ╚███╔╝ ${NC}"
+echo -e "${GREEN}██╔══██╗██╔══██╗██╔══██║╚════██║╚════██║${BLUE} ██╔██╗ ${NC}"
+echo -e "${GREEN}██████╔╝██║  ██║██║  ██║███████║███████║${BLUE}██╔╝ ██╗${NC}"
+echo -e "${GREEN}╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚══════╝${BLUE}╚═╝  ╚═╝${NC}"
+echo "              generateComponent.sh"
+echo
+
+if [[ $# -eq 0 || $# -eq 1 ]]; then
+  echo
+  echo -e "${RED}You must specify a directory and a component.${NC}"
+  echo
+  exit 1
+fi
+
 if [[ ! -d "src/$path" ]]; then
   echo
-  echo "Directory src/$path Doesn't exist!"
+  echo -e "${RED}Directory src/$path Doesn't exist!${NC}"
   echo
   exit 1
 elif [[ -d "src/$path/$component" ]]; then
   echo
-  echo "Component src/$path/$component Already exists!"
+  echo -e "${RED}Component src/$path/$component Already exists!${NC}"
   echo
   exit 1
 fi
@@ -62,6 +85,6 @@ describe('renders $component', () => {
 });" > "src/$path/$component/$component.test.js"
 
 echo
-echo "Component src/$path/$component Created Successfuly!"
+echo -e "${GREEN}Component ${YELLOW}src/$path/$component ${GREEN}Created Successfully!${NC}"
 echo
 exit 0
