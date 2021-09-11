@@ -1,37 +1,53 @@
-import {
-  DynamicStyleSheet,
-  DynamicValue,
-  useDynamicStyleSheet,
-} from 'react-native-dynamic';
 import React, { useContext, useEffect, useState } from 'react';
+import {
+  ScrollView,
+  View,
+  useWindowDimensions,
+  StyleSheet,
+} from 'react-native';
 import {
   SafeAreaView,
   useSafeAreaInsets,
 } from 'react-native-safe-area-context';
-import { ScrollView, View, useWindowDimensions } from 'react-native';
 import AutoHeightImage from 'react-native-auto-height-image';
 import Pinchable from 'react-native-pinchable';
 
-import ActionButton from '../../Components/ActionButton/ActionButton';
 import { PreferencesContext } from '../../Model/Preferences';
-import RandomExcerptHeader from './RandomExcertHeader/RandomExcerptHeader';
-import { colors } from '../../Model/Model';
 import { generateRandomExcerpt } from './utils/generateRandomExcerpt/generateRandomExcerpt';
 import { useIdleScreen } from '../../utils/CustomHooks/useIdleScreen/useIdleScreen';
 
+import ActionButton from '../../Components/ActionButton/ActionButton';
+import RandomExcerptHeader from './RandomExcertHeader/RandomExcerptHeader';
+import { useColors } from '../../utils/CustomHooks/useColors/useColors';
+
 /**
+ * @namespace RandomExcerpt
+ * @function RandomExcerpt
  * @description Displays a random excerpt based on the settings the user has
  * chosen.
  * @author Alexander Burdiss
  * @since 5/3/21
- * @version 1.2.0
+ * @version 1.3.0
  * @component
  * @example
- * ```jsx
  * <RandomExcerpt />
- * ```
  */
-const RandomExcerpt = () => {
+export default function RandomExcerpt() {
+  const colors = useColors();
+  const styles = StyleSheet.create({
+    actionButtonContainer: {
+      paddingHorizontal: 10,
+      paddingBottom: 10,
+    },
+    excerptContainer: {
+      flex: 1,
+    },
+    randomExcerptContainer: {
+      flex: 1,
+      backgroundColor: colors.background,
+    },
+  });
+
   useIdleScreen();
   const windowWidth = useWindowDimensions().width;
   const windowInsets = useSafeAreaInsets();
@@ -39,7 +55,6 @@ const RandomExcerpt = () => {
   const [composition, setComposition] = useState(undefined);
   const [excerptIndex, setExcerptIndex] = useState(undefined);
   const [partIndex, setPartIndex] = useState(undefined);
-  const styles = useDynamicStyleSheet(dynamicStyles);
 
   useEffect(
     /**
@@ -102,20 +117,4 @@ const RandomExcerpt = () => {
       </SafeAreaView>
     </ScrollView>
   );
-};
-
-const dynamicStyles = new DynamicStyleSheet({
-  actionButtonContainer: {
-    paddingHorizontal: 10,
-    paddingBottom: 10,
-  },
-  excerptContainer: {
-    flex: 1,
-  },
-  randomExcerptContainer: {
-    flex: 1,
-    backgroundColor: new DynamicValue(colors.systemGray6Light, colors.black),
-  },
-});
-
-export default RandomExcerpt;
+}

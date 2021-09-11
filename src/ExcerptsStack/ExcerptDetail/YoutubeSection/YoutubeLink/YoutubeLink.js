@@ -2,10 +2,10 @@ import React from 'react';
 import { Pressable, Linking, Text, StyleSheet } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-import { colors } from '../../../../Model/Model';
-import { useDarkMode } from '../../../../utils/CustomHooks/useDarkMode/useDarkMode';
+import { useColors } from '../../../../utils/CustomHooks/useColors/useColors';
 
 /**
+ * @namespace YoutubeLink
  * @function YoutubeLink
  * @description One link in the YouTube link section.
  * @param props The JSX props passed to this React component.
@@ -16,33 +16,33 @@ import { useDarkMode } from '../../../../utils/CustomHooks/useDarkMode/useDarkMo
  * affects the color of the link button.
  * @author Alexander Burdiss
  * @since 3/10/21
- * @version 1.2.0
+ * @version 1.3.0
  * @component
  * @example
  * <YoutubeLink video={video} type="band" />
  */
-const YoutubeLink = ({ video, type }) => {
-  const darkMode = useDarkMode();
+export default function YoutubeLink({ video, type }) {
+  const colors = useColors();
 
   const backgroundColors = {
-    full: darkMode ? colors.greenDark : colors.greenLight,
-    score: darkMode ? colors.orangeDark : colors.orangeLight,
-    band: darkMode ? colors.redDark : colors.redLight,
-    instrument: darkMode ? colors.blueDark : colors.blueLight,
+    full: colors.green,
+    score: colors.orange,
+    band: colors.red,
+    instrument: colors.blue,
   };
 
   const bottomBorderColors = {
-    full: darkMode ? colors.blueDark : colors.blueLight,
-    score: darkMode ? colors.yellowDark : colors.yellowLight,
-    band: darkMode ? colors.orangeDark : colors.orangeLight,
-    instrument: darkMode ? colors.purpleDark : colors.purpleLight,
+    full: colors.blue,
+    score: colors.yellow,
+    band: colors.orange,
+    instrument: colors.purple,
   };
 
   const textColors = {
-    full: darkMode ? colors.white : colors.black,
-    score: darkMode ? colors.white : colors.black,
-    band: darkMode ? colors.white : colors.black,
-    instrument: darkMode ? colors.white : colors.white,
+    full: colors.text,
+    score: colors.text,
+    band: colors.text,
+    instrument: colors.alwaysWhite,
   };
 
   return (
@@ -84,7 +84,7 @@ const YoutubeLink = ({ video, type }) => {
       <Ionicons name="open-outline" size={20} color={textColors[type]} />
     </Pressable>
   );
-};
+}
 
 export const styles = StyleSheet.create({
   button: {
@@ -103,5 +103,3 @@ export const styles = StyleSheet.create({
     paddingRight: 10,
   },
 });
-
-export default YoutubeLink;

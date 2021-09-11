@@ -1,16 +1,18 @@
+import React from 'react';
 import {
-  DynamicStyleSheet,
-  DynamicValue,
-  useDynamicStyleSheet,
-} from 'react-native-dynamic';
-import { Pressable, Text, View, useWindowDimensions } from 'react-native';
+  Pressable,
+  Text,
+  View,
+  useWindowDimensions,
+  StyleSheet,
+} from 'react-native';
 import { useNavigation } from '@react-navigation/core';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import React from 'react';
 
-import { colors } from '../../../Model/Model';
+import { useColors } from '../../../utils/CustomHooks/useColors/useColors';
 
 /**
+ * @namespace RandomExcerptHeader
  * @function RandomExcerptHeader
  * @description The header information to display on the Random Excerpt screen.
  * @param props The JSX props passed to this React Component
@@ -22,11 +24,76 @@ import { colors } from '../../../Model/Model';
  * randomly chosen
  * @author Alexander Burdiss
  * @since 5/8/21
- * @version 1.2.1
+ * @version 1.3.0
  */
-const RandomExcerptHeader = ({ composition, excerptIndex, partIndex }) => {
+export default function RandomExcerptHeader({
+  composition,
+  excerptIndex,
+  partIndex,
+}) {
+  const colors = useColors();
+  const styles = StyleSheet.create({
+    composer: {
+      fontStyle: 'italic',
+      color: colors.text,
+    },
+    composerInstrumentWrapper: {
+      justifyContent: 'center',
+    },
+    composerInstrumentButtonWrapper: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      marginHorizontal: 10,
+      marginBottom: 10,
+    },
+    composition: {
+      fontSize: 18,
+      fontWeight: 'bold',
+      textAlign: 'left',
+      maxWidth: '50%',
+      color: colors.text,
+    },
+    compositionPressable: {
+      borderColor: colors.green,
+      borderWidth: 1,
+      borderRadius: 8,
+      padding: 8,
+      marginLeft: 10,
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      width: '50%',
+    },
+    excerptDetail: {
+      flexWrap: 'wrap',
+      textAlign: 'right',
+      color: colors.text,
+    },
+    excerptDetailContainer: {
+      alignItems: 'flex-end',
+      flexWrap: 'wrap',
+      flexShrink: 1,
+      paddingLeft: 20,
+      textAlign: 'right',
+      maxWidth: '50%',
+    },
+    excerptTitleContainer: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignItems: 'flex-start',
+      padding: 10,
+    },
+    instrument: {
+      color: colors.text,
+    },
+    pressableText: {
+      color: colors.green,
+      fontWeight: 'bold',
+      flexWrap: 'wrap',
+    },
+    pressableTextContainer: { flexDirection: 'row' },
+  });
   const navigation = useNavigation();
-  const styles = useDynamicStyleSheet(dynamicStyles);
   const windowWidth = useWindowDimensions().width;
 
   return (
@@ -82,68 +149,4 @@ const RandomExcerptHeader = ({ composition, excerptIndex, partIndex }) => {
       </View>
     </View>
   );
-};
-
-const dynamicStyles = new DynamicStyleSheet({
-  composer: {
-    fontStyle: 'italic',
-    color: new DynamicValue(colors.black, colors.white),
-  },
-  composerInstrumentWrapper: {
-    justifyContent: 'center',
-  },
-  composerInstrumentButtonWrapper: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginHorizontal: 10,
-    marginBottom: 10,
-  },
-  composition: {
-    fontSize: 18,
-    fontWeight: 'bold',
-    textAlign: 'left',
-    maxWidth: '50%',
-    color: new DynamicValue(colors.black, colors.white),
-  },
-  compositionPressable: {
-    borderColor: new DynamicValue(colors.greenLight, colors.greenDark),
-    borderWidth: 1,
-    borderRadius: 8,
-    padding: 8,
-    marginLeft: 10,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    width: '50%',
-  },
-  excerptDetail: {
-    flexWrap: 'wrap',
-    textAlign: 'right',
-    color: new DynamicValue(colors.black, colors.white),
-  },
-  excerptDetailContainer: {
-    alignItems: 'flex-end',
-    flexWrap: 'wrap',
-    flexShrink: 1,
-    paddingLeft: 20,
-    textAlign: 'right',
-    maxWidth: '50%',
-  },
-  excerptTitleContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'flex-start',
-    padding: 10,
-  },
-  instrument: {
-    color: new DynamicValue(colors.black, colors.white),
-  },
-  pressableText: {
-    color: new DynamicValue(colors.greenLight, colors.greenDark),
-    fontWeight: 'bold',
-    flexWrap: 'wrap',
-  },
-  pressableTextContainer: { flexDirection: 'row' },
-});
-
-export default RandomExcerptHeader;
+}

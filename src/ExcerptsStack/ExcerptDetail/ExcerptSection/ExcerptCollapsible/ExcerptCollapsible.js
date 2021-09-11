@@ -7,6 +7,7 @@ import {
   Animated,
   Easing,
   useWindowDimensions,
+  StyleSheet,
 } from 'react-native';
 import Collapsible from 'react-native-collapsible';
 import AutoHeightImage from 'react-native-auto-height-image';
@@ -17,14 +18,10 @@ import {
   useSafeAreaInsets,
 } from 'react-native-safe-area-context';
 
-import { colors } from '../../../../Model/Model';
-import {
-  DynamicStyleSheet,
-  useDynamicStyleSheet,
-  DynamicValue,
-} from 'react-native-dynamic';
+import { useColors } from '../../../../utils/CustomHooks/useColors/useColors';
 
 /**
+ * @namespace ExcerptCollapsible
  * @function ExcerptCollapsible
  * @description An animated collapsed section of excerpts, that can be disabled
  * @param props The JSX props passed to this react component
@@ -35,18 +32,58 @@ import {
  * purposes.
  * @author Alexander Burdiss
  * @since 5/1/21
- * @version 1.1.2
+ * @version 1.2.0
  * @component
  * @example
- * ```jsx
  * <ExcerptCollapsible
  *   excerpt={excerpt}
  *   startCollapsed={shouldStartCollapsed()}
  *   index={index}
  * />
- * ```
  */
-const ExcerptCollapsible = ({ excerpt, startCollapsed, index }) => {
+export default function ExcerptCollapsible({ excerpt, startCollapsed, index }) {
+  const colors = useColors();
+  const styles = StyleSheet.create({
+    excerptCaption: {
+      paddingLeft: 20,
+      paddingTop: 7,
+      fontSize: 16,
+      paddingBottom: 2,
+      color: colors.text,
+    },
+    excerptContainer: {
+      paddingBottom: 20,
+    },
+    excerptMeasures: {
+      fontSize: 14,
+      marginLeft: 10,
+      fontStyle: 'italic',
+      color: colors.text,
+    },
+    excerptMetaContainer: {
+      paddingVertical: 5,
+      marginBottom: 5,
+      minHeight: 50,
+      maxWidth: '90%',
+    },
+    excerptPressable: {
+      paddingHorizontal: 20,
+      backgroundColor: colors.systemGray5,
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      maxWidth: '100%',
+    },
+    excerptPressableBorder: {
+      borderTopColor: colors.green,
+      borderTopWidth: 1,
+    },
+    excerptNumber: {
+      fontSize: 22,
+      color: colors.text,
+    },
+  });
+
   const EXTERNAL_GITHUB_URL =
     'https://github.com/aburdiss/BrassExcerpts/raw/master/img/External/';
 
@@ -55,8 +92,6 @@ const ExcerptCollapsible = ({ excerpt, startCollapsed, index }) => {
 
   const windowWidth = useWindowDimensions().width;
   const windowInsets = useSafeAreaInsets();
-
-  const styles = useDynamicStyleSheet(dynamicStyles);
 
   /**
    * @function ExcerptCollapsible~toggleChevron
@@ -167,50 +202,4 @@ const ExcerptCollapsible = ({ excerpt, startCollapsed, index }) => {
       </Collapsible>
     </View>
   );
-};
-
-const dynamicStyles = new DynamicStyleSheet({
-  excerptCaption: {
-    paddingLeft: 20,
-    paddingTop: 7,
-    fontSize: 16,
-    paddingBottom: 2,
-    color: new DynamicValue(colors.black, colors.white),
-  },
-  excerptContainer: {
-    paddingBottom: 20,
-  },
-  excerptMeasures: {
-    fontSize: 14,
-    marginLeft: 10,
-    fontStyle: 'italic',
-    color: new DynamicValue(colors.black, colors.white),
-  },
-  excerptMetaContainer: {
-    paddingVertical: 5,
-    marginBottom: 5,
-    minHeight: 50,
-    maxWidth: '90%',
-  },
-  excerptPressable: {
-    paddingHorizontal: 20,
-    backgroundColor: new DynamicValue(
-      colors.systemGray5Light,
-      colors.systemGray5Dark,
-    ),
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    maxWidth: '100%',
-  },
-  excerptPressableBorder: {
-    borderTopColor: new DynamicValue(colors.greenLight, colors.greenDark),
-    borderTopWidth: 1,
-  },
-  excerptNumber: {
-    fontSize: 22,
-    color: new DynamicValue(colors.black, colors.white),
-  },
-});
-
-export default ExcerptCollapsible;
+}

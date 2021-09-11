@@ -4,7 +4,7 @@ import RandomExcerpt from './RandomExcerpt';
 import MockContext from '../../../jest/MockContext';
 import MockNavigator from '../../../jest/MockNavigator';
 
-import {render} from '@testing-library/react-native';
+import { render } from '@testing-library/react-native';
 
 test('RandomExcerpt renders correctly', () => {
   render(

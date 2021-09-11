@@ -1,34 +1,50 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { Text, View, Pressable } from 'react-native';
+import { Text, View, Pressable, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/core';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-import { colors } from '../../../Model/Model';
 import { PreferencesContext } from '../../../Model/Preferences';
 import { getInstrumentsSelected } from '../../../utils/getInstrumentsSelected/getInstrumentsSelected';
-import {
-  DynamicStyleSheet,
-  useDynamicStyleSheet,
-  DynamicValue,
-} from 'react-native-dynamic';
+import { useColors } from '../../../utils/CustomHooks/useColors/useColors';
 
 /**
+ * @namespace ExcerptListHeader
  * @function ExcerptListHeader
  * @description The header for the Excerpts list view.
  * @author Alexander Burdiss
  * @since 3/7/21
- * @version 1.2.1
+ * @version 1.3.0
  *
  * @component
  * @example
- * ```jsx
  * <ExcerptListHeader />
- * ```
  */
-function ExcerptListHeader() {
+export default function ExcerptListHeader() {
+  const colors = useColors();
+  const styles = StyleSheet.create({
+    container: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      paddingHorizontal: 20,
+      paddingTop: 20,
+      paddingBottom: 20,
+      borderBottomWidth: 1,
+      borderBottomColor: colors.blue,
+      backgroundColor: colors.green,
+    },
+    descriptionText: {
+      color: colors.alwaysBlack,
+    },
+    instrumentText: {
+      fontSize: 24,
+      flex: 1,
+      color: colors.alwaysBlack,
+    },
+  });
+
   const navigation = useNavigation();
   const { state } = useContext(PreferencesContext);
-  const styles = useDynamicStyleSheet(dynamicStyles);
 
   const [instrumentsSelected, setInstrumentsSelected] = useState(
     getInstrumentsSelected(state),
@@ -84,27 +100,3 @@ function ExcerptListHeader() {
     </View>
   );
 }
-
-const dynamicStyles = new DynamicStyleSheet({
-  container: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    paddingHorizontal: 20,
-    paddingTop: 20,
-    paddingBottom: 20,
-    borderBottomWidth: 1,
-    borderBottomColor: new DynamicValue(colors.blueLight, colors.blueDark),
-    backgroundColor: new DynamicValue(colors.greenLight, colors.greenDark),
-  },
-  descriptionText: {
-    color: new DynamicValue(colors.black, colors.black),
-  },
-  instrumentText: {
-    fontSize: 24,
-    flex: 1,
-    color: new DynamicValue(colors.black, colors.black),
-  },
-});
-
-export default ExcerptListHeader;

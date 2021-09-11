@@ -12,27 +12,25 @@ import { excerpts as hornExcerpts } from '../../Model/Excerpts/HornExcerpts';
 import { excerpts as trumpetExcerpts } from '../../Model/Excerpts/TrumpetExcerpts';
 import { excerpts as tromboneExcerpts } from '../../Model/Excerpts/TromboneExcerpts';
 import { excerpts as tubaExcerpts } from '../../Model/Excerpts/TubaExcerpts';
-import { useDarkMode } from '../../utils/CustomHooks/useDarkMode/useDarkMode';
-import { colors } from '../../Model/Model';
+import { useColors } from '../../utils/CustomHooks/useColors/useColors';
 
 /**
+ * @namespace Excerpts
  * @function Excerpts
  * @description A list of excerpts sorted in alphabetical order. When pressed,
  * each excerpt leads to the ExcerptDetail view with more information on each
  * excerpt.
  * @author Alexander Burdiss
  * @since 3/3/21
- * @version 1.1.0
+ * @version 1.2.0
  * @component
  * @example
- * ```jsx
  * <Excerpts />
- * ```
  */
 const Excerpts = () => {
   const { state } = useContext(PreferencesContext);
   const navigation = useNavigation();
-  const darkMode = useDarkMode();
+  const colors = useColors();
 
   const [listData, setListData] = useState([]);
   useEffect(
@@ -83,8 +81,8 @@ const Excerpts = () => {
 
   return (
     <ScrollViewBounceContainer
-      topBounceColor={darkMode ? colors.greenDark : colors.greenLight}
-      bottomBounceColor={darkMode ? colors.black : colors.systemGray6Light}
+      topBounceColor={colors.green}
+      bottomBounceColor={colors.background}
     >
       <FlatList
         ListHeaderComponent={ExcerptListHeader}

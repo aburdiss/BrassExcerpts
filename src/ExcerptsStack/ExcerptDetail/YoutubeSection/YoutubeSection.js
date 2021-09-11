@@ -6,21 +6,20 @@ import SectionHeader from '../../../Components/SectionHeader/SectionHeader';
 import YouTubeModel from '../../../Model/YouTubeModel/YouTubeModel';
 
 /**
+ * @namespace YoutubeSection
  * @function YoutubeSection
  * @description One section of Youtube videos. This section takes care of
  * separating all of the colors for the different section.
  * @author Alexander Burdiss
  * @since 3/10/21
- * @version 1.0.0
+ * @version 1.0.1
  * @param props The JSX props passed to this React component
  * @param {String} props.data A key used to retrieve data from YouTubeModel.js
  * @component
  * @example
- * ```jsx
  * <YoutubeSection data={item.videos} />
- * ```
  */
-const YoutubeSection = ({ data }) => {
+export default function YoutubeSection({ data }) {
   const excerptVideos = YouTubeModel[data];
 
   return (
@@ -83,6 +82,4 @@ const YoutubeSection = ({ data }) => {
       ) : null}
     </View>
   );
-};
-
-export default YoutubeSection;
+}

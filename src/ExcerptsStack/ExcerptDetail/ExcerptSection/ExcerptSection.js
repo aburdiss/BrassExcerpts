@@ -1,18 +1,12 @@
-import {
-  DynamicStyleSheet,
-  DynamicValue,
-  useDynamicStyleSheet,
-} from 'react-native-dynamic';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { View, Text, Pressable } from 'react-native';
-import Ionicons from 'react-native-vector-icons/Ionicons';
 import React, { useContext } from 'react';
-
+import { View, Text, Pressable, StyleSheet } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 import { capitalize } from 'underscore.string';
 
-import { colors } from '../../../Model/Model';
 import { getNumberOfInstruments } from '../../../utils/getNumberOfInstruments/getNumberOfInstruments';
 import { PreferencesContext } from '../../../Model/Preferences';
+import { useColors } from '../../../utils/CustomHooks/useColors/useColors';
 import ExcerptCollapsible from './ExcerptCollapsible/ExcerptCollapsible';
 
 /**
@@ -21,7 +15,7 @@ import ExcerptCollapsible from './ExcerptCollapsible/ExcerptCollapsible';
  * they get collapsed, or if the user has set them to always collapse.
  * @author Alexander Burdiss
  * @since 5/1/21
- * @version 1.1.1
+ * @version 1.2.0
  * @param props The JSX props passed to this React component
  * @param {Object} props.instrumentExcerpt The object that contains the excerpts
  * for this instrument.
@@ -34,7 +28,6 @@ import ExcerptCollapsible from './ExcerptCollapsible/ExcerptCollapsible';
  * @param {Object} props.item The Composition Item object.
  * @component
  * @example
- * ```jsx
  * <ExcerptSection
  *   instrumentExcerpt={tubaExcerpt}
  *   instrumentName={'tuba'}
@@ -42,17 +35,41 @@ import ExcerptCollapsible from './ExcerptCollapsible/ExcerptCollapsible';
  *   shouldStartCollapsed={shouldStartCollapsed}
  *   item={item}
  * />
- * ```
  */
-const ExcerptSection = ({
+export default function ExcerptSection({
   instrumentExcerpt,
   instrumentName,
   addToFavorites,
   shouldStartCollapsed,
   item,
-}) => {
+}) {
+  const colors = useColors();
+  const styles = StyleSheet.create({
+    accentColor: {
+      color: colors.green,
+    },
+    favoriteColor: {
+      color: colors.red,
+    },
+    instrumentExcerptContainer: {
+      borderTopColor: colors.green,
+      borderTopWidth: 2,
+      marginTop: 10,
+      paddingTop: 0,
+    },
+    instrumentHeading: {
+      fontSize: 28,
+      color: colors.text,
+    },
+    instrumentHeadingContainer: {
+      backgroundColor: colors.systemGray4,
+      paddingHorizontal: 20,
+      paddingVertical: 10,
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+    },
+  });
   const { state } = useContext(PreferencesContext);
-  const styles = useDynamicStyleSheet(dynamicStyles);
 
   const isFavorite = state.favorites.includes(
     instrumentName + item.composerLast + item.name,
@@ -108,35 +125,4 @@ const ExcerptSection = ({
       ))}
     </View>
   ) : null;
-};
-
-const dynamicStyles = new DynamicStyleSheet({
-  accentColor: {
-    color: new DynamicValue(colors.greenLight, colors.greenDark),
-  },
-  favoriteColor: {
-    color: new DynamicValue(colors.redLight, colors.redDark),
-  },
-  instrumentExcerptContainer: {
-    borderTopColor: new DynamicValue(colors.greenLight, colors.greenDark),
-    borderTopWidth: 2,
-    marginTop: 10,
-    paddingTop: 0,
-  },
-  instrumentHeading: {
-    fontSize: 28,
-    color: new DynamicValue(colors.black, colors.white),
-  },
-  instrumentHeadingContainer: {
-    backgroundColor: new DynamicValue(
-      colors.systemGray4Light,
-      colors.systemGray4Dark,
-    ),
-    paddingHorizontal: 20,
-    paddingVertical: 10,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-  },
-});
-
-export default ExcerptSection;
+}

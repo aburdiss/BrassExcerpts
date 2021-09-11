@@ -1,10 +1,16 @@
-import { Image, Pressable, ScrollView, Text, View } from 'react-native';
+import React, { useContext, useEffect, useState } from 'react';
+import {
+  Image,
+  Pressable,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+} from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRoute } from '@react-navigation/native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import React, { useContext, useEffect, useState } from 'react';
 
-import { colors } from '../../Model/Model';
 import { composers } from '../../Model/ComposerModel/ComposerModel';
 import { excerpts as hornExcerpts } from '../../Model/Excerpts/HornExcerpts';
 import { excerpts as tromboneExcerpts } from '../../Model/Excerpts/TromboneExcerpts';
@@ -14,30 +20,71 @@ import { getActiveInstrument } from '../../utils/getActiveInstrument/getActiveIn
 import { getNumberOfInstruments } from '../../utils/getNumberOfInstruments/getNumberOfInstruments';
 import { isFavorite } from '../../utils/isFavorite/isFavorite';
 import { useIdleScreen } from '../../utils/CustomHooks/useIdleScreen/useIdleScreen';
+import { useColors } from '../../utils/CustomHooks/useColors/useColors';
 import { PreferencesContext } from '../../Model/Preferences';
-import ExcerptSection from './ExcerptSection/ExcerptSection';
-import MetaLabel from '../../Components/MetaLabel/MetaLabel';
-import YoutubeSection from './YoutubeSection/YoutubeSection';
 
-import {
-  DynamicStyleSheet,
-  useDynamicStyleSheet,
-  DynamicValue,
-} from 'react-native-dynamic';
+import ExcerptSection from './ExcerptSection/ExcerptSection';
+import YoutubeSection from './YoutubeSection/YoutubeSection';
+import MetaLabel from '../../Components/MetaLabel/MetaLabel';
 
 /**
+ * @namespace ExcerptDetail
  * @function ExcerptDetail
  * @description A component that displays all of the details about one of the
  * excerpts in the app. When clicking on each image, it opens a separate view
  * where the image is rotated.
  * @author Alexander Burdiss
  * @since 3/3/21
- * @version 1.3.0
+ * @version 1.4.0
  * @component
  * @example
  * <ExcerptDetail />
  */
-const ExcerptDetail = () => {
+export default function ExcerptDetail() {
+  const colors = useColors();
+  const styles = StyleSheet.create({
+    composerImage: {
+      aspectRatio: 1,
+      width: 95,
+      borderRadius: 50,
+      backgroundColor: colors.textInverse,
+    },
+    excerptContainer: {
+      paddingBottom: 20,
+    },
+    excerptDetailContainer: {
+      backgroundColor: colors.background,
+    },
+    metaInfoContainer: {
+      marginHorizontal: 20,
+      paddingVertical: 10,
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+    },
+    singleAddToFavoritesButton: {
+      position: 'absolute',
+      top: 5,
+      right: 90,
+    },
+    title: {
+      fontStyle: 'italic',
+      fontWeight: 'bold',
+      color: colors.text,
+    },
+    youtubeHeading: {
+      fontSize: 28,
+      paddingTop: 10,
+      color: colors.text,
+    },
+    youtubeLinksContainer: {
+      paddingHorizontal: 20,
+      marginTop: 20,
+      marginBottom: 70,
+      borderTopColor: colors.green,
+      borderTopWidth: 2,
+    },
+  });
+
   useIdleScreen();
   const route = useRoute();
   const item = route.params;
@@ -47,7 +94,6 @@ const ExcerptDetail = () => {
   const [trumpetExcerpt, setTrumpetExcerpt] = useState(undefined);
   const [tromboneExcerpt, setTromboneExcerpt] = useState(undefined);
   const [tubaExcerpt, setTubaExcerpt] = useState(undefined);
-  const styles = useDynamicStyleSheet(dynamicStyles);
 
   useEffect(
     /**
@@ -296,49 +342,4 @@ const ExcerptDetail = () => {
       </View>
     </ScrollView>
   );
-};
-
-export const dynamicStyles = new DynamicStyleSheet({
-  composerImage: {
-    aspectRatio: 1,
-    width: 95,
-    borderRadius: 50,
-    backgroundColor: new DynamicValue(colors.white, colors.black),
-  },
-  excerptContainer: {
-    paddingBottom: 20,
-  },
-  excerptDetailContainer: {
-    backgroundColor: new DynamicValue(colors.systemGray6Light, colors.black),
-  },
-  metaInfoContainer: {
-    marginHorizontal: 20,
-    paddingVertical: 10,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-  },
-  singleAddToFavoritesButton: {
-    position: 'absolute',
-    top: 5,
-    right: 90,
-  },
-  title: {
-    fontStyle: 'italic',
-    fontWeight: 'bold',
-    color: new DynamicValue(colors.black, colors.white),
-  },
-  youtubeHeading: {
-    fontSize: 28,
-    paddingTop: 10,
-    color: new DynamicValue(colors.black, colors.white),
-  },
-  youtubeLinksContainer: {
-    paddingHorizontal: 20,
-    marginTop: 20,
-    marginBottom: 70,
-    borderTopColor: new DynamicValue(colors.greenLight, colors.greenDark),
-    borderTopWidth: 2,
-  },
-});
-
-export default ExcerptDetail;
+}

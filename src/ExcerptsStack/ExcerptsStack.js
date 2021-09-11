@@ -4,8 +4,7 @@ import { Alert } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import { PreferencesContext } from '../Model/Preferences';
-import { colors } from '../Model/Model';
-import { useDarkMode } from '../utils/CustomHooks/useDarkMode/useDarkMode';
+import { useColors } from '../utils/CustomHooks/useColors/useColors';
 
 import Excerpts from './Excerpts/Excerpts';
 import ExcerptDetail from './ExcerptDetail/ExcerptDetail';
@@ -15,6 +14,7 @@ import HeaderButton from '../Components/HeaderButton/HeaderButton';
 const Stack = createStackNavigator();
 
 /**
+ * @namespace ExcerptsStack
  * @function ExcerptsStack
  * @description A Stack Navigator that handles all of the screens on the
  * Excerpts stack.
@@ -23,25 +23,23 @@ const Stack = createStackNavigator();
  * this screen from the Tab Navigator in App.js
  * @author Alexander Burdiss
  * @since 4/2/21
- * @version 1.1.0
+ * @version 1.2.0
  */
-const ExcerptsStack = ({ navigation }) => {
-  const darkMode = useDarkMode();
+export default function ExcerptsStack({ navigation }) {
+  const colors = useColors();
   const { state } = useContext(PreferencesContext);
 
   return (
     <Stack.Navigator
       screenOptions={{
-        headerTintColor: darkMode ? colors.greenDark : colors.greenLight,
+        headerTintColor: colors.green,
         headerTitleStyle: {
-          color: darkMode ? colors.white : colors.black,
+          color: colors.text,
         },
         headerStyle: {
-          backgroundColor: darkMode ? colors.systemGray6Dark : colors.white,
+          backgroundColor: colors.background2,
           borderBottomWidth: 1,
-          borderBottomColor: darkMode
-            ? colors.systemGray5Dark
-            : colors.systemGray5Light,
+          borderBottomColor: colors.systemGray5,
           shadowColor: 'transparent',
         },
         headerBackTitle: 'Back',
@@ -77,6 +75,4 @@ const ExcerptsStack = ({ navigation }) => {
       <Stack.Screen name="Random Excerpt" component={RandomExcerpt} />
     </Stack.Navigator>
   );
-};
-
-export default ExcerptsStack;
+}
