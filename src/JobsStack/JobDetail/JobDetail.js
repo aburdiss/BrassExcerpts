@@ -389,6 +389,11 @@ const JobDetail = () => {
           </Text>
         </SafeAreaView>
       )}
+      <View style={styles.bottomDisclaimer}>
+        <Text style={styles.bottomDisclaimerText}>
+          Check official job posts for exact excerpt requirements.
+        </Text>
+      </View>
     </ScrollView>
   );
 };
@@ -396,6 +401,13 @@ const JobDetail = () => {
 const dynamicStyles = new DynamicStyleSheet({
   actionButtonContainer: {
     paddingHorizontal: 20,
+  },
+  bottomDisclaimer: {
+    marginVertical: 20,
+  },
+  bottomDisclaimerText: {
+    color: new DynamicValue(colors.black, colors.white),
+    textAlign: 'center',
   },
   buttonBorder: {
     borderTopWidth: 1,
@@ -432,7 +444,6 @@ const dynamicStyles = new DynamicStyleSheet({
     paddingVertical: 13,
   },
   excerptsContainer: {
-    marginBottom: 70,
     borderBottomWidth: 1,
     borderBottomColor: new DynamicValue(
       colors.systemGray5Light,
@@ -477,6 +488,7 @@ const dynamicStyles = new DynamicStyleSheet({
   },
   position: {
     paddingTop: 20,
+    paddingHorizontal: 10,
     fontSize: 24,
     fontWeight: 'bold',
     textAlign: 'center',

@@ -220,6 +220,8 @@ const dynamicStyles = new DynamicStyleSheet({
     textAlign: 'center',
     paddingHorizontal: 10,
     color: new DynamicValue(colors.black, colors.white),
+    paddingTop: 5,
+    paddingBottom: 20,
   },
   errorContainer: {
     marginVertical: 10,
