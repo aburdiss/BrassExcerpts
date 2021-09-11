@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { FlatList } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { useDarkMode } from 'react-native-dynamic';
 
 import ExcerptListRow from './ExcerptListRow/ExcerptListRow';
 import ExcerptListHeader from './ExcerptListHeader/ExcerptListHeader';
@@ -13,6 +12,7 @@ import { excerpts as hornExcerpts } from '../../Model/Excerpts/HornExcerpts';
 import { excerpts as trumpetExcerpts } from '../../Model/Excerpts/TrumpetExcerpts';
 import { excerpts as tromboneExcerpts } from '../../Model/Excerpts/TromboneExcerpts';
 import { excerpts as tubaExcerpts } from '../../Model/Excerpts/TubaExcerpts';
+import { useDarkMode } from '../../utils/CustomHooks/useDarkMode/useDarkMode';
 import { colors } from '../../Model/Model';
 
 /**

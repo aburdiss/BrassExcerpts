@@ -1,15 +1,15 @@
 import 'react-native-gesture-handler';
 import React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {SafeAreaProvider} from 'react-native-safe-area-context';
-import {useDarkMode} from 'react-native-dynamic';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import {QueryClient, QueryClientProvider} from 'react-query';
+import { QueryClient, QueryClientProvider } from 'react-query';
 
-import {colors} from './src/Model/Model';
+import { colors } from './src/Model/Model';
+import { useDarkMode } from './src/utils/CustomHooks/useDarkMode/useDarkMode';
 
-import {PreferencesProvider} from './src/Model/Preferences';
+import { PreferencesProvider } from './src/Model/Preferences';
 
 import ExcerptsStack from './src/ExcerptsStack/ExcerptsStack';
 import ComposersStack from './src/ComposersStack/ComposersStack';
@@ -27,8 +27,8 @@ const App = () => {
         <PreferencesProvider>
           <NavigationContainer>
             <Tab.Navigator
-              screenOptions={({route}) => ({
-                tabBarIcon: ({color, size}) => {
+              screenOptions={({ route }) => ({
+                tabBarIcon: ({ color, size }) => {
                   let iconName;
                   if (route.name === 'Excerpts') {
                     iconName = 'musical-notes';
@@ -55,26 +55,27 @@ const App = () => {
                     ? colors.systemGray5Dark
                     : colors.systemGray5Light,
                 },
-              }}>
+              }}
+            >
               <Tab.Screen
                 name="Excerpts"
                 component={ExcerptsStack}
-                options={{title: 'Excerpts'}}
+                options={{ title: 'Excerpts' }}
               />
               <Tab.Screen
                 name="Composers"
                 component={ComposersStack}
-                options={{title: 'Composers'}}
+                options={{ title: 'Composers' }}
               />
               <Tab.Screen
                 name="Jobs"
                 component={JobsStack}
-                options={{title: 'Jobs'}}
+                options={{ title: 'Jobs' }}
               />
               <Tab.Screen
                 name="More"
                 component={MoreStack}
-                options={{title: 'More'}}
+                options={{ title: 'More' }}
               />
             </Tab.Navigator>
           </NavigationContainer>

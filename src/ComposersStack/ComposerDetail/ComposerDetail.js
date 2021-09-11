@@ -6,7 +6,6 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import {
   DynamicStyleSheet,
   DynamicValue,
-  useDarkMode,
   useDynamicStyleSheet,
 } from 'react-native-dynamic';
 
@@ -21,6 +20,7 @@ import { colors } from '../../Model/Model';
 import { PreferencesContext } from '../../Model/Preferences';
 import { getNumberOfInstruments } from '../../utils/getNumberOfInstruments/getNumberOfInstruments';
 import { useIdleScreen } from '../../utils/CustomHooks/useIdleScreen/useIdleScreen';
+import { useDarkMode } from '../../utils/CustomHooks/useDarkMode/useDarkMode';
 
 /**
  * @function ComposerDetail

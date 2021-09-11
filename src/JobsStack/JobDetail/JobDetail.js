@@ -9,29 +9,24 @@ import {
 } from 'react-native';
 import { useNavigation, useRoute } from '@react-navigation/core';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import CalendarStrip from 'react-native-calendar-strip';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import {
   DynamicStyleSheet,
   DynamicValue,
   useDynamicStyleSheet,
-  useDarkMode,
 } from 'react-native-dynamic';
 
+import Calendar from './Calendar/Calendar';
+import MetaContainer from './MetaContainer/MetaContainer';
 import ActionButton from '../../Components/ActionButton/ActionButton';
-import MetaLabel from '../../Components/MetaLabel/MetaLabel';
 import SectionHeader from '../../Components/SectionHeader/SectionHeader';
 
 import { PreferencesContext } from '../../Model/Preferences';
-import { excerpts as hornExcerpts } from '../../Model/Excerpts/HornExcerpts';
-import { excerpts as trumpetExcerpts } from '../../Model/Excerpts/TrumpetExcerpts';
-import { excerpts as tromboneExcerpts } from '../../Model/Excerpts/TromboneExcerpts';
-import { excerpts as tubaExcerpts } from '../../Model/Excerpts/TubaExcerpts';
 import { colors } from '../../Model/Model';
-import { getDaysUntilDate } from '../../utils/getDaysUntilDate/getDaysUntilDate';
 import { isFavorite } from '../../utils/isFavorite/isFavorite';
 import { useIdleScreen } from '../../utils/CustomHooks/useIdleScreen/useIdleScreen';
 import { getDateFromString } from '../../utils/getDateFromString/getDateFromString';
+import { getExcerptData } from '../../utils/getExcerptData/getExcerptData';
 
 /**
  * @todo Separate out these internal components to separate files.
@@ -42,7 +37,7 @@ import { getDateFromString } from '../../utils/getDateFromString/getDateFromStri
  * user directly to that excerpt.
  * @author Alexander Burdiss
  * @since 3/28/21
- * @version 1.2.3
+ * @version 1.3.0
  * @component
  * @example
  * <JobDetail />
@@ -55,7 +50,6 @@ const JobDetail = () => {
   const navigation = useNavigation();
   const { state } = useContext(PreferencesContext);
   const styles = useDynamicStyleSheet(dynamicStyles);
-  const DARKMODE = useDarkMode();
 
   /**
    * @function JobDetail~openAuditionWebsite
@@ -116,136 +110,6 @@ const JobDetail = () => {
     navigation.navigate('Jobs Excerpt Detail', excerpt);
   }
 
-  /**
-   * @function JobDetail~Calendar
-   * @description The calendar from the display, removed from the display so
-   * that props only need to be updated once when the component is rendered
-   * in two different modes.
-   * @author Alexander Burdiss
-   * @since 6/11/21
-   * @version 1.0.1
-   * @component
-   * @example
-   * <Calendar />
-   */
-  function Calendar() {
-    return (
-      <CalendarStrip
-        shouldAllowFontScaling={false}
-        calendarHeaderStyle={{ color: DARKMODE ? colors.white : colors.black }}
-        dateNumberStyle={{ color: DARKMODE ? colors.white : colors.black }}
-        dateNameStyle={{ color: DARKMODE ? colors.white : colors.black }}
-        highlightDateNumberStyle={{
-          color: DARKMODE ? colors.white : colors.black,
-        }}
-        highlightDateNameStyle={{
-          color: DARKMODE ? colors.white : colors.black,
-        }}
-        rightSelector={
-          <Ionicons
-            name="chevron-forward"
-            color={DARKMODE ? colors.white : colors.black}
-            size={24}
-          />
-        }
-        leftSelector={
-          <Ionicons
-            name="chevron-back"
-            color={DARKMODE ? colors.white : colors.black}
-            size={24}
-          />
-        }
-        style={styles.calendarStrip}
-        minDate={new Date()}
-        maxDate={
-          route.params.auditionDate
-            ? getDateFromString(route.params.auditionDate)
-            : getDateFromString(route.params.closingDate)
-        }
-        markedDates={[
-          {
-            date: new Date(),
-            lines: [
-              {
-                color: DARKMODE ? colors.greenDark : colors.greenLight,
-              },
-            ],
-          },
-          {
-            date: getDateFromString(route.params.closingDate),
-            lines: [
-              {
-                color: DARKMODE ? colors.orangeDark : colors.orangeLight,
-              },
-            ],
-          },
-          {
-            date: getDateFromString(route.params.auditionDate),
-            lines: [
-              {
-                color: DARKMODE ? colors.redDark : colors.redLight,
-              },
-            ],
-          },
-        ]}
-      />
-    );
-  }
-
-  /**
-   * @function JobDetail~MetaContainer
-   * @description The Meta Container pulled out into a separate conainer so that
-   * it only needs updated once when props change, because it is rendered in
-   * two different modes.
-   * @author Alexander Burdiss
-   * @since 6/11/21
-   * @version 1.0.0
-   * @component
-   * @example
-   * ```jsx
-   * <MetaContainer />
-   * ```
-   */
-  function MetaContainer() {
-    return (
-      <View>
-        <MetaLabel label="Country" data={route.params.country} />
-        <MetaLabel
-          label="Closing Date"
-          labelColor={colors.orangeLight}
-          data={
-            route.params.closingDate +
-            (getDateFromString(route.params.closingDate) > new Date()
-              ? ` (${getDaysUntilDate(
-                  route.params.closingDate,
-                )} days from today)`
-              : '')
-          }
-        />
-        {route.params.auditionDate ? (
-          <MetaLabel
-            label="Audition Date"
-            labelColor={colors.redLight}
-            data={
-              route.params.auditionDate +
-              (getDateFromString(route.params.auditionDate) > new Date()
-                ? ` (${getDaysUntilDate(
-                    route.params.auditionDate,
-                  )} days from today)`
-                : '')
-            }
-          />
-        ) : (
-          <MetaLabel
-            label="Audition Date"
-            labelColor={colors.redLight}
-            data={'unknown'}
-          />
-        )}
-      </View>
-    );
-  }
-
   return (
     <ScrollView style={styles.jobDetailContainer}>
       <SafeAreaView edges={['left', 'right']}>
@@ -283,14 +147,10 @@ const JobDetail = () => {
           {route.params.excerpts.map((excerpt, index) => {
             const borderTop = index != 0 ? styles.buttonBorder : null;
 
-            const excerptData = [
-              hornExcerpts,
-              trumpetExcerpts,
-              tromboneExcerpts,
-              tubaExcerpts,
-            ][state.jobsIndex].find((modelExcerpt) => {
-              return modelExcerpt.videos == excerpt;
-            });
+            const excerptData = getExcerptData(
+              ['horn', 'trumpet', 'trombone', 'tuba'][state.jobsIndex],
+              excerpt,
+            );
 
             if (excerptData) {
               return (
@@ -415,10 +275,6 @@ const dynamicStyles = new DynamicStyleSheet({
       colors.systemGray5Light,
       colors.systemGray5Dark,
     ),
-  },
-  calendarStrip: {
-    height: 80,
-    paddingVertical: 5,
   },
   excerptButton: {
     marginLeft: 20,

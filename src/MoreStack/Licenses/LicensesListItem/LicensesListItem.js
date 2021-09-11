@@ -1,13 +1,14 @@
 import React from 'react';
 import { Text, Pressable, View, Linking, Image } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import { colors } from '../../../Model/Model';
 import {
   DynamicStyleSheet,
   DynamicValue,
   useDynamicValue,
-  useDarkMode,
 } from 'react-native-dynamic';
+
+import { colors } from '../../../Model/Model';
+import { useDarkMode } from '../../../utils/CustomHooks/useDarkMode/useDarkMode';
 
 /**
  * @description A styled list item that contains links to the authors of the
@@ -16,7 +17,7 @@ import {
  * [Created with help from an online article]{@link https://blog.expo.io/licenses-the-best-part-of-your-app-29e7285b544f}
  * @author Alexander Burdiss
  * @date 12/17/20
- * @version 1.1.1
+ * @version 1.2.0
  * @param {String} props.image The url of the image to display.
  * @param {String} props.userUrl The url of the author of this software.
  * @param {String} props.username The username of the author of the software

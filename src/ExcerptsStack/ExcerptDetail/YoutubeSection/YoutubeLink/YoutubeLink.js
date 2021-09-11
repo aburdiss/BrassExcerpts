@@ -1,9 +1,9 @@
 import React from 'react';
 import { Pressable, Linking, Text, StyleSheet } from 'react-native';
-import { useDarkMode } from 'react-native-dynamic';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import { colors } from '../../../../Model/Model';
+import { useDarkMode } from '../../../../utils/CustomHooks/useDarkMode/useDarkMode';
 
 /**
  * @function YoutubeLink
@@ -16,7 +16,7 @@ import { colors } from '../../../../Model/Model';
  * affects the color of the link button.
  * @author Alexander Burdiss
  * @since 3/10/21
- * @version 1.1.2
+ * @version 1.2.0
  * @component
  * @example
  * <YoutubeLink video={video} type="band" />

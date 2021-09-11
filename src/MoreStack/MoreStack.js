@@ -1,9 +1,10 @@
 import 'react-native-gesture-handler';
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-import { useDarkMode } from 'react-native-dynamic';
 
 import { colors } from '../Model/Model';
+import { useDarkMode } from '../utils/CustomHooks/useDarkMode/useDarkMode';
+
 import More from './More/More';
 import Licenses from './Licenses/Licenses';
 import Acknowledgements from './Acknowledgements/Acknowledgements';
@@ -11,17 +12,16 @@ import Acknowledgements from './Acknowledgements/Acknowledgements';
 const Stack = createStackNavigator();
 
 /**
+ * @namespace MoreStack
  * @function MoreStack
  * @description All of the screens on the More Tab of the app, collected into
  * a stack to be used by React Navigation
  * @author Alexander Burdiss
  * @since 4/2/21
- * @version 1.0.0
+ * @version 1.1.0
  * @component
  * @example
- * ```jsx
  * <MoreStack />
- * ```
  */
 const MoreStack = () => {
   const DARKMODE = useDarkMode();

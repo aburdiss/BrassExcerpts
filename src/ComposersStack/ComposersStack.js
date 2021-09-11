@@ -1,9 +1,9 @@
 import 'react-native-gesture-handler';
 import React from 'react';
-import {createStackNavigator} from '@react-navigation/stack';
-import {useDarkMode} from 'react-native-dynamic';
+import { createStackNavigator } from '@react-navigation/stack';
 
-import {colors} from '../Model/Model';
+import { colors } from '../Model/Model';
+import { useDarkMode } from '../utils/CustomHooks/useDarkMode/useDarkMode';
 import Composers from './Composers/Composers';
 import ComposerDetail from './ComposerDetail/ComposerDetail';
 import ExcerptDetail from '../ExcerptsStack/ExcerptDetail/ExcerptDetail';
@@ -43,19 +43,20 @@ const ComposersStack = () => {
           shadowColor: 'transparent',
         },
         headerBackTitle: 'Back',
-      }}>
+      }}
+    >
       <Stack.Screen name="Composers" component={Composers} />
       <Stack.Screen
         name="Composer Detail"
         component={ComposerDetail}
-        options={({route}) => ({
+        options={({ route }) => ({
           title: route.params.name,
         })}
       />
       <Stack.Screen
         name="Composer Excerpt Detail"
         component={ExcerptDetail}
-        options={({route}) => ({
+        options={({ route }) => ({
           title: route.params.name,
         })}
       />

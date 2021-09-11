@@ -1,15 +1,16 @@
 import 'react-native-gesture-handler';
-import React, {useContext} from 'react';
-import {createStackNavigator} from '@react-navigation/stack';
-import {useDarkMode} from 'react-native-dynamic';
+import React, { useContext } from 'react';
+import { Alert } from 'react-native';
+import { createStackNavigator } from '@react-navigation/stack';
 
-import HeaderButton from '../Components/HeaderButton/HeaderButton';
-import {colors} from '../Model/Model';
+import { PreferencesContext } from '../Model/Preferences';
+import { colors } from '../Model/Model';
+import { useDarkMode } from '../utils/CustomHooks/useDarkMode/useDarkMode';
+
 import Excerpts from './Excerpts/Excerpts';
 import ExcerptDetail from './ExcerptDetail/ExcerptDetail';
 import RandomExcerpt from './RandomExcerpt/RandomExcerpt';
-import {PreferencesContext} from '../Model/Preferences';
-import {Alert} from 'react-native';
+import HeaderButton from '../Components/HeaderButton/HeaderButton';
 
 const Stack = createStackNavigator();
 
@@ -22,11 +23,11 @@ const Stack = createStackNavigator();
  * this screen from the Tab Navigator in App.js
  * @author Alexander Burdiss
  * @since 4/2/21
- * @version 1.0.0
+ * @version 1.1.0
  */
-const ExcerptsStack = ({navigation}) => {
+const ExcerptsStack = ({ navigation }) => {
   const DARKMODE = useDarkMode();
-  const {state} = useContext(PreferencesContext);
+  const { state } = useContext(PreferencesContext);
 
   return (
     <Stack.Navigator
@@ -44,7 +45,8 @@ const ExcerptsStack = ({navigation}) => {
           shadowColor: 'transparent',
         },
         headerBackTitle: 'Back',
-      }}>
+      }}
+    >
       <Stack.Screen
         name="Excerpts"
         component={Excerpts}
@@ -57,7 +59,8 @@ const ExcerptsStack = ({navigation}) => {
                 } else {
                   navigation.navigate('Random Excerpt');
                 }
-              }}>
+              }}
+            >
               Random
             </HeaderButton>
           ),
@@ -67,7 +70,7 @@ const ExcerptsStack = ({navigation}) => {
       <Stack.Screen
         name="Excerpt Detail"
         component={ExcerptDetail}
-        options={({route}) => ({
+        options={({ route }) => ({
           title: route.params.name,
         })}
       />

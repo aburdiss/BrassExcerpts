@@ -1,10 +1,11 @@
 import 'react-native-gesture-handler';
 import React from 'react';
-import {createStackNavigator} from '@react-navigation/stack';
-import {useDarkMode} from 'react-native-dynamic';
+import { createStackNavigator } from '@react-navigation/stack';
+
+import { colors } from '../Model/Model';
+import { useDarkMode } from '../utils/CustomHooks/useDarkMode/useDarkMode';
 
 import HeaderButton from '../Components/HeaderButton/HeaderButton';
-import {colors} from '../Model/Model';
 import ExcerptDetail from '../ExcerptsStack/ExcerptDetail/ExcerptDetail';
 import Jobs from './Jobs/Jobs';
 import TopExcerpts from './TopExcerpts/TopExcerpts';
@@ -30,7 +31,7 @@ const Stack = createStackNavigator();
  * <JobsStack />
  * ```
  */
-const JobsStack = ({navigation}) => {
+const JobsStack = ({ navigation }) => {
   const DARKMODE = useDarkMode();
 
   return (
@@ -49,7 +50,8 @@ const JobsStack = ({navigation}) => {
           shadowColor: 'transparent',
         },
         headerBackTitle: 'Back',
-      }}>
+      }}
+    >
       <Stack.Screen
         name="Jobs"
         component={Jobs}
@@ -58,7 +60,8 @@ const JobsStack = ({navigation}) => {
             <HeaderButton
               handler={() => {
                 navigation.navigate('Past Auditions');
-              }}>
+              }}
+            >
               Past
             </HeaderButton>
           ),
@@ -69,14 +72,14 @@ const JobsStack = ({navigation}) => {
       <Stack.Screen
         name="Job Detail"
         component={JobDetail}
-        options={({route}) => ({
+        options={({ route }) => ({
           title: route.params.orchestra,
         })}
       />
       <Stack.Screen
         name="Jobs Excerpt Detail"
         component={ExcerptDetail}
-        options={({route}) => ({
+        options={({ route }) => ({
           title: route.params.name,
         })}
       />

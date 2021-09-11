@@ -9,13 +9,15 @@ Run this command to update the data.
 */
 
 import React from 'react';
-import { useDarkMode } from 'react-native-dynamic';
 import { capitalize } from 'underscore.string';
 import SafeAreaView from 'react-native-safe-area-view';
 
-import LicensesList from './LicensesList/LicensesList';
 import Data from './licenses.json';
+
+import { useDarkMode } from '../../utils/CustomHooks/useDarkMode/useDarkMode';
 import { colors } from '../../Model/Model';
+
+import LicensesList from './LicensesList/LicensesList';
 
 /**
  * @function extractNameFromGithubUrl
@@ -23,7 +25,7 @@ import { colors } from '../../Model/Model';
  * the author of the software.
  * [Created with help from an online article]{@link https://blog.expo.io/licenses-the-best-part-of-your-app-29e7285b544f}
  * @author Alexander Burdiss
- * @version 1.0.1
+ * @version 1.1.0
  * @since 12/17/20
  * @param {String} url The GitHub url of a piece of software.
  * @returns {String} The GitHub username
