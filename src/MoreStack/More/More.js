@@ -1,15 +1,9 @@
-import { View, SectionList, Text } from 'react-native';
+import { View, SectionList, Text, StyleSheet } from 'react-native';
 import React, { useContext } from 'react';
 import SafeAreaView from 'react-native-safe-area-view';
 
-import {
-  DynamicStyleSheet,
-  DynamicValue,
-  useDynamicValue,
-} from 'react-native-dynamic';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-import { colors } from '../../Model/Model';
 import {
   INSTRUMENT,
   FAVORITES,
@@ -25,22 +19,60 @@ import SwitchListItem from '../../Components/ListItems/SwitchListItem/SwitchList
 import LinkListItem from '../../Components/ListItems/LinkListItem/LinkListItem';
 import InternalListItem from '../../Components/ListItems/InternalListItem/InternalListItem';
 import SegmentedFilterListItem from '../../Components/ListItems/SegmentedFilterListItem/SegmentedFilterListItem';
+import { useColors } from '../../utils/CustomHooks/useColors/useColors';
 
 /**
+ * @namespace More
+ * @function More
  * @description A View that allows the user to set custom settings, or view
  * additional resources.
  * @author Alexander Burdiss
  * @since 12/14/20
- * @version 1.1.0
- *
+ * @version 1.2.0
  * @component
  * @example
- * ```jsx
- * <Settings />
- * ```
+ * <More />
  */
-const More = () => {
-  const styles = useDynamicValue(dynamicStyles);
+export default function More() {
+  const colors = useColors();
+  const styles = StyleSheet.create({
+    listHeader: {
+      textTransform: 'uppercase',
+      paddingLeft: 20,
+      paddingTop: 30,
+      paddingBottom: 10,
+      color: colors.systemGray,
+    },
+    sectionList: {
+      height: '100%',
+      backgroundColor: colors.background,
+    },
+    iconContainer: {
+      flexDirection: 'row',
+    },
+    icon: {
+      paddingHorizontal: 5,
+    },
+    javascriptBackground: {
+      backgroundColor: colors.black,
+      height: 20,
+      width: 20,
+      marginLeft: 7,
+      marginTop: 3,
+      zIndex: -1,
+      position: 'absolute',
+    },
+    footerContainer: {
+      paddingTop: 30,
+      alignItems: 'center',
+    },
+    footerText: {
+      color: colors.systemGray,
+      paddingTop: 10,
+      paddingBottom: 30,
+    },
+  });
+
   const { state, dispatch } = useContext(PreferencesContext);
 
   return (
@@ -122,44 +154,4 @@ const More = () => {
       />
     </SafeAreaView>
   );
-};
-
-const dynamicStyles = new DynamicStyleSheet({
-  listHeader: {
-    textTransform: 'uppercase',
-    paddingLeft: 20,
-    paddingTop: 30,
-    paddingBottom: 10,
-    color: new DynamicValue(colors.systemGray, colors.systemGray),
-  },
-  sectionList: {
-    height: '100%',
-    backgroundColor: new DynamicValue(colors.systemGray6Light, colors.black),
-  },
-  iconContainer: {
-    flexDirection: 'row',
-  },
-  icon: {
-    paddingHorizontal: 5,
-  },
-  javascriptBackground: {
-    backgroundColor: colors.black,
-    height: 20,
-    width: 20,
-    marginLeft: 7,
-    marginTop: 3,
-    zIndex: -1,
-    position: 'absolute',
-  },
-  footerContainer: {
-    paddingTop: 30,
-    alignItems: 'center',
-  },
-  footerText: {
-    color: colors.systemGray,
-    paddingTop: 10,
-    paddingBottom: 30,
-  },
-});
-
-export default More;
+}

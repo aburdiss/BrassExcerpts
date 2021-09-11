@@ -1,23 +1,27 @@
 import React from 'react';
-import { Text, Pressable, View, Linking, Image } from 'react-native';
-import Ionicons from 'react-native-vector-icons/Ionicons';
 import {
-  DynamicStyleSheet,
-  DynamicValue,
-  useDynamicValue,
-} from 'react-native-dynamic';
+  Text,
+  Pressable,
+  View,
+  Linking,
+  Image,
+  StyleSheet,
+} from 'react-native';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
-import { colors } from '../../../Model/Model';
-import { useDarkMode } from '../../../utils/CustomHooks/useDarkMode/useDarkMode';
+import Link from './Link/Link';
+import { useColors } from '../../../utils/CustomHooks/useColors/useColors';
 
 /**
+ * @namespace LicensesListItem
+ * @function LicensesListItem
  * @description A styled list item that contains links to the authors of the
  * various softwares used throughout the app, and the users who contributed
  * to them.
  * [Created with help from an online article]{@link https://blog.expo.io/licenses-the-best-part-of-your-app-29e7285b544f}
  * @author Alexander Burdiss
  * @date 12/17/20
- * @version 1.2.0
+ * @version 1.3.0
  * @param {String} props.image The url of the image to display.
  * @param {String} props.userUrl The url of the author of this software.
  * @param {String} props.username The username of the author of the software
@@ -32,14 +36,11 @@ import { useDarkMode } from '../../../utils/CustomHooks/useDarkMode/useDarkMode'
  * to.
  * @param {String} props.licenseUrl The url to the currently referenced
  * license.
- *
  * @component
  * @example
- * ```jsx
-<LicensesListItem {...item} />
-```
+ * <LicensesListItem {...item} />
  */
-const LicensesListItem = ({
+export default function LicensesListItem({
   image,
   userUrl,
   username,
@@ -48,9 +49,49 @@ const LicensesListItem = ({
   licenses,
   repository,
   licenseUrl,
-}) => {
-  const darkMode = useDarkMode();
-  const styles = useDynamicValue(dynamicStyles);
+}) {
+  const colors = useColors();
+  const styles = StyleSheet.create({
+    arrow: { alignSelf: 'center' },
+    card: {
+      overflow: 'hidden',
+      flexDirection: 'row',
+      backgroundColor: colors.background2,
+
+      alignItems: 'center',
+      paddingLeft: 12,
+    },
+    item: {
+      paddingVertical: 12,
+      paddingRight: 12,
+      marginLeft: 12,
+      flex: 1,
+      justifyContent: 'space-between',
+      flexDirection: 'row',
+      maxWidth: '100%',
+      flexWrap: 'wrap',
+      borderBottomColor: colors.systemGray5,
+      borderBottomWidth: 1,
+    },
+    licenseText: { maxWidth: '88%' },
+    name: {
+      color: colors.text,
+      fontWeight: 'bold',
+      fontSize: 16,
+    },
+    image: {
+      aspectRatio: 1,
+      width: 58,
+      borderRadius: 29,
+      backgroundColor: 'white',
+    },
+
+    text: {
+      color: colors.systemGray,
+      marginTop: 3,
+    },
+  });
+
   let title = name;
   if (username) {
     if (title.toLowerCase() != username.toLowerCase()) {
@@ -76,7 +117,7 @@ const LicensesListItem = ({
           <Pressable
             onPress={() => Linking.openURL(repository)}
             android_ripple={{
-              color: darkMode ? colors.greenDark : colors.greenLight,
+              color: colors.green,
             }}
             style={({ pressed }) => ({
               opacity: pressed ? 0.7 : 1,
@@ -94,7 +135,7 @@ const LicensesListItem = ({
             </View>
             <Ionicons
               style={styles.arrow}
-              color={darkMode ? colors.greenDark : colors.greenLight}
+              color={colors.green}
               size={25}
               name={'chevron-forward-outline'}
             />
@@ -103,82 +144,4 @@ const LicensesListItem = ({
       </View>
     </View>
   );
-};
-
-/**
- * @description One link item that opens the main software link in the
- * LicensesListItem component. Text is limited to one line.
- * [Created with help from an online article]{@link https://blog.expo.io/licenses-the-best-part-of-your-app-29e7285b544f}
- * @author Alexander Burdiss
- * @since 12/17/20
- * @version 1.0.1
- * @param {String} props.url The url to open when the element is tapped.
- * @param {Object} props.style Style to be applied to the element
- * @param {String} props.children Text to be rendered inside this element.
- *
- * @component
- * @example
- * ```jsx
-<Link style={styles.text} url={licenseUrl}>
-  {licenses}
-</Link>
-```
- */
-const Link = ({ url, style, children }) => (
-  <Text
-    style={style}
-    numberOfLines={1}
-    accessibilityRole="link"
-    accessibilityLabel={children}
-    accessibilityHint={'Opens in default browser'}
-    onPress={() => url && Linking.openURL(url)}
-  >
-    {children}
-  </Text>
-);
-
-const dynamicStyles = new DynamicStyleSheet({
-  arrow: { alignSelf: 'center' },
-  card: {
-    overflow: 'hidden',
-    flexDirection: 'row',
-    backgroundColor: new DynamicValue(colors.white, colors.systemGray6Dark),
-
-    alignItems: 'center',
-    paddingLeft: 12,
-  },
-  item: {
-    paddingVertical: 12,
-    paddingRight: 12,
-    marginLeft: 12,
-    flex: 1,
-    justifyContent: 'space-between',
-    flexDirection: 'row',
-    maxWidth: '100%',
-    flexWrap: 'wrap',
-    borderBottomColor: new DynamicValue(
-      colors.systemGray5Light,
-      colors.systemGray5Dark,
-    ),
-    borderBottomWidth: 1,
-  },
-  licenseText: { maxWidth: '88%' },
-  name: {
-    color: new DynamicValue(colors.black, colors.white),
-    fontWeight: 'bold',
-    fontSize: 16,
-  },
-  image: {
-    aspectRatio: 1,
-    width: 58,
-    borderRadius: 29,
-    backgroundColor: 'white',
-  },
-
-  text: {
-    color: new DynamicValue(colors.systemGray, colors.systemGray),
-    marginTop: 3,
-  },
-});
-
-export default LicensesListItem;
+}

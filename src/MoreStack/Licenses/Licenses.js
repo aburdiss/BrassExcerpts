@@ -14,35 +14,10 @@ import SafeAreaView from 'react-native-safe-area-view';
 
 import Data from './licenses.json';
 
-import { useDarkMode } from '../../utils/CustomHooks/useDarkMode/useDarkMode';
-import { colors } from '../../Model/Model';
-
 import LicensesList from './LicensesList/LicensesList';
+import { useColors } from '../../utils/CustomHooks/useColors/useColors';
 
-/**
- * @function extractNameFromGithubUrl
- * @description Takes a url to a gitHub repository and returns the username of
- * the author of the software.
- * [Created with help from an online article]{@link https://blog.expo.io/licenses-the-best-part-of-your-app-29e7285b544f}
- * @author Alexander Burdiss
- * @version 1.1.0
- * @since 12/17/20
- * @param {String} url The GitHub url of a piece of software.
- * @returns {String} The GitHub username
- */
-function extractNameFromGithubUrl(url) {
-  if (!url) {
-    return null;
-  }
-
-  const reg = /((https?:\/\/)?(www\.)?github\.com\/)?(@|#!\/)?([A-Za-z0-9_-]{1,30})(\/([-a-z]{1,40}))?/i;
-  const components = reg.exec(url);
-
-  if (components && components.length > 5) {
-    return components[5];
-  }
-  return null;
-}
+import { extractNameFromGithubUrl } from '../../utils/extractNameFromGithubUrl/extractNameFromGithubUrl';
 
 /**
  * @function sortDataByKey
@@ -99,32 +74,30 @@ let allLicenses = Object.keys(Data).map((key) => {
 sortDataByKey(allLicenses, 'username');
 
 /**
+ * @namespace Licenses
+ * @function Licenses
  * @description A wrapper for the LicensesList component that processes the
  * data and passes it in.
  * [Created with help from an online article]{@link https://blog.expo.io/licenses-the-best-part-of-your-app-29e7285b544f}
  * @author Alexander Burdiss
  * @since 12/17/20
- * @version 1.0.1
+ * @version 1.1.0
  *
  * @component
  * @example
- * ```jsx
  * <Licenses />
- * ```
  */
-const Licenses = () => {
-  const darkMode = useDarkMode();
+export default function Licenses() {
+  const colors = useColors();
   return (
     <SafeAreaView
       // eslint-disable-next-line react-native/no-inline-styles
       style={{
         flex: 1,
-        backgroundColor: darkMode ? colors.black : colors.systemGray2Light,
+        backgroundColor: colors.background,
       }}
     >
       <LicensesList licenses={allLicenses} />
     </SafeAreaView>
   );
-};
-
-export default Licenses;
+}

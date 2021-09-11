@@ -2,12 +2,10 @@ import 'react-native-gesture-handler';
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import { colors } from '../Model/Model';
-import { useDarkMode } from '../utils/CustomHooks/useDarkMode/useDarkMode';
-
 import More from './More/More';
 import Licenses from './Licenses/Licenses';
 import Acknowledgements from './Acknowledgements/Acknowledgements';
+import { useColors } from '../utils/CustomHooks/useColors/useColors';
 
 const Stack = createStackNavigator();
 
@@ -18,27 +16,23 @@ const Stack = createStackNavigator();
  * a stack to be used by React Navigation
  * @author Alexander Burdiss
  * @since 4/2/21
- * @version 1.1.0
+ * @version 1.2.0
  * @component
  * @example
  * <MoreStack />
  */
-const MoreStack = () => {
-  const darkMode = useDarkMode();
+export default function MoreStack() {
+  const colors = useColors();
 
   return (
     <Stack.Navigator
       screenOptions={{
-        headerTintColor: darkMode ? colors.greenDark : colors.greenLight,
-        headerTitleStyle: {
-          color: darkMode ? colors.white : colors.black,
-        },
+        headerTintColor: colors.green,
+        headerTitleStyle: { color: colors.text },
         headerStyle: {
-          backgroundColor: darkMode ? colors.systemGray6Dark : colors.white,
+          backgroundColor: colors.background2,
           borderBottomWidth: 1,
-          borderBottomColor: darkMode
-            ? colors.systemGray5Dark
-            : colors.systemGray5Light,
+          borderBottomColor: colors.systemGray5,
           shadowColor: 'transparent',
         },
         headerBackTitle: 'Back',
@@ -49,6 +43,4 @@ const MoreStack = () => {
       <Stack.Screen name="Acknowledgements" component={Acknowledgements} />
     </Stack.Navigator>
   );
-};
-
-export default MoreStack;
+}
