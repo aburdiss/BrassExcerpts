@@ -20,7 +20,7 @@ const Tab = createBottomTabNavigator();
 const queryClient = new QueryClient();
 
 const App = () => {
-  const DARKMODE = useDarkMode();
+  const darkMode = useDarkMode();
   return (
     <SafeAreaProvider>
       <QueryClientProvider client={queryClient}>
@@ -43,15 +43,15 @@ const App = () => {
                 },
               })}
               tabBarOptions={{
-                activeTintColor: DARKMODE
+                activeTintColor: darkMode
                   ? colors.greenDark
                   : colors.greenLight,
                 inactiveTintColor: colors.systemGray,
                 style: {
-                  backgroundColor: DARKMODE
+                  backgroundColor: darkMode
                     ? colors.systemGray6Dark
                     : colors.white,
-                  borderTopColor: DARKMODE
+                  borderTopColor: darkMode
                     ? colors.systemGray5Dark
                     : colors.systemGray5Light,
                 },

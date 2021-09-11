@@ -49,7 +49,7 @@ const LicensesListItem = ({
   repository,
   licenseUrl,
 }) => {
-  const DARKMODE = useDarkMode();
+  const darkMode = useDarkMode();
   const styles = useDynamicValue(dynamicStyles);
   let title = name;
   if (username) {
@@ -76,7 +76,7 @@ const LicensesListItem = ({
           <Pressable
             onPress={() => Linking.openURL(repository)}
             android_ripple={{
-              color: DARKMODE ? colors.greenDark : colors.greenLight,
+              color: darkMode ? colors.greenDark : colors.greenLight,
             }}
             style={({ pressed }) => ({
               opacity: pressed ? 0.7 : 1,
@@ -94,7 +94,7 @@ const LicensesListItem = ({
             </View>
             <Ionicons
               style={styles.arrow}
-              color={DARKMODE ? colors.greenDark : colors.greenLight}
+              color={darkMode ? colors.greenDark : colors.greenLight}
               size={25}
               name={'chevron-forward-outline'}
             />

@@ -32,7 +32,7 @@ import { colors } from '../../Model/Model';
 const Excerpts = () => {
   const { state } = useContext(PreferencesContext);
   const navigation = useNavigation();
-  const DARKMODE = useDarkMode();
+  const darkMode = useDarkMode();
 
   const [listData, setListData] = useState([]);
   useEffect(
@@ -83,8 +83,8 @@ const Excerpts = () => {
 
   return (
     <ScrollViewBounceContainer
-      topBounceColor={DARKMODE ? colors.greenDark : colors.greenLight}
-      bottomBounceColor={DARKMODE ? colors.black : colors.systemGray6Light}
+      topBounceColor={darkMode ? colors.greenDark : colors.greenLight}
+      bottomBounceColor={darkMode ? colors.black : colors.systemGray6Light}
     >
       <FlatList
         ListHeaderComponent={ExcerptListHeader}

@@ -41,7 +41,7 @@ const ComposerDetail = () => {
   const composer = route.params;
   const { state } = useContext(PreferencesContext);
   const styles = useDynamicStyleSheet(dynamicStyles);
-  const DARKMODE = useDarkMode();
+  const darkMode = useDarkMode();
 
   return (
     <ScrollView style={styles.container}>
@@ -65,8 +65,8 @@ const ComposerDetail = () => {
           </View>
           <LinearGradient
             colors={[
-              DARKMODE ? colors.blueDark : colors.blueLight,
-              DARKMODE ? colors.greenDark : colors.greenLight,
+              darkMode ? colors.blueDark : colors.blueLight,
+              darkMode ? colors.greenDark : colors.greenLight,
             ]}
             style={styles.linearGradient}
           >

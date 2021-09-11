@@ -32,19 +32,19 @@ const Stack = createStackNavigator();
  * ```
  */
 const JobsStack = ({ navigation }) => {
-  const DARKMODE = useDarkMode();
+  const darkMode = useDarkMode();
 
   return (
     <Stack.Navigator
       screenOptions={{
-        headerTintColor: DARKMODE ? colors.greenDark : colors.greenLight,
+        headerTintColor: darkMode ? colors.greenDark : colors.greenLight,
         headerTitleStyle: {
-          color: DARKMODE ? colors.white : colors.black,
+          color: darkMode ? colors.white : colors.black,
         },
         headerStyle: {
-          backgroundColor: DARKMODE ? colors.systemGray6Dark : colors.white,
+          backgroundColor: darkMode ? colors.systemGray6Dark : colors.white,
           borderBottomWidth: 1,
-          borderBottomColor: DARKMODE
+          borderBottomColor: darkMode
             ? colors.systemGray5Dark
             : colors.systemGray5Light,
           shadowColor: 'transparent',

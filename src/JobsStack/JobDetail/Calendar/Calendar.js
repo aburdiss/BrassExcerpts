@@ -21,34 +21,35 @@ import { useDarkMode } from '../../../utils/CustomHooks/useDarkMode/useDarkMode'
  */
 export default function Calendar() {
   const route = useRoute();
-  const DARKMODE = useDarkMode();
+  const darkMode = useDarkMode();
 
   return (
     <CalendarStrip
       shouldAllowFontScaling={false}
-      calendarHeaderStyle={{ color: DARKMODE ? colors.white : colors.black }}
-      dateNumberStyle={{ color: DARKMODE ? colors.white : colors.black }}
-      dateNameStyle={{ color: DARKMODE ? colors.white : colors.black }}
+      calendarHeaderStyle={{ color: darkMode ? colors.white : colors.black }}
+      dateNumberStyle={{ color: darkMode ? colors.white : colors.black }}
+      dateNameStyle={{ color: darkMode ? colors.white : colors.black }}
       highlightDateNumberStyle={{
-        color: DARKMODE ? colors.white : colors.black,
+        color: darkMode ? colors.white : colors.black,
       }}
       highlightDateNameStyle={{
-        color: DARKMODE ? colors.white : colors.black,
+        color: darkMode ? colors.white : colors.black,
       }}
       rightSelector={
         <Ionicons
           name="chevron-forward"
-          color={DARKMODE ? colors.white : colors.black}
+          color={darkMode ? colors.white : colors.black}
           size={24}
         />
       }
       leftSelector={
         <Ionicons
           name="chevron-back"
-          color={DARKMODE ? colors.white : colors.black}
+          color={darkMode ? colors.white : colors.black}
           size={24}
         />
       }
+      // eslint-disable-next-line react-native/no-inline-styles
       style={{
         height: 80,
         paddingVertical: 5,
@@ -64,7 +65,7 @@ export default function Calendar() {
           date: new Date(),
           lines: [
             {
-              color: DARKMODE ? colors.greenDark : colors.greenLight,
+              color: darkMode ? colors.greenDark : colors.greenLight,
             },
           ],
         },
@@ -72,7 +73,7 @@ export default function Calendar() {
           date: getDateFromString(route.params.closingDate),
           lines: [
             {
-              color: DARKMODE ? colors.orangeDark : colors.orangeLight,
+              color: darkMode ? colors.orangeDark : colors.orangeLight,
             },
           ],
         },
@@ -80,7 +81,7 @@ export default function Calendar() {
           date: getDateFromString(route.params.auditionDate),
           lines: [
             {
-              color: DARKMODE ? colors.redDark : colors.redLight,
+              color: darkMode ? colors.redDark : colors.redLight,
             },
           ],
         },

@@ -113,13 +113,13 @@ sortDataByKey(allLicenses, 'username');
  * ```
  */
 const Licenses = () => {
-  const DARKMODE = useDarkMode();
+  const darkMode = useDarkMode();
   return (
     <SafeAreaView
       // eslint-disable-next-line react-native/no-inline-styles
       style={{
         flex: 1,
-        backgroundColor: DARKMODE ? colors.black : colors.systemGray2Light,
+        backgroundColor: darkMode ? colors.black : colors.systemGray2Light,
       }}
     >
       <LicensesList licenses={allLicenses} />

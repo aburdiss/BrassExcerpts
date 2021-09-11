@@ -22,27 +22,27 @@ import { useDarkMode } from '../../../../utils/CustomHooks/useDarkMode/useDarkMo
  * <YoutubeLink video={video} type="band" />
  */
 const YoutubeLink = ({ video, type }) => {
-  const DARKMODE = useDarkMode();
+  const darkMode = useDarkMode();
 
   const backgroundColors = {
-    full: DARKMODE ? colors.greenDark : colors.greenLight,
-    score: DARKMODE ? colors.orangeDark : colors.orangeLight,
-    band: DARKMODE ? colors.redDark : colors.redLight,
-    instrument: DARKMODE ? colors.blueDark : colors.blueLight,
+    full: darkMode ? colors.greenDark : colors.greenLight,
+    score: darkMode ? colors.orangeDark : colors.orangeLight,
+    band: darkMode ? colors.redDark : colors.redLight,
+    instrument: darkMode ? colors.blueDark : colors.blueLight,
   };
 
   const bottomBorderColors = {
-    full: DARKMODE ? colors.blueDark : colors.blueLight,
-    score: DARKMODE ? colors.yellowDark : colors.yellowLight,
-    band: DARKMODE ? colors.orangeDark : colors.orangeLight,
-    instrument: DARKMODE ? colors.purpleDark : colors.purpleLight,
+    full: darkMode ? colors.blueDark : colors.blueLight,
+    score: darkMode ? colors.yellowDark : colors.yellowLight,
+    band: darkMode ? colors.orangeDark : colors.orangeLight,
+    instrument: darkMode ? colors.purpleDark : colors.purpleLight,
   };
 
   const textColors = {
-    full: DARKMODE ? colors.white : colors.black,
-    score: DARKMODE ? colors.white : colors.black,
-    band: DARKMODE ? colors.white : colors.black,
-    instrument: DARKMODE ? colors.white : colors.white,
+    full: darkMode ? colors.white : colors.black,
+    score: darkMode ? colors.white : colors.black,
+    band: darkMode ? colors.white : colors.black,
+    instrument: darkMode ? colors.white : colors.white,
   };
 
   return (
