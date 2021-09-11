@@ -1,24 +1,19 @@
 import React, { useContext, useEffect, useRef, useState } from 'react';
-import { View, ScrollView, Pressable, Text } from 'react-native';
+import { View, ScrollView, Pressable, Text, StyleSheet } from 'react-native';
 import SegmentedControl from '@react-native-segmented-control/segmented-control';
 import { useNavigation } from '@react-navigation/core';
 import { useQuery } from 'react-query';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import {
-  DynamicStyleSheet,
-  DynamicValue,
-  useDynamicStyleSheet,
-} from 'react-native-dynamic';
 
 import JobsListRow from './JobsListRow/JobsListRow';
 // eslint-disable-next-line no-unused-vars
 import ActionButton from '../../Components/ActionButton/ActionButton';
 import { PreferencesContext } from '../../Model/Preferences';
-import { colors } from '../../Model/Model';
 import { openMusicalChairsLink } from './utils/openMusicalChairsLink/openMusicalChairsLink';
 import { fetchInstrumentJobs } from '../../utils/fetchInstrumentJobs/fetchInstrumentJobs';
 import { getDateFromString } from '../../utils/getDateFromString/getDateFromString';
 import { hasValidJobs } from './utils/hasValidJobs/hasValidJobs';
+import { useColors } from '../../utils/CustomHooks/useColors/useColors';
 
 /**
  * @todo get top excerpts for each instrument (top 10 or 20)
@@ -28,18 +23,19 @@ import { hasValidJobs } from './utils/hasValidJobs/hasValidJobs';
  * @todo Make the "Top Excerpt" button right below the picker, and have it only
  * take you to the top excerpts for that insturment, depending on the picker.
  *
+ * @namespace Jobs
  * @function Jobs
  * @description A component that lists recent jobs available for each
  * instrument. When each item is clicked, it will open the JobDetail component
  * and display more information about that Job to the user.
  * @author Alexander Burdiss
  * @since 3/5/21
- * @version 1.1.2
+ * @version 1.2.0
  * @component
  * @example
  * <Jobs />
  */
-const Jobs = () => {
+export default function Jobs() {
   const internalHornJobsLink =
     'https://github.com/aburdiss/BrassExcerpts/raw/master/src/Model/Jobs/HornJobs.json';
   const internalTrumpetJobsLink =
@@ -49,11 +45,47 @@ const Jobs = () => {
   const internalTubaJobsLink =
     'https://github.com/aburdiss/BrassExcerpts/raw/master/src/Model/Jobs/TubaJobs.json';
 
+  const colors = useColors();
+  const styles = StyleSheet.create({
+    contentContainer: {
+      flex: 1,
+      paddingHorizontal: 10,
+      paddingBottom: 10,
+    },
+    disclaimer: {
+      fontSize: 12,
+      textAlign: 'center',
+      paddingHorizontal: 10,
+      color: colors.text,
+      paddingTop: 5,
+      paddingBottom: 20,
+    },
+    errorContainer: {
+      marginVertical: 10,
+      padding: 40,
+    },
+    errorText: {
+      textAlign: 'center',
+      color: colors.text,
+    },
+    linkText: {
+      color: colors.green,
+      textDecorationLine: 'underline',
+      padding: 10,
+    },
+    jobsContainer: {
+      height: '100%',
+      backgroundColor: colors.background,
+    },
+    segmentedControlContainer: {
+      padding: 10,
+    },
+  });
+
   const { state, dispatch } = useContext(PreferencesContext);
   const [currentJobs, setCurrentJobs] = useState([]);
   const navigation = useNavigation();
   const scrollViewRef = useRef(null);
-  const styles = useDynamicStyleSheet(dynamicStyles);
 
   const possibleInstruments = ['Horn', 'Trumpet', 'Trombone', 'Tuba'];
 
@@ -207,42 +239,4 @@ const Jobs = () => {
       </ScrollView>
     </View>
   );
-};
-
-const dynamicStyles = new DynamicStyleSheet({
-  contentContainer: {
-    flex: 1,
-    paddingHorizontal: 10,
-    paddingBottom: 10,
-  },
-  disclaimer: {
-    fontSize: 12,
-    textAlign: 'center',
-    paddingHorizontal: 10,
-    color: new DynamicValue(colors.black, colors.white),
-    paddingTop: 5,
-    paddingBottom: 20,
-  },
-  errorContainer: {
-    marginVertical: 10,
-    padding: 40,
-  },
-  errorText: {
-    textAlign: 'center',
-    color: new DynamicValue(colors.black, colors.white),
-  },
-  linkText: {
-    color: new DynamicValue(colors.greenLight, colors.greenDark),
-    textDecorationLine: 'underline',
-    padding: 10,
-  },
-  jobsContainer: {
-    height: '100%',
-    backgroundColor: new DynamicValue(colors.systemGray6Light, colors.black),
-  },
-  segmentedControlContainer: {
-    padding: 10,
-  },
-});
-
-export default Jobs;
+}

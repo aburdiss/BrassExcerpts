@@ -1,34 +1,30 @@
 import React, { useContext, useState, useEffect, useRef } from 'react';
-import { ScrollView, View } from 'react-native';
+import { ScrollView, StyleSheet, View } from 'react-native';
 import SegmentedControl from '@react-native-segmented-control/segmented-control';
 import { useQuery } from 'react-query';
-import {
-  DynamicStyleSheet,
-  DynamicValue,
-  useDynamicStyleSheet,
-} from 'react-native-dynamic';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 import JobsListRow from '../Jobs/JobsListRow/JobsListRow';
 
 import { fetchInstrumentJobs } from '../../utils/fetchInstrumentJobs/fetchInstrumentJobs';
 import { PreferencesContext } from '../../Model/Preferences';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { colors } from '../../Model/Model';
 import { getDateFromString } from '../../utils/getDateFromString/getDateFromString';
+import { useColors } from '../../utils/CustomHooks/useColors/useColors';
 
 /**
+ * @namespace PastJobs
  * @function PastJobs
  * @description A component that displays the jobs that are available from the
  * server, but are past their closing date, and won't be shown on the regular
  * Jobs page.
  * @author Alexander Burdiss
  * @since 3/28/21
- * @version 1.1.0
+ * @version 1.2.0
  * @component
  * @example
  * <PastJobs />
  */
-const PastJobs = () => {
+export default function PastJobs() {
   const internalHornJobsLink =
     'https://github.com/aburdiss/BrassExcerpts/raw/master/src/Model/Jobs/HornJobs.json';
   const internalTrumpetJobsLink =
@@ -38,10 +34,21 @@ const PastJobs = () => {
   const internalTubaJobsLink =
     'https://github.com/aburdiss/BrassExcerpts/raw/master/src/Model/Jobs/TubaJobs.json';
 
+  const colors = useColors();
+  const styles = StyleSheet.create({
+    contentContainer: {
+      marginTop: 10,
+      height: '100%',
+    },
+    pastJobsContainer: {
+      padding: 10,
+      backgroundColor: colors.background,
+    },
+  });
+
   const { state, dispatch } = useContext(PreferencesContext);
   const [currentJobs, setCurrentJobs] = useState([]);
   const scrollViewRef = useRef(null);
-  const styles = useDynamicStyleSheet(dynamicStyles);
 
   const possibleInstruments = ['Horn', 'Trumpet', 'Trombone', 'Tuba'];
 
@@ -127,17 +134,4 @@ const PastJobs = () => {
       </ScrollView>
     </View>
   );
-};
-
-const dynamicStyles = new DynamicStyleSheet({
-  contentContainer: {
-    marginTop: 10,
-    height: '100%',
-  },
-  pastJobsContainer: {
-    padding: 10,
-    backgroundColor: new DynamicValue(colors.systemGray6Light, colors.black),
-  },
-});
-
-export default PastJobs;
+}

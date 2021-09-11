@@ -2,9 +2,6 @@ import 'react-native-gesture-handler';
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import { colors } from '../Model/Model';
-import { useDarkMode } from '../utils/CustomHooks/useDarkMode/useDarkMode';
-
 import HeaderButton from '../Components/HeaderButton/HeaderButton';
 import ExcerptDetail from '../ExcerptsStack/ExcerptDetail/ExcerptDetail';
 import Jobs from './Jobs/Jobs';
@@ -13,6 +10,7 @@ import PastJobs from './PastJobs/PastJobs';
 import JobDetail from './JobDetail/JobDetail';
 import CreateCustomAudition from './CreateCustomAudition/CreateCustomAudition';
 import CustomAudition from './CustomAudition/CustomAudition';
+import { useColors } from '../utils/CustomHooks/useColors/useColors';
 
 const Stack = createStackNavigator();
 
@@ -27,26 +25,22 @@ const Stack = createStackNavigator();
  * from the Tab Navigator.
  * @component
  * @example
- * ```jsx
  * <JobsStack />
- * ```
  */
-const JobsStack = ({ navigation }) => {
-  const darkMode = useDarkMode();
+export default function JobsStack({ navigation }) {
+  const colors = useColors();
 
   return (
     <Stack.Navigator
       screenOptions={{
-        headerTintColor: darkMode ? colors.greenDark : colors.greenLight,
+        headerTintColor: colors.green,
         headerTitleStyle: {
-          color: darkMode ? colors.white : colors.black,
+          color: colors.text,
         },
         headerStyle: {
-          backgroundColor: darkMode ? colors.systemGray6Dark : colors.white,
+          backgroundColor: colors.background2,
           borderBottomWidth: 1,
-          borderBottomColor: darkMode
-            ? colors.systemGray5Dark
-            : colors.systemGray5Light,
+          borderBottomColor: colors.systemGray5,
           shadowColor: 'transparent',
         },
         headerBackTitle: 'Back',
@@ -91,6 +85,4 @@ const JobsStack = ({ navigation }) => {
       <Stack.Screen name="Custom Audition" component={CustomAudition} />
     </Stack.Navigator>
   );
-};
-
-export default JobsStack;
+}

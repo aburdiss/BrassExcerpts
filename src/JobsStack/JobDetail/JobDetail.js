@@ -6,15 +6,11 @@ import {
   Pressable,
   View,
   useWindowDimensions,
+  StyleSheet,
 } from 'react-native';
 import { useNavigation, useRoute } from '@react-navigation/core';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import {
-  DynamicStyleSheet,
-  DynamicValue,
-  useDynamicStyleSheet,
-} from 'react-native-dynamic';
 
 import Calendar from './Calendar/Calendar';
 import MetaContainer from './MetaContainer/MetaContainer';
@@ -22,34 +18,112 @@ import ActionButton from '../../Components/ActionButton/ActionButton';
 import SectionHeader from '../../Components/SectionHeader/SectionHeader';
 
 import { PreferencesContext } from '../../Model/Preferences';
-import { colors } from '../../Model/Model';
 import { isFavorite } from '../../utils/isFavorite/isFavorite';
 import { useIdleScreen } from '../../utils/CustomHooks/useIdleScreen/useIdleScreen';
 import { getDateFromString } from '../../utils/getDateFromString/getDateFromString';
 import { getExcerptData } from '../../utils/getExcerptData/getExcerptData';
+import { useColors } from '../../utils/CustomHooks/useColors/useColors';
 
 /**
- * @todo Separate out these internal components to separate files.
- *
+ * @namespace JobDetail
  * @function JobDetail
  * @description A detailed view of one of the jobs in the app, with a list of
  * excerpts. When clicked, if the excerpt exists in the app, it will lead the
  * user directly to that excerpt.
  * @author Alexander Burdiss
  * @since 3/28/21
- * @version 1.3.0
+ * @version 1.4.0
  * @component
  * @example
  * <JobDetail />
  */
-const JobDetail = () => {
+export default function JobDetail() {
+  const colors = useColors();
+  const styles = StyleSheet.create({
+    actionButtonContainer: {
+      paddingHorizontal: 20,
+    },
+    bottomDisclaimer: {
+      marginVertical: 20,
+    },
+    bottomDisclaimerText: {
+      color: colors.text,
+      textAlign: 'center',
+    },
+    buttonBorder: {
+      borderTopWidth: 1,
+      borderTopColor: colors.systemGray5,
+    },
+    excerptButton: {
+      marginLeft: 20,
+      paddingRight: 20,
+      minHeight: 45,
+      backgroundColor: colors.background2,
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+    },
+    excerptName: {
+      color: colors.text,
+    },
+    excerptLink: {
+      color: colors.green,
+      width: '85%',
+      paddingVertical: 13,
+    },
+    excerptsContainer: {
+      borderBottomWidth: 1,
+      borderBottomColor: colors.systemGray5,
+      borderTopWidth: 1,
+      borderTopColor: colors.systemGray5,
+      backgroundColor: colors.background2,
+    },
+    forwardIcon: {
+      paddingRight: 5,
+    },
+    iconContainer: {
+      flexDirection: 'row',
+      width: '20%',
+      justifyContent: 'flex-end',
+    },
+    jobDetailContainer: {
+      backgroundColor: colors.background,
+    },
+    metaContainer: {
+      paddingHorizontal: 20,
+    },
+    metaContainerHorizontal: {
+      paddingHorizontal: 20,
+      flexDirection: 'row',
+    },
+    metaContainerLeft: {
+      width: '50%',
+    },
+    metaContainerRight: {
+      width: '50%',
+    },
+    noExcerptsContainer: {
+      padding: 20,
+    },
+    noExcerptsText: {
+      color: colors.text,
+    },
+    position: {
+      paddingTop: 20,
+      paddingHorizontal: 10,
+      fontSize: 24,
+      fontWeight: 'bold',
+      textAlign: 'center',
+      marginBottom: 10,
+      color: colors.text,
+    },
+  });
   useIdleScreen();
 
   const route = useRoute();
   const width = useWindowDimensions().width;
   const navigation = useNavigation();
   const { state } = useContext(PreferencesContext);
-  const styles = useDynamicStyleSheet(dynamicStyles);
 
   /**
    * @function JobDetail~openAuditionWebsite
@@ -256,101 +330,4 @@ const JobDetail = () => {
       </View>
     </ScrollView>
   );
-};
-
-const dynamicStyles = new DynamicStyleSheet({
-  actionButtonContainer: {
-    paddingHorizontal: 20,
-  },
-  bottomDisclaimer: {
-    marginVertical: 20,
-  },
-  bottomDisclaimerText: {
-    color: new DynamicValue(colors.black, colors.white),
-    textAlign: 'center',
-  },
-  buttonBorder: {
-    borderTopWidth: 1,
-    borderTopColor: new DynamicValue(
-      colors.systemGray5Light,
-      colors.systemGray5Dark,
-    ),
-  },
-  excerptButton: {
-    marginLeft: 20,
-    paddingRight: 20,
-    minHeight: 45,
-    backgroundColor: new DynamicValue(colors.white, colors.systemGray6Dark),
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-  },
-  excerptName: {
-    color: new DynamicValue(colors.black, colors.white),
-  },
-  excerptsHeader: {
-    fontWeight: 'bold',
-    paddingHorizontal: 20,
-    paddingVertical: 10,
-    fontSize: 24,
-  },
-  excerptLink: {
-    color: new DynamicValue(colors.greenLight, colors.greenDark),
-    width: '85%',
-    paddingVertical: 13,
-  },
-  excerptsContainer: {
-    borderBottomWidth: 1,
-    borderBottomColor: new DynamicValue(
-      colors.systemGray5Light,
-      colors.systemGray5Dark,
-    ),
-    borderTopWidth: 1,
-    borderTopColor: new DynamicValue(
-      colors.systemGray5Light,
-      colors.systemGray5Dark,
-    ),
-    backgroundColor: new DynamicValue(colors.white, colors.systemGray6Dark),
-  },
-  forwardIcon: {
-    paddingRight: 5,
-  },
-  iconContainer: {
-    flexDirection: 'row',
-    width: '20%',
-    justifyContent: 'flex-end',
-  },
-  jobDetailContainer: {
-    backgroundColor: new DynamicValue(colors.systemGray6Light, colors.black),
-  },
-  metaContainer: {
-    paddingHorizontal: 20,
-  },
-  metaContainerHorizontal: {
-    paddingHorizontal: 20,
-    flexDirection: 'row',
-  },
-  metaContainerLeft: {
-    width: '50%',
-  },
-  metaContainerRight: {
-    width: '50%',
-  },
-  noExcerptsContainer: {
-    padding: 20,
-  },
-  noExcerptsText: {
-    color: new DynamicValue(colors.black, colors.white),
-  },
-  position: {
-    paddingTop: 20,
-    paddingHorizontal: 10,
-    fontSize: 24,
-    fontWeight: 'bold',
-    textAlign: 'center',
-    marginBottom: 10,
-    color: new DynamicValue(colors.black, colors.white),
-  },
-});
-
-export default JobDetail;
+}

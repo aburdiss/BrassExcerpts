@@ -3,51 +3,39 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import CalendarStrip from 'react-native-calendar-strip';
 import { useRoute } from '@react-navigation/core';
 
-import { colors } from '../../../Model/Model';
 import { getDateFromString } from '../../../utils/getDateFromString/getDateFromString';
-import { useDarkMode } from '../../../utils/CustomHooks/useDarkMode/useDarkMode';
+import { useColors } from '../../../utils/CustomHooks/useColors/useColors';
 
 /**
+ * @namespace Calendar
  * @function Calendar
  * @description The calendar from the display, removed from the display so
  * that props only need to be updated once when the component is rendered
  * in two different modes.
  * @author Alexander Burdiss
  * @since 6/11/21
- * @version 1.1.0
+ * @version 1.2.0
  * @component
  * @example
  * <Calendar />
  */
 export default function Calendar() {
+  const colors = useColors();
   const route = useRoute();
-  const darkMode = useDarkMode();
 
   return (
     <CalendarStrip
       shouldAllowFontScaling={false}
-      calendarHeaderStyle={{ color: darkMode ? colors.white : colors.black }}
-      dateNumberStyle={{ color: darkMode ? colors.white : colors.black }}
-      dateNameStyle={{ color: darkMode ? colors.white : colors.black }}
-      highlightDateNumberStyle={{
-        color: darkMode ? colors.white : colors.black,
-      }}
-      highlightDateNameStyle={{
-        color: darkMode ? colors.white : colors.black,
-      }}
+      calendarHeaderStyle={{ color: colors.text }}
+      dateNumberStyle={{ color: colors.text }}
+      dateNameStyle={{ color: colors.text }}
+      highlightDateNumberStyle={{ color: colors.text }}
+      highlightDateNameStyle={{ color: colors.text }}
       rightSelector={
-        <Ionicons
-          name="chevron-forward"
-          color={darkMode ? colors.white : colors.black}
-          size={24}
-        />
+        <Ionicons name="chevron-forward" color={colors.text} size={24} />
       }
       leftSelector={
-        <Ionicons
-          name="chevron-back"
-          color={darkMode ? colors.white : colors.black}
-          size={24}
-        />
+        <Ionicons name="chevron-back" color={colors.text} size={24} />
       }
       // eslint-disable-next-line react-native/no-inline-styles
       style={{
@@ -63,27 +51,15 @@ export default function Calendar() {
       markedDates={[
         {
           date: new Date(),
-          lines: [
-            {
-              color: darkMode ? colors.greenDark : colors.greenLight,
-            },
-          ],
+          lines: [{ color: colors.green }],
         },
         {
           date: getDateFromString(route.params.closingDate),
-          lines: [
-            {
-              color: darkMode ? colors.orangeDark : colors.orangeLight,
-            },
-          ],
+          lines: [{ color: colors.orange }],
         },
         {
           date: getDateFromString(route.params.auditionDate),
-          lines: [
-            {
-              color: darkMode ? colors.redDark : colors.redLight,
-            },
-          ],
+          lines: [{ color: colors.red }],
         },
       ]}
     />

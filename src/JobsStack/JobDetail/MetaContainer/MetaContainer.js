@@ -4,23 +4,25 @@ import { useRoute } from '@react-navigation/core';
 
 import MetaLabel from '../../../Components/MetaLabel/MetaLabel';
 
-import { colors } from '../../../Model/Model';
 import { getDaysUntilDate } from '../../../utils/getDaysUntilDate/getDaysUntilDate';
 import { getDateFromString } from '../../../utils/getDateFromString/getDateFromString';
+import { useColors } from '../../../utils/CustomHooks/useColors/useColors';
 
 /**
+ * @namespace MetaContainer
  * @function MetaContainer
  * @description The Meta Container pulled out into a separate conainer so that
  * it only needs updated once when props change, because it is rendered in
  * two different modes.
  * @author Alexander Burdiss
  * @since 6/11/21
- * @version 1.1.0
+ * @version 1.2.0
  * @component
  * @example
  * <MetaContainer />
  */
 export default function MetaContainer() {
+  const colors = useColors();
   const route = useRoute();
 
   return (
@@ -28,7 +30,7 @@ export default function MetaContainer() {
       <MetaLabel label="Country" data={route.params.country} />
       <MetaLabel
         label="Closing Date"
-        labelColor={colors.orangeLight}
+        labelColor={colors.orange}
         data={
           route.params.closingDate +
           (getDateFromString(route.params.closingDate) > new Date()
@@ -39,7 +41,7 @@ export default function MetaContainer() {
       {route.params.auditionDate ? (
         <MetaLabel
           label="Audition Date"
-          labelColor={colors.redLight}
+          labelColor={colors.red}
           data={
             route.params.auditionDate +
             (getDateFromString(route.params.auditionDate) > new Date()
@@ -52,7 +54,7 @@ export default function MetaContainer() {
       ) : (
         <MetaLabel
           label="Audition Date"
-          labelColor={colors.redLight}
+          labelColor={colors.red}
           data={'unknown'}
         />
       )}

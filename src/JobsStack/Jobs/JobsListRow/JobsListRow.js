@@ -1,31 +1,46 @@
 import React from 'react';
-import { View, Text, Pressable } from 'react-native';
+import { View, Text, Pressable, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/core';
-import {
-  DynamicStyleSheet,
-  DynamicValue,
-  useDynamicStyleSheet,
-} from 'react-native-dynamic';
-
-import { colors } from '../../../Model/Model';
+import { useColors } from '../../../utils/CustomHooks/useColors/useColors';
 
 /**
  * @todo Add share modal when long press this job.
  *
+ * @namespace JobsListRow
  * @function JobsListRow
  * @description One job item in the list of jobs.
  * @author Alexander Burdiss
  * @since 3/28/21
- * @version 1.1.1
+ * @version 1.2.0
  * @component
  * @example
- * ```jsx
  * <JobsListRow job={job} />
- * ```
  */
-const JobsListRow = ({ job }) => {
+export default function JobsListRow({ job }) {
+  const colors = useColors();
+  const styles = StyleSheet.create({
+    closingDate: {
+      width: '40%',
+      textAlign: 'right',
+    },
+    container: {
+      backgroundColor: colors.green,
+      marginVertical: 8,
+      padding: 15,
+      borderRadius: 8,
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+    },
+    orchestra: {
+      fontWeight: 'bold',
+      flexWrap: 'wrap',
+      color: colors.alwaysBlack,
+    },
+    orchestraContainer: {
+      width: '60%',
+    },
+  });
   const navigation = useNavigation();
-  const styles = useDynamicStyleSheet(dynamicStyles);
 
   /**
    * @function JobsListRow~navigateToJobDetail
@@ -68,29 +83,4 @@ const JobsListRow = ({ job }) => {
       </Text>
     </Pressable>
   );
-};
-
-const dynamicStyles = new DynamicStyleSheet({
-  closingDate: {
-    width: '40%',
-    textAlign: 'right',
-  },
-  container: {
-    backgroundColor: new DynamicValue(colors.greenLight, colors.greenDark),
-    marginVertical: 8,
-    padding: 15,
-    borderRadius: 8,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-  },
-  orchestra: {
-    fontWeight: 'bold',
-    flexWrap: 'wrap',
-    color: new DynamicValue(colors.black, colors.black),
-  },
-  orchestraContainer: {
-    width: '60%',
-  },
-});
-
-export default JobsListRow;
+}
