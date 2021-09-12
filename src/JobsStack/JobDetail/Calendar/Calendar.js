@@ -48,27 +48,27 @@ export default function Calendar() {
           ? getDateFromString(route.params.auditionDate)
           : getDateFromString(route.params.closingDate)
       }
-      markedDates={[
-        {
-          date: new Date(),
-          lines: [{ color: colors?.green ?? 'rgb(255, 255, 255)' }],
-        },
-        {
-          date: getDateFromString(route.params.closingDate),
-          lines: [
-            {
-              color:
-                typeof colors.orange == 'string'
-                  ? colors.orange
-                  : 'rgb(255, 255, 255)',
-            },
-          ],
-        },
-        {
-          date: getDateFromString(route.params.auditionDate),
-          lines: [{ color: colors?.red ?? 'rgb(255, 255, 255)' }],
-        },
-      ]}
+      // markedDates={[
+      //   {
+      //     date: new Date(),
+      //     lines: [{ color: colors?.green ?? 'rgb(255, 255, 255)' }],
+      //   },
+      //   {
+      //     date: getDateFromString(route.params.closingDate),
+      //     lines: [
+      //       {
+      //         color:
+      //           typeof colors.orange == 'string'
+      //             ? colors.orange
+      //             : 'rgb(255, 255, 255)',
+      //       },
+      //     ],
+      //   },
+      //   {
+      //     date: getDateFromString(route.params.auditionDate),
+      //     lines: [{ color: colors?.red ?? 'rgb(255, 255, 255)' }],
+      //   },
+      // ]}
     />
   );
 }

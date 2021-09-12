@@ -3,6 +3,7 @@ import { StyleSheet, View } from 'react-native';
 import SegmentedControl from '@react-native-segmented-control/segmented-control';
 
 import { useColors } from '../../../utils/CustomHooks/useColors/useColors';
+import { useTheme } from '../../../utils/CustomHooks/useTheme/useTheme';
 
 /**
  * @namespace SegmentedFilterListItem
@@ -26,6 +27,7 @@ import { useColors } from '../../../utils/CustomHooks/useColors/useColors';
  * />
  */
 export default function SegmentedFilterListItem({ item, state, dispatch }) {
+  const theme = useTheme();
   const colors = useColors();
   const styles = StyleSheet.create({
     listSegmentedRowContainer: {
@@ -52,6 +54,7 @@ export default function SegmentedFilterListItem({ item, state, dispatch }) {
       <SegmentedControl
         values={choices}
         selectedIndex={state[item.setting]}
+        appearance={theme == 'dark' || theme == 'dracula' ? 'dark' : 'light'}
         onChange={(event) => {
           let index = event.nativeEvent.selectedSegmentIndex;
           let setting = { [item.setting]: index };

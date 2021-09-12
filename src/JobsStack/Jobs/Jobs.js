@@ -14,6 +14,7 @@ import { fetchInstrumentJobs } from '../../utils/fetchInstrumentJobs/fetchInstru
 import { getDateFromString } from '../../utils/getDateFromString/getDateFromString';
 import { hasValidJobs } from './utils/hasValidJobs/hasValidJobs';
 import { useColors } from '../../utils/CustomHooks/useColors/useColors';
+import { useTheme } from '../../utils/CustomHooks/useTheme/useTheme';
 
 /**
  * @todo get top excerpts for each instrument (top 10 or 20)
@@ -45,6 +46,7 @@ export default function Jobs() {
   const internalTubaJobsLink =
     'https://github.com/aburdiss/BrassExcerpts/raw/master/src/Model/Jobs/TubaJobs.json';
 
+  const theme = useTheme();
   const colors = useColors();
   const styles = StyleSheet.create({
     contentContainer: {
@@ -179,6 +181,7 @@ export default function Jobs() {
           accessibilityValue={{ now: possibleInstruments[state.jobsIndex] }}
           values={possibleInstruments}
           selectedIndex={state.jobsIndex}
+          appearance={theme == 'dark' || theme == 'dracula' ? 'dark' : 'light'}
           onChange={(event) => {
             scrollViewRef.current.scrollTo({ x: 0, y: 0 });
             dispatch({
