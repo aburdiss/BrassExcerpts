@@ -51,15 +51,22 @@ export default function Calendar() {
       markedDates={[
         {
           date: new Date(),
-          lines: [{ color: colors.green }],
+          lines: [{ color: colors?.green ?? 'rgb(255, 255, 255)' }],
         },
         {
           date: getDateFromString(route.params.closingDate),
-          lines: [{ color: colors.orange }],
+          lines: [
+            {
+              color:
+                typeof colors.orange == 'string'
+                  ? colors.orange
+                  : 'rgb(255, 255, 255)',
+            },
+          ],
         },
         {
           date: getDateFromString(route.params.auditionDate),
-          lines: [{ color: colors.red }],
+          lines: [{ color: colors?.red ?? 'rgb(255, 255, 255)' }],
         },
       ]}
     />

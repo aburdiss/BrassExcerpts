@@ -20,6 +20,7 @@ import LinkListItem from '../../Components/ListItems/LinkListItem/LinkListItem';
 import InternalListItem from '../../Components/ListItems/InternalListItem/InternalListItem';
 import SegmentedFilterListItem from '../../Components/ListItems/SegmentedFilterListItem/SegmentedFilterListItem';
 import { useColors } from '../../utils/CustomHooks/useColors/useColors';
+import { PickerListItem } from '../../Components/ListItems/PickerListItem/PickerListItem';
 
 /**
  * @namespace More
@@ -101,6 +102,10 @@ export default function More() {
               );
             case 'button':
               return <ButtonListItem item={item} dispatch={dispatch} />;
+            case 'picker':
+              return (
+                <PickerListItem item={item} dispatch={dispatch} state={state} />
+              );
             case 'segmentedFilter':
               return (
                 <SegmentedFilterListItem

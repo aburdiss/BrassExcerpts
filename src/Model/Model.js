@@ -43,6 +43,18 @@ export const colors = {
 
   reactColor: '#61dafb',
   javascriptColor: '#fcdc00',
+
+  draculaBackground: 'rgb(40, 42, 54)',
+  draculaCurrentLine: 'rgb(68, 71, 90)',
+  draculaForeground: 'rgb(248, 248, 242)',
+  draculaComment: 'rgb(98, 114, 164)',
+  draculaCyan: 'rgb(139, 233, 253)',
+  draculaGreen: 'rgb(80, 250, 123)',
+  draculaOrange: 'rgb(255, 184, 108)',
+  draculaPink: 'rgb(255, 121, 198)',
+  draculaPurple: 'rgb(189, 147, 249)',
+  draculaRed: 'rgb(255, 85, 85)',
+  draculaYellow: 'rgb(241, 250, 140)',
 };
 
 export const light = {
@@ -93,6 +105,32 @@ export const dark = {
   indigo: colors.indigoDark,
   purple: colors.purpleDark,
   pink: colors.pinkDark,
+  react: colors.reactColor,
+  javascript: colors.javascriptColor,
+};
+
+export const dracula = {
+  alwaysBlack: colors.draculaBackground,
+  alwaysWhite: colors.draculaForeground,
+  background: colors.draculaBackground,
+  background2: colors.draculaCurrentLine,
+  text: colors.draculaForeground,
+  textInverse: colors.draculaBackground,
+  systemGray: colors.draculaComment,
+  systemGray2: colors.systemGray2Dark,
+  systemGray3: colors.systemGray3Dark,
+  systemGray4: colors.systemGray4Dark,
+  systemGray5: colors.draculaComment,
+  systemGray6: colors.draculaCurrentLine,
+  red: colors.draculaRed,
+  orange: colors.draculaOrange,
+  yellow: colors.draculaYellow,
+  green: colors.draculaGreen,
+  teal: colors.draculaCyan,
+  blue: colors.draculaCyan,
+  indigo: colors.draculaPurple,
+  purple: colors.draculaPurple,
+  pink: colors.draculaPink,
   react: colors.reactColor,
   javascript: colors.javascriptColor,
 };

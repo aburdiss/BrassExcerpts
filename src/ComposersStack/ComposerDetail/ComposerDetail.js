@@ -14,7 +14,6 @@ import { composers as tubaComposers } from '../../Model/Excerpts/TubaExcerpts';
 import { PreferencesContext } from '../../Model/Preferences';
 import { getNumberOfInstruments } from '../../utils/getNumberOfInstruments/getNumberOfInstruments';
 import { useIdleScreen } from '../../utils/CustomHooks/useIdleScreen/useIdleScreen';
-import { useDarkMode } from '../../utils/CustomHooks/useDarkMode/useDarkMode';
 import { useColors } from '../../utils/CustomHooks/useColors/useColors';
 
 /**
@@ -24,14 +23,13 @@ import { useColors } from '../../utils/CustomHooks/useColors/useColors';
  * instruments available for that composer.
  * @author Alexander Burdiss
  * @since 3/3/21
- * @version 1.2.0
+ * @version 1.2.1
  * @component
  * @example
  * <ComposerDetail />
  */
 export default function ComposerDetail() {
   const colors = useColors();
-  const darkMode = useDarkMode();
   const styles = StyleSheet.create({
     bio: {
       padding: 20,
@@ -72,7 +70,7 @@ export default function ComposerDetail() {
     },
     cardImageTopText: {
       fontWeight: 'bold',
-      color: colors.text,
+      color: colors.alwaysBlack,
     },
     container: {
       paddingBottom: 50,
@@ -114,10 +112,7 @@ export default function ComposerDetail() {
             </Text>
           </View>
           <LinearGradient
-            colors={[
-              darkMode ? colors.blueDark : colors.blueLight,
-              darkMode ? colors.greenDark : colors.greenLight,
-            ]}
+            colors={[colors.blue, colors.green]}
             style={styles.linearGradient}
           >
             <Image
@@ -129,7 +124,11 @@ export default function ComposerDetail() {
           </LinearGradient>
           <View style={styles.cardBottom}>
             <View style={styles.cardImageBottom}>
-              <MetaLabel label="Country" data={composer.country} />
+              <MetaLabel
+                label="Country"
+                data={composer.country}
+                color={colors.alwaysBlack}
+              />
             </View>
             <Text
               accessibilityRole="text"

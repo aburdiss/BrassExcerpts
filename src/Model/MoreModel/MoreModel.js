@@ -90,6 +90,11 @@ export const SETTINGS = [
     value: 'Keep Screen On',
   },
   {
+    id: '7.7',
+    type: 'picker',
+    setting: 'theme',
+  },
+  {
     id: '7.5',
     type: 'button',
     value: 'Restore Defaults',

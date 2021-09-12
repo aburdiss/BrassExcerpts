@@ -221,6 +221,7 @@ const initialPreferencesState = {
   randomTuba: true,
   alwaysCollapse: false,
   keepScreenOn: false,
+  theme: 'default',
 };
 
 /**

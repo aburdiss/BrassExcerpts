@@ -1,5 +1,8 @@
+import { useContext, useEffect, useState } from 'react';
+
 import { useDarkMode } from '../useDarkMode/useDarkMode';
-import { light, dark } from '../../../Model/Model';
+import { light, dark, dracula } from '../../../Model/Model';
+import { PreferencesContext } from '../../../Model/Preferences';
 
 /**
  * @function useColors
@@ -12,6 +15,26 @@ import { light, dark } from '../../../Model/Model';
  * @version 1.0.0
  */
 export function useColors() {
+  const [theme, setTheme] = useState(light);
+  const { state } = useContext(PreferencesContext);
   const darkMode = useDarkMode();
-  return darkMode ? dark : light;
+
+  useEffect(() => {
+    if (state == undefined) {
+      setTheme(light);
+    } else {
+      if (state.theme == 'dark') {
+        setTheme(dark);
+      } else if (state.theme == 'light') {
+        setTheme(light);
+      } else if (state.theme == 'dracula') {
+        setTheme(dracula);
+      } else {
+        const newTheme = darkMode ? dark : light;
+        setTheme(newTheme);
+      }
+    }
+  }, [state, darkMode]);
+
+  return theme;
 }
