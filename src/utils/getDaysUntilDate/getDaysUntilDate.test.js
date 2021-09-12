@@ -70,7 +70,6 @@ describe('getDaysUntilDate returns correct number of days', () => {
     let sixtyDate = `${
       monthNames[sixty.getMonth()]
     } ${sixty.getDate()}, ${sixty.getFullYear()}`;
-    console.log(sixtyDate);
     expect(getDaysUntilDate(sixtyDate)).toEqual(60);
   });
 });

@@ -1,7 +1,7 @@
 import React from 'react';
-import {SafeAreaProvider} from 'react-native-safe-area-context';
-import {QueryClientProvider, QueryClient} from 'react-query';
-import {PreferencesContext} from '../src/Model/Preferences';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { QueryClientProvider, QueryClient } from 'react-query';
+import { PreferencesContext } from '../src/Model/Preferences';
 
 /**
  * @description Mocks the Safe Area Provider and Preferences Context so that
@@ -11,7 +11,7 @@ import {PreferencesContext} from '../src/Model/Preferences';
  * @author Alexander Burdiss
  * @since 4/3/21
  */
-const MockContext = ({children}) => {
+const MockContext = ({ children }) => {
   let state = {
     horn: true,
     trumpet: true,
@@ -19,6 +19,7 @@ const MockContext = ({children}) => {
     tuba: true,
     favorites: [],
     jobsIndex: 0,
+    randomFavorites: true,
   };
   // eslint-disable-next-line no-undef
   let dispatch = jest.fn();
@@ -28,10 +29,11 @@ const MockContext = ({children}) => {
   return (
     <SafeAreaProvider
       initialMetrics={{
-        frame: {x: 0, y: 0, width: 0, height: 0},
-        insets: {top: 0, left: 0, right: 0, bottom: 0},
-      }}>
-      <PreferencesContext.Provider value={{state, dispatch}}>
+        frame: { x: 0, y: 0, width: 0, height: 0 },
+        insets: { top: 0, left: 0, right: 0, bottom: 0 },
+      }}
+    >
+      <PreferencesContext.Provider value={{ state, dispatch }}>
         <QueryClientProvider client={queryClient}>
           {children}
         </QueryClientProvider>

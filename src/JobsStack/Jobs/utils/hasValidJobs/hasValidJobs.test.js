@@ -1,6 +1,34 @@
+import { daysToMilliseconds } from '../../../../utils/daysToMilliseconds/daysToMilliseconds';
 import { hasValidJobs } from './hasValidJobs';
 
 describe('hasValidJobs returns correct value', () => {
+  const monthNames = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December',
+  ];
+
+  const today = new Date();
+  const yesterday = new Date(today);
+  yesterday.setTime(yesterday.getTime() - daysToMilliseconds(1));
+  const yesterdayDateString = `${
+    monthNames[yesterday.getMonth()]
+  } ${yesterday.getDate()}, ${yesterday.getFullYear()}`;
+  const tomorrow = new Date(today);
+  tomorrow.setTime(tomorrow.getTime() + daysToMilliseconds(1));
+  const tomorrowDateString = `${
+    monthNames[tomorrow.getMonth()]
+  } ${tomorrow.getDate()}, ${tomorrow.getFullYear()}`;
+
   test('no jobs', () => {
     const mockJobs = undefined;
     const validJobs = hasValidJobs(mockJobs);
@@ -8,25 +36,20 @@ describe('hasValidJobs returns correct value', () => {
   });
 
   test('one valid job', () => {
-    const today = new Date();
-    const tomorrow = new Date(today);
-    tomorrow.setDate(tomorrow.getDate() + 1);
     const mockJobs = [
       {
-        closingDate: tomorrow,
+        closingDate: tomorrowDateString,
       },
     ];
     const validJobs = hasValidJobs(mockJobs);
+
     expect(validJobs).toBeTruthy();
   });
 
   test('one invalid job', () => {
-    const today = new Date();
-    const yesterday = new Date(today);
-    yesterday.setDate(yesterday.getDate() - 1);
     const mockJobs = [
       {
-        closingDate: yesterday,
+        closingDate: yesterdayDateString,
       },
     ];
     const validJobs = hasValidJobs(mockJobs);
@@ -34,17 +57,12 @@ describe('hasValidJobs returns correct value', () => {
   });
 
   test('one valid, one invalid job', () => {
-    const today = new Date();
-    const yesterday = new Date(today);
-    yesterday.setDate(yesterday.getDate() - 1);
-    const tomorrow = new Date(today);
-    tomorrow.setDate(tomorrow.getDate() + 1);
     const mockJobs = [
       {
-        closingDate: yesterday,
+        closingDate: yesterdayDateString,
       },
       {
-        closingDate: tomorrow,
+        closingDate: tomorrowDateString,
       },
     ];
     const validJobs = hasValidJobs(mockJobs);

@@ -1,4 +1,4 @@
-import {isFavorite} from './isFavorite';
+import { isFavorite } from './isFavorite';
 
 describe('returns correct value', () => {
   test('horn beethoven 5', () => {
@@ -9,6 +9,7 @@ describe('returns correct value', () => {
     let favorite = isFavorite(mockState, 'Beethoven', 'Symphony No. 5');
     expect(favorite).toBeTruthy();
   });
+
   test('no instruments selected, beethoven 5', () => {
     let mockState = {
       horn: false,
@@ -20,6 +21,7 @@ describe('returns correct value', () => {
     let favorite = isFavorite(mockState, 'Beethoven', 'Symphony No. 5');
     expect(favorite).toBeFalsy();
   });
+
   test('trumpet selected, horn favorite, beethoven 5', () => {
     let mockState = {
       horn: false,
@@ -29,6 +31,7 @@ describe('returns correct value', () => {
     let favorite = isFavorite(mockState, 'Beethoven', 'Symphony No. 5');
     expect(favorite).toBeFalsy();
   });
+
   test('trombone beethoven 5', () => {
     let mockState = {
       trombone: true,
@@ -40,6 +43,7 @@ describe('returns correct value', () => {
     let favorite = isFavorite(mockState, 'Beethoven', 'Symphony No. 5');
     expect(favorite).toBeTruthy();
   });
+
   test('tuba berlioz symphonie', () => {
     let mockState = {
       horn: false,

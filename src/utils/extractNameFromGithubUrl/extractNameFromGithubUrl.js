@@ -14,7 +14,8 @@ export function extractNameFromGithubUrl(url) {
     return null;
   }
 
-  const reg = /((https?:\/\/)?(www\.)?github\.com\/)?(@|#!\/)?([A-Za-z0-9_-]{1,30})(\/([-a-z]{1,40}))?/i;
+  const reg =
+    /((https?:\/\/)?(www\.)?github\.com\/)?(@|#!\/)?([A-Za-z0-9_-]{1,30})(\/([-a-z]{1,40}))?/i;
   const components = reg.exec(url);
 
   if (components && components.length > 5) {
