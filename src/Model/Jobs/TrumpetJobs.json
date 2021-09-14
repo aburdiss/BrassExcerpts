@@ -511,6 +511,31 @@
       "excerpts": []
     },
     {
+      "orchestra": "Oulu Symphony Orchestra",
+      "position": "Trumpet player",
+      "link": "https://www.kuntarekry.fi/fi/tyopaikat/trumpet-player-oulu-symphony-orchestra-oul-04-57-21/",
+      "country": "Finland",
+      "closingDate": "October 21, 2021",
+      "auditionDate": "November 12, 2021",
+      "excerpts": ["Shostakovich - Piano Concerto No. 1"]
+    },
+    {
+      "orchestra": "Orchestre National Avignon-Provence",
+      "position": "Trompette solo & Seconde trompette",
+      "link": "https://www.orchestre-avignon.com/concours/",
+      "country": "France",
+      "closingDate": "October 30, 2021",
+      "auditionDate": "November 8, 2021",
+      "excerpts": [
+        "Verdi - Rigoletto",
+        "Ravel - Piano Concerto",
+        "Marquez - Danzon no. 2",
+        "Stravinsky - The Firebird",
+        "stravinskySoldier",
+        "bachMagnificant"
+      ]
+    },
+    {
       "orchestra": "Sinfonieorchester Basel",
       "position": "2. Trompete (1)",
       "link": "https://www.muvac.com/en/vac/sinfonieorchester-basel-5300fbd",

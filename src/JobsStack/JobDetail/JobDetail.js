@@ -276,14 +276,14 @@ export default function JobDetail() {
                         <Ionicons
                           name="heart"
                           size={24}
-                          color={colors.redLight}
+                          color={colors.red}
                           style={styles.favoriteIcon}
                         />
                       )}
                       <Ionicons
                         name="chevron-forward"
                         size={24}
-                        color={colors.greenLight}
+                        color={colors.green}
                         style={styles.forwardIcon}
                       />
                     </SafeAreaView>

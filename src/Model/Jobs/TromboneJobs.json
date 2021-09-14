@@ -378,6 +378,15 @@
       "closingDate": "November 2, 2021",
       "auditionDate": "November 16, 2021",
       "excerpts": []
+    },
+    {
+      "orchestra": "Opéra de Marseille",
+      "position": "DEUXIÈME TROMBONE JOUANT LE TROISIÈME",
+      "link": "opera.marseille.fr",
+      "country": "France",
+      "closingDate": "January 11, 2022",
+      "auditionDate": "January 21, 2022",
+      "excerpts": []
     }
   ]
 }
