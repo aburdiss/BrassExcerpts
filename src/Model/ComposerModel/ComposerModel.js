@@ -43,6 +43,7 @@ export const composers = [
     image: require('../../../img/Composers/bizet.jpg'),
     country: 'France',
     dates: '1838-1875',
+    imslp: 'https://imslp.org/wiki/Category:Bizet,_Georges',
     bio: 'Georges Bizet was a prominant French composer of the Romantic Era. Best known for his operas and incidental music, Bizet had little success until his final work "Carmen".',
   },
 
@@ -54,6 +55,7 @@ export const composers = [
     image: require('../../../img/Composers/borodin.jpg'),
     country: 'Russia',
     dates: '1833-1887',
+    imslp: 'https://imslp.org/wiki/Category:Borodin,_Aleksandr',
     bio: 'Alexander Borodin was a Russian Chemist and Romantic composer, who was one of the major composers who advocated for Russian nationalist music. Borodin is best known for his symphonies, and his only opera "Prince Igor". He also made major contributions to the field of organic chemistry, and was a major proponent of education, founding a school of medicine for women in St. Petersburg.',
   },
 
@@ -65,6 +67,7 @@ export const composers = [
     image: require('../../../img/Composers/brahms.jpg'),
     country: 'Germany',
     dates: '1833-1897',
+    imslp: 'https://imslp.org/wiki/Category:Brahms,_Johannes',
     bio: 'Johannes Brahms was one of the most famous composers of all time. He is most famous for his four symphonies, but he wrote for many diverse ensembles. Brahms was a perfectionist in all that he did, and was known to occaisionally destroy some of his work to prevent it from being seen by the outside world.',
   },
 
@@ -76,6 +79,7 @@ export const composers = [
     image: require('../../../img/Composers/bruckner.jpg'),
     country: 'Austria',
     dates: '1824-1896',
+    imslp: 'https://imslp.org/wiki/Category:Bruckner,_Anton',
     bio: 'Anton Bruckner was an Austrian organist, music theorist, and composer of the romantic era. He is best known for his symphonies and religious music. Bruckner was unlike other composers of his time, in that he was very a very humble man.',
   },
 
@@ -87,6 +91,7 @@ export const composers = [
     image: require('../../../img/Composers/debussy.jpg'),
     country: 'France',
     dates: '1862-1918',
+    imslp: 'https://imslp.org/wiki/Category:Debussy,_Claude',
     bio: 'Debussy is known as the first impressionist composer, although he strongly rejected the term in his lifetime. He was born to a modest family with little cultural involvement, but was admitted to the Conservatoire de Paris for his musical ability when he was 10 years old. His experimental compositional style was rejected by the Conservatory, but he gained international fame nearly 30 years later with the release of his first opera, " Pelléas et Mélisande".',
   },
 
@@ -98,6 +103,7 @@ export const composers = [
     image: require('../../../img/Composers/donizetti.jpg'),
     country: 'Italy',
     dates: '1797-1848',
+    imslp: 'https://imslp.org/wiki/Category:Donizetti,_Gaetano/Collections',
     bio: 'Donizetti was one of the leading composers of the Bel Canto opera style, along with Rossini and Bellini. Donizetti did not come from a musical background, but was taken up by the composer Simon Mayr at a young age and enrolled in a music school. Throughout the course of his life he composed almost 70 operas. He moved to Paris towards the end of his career to escape the censorship that he was always subject to in Naples.',
   },
 
@@ -109,6 +115,7 @@ export const composers = [
     image: require('../../../img/Composers/dvorak.jpg'),
     country: 'Austrian Empire',
     dates: '1841-1904',
+    imslp: 'https://imslp.org/wiki/Category:Dvo%C5%99%C3%A1k,_Anton%C3%ADn',
     bio: 'Dvořák was one of the first Czech composers to recieve worldwide recognition. Dvořák was an admirer of Richard Wagner, and took influence from him especially in his Operas. He frequently included folk music in his compositions, and his music often had nationalistic themes.',
   },
 
@@ -120,6 +127,7 @@ export const composers = [
     image: require('../../../img/Composers/franck.jpg'),
     country: 'United Kingdom of the Netherlands (Now Belgium)',
     dates: '1822 - 1890',
+    imslp: 'https://imslp.org/wiki/Category:Franck,_C%C3%A9sar',
     bio: 'Franck studied music in Paris at a young age. After his studies, he returned to Belgium and gained a terrible reputation for his oratorio "Ruth", and moved to Paris where he became an organist and teacher. Later in life, he became the organist for the Basilica of Saint Clotilde, where he remained for the rest of his life, composing in his free time pieces that are now considered standard repetoire.',
   },
 
@@ -131,6 +139,7 @@ export const composers = [
     image: require('../../../img/Composers/handel.jpg'),
     country: 'England',
     dates: '1685-1759',
+    imslp: 'https://imslp.org/wiki/Category:Handel,_George_Frideric',
     bio: 'Handel was one of the most influential composers of the Baroque era. He studied music in Halle, began his career in Hamburg, but made his fame and wrote the majority of his compositions while living in London, providing music for a variety of settings including the three commercial opera companies he started while residing there. Handel was nearly blind by the time of his death, and his funeral was celebrated with full state honors.',
   },
 
@@ -142,6 +151,7 @@ export const composers = [
     image: require('../../../img/Composers/haydn.jpg'),
     country: 'Austria',
     dates: '1732-1809',
+    imslp: 'https://imslp.org/wiki/Category:Haydn,_Joseph',
     bio: 'Haydn was a classical composer who is commonly known as "The father of the Symphony". He spent most of his life as a court musician for the Esterházy family. He was isolated in this role, with little to no contact with the rest of the music community, and was forced to create his own style because of this. Haydn was a prolific composer, producing 104 numbered symphonies and an immense amount of chamber music.',
   },
 
@@ -153,6 +163,7 @@ export const composers = [
     image: require('../../../img/Composers/holst.jpg'),
     country: 'England',
     dates: '1874-1934',
+    imslp: 'https://imslp.org/wiki/Category:Holst,_Gustav',
     bio: 'Holst was a popular English composer of the modern era. He aspired to become a concert pianist, but neuritis in his right arm prevented him. Against his father\'s wishes, he studied to become a composer. He was unable to support himself from his compositions alone, and started to play and teach the trombone professionally. He is most well known for his orchestral composition "The Planets".',
   },
 
@@ -164,6 +175,7 @@ export const composers = [
     image: require('../../../img/Composers/liszt.jpg'),
     country: 'Hungary',
     dates: '1811-1886',
+    imslp: 'https://imslp.org/wiki/Category:Liszt,_Franz',
     bio: 'Franz Liszt is regarded as one of the greatest pianists to ever live. A well known and travelled musician in his time, he invented what we now know as the recital, and set the precedent for memorizing solo compositions. Liszt also pioneered new paths in musical form and harmony, inventing the Symphonic Poem and made radical innovations in harmony.',
   },
 
@@ -175,6 +187,7 @@ export const composers = [
     image: require('../../../img/Composers/mahler.jpg'),
     country: 'Austrian Empire',
     dates: '1860-1911',
+    imslp: 'https://imslp.org/wiki/Category:Mahler,_Gustav',
     bio: 'Mahler is one of the most popular composers of all time. In 2016, a BBC Music survey ranked three of his symphonies among the top ten symphonies of all time. His music continues to be among the top recorded and perfomed in all of classical music. During his day, he was also among one of the top conductors of his era, and was the first conductor of the New York Philharmonic Orchestra.',
   },
 
@@ -186,6 +199,7 @@ export const composers = [
     image: require('../../../img/Composers/mendelssohn.jpg'),
     country: 'Germany',
     dates: '1809-1947',
+    imslp: 'https://imslp.org/wiki/Category:Mendelssohn,_Felix',
     bio: 'Mendelssohn was born into a Jewish family, but was baptised Reformed Christian at the age of seven. He was known as a child prodigy, but his parents did not seek to capitalize on his talents. Well known as a composer, conductor, and organist, Mendelssohn helped to bring fame to the music of Bach.',
   },
 
@@ -197,6 +211,7 @@ export const composers = [
     image: require('../../../img/Composers/mozart.jpg'),
     country: 'Germany',
     dates: '1756-1791',
+    imslp: 'https://imslp.org/wiki/Category:Mozart,_Wolfgang_Amadeus',
     bio: "Mozart gained popularity as a pianist and composer at an early age. He gained employment as a court musician at the Salzburg court, but quickly lost interest and began traveling looking for other employment. In Vienna, he found great fame, but worked his whole life trying to achieve financial stability: a goal he was never able to achieve. Mozart's death is also very mysterious and controvercial.",
   },
 
