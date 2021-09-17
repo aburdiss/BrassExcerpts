@@ -223,6 +223,7 @@ export const composers = [
     image: require('../../../img/Composers/mussorgsky.jpg'),
     country: 'Russia',
     dates: '1839-1881',
+    imslp: 'https://imslp.org/wiki/Category:Mussorgsky,_Modest',
     bio: 'Mussorgsky was one of the most important composers in Russia during his lifetime. He frequently incorporated folk music, and discarded western traditions in favor of Russian nationalism. Many of his works are most famous through arrangements by other composers.',
   },
 
@@ -234,6 +235,7 @@ export const composers = [
     image: require('../../../img/Composers/ravel.jpg'),
     country: 'France',
     dates: '1875-1937',
+    imslp: 'https://imslp.org/wiki/Category:Ravel,_Maurice',
     bio: 'Ravel was an impressionist French composer. He was a careful, and slow composer, and composed much less compared to many other composers. He was also one of the first composers to realize the potential of recorded music, and was one of the first composers to record their music and marked it to a larger audience this way.',
   },
 
@@ -245,6 +247,7 @@ export const composers = [
     image: require('../../../img/Composers/respighi.jpg'),
     country: 'Italy',
     dates: '1879-1936',
+    imslp: 'https://imslp.org/wiki/Category:Respighi,_Ottorino',
     bio: 'Respighi was an Italian violinist, composer, and musicologist. Hist interest in musicology led to the composition of his three most famous compositions: "Fountains of Rome", "Pines of Rome", and "Roman Festivals"',
   },
 
@@ -256,6 +259,7 @@ export const composers = [
     image: require('../../../img/Composers/rimskyKorsakov.jpg'),
     country: 'Russia',
     dates: '1844-1908',
+    imslp: 'https://imslp.org/wiki/Category:Rimsky-Korsakov,_Nikolay',
     bio: 'Nikolai Rimsky-Korsakov was one of the most famous Russian composers. He was a master orchestrator, publishing a textbook on the subject using musical examples solely from his own compositions, and his most famous compositions are his orchestral works. Rimsky-Korsakov also spent a large portion of his musical life in association with the Russian military.',
   },
 
@@ -267,6 +271,7 @@ export const composers = [
     image: require('../../../img/Composers/rossini.jpg'),
     country: 'Italy',
     dates: '1792-1868',
+    imslp: 'https://imslp.org/wiki/Category:Rossini,_Gioacchino/Books',
     bio: 'Rossini was an Italian composer from the romantic era. His 39 operas gained him great success early in life, but he unexplainably gave up music almost entirely for the last 40 years of his life.',
   },
 
@@ -278,6 +283,7 @@ export const composers = [
     image: require('../../../img/Composers/saintSaens.jpg'),
     country: 'France',
     dates: '1835-1921',
+    imslp: 'https://imslp.org/wiki/Category:Saint-Sa%C3%ABns,_Camille',
     bio: 'Saint-Saëns was a French composer, conductor, organist, and pianist during the romantic era. Revered as a genius, he lived a mostly conventional carreer as a church organist. His most notable student was Gabriel Fauré.',
   },
 
@@ -289,6 +295,7 @@ export const composers = [
     image: require('../../../img/Composers/schubert.jpg'),
     country: 'Austria',
     dates: '1797-1828',
+    imslp: 'https://imslp.org/wiki/Category:Schubert,_Franz',
     bio: 'Schubert was a prolific Austrian composer during the late Classical and early Romantic eras. During his short lifetime he composed over 1500 works. During his lifetime, he recieved little fame and success. It was only after his lifetime when musicians such as Schumann, Mendelssohn, Liszt, and Brahms discovered and praised his music that it became well known and widely recieved.',
   },
 
@@ -300,6 +307,7 @@ export const composers = [
     image: require('../../../img/Composers/schumann.jpg'),
     country: 'Germany',
     dates: '1810-1856',
+    imslp: 'https://imslp.org/wiki/Category:Schumann,_Robert',
     bio: "Schumann was one of the most popular composers of the romantic era. He gave up the study of law to become a concert pianist, but his dreams were crushed by a hand injury. He subsequently pursued a career in composition, and married his teacher's daughter, Clara Wieck. Schumann mainly composed for piano, but later in live began to compose lieder, orchestral works, and one opera.",
   },
 
@@ -311,6 +319,7 @@ export const composers = [
     image: require('../../../img/Composers/scriabin.jpg'),
     country: 'Russia',
     dates: '1872-1915',
+    imslp: 'https://imslp.org/wiki/Category:Scriabin,_Aleksandr',
     bio: 'Scriabin is known as the best Russian Symbolist composer. Much of his compositional output experiments with synesthesia, blending the perception of sound with the perception of color. His early works are notably tonal, taking cues from Frédéric Chopin. He later began experimenting with atonality independently of Arnold Schoenberg, incorporating various aspects of mysticism and synesthesia to create music he believed aligned with his personal brand of mysticism.',
   },
 
@@ -322,6 +331,7 @@ export const composers = [
     image: require('../../../img/Composers/sibelius.jpg'),
     country: 'Finland',
     dates: '1865-1957',
+    imslp: 'https://imslp.org/wiki/Category:Sibelius,_Jean',
     bio: 'Sibelius is the most well known composer to come out of Finland. His music is credited with helping Finland to develop a national identity, and his most famous work "Finlandia" is known as Finland\'s unofficial national anthem. Sibelius mysteriously stopped composing in the last thirty years of his life, retiring to a quite life in Järvenpää.',
   },
 
@@ -333,6 +343,7 @@ export const composers = [
     image: require('../../../img/Composers/smetana.jpg'),
     country: 'Austrian Empire, Austria-Hugary (Now Czech Republic}',
     dates: '1824-1884',
+    imslp: 'https://imslp.org/wiki/Category:Smetana,_Bed%C5%99ich',
     bio: 'Smetana was a child prodigy who had his first composition performed at age six. His music became closely tied to sentiments and movements of independant statehood. He became compely deaf for the last ten years of his life.',
   },
 
@@ -344,6 +355,7 @@ export const composers = [
     image: require('../../../img/Composers/sousa.jpg'),
     country: 'The United States of America',
     dates: '1854–1932',
+    imslp: 'https://imslp.org/wiki/Category:Sousa,_John_Philip',
     bio: 'John Philip Sousa was an American composer of the late romantic era famous for his American military marches. He is known as "The March King". Sousa spent much of his career conducting The United States Marine Band, before starting his own band in 1892. Sousa also aided in the creation of the Sousaphone, a large brass instrument similar to the Helicon and Tuba.',
   },
 
@@ -355,6 +367,7 @@ export const composers = [
     image: require('../../../img/Composers/strauss.jpg'),
     country: 'Germany',
     dates: '1864-1949',
+    imslp: 'https://imslp.org/wiki/Category:Strauss,_Richard',
     bio: "Richard Strauss was one of the leading composers of the Romantic Era. He, along with Gustav Mahler, were considered successors of Richard Wagner. Although Strauss composed music for almost every classical genre, he is most famous for his tone poems. Strauss' compositional output began when he was just six years old, and continued almost eighty years later until his death.",
   },
 
@@ -366,6 +379,7 @@ export const composers = [
     image: require('../../../img/Composers/stravinsky.jpg'),
     country: 'Russia',
     dates: '1882-1971',
+    imslp: 'https://imslp.org/wiki/Category:Stravinsky,_Igor',
     bio: "Igor Stravinsky was one of the most influential composers of the twentieth century. Stravinsky's music is very unique from that of other composers, and often contains russian folk melodies. Throughout his life, the kinds of compositions that he composed also changed dramatically, from symphonies, to chamber music, to bals.",
   },
 
@@ -377,6 +391,7 @@ export const composers = [
     image: require('../../../img/Composers/tchaikovsky.jpg'),
     country: 'Russia',
     dates: '1840-1893',
+    imslp: 'https://imslp.org/wiki/Category:Tchaikovsky,_Pyotr',
     bio: "Tchaikovsky was the first Russian composer to gain international fame. Tchaikovsky recieved a western European style music education, which seemed to counter the traditional Russian music practices. This dichotomy posed a great challenge for Tchaikovsky, one that affected his self confidence a lot. Although Tchaikovsky's music gained popular support, his life was deeply affected by depression and personal crises.",
   },
 
@@ -388,6 +403,7 @@ export const composers = [
     image: require('../../../img/Composers/verdi.jpg'),
     country: 'Italy',
     dates: '1813-1901',
+    imslp: 'https://imslp.org/wiki/Category:Verdi,_Giuseppe',
     bio: 'Giuseppe Verdi was an Italian opera composer who took after Rossini, Bellini, and Donizetti. Rossini had sympathy for the Risorgimento movement for the unification of Italy, and some choruses from his early operas were in the spirit of this movement. Verdi participated briefly as an elected politician, and sought to establish himself as a landowner in his native region.',
   },
 
@@ -399,6 +415,7 @@ export const composers = [
     image: require('../../../img/Composers/wagner.jpg'),
     country: 'Germany',
     dates: '1813-1883',
+    imslp: 'https://imslp.org/wiki/Category:Wagner,_Richard',
     bio: 'Wagner is one of the most well known composers of all time. His music frequently appears in television shows and movies. He was most well known in his era for his operas, which usually run about four hours. Wagner was unusual as an opera composer because he himself wrote the liberetto for the operas he composed. Wagner had his own opera house constructed, which still stands to this day.',
   },
 
@@ -410,6 +427,7 @@ export const composers = [
     image: require('../../../img/Composers/weber.jpg'),
     country: 'Germany',
     dates: '1786-1826',
+    imslp: 'https://imslp.org/wiki/Category:Weber,_Carl_Maria_von',
     bio: 'Carl Maria von Weber was a German composer, conductor, pianist, guitarist, and music critic. He is widely regarded as one of the first significant composers of the romantic school. His contributions to the field of Opera greatly influenced the development of Romantische Oper in Germany, and he was a major influence to Marschner, Meyerbeer and Wagner.',
   },
 ];
