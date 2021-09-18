@@ -26,6 +26,7 @@ import { PreferencesContext } from '../../Model/Preferences';
 import ExcerptSection from './ExcerptSection/ExcerptSection';
 import YoutubeSection from './YoutubeSection/YoutubeSection';
 import MetaLabel from '../../Components/MetaLabel/MetaLabel';
+import ResourcesSection from './ResourcesSection/ResourcesSection';
 
 /**
  * @namespace ExcerptDetail
@@ -35,7 +36,7 @@ import MetaLabel from '../../Components/MetaLabel/MetaLabel';
  * where the image is rotated.
  * @author Alexander Burdiss
  * @since 3/3/21
- * @version 1.4.0
+ * @version 1.5.0
  * @component
  * @example
  * <ExcerptDetail />
@@ -79,7 +80,7 @@ export default function ExcerptDetail() {
     youtubeLinksContainer: {
       paddingHorizontal: 20,
       marginTop: 20,
-      marginBottom: 70,
+      marginBottom: 40,
       borderTopColor: colors.green,
       borderTopWidth: 2,
     },
@@ -328,18 +329,8 @@ export default function ExcerptDetail() {
           item={item}
         />
       </View>
-      <View style={styles.youtubeLinksContainer}>
-        <SafeAreaView edges={['right', 'left']}>
-          <Text
-            accessibilityRole="header"
-            style={styles.youtubeHeading}
-            maxFontSizeMultiplier={1.8}
-          >
-            Listen
-          </Text>
-          <YoutubeSection data={item.videos} />
-        </SafeAreaView>
-      </View>
+      <YoutubeSection data={item.videos} />
+      <ResourcesSection data={item.videos} />
     </ScrollView>
   );
 }
