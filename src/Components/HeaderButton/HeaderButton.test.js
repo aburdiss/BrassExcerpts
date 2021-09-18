@@ -2,7 +2,16 @@ import 'react-native';
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react-native';
 
-import HeaderButton from './HeaderButton';
+import HeaderButtonComponent from './HeaderButton';
+import MockContext from '../../../jest/MockContext';
+
+function HeaderButton(props) {
+  return (
+    <MockContext>
+      <HeaderButtonComponent {...props} />
+    </MockContext>
+  );
+}
 
 test('HeaderButton renders correctly', () => {
   const { queryByText } = render(

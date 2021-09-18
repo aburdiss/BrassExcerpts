@@ -3,7 +3,16 @@ import React from 'react';
 import { Text } from 'react-native';
 import { fireEvent, render } from '@testing-library/react-native';
 
-import ActionButton from './ActionButton';
+import ActionButtonComponent from './ActionButton';
+import MockContext from '../../../jest/MockContext';
+
+function ActionButton(props) {
+  return (
+    <MockContext>
+      <ActionButtonComponent {...props} />
+    </MockContext>
+  );
+}
 
 test('ActionButton renders correctly', () => {
   const { queryByText } = render(

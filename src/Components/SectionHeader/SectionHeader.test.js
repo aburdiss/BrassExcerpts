@@ -2,7 +2,16 @@ import 'react-native';
 import React from 'react';
 import { render } from '@testing-library/react-native';
 
-import SectionHeader from './SectionHeader';
+import SectionHeaderComponent from './SectionHeader';
+import MockContext from '../../../jest/MockContext';
+
+function SectionHeader(props) {
+  return (
+    <MockContext>
+      <SectionHeaderComponent {...props} />
+    </MockContext>
+  );
+}
 
 describe('renders SectionHeader correctly', () => {
   test('renders children', () => {
