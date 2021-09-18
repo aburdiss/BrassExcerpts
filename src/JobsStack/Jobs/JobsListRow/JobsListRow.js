@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, Pressable, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/core';
 import { useColors } from '../../../utils/CustomHooks/useColors/useColors';
+import { getCountryFlagEmoji } from '../../../utils/getCountryFlagEmoji/getCountryFlagEmoji';
 
 /**
  * @todo Add share modal when long press this job.
@@ -11,7 +12,7 @@ import { useColors } from '../../../utils/CustomHooks/useColors/useColors';
  * @description One job item in the list of jobs.
  * @author Alexander Burdiss
  * @since 3/28/21
- * @version 1.2.0
+ * @version 1.3.0
  * @component
  * @example
  * <JobsListRow job={job} />
@@ -30,6 +31,14 @@ export default function JobsListRow({ job }) {
       borderRadius: 8,
       flexDirection: 'row',
       justifyContent: 'space-between',
+    },
+    flag: {
+      fontSize: 20,
+    },
+    flagContainer: {
+      position: 'absolute',
+      top: -10,
+      left: -4,
     },
     orchestra: {
       fontWeight: 'bold',
@@ -71,6 +80,9 @@ export default function JobsListRow({ job }) {
         ...styles.container,
       })}
     >
+      <View style={styles.flagContainer}>
+        <Text style={styles.flag}>{getCountryFlagEmoji(job?.country)}</Text>
+      </View>
       <View style={styles.orchestraContainer}>
         <Text style={styles.orchestra} maxFontSizeMultiplier={1.8}>
           {job?.orchestra}
