@@ -2,21 +2,23 @@ import 'react-native';
 import React from 'react';
 import { render } from '@testing-library/react-native';
 
-import SectionHeaderComponent from './SectionHeader';
+import SectionHeadingComponent from './SectionHeading';
 import MockContext from '../../../jest/MockContext';
 
-function SectionHeader(props) {
+function SectionHeading(props) {
   return (
     <MockContext>
-      <SectionHeaderComponent {...props} />
+      <SectionHeadingComponent {...props} />
     </MockContext>
   );
 }
 
-describe('renders SectionHeader correctly', () => {
+describe('renders SectionHeading correctly', () => {
   test('renders children', () => {
     const headingText = 'Hello, Section Button!';
-    const { getByText } = render(<SectionHeader>{headingText}</SectionHeader>);
+    const { getByText } = render(
+      <SectionHeading>{headingText}</SectionHeading>,
+    );
     expect(getByText(headingText)).not.toBeNull();
   });
 });

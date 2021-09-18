@@ -15,7 +15,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import Calendar from './Calendar/Calendar';
 import MetaContainer from './MetaContainer/MetaContainer';
 import ActionButton from '../../Components/ActionButton/ActionButton';
-import SectionHeader from '../../Components/SectionHeader/SectionHeader';
+import SectionHeading from '../../Components/SectionHeading/SectionHeading';
 
 import { PreferencesContext } from '../../Model/Preferences';
 import { isFavorite } from '../../utils/isFavorite/isFavorite';
@@ -214,7 +214,7 @@ export default function JobDetail() {
             View Posting
           </ActionButton>
         </View>
-        <SectionHeader>Excerpts</SectionHeader>
+        <SectionHeading>Excerpts</SectionHeading>
       </SafeAreaView>
       {route.params.excerpts?.length > 0 ? (
         <View style={styles.excerptsContainer}>

@@ -4,8 +4,8 @@ import React from 'react';
 import { useColors } from '../../utils/CustomHooks/useColors/useColors';
 
 /**
- * @namespace SectionHeader
- * @function SectionHeader
+ * @namespace SectionHeading
+ * @function SectionHeading
  * @description A prestyled section header that can be used across the app
  * @author Alexander Burdiss
  * @since 5/22/21
@@ -14,9 +14,9 @@ import { useColors } from '../../utils/CustomHooks/useColors/useColors';
  * @param {String} props.children the text to render in this component
  * @component
  * @example
- * <SectionHeader>Tuba</SectionHeader />
+ * <SectionHeading>Tuba</SectionHeading />
  */
-export default function SectionHeader({ children }) {
+export default function SectionHeading({ children }) {
   const colors = useColors();
   const styles = StyleSheet.create({
     text: {

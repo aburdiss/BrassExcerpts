@@ -4,7 +4,7 @@ import LinearGradient from 'react-native-linear-gradient';
 import { useRoute } from '@react-navigation/core';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-import SectionHeader from '../../Components/SectionHeader/SectionHeader';
+import SectionHeading from '../../Components/SectionHeading/SectionHeading';
 import CompositionSection from './CompositionSection/CompositionSection';
 import MetaLabel from '../../Components/MetaLabel/MetaLabel';
 import { composers as hornComposers } from '../../Model/Excerpts/HornExcerpts';
@@ -144,7 +144,7 @@ export default function ComposerDetail() {
         <View>
           {getNumberOfInstruments(state) > 1 && (
             <SafeAreaView edges={['right', 'left']}>
-              <SectionHeader>Horn</SectionHeader>
+              <SectionHeading>Horn</SectionHeading>
             </SafeAreaView>
           )}
           <CompositionSection
@@ -156,7 +156,7 @@ export default function ComposerDetail() {
         <View>
           {getNumberOfInstruments(state) > 1 && (
             <SafeAreaView edges={['right', 'left']}>
-              <SectionHeader>Trumpet</SectionHeader>
+              <SectionHeading>Trumpet</SectionHeading>
             </SafeAreaView>
           )}
           <CompositionSection
@@ -168,7 +168,7 @@ export default function ComposerDetail() {
         <View>
           {getNumberOfInstruments(state) > 1 && (
             <SafeAreaView edges={['right', 'left']}>
-              <SectionHeader>Trombone</SectionHeader>
+              <SectionHeading>Trombone</SectionHeading>
             </SafeAreaView>
           )}
           <CompositionSection
@@ -180,7 +180,7 @@ export default function ComposerDetail() {
         <View>
           {getNumberOfInstruments(state) > 1 && (
             <SafeAreaView edges={['right', 'left']}>
-              <SectionHeader>Tuba</SectionHeader>
+              <SectionHeading>Tuba</SectionHeading>
             </SafeAreaView>
           )}
           <CompositionSection

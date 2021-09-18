@@ -3,7 +3,7 @@ import { View, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import YoutubeLink from './YoutubeLink/YoutubeLink';
-import SectionHeader from '../../../Components/SectionHeader/SectionHeader';
+import SectionHeading from '../../../Components/SectionHeading/SectionHeading';
 import YouTubeModel from '../../../Model/YouTubeModel/YouTubeModel';
 import MainHeading from '../../../Components/MainHeading/MainHeading';
 
@@ -38,7 +38,7 @@ export default function YoutubeSection({ data }) {
         <View style={styles.videosContainer}>
           {excerptVideos?.full ? (
             <View>
-              <SectionHeader>Orchestra</SectionHeader>
+              <SectionHeading>Orchestra</SectionHeading>
               {excerptVideos.full.map((video) => (
                 <YoutubeLink video={video} key={video[1]} type="full" />
               ))}
@@ -46,7 +46,7 @@ export default function YoutubeSection({ data }) {
           ) : null}
           {excerptVideos?.band ? (
             <View>
-              <SectionHeader>Band</SectionHeader>
+              <SectionHeading>Band</SectionHeading>
               {excerptVideos.band.map((video) => (
                 <YoutubeLink video={video} key={video[1]} type="band" />
               ))}
@@ -54,7 +54,7 @@ export default function YoutubeSection({ data }) {
           ) : null}
           {excerptVideos?.score ? (
             <View>
-              <SectionHeader>Full Orchestra with Score</SectionHeader>
+              <SectionHeading>Full Orchestra with Score</SectionHeading>
               {excerptVideos.score.map((video) => (
                 <YoutubeLink video={video} key={video[1]} type="score" />
               ))}
@@ -62,7 +62,7 @@ export default function YoutubeSection({ data }) {
           ) : null}
           {excerptVideos?.horn ? (
             <View>
-              <SectionHeader>Horn Specific</SectionHeader>
+              <SectionHeading>Horn Specific</SectionHeading>
               {excerptVideos.horn.map((video) => (
                 <YoutubeLink video={video} key={video[1]} type="instrument" />
               ))}
@@ -70,7 +70,7 @@ export default function YoutubeSection({ data }) {
           ) : null}
           {excerptVideos?.trumpet ? (
             <View>
-              <SectionHeader>Trumpet Specific</SectionHeader>
+              <SectionHeading>Trumpet Specific</SectionHeading>
               {excerptVideos.trumpet.map((video) => (
                 <YoutubeLink video={video} key={video[1]} type="instrument" />
               ))}
@@ -78,7 +78,7 @@ export default function YoutubeSection({ data }) {
           ) : null}
           {excerptVideos?.trombone ? (
             <View>
-              <SectionHeader>Trombone Specific</SectionHeader>
+              <SectionHeading>Trombone Specific</SectionHeading>
               {excerptVideos.trombone.map((video) => (
                 <YoutubeLink video={video} key={video[1]} type="instrument" />
               ))}
@@ -86,7 +86,7 @@ export default function YoutubeSection({ data }) {
           ) : null}
           {excerptVideos?.tuba ? (
             <View>
-              <SectionHeader>Tuba Specific</SectionHeader>
+              <SectionHeading>Tuba Specific</SectionHeading>
               {excerptVideos.tuba.map((video) => (
                 <YoutubeLink video={video} key={video[1]} type="instrument" />
               ))}
