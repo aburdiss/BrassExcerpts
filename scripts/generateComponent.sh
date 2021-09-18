@@ -2,7 +2,7 @@
 # generateComponent.sh
 # Author: Alexander Burdiss
 # Since: 9/7/21
-# Version: 1.0.0
+# Version: 1.0.1
 # Description: Generates a React component and all the necessary files that go
 # along with it.
 
@@ -17,13 +17,13 @@ YELLOW="\033[01;33m"
 NC="\033[00m"
 
 echo
-echo -e "${GREEN}██████╗ ██████╗  █████╗ ███████╗███████╗${BLUE}██╗  ██╗${NC}"
-echo -e "${GREEN}██╔══██╗██╔══██╗██╔══██╗██╔════╝██╔════╝${BLUE}╚██╗██╔╝${NC}"
-echo -e "${GREEN}██████╔╝██████╔╝███████║███████╗███████╗${BLUE} ╚███╔╝ ${NC}"
-echo -e "${GREEN}██╔══██╗██╔══██╗██╔══██║╚════██║╚════██║${BLUE} ██╔██╗ ${NC}"
-echo -e "${GREEN}██████╔╝██║  ██║██║  ██║███████║███████║${BLUE}██╔╝ ██╗${NC}"
-echo -e "${GREEN}╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚══════╝${BLUE}╚═╝  ╚═╝${NC}"
-echo "              generateComponent.sh"
+echo -e "      ${GREEN}██████╗ ██████╗  █████╗ ███████╗███████╗${BLUE}██╗  ██╗${NC}"
+echo -e "      ${GREEN}██╔══██╗██╔══██╗██╔══██╗██╔════╝██╔════╝${BLUE}╚██╗██╔╝${NC}"
+echo -e "      ${GREEN}██████╔╝██████╔╝███████║███████╗███████╗${BLUE} ╚███╔╝ ${NC}"
+echo -e "      ${GREEN}██╔══██╗██╔══██╗██╔══██║╚════██║╚════██║${BLUE} ██╔██╗ ${NC}"
+echo -e "      ${GREEN}██████╔╝██║  ██║██║  ██║███████║███████║${BLUE}██╔╝ ██╗${NC}"
+echo -e "      ${GREEN}╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚══════╝${BLUE}╚═╝  ╚═╝${NC}"
+echo "                    generateComponent.sh"
 echo
 
 if [[ $# -eq 0 || $# -eq 1 ]]; then

@@ -7,6 +7,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import SectionHeading from '../../Components/SectionHeading/SectionHeading';
 import CompositionSection from './CompositionSection/CompositionSection';
 import MetaLabel from '../../Components/MetaLabel/MetaLabel';
+import ResourcesSection from './ResourcesSection/ResourcesSection';
 import { composers as hornComposers } from '../../Model/Excerpts/HornExcerpts';
 import { composers as trumpetComposers } from '../../Model/Excerpts/TrumpetExcerpts';
 import { composers as tromboneComposers } from '../../Model/Excerpts/TromboneExcerpts';
@@ -188,6 +189,7 @@ export default function ComposerDetail() {
           />
         </View>
       ) : null}
+      <ResourcesSection data={composer.imslp} />
     </ScrollView>
   );
 }
