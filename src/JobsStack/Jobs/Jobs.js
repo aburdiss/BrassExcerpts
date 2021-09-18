@@ -18,12 +18,8 @@ import { useColors } from '../../utils/CustomHooks/useColors/useColors';
 import { useTheme } from '../../utils/CustomHooks/useTheme/useTheme';
 
 /**
- * @todo get top excerpts for each instrument (top 10 or 20)
- * @todo Make section that has top excerpts
  * @todo Make section that user can add their own lists of excerpts inside the
  * app.
- * @todo Make the "Top Excerpt" button right below the picker, and have it only
- * take you to the top excerpts for that insturment, depending on the picker.
  *
  * @namespace Jobs
  * @function Jobs
@@ -158,18 +154,6 @@ export default function Jobs() {
   ];
 
   /**
-   * @function Jobs~openTopExcerptsComponent
-   * @description Opens the top excerpts component
-   * @author Alexander Burdiss
-   * @since 3/28/21
-   * @version 1.0.0
-   */
-  // eslint-disable-next-line no-unused-vars
-  function openTopExcerptComponent() {
-    navigation.navigate('Top Excerpts');
-  }
-
-  /**
    * @function Jobs~openCreateCustomAudition
    * @description Opens the Create Custom page, so that custom auditions
    * can be added to the list.
@@ -237,9 +221,6 @@ export default function Jobs() {
           barTintColor={colors.background2}
         />
       </SafeAreaView>
-      {/* <ActionButton onPress={openTopExcerptComponent}>
-        View top {currentInstrument} excerpts
-      </ActionButton> */}
       <ScrollView style={styles.contentContainer} ref={scrollViewRef}>
         {hasValidJobs(currentJobs) ? (
           <SafeAreaView edges={['left', 'right']}>

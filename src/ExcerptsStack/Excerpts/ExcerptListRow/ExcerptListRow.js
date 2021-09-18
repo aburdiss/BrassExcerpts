@@ -20,11 +20,16 @@ import { useColors } from '../../../utils/CustomHooks/useColors/useColors';
  * @since 3/6/21
  * @version 1.4.0
  */
-export default function ExcerptListRow({ composer, composition, onPress }) {
+export default function ExcerptListRow({
+  composer,
+  composition,
+  onPress,
+  color,
+}) {
   const colors = useColors();
   const styles = StyleSheet.create({
     accentColor: {
-      color: colors.green,
+      color: color ? color : colors.green,
     },
     button: {
       paddingVertical: 10,
@@ -39,7 +44,7 @@ export default function ExcerptListRow({ composer, composition, onPress }) {
     },
     composerText: {
       fontWeight: 'bold',
-      color: colors.text,
+      color: color ? color : colors.text,
     },
     compositionText: {
       color: colors.text,
@@ -84,7 +89,7 @@ export default function ExcerptListRow({ composer, composition, onPress }) {
             <Ionicons
               name="heart"
               size={24}
-              color={colors.redLight}
+              color={colors.red}
               style={styles.favoriteIcon}
             />
           )}

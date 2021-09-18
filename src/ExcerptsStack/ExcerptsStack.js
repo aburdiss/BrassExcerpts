@@ -10,6 +10,7 @@ import Excerpts from './Excerpts/Excerpts';
 import ExcerptDetail from './ExcerptDetail/ExcerptDetail';
 import RandomExcerpt from './RandomExcerpt/RandomExcerpt';
 import HeaderButton from '../Components/HeaderButton/HeaderButton';
+import TopExcerpts from './TopExcerpts/TopExcerpts';
 
 const Stack = createStackNavigator();
 
@@ -73,6 +74,7 @@ export default function ExcerptsStack({ navigation }) {
         })}
       />
       <Stack.Screen name="Random Excerpt" component={RandomExcerpt} />
+      <Stack.Screen name="Top Excerpts" component={TopExcerpts} />
     </Stack.Navigator>
   );
 }

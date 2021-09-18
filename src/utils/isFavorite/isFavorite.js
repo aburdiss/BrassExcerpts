@@ -18,10 +18,10 @@ export function isFavorite(state, composer, composition) {
   const tubaKey = 'tuba' + composer + composition;
 
   let keyArray = [];
-  state.horn && keyArray.push(hornKey);
-  state.trumpet && keyArray.push(trumpetKey);
-  state.trombone && keyArray.push(tromboneKey);
-  state.tuba && keyArray.push(tubaKey);
+  state?.horn && keyArray.push(hornKey);
+  state?.trumpet && keyArray.push(trumpetKey);
+  state?.trombone && keyArray.push(tromboneKey);
+  state?.tuba && keyArray.push(tubaKey);
 
   for (let key of keyArray) {
     if (state?.favorites.includes(key)) {

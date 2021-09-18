@@ -3,6 +3,7 @@ import { Text, View, Pressable, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/core';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
+import ExcerptListRow from '../ExcerptListRow/ExcerptListRow';
 import { PreferencesContext } from '../../../Model/Preferences';
 import { getInstrumentsSelected } from '../../../utils/getInstrumentsSelected/getInstrumentsSelected';
 import { useColors } from '../../../utils/CustomHooks/useColors/useColors';
@@ -41,6 +42,9 @@ export default function ExcerptListHeader() {
       flex: 1,
       color: colors.alwaysBlack,
     },
+    topExcerptsButton: {
+      backgroundColor: colors.background2,
+    },
   });
 
   const navigation = useNavigation();
@@ -58,6 +62,17 @@ export default function ExcerptListHeader() {
   );
 
   /**
+   * @function ExcerptListHeader~openTopExcerptsComponent
+   * @description Opens the top excerpts component
+   * @author Alexander Burdiss
+   * @since 3/28/21
+   * @version 1.0.0
+   */
+  function openTopExcerptComponent() {
+    navigation.navigate('Top Excerpts');
+  }
+
+  /**
    * @function ExcerptListHeader~navigateToSettings
    * @description Navigates the user from the home tab to the settings tab so
    * that they can change instruments.
@@ -70,33 +85,45 @@ export default function ExcerptListHeader() {
   }
 
   return (
-    <View style={styles.container}>
-      <Pressable
-        onPress={navigateToSettings}
-        accessibilityRole="button"
-        accessibilityLabel={instrumentsSelected}
-        accessibilityHint="Navigates to Settings screen change instrument"
-        android_ripple={{
-          color: styles.instrumentText.color,
-        }}
-      >
-        <SafeAreaView edges={['right', 'left']}>
-          <Text
-            style={styles.instrumentText}
-            accessibilityRole="header"
-            maxFontSizeMultiplier={1.8}
-          >
-            {instrumentsSelected}
-          </Text>
-          <Text
-            accessibilityRole="text"
-            style={styles.descriptionText}
-            maxFontSizeMultiplier={2.4}
-          >
-            Tap to change instrument selection
-          </Text>
-        </SafeAreaView>
-      </Pressable>
+    <View>
+      <View style={styles.container}>
+        <Pressable
+          onPress={navigateToSettings}
+          accessibilityRole="button"
+          accessibilityLabel={instrumentsSelected}
+          accessibilityHint="Navigates to Settings screen change instrument"
+          android_ripple={{
+            color: styles.instrumentText.color,
+          }}
+        >
+          <SafeAreaView edges={['right', 'left']}>
+            <Text
+              style={styles.instrumentText}
+              accessibilityRole="header"
+              maxFontSizeMultiplier={1.8}
+            >
+              {instrumentsSelected}
+            </Text>
+            <Text
+              accessibilityRole="text"
+              style={styles.descriptionText}
+              maxFontSizeMultiplier={2.4}
+            >
+              Tap to change instrument selection
+            </Text>
+          </SafeAreaView>
+        </Pressable>
+      </View>
+      <View style={styles.topExcerptsButton}>
+        <ExcerptListRow
+          composer={'Top Excerpts'}
+          onPress={openTopExcerptComponent}
+          color={colors.orange}
+        />
+        {/* <ActionButton onPress={openTopExcerptComponent}>
+          View top excerpts
+        </ActionButton> */}
+      </View>
     </View>
   );
 }

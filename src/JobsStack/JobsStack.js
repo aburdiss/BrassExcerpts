@@ -5,7 +5,6 @@ import { createStackNavigator } from '@react-navigation/stack';
 import HeaderButton from '../Components/HeaderButton/HeaderButton';
 import ExcerptDetail from '../ExcerptsStack/ExcerptDetail/ExcerptDetail';
 import Jobs from './Jobs/Jobs';
-import TopExcerpts from './TopExcerpts/TopExcerpts';
 import PastJobs from './PastJobs/PastJobs';
 import JobDetail from './JobDetail/JobDetail';
 import CreateCustomAudition from './CreateCustomAudition/CreateCustomAudition';
@@ -62,7 +61,6 @@ export default function JobsStack({ navigation }) {
           title: 'Current Auditions',
         }}
       />
-      <Stack.Screen name="Top Excerpts" component={TopExcerpts} />
       <Stack.Screen
         name="Job Detail"
         component={JobDetail}
