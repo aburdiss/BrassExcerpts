@@ -39,12 +39,13 @@ export default function ComposerListRow({ name, index, imageSource, onPress }) {
       color: colors.green,
     },
     chevron: {
-      color: colors.systemGray,
+      color: colors.green,
     },
     container: {
       flexDirection: 'row',
       alignItems: 'center',
-      marginLeft: 20,
+      paddingLeft: 20,
+      backgroundColor: colors.background2,
     },
     image: {
       aspectRatio: 1,
