@@ -3,6 +3,7 @@ import { Pressable, Linking, Text, StyleSheet } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import { useColors } from '../../../../utils/CustomHooks/useColors/useColors';
+import { getContrast } from '../../../../utils/getContrast/getContrast';
 
 /**
  * @namespace YoutubeLink
@@ -16,7 +17,7 @@ import { useColors } from '../../../../utils/CustomHooks/useColors/useColors';
  * affects the color of the link button.
  * @author Alexander Burdiss
  * @since 3/10/21
- * @version 1.3.0
+ * @version 1.3.1
  * @component
  * @example
  * <YoutubeLink video={video} type="band" />
@@ -38,13 +39,6 @@ export default function YoutubeLink({ video, type }) {
     instrument: colors.purple,
   };
 
-  const textColors = {
-    full: colors.text,
-    score: colors.text,
-    band: colors.text,
-    instrument: colors.alwaysWhite,
-  };
-
   return (
     <Pressable
       accessible="true"
@@ -52,7 +46,7 @@ export default function YoutubeLink({ video, type }) {
       accessibilityLabel={video[0]}
       accessibilityHint={'Opens YouTube video in separate app'}
       android_ripple={{
-        color: textColors[type],
+        color: getContrast(backgroundColors[type], colors),
       }}
       onPress={function openYouTubeLink() {
         const url = `https://youtu.be/${video[1]}`;
@@ -74,14 +68,18 @@ export default function YoutubeLink({ video, type }) {
     >
       <Text
         style={{
-          color: textColors[type],
+          color: getContrast(backgroundColors[type], colors),
           ...styles.text,
         }}
         maxFontSizeMultiplier={1.8}
       >
         {video[0]}
       </Text>
-      <Ionicons name="open-outline" size={20} color={textColors[type]} />
+      <Ionicons
+        name="open-outline"
+        size={20}
+        color={getContrast(backgroundColors[type], colors)}
+      />
     </Pressable>
   );
 }
