@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useRef, useState } from 'react';
 import { View, ScrollView, Pressable, Text, StyleSheet } from 'react-native';
 import SegmentedControl from '@react-native-segmented-control/segmented-control';
+import SearchBar from 'react-native-search-bar';
 import { useNavigation } from '@react-navigation/core';
 import { useQuery } from 'react-query';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -31,7 +32,7 @@ import { useTheme } from '../../utils/CustomHooks/useTheme/useTheme';
  * and display more information about that Job to the user.
  * @author Alexander Burdiss
  * @since 3/5/21
- * @version 1.2.0
+ * @version 1.3.0
  * @component
  * @example
  * <Jobs />
@@ -80,16 +81,27 @@ export default function Jobs() {
       backgroundColor: colors.background,
     },
     segmentedControlContainer: {
-      padding: 10,
+      paddingHorizontal: 8,
+      paddingTop: 10,
+    },
+    topContainer: {
+      paddingHorizontal: 2,
     },
   });
 
   const { state, dispatch } = useContext(PreferencesContext);
   const [currentJobs, setCurrentJobs] = useState([]);
+  const [currentSearchTerm, setCurrentSearchTerm] = useState('');
   const navigation = useNavigation();
   const scrollViewRef = useRef(null);
 
   const possibleInstruments = ['Horn', 'Trumpet', 'Trombone', 'Tuba'];
+  const searchPlaceholderText = [
+    'Filter Current Horn Jobs',
+    'Filter Current Trumpet Jobs',
+    'Filter Current Trombone Jobs',
+    'Filter Current Tuba Jobs',
+  ];
 
   const queryPreferences = {
     staleTime: 1000 * 60 * 60, // One Hour
@@ -170,25 +182,59 @@ export default function Jobs() {
     navigation.navigate('Create Custom Audition');
   }
 
+  /**
+   * @function Jobs~isValidSearchResult
+   * @param {Object} job A job object fetched from the server
+   * @returns {boolean} whether the job should show or not (if searched)
+   * @author Alexander Burdiss
+   * @since 9/18/21
+   * @version 1.0.0
+   */
+  function isValidSearchResult(job) {
+    if (!currentSearchTerm) {
+      return true;
+    }
+
+    if (
+      job.auditionDate.toLowerCase().includes(currentSearchTerm) ||
+      job.closingDate.toLowerCase().includes(currentSearchTerm) ||
+      job.country.toLowerCase().includes(currentSearchTerm) ||
+      job.orchestra.toLowerCase().includes(currentSearchTerm) ||
+      job.position.toLowerCase().includes(currentSearchTerm)
+    ) {
+      return true;
+    }
+  }
+
   return (
     <View style={styles.jobsContainer}>
-      <SafeAreaView
-        edges={['left', 'right']}
-        style={styles.segmentedControlContainer}
-      >
-        <SegmentedControl
-          accessibilityRole="menu"
-          accessibilityValue={{ now: possibleInstruments[state.jobsIndex] }}
-          values={possibleInstruments}
-          selectedIndex={state.jobsIndex}
-          appearance={theme == 'dark' || theme == 'dracula' ? 'dark' : 'light'}
-          onChange={(event) => {
-            scrollViewRef.current.scrollTo({ x: 0, y: 0 });
-            dispatch({
-              type: 'SET_SETTING',
-              payload: { jobsIndex: event.nativeEvent.selectedSegmentIndex },
-            });
-          }}
+      <SafeAreaView edges={['left', 'right']} style={styles.topContainer}>
+        <View style={styles.segmentedControlContainer}>
+          <SegmentedControl
+            accessibilityRole="menu"
+            accessibilityValue={{ now: possibleInstruments[state.jobsIndex] }}
+            values={possibleInstruments}
+            selectedIndex={state.jobsIndex}
+            appearance={
+              theme == 'dark' || theme == 'dracula' ? 'dark' : 'light'
+            }
+            onChange={(event) => {
+              scrollViewRef.current.scrollTo({ x: 0, y: 0 });
+              dispatch({
+                type: 'SET_SETTING',
+                payload: { jobsIndex: event.nativeEvent.selectedSegmentIndex },
+              });
+            }}
+          />
+        </View>
+        <SearchBar
+          hideBackground
+          searchBarStyle="minimal"
+          placeholder={searchPlaceholderText[state.jobsIndex]}
+          onChangeText={(text) => setCurrentSearchTerm(text.toLowerCase())}
+          tintColor={colors.green}
+          textColor={colors.text}
+          barTintColor={colors.background2}
         />
       </SafeAreaView>
       {/* <ActionButton onPress={openTopExcerptComponent}>
@@ -199,7 +245,7 @@ export default function Jobs() {
           <SafeAreaView edges={['left', 'right']}>
             {currentJobs?.map((job, index) => {
               const jobDate = getDateFromString(job.closingDate);
-              if (jobDate > new Date()) {
+              if (jobDate > new Date() && isValidSearchResult(job)) {
                 return <JobsListRow key={index} job={job} />;
               }
             })}
