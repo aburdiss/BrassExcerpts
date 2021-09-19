@@ -1,4 +1,4 @@
-import React, { useState, useRef, useContext } from 'react';
+import React, { useRef, useContext } from 'react';
 import { Text, View, StyleSheet, ScrollView, Pressable } from 'react-native';
 import SegmentedControl from '@react-native-segmented-control/segmented-control';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -9,14 +9,14 @@ import { isFavorite } from '../../utils/isFavorite/isFavorite';
 import { getExcerptData } from '../../utils/getExcerptData/getExcerptData';
 import { useColors } from '../../utils/CustomHooks/useColors/useColors';
 import { useTheme } from '../../utils/CustomHooks/useTheme/useTheme';
-import { getTopExcerpts } from '../../utils/getTopExcerpts/getTopExcerpts';
+import { useTopExcerpts } from '../../utils/CustomHooks/useTopExcerpts/useTopExcerpts';
 
 /**
  * @function TopExcerpts
  * @description The top asked for excerpts for each instrument in the app.
  * @author Alexander Burdiss
  * @since 9/18/21
- * @version 1.0.0
+ * @version 1.1.0
  * @component
  * @example
  * <TopExcerpts />
@@ -25,18 +25,90 @@ const TopExcerpts = () => {
   const colors = useColors();
   const theme = useTheme();
   const styles = StyleSheet.create({
+    buttonBorder: {
+      borderTopWidth: 1,
+      borderTopColor: colors.systemGray5,
+    },
     container: {
       height: '100%',
       backgroundColor: colors.background,
     },
     contentContainer: {
       flex: 1,
-      paddingHorizontal: 10,
       paddingBottom: 10,
     },
+    count: {
+      textAlign: 'center',
+      color: colors.text,
+    },
+    countContainer: {
+      width: '18%',
+      backgroundColor: colors.background,
+      padding: 8,
+      marginHorizontal: 10,
+      borderRadius: 25,
+      borderWidth: 1,
+      borderColor: colors.systemGray5,
+    },
+    countHeader: {
+      color: colors.text,
+      fontSize: 16,
+      fontWeight: 'bold',
+    },
+    countHeaderContainer: {
+      width: '20%',
+    },
+    disclaimerText: {
+      color: colors.text,
+      textAlign: 'center',
+      padding: 20,
+    },
+    excerptButton: {
+      paddingRight: 20,
+      minHeight: 45,
+      backgroundColor: colors.background2,
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+    },
+    excerptName: {
+      color: colors.text,
+    },
+    excerptNotButton: {
+      paddingRight: 20,
+      minHeight: 45,
+      backgroundColor: colors.background2,
+      flexDirection: 'row',
+      justifyContent: 'flex-start',
+      alignItems: 'center',
+    },
+    excerptLink: {
+      color: colors.green,
+      width: '67%',
+      paddingVertical: 13,
+    },
+    forwardIcon: {
+      paddingRight: 5,
+    },
+    iconContainer: {
+      flexDirection: 'row',
+      width: '15%',
+      justifyContent: 'flex-end',
+    },
+    listHeader: {
+      paddingHorizontal: 20,
+      minHeight: 45,
+      backgroundColor: colors.background2,
+      flexDirection: 'row',
+      justifyContent: 'flex-start',
+      alignItems: 'center',
+      borderBottomWidth: 1,
+      borderBottomColor: colors.systemGray5,
+      borderTopLeftRadius: 20,
+      borderTopRightRadius: 20,
+    },
     segmentedControlContainer: {
-      paddingHorizontal: 8,
-      paddingTop: 10,
+      padding: 10,
     },
     topContainer: {
       paddingHorizontal: 2,
@@ -46,8 +118,9 @@ const TopExcerpts = () => {
   const possibleInstruments = ['Horn', 'Trumpet', 'Trombone', 'Tuba'];
 
   const scrollViewRef = useRef();
-  const [instrumentIndex, setInstrumentIndex] = useState(0);
-  const { state } = useContext(PreferencesContext);
+  const { state, dispatch } = useContext(PreferencesContext);
+
+  const topExcerpts = useTopExcerpts(possibleInstruments[state.jobsIndex]);
 
   return (
     <View style={styles.container}>
@@ -55,25 +128,40 @@ const TopExcerpts = () => {
         <View style={styles.segmentedControlContainer}>
           <SegmentedControl
             accessibilityRole="menu"
-            accessibilityValue={{ now: possibleInstruments[instrumentIndex] }}
+            accessibilityValue={{ now: possibleInstruments[state.jobsIndex] }}
             values={possibleInstruments}
-            selectedIndex={instrumentIndex}
+            selectedIndex={state.jobsIndex}
             appearance={
               theme == 'dark' || theme == 'dracula' ? 'dark' : 'light'
             }
             onChange={(event) => {
               scrollViewRef.current.scrollTo({ x: 0, y: 0 });
-              setInstrumentIndex(event.nativeEvent.selectedSegmentIndex);
+              dispatch({
+                type: 'SET_SETTING',
+                payload: { jobsIndex: event.nativeEvent.selectedSegmentIndex },
+              });
             }}
           />
         </View>
       </SafeAreaView>
+      <SafeAreaView edges={['left']}>
+        <View accessibilityRole="text" style={styles.listHeader}>
+          <View style={styles.countHeaderContainer}>
+            <Text maxFontSizeMultiplier={1.8} style={styles.countHeader}>
+              Count
+            </Text>
+          </View>
+          <Text style={styles.countHeader} maxFontSizeMultiplier={1.8}>
+            Excerpt
+          </Text>
+        </View>
+      </SafeAreaView>
       <ScrollView style={styles.contentContainer} ref={scrollViewRef}>
-        {getTopExcerpts(possibleInstruments[instrumentIndex]).map(
-          (excerpt, index) => {
+        {topExcerpts &&
+          topExcerpts.map((excerpt, index) => {
             const borderTop = index != 0 ? styles.buttonBorder : null;
             const excerptData = getExcerptData(
-              ['horn', 'trumpet', 'trombone', 'tuba'][instrumentIndex],
+              ['horn', 'trumpet', 'trombone', 'tuba'][state.jobsIndex],
               excerpt.name,
             );
 
@@ -101,9 +189,15 @@ const TopExcerpts = () => {
                       // navigateToExcerptDetailPage(excerptData);
                     }}
                   >
+                    <View style={styles.countContainer}>
+                      <Text maxFontSizeMultiplier={1.8} style={styles.count}>
+                        {excerpt.count}
+                      </Text>
+                    </View>
                     <Text style={styles.excerptLink}>
                       <Text maxFontSizeMultiplier={1.8}>
-                        {excerptData.composerLast} -{' '}
+                        {excerptData.composerLast}
+                        {' - '}
                       </Text>
                       <Text maxFontSizeMultiplier={1.8}>
                         {excerptData.name}
@@ -116,10 +210,10 @@ const TopExcerpts = () => {
                       {isFavorite(
                         {
                           ...state,
-                          horn: instrumentIndex == 0,
-                          trumpet: instrumentIndex == 1,
-                          trombone: instrumentIndex == 2,
-                          tuba: instrumentIndex == 3,
+                          horn: state.jobsIndex == 0,
+                          trumpet: state.jobsIndex == 1,
+                          trombone: state.jobsIndex == 2,
+                          tuba: state.jobsIndex == 3,
                         },
                         excerptData.composerLast,
                         excerptData.name,
@@ -146,8 +240,13 @@ const TopExcerpts = () => {
                 <SafeAreaView key={index} edges={['left']}>
                   <View
                     accessibilityRole="text"
-                    style={[styles.excerptButton, borderTop]}
+                    style={[styles.excerptNotButton, borderTop]}
                   >
+                    <View style={styles.countContainer}>
+                      <Text maxFontSizeMultiplier={1.8} style={styles.count}>
+                        {excerpt.count}
+                      </Text>
+                    </View>
                     <Text
                       style={styles.excerptName}
                       maxFontSizeMultiplier={1.8}
@@ -158,9 +257,11 @@ const TopExcerpts = () => {
                 </SafeAreaView>
               );
             }
-          },
-        )}
-        ; })}
+          })}
+        <Text style={styles.disclaimerText}>
+          Excerpt Counts are drawn from all of the current and past auditions
+          available in this app.
+        </Text>
       </ScrollView>
     </View>
   );
