@@ -3,6 +3,7 @@ import { Text, View, StyleSheet, ScrollView, Pressable } from 'react-native';
 import SegmentedControl from '@react-native-segmented-control/segmented-control';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import { useNavigation } from '@react-navigation/core';
 
 import { PreferencesContext } from '../../Model/Preferences';
 import { isFavorite } from '../../utils/isFavorite/isFavorite';
@@ -119,8 +120,22 @@ const TopExcerpts = () => {
 
   const scrollViewRef = useRef();
   const { state, dispatch } = useContext(PreferencesContext);
+  const navigation = useNavigation();
 
   const topExcerpts = useTopExcerpts(possibleInstruments[state.jobsIndex]);
+
+  /**
+   * @function TopExcerpts~navigateToExcerptDetailPage
+   * @description Opens the excerpt detail page with the appropriate excerpt
+   * data passed in
+   * @author Alexander Burdiss
+   * @since 9/19/21
+   * @version 1.0.0
+   * @param {Object} excerpt The excerpt to display in detail
+   */
+  function navigateToExcerptDetailPage(excerpt) {
+    navigation.navigate('Excerpt Detail', excerpt);
+  }
 
   return (
     <View style={styles.container}>
@@ -186,7 +201,7 @@ const TopExcerpts = () => {
                       ...borderTop,
                     })}
                     onPress={() => {
-                      // navigateToExcerptDetailPage(excerptData);
+                      navigateToExcerptDetailPage(excerptData);
                     }}
                   >
                     <View style={styles.countContainer}>
