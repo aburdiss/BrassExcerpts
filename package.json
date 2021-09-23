@@ -10,7 +10,8 @@
     "coverage": "jest --coverage",
     "lint": "eslint .",
     "licenses": "npm-license-crawler --onlyDirectDependencies --json src/MoreStack/Licenses/licenses.json",
-    "gen": "./scripts/generateComponent.sh"
+    "gen": "./scripts/generateComponent.sh",
+    "reset": "./scripts/reset.sh"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.15.8",
