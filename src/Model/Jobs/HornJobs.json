@@ -370,6 +370,52 @@
       ]
     },
     {
+      "orchestra": "Peoria Symphony Orchestra",
+      "position": "Assistant Principal Horn",
+      "link": "https://peoriasymphony.org/about/auditions/",
+      "country": "USA",
+      "closingDate": "September 30, 2021",
+      "auditionDate": "October 17, 2021",
+      "excerpts": [
+        "beethoven3",
+        "beethoven7",
+        "brahms1",
+        "brahms3",
+        "Ravel - Pavane",
+        "schubert9",
+        "Shostakovich - Symphony No. 5",
+        "straussEulenspiegel",
+        "straussHeldenleben"
+      ]
+    },
+    {
+      "orchestra": "Peoria Symphony Orchestra",
+      "position": "Third Horn",
+      "link": "https://peoriasymphony.org/about/auditions/",
+      "country": "USA",
+      "closingDate": "September 30, 2021",
+      "auditionDate": "October 17, 2021",
+      "excerpts": [
+        "berliozRomeoJuliet",
+        "brahmsPiano1",
+        "brahmsPiano2",
+        "dvorakCello",
+        "dvorak9",
+        "mendelssohn3",
+        "straussHeldenleben",
+        "straussEulenspiegel"
+      ]
+    },
+    {
+      "orchestra": "Bad Reichenhaller Philharmoniker",
+      "position": "2. Horn 50% bis zum 30.04.2023 ab 01.05.2023 2. Horn 100%",
+      "link": "https://www.brphil.de/orchester/freie-stellen/",
+      "country": "Germany",
+      "closingDate": "October 3, 2021",
+      "auditionDate": "",
+      "excerpts": []
+    },
+    {
       "orchestra": "Royal Stockholm Philharmonic Orchestra",
       "position": "Tutti horn 3rd and 2nd",
       "link": "https://www.konserthuset.se/en/about-us/available-positions/horn/",
@@ -388,6 +434,24 @@
       "excerpts": []
     },
     {
+      "orchestra": "Shanghai Opera",
+      "position": "圆号（第二、四声部）",
+      "link": "http://www.shanghaiopera.com.cn/shgjy/index.html",
+      "country": "China",
+      "closingDate": "October 7, 2021",
+      "auditionDate": "",
+      "excerpts": [
+        "beethovenFidelio",
+        "beethoven3",
+        "Puccini - Tosca",
+        "Mozart - Cosi fan tutti",
+        "mahler1",
+        "mahler9",
+        "straussDonQuixote",
+        "straussHeldenleben"
+      ]
+    },
+    {
       "orchestra": "West Australian Symphony Orchestra",
       "position": "Associate Principal Horn",
       "link": "https://www.waso.com.au/about-waso/work-with-us/work-with-waso-orchestral-vacancies/associate-principal-horn/",
@@ -398,7 +462,7 @@
         "beethoven2",
         "beethoven7",
         "brahms2",
-        "Ravel - Pavane pour une infant défunte",
+        "Ravel - Pavane",
         "bachBrandenburg1",
         "Shostakovich - Symphony No. 5",
         "straussHeldenleben",
@@ -407,6 +471,27 @@
         "straussEulenspiegel",
         "Ravel - Piano Concerto",
         "wagnerSigfried"
+      ]
+    },
+    {
+      "orchestra": "Orquestra Simfònica de Barcelona i Nacional de Catalunya",
+      "position": "Quinta trompa, asistente de tercera trompa (1) – Temporary",
+      "link": "https://www.muvac.com/en/vac/orquestra-simfonica-de-barcelona-i-nacional-de-catalunya-e6210e9",
+      "country": "Spain",
+      "closingDate": "October 11, 2021",
+      "auditionDate": "November 9, 2021",
+      "excerpts": [
+        "mendelssohn3",
+        "beethoven6",
+        "brahmsPiano1",
+        "brahmsPiano2",
+        "schumann3",
+        "Shostakovich - Symphony No. 5",
+        "straussHeldenleben",
+        "straussEulenspiegel",
+        "weberFreischutz",
+        "haydn31",
+        "wagnerRheingold"
       ]
     },
     {
@@ -439,6 +524,54 @@
       ]
     },
     {
+      "orchestra": "New Zealand Symphony Orchestra",
+      "position": "Associate Principal 3rd Horn",
+      "link": "https://www.nzso.co.nz/new-zealands-orchestra/work-with-us/associate-principal-3rd-horn/",
+      "country": "New Zealand",
+      "closingDate": "October 18, 2021",
+      "auditionDate": "October 18, 2021",
+      "excerpts": [
+        "beethoven6",
+        "Prokofiev - Romeo and Juliet Suite No. 2",
+        "mendelssohn3",
+        "mendelssohnMidsummer",
+        "Ravel - Piano Concerto",
+        "straussHeldenleben",
+        "straussEulenspiegel"
+      ]
+    },
+    {
+      "orchestra": "Teatro Massimo",
+      "position": "Secondo Corno con obbligo del Quarto e a seguire",
+      "link": "https://www.teatromassimo.it/audizioni-selezioni-e-bandi/audizioni-e-selezioni-976/audizione-per-professori-d-orchestra-stagione-2022.html",
+      "country": "Italy",
+      "closingDate": "November 22, 2021",
+      "auditionDate": "November 29, 2021",
+      "excerpts": [
+        "Mozart - Cosi fan tutti",
+        "beethoven9",
+        "bachBrandenburg1",
+        "haydn31",
+        "mozart40",
+        "beethoven3",
+        "Beethoven - Symphony No. 4",
+        "beethoven7",
+        "beethoven8",
+        "beethovenFidelio",
+        "mahler1",
+        "mahler9",
+        "Strauss - An Alpine Symphony",
+        "straussEulenspiegel",
+        "straussDonQuixote",
+        "straussHeldenleben",
+        "schubert9",
+        "Shostakovich - Symphony No. 5",
+        "wagnerRheingold",
+        "wagnerGotterdammerung",
+        "Wagner - Rienzi"
+      ]
+    },
+    {
       "orchestra": "United States Army Band Pershing’s Own",
       "position": "Horn",
       "link": "https://www.usarmyband.com/vacancies/horn-the-u-s-army-concert-band",
@@ -461,6 +594,47 @@
         "straussHeldenleben",
         "straussEulenspiegel",
         "wagnerGotterdammerung"
+      ]
+    },
+    {
+      "orchestra": "Teatro Massimo",
+      "position": "Terzo Corno con obbligo del Primo, del Secondo, del Quarto e a seguire",
+      "link": "https://www.teatromassimo.it/audizioni-selezioni-e-bandi/audizioni-e-selezioni-976/audizione-per-professori-d-orchestra-stagione-2022.html",
+      "country": "Italy",
+      "closingDate": "November 29, 2021",
+      "auditionDate": "December 6, 2021",
+      "excerpts": [
+        "Ravel - Piano Concerto",
+        "straussHeldenleben",
+        "Ravel - Pavane",
+        "tchaikovsky5",
+        "Wagner - Die Meistersinger von Nürnberg",
+        "straussEulenspiegel",
+        "Strauss - An Alpine Symphony",
+        "straussDonJuan",
+        "mahler3",
+        "mahler5",
+        "dvorak9",
+        "mendelssohn3",
+        "Shostakovich - Symphony No. 5",
+        "brahmsPiano1",
+        "berliozRomeoJuliet",
+        "Prokofiev - Romeo and Juliet"
+      ]
+    },
+    {
+      "orchestra": "USAF Band of the Golden West",
+      "position": "Horn",
+      "link": "https://www.music.af.mil/Auditions/Upcoming-Vacancies/",
+      "country": "USA",
+      "closingDate": "December 5, 2021",
+      "auditionDate": "February 4, 2022",
+      "excerpts": [
+        "Jenkins - American Overture for Band",
+        "Smith - Festival Variations",
+        "straussEulenspiegel",
+        "tchaikovsky5",
+        "Williams - Hymn to the Fallen"
       ]
     },
     {
