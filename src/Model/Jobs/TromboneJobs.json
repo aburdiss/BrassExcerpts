@@ -362,6 +362,62 @@
       "excerpts": []
     },
     {
+      "orchestra": "Portland Symphony Orchestra",
+      "position": "Bass Trombone",
+      "link": "https://portlandsymphony.org/about-pso/musicians/auditions-and-employment/#PC",
+      "country": "USA",
+      "closingDate": "October 4, 2021",
+      "auditionDate": "October 19, 2021",
+      "excerpts": [
+        "bachCelloSuite",
+        "beethoven9",
+        "berliozFaust",
+        "franckD",
+        "haydnCreation",
+        "Kodaly - Háry János",
+        "respighiFountains",
+        "rossiniWilliamTell",
+        "schumann3",
+        "straussHeldenleben",
+        "wagnerRheingold",
+        "wagnerValkyrie"
+      ]
+    },
+    {
+      "orchestra": "San Francisco Symphony",
+      "position": "Principal Trombone",
+      "link": "https://www.sfsymphony.org/About-SFS/Auditions/Orchestra-Auditions",
+      "country": "USA",
+      "closingDate": "October 7, 2021",
+      "auditionDate": "January 24, 2022 ",
+      "excerpts": []
+    },
+    {
+      "orchestra": "Oklahoma City Philharmonic",
+      "position": "Principal Trombone",
+      "link": "https://www.okcphil.org/principal-trombone/",
+      "country": "USA",
+      "closingDate": "October 15, 2021",
+      "auditionDate": "October 26, 2021",
+      "excerpts": [
+        "berliozFaust",
+        "berliozSymphonie",
+        "mahler3",
+        "ravelBolero",
+        "rossiniWilliamTell",
+        "saintSaens3",
+        "schumann3",
+        "straussZarathustra",
+        "straussEulenspiegel",
+        "wagnerValkyrie",
+        "wagnerTannhauser",
+        "brahms2",
+        "bruckner8",
+        "Hindemith - Symphonic Metamorphosis",
+        "verdiNabucco"
+      ]
+    },
+    {
       "orchestra": "Orchestre Philharmonique de Nice",
       "position": "Un trombone solo",
       "link": "www.opera-nice.org",
@@ -378,6 +434,53 @@
       "closingDate": "November 2, 2021",
       "auditionDate": "November 16, 2021",
       "excerpts": []
+    },
+    {
+      "orchestra": "Jacksonville Symphony",
+      "position": "Principal Trombone",
+      "link": "https://www.jaxsymphony.org/about/employment-auditions/",
+      "country": "USA",
+      "closingDate": "November 8, 2021",
+      "auditionDate": "November 8, 2021",
+      "excerpts": []
+    },
+    {
+      "orchestra": "Teatro Massimo",
+      "position": "Primo trombone con obbligo della fila e del trombone contralto",
+      "link": "https://www.teatromassimo.it/audizioni-selezioni-e-bandi/audizioni-e-selezioni-976/audizione-per-professori-d-orchestra-stagione-2022.html",
+      "country": "Italy",
+      "closingDate": "November 15, 2021",
+      "auditionDate": "November 22, 2021",
+      "excerpts": []
+    },
+    {
+      "orchestra": "Slovak National Theatre",
+      "position": "3rd player in trombones section , bass trombone",
+      "link": "https://snd.sk/konkurzy-na-umelcov",
+      "country": "Slovakia",
+      "closingDate": "November 20, 2021",
+      "auditionDate": "November 30, 2021",
+      "excerpts": [
+        "Dvořák - Rusalka",
+        "Frešo - Narodil sa chrobáčik",
+        "Leoncavallo - Pagliacci",
+        "Mascagni - Cavalleria rusticana",
+        "Massenet - Werther",
+        "Prokofiev - Romeo and Juliet",
+        "Puccini - La bohème",
+        "rossiniWilliamTell",
+        "rossiniLaGazza",
+        "Suchoň: Krútňava",
+        "Tchaikovsky - Nutcracker",
+        "Tchaikivsky - Swan Lake",
+        "Verdi - Aida",
+        "Verdi - Don Carlo",
+        "Verdi - Falstaff",
+        "Verdi - Macbeth",
+        "Verdi - Otello",
+        "Verdi - Requiem",
+        "wagnerValkyrie"
+      ]
     },
     {
       "orchestra": "Opéra de Marseille",

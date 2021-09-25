@@ -126,6 +126,38 @@
       ]
     },
     {
+      "orchestra": "Dallas Symphony Orchestra",
+      "position": "Principal Trumpet",
+      "link": "https://www.dallassymphony.org/about-the-dso/careers/auditions/",
+      "country": "USA",
+      "closingDate": "July 11, 2021",
+      "auditionDate": "November 1, 2021",
+      "excerpts": [
+        "bachMassB",
+        "Bartók - Concerto for Orchestra",
+        "beethovenLeonore3",
+        "Bernstein - Symphonic Dances from West Side Story",
+        "brahmsAcademic",
+        "debussyNocturnes",
+        "Gershwin - Piano Concerto in F",
+        "mahler3",
+        "mahler5",
+        "Mussorgsky - Pictures at an Exhibition",
+        "Ravel - Piano Concerto",
+        "Respighi - Pines of Rome",
+        "rimskyKorsakovScheherazade",
+        "Schmidt - Symphony No. 4",
+        "schumann2",
+        "Strauss - Der Rosenkavalier",
+        "straussAlpine",
+        "Stravinsky - The Firebird",
+        "stravinskyPetrushka",
+        "wagnerParsifal",
+        "wagnerGotterdamerung",
+        "wagnerTannhauser"
+      ]
+    },
+    {
       "orchestra": "The Venice Symphony",
       "position": "Second Trumpet",
       "link": "https://www.thevenicesymphony.org/muscians-personnel/",
@@ -511,6 +543,32 @@
       "excerpts": []
     },
     {
+      "orchestra": "Shanghai Opera",
+      "position": "小号",
+      "link": "www.shanghaiopera.com.cn/shgjy/index.html",
+      "country": "China",
+      "closingDate": "October 7, 2021",
+      "auditionDate": "",
+      "excerpts": [
+        "bizetCarmen",
+        "donizettiDonPasquale",
+        "Wagner - Lohengrin",
+        "tchaikovskyNutcracker",
+        "Mussorgsky - Pictures at an Exhibition",
+        "Stravinsky - Pulcinella",
+        "mahler5"
+      ]
+    },
+    {
+      "orchestra": "Dallas Symphony Orchestra",
+      "position": "Fourth/Utility Trumpet",
+      "link": "https://www.dallassymphony.org/about-the-dso/careers/auditions/",
+      "country": "USA",
+      "closingDate": "October 17, 2021",
+      "auditionDate": "January 17, 2022",
+      "excerpts": []
+    },
+    {
       "orchestra": "Oulu Symphony Orchestra",
       "position": "Trumpet player",
       "link": "https://www.kuntarekry.fi/fi/tyopaikat/trumpet-player-oulu-symphony-orchestra-oul-04-57-21/",
@@ -542,6 +600,69 @@
       "country": "Switzerland",
       "closingDate": "October 31, 2021",
       "auditionDate": "December 19, 2021",
+      "excerpts": []
+    },
+    {
+      "orchestra": "Lahti Symphony Orchestra",
+      "position": "Principal Trumpet",
+      "link": "https://www.sinfonialahti.fi/orchestra/open-vacancies/?lang=en",
+      "country": "Finland",
+      "closingDate": "November 1, 2021",
+      "auditionDate": "November 20, 2021",
+      "excerpts": [
+        "Sibelius - Symphony No. 1",
+        "mahler5",
+        "sibelius2",
+        "straussEulenspiegel",
+        "Sibelius – Symphony No. 5",
+        "stravinskyPetrushka",
+        "Rautavaara - Cantus Arcticus",
+        "Aho - Symphony No. 17",
+        "Bartók - Concerto for Orchestra",
+        "rimskyKorsakovScheherazade",
+        "Shostakovich - Symphony No. 5",
+        "Conti - Dynasty"
+      ]
+    },
+    {
+      "orchestra": "Tonkünstler-Orchester Niederösterreich",
+      "position": "1. Trompete (1) – Permanent",
+      "link": "https://www.muvac.com/en/vac/tonkuenstler-orchester-niederoesterreich-39b0e53",
+      "country": "Austria",
+      "closingDate": "December 6, 2021",
+      "auditionDate": "January 24, 2022",
+      "excerpts": [
+        "bachChristmasOratorio",
+        "Bartók - Concerto for Orchestra",
+        "beethovenLeonore3",
+        "beethovenLeonore2",
+        "bizetCarmen",
+        "Ellington - Black, Beige and Brown",
+        "mahler3",
+        "mahler5",
+        "Mussorgsky - Pictures at an Exhibition",
+        "Ravel - Piano Concerto",
+        "rimskyKorsakovScheherazade",
+        "Schmidt - Symphony No. 4",
+        "straussAlpine",
+        "straussBorgeois",
+        "straussHeldenleben",
+        "Strauss - Der Rosenkavalier",
+        "straussSinfoniaDomestica",
+        "stravinskyPetrushka",
+        "Stravinsky - Pulcinella",
+        "stravinskyRite",
+        "tchaikovskyCapriccio",
+        "wagnerParsifal"
+      ]
+    },
+    {
+      "orchestra": "Bad Reichenhaller Philharmoniker",
+      "position": "2x 66,6% Koord. Erste (Solo-) Trompete mit Verpflichtung zur 2. Trompete (deutsche Trompete)",
+      "link": "https://www.brphil.de/orchester/freie-stellen/",
+      "country": "Germany",
+      "closingDate": "December 31, 2021",
+      "auditionDate": "",
       "excerpts": []
     }
   ]

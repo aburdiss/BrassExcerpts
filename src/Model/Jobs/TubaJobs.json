@@ -32,6 +32,21 @@
       ]
     },
     {
+      "orchestra": "Fairfax Symphony Orchestra",
+      "position": "Tuba",
+      "link": "https://www.fairfaxsymphony.org/orchestra-auditions",
+      "country": "USA",
+      "closingDate": "October 16, 2021",
+      "auditionDate": "October 16, 2021",
+      "excerpts": [
+        "berliozFaust",
+        "Prokofiev - Symphony No. 5",
+        "straussEulenspiegel",
+        "wagnerMeistersinger",
+        "wagnerValkyrie"
+      ]
+    },
+    {
       "orchestra": "Kyoto Symphony Orchestra",
       "position": "Tuba",
       "link": "https://kyoto-symphony.jp/en/audition/",
@@ -39,20 +54,6 @@
       "closingDate": "October 28, 2021",
       "auditionDate": "December 21, 2021",
       "excerpts": ["wagnerMeistersinger", "wagnerValkyrie"]
-    },
-    {
-      "orchestra": "United States Military Academy Band",
-      "position": "Tuba",
-      "link": "https://westpointband.com/auditions.html",
-      "country": "USA",
-      "closingDate": "November 1, 2021",
-      "auditionDate": "",
-      "excerpts": [
-        "sousaStarsAndStripes",
-        "Grantham – J’ai ete au bal",
-        "V. Williams – Toccata Marziale",
-        "King – Barnum & Bailey’s Favorite"
-      ]
     },
     {
       "orchestra": "St. Louis Symphony Orchestra",
@@ -85,6 +86,46 @@
       ]
     },
     {
+      "orchestra": "United States Military Academy Band",
+      "position": "Tuba",
+      "link": "https://westpointband.com/auditions.html",
+      "country": "USA",
+      "closingDate": "November 1, 2021",
+      "auditionDate": "",
+      "excerpts": [
+        "sousaStarsAndStripes",
+        "Grantham – J’ai ete au bal",
+        "V. Williams – Toccata Marziale",
+        "King – Barnum & Bailey’s Favorite"
+      ]
+    },
+    {
+      "orchestra": "Gävle Symfoniorkester",
+      "position": "Tuba",
+      "link": "http://www.gavlesymfoniorkester.se/vacancies/",
+      "country": "Sweden",
+      "closingDate": "November 15, 2021",
+      "auditionDate": "January 31, 2022",
+      "excerpts": [
+        "Prokofiev - Symphony No. 5",
+        "Prokofiev - Romeo and Juliet",
+        "wagnerValkyrie",
+        "Nielsen - Symphony No. 4",
+        "wagnerLohengrin",
+        "berliozFaust",
+        "bruckner4",
+        "mahler1",
+        "respighiFountains",
+        "Stravinsky - Petrouchka",
+        "Tchaikovsky - 1812 Overture",
+        "wagnerRheingold",
+        "Shostakovich - Symphony No. 5",
+        "Mussorgsky - Pictures at an Exhibition",
+        "Ewald - Quintet No. 1",
+        "Arnold - Quintet"
+      ]
+    },
+    {
       "orchestra": "Tonhalle-Orchester Zürich",
       "position": "Solo-Tuba (1) – Fest ",
       "link": "https://www.muvac.com/de/vac/tonhalle-orchester-zuerich-f812658",
@@ -96,6 +137,31 @@
         "mahler1",
         "Prokofiev - Symphony No. 5",
         "respighiFountains"
+      ]
+    },
+    {
+      "orchestra": "Richmond Symphony",
+      "position": "Principal Tuba",
+      "link": "https://www.richmondsymphony.com/who-we-are/auditions/audition-principal-tuba/",
+      "country": "USA",
+      "closingDate": "December 6, 2021",
+      "auditionDate": "January 24, 2022",
+      "excerpts": [
+        "berliozFaust",
+        "berliozRomeoJuliet",
+        "brahms2",
+        "bruckner7",
+        "Gershwin - An American in Paris",
+        "holstPlanets",
+        "mahler1",
+        "mahler5",
+        "Mussorgsky - Pictures at an Exhibition",
+        "Prokofiev - Symphony No. 5",
+        "respighiFountains",
+        "Rossini - La Gazza Ladra",
+        "straussHeldenleben",
+        "wagnerMeistersinger",
+        "wagnerValkyrie"
       ]
     }
   ]

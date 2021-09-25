@@ -9,6 +9,8 @@
  */
 export function getCountryFlagEmoji(country) {
   switch (country) {
+    case 'Austria':
+      return '🇦🇹';
     case 'Australia':
       return '🇦🇺';
     case 'Belgium':
