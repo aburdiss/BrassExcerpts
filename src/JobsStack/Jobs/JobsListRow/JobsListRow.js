@@ -12,7 +12,7 @@ import { getCountryFlagEmoji } from '../../../utils/getCountryFlagEmoji/getCount
  * @description One job item in the list of jobs.
  * @author Alexander Burdiss
  * @since 3/28/21
- * @version 1.3.0
+ * @version 1.3.1
  * @component
  * @example
  * <JobsListRow job={job} />
@@ -21,7 +21,7 @@ export default function JobsListRow({ job }) {
   const colors = useColors();
   const styles = StyleSheet.create({
     closingDate: {
-      width: '40%',
+      width: 135,
       textAlign: 'right',
     },
     container: {
@@ -46,7 +46,8 @@ export default function JobsListRow({ job }) {
       color: colors.alwaysBlack,
     },
     orchestraContainer: {
-      width: '60%',
+      // width: '60%',
+      flexShrink: 10,
     },
   });
   const navigation = useNavigation();
