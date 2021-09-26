@@ -3,26 +3,25 @@ import {
   ScrollView,
   Text,
   Linking,
-  Pressable,
   View,
   useWindowDimensions,
   StyleSheet,
 } from 'react-native';
 import { useNavigation, useRoute } from '@react-navigation/core';
-import Ionicons from 'react-native-vector-icons/Ionicons';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import Calendar from './Calendar/Calendar';
 import MetaContainer from './MetaContainer/MetaContainer';
 import ActionButton from '../../Components/ActionButton/ActionButton';
 import SectionHeading from '../../Components/SectionHeading/SectionHeading';
+import ConditionalExcerptLink from '../../Components/ConditionalExcerptLink/ConditionalExcerptLink';
 
 import { PreferencesContext } from '../../Model/Preferences';
-import { isFavorite } from '../../utils/isFavorite/isFavorite';
 import { useIdleScreen } from '../../utils/CustomHooks/useIdleScreen/useIdleScreen';
 import { getDateFromString } from '../../utils/getDateFromString/getDateFromString';
-import { getExcerptData } from '../../utils/getExcerptData/getExcerptData';
 import { useColors } from '../../utils/CustomHooks/useColors/useColors';
+import { getInstrumentsSelected } from '../../utils/getInstrumentsSelected/getInstrumentsSelected';
+import { capitalize } from '../../utils/captiatlize/capitalize';
 
 /**
  * @namespace JobDetail
@@ -50,41 +49,12 @@ export default function JobDetail() {
       color: colors.text,
       textAlign: 'center',
     },
-    buttonBorder: {
-      borderTopWidth: 1,
-      borderTopColor: colors.systemGray5,
-    },
-    excerptButton: {
-      marginLeft: 20,
-      paddingRight: 20,
-      minHeight: 45,
-      backgroundColor: colors.background2,
-      flexDirection: 'row',
-      justifyContent: 'space-between',
-      alignItems: 'center',
-    },
-    excerptName: {
-      color: colors.text,
-    },
-    excerptLink: {
-      color: colors.green,
-      width: '85%',
-      paddingVertical: 13,
-    },
     excerptsContainer: {
       borderBottomWidth: 1,
       borderBottomColor: colors.systemGray5,
       borderTopWidth: 1,
       borderTopColor: colors.systemGray5,
       backgroundColor: colors.background2,
-    },
-    forwardIcon: {
-      paddingRight: 5,
-    },
-    iconContainer: {
-      flexDirection: 'row',
-      width: '20%',
-      justifyContent: 'flex-end',
     },
     jobDetailContainer: {
       backgroundColor: colors.background,
@@ -107,6 +77,7 @@ export default function JobDetail() {
     },
     noExcerptsText: {
       color: colors.text,
+      textAlign: 'center',
     },
     position: {
       paddingTop: 20,
@@ -184,6 +155,11 @@ export default function JobDetail() {
     navigation.navigate('Jobs Excerpt Detail', excerpt);
   }
 
+  const instrument = ['horn', 'trumpet', 'trombone', 'tuba'][state.jobsIndex];
+  const activeInstruments = getInstrumentsSelected(state);
+  const instrumentActive = activeInstruments.includes(capitalize(instrument));
+  const hasExcerpts = route.params.excerpts?.length > 0;
+
   return (
     <ScrollView style={styles.jobDetailContainer}>
       <SafeAreaView edges={['left', 'right']}>
@@ -214,100 +190,35 @@ export default function JobDetail() {
             View Posting
           </ActionButton>
         </View>
+        {hasExcerpts && !instrumentActive && (
+          <SafeAreaView
+            style={styles.noExcerptsContainer}
+            edges={['left', 'right']}
+          >
+            <Text
+              accessibilityRole="text"
+              style={styles.noExcerptsText}
+              maxFontSizeMultiplier={1.8}
+            >
+              Enable This instrument in settings to be able to view available
+              excerpts
+            </Text>
+          </SafeAreaView>
+        )}
         <SectionHeading>Excerpts</SectionHeading>
       </SafeAreaView>
-      {route.params.excerpts?.length > 0 ? (
+      {hasExcerpts ? (
         <View style={styles.excerptsContainer}>
-          {route.params.excerpts.map((excerpt, index) => {
-            const borderTop = index != 0 ? styles.buttonBorder : null;
-
-            const excerptData = getExcerptData(
-              ['horn', 'trumpet', 'trombone', 'tuba'][state.jobsIndex],
-              excerpt,
-            );
-
-            if (excerptData) {
-              return (
-                <SafeAreaView edges={['left']} key={index}>
-                  <Pressable
-                    accessible
-                    accessibilityRole="button"
-                    accessibilityLabel={
-                      excerptData.composerLast + ' ' + excerptData.name
-                    }
-                    accessibilityHint={
-                      'Navigates to excerpt ' +
-                      excerptData.composerLast +
-                      ' ' +
-                      excerptData.name
-                    }
-                    style={({ pressed }) => ({
-                      opacity: pressed ? 0.7 : 1,
-                      ...styles.excerptButton,
-                      ...borderTop,
-                    })}
-                    onPress={() => {
-                      navigateToExcerptDetailPage(excerptData);
-                    }}
-                  >
-                    <Text style={styles.excerptLink}>
-                      <Text maxFontSizeMultiplier={1.8}>
-                        {excerptData.composerLast} -{' '}
-                      </Text>
-                      <Text maxFontSizeMultiplier={1.8}>
-                        {excerptData.name}
-                      </Text>
-                    </Text>
-                    <SafeAreaView
-                      style={styles.iconContainer}
-                      edges={['right']}
-                    >
-                      {isFavorite(
-                        {
-                          ...state,
-                          horn: state.jobsIndex == 0,
-                          trumpet: state.jobsIndex == 1,
-                          trombone: state.jobsIndex == 2,
-                          tuba: state.jobsIndex == 3,
-                        },
-                        excerptData.composerLast,
-                        excerptData.name,
-                      ) && (
-                        <Ionicons
-                          name="heart"
-                          size={24}
-                          color={colors.red}
-                          style={styles.favoriteIcon}
-                        />
-                      )}
-                      <Ionicons
-                        name="chevron-forward"
-                        size={24}
-                        color={colors.green}
-                        style={styles.forwardIcon}
-                      />
-                    </SafeAreaView>
-                  </Pressable>
-                </SafeAreaView>
-              );
-            } else {
-              return (
-                <SafeAreaView key={index} edges={['left']}>
-                  <View
-                    accessibilityRole="text"
-                    style={[styles.excerptButton, borderTop]}
-                  >
-                    <Text
-                      style={styles.excerptName}
-                      maxFontSizeMultiplier={1.8}
-                    >
-                      {excerpt}
-                    </Text>
-                  </View>
-                </SafeAreaView>
-              );
-            }
-          })}
+          {route.params.excerpts.map((excerpt, index) => (
+            <ConditionalExcerptLink
+              instrument={instrument}
+              state={state}
+              excerpt={excerpt}
+              navigateToExcerptDetail={navigateToExcerptDetailPage}
+              key={index}
+              index={index}
+            />
+          ))}
         </View>
       ) : (
         <SafeAreaView
