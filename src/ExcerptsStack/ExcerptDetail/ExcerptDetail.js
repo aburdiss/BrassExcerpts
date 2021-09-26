@@ -65,7 +65,7 @@ export default function ExcerptDetail() {
     singleAddToFavoritesButton: {
       position: 'absolute',
       top: 5,
-      right: 90,
+      right: 87,
     },
     title: {
       fontStyle: 'italic',
@@ -291,8 +291,8 @@ export default function ExcerptDetail() {
                 size={32}
                 color={
                   isFavorite(state, item.composerLast, item.name)
-                    ? colors.redLight
-                    : colors.greenLight
+                    ? colors.red
+                    : colors.green
                 }
               />
             </Pressable>

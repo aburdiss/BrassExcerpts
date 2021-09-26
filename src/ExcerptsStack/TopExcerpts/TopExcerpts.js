@@ -75,6 +75,8 @@ const TopExcerpts = () => {
     },
     excerptName: {
       color: colors.text,
+      width: '80%',
+      paddingVertical: 13,
     },
     excerptNotButton: {
       paddingRight: 20,

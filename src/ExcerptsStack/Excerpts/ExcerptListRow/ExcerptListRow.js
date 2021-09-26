@@ -34,6 +34,7 @@ export default function ExcerptListRow({
     button: {
       paddingVertical: 10,
       paddingLeft: 25,
+      paddingRight: 10,
       borderBottomColor: colors.systemGray5,
       borderBottomWidth: 1,
       flexDirection: 'row',
@@ -41,6 +42,9 @@ export default function ExcerptListRow({
       alignItems: 'center',
       minHeight: 44,
       backgroundColor: colors.background2,
+    },
+    chevron: {
+      width: 25,
     },
     composerText: {
       fontWeight: 'bold',
@@ -52,15 +56,17 @@ export default function ExcerptListRow({
     },
     iconContainer: {
       flexDirection: 'row',
-      paddingRight: 20,
+      justifyContent: 'flex-end',
+      flexShrink: 0,
     },
     favoriteIcon: {
       paddingRight: 5,
+      width: 25,
     },
     text: {
       fontSize: 16,
       flexDirection: 'row',
-      maxWidth: '85%',
+      flexShrink: 10,
       flexWrap: 'wrap',
     },
   });
@@ -97,6 +103,7 @@ export default function ExcerptListRow({
             name="chevron-forward"
             size={24}
             color={styles.accentColor.color}
+            style={styles.chevron}
           />
         </View>
       </SafeAreaView>
