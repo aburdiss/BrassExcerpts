@@ -4,6 +4,7 @@ import SegmentedControl from '@react-native-segmented-control/segmented-control'
 
 import { useColors } from '../../../utils/CustomHooks/useColors/useColors';
 import { useTheme } from '../../../utils/CustomHooks/useTheme/useTheme';
+import { getDarkOrLightTheme } from '../../../utils/getDarkOrLightTheme/getDarkOrLightTheme';
 
 /**
  * @namespace SegmentedFilterListItem
@@ -12,7 +13,7 @@ import { useTheme } from '../../../utils/CustomHooks/useTheme/useTheme';
  * preferences.
  * @author Alexander Burdiss
  * @since 12/17/20
- * @version 1.1.0
+ * @version 1.1.1
  * @param {Object} props.item The data to render in this list item
  * @param {Object} props.state The current user app state
  * @param {Function} props.dispatch A function to call to the reducer to
@@ -54,7 +55,7 @@ export default function SegmentedFilterListItem({ item, state, dispatch }) {
       <SegmentedControl
         values={choices}
         selectedIndex={state[item.setting]}
-        appearance={theme == 'dark' || theme == 'dracula' ? 'dark' : 'light'}
+        appearance={getDarkOrLightTheme(theme)}
         onChange={(event) => {
           let index = event.nativeEvent.selectedSegmentIndex;
           let setting = { [item.setting]: index };
