@@ -139,11 +139,7 @@ export default function RandomExcerptHeader({
             </Text>
           </View>
           {windowWidth > 330 && (
-            <Ionicons
-              name="chevron-forward"
-              color={colors.greenLight}
-              size={24}
-            />
+            <Ionicons name="chevron-forward" color={colors.green} size={24} />
           )}
         </Pressable>
       </View>
