@@ -11,13 +11,14 @@ import { getExcerptData } from '../../utils/getExcerptData/getExcerptData';
 import { useColors } from '../../utils/CustomHooks/useColors/useColors';
 import { useTheme } from '../../utils/CustomHooks/useTheme/useTheme';
 import { useTopExcerpts } from '../../utils/CustomHooks/useTopExcerpts/useTopExcerpts';
-
+import { getInstrumentsSelected } from '../../utils/getInstrumentsSelected/getInstrumentsSelected';
+import { capitalize } from '../../utils/captiatlize/capitalize';
 /**
  * @function TopExcerpts
  * @description The top asked for excerpts for each instrument in the app.
  * @author Alexander Burdiss
  * @since 9/18/21
- * @version 1.1.0
+ * @version 1.2.0
  * @component
  * @example
  * <TopExcerpts />
@@ -137,6 +138,10 @@ const TopExcerpts = () => {
     navigation.navigate('Excerpt Detail', excerpt);
   }
 
+  const instrument = ['horn', 'trumpet', 'trombone', 'tuba'][state.jobsIndex];
+  const activeInstruments = getInstrumentsSelected(state);
+  const instrumentActive = activeInstruments.includes(capitalize(instrument));
+
   return (
     <View style={styles.container}>
       <SafeAreaView edges={['left', 'right']} style={styles.topContainer}>
@@ -179,8 +184,7 @@ const TopExcerpts = () => {
               ['horn', 'trumpet', 'trombone', 'tuba'][state.jobsIndex],
               excerpt.name,
             );
-
-            if (excerptData) {
+            if (excerptData && instrumentActive) {
               return (
                 <SafeAreaView edges={['left']} key={index}>
                   <Pressable
@@ -250,6 +254,29 @@ const TopExcerpts = () => {
                   </Pressable>
                 </SafeAreaView>
               );
+            } else if (excerptData && !instrumentActive) {
+              return (
+                <SafeAreaView key={index} edges={['left']}>
+                  <View
+                    accessibilityRole="text"
+                    style={[styles.excerptNotButton, borderTop]}
+                  >
+                    <View style={styles.countContainer}>
+                      <Text maxFontSizeMultiplier={1.8} style={styles.count}>
+                        {excerpt.count}
+                      </Text>
+                    </View>
+                    <Text style={styles.excerptName}>
+                      <Text maxFontSizeMultiplier={1.8}>
+                        {excerptData.composerLast} -{' '}
+                      </Text>
+                      <Text maxFontSizeMultiplier={1.8}>
+                        {excerptData.name}
+                      </Text>
+                    </Text>
+                  </View>
+                </SafeAreaView>
+              );
             } else {
               return (
                 <SafeAreaView key={index} edges={['left']}>
@@ -273,6 +300,12 @@ const TopExcerpts = () => {
               );
             }
           })}
+        {!instrumentActive && (
+          <Text style={styles.disclaimerText}>
+            Enable this instrument in settings to be able to view available
+            excerpts
+          </Text>
+        )}
         <Text style={styles.disclaimerText}>
           Excerpt Counts are drawn from all of the current and past auditions
           available in this app.
