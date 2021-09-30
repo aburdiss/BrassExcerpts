@@ -122,7 +122,7 @@
         "rimskyKorsakovScheherazade",
         "donizettiDonPasquale",
         "Mussorgsky - Pictures at an Exhibition",
-        "ravelBolero"
+        "Ravel - Bolero"
       ]
     },
     {
@@ -622,6 +622,35 @@
         "rimskyKorsakovScheherazade",
         "Shostakovich - Symphony No. 5",
         "Conti - Dynasty"
+      ]
+    },
+    {
+      "orchestra": "Teatro Regio di Torino",
+      "position": "SECONDA TROMBA E SEGUENTI",
+      "link": "https://www.teatroregio.torino.it/selezione-personale#orchestra",
+      "country": "Italy",
+      "closingDate": "November 6, 2021",
+      "auditionDate": "",
+      "excerpts": [
+        "bizetCarmen",
+        "donizettiDonPasquale",
+        "Leoncavallo - Pagliacci",
+        "Puccini - Manon Lescaut",
+        "Puccini - Turandot",
+        "beethovenLeonore2",
+        "beethovenLeonore3",
+        "Respighi - Pines of Rome",
+        "Shostakovich - Symphony No. 8",
+        "Shostakovich - Symphony No. 9",
+        "Tchaikovsky - The Queen of Spades",
+        "rimskyKorsakovScheherazade",
+        "Bartók - The Miraculous Mandarin",
+        "Bartók - Concerto for Orchestra",
+        "Strauss - Salome",
+        "Verdi - Don Carlo",
+        "Verdi - Otello",
+        "stravinskyPetrushka",
+        "Ravel - Bolero"
       ]
     },
     {
