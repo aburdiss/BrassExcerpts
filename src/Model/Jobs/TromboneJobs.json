@@ -418,12 +418,68 @@
       ]
     },
     {
+      "orchestra": "Welsh National Opera",
+      "position": "Sub-Principal Trombone (playing Section Principal as required)",
+      "link": "https://wno.org.uk/vacancy/sub-principal-trombone-playing-section-principal-as-required",
+      "country": "United Kingdom",
+      "closingDate": "October 15, 2021",
+      "auditionDate": "",
+      "excerpts": [
+        "bachCelloSuite",
+        "mozartRequiem",
+        "wagnerValkyrie",
+        "Mozart - The Magic Flute",
+        "ravelBolero",
+        "wagnerLohengrin",
+        "Mascagni - Cavalleria rusticana",
+        "Leoncavallo - Pagliacci",
+        "mahler5",
+        "mahler2",
+        "rossiniLaGazza",
+        "Berg - Wozzeck",
+        "Berg - Lulu",
+        "Verdi - Il Trovatore",
+        "Verdi - Otello"
+      ]
+    },
+    {
       "orchestra": "Orchestre Philharmonique de Nice",
       "position": "Un trombone solo",
       "link": "www.opera-nice.org",
       "country": "France",
       "closingDate": "October 18, 2021",
       "auditionDate": "November 15, 2021",
+      "excerpts": []
+    },
+    {
+      "orchestra": "Teatro Regio di Torino",
+      "position": "Secondo Trombone e seguenti",
+      "link": "https://www.teatroregio.torino.it/selezione-personale#orchestra",
+      "country": "Italy",
+      "closingDate": "October 23, 2021",
+      "auditionDate": "",
+      "excerpts": [
+        "mozartRequiem",
+        "rossiniWilliamTell",
+        "wagnerValkyrie",
+        "berliozFaust",
+        "Respighi - Pines of Rome",
+        "wagnerLohengrin",
+        "Verdi - I vespri siciliani",
+        "straussZarathustra",
+        "wagnerTannhauser",
+        "Verdi - Otello",
+        "rossiniLaGazza",
+        "mahler3"
+      ]
+    },
+    {
+      "orchestra": "Opera North",
+      "position": "Principal 2nd Trombone",
+      "link": "https://www.operanorth.co.uk/about-us/jobs/",
+      "country": "United Kingdom",
+      "closingDate": "November 1, 2021",
+      "auditionDate": "November 22, 2021",
       "excerpts": []
     },
     {
