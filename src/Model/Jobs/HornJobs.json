@@ -541,6 +541,59 @@
       ]
     },
     {
+      "orchestra": "Teatro Regio di Torino",
+      "position": "Secondo Corno, Quarto e seguenti con l'obbligo del Terzo",
+      "link": "https://www.teatroregio.torino.it/selezione-personale#orchestra",
+      "country": "Italy",
+      "closingDate": "October 28, 2021",
+      "auditionDate": "",
+      "excerpts": [
+        "beethovenFidelio",
+        "beethoven7",
+        "beethoven8",
+        "beethoven9",
+        "brahmsPiano1",
+        "mahler1",
+        "mahler3",
+        "mahler5",
+        "mendelssohn3",
+        "Puccini - Tosca",
+        "Shostakovich - Symphony No. 5",
+        "wagnerRheingold",
+        "Neuling - Studio No. 1"
+      ]
+    },
+    {
+      "orchestra": "Opéra National de Paris",
+      "position": "Concours 3ème cor jouant le 2ème",
+      "link": "https://www.operadeparis.fr/artistes/concours-et-auditions/orchestre",
+      "country": "France",
+      "closingDate": "October 28, 2021",
+      "auditionDate": "November 13, 2021",
+      "excerpts": [
+        "saintSaens3",
+        "Wagner - Die Meistersinger von Nürnberg",
+        "beethovenFidelio",
+        "straussEulenspiegel",
+        "beethovenFidelio",
+        "beethoven8",
+        "Berg - Wozzeck",
+        "Wagner - Parsifal",
+        "Strauss - Der Rosenkavalier",
+        "berliozRomeoJuliet",
+        "mahler9"
+      ]
+    },
+    {
+      "orchestra": "Radio Philharmonic Orchestra",
+      "position": "Utility Horn (2./3./4.)",
+      "link": "https://www.muvac.com/vac/stichting-omroep-muziek-983cab9",
+      "country": "Netherlands",
+      "closingDate": "October 29, 2021",
+      "auditionDate": "December 6, 2021",
+      "excerpts": []
+    },
+    {
       "orchestra": "Teatro Massimo",
       "position": "Secondo Corno con obbligo del Quarto e a seguire",
       "link": "https://www.teatromassimo.it/audizioni-selezioni-e-bandi/audizioni-e-selezioni-976/audizione-per-professori-d-orchestra-stagione-2022.html",
@@ -623,6 +676,15 @@
       ]
     },
     {
+      "orchestra": "Bergen Philharmonic Orchestra",
+      "position": "Solo Horn",
+      "link": "https://harmonien.no/english/vacancies#9476",
+      "country": "Norway",
+      "closingDate": "December 1, 2021",
+      "auditionDate": "January 28, 2022",
+      "excerpts": []
+    },
+    {
       "orchestra": "USAF Band of the Golden West",
       "position": "Horn",
       "link": "https://www.music.af.mil/Auditions/Upcoming-Vacancies/",
@@ -636,6 +698,15 @@
         "tchaikovsky5",
         "Williams - Hymn to the Fallen"
       ]
+    },
+    {
+      "orchestra": "Bilkent Symphony Orchestra",
+      "position": "Low Horn",
+      "link": "",
+      "country": "Turkey",
+      "closingDate": "December 6, 2021",
+      "auditionDate": "December 22, 2021",
+      "excerpts": []
     },
     {
       "orchestra": "Berliner Philharmoniker",
