@@ -109,7 +109,7 @@ export const composers = [
 
   {
     id: 9,
-    slug: 'Dvořák',
+    slug: 'Dvorak',
     name: 'Antonín Dvořák',
     ipa: 'ˈɑn tɔ nyin ˈdvɔr ʒɑk',
     image: require('../../../img/Composers/dvorak.jpg'),
@@ -277,7 +277,7 @@ export const composers = [
 
   {
     id: 23,
-    slug: 'Saint-Saëns',
+    slug: 'SaintSaens',
     name: 'Camille Saint-Saëns',
     ipa: 'kamij sɛ̃ sɑ̃(s)',
     image: require('../../../img/Composers/saintSaens.jpg'),

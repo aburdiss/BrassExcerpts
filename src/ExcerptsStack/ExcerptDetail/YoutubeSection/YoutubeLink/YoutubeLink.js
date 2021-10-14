@@ -28,15 +28,8 @@ export default function YoutubeLink({ video, type }) {
   const backgroundColors = {
     full: colors.green,
     score: colors.orange,
-    band: colors.red,
+    band: colors.yellow,
     instrument: colors.blue,
-  };
-
-  const bottomBorderColors = {
-    full: colors.blue,
-    score: colors.yellow,
-    band: colors.orange,
-    instrument: colors.purple,
   };
 
   return (
@@ -62,7 +55,6 @@ export default function YoutubeLink({ video, type }) {
       style={({ pressed }) => ({
         opacity: pressed ? 0.7 : 1,
         backgroundColor: backgroundColors[type],
-        borderBottomColor: bottomBorderColors[type],
         ...styles.button,
       })}
     >
@@ -93,7 +85,6 @@ export const styles = StyleSheet.create({
     paddingVertical: 12,
     paddingHorizontal: 20,
     borderRadius: 15,
-    borderBottomWidth: 1,
   },
   text: {
     fontWeight: 'bold',

@@ -28,7 +28,7 @@ export default function JobsListRow({ job }) {
       backgroundColor: colors.green,
       marginVertical: 8,
       padding: 15,
-      borderRadius: 8,
+      borderRadius: 15,
       flexDirection: 'row',
       justifyContent: 'space-between',
     },

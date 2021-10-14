@@ -25,6 +25,7 @@ export default function ExcerptListRow({
   composition,
   onPress,
   color,
+  backgroundColor,
 }) {
   const colors = useColors();
   const styles = StyleSheet.create({
@@ -41,7 +42,7 @@ export default function ExcerptListRow({
       justifyContent: 'space-between',
       alignItems: 'center',
       minHeight: 44,
-      backgroundColor: colors.background2,
+      backgroundColor: backgroundColor ? backgroundColor : colors.background2,
     },
     chevron: {
       width: 25,

@@ -118,7 +118,8 @@ export default function ExcerptListHeader() {
         <ExcerptListRow
           composer={'Top Excerpts'}
           onPress={openTopExcerptComponent}
-          color={colors.orange}
+          color={colors.alwaysBlack}
+          backgroundColor={colors.orange}
         />
         {/* <ActionButton onPress={openTopExcerptComponent}>
           View top excerpts

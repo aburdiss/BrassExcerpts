@@ -20,12 +20,8 @@ export default function ActionButton({ onPress, children }) {
   const styles = StyleSheet.create({
     button: {
       backgroundColor: colors.green,
-      borderRadius: 8,
+      borderRadius: 15,
       marginVertical: 10,
-      borderBottomColor: colors.blue,
-      borderBottomWidth: 1,
-      borderRightColor: colors.blue,
-      borderRightWidth: 1,
     },
     text: {
       textAlign: 'center',
