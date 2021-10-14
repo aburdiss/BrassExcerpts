@@ -594,6 +594,18 @@
       "excerpts": []
     },
     {
+      "orchestra": "Baltic Sea Philharmonic",
+      "position": "French Horn",
+      "link": "https://baltic-sea-philharmonic.eu/digitaltalenttour/",
+      "country": "Germany",
+      "closingDate": "October 31, 2021",
+      "auditionDate": "December 6, 2021",
+      "excerpts": [
+        "Tchaikovsky - Sleeping Beauty: A Dramatic Symphony",
+        "Beethoven - Symphony No. 5"
+      ]
+    },
+    {
       "orchestra": "Teatro Massimo",
       "position": "Secondo Corno con obbligo del Quarto e a seguire",
       "link": "https://www.teatromassimo.it/audizioni-selezioni-e-bandi/audizioni-e-selezioni-976/audizione-per-professori-d-orchestra-stagione-2022.html",
@@ -650,6 +662,27 @@
       ]
     },
     {
+      "orchestra": "Symfonieorkest Vlaanderen",
+      "position": "1. Horn Framework contract (1) – Permanent ",
+      "link": "https://www.muvac.com/en/vac/symfonieorkest-vlaanderen-9f845ac",
+      "country": "Belgium",
+      "closingDate": "November 29, 2021 ",
+      "auditionDate": "December 20, 2021",
+      "excerpts": [
+        "beethoven6",
+        "brahms1",
+        "brahms2",
+        "dvorak9",
+        "franckD",
+        "haydn31",
+        "mendelssohnMidsummer",
+        "Ravel - Pavane",
+        "straussEulenspiegel",
+        "tchaikovsky5",
+        "Sibelius - Symphony No. 5"
+      ]
+    },
+    {
       "orchestra": "Teatro Massimo",
       "position": "Terzo Corno con obbligo del Primo, del Secondo, del Quarto e a seguire",
       "link": "https://www.teatromassimo.it/audizioni-selezioni-e-bandi/audizioni-e-selezioni-976/audizione-per-professori-d-orchestra-stagione-2022.html",
@@ -676,12 +709,30 @@
       ]
     },
     {
+      "orchestra": "Guiyang Symphony Orchestra",
+      "position": "Horn, principal/ Horn, associate principal",
+      "link": "https://www.gyso.cn/Pages/Show_List.aspx?menu_id=108&isEn=1",
+      "country": "China",
+      "closingDate": "November 30, 2021",
+      "auditionDate": "November 30, 2021",
+      "excerpts": []
+    },
+    {
       "orchestra": "Bergen Philharmonic Orchestra",
       "position": "Solo Horn",
       "link": "https://harmonien.no/english/vacancies#9476",
       "country": "Norway",
       "closingDate": "December 1, 2021",
       "auditionDate": "January 28, 2022",
+      "excerpts": []
+    },
+    {
+      "orchestra": "Sydney Symphony Orchestra",
+      "position": "Co-Principal Horn",
+      "link": "https://www.sydneysymphony.com/about-us/work-with-us",
+      "country": "Australia",
+      "closingDate": "December 3, 2021",
+      "auditionDate": "",
       "excerpts": []
     },
     {
@@ -725,6 +776,52 @@
       "closingDate": "December 8, 2021",
       "auditionDate": "January 20, 2022",
       "excerpts": []
+    },
+    {
+      "orchestra": "Orchestre Philharmonique de Radio France",
+      "position": "Principal horn",
+      "link": "https://forms.office.com/pages/responsepage.aspx?id=BztkHfWMLU6tHobWuUj8O3qndXFEQ5pPh0a86o8AMZtUN0pNTjBTWTZRSU9aOUxQVjdVM05BUUxWQS4u",
+      "country": "France",
+      "closingDate": "December 22, 2021",
+      "auditionDate": "January 9, 2022",
+      "excerpts": [
+        "Ravel - Pavane",
+        "Strauss - Capriccio",
+        "Schoenberg - Chamber Symphony No. 1",
+        "brahms3",
+        "beethoven6",
+        "straussHeldenleben",
+        "mahler5",
+        "beethoven7",
+        "tchaikovsky5",
+        "bruckner4",
+        "straussEulenspiegel",
+        "Ravel - Piano Concerto",
+        "Shostakovich - Cello Concerto No. 2"
+      ]
+    },
+    {
+      "orchestra": "Brno Philharmonic",
+      "position": "First French Horn Player",
+      "link": "https://filharmonie-brno.cz/en/first-french-horn-player/",
+      "country": "Czech Republic",
+      "closingDate": "January 10, 2022",
+      "auditionDate": "February 11, 2022",
+      "excerpts": [
+        "tchaikovsky5",
+        "Dvořák - Symphony No. 7",
+        "dvorak9",
+        "beethoven7",
+        "franckD",
+        "Smetana - Ma Vlast",
+        "Janáček - Sinfonietta",
+        "straussDonJuan",
+        "straussEulenspiegel",
+        "Prokofiev - Romeo and Juliet Suite No. 2",
+        "mahler5",
+        "bruckner4",
+        "Ravel - Pavane"
+      ]
     }
   ]
 }

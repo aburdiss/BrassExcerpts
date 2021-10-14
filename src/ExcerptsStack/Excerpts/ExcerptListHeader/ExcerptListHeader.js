@@ -121,9 +121,6 @@ export default function ExcerptListHeader() {
           color={colors.alwaysBlack}
           backgroundColor={colors.orange}
         />
-        {/* <ActionButton onPress={openTopExcerptComponent}>
-          View top excerpts
-        </ActionButton> */}
       </View>
     </View>
   );
