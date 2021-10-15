@@ -569,6 +569,15 @@
       "excerpts": []
     },
     {
+      "orchestra": "The Royal Opera House",
+      "position": "Section Principal Trumpet",
+      "link": "https://recruitment.roh.org.uk/vacancyView.php?requirementId=4160",
+      "country": "United Kingdom",
+      "closingDate": "October 18, 2021",
+      "auditionDate": "",
+      "excerpts": []
+    },
+    {
       "orchestra": "Oulu Symphony Orchestra",
       "position": "Trumpet player",
       "link": "https://www.kuntarekry.fi/fi/tyopaikat/trumpet-player-oulu-symphony-orchestra-oul-04-57-21/",
@@ -601,6 +610,18 @@
       "closingDate": "October 31, 2021",
       "auditionDate": "December 19, 2021",
       "excerpts": []
+    },
+    {
+      "orchestra": "Baltic Sea Philharmonic",
+      "position": "Trumpet",
+      "link": "https://baltic-sea-philharmonic.eu/digitaltalenttour/",
+      "country": "Germany",
+      "closingDate": "October 31, 2021",
+      "auditionDate": "December 6, 2021",
+      "excerpts": [
+        "Tchaikovsky - Sleeping Beauty: A Dramatic Symphony",
+        "beethoven5"
+      ]
     },
     {
       "orchestra": "Lahti Symphony Orchestra",
@@ -654,6 +675,59 @@
       ]
     },
     {
+      "orchestra": "Opéra National de Paris",
+      "position": "Seconde trompette solo jouant la troisième trompette et le cornet",
+      "link": "https://www.operadeparis.fr/artistes/concours-et-auditions/orchestre",
+      "country": "France",
+      "closingDate": "November 25, 2021",
+      "auditionDate": "December 9, 2021",
+      "excerpts": []
+    },
+    {
+      "orchestra": "New Zealand Symphony Orchestra",
+      "position": "Associate Principal Trumpet",
+      "link": "https://www.nzso.co.nz/new-zealands-orchestra/work-with-us/associate-principal-trumpet/",
+      "country": "New Zealand",
+      "closingDate": "December 2, 2021",
+      "auditionDate": "December 10, 2021",
+      "excerpts": [
+        "mahler5",
+        "bizetCarmen",
+        "Respighi - Pines of Rome",
+        "mahler3",
+        "Mussorgsky - Pictures at an Exhibition",
+        "schumann2",
+        "wagnerParsifal",
+        "debussyLaMer",
+        "Bartók - Concerto for Orchestra",
+        "straussHeldenleben",
+        "stravinskyPetrushka",
+        "bachMagnificant"
+      ]
+    },
+    {
+      "orchestra": "Orchestre national de Metz",
+      "position": "1 Trompette solo",
+      "link": "https://www.muvac.com/en/vac/orchestre-national-de-metz-1a95fb1",
+      "country": "France",
+      "closingDate": "January 3, 2022",
+      "auditionDate": "January 10, 2022",
+      "excerpts": [
+        "wagnerParsifal",
+        "Ravel - Piano Concerto",
+        "mahler5",
+        "mahler3",
+        "schumann2",
+        "stravinskyPetrushka",
+        "Stravinsky - Pulcinella",
+        "Bartók - Concerto for Orchestra",
+        "debussyLaMer",
+        "rimskyKorsakovScheherazade",
+        "Mussorgsky - Pictures at an Exhibition",
+        "Ravel - Bolero"
+      ]
+    },
+    {
       "orchestra": "Tonkünstler-Orchester Niederösterreich",
       "position": "1. Trompete (1) – Permanent",
       "link": "https://www.muvac.com/en/vac/tonkuenstler-orchester-niederoesterreich-39b0e53",
@@ -683,6 +757,32 @@
         "stravinskyRite",
         "tchaikovskyCapriccio",
         "wagnerParsifal"
+      ]
+    },
+    {
+      "orchestra": "Oslo Philharmonic",
+      "position": "Co-principal trumpet (1) – Permanent ",
+      "link": "https://www.muvac.com/en/vac/oslo-philharmonic-6f12c00",
+      "country": "Norway",
+      "closingDate": "December 10, 2021",
+      "auditionDate": "February 20, 2022",
+      "excerpts": [
+        "bachMassB",
+        "berliozSymphonie",
+        "brahmsAcademic",
+        "mahler3",
+        "mahler5",
+        "mahler6",
+        "Prokofiev - Romeo and Juliet",
+        "Ravel - Piano Concerto",
+        "Respighi - Pines of Rome",
+        "rimskyKorsakovScheherazade",
+        "schumann2",
+        "sibelius2",
+        "straussEulenspiegel",
+        "straussDonJuan",
+        "stravinskyPetrushka",
+        "Stravinsky - Pulcinella"
       ]
     },
     {

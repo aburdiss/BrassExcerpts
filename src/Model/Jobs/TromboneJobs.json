@@ -474,6 +474,15 @@
       ]
     },
     {
+      "orchestra": "Baltic Sea Philharmonic",
+      "position": "Trombone",
+      "link": "https://baltic-sea-philharmonic.eu/digitaltalenttour/",
+      "country": "Germany",
+      "closingDate": "October 31, 2021",
+      "auditionDate": "December 6, 2021",
+      "excerpts": ["Tchaikovsky - Sleeping Beauty: A Dramatic Symphony"]
+    },
+    {
       "orchestra": "Opera North",
       "position": "Principal 2nd Trombone",
       "link": "https://www.operanorth.co.uk/about-us/jobs/",
@@ -537,6 +546,42 @@
         "Verdi - Requiem",
         "wagnerValkyrie"
       ]
+    },
+    {
+      "orchestra": "Orchestre Symphonique de Mulhouse",
+      "position": "3e Trombone, jouant Trombone basse, 2e Trombone et Trombone",
+      "link": "www.orchestre-mulhouse.fr",
+      "country": "France",
+      "closingDate": "November 25, 2021",
+      "auditionDate": "December 9, 2021",
+      "excerpts": [
+        "rossiniLaGazza",
+        "beethoven9",
+        "Delibes - Coppélia",
+        "haydnCreation",
+        "schumann3",
+        "rossiniWilliamTell",
+        "wagnerLohengrin",
+        "straussEulenspiegel"
+      ]
+    },
+    {
+      "orchestra": "Opéra National de Paris",
+      "position": "Trombone basse solo jouant le 3ème trombone – 1 poste",
+      "link": "https://www.operadeparis.fr/artistes/concours-et-auditions/orchestre",
+      "country": "France",
+      "closingDate": "November 30, 2021",
+      "auditionDate": "December 14, 2021",
+      "excerpts": []
+    },
+    {
+      "orchestra": "Guiyang Symphony Orchestra",
+      "position": "Trombone, principal",
+      "link": "https://www.gyso.cn/Pages/Show_List.aspx?menu_id=108&isEn=1",
+      "country": "China",
+      "closingDate": "November 30, 2021",
+      "auditionDate": "November 30, 2021",
+      "excerpts": ["straussEulenspiegel", "mozartRequiem", "mahler3"]
     },
     {
       "orchestra": "Opéra de Marseille",
