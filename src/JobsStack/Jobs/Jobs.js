@@ -12,10 +12,10 @@ import ActionButton from '../../Components/ActionButton/ActionButton';
 import { PreferencesContext } from '../../Model/Preferences';
 import { openMusicalChairsLink } from './utils/openMusicalChairsLink/openMusicalChairsLink';
 import { fetchInstrumentJobs } from '../../utils/fetchInstrumentJobs/fetchInstrumentJobs';
-import { getDateFromString } from '../../utils/getDateFromString/getDateFromString';
 import { hasValidJobs } from './utils/hasValidJobs/hasValidJobs';
 import { useColors } from '../../utils/CustomHooks/useColors/useColors';
 import { useTheme } from '../../utils/CustomHooks/useTheme/useTheme';
+import { getValidJobs } from './utils/getValidJobs/getValidJobs';
 
 /**
  * @todo Make section that user can add their own lists of excerpts inside the
@@ -166,30 +166,6 @@ export default function Jobs() {
     navigation.navigate('Create Custom Audition');
   }
 
-  /**
-   * @function Jobs~isValidSearchResult
-   * @param {Object} job A job object fetched from the server
-   * @returns {boolean} whether the job should show or not (if searched)
-   * @author Alexander Burdiss
-   * @since 9/18/21
-   * @version 1.0.0
-   */
-  function isValidSearchResult(job) {
-    if (!currentSearchTerm) {
-      return true;
-    }
-
-    if (
-      job.auditionDate.toLowerCase().includes(currentSearchTerm) ||
-      job.closingDate.toLowerCase().includes(currentSearchTerm) ||
-      job.country.toLowerCase().includes(currentSearchTerm) ||
-      job.orchestra.toLowerCase().includes(currentSearchTerm) ||
-      job.position.toLowerCase().includes(currentSearchTerm)
-    ) {
-      return true;
-    }
-  }
-
   return (
     <View style={styles.jobsContainer}>
       <SafeAreaView edges={['left', 'right']} style={styles.topContainer}>
@@ -224,12 +200,9 @@ export default function Jobs() {
       <ScrollView style={styles.contentContainer} ref={scrollViewRef}>
         {hasValidJobs(currentJobs) ? (
           <SafeAreaView edges={['left', 'right']}>
-            {currentJobs?.map((job, index) => {
-              const jobDate = getDateFromString(job.closingDate);
-              if (jobDate > new Date() && isValidSearchResult(job)) {
-                return <JobsListRow key={index} job={job} />;
-              }
-            })}
+            {getValidJobs(currentJobs, currentSearchTerm)?.map((job, index) => (
+              <JobsListRow key={index} job={job} />
+            ))}
           </SafeAreaView>
         ) : (
           <SafeAreaView style={styles.errorContainer}>
