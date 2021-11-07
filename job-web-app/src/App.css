@@ -1,0 +1,10 @@
+.JobContainer {
+  border: 1px solid green;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.ExcerptContainer {
+  padding-left: 20px;
+}
