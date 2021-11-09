@@ -751,6 +751,15 @@
       ]
     },
     {
+      "orchestra": "Shanghai Symphony Orchestra",
+      "position": "Section Horn (Low)",
+      "link": "https://www.shsymphony.com/page-index-id-4.html",
+      "country": "China",
+      "closingDate": "December 5, 2021",
+      "auditionDate": "March 15, 2022",
+      "excerpts": ["beethoven3", "straussHeldenleben", "mahler9"]
+    },
+    {
       "orchestra": "Bilkent Symphony Orchestra",
       "position": "Low Horn",
       "link": "",
@@ -758,6 +767,24 @@
       "closingDate": "December 6, 2021",
       "auditionDate": "December 22, 2021",
       "excerpts": []
+    },
+    {
+      "orchestra": "Lahti Symphony Orchestra",
+      "position": "Principal French Horn",
+      "link": "https://www.sinfonialahti.fi/orkesteri/avoimet-tyopaikat/",
+      "country": "Finland",
+      "closingDate": "December 7, 2021",
+      "auditionDate": "January 8, 2021",
+      "excerpts": [
+        "bruckner4",
+        "mendelssohn3",
+        "tchaikovsky5",
+        "straussEulenspiegel",
+        "Ravel - Pavane",
+        "Shostakovich - Symphony No. 5",
+        "Kokkonen - Concerto for Cello and Orchestra",
+        "Salonen - Nyx"
+      ]
     },
     {
       "orchestra": "Berliner Philharmoniker",
@@ -776,6 +803,38 @@
       "closingDate": "December 8, 2021",
       "auditionDate": "January 20, 2022",
       "excerpts": []
+    },
+    {
+      "orchestra": "Fondazione Teatro alla Scala",
+      "position": "First Horn",
+      "link": "https://www.teatroallascala.org/en/work-with-us/orchestra.html",
+      "country": "Italy",
+      "closingDate": "December 12, 2021",
+      "auditionDate": "",
+      "excerpts": [
+        "Mozart - The Marriage of Figaro",
+        "Bellini - I Capuleti e i Montecchi",
+        "beethovenFidelio",
+        "beethoven6",
+        "mendelssohnMidsummer",
+        "brahms1",
+        "brahms3",
+        "tchaikovsky5",
+        "wagnerSigfried",
+        "Strauss - An Alpine Symphony",
+        "straussHeldenleben",
+        "straussEulenspiegel",
+        "straussDonJuan",
+        "mahler3",
+        "Mahler - Symphony No. 7",
+        "Ravel - Piano Concerto",
+        "franckD",
+        "Stravinsky - Le Baiser de la fée",
+        "bruckner4",
+        "Mussorgsky - Pictures at an Exhibition",
+        "Shostakovich - Symphony No. 5",
+        "Shostakovich - Cello Concerto"
+      ]
     },
     {
       "orchestra": "Orchestre Philharmonique de Radio France",
@@ -801,6 +860,15 @@
       ]
     },
     {
+      "orchestra": "Orchestre Philharmonique de Strasbourg",
+      "position": "un cor grave",
+      "link": "https://philharmonique.strasbourg.eu/web/ops/-/6027510-1",
+      "country": "France",
+      "closingDate": "January 5, 2022",
+      "auditionDate": "January 15, 2022",
+      "excerpts": []
+    },
+    {
       "orchestra": "Brno Philharmonic",
       "position": "First French Horn Player",
       "link": "https://filharmonie-brno.cz/en/first-french-horn-player/",
@@ -822,6 +890,36 @@
         "bruckner4",
         "Ravel - Pavane"
       ]
+    },
+    {
+      "orchestra": "The United States Air Force Band",
+      "position": "French Horn",
+      "link": "https://www.music.af.mil/Bands/The-United-States-Air-Force-Band/About-Us/Careers-in-The-United-States-Air-Force-Band/",
+      "country": "USA",
+      "closingDate": "January 25, 2022",
+      "auditionDate": "February 28, 2022",
+      "excerpts": [
+        "mendelssohnMidsummer",
+        "Jenkins - American Overture for Band",
+        "beethoven6",
+        "Bernstein - Overture to Candide",
+        "brahms1",
+        "Grainger - Children's March",
+        "Smith - Festival Variations",
+        "Shostakovich - Symphony No. 5",
+        "tchaikovsky4",
+        "straussEulenspiegel",
+        "straussDonQuixote"
+      ]
+    },
+    {
+      "orchestra": "Israel Philharmonic Orchestra",
+      "position": "Horn – Principal",
+      "link": "https://www.ipo.co.il/en/%D7%90%D7%95%D7%93%D7%99%D7%A6%D7%99%D7%95%D7%AA-%D7%9C%D7%A0%D7%92%D7%A0%D7%99%D7%9D-2/",
+      "country": "Israel",
+      "closingDate": "February 28, 2022",
+      "auditionDate": "March 28, 2022",
+      "excerpts": []
     }
   ]
 }
