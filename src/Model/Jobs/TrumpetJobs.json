@@ -675,6 +675,15 @@
       ]
     },
     {
+      "orchestra": "Orquestra Simfònica de Barcelona i Nacional de Catalunya",
+      "position": "Bolsa de trabajo trompeta tutti (1) – Guest",
+      "link": "https://www.muvac.com/en/vac/orquestra-simfonica-de-barcelona-i-nacional-de-catalunya-3ba4b03",
+      "country": "Spain",
+      "closingDate": "November 11, 2021",
+      "auditionDate": "January 4, 2022",
+      "excerpts": []
+    },
+    {
       "orchestra": "Opéra National de Paris",
       "position": "Seconde trompette solo jouant la troisième trompette et le cornet",
       "link": "https://www.operadeparis.fr/artistes/concours-et-auditions/orchestre",
@@ -682,6 +691,21 @@
       "closingDate": "November 25, 2021",
       "auditionDate": "December 9, 2021",
       "excerpts": []
+    },
+    {
+      "orchestra": "Cairo Symphony Orchestra",
+      "position": "Principal Trumpet",
+      "link": "http://cairo-symphony.com/Auditions.aspx",
+      "country": "Egypt",
+      "closingDate": "December 1, 2021",
+      "auditionDate": "December 6, 2021",
+      "excerpts": [
+        "beethovenLeonore3",
+        "debussyNocturnes",
+        "Mussorgsky - Pictures at an Exhibition",
+        "Ravel - Bolero",
+        "rimskyKorsakovScheherazade"
+      ]
     },
     {
       "orchestra": "New Zealand Symphony Orchestra",
@@ -706,26 +730,13 @@
       ]
     },
     {
-      "orchestra": "Orchestre national de Metz",
-      "position": "1 Trompette solo",
-      "link": "https://www.muvac.com/en/vac/orchestre-national-de-metz-1a95fb1",
-      "country": "France",
-      "closingDate": "January 3, 2022",
-      "auditionDate": "January 10, 2022",
-      "excerpts": [
-        "wagnerParsifal",
-        "Ravel - Piano Concerto",
-        "mahler5",
-        "mahler3",
-        "schumann2",
-        "stravinskyPetrushka",
-        "Stravinsky - Pulcinella",
-        "Bartók - Concerto for Orchestra",
-        "debussyLaMer",
-        "rimskyKorsakovScheherazade",
-        "Mussorgsky - Pictures at an Exhibition",
-        "Ravel - Bolero"
-      ]
+      "orchestra": "Shanghai Symphony Orchestra",
+      "position": "Associate Principal Trumpet",
+      "link": "https://www.shsymphony.com/page-index-id-4.html",
+      "country": "China",
+      "closingDate": "December 5, 2021",
+      "auditionDate": "",
+      "excerpts": []
     },
     {
       "orchestra": "Tonkünstler-Orchester Niederösterreich",
@@ -786,12 +797,110 @@
       ]
     },
     {
+      "orchestra": "Hyogo Performing Arts Center Orchestra",
+      "position": "Trumpet",
+      "link": "https://hpac-orc.jp/en/audition/core-member/",
+      "country": "Japan",
+      "closingDate": "December 17, 2021",
+      "auditionDate": "January 23, 2022",
+      "excerpts": [
+        "beethovenLeonore2",
+        "beethovenLeonore3",
+        "bizetCarmen",
+        "mahler5",
+        "stravinskyPetrushka",
+        "Bartók - Concerto for Orchestra",
+        "Mussorgsky - Pictures at an Exhibition",
+        "wagnerParsifal"
+      ]
+    },
+    {
       "orchestra": "Bad Reichenhaller Philharmoniker",
       "position": "2x 66,6% Koord. Erste (Solo-) Trompete mit Verpflichtung zur 2. Trompete (deutsche Trompete)",
       "link": "https://www.brphil.de/orchester/freie-stellen/",
       "country": "Germany",
       "closingDate": "December 31, 2021",
       "auditionDate": "",
+      "excerpts": []
+    },
+    {
+      "orchestra": "Orchestre national de Metz",
+      "position": "1 Trompette solo",
+      "link": "https://www.muvac.com/en/vac/orchestre-national-de-metz-1a95fb1",
+      "country": "France",
+      "closingDate": "January 3, 2022",
+      "auditionDate": "January 10, 2022",
+      "excerpts": [
+        "wagnerParsifal",
+        "Ravel - Piano Concerto",
+        "mahler5",
+        "mahler3",
+        "schumann2",
+        "stravinskyPetrushka",
+        "Stravinsky - Pulcinella",
+        "Bartók - Concerto for Orchestra",
+        "debussyLaMer",
+        "rimskyKorsakovScheherazade",
+        "Mussorgsky - Pictures at an Exhibition",
+        "Ravel - Bolero"
+      ]
+    },
+    {
+      "orchestra": "Finnish National Opera and Ballet",
+      "position": "Sub-Principal Trumpet",
+      "link": "https://oopperabaletti.fi/en/about-us/open-vacancies/",
+      "country": "Finland",
+      "closingDate": "January 14, 2022",
+      "auditionDate": "March 7, 2022",
+      "excerpts": [
+        "donizettiDonPasquale",
+        "Minkus - Don Quixote",
+        "tchaikovskySwanLake",
+        "Dvořák - Rusalka"
+      ]
+    },
+    {
+      "orchestra": "Israel Philharmonic Orchestra",
+      "position": "Trumpet – Assistant Principal",
+      "link": "https://www.ipo.co.il/en/%D7%90%D7%95%D7%93%D7%99%D7%A6%D7%99%D7%95%D7%AA-%D7%9C%D7%A0%D7%92%D7%A0%D7%99%D7%9D-2/",
+      "country": "Israel",
+      "closingDate": "January 21, 2022",
+      "auditionDate": "February 21, 2022",
+      "excerpts": [
+        "Bach - St Matthew Passion",
+        "beethovenLeonore3",
+        "Beethoven - Symphony No. 3",
+        "bizetCarmen",
+        "brahms1",
+        "Brahms - Symphony No. 4",
+        "Debussy - Prélude à l'après-midi d'un faune",
+        "dvorak8",
+        "Hindemith - Symphonic Metamorphosis",
+        "mahler9",
+        "Mendelssohn - A Midsummer Night's Dream",
+        "Prokofiev - Peter and the Wolf",
+        "Ravel - Daphnis and Chloe",
+        "Saint-Saëns - Symphony No. 3",
+        "straussSinfoniaDomestica",
+        "stravinskyPetrushka"
+      ]
+    },
+    {
+      "orchestra": "Residentie Orkest Den Haag",
+      "position": "Immediate vacancy for Principal Trumpet (65%-75%)",
+      "link": "https://residentieorkest.nl/werken-bij/vacature-aanvoerder-trompet-65-75",
+      "country": "Netherlands",
+      "closingDate": "February 14, 2022",
+      "auditionDate": "March 22, 2022",
+      "excerpts": []
+    },
+    {
+      "orchestra": "Orchestre national de Lille",
+      "position": "Cornet solo",
+      "link": "https://www.muvac.com/en/vac/orchestre-national-de-lille-620e748",
+      "country": "France",
+      "closingDate": "March 10, 2022",
+      "auditionDate": "March 30, 2022",
       "excerpts": []
     }
   ]
