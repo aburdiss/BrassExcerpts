@@ -584,12 +584,146 @@
       "excerpts": ["straussEulenspiegel", "mozartRequiem", "mahler3"]
     },
     {
+      "orchestra": "Cairo Symphony Orchestra",
+      "position": "Principal Trombone",
+      "link": "http://cairo-symphony.com/Auditions.aspx",
+      "country": "Egypt",
+      "closingDate": "December 1, 2021",
+      "auditionDate": "",
+      "excerpts": [
+        "mozartRequiem",
+        "ravelBolero",
+        "beethoven9",
+        "wagnerValkyrie",
+        "wagnerTannhauser"
+      ]
+    },
+    {
+      "orchestra": "Cairo Symphony Orchestra",
+      "position": "Bass Trombone",
+      "link": "http://cairo-symphony.com/Auditions.aspx",
+      "country": "Egypt",
+      "closingDate": "December 1, 2021",
+      "auditionDate": "",
+      "excerpts": [
+        "rossiniWilliamTell",
+        "wagnerValkyrie",
+        "haydnCreation",
+        "mahler5"
+      ]
+    },
+    {
+      "orchestra": "Shanghai Symphony Orchestra",
+      "position": "Principal Trombone",
+      "link": "https://www.shsymphony.com/page-index-id-4.html",
+      "country": "China",
+      "closingDate": "December 5, 2021",
+      "auditionDate": "March 15, 2022",
+      "excerpts": []
+    },
+    {
+      "orchestra": "London Symphony Orchestra",
+      "position": "Second Trombon",
+      "link": "https://lso.co.uk/orchestra/jobs.html",
+      "country": "United Kingdom",
+      "closingDate": "December 8, 2021",
+      "auditionDate": "",
+      "excerpts": []
+    },
+    {
+      "orchestra": "Baltimore Symphony Orchestra",
+      "position": "Second Trombon",
+      "link": "https://www.bsomusic.org/about/employment-opportunities/orchestral-auditions/second-trombone/",
+      "country": "USA",
+      "closingDate": "December 10, 2021",
+      "auditionDate": "February 6, 2022",
+      "excerpts": [
+        "berliozFaust",
+        "mozartRequiem",
+        "ravelBolero",
+        "rossiniLaGazza",
+        "wagnerValkyrie",
+        "straussAlpine",
+        "straussEulenspiegel",
+        "mahler3",
+        "mozartRequiem",
+        "rimskyKorsakovRussianEaster",
+        "rimskyKorsakovScheherazade",
+        "saintSaens3",
+        "straussHeldenleben",
+        "brahms4",
+        "berliozRomanCarnival",
+        "bruckner4",
+        "mahler5",
+        "Copland - Symphony No. 3",
+        "verdiNabucco"
+      ]
+    },
+    {
+      "orchestra": "Tokyo Metropolitan Symphony Orchestra",
+      "position": "2nd Trombone",
+      "link": "https://www.tmso.or.jp/e/tmso/audition/audition_tb211022",
+      "country": "Japan",
+      "closingDate": "December 16, 2021",
+      "auditionDate": "February 14, 2022",
+      "excerpts": []
+    },
+    {
+      "orchestra": "La Fondazione Teatro del Maggio Musicale Fiorentino",
+      "position": "Primo trombone",
+      "link": "https://maggiofiorentino.trasparenza.info/audizioni-selezioni-e-bandi-di-concorso",
+      "country": "Italy",
+      "closingDate": "December 23, 2021",
+      "auditionDate": "January 9, 2022",
+      "excerpts": [
+        "Berlioz - Grande symphonie funèbre et triomphale",
+        "berliozFaust",
+        "berliozSymphonie",
+        "Berg - Three Pieces for Orchestra",
+        "Berg - Wozzeck",
+        "brahms1",
+        "mahler2",
+        "mahler3",
+        "mozartRequiem",
+        "ravelBolero",
+        "Respighi - Pines of Rome",
+        "rossiniWilliamTell",
+        "saintSaens3",
+        "schumann3",
+        "straussZarathustra",
+        "straussHeldenleben",
+        "straussEulenspiegel",
+        "wagnerLohengrin",
+        "wagnerValkyrie",
+        "wagnerTannhauser",
+        "verdiForza"
+      ]
+    },
+    {
       "orchestra": "Opéra de Marseille",
       "position": "DEUXIÈME TROMBONE JOUANT LE TROISIÈME",
       "link": "opera.marseille.fr",
       "country": "France",
       "closingDate": "January 11, 2022",
       "auditionDate": "January 21, 2022",
+      "excerpts": []
+    },
+    {
+      "orchestra": "Het Balletorkest",
+      "position": "2. Trombone 70% (1) – Permanent",
+      "link": "https://www.muvac.com/en/vac/het-balletorkest-62438ec",
+      "country": "Netherlands",
+      "closingDate": "February 27, 2022",
+      "auditionDate": "April 22, 2022",
+      "excerpts": []
+    },
+    {
+      "orchestra": "Israel Philharmonic Orchestra",
+      "position": "2nd/Bass Trombone",
+      "link": "https://www.ipo.co.il/en/%D7%90%D7%95%D7%93%D7%99%D7%A6%D7%99%D7%95%D7%AA-%D7%9C%D7%A0%D7%92%D7%A0%D7%99%D7%9D-2/",
+      "country": "Israel",
+      "closingDate": "February 28, 2022",
+      "auditionDate": "March 30, 2022",
       "excerpts": []
     }
   ]
