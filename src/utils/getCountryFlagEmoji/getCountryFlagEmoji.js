@@ -43,6 +43,8 @@ export function getCountryFlagEmoji(country) {
       return '🇮🇹';
     case 'Japan':
       return '🇯🇵';
+    case 'Luxembourg':
+      return '🇱🇺';
     case 'Mexico':
       return '🇲🇽';
     case 'Netherlands':

@@ -217,6 +217,59 @@
         "bruckner7",
         "Mussorgsky - Pictures at an Exhibition"
       ]
+    },
+    {
+      "orchestra": "Canton Symphony Orchestra",
+      "position": "Substitute Tuba",
+      "link": "https://www.cantonsymphony.org/audition-information-2/",
+      "country": "USA",
+      "closingDate": "",
+      "auditionDate": "January 18, 2022",
+      "excerpts": [
+        "berliozSymphonie",
+        "berliozFaust",
+        "Prokofiev - Symphony No. 5",
+        "Mussorgsky - Pictures at an Exhibition"
+      ]
+    },
+    {
+      "orchestra": "Verbier Festival Junior Orchestra",
+      "position": "Tuba",
+      "link": "https://www.verbierfestival.com/en/academy/vfjo/",
+      "country": "Switzerland",
+      "closingDate": "January 19, 2022",
+      "auditionDate": "",
+      "excerpts": []
+    },
+    {
+      "orchestra": "Verbier Festival Orchestra",
+      "position": "Tuba",
+      "link": "https://www.verbierfestival.com/en/academy/vfo/",
+      "country": "Switzerland",
+      "closingDate": "January 19, 2022",
+      "auditionDate": "",
+      "excerpts": []
+    },
+    {
+      "orchestra": "Fondazione Orchestra Sinfonica J. Haydn di Bolzano e Trento",
+      "position": "Tuba",
+      "link": "https://www.haydn.it/lavora-con-noi",
+      "country": "Italy",
+      "closingDate": "February 13, 2022",
+      "auditionDate": "March 1, 2022",
+      "excerpts": [
+        "respighiFountains",
+        "Prokofiev - Symphony No. 5",
+        "bruckner4",
+        "bruckner7",
+        "wagnerMeistersinger",
+        "wagnerRheingold",
+        "wagnerValkyrie",
+        "berliozSymphonie",
+        "straussEulenspiegel",
+        "mahler1",
+        "hindemith - Symphonic Metamorphosis"
+      ]
     }
   ]
 }

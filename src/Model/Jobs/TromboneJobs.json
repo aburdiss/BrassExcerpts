@@ -700,12 +700,194 @@
       ]
     },
     {
+      "orchestra": "Hangzhou Philharmonic Orchestra",
+      "position": "Tutti Tenor and Bass Trombone",
+      "link": "http://www.hzpo.org/en/#/joinus",
+      "country": "China",
+      "closingDate": "December 30, 2021",
+      "auditionDate": "",
+      "excerpts": [
+        "ravelBolero",
+        "mozartRequiem",
+        "rossiniWilliamTell",
+        "wagnerValkyrie",
+        "berliozFaust",
+        "saintSaens3",
+        "straussEulenspiegel",
+        "mahler3",
+        "haydnCreation",
+        "straussHeldenleben",
+        "wagnerLohengrin"
+      ]
+    },
+    {
+      "orchestra": "Hangzhou Philharmonic Orchestra",
+      "position": "Associate Principal Trombone",
+      "link": "http://www.hzpo.org/en/#/joinus",
+      "country": "China",
+      "closingDate": "December 30, 2021",
+      "auditionDate": "",
+      "excerpts": [
+        "ravelBolero",
+        "mozartRequiem",
+        "rossiniWilliamTell",
+        "wagnerValkyrie",
+        "berliozFaust",
+        "saintSaens3",
+        "straussEulenspiegel",
+        "mahler3"
+      ]
+    },
+    {
+      "orchestra": "Philharmonie et Orchestre Philharmonique du Luxembourg",
+      "position": "Trombone solo jouant le 2ème trombone (1) – Permanent ",
+      "link": "https://www.muvac.com/en/vac/orchestre-philharmonique-du-luxembourg-6f88fbe",
+      "country": "Luxembourg",
+      "closingDate": "January 3, 2022",
+      "auditionDate": "February 21, 2022",
+      "excerpts": [
+        "mozartRequiem",
+        "wagnerValkyrie",
+        "rossiniWilliamTell",
+        "ravelBolero",
+        "schumann3",
+        "Mozart - Mass in C Minor",
+        "mahler3",
+        "Berg - Three Pieces for Orchestra",
+        "straussHeldenleben",
+        "rossiniLaGazza",
+        "saintSaens3",
+        "wagnerValkyrie",
+        "Bernstein - Symphonic Dances from West Side Story"
+      ]
+    },
+    {
       "orchestra": "Opéra de Marseille",
       "position": "DEUXIÈME TROMBONE JOUANT LE TROISIÈME",
       "link": "opera.marseille.fr",
       "country": "France",
       "closingDate": "January 11, 2022",
       "auditionDate": "January 21, 2022",
+      "excerpts": []
+    },
+    {
+      "orchestra": "York Symphony Orchestra",
+      "position": "Second Trombone",
+      "link": "https://www.yorksymphony.org/auditions/",
+      "country": "USA",
+      "closingDate": "February 5, 2022",
+      "auditionDate": "February 19, 2022",
+      "excerpts": [
+        "berliozFaust",
+        "mozartRequiem",
+        "ravelBolero",
+        "rimskyKorsakovRussianEaster",
+        "rossiniLaGazza",
+        "rossiniWilliamTell",
+        "saintSaens3",
+        "straussEulenspiegel",
+        "wagnerValkyrie",
+        "wagnerTannhauser"
+      ]
+    },
+    {
+      "orchestra": "Fondazione Orchestra Sinfonica J. Haydn di Bolzano e Trento",
+      "position": "Trombone",
+      "link": "https://www.haydn.it/lavora-con-noi",
+      "country": "Italy",
+      "closingDate": "February 13, 2022",
+      "auditionDate": "March 2, 2022",
+      "excerpts": [
+        "mozartRequiem",
+        "wagnerTannhauser",
+        "wagnerValkyrie",
+        "berliozFaust",
+        "rossiniLaGazza",
+        "ravelBolero",
+        "straussEulenspiegel",
+        "berliozSymphonie",
+        "saintSaens3",
+        "straussHeldenleben",
+        "mahler3"
+      ]
+    },
+    {
+      "orchestra": "Fondazione Orchestra Sinfonica J. Haydn di Bolzano e Trento",
+      "position": "Trombone Basso",
+      "link": "https://www.haydn.it/lavora-con-noi",
+      "country": "Italy",
+      "closingDate": "February 13, 2022",
+      "auditionDate": "March 1, 2022",
+      "excerpts": [
+        "beethoven9",
+        "haydnCreation",
+        "mahler7",
+        "respighiFountains",
+        "rossiniLaGazza",
+        "schumann3",
+        "straussEulenspiegel",
+        "Kodaly - Háry János",
+        "wagnerValkyrie",
+        "wagnerRheingold"
+      ]
+    },
+    {
+      "orchestra": "Canton Symphony Orchestra",
+      "position": "Substitute Trombone",
+      "link": "https://www.cantonsymphony.org/audition-information-2/",
+      "country": "USA",
+      "closingDate": "",
+      "auditionDate": "January 18, 2022",
+      "excerpts": ["mozartRequiem", "straussEulenspiegel", "wagnerValkyrie"]
+    },
+    {
+      "orchestra": "Canton Symphony Orchestra",
+      "position": "Substitute Bass Trombone",
+      "link": "https://www.cantonsymphony.org/audition-information-2/",
+      "country": "USA",
+      "closingDate": "",
+      "auditionDate": "January 18, 2022",
+      "excerpts": [
+        "brahms1",
+        "straussHeldenleben",
+        "franckD",
+        "Wagner - Götterdämmerung"
+      ]
+    },
+    {
+      "orchestra": "Verbier Festival Junior Orchestra",
+      "position": "Trombone",
+      "link": "https://www.verbierfestival.com/en/academy/vfjo/",
+      "country": "Switzerland",
+      "closingDate": "January 19, 2022",
+      "auditionDate": "",
+      "excerpts": []
+    },
+    {
+      "orchestra": "Verbier Festival Orchestra",
+      "position": "Trombone",
+      "link": "https://www.verbierfestival.com/en/academy/vfo/",
+      "country": "Switzerland",
+      "closingDate": "January 19, 2022",
+      "auditionDate": "",
+      "excerpts": []
+    },
+    {
+      "orchestra": "Bozeman Symphony",
+      "position": "Second Trombone",
+      "link": "https://www.bozemansymphony.org/auditions.html",
+      "country": "USA",
+      "closingDate": "January 23, 2022",
+      "auditionDate": "",
+      "excerpts": []
+    },
+    {
+      "orchestra": "United States Coast Guard Band",
+      "position": "Second trombone",
+      "link": "www.uscg.mil/band",
+      "country": "USA",
+      "closingDate": "February 1, 2022",
+      "auditionDate": "",
       "excerpts": []
     },
     {
