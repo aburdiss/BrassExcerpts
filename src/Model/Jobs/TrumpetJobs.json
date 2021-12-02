@@ -815,6 +815,34 @@
       ]
     },
     {
+      "orchestra": "Hangzhou Philharmonic Orchestra",
+      "position": "Associate Principal Trumpet",
+      "link": "http://www.hzpo.org/en/#/joinus",
+      "country": "China",
+      "closingDate": "December 30, 2021",
+      "auditionDate": "",
+      "excerpts": [
+        "stravinskyPetrushka",
+        "straussHeldenleben",
+        "mahler5",
+        "Bartók - Concerto for Orchestra",
+        "Mussorgsky - Pictures at an Exhibition",
+        "Ravel - Piano Concerto",
+        "Copland - An Outdoor Overture",
+        "straussAlpine",
+        "Respighi - Pines of Rome"
+      ]
+    },
+    {
+      "orchestra": "Bournemouth Symphony Orchestra",
+      "position": "Section Principal Trumpet",
+      "link": "https://bsolive.com/jobs/section-principal-trumpet/",
+      "country": "United Kingdom",
+      "closingDate": "December 30, 2021",
+      "auditionDate": "January 31, 2022",
+      "excerpts": []
+    },
+    {
       "orchestra": "Bad Reichenhaller Philharmoniker",
       "position": "2x 66,6% Koord. Erste (Solo-) Trompete mit Verpflichtung zur 2. Trompete (deutsche Trompete)",
       "link": "https://www.brphil.de/orchester/freie-stellen/",
@@ -846,6 +874,15 @@
       ]
     },
     {
+      "orchestra": "Southbank Sinfonia",
+      "position": "Trumpet",
+      "link": "https://www.southbanksinfonia.co.uk/apply/",
+      "country": "United Kingdom",
+      "closingDate": "January 14, 2022",
+      "auditionDate": "",
+      "excerpts": []
+    },
+    {
       "orchestra": "Finnish National Opera and Ballet",
       "position": "Sub-Principal Trumpet",
       "link": "https://oopperabaletti.fi/en/about-us/open-vacancies/",
@@ -858,6 +895,38 @@
         "tchaikovskySwanLake",
         "Dvořák - Rusalka"
       ]
+    },
+    {
+      "orchestra": "Canton Symphony Orchestra",
+      "position": "Substitute Trumpet",
+      "link": "https://www.cantonsymphony.org/audition-information-2/",
+      "country": "USA",
+      "closingDate": "",
+      "auditionDate": "January 18, 2022",
+      "excerpts": [
+        "beethovenLeonore3",
+        "Mussorgsky - Pictures at an Exhibition",
+        "mahler5",
+        "mahler2"
+      ]
+    },
+    {
+      "orchestra": "Verbier Festival Junior Orchestra",
+      "position": "Trumpet",
+      "link": "https://www.verbierfestival.com/en/academy/vfjo/",
+      "country": "Switzerland",
+      "closingDate": "January 19, 2022",
+      "auditionDate": "",
+      "excerpts": []
+    },
+    {
+      "orchestra": "Verbier Festival Orchestra",
+      "position": "Trumpet",
+      "link": "https://www.verbierfestival.com/en/academy/vfo",
+      "country": "Switzerland",
+      "closingDate": "January 19, 2022",
+      "auditionDate": "",
+      "excerpts": []
     },
     {
       "orchestra": "Israel Philharmonic Orchestra",
@@ -893,6 +962,22 @@
       "closingDate": "February 14, 2022",
       "auditionDate": "March 22, 2022",
       "excerpts": []
+    },
+    {
+      "orchestra": "Royal Liverpool Philharmonic",
+      "position": "Emerging Musicians Fellowship - Trumpet",
+      "link": "https://www.liverpoolphil.com/take-part/royal-liverpool-philharmonic-orchestra-emerging-musicians-fellowship/",
+      "country": "United Kingdom",
+      "closingDate": "January 26, 2022",
+      "auditionDate": "",
+      "excerpts": [
+        "Ravel - Piano Concerto",
+        "mahler5",
+        "Respighi - Pines of Rome",
+        "Mussorgsky - Pictures at an Exhibition",
+        "brahms2",
+        "Bartók - Concerto for Orchestra"
+      ]
     },
     {
       "orchestra": "Orchestre national de Lille",
