@@ -5,31 +5,31 @@ import TubaJobs from '../../Model/Jobs/TubaJobs.json';
 import { getCountryFlagEmoji } from './getCountryFlagEmoji';
 
 describe('All Job countries are covered by getCountryFlagEmoji', () => {
-  test('Horn', () => {
-    for (const job of HornJobs.Jobs) {
+  for (const job of HornJobs.Jobs) {
+    test('Horn ' + job.orchestra + ' ' + job.closingDate, () => {
       const emoji = getCountryFlagEmoji(job.country);
       expect(emoji).not.toEqual('');
-    }
-  });
+    });
+  }
 
-  test('Trumpet', () => {
-    for (const job of TrumpetJobs.Jobs) {
+  for (const job of TrumpetJobs.Jobs) {
+    test('Trumpet ' + job.orchestra + ' ' + job.closingDate, () => {
       const emoji = getCountryFlagEmoji(job.country);
       expect(emoji).not.toEqual('');
-    }
-  });
+    });
+  }
 
-  test('Trombone', () => {
-    for (const job of TromboneJobs.Jobs) {
+  for (const job of TromboneJobs.Jobs) {
+    test('Trombone ' + job.orchestra + ' ' + job.closingDate, () => {
       const emoji = getCountryFlagEmoji(job.country);
       expect(emoji).not.toEqual('');
-    }
-  });
+    });
+  }
 
-  test('Tuba', () => {
-    for (const job of TubaJobs.Jobs) {
+  for (const job of TubaJobs.Jobs) {
+    test('Tuba ' + job.orchestra + ' ' + job.closingDate, () => {
       const emoji = getCountryFlagEmoji(job.country);
       expect(emoji).not.toEqual('');
-    }
-  });
+    });
+  }
 });

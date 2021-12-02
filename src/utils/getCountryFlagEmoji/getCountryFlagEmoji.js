@@ -27,6 +27,8 @@ export function getCountryFlagEmoji(country) {
       return '🇨🇿';
     case 'Denmark':
       return '🇩🇰';
+    case 'Egypt':
+      return '🇪🇬';
     case 'Estonia':
       return '🇪🇪';
     case 'Finland':
@@ -35,6 +37,8 @@ export function getCountryFlagEmoji(country) {
       return '🇫🇷';
     case 'Germany':
       return '🇩🇪';
+    case 'Israel':
+      return '🇮🇱';
     case 'Italy':
       return '🇮🇹';
     case 'Japan':

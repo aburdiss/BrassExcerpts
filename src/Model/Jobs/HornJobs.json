@@ -860,6 +860,24 @@
       ]
     },
     {
+      "orchestra": "Hangzhou Philharmonic Orchestra",
+      "position": "Principal French horn",
+      "link": "http://www.hzpo.org/en/#/joinus",
+      "country": "China",
+      "closingDate": "December 30, 2021",
+      "auditionDate": "",
+      "excerpts": [
+        "beethoven7",
+        "tchaikovsky5",
+        "bruckner4",
+        "Shostakovich - Symphony No. 5",
+        "brahms2",
+        "straussHeldenleben",
+        "straussEulenspiegel",
+        "wagnerSigfried"
+      ]
+    },
+    {
       "orchestra": "Orchestre Philharmonique de Strasbourg",
       "position": "un cor grave",
       "link": "https://philharmonique.strasbourg.eu/web/ops/-/6027510-1",
@@ -867,6 +885,44 @@
       "closingDate": "January 5, 2022",
       "auditionDate": "January 15, 2022",
       "excerpts": []
+    },
+    {
+      "orchestra": "U.S. Navy Band",
+      "position": "Horn, Concert/Ceremonial Band",
+      "link": "https://www.navyband.navy.mil/documents/auditions/usnb/Concert-Ceremonial%20Horn%20Excerpts%2018%20JAN%202022.pdf",
+      "country": "USA",
+      "closingDate": "January 7, 2022",
+      "auditionDate": "January 18, 2022",
+      "excerpts": []
+    },
+    {
+      "orchestra": "Fondazione Orchestra Sinfonica J. Haydn di Bolzano e Trento",
+      "position": "Primo Corno",
+      "link": "https://www.haydn.it/lavora-con-noi",
+      "country": "Italy",
+      "closingDate": "January 9, 2022",
+      "auditionDate": "January 27, 2022",
+      "excerpts": [
+        "beethoven6",
+        "beethoven7",
+        "beethoven8",
+        "brahms2",
+        "straussEulenspiegel",
+        "straussHeldenleben",
+        "straussDonJuan",
+        "mozart29",
+        "mozart40",
+        "Ravel - Pavane",
+        "Puccini - Tosca",
+        "beethovenFidelio",
+        "mendelssohn3",
+        "haydn31",
+        "Mozart - Cosi fan tutti",
+        "straussDonQuixote",
+        "mahler9",
+        "Shostakovich - Symphony No. 5",
+        "wagnerRheingold"
+      ]
     },
     {
       "orchestra": "Brno Philharmonic",
@@ -892,6 +948,80 @@
       ]
     },
     {
+      "orchestra": "Gävle Symphony Orchestra",
+      "position": "French Horn tutti with oblication to play 3rd Horn (1) - Permanent",
+      "link": "www.gavlesymphonyorchestra.com/vacancies",
+      "country": "Sweden",
+      "closingDate": "January 11, 2022",
+      "auditionDate": "March 14, 2022",
+      "excerpts": [
+        "beethoven9",
+        "beethovenFidelio",
+        "Borodin - Polovetsian Dances",
+        "brahmsPiano1",
+        "mendelssohn3",
+        "mahler3",
+        "Prokofiev - Romeo and Juliet",
+        "Shostakovich - Symphony No. 9",
+        "Shostakovich - Symphony No. 5",
+        "wagnerGotterdammerung"
+      ]
+    },
+    {
+      "orchestra": "Koninklijk Concertgebouworkest",
+      "position": "Horn - Academy",
+      "link": "https://www.concertgebouworkest.nl/en/academy#toggle-2022%2F2023%20season%20auditions",
+      "country": "Netherlands",
+      "closingDate": "January 12, 2022",
+      "auditionDate": "March 10, 2022",
+      "excerpts": [""]
+    },
+    {
+      "orchestra": "Southbank Sinfonia",
+      "position": "Horn",
+      "link": "https://www.southbanksinfonia.co.uk/apply/",
+      "country": "United Kingdom",
+      "closingDate": "January 14, 2022",
+      "auditionDate": "",
+      "excerpts": []
+    },
+    {
+      "orchestra": "Royal Stockholm Philharmonic Orchestra",
+      "position": "Academy Position - French Horn",
+      "link": "https://www.konserthuset.se/en/royal-stockholm-philharmonic-orchestra/rspo-orchestra-academy/application/?utm_source=musicalchairs&utm_medium=referral&utm_campaign=khs-rspo-oa&utm_content=application-period",
+      "country": "Sweden",
+      "closingDate": "January 17, 2022",
+      "auditionDate": "February 1, 2022",
+      "excerpts": []
+    },
+    {
+      "orchestra": "Canton Symphony Orchestra",
+      "position": "Substitute Horn",
+      "link": "https://www.cantonsymphony.org/audition-information-2/",
+      "country": "USA",
+      "closingDate": "",
+      "auditionDate": "January 18, 2022",
+      "excerpts": []
+    },
+    {
+      "orchestra": "Verbier Festival Junior Orchestra",
+      "position": "French Horn",
+      "link": "https://www.verbierfestival.com/en/academy/vfjo/",
+      "country": "Switzerland",
+      "closingDate": "January 19, 2022",
+      "auditionDate": "",
+      "excerpts": []
+    },
+    {
+      "orchestra": "Verbier Festival Orchestra",
+      "position": "French Horn",
+      "link": "https://www.verbierfestival.com/en/academy/vfo/",
+      "country": "Switzerland",
+      "closingDate": "January 19, 2022",
+      "auditionDate": "",
+      "excerpts": []
+    },
+    {
       "orchestra": "The United States Air Force Band",
       "position": "French Horn",
       "link": "https://www.music.af.mil/Bands/The-United-States-Air-Force-Band/About-Us/Careers-in-The-United-States-Air-Force-Band/",
@@ -910,6 +1040,22 @@
         "tchaikovsky4",
         "straussEulenspiegel",
         "straussDonQuixote"
+      ]
+    },
+    {
+      "orchestra": "Royal Liverpool Philharmonic",
+      "position": "Emerging Musicians Fellowship - French Horn",
+      "link": "https://www.liverpoolphil.com/take-part/royal-liverpool-philharmonic-orchestra-emerging-musicians-fellowship/",
+      "country": "United Kingdom",
+      "closingDate": "January 26, 2022",
+      "auditionDate": "",
+      "excerpts": [
+        "brahms1",
+        "beethoven6",
+        "mahler3",
+        "straussEulenspiegel",
+        "mozart40",
+        "weberFreischutz"
       ]
     },
     {
