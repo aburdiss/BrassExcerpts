@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, Appearance } from 'react-native';
 import RNPickerSelect from 'react-native-picker-select';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
@@ -9,7 +9,7 @@ import { useColors } from '../../../utils/CustomHooks/useColors/useColors';
  * @description A rendered Picker list item that updates saved preferences.
  * @author Alexander Burdiss
  * @since 9/11/21
- * @version 1.0.0
+ * @version 1.1.0
  * @param {Object} props.item The data to be rendered inside this list row.
  * @param {Object} props.state The current app state, including user
  * preferences.
@@ -40,6 +40,11 @@ export default function PickerListItem({ item, state, dispatch }) {
       paddingRight: 5,
     },
   });
+
+  /**
+   * State variable for updating the visual display of the Picker List Item.
+   * The actual value is stored in Context.
+   */
   const [currentTheme, setCurrentTheme] = useState(state.theme);
   useEffect(() => {
     setCurrentTheme(state.theme);
@@ -80,7 +85,14 @@ export default function PickerListItem({ item, state, dispatch }) {
       <RNPickerSelect
         onValueChange={(value) => {
           setCurrentTheme(value);
-          dispatch({ type: 'SET_SETTING', payload: { theme: value } });
+          let renderedTheme = value;
+          if (value == 'default') {
+            renderedTheme = Appearance.getColorScheme();
+          }
+          dispatch({
+            type: 'SET_SETTING',
+            payload: { theme: value, renderedTheme: renderedTheme },
+          });
         }}
         value={currentTheme}
         items={values}

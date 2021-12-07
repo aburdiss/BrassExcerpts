@@ -1,18 +1,15 @@
 import { useContext } from 'react';
-import { useDarkMode } from '../useDarkMode/useDarkMode';
 import { PreferencesContext } from '../../../Model/Preferences';
 
+/**
+ * @function useTheme
+ * @description Returns the Rendered theme from the state context.
+ * @author Alexander Burdiss
+ * @since 12/6/21
+ * @version 2.0.0
+ */
 export function useTheme() {
   const { state } = useContext(PreferencesContext);
-  const darkMode = useDarkMode();
 
-  if (state == undefined) {
-    return 'light';
-  } else {
-    if (state.theme == 'default') {
-      return darkMode ? 'dark' : 'light';
-    } else {
-      return state.theme;
-    }
-  }
+  return state?.renderedTheme;
 }

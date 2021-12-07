@@ -1,6 +1,6 @@
 import React, { createContext, useReducer, useEffect } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { Alert } from 'react-native';
+import { Alert, Appearance } from 'react-native';
 
 /**
  * @function load
@@ -222,13 +222,14 @@ const initialPreferencesState = {
   alwaysCollapse: false,
   keepScreenOn: false,
   theme: 'default',
+  renderedTheme: Appearance.getColorScheme(),
 };
 
 /**
  * @description Provides the user preferences throughout the app.
  * @author Alexander Burdiss
  * @since 12/14/20
- * @version 1.0.0
+ * @version 1.1.0
  * @param {*} props
  *
  * @component
