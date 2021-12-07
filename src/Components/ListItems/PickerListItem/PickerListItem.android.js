@@ -98,14 +98,11 @@ export default function PickerListItem({ item, state, dispatch }) {
         placeholder={{}}
         style={{
           iconContainer: {
-            top: 9,
-          },
-          inputIOS: {
-            color: colors.text,
-            height: '100%',
+            top: 5,
           },
           inputAndroid: {
-            color: colors.text,
+            color: colors.green,
+            marginLeft: -16,
           },
           modalViewMiddle: {
             backgroundColor: colors.systemGray6,

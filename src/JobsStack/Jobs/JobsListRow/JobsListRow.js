@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Pressable, StyleSheet } from 'react-native';
+import { View, Text, Pressable, StyleSheet, Platform } from 'react-native';
 import { useNavigation } from '@react-navigation/core';
 import { useColors } from '../../../utils/CustomHooks/useColors/useColors';
 import { getCountryFlagEmoji } from '../../../utils/getCountryFlagEmoji/getCountryFlagEmoji';
@@ -12,7 +12,7 @@ import { getCountryFlagEmoji } from '../../../utils/getCountryFlagEmoji/getCount
  * @description One job item in the list of jobs.
  * @author Alexander Burdiss
  * @since 3/28/21
- * @version 1.3.1
+ * @version 1.3.2
  * @component
  * @example
  * <JobsListRow job={job} />
@@ -38,7 +38,7 @@ export default function JobsListRow({ job }) {
     flagContainer: {
       position: 'absolute',
       top: -10,
-      left: -4,
+      left: Platform.OS == 'android' ? 0 : -4,
     },
     orchestra: {
       fontWeight: 'bold',

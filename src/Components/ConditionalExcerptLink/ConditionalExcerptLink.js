@@ -14,7 +14,7 @@ import { getInstrumentsSelected } from '../../utils/getInstrumentsSelected/getIn
  * @function ConditionalExcerptLink
  * @author Alexander Burdiss
  * @since 09/25/21
- * @version 1.0.0
+ * @version 1.0.1
  * @component
  */
 export default function ConditionalExcerptLink({
@@ -44,7 +44,7 @@ export default function ConditionalExcerptLink({
     },
     excerptLink: {
       color: colors.green,
-      width: '85%',
+      width: '80%',
       paddingVertical: 13,
     },
     forwardIcon: {

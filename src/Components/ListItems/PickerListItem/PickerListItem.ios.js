@@ -105,9 +105,6 @@ export default function PickerListItem({ item, state, dispatch }) {
             color: colors.text,
             height: '100%',
           },
-          inputAndroid: {
-            color: colors.text,
-          },
           modalViewMiddle: {
             backgroundColor: colors.systemGray6,
           },

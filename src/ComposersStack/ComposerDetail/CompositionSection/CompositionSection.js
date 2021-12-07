@@ -18,7 +18,7 @@ import { PreferencesContext } from '../../../Model/Preferences';
  * section.
  * @author Alexander Burdiss
  * @since 3/9/21
- * @version 1.1.0
+ * @version 1.1.1
  */
 export default function CompositionSection({ excerpts }) {
   const colors = useColors();
@@ -27,7 +27,7 @@ export default function CompositionSection({ excerpts }) {
     button: {
       paddingVertical: 10,
       paddingRight: 20,
-      marginLeft: 20,
+      paddingLeft: 20,
       flexDirection: 'row',
       alignItems: 'center',
       justifyContent: 'space-between',
@@ -61,11 +61,7 @@ export default function CompositionSection({ excerpts }) {
       {excerpts.map((excerpt, index) => {
         const borderTop = index != 0 ? styles.buttonBorder : null;
         return (
-          <SafeAreaView
-            edges={['left']}
-            key={excerpt.id.toString()}
-            style={styles.buttonSafeArea}
-          >
+          <SafeAreaView edges={['left']} key={excerpt.id.toString()}>
             <Pressable
               accessible={true}
               accessibilityRole="button"
