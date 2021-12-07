@@ -17,7 +17,7 @@ import { getContrast } from '../../../../utils/getContrast/getContrast';
  * affects the color of the link button.
  * @author Alexander Burdiss
  * @since 3/10/21
- * @version 1.3.1
+ * @version 1.3.2
  * @component
  * @example
  * <YoutubeLink video={video} type="band" />
@@ -42,14 +42,9 @@ export default function YoutubeLink({ video, type }) {
         color: getContrast(backgroundColors[type], colors),
       }}
       onPress={function openYouTubeLink() {
-        const url = `https://youtu.be/${video[1]}`;
-        Linking.canOpenURL(url).then((supported) => {
-          if (supported) {
-            Linking.openURL(url);
-          } else {
-            console.log("Can't open url: " + url);
-          }
-          return false;
+        const url = `https://www.youtube.com/watch?v=${video[1]}`;
+        Linking.openURL(url).catch((err) => {
+          console.warn(err);
         });
       }}
       style={({ pressed }) => ({
