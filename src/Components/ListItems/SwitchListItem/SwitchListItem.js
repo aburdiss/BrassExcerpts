@@ -9,7 +9,7 @@ import { useColors } from '../../../utils/CustomHooks/useColors/useColors';
  * @description A rendered Switch list item that updates saved preferences.
  * @author Alexander Burdiss
  * @since 1/5/21
- * @version 1.1.0
+ * @version 1.1.1
  * @param {Object} props.item The data to be rendered in this component.
  * @param {Object} props.state The current state of the app, including user
  * preferences.
@@ -62,8 +62,10 @@ export default function SwitchListItem({ item, state, dispatch }) {
         {item.value}
       </Text>
       <Switch
-        value={state && state[item.setting]}
+        value={state?.[item.setting]}
         onValueChange={updateValue}
+        trackColor={{ false: colors.systemGray5, true: colors.green }}
+        thumbColor={state?.[item.setting] ? colors.green : colors.systemGray2}
       />
     </Pressable>
   );

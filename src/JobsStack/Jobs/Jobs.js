@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useRef, useState } from 'react';
 import { View, ScrollView, Pressable, Text, StyleSheet } from 'react-native';
 import SegmentedControl from '@react-native-segmented-control/segmented-control';
-import SearchBar from 'react-native-search-bar';
 import { useNavigation } from '@react-navigation/core';
 import { useQuery } from 'react-query';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -9,6 +8,8 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import JobsListRow from './JobsListRow/JobsListRow';
 // eslint-disable-next-line no-unused-vars
 import ActionButton from '../../Components/ActionButton/ActionButton';
+import SearchBar from '../../Components/SearchBar/SearchBar';
+
 import { PreferencesContext } from '../../Model/Preferences';
 import { openMusicalChairsLink } from './utils/openMusicalChairsLink/openMusicalChairsLink';
 import { fetchInstrumentJobs } from '../../utils/fetchInstrumentJobs/fetchInstrumentJobs';
@@ -188,13 +189,13 @@ export default function Jobs() {
           />
         </View>
         <SearchBar
-          hideBackground
-          searchBarStyle="minimal"
+          // textFieldBackgroundColor={colors.background}
+          // searchBarStyle="minimal"
           placeholder={searchPlaceholderText[state.jobsIndex]}
           onChangeText={(text) => setCurrentSearchTerm(text.toLowerCase())}
-          tintColor={colors.green}
-          textColor={colors.text}
-          barTintColor={colors.background2}
+          // tintColor={colors.green}
+          // textColor={colors.text}
+          // barTintColor={colors.background2}
         />
       </SafeAreaView>
       <ScrollView style={styles.contentContainer} ref={scrollViewRef}>

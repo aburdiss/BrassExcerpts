@@ -38,7 +38,6 @@
     "react-native-pinchable": "^0.2.1",
     "react-native-safe-area-context": "^3.1.8",
     "react-native-screens": "^2.11.0",
-    "react-native-search-bar": "^3.5.1",
     "react-native-vector-icons": "^8.0.0",
     "react-query": "^3.15.2",
     "underscore": "^1.12.0"

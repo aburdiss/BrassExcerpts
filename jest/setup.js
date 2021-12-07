@@ -28,8 +28,6 @@ jest.mock('react-native-localize', () => {
   };
 });
 
-jest.mock('react-native-search-bar');
-
 jest.mock('react-native/Libraries/Animated/NativeAnimatedHelper');
 
 jest.mock('react-native-idle-timer', () => {

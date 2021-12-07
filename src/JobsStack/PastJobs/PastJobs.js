@@ -1,11 +1,11 @@
 import React, { useContext, useState, useEffect, useRef } from 'react';
 import { ScrollView, StyleSheet, View } from 'react-native';
 import SegmentedControl from '@react-native-segmented-control/segmented-control';
-import SearchBar from 'react-native-search-bar';
 import { useQuery } from 'react-query';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import JobsListRow from '../Jobs/JobsListRow/JobsListRow';
+import SearchBar from '../../Components/SearchBar/SearchBar';
 
 import { fetchInstrumentJobs } from '../../utils/fetchInstrumentJobs/fetchInstrumentJobs';
 import { PreferencesContext } from '../../Model/Preferences';
@@ -164,13 +164,8 @@ export default function PastJobs() {
           />
         </View>
         <SearchBar
-          hideBackground
-          searchBarStyle="minimal"
           placeholder={searchPlaceholderText[state.jobsIndex]}
           onChangeText={(text) => setCurrentSearchTerm(text.toLowerCase())}
-          tintColor={colors.green}
-          textColor={colors.text}
-          barTintColor={colors.background2}
         />
       </SafeAreaView>
       <ScrollView style={styles.contentContainer} ref={scrollViewRef}>
