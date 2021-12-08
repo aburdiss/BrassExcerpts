@@ -18,7 +18,7 @@ import { useColors } from '../../../utils/CustomHooks/useColors/useColors';
  * pressed.
  * @author Alexander Burdiss
  * @since 3/6/21
- * @version 1.4.0
+ * @version 1.4.1
  */
 export default function ExcerptListRow({
   composer,
@@ -61,7 +61,7 @@ export default function ExcerptListRow({
       flexShrink: 0,
     },
     favoriteIcon: {
-      paddingRight: 5,
+      paddingRight: 3,
       width: 25,
     },
     text: {

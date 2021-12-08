@@ -14,7 +14,7 @@ import { useColors } from '../../../utils/CustomHooks/useColors/useColors';
  * @description The header for the Excerpts list view.
  * @author Alexander Burdiss
  * @since 3/7/21
- * @version 1.3.0
+ * @version 1.3.1
  *
  * @component
  * @example
@@ -23,24 +23,27 @@ import { useColors } from '../../../utils/CustomHooks/useColors/useColors';
 export default function ExcerptListHeader() {
   const colors = useColors();
   const styles = StyleSheet.create({
+    button: {
+      flex: 1,
+      padding: 20,
+    },
     container: {
       flexDirection: 'row',
       justifyContent: 'space-between',
       alignItems: 'center',
-      paddingHorizontal: 20,
-      paddingTop: 20,
-      paddingBottom: 20,
       borderBottomWidth: 1,
       borderBottomColor: colors.blue,
       backgroundColor: colors.green,
     },
     descriptionText: {
       color: colors.alwaysBlack,
+      textAlign: 'center',
     },
     instrumentText: {
       fontSize: 24,
       flex: 1,
       color: colors.alwaysBlack,
+      textAlign: 'center',
     },
     topExcerptsButton: {
       backgroundColor: colors.background2,
@@ -95,6 +98,7 @@ export default function ExcerptListHeader() {
           android_ripple={{
             color: styles.instrumentText.color,
           }}
+          style={styles.button}
         >
           <SafeAreaView edges={['right', 'left']}>
             <Text

@@ -87,7 +87,7 @@ export default function More() {
           { title: 'Resources', data: RESOURCES },
           { title: 'About', data: ABOUT },
         ]}
-        keyExtractor={(item, index) => index}
+        keyExtractor={(_, index) => index}
         renderItem={({ item }) => {
           switch (item.type) {
             case 'link':

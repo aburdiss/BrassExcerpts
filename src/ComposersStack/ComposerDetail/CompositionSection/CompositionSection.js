@@ -18,7 +18,7 @@ import { PreferencesContext } from '../../../Model/Preferences';
  * section.
  * @author Alexander Burdiss
  * @since 3/9/21
- * @version 1.1.1
+ * @version 1.1.2
  */
 export default function CompositionSection({ excerpts }) {
   const colors = useColors();
@@ -89,7 +89,7 @@ export default function CompositionSection({ excerpts }) {
                   <Ionicons
                     name="heart"
                     size={24}
-                    color={colors.redLight}
+                    color={colors.red}
                     style={styles.favoriteIcon}
                   />
                 )}
