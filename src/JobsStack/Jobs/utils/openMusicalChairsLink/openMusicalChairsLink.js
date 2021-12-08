@@ -7,10 +7,11 @@ import { Linking } from 'react-native';
  * @param {Object} state The state object stored in PreferencesReducer
  * @author Alexander Burdiss
  * @since 5/8/21
- * @version 1.0.0
+ * @version 1.0.1
  */
 export function openMusicalChairsLink(state) {
-  const musicalChairsHornLink = 'https://www.musicalchairs.info/horn/jobs';
+  const musicalChairsHornLink =
+    'https://www.musicalchairs.info/french-horn/jobs';
   const musicalChairsTrumpetLink =
     'https://www.musicalchairs.info/trumpet/jobs';
   const musicalChairsTromboneLink =

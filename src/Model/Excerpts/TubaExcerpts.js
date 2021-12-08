@@ -4,9 +4,11 @@
  * @description Tuba Excerpts to be used in the app.
  * @author Alexander Burdiss
  * @since 3/4/21
- * @version 1.0.0
+ * @version 1.0.1
  * @copyright 2021 Alexander Burdiss
  */
+
+// MARK: Last Excerpt: 187
 
 let berliozFaust = {
   id: 1,
@@ -1493,7 +1495,7 @@ let stravinskyRite = {
       ],
     },
     {
-      id: 149,
+      id: 187,
       description: 'Excerpt 2',
       measures: '[78] - 6 mm. after [78] ',
       pictures: [

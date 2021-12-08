@@ -4,9 +4,11 @@
  * @description Horn Excerpts to be used in the app.
  * @author Alexander Burdiss
  * @since 3/4/21
- * @version 1.0.0
+ * @version 1.0.1
  * @copyright 2021 Alexander Burdiss
  */
+
+// MARK: Last Composition: 51
 
 let bachBrandenburg1 = {
   id: 0,
@@ -2210,7 +2212,7 @@ let wagnerRheingold = {
 };
 
 let wagnerGotterdammerung = {
-  id: 45,
+  id: 50,
   composer: 'Richard Wagner',
   composerLast: 'Wagner',
   name: 'Götterdämmerung',
@@ -2230,7 +2232,7 @@ let wagnerGotterdammerung = {
 };
 
 let wagnerLohengrin = {
-  id: 46,
+  id: 51,
   composer: 'Richard Wagner',
   composerLast: 'Wagner',
   name: 'Lohengrin',

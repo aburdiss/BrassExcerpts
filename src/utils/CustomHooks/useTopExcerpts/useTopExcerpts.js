@@ -60,10 +60,16 @@ export function useTopExcerpts(instrument) {
     return undefined;
   }
 
+  if (jobs.status === 'error') {
+    return undefined;
+  }
+
   let excerptsUsed = {};
 
+  console.log(jobs);
+
   for (const job of jobs.data) {
-    if (job.excerpts?.length > 0) {
+    if (job?.excerpts?.length > 0) {
       for (let excerpt of job.excerpts) {
         if (excerptsUsed[excerpt] == undefined) {
           excerptsUsed[excerpt] = 1;
