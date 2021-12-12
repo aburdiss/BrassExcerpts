@@ -4,7 +4,7 @@
  * @description Trumpet Excerpts to be used in the app.
  * @author Alexander Burdiss
  * @since 3/4/21
- * @version 1.0.0
+ * @version 1.0.1
  * @copyright 2021 Alexander Burdiss
  */
 
@@ -481,7 +481,7 @@ let bruckner4 = {
     {
       id: 29,
       description: 'Excerpt 1',
-      measures: '',
+      measures: 'Mov. IV, [E] - [F]',
       pictures: [
         ['F Trumpet 1', 'Trumpet/Bruckner4/1055.png'],
         ['F Trumpet 2', 'Trumpet/Bruckner4/1056.png'],

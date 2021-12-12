@@ -1,5 +1,5 @@
 import React from 'react';
-import { Pressable, Text, Switch, StyleSheet } from 'react-native';
+import { Pressable, Text, Switch, StyleSheet, Platform } from 'react-native';
 
 import { useColors } from '../../../utils/CustomHooks/useColors/useColors';
 
@@ -48,6 +48,15 @@ export default function SwitchListItem({ item, state, dispatch }) {
     let newSetting = { [item.setting]: updatedState };
     dispatch({ type: 'SET_SETTING', payload: newSetting });
   }
+
+  const thumbColor =
+    Platform.OS == 'android'
+      ? // Android
+        state?.[item.setting]
+        ? colors.green
+        : colors.systemGray2
+      : // iOS
+        colors.white;
   return (
     <Pressable
       style={styles.listRowContainer}
@@ -65,7 +74,7 @@ export default function SwitchListItem({ item, state, dispatch }) {
         value={state?.[item.setting]}
         onValueChange={updateValue}
         trackColor={{ false: colors.systemGray5, true: colors.green }}
-        thumbColor={state?.[item.setting] ? colors.green : colors.systemGray2}
+        thumbColor={thumbColor}
       />
     </Pressable>
   );

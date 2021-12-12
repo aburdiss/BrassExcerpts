@@ -10,7 +10,7 @@ import { fetchInstrumentJobs } from '../../fetchInstrumentJobs/fetchInstrumentJo
  * and the count that it is found in the jobs.
  * @author Alexander Burdiss
  * @since 9/19/21
- * @version 1.1.0
+ * @version 1.1.1
  */
 export function useTopExcerpts(instrument) {
   const desiredTopExcerpts = 10;
@@ -65,8 +65,6 @@ export function useTopExcerpts(instrument) {
   }
 
   let excerptsUsed = {};
-
-  console.log(jobs);
 
   for (const job of jobs.data) {
     if (job?.excerpts?.length > 0) {
