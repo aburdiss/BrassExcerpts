@@ -229,7 +229,7 @@ const initialPreferencesState = {
  * @description Provides the user preferences throughout the app.
  * @author Alexander Burdiss
  * @since 12/14/20
- * @version 1.1.0
+ * @version 1.1.1
  * @param {*} props
  *
  * @component
@@ -244,7 +244,22 @@ const PreferencesProvider = ({ children }) => {
   useEffect(() => {
     load().then((data) => {
       if (data !== null) {
-        dispatch({ type: 'SET_ALL_PREFERENCES', payload: data });
+        let tempData = { ...data, favorites: [...data.favorites] };
+        // Ensure that newer portions of data exist
+        if (!data.renderedTheme) {
+          // If there exists a theme in the settings that is not 'default',
+          // use that for the rendered theme.
+          if (data.theme && data.theme != 'default') {
+            tempData.renderedTheme = data.theme;
+          } else {
+            // Otherwise, use the system defaults
+            tempData.renderedTheme = Appearance.getColorScheme();
+          }
+        }
+        if (!data.theme) {
+          tempData.theme = 'default';
+        }
+        dispatch({ type: 'SET_ALL_PREFERENCES', payload: tempData });
       } else {
         dispatch({
           type: 'SET_ALL_PREFERENCES',
