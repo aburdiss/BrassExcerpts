@@ -301,9 +301,9 @@
       "excerpts": [
         "Mozart - Le nozze di Figaro",
         "Bartók - Concerto for Orchestra",
-        "Bach/Lehto – Ricercar a 3",
-        "Sibelius – Symphony No. 5",
-        "Tiensuu – Appo for Recorder and Orchestra",
+        "Bach/Lehto - Ricercar a 3",
+        "Sibelius - Symphony No. 5",
+        "Tiensuu - Appo for Recorder and Orchestra",
         "Stravinsky - Pulcinella",
         "bachChristmasOratorio"
       ]
@@ -345,7 +345,7 @@
         "dvorak8",
         "rimskyKorsakovScheherazade",
         "mahler1",
-        "Smetana - Wallenstein’s Camp",
+        "Smetana - Wallenstein's Camp",
         "Janáček - Glagolitic Mass",
         "mahler2",
         "mahler3",
@@ -450,7 +450,7 @@
       ]
     },
     {
-      "orchestra": "Orchestre national d’Île-de-France",
+      "orchestra": "Orchestre national d'Île-de-France",
       "position": "2e trompette jouant la 3e, la 4e trompette et le cornet",
       "link": "https://www.orchestre-ile.com/page/concours",
       "country": "France",
@@ -494,7 +494,7 @@
         "Sousa - Hands Across the Sea",
         "Sousa - University of Illinois March",
         "Gershwin/Riddle - Fascinating Rhythm",
-        "Santelmann - Flag Officer’s March"
+        "Santelmann - Flag Officer's March"
       ]
     },
     {
@@ -635,7 +635,7 @@
         "mahler5",
         "sibelius2",
         "straussEulenspiegel",
-        "Sibelius – Symphony No. 5",
+        "Sibelius - Symphony No. 5",
         "stravinskyPetrushka",
         "Rautavaara - Cantus Arcticus",
         "Aho - Symphony No. 17",
@@ -676,7 +676,7 @@
     },
     {
       "orchestra": "Orquestra Simfònica de Barcelona i Nacional de Catalunya",
-      "position": "Bolsa de trabajo trompeta tutti (1) – Guest",
+      "position": "Bolsa de trabajo trompeta tutti (1) - Guest",
       "link": "https://www.muvac.com/en/vac/orquestra-simfonica-de-barcelona-i-nacional-de-catalunya-3ba4b03",
       "country": "Spain",
       "closingDate": "November 11, 2021",
@@ -740,7 +740,7 @@
     },
     {
       "orchestra": "Tonkünstler-Orchester Niederösterreich",
-      "position": "1. Trompete (1) – Permanent",
+      "position": "1. Trompete (1) - Permanent",
       "link": "https://www.muvac.com/en/vac/tonkuenstler-orchester-niederoesterreich-39b0e53",
       "country": "Austria",
       "closingDate": "December 6, 2021",
@@ -772,7 +772,7 @@
     },
     {
       "orchestra": "Oslo Philharmonic",
-      "position": "Co-principal trumpet (1) – Permanent ",
+      "position": "Co-principal trumpet (1) - Permanent ",
       "link": "https://www.muvac.com/en/vac/oslo-philharmonic-6f12c00",
       "country": "Norway",
       "closingDate": "December 10, 2021",
@@ -874,6 +874,25 @@
       ]
     },
     {
+      "orchestra": "U.S. Navy Fleet Bands",
+      "position": "Trumpet",
+      "link": "https://www.navyband.navy.mil/fleet-band-auditions",
+      "country": "USA",
+      "closingDate": "January 10, 2022",
+      "auditionDate": "",
+      "excerpts": [
+        "Seitz - March Grandioso",
+        "Ewald - Brass Quintet No. 1",
+        "Bagley - National Emblem",
+        "Renwick - Dance",
+        "Shostakovich/Hunsberger - Festive Overture",
+        "Williams - Summon the Heroes",
+        "Hanssen - Valdres",
+        "Brown - Joy Spring",
+        "Brown/Roach - The Blues Walk"
+      ]
+    },
+    {
       "orchestra": "Southbank Sinfonia",
       "position": "Trumpet",
       "link": "https://www.southbanksinfonia.co.uk/apply/",
@@ -930,7 +949,7 @@
     },
     {
       "orchestra": "Israel Philharmonic Orchestra",
-      "position": "Trumpet – Assistant Principal",
+      "position": "Trumpet - Assistant Principal",
       "link": "https://www.ipo.co.il/en/%D7%90%D7%95%D7%93%D7%99%D7%A6%D7%99%D7%95%D7%AA-%D7%9C%D7%A0%D7%92%D7%A0%D7%99%D7%9D-2/",
       "country": "Israel",
       "closingDate": "January 21, 2022",
@@ -977,6 +996,21 @@
         "Mussorgsky - Pictures at an Exhibition",
         "brahms2",
         "Bartók - Concerto for Orchestra"
+      ]
+    },
+    {
+      "orchestra": "Civic Orchestra of Chicago",
+      "position": "Trumpet",
+      "link": "https://cso.org/education-community/musician-training/civic-orchestra-of-chicago/civic-auditions/",
+      "country": "USA",
+      "closingDate": "February 26, 2022",
+      "auditionDate": "",
+      "excerpts": [
+        "Mussorgsky - Pictures at an Exhibition",
+        "Bartók - Concerto for Orchestra",
+        "bachBrandenburg2",
+        "mahler5",
+        "Ravel - Piano Concerto"
       ]
     },
     {

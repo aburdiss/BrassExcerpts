@@ -426,7 +426,7 @@
     },
     {
       "orchestra": "Opera Ballet Vlaanderen",
-      "position": "3. Horn (1) – Permanent",
+      "position": "3. Horn (1) - Permanent",
       "link": "https://www.muvac.com/en/vac/opera-ballet-vlaanderen-166496c",
       "country": "Belgium",
       "closingDate": "October 5, 2021",
@@ -475,7 +475,7 @@
     },
     {
       "orchestra": "Orquestra Simfònica de Barcelona i Nacional de Catalunya",
-      "position": "Quinta trompa, asistente de tercera trompa (1) – Temporary",
+      "position": "Quinta trompa, asistente de tercera trompa (1) - Temporary",
       "link": "https://www.muvac.com/en/vac/orquestra-simfonica-de-barcelona-i-nacional-de-catalunya-e6210e9",
       "country": "Spain",
       "closingDate": "October 11, 2021",
@@ -637,7 +637,7 @@
       ]
     },
     {
-      "orchestra": "United States Army Band Pershing’s Own",
+      "orchestra": "United States Army Band Pershing's Own",
       "position": "Horn",
       "link": "https://www.usarmyband.com/vacancies/horn-the-u-s-army-concert-band",
       "country": "USA",
@@ -663,7 +663,7 @@
     },
     {
       "orchestra": "Symfonieorkest Vlaanderen",
-      "position": "1. Horn Framework contract (1) – Permanent ",
+      "position": "1. Horn Framework contract (1) - Permanent ",
       "link": "https://www.muvac.com/en/vac/symfonieorkest-vlaanderen-9f845ac",
       "country": "Belgium",
       "closingDate": "November 29, 2021 ",
@@ -986,6 +986,38 @@
       "excerpts": []
     },
     {
+      "orchestra": "Vancouver Symphony Orchestra",
+      "position": "Principal Horn & Third Horn/Assistant Principal Horn ",
+      "link": "https://www.vancouversymphony.ca/about/careers/",
+      "country": "Canada",
+      "closingDate": "January 14, 2022",
+      "auditionDate": "February 14, 2022",
+      "excerpts": [
+        "bachBrandenburg1",
+        "beethoven2",
+        "beethoven6",
+        "beethoven7",
+        "brahms2",
+        "brahms3",
+        "bruckner4",
+        "mahler3",
+        "mahler5",
+        "mozart40",
+        "Mussorgsky - Pictures at an Exhibition",
+        "Ravel - Pavane",
+        "schumann3",
+        "Shostakovich - Symphony No. 5",
+        "straussDonJuan",
+        "straussHeldenleben",
+        "straussEulenspiegel",
+        "tchaikovsky5",
+        "wagnerGotterdammerung",
+        "berliozRomeoJuliet",
+        "mendelssohn3",
+        "saintSaens3"
+      ]
+    },
+    {
       "orchestra": "Royal Stockholm Philharmonic Orchestra",
       "position": "Academy Position - French Horn",
       "link": "https://www.konserthuset.se/en/royal-stockholm-philharmonic-orchestra/rspo-orchestra-academy/application/?utm_source=musicalchairs&utm_medium=referral&utm_campaign=khs-rspo-oa&utm_content=application-period",
@@ -1059,13 +1091,72 @@
       ]
     },
     {
+      "orchestra": "The U.S. Army Cerimonial Band",
+      "position": "French Horn",
+      "link": "https://www.usarmyband.com/vacancies/ceremonial-horn-the-u-s-army-ceremonial-band",
+      "country": "USA",
+      "closingDate": "January 31, 2022",
+      "auditionDate": "February 14, 2022",
+      "excerpts": [
+        "beethoven6",
+        "Bernstein - Overture to Candide",
+        "brahms2",
+        "brahmsVariations",
+        "Jenkins - American Overture for Band",
+        "mahler3",
+        "Ravel - Pavane",
+        "Shostakovich - Symphony No. 5",
+        "Strauss - Salome",
+        "straussEulenspiegel",
+        "wagnerGotterdammerung",
+        "Williams - Star Wars Trilogy",
+        "beethoven8",
+        "tchaikovsky4",
+        "straussDonJuan"
+      ]
+    },
+    {
+      "orchestra": "Civic Orchestra of Chicago",
+      "position": "Horn",
+      "link": "https://cso.org/education-community/musician-training/civic-orchestra-of-chicago/civic-auditions/",
+      "country": "USA",
+      "closingDate": "February 26, 2022",
+      "auditionDate": "",
+      "excerpts": [
+        "beethoven7",
+        "brahms3",
+        "tchaikovsky4",
+        "Shostakovich - Symphony No. 5",
+        "straussEulenspiegel"
+      ]
+    },
+    {
       "orchestra": "Israel Philharmonic Orchestra",
-      "position": "Horn – Principal",
+      "position": "Horn - Principal",
       "link": "https://www.ipo.co.il/en/%D7%90%D7%95%D7%93%D7%99%D7%A6%D7%99%D7%95%D7%AA-%D7%9C%D7%A0%D7%92%D7%A0%D7%99%D7%9D-2/",
       "country": "Israel",
       "closingDate": "February 28, 2022",
       "auditionDate": "March 28, 2022",
       "excerpts": []
+    },
+    {
+      "orchestra": "Warsaw Philharmonic Orchestra",
+      "position": "French Horn - Soloist",
+      "link": "filharmonia.pl/en/",
+      "country": "Poland",
+      "closingDate": "March 13, 2022",
+      "auditionDate": "March 21, 2022",
+      "excerpts": [
+        "brahms3",
+        "mozart40",
+        "rossiniSemiramide",
+        "brahms2",
+        "beethoven7",
+        "brahms1",
+        "mahler9",
+        "straussHeldenleben",
+        "straussEulenspiegel"
+      ]
     }
   ]
 }

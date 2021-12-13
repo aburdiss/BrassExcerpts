@@ -5,7 +5,7 @@
  * @returns {string}
  * @author Alexander Burdiss
  * @since 9/18/21
- * @version 1.0.0
+ * @version 1.1.0
  */
 export function getCountryFlagEmoji(country) {
   switch (country) {
@@ -43,6 +43,8 @@ export function getCountryFlagEmoji(country) {
       return '🇮🇹';
     case 'Japan':
       return '🇯🇵';
+    case 'Latvia':
+      return '🇱🇻';
     case 'Luxembourg':
       return '🇱🇺';
     case 'Mexico':
@@ -53,6 +55,8 @@ export function getCountryFlagEmoji(country) {
       return '🇳🇿';
     case 'Norway':
       return '🇳🇴';
+    case 'Poland':
+      return '🇵🇱';
     case 'Portugal':
       return '🇵🇹';
     case 'Russia':

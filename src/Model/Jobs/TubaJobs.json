@@ -103,9 +103,9 @@
       "auditionDate": "",
       "excerpts": [
         "sousaStarsAndStripes",
-        "Grantham – J’ai ete au bal",
-        "V. Williams – Toccata Marziale",
-        "King – Barnum & Bailey’s Favorite"
+        "Grantham - J'ai ete au bal",
+        "V. Williams - Toccata Marziale",
+        "King - Barnum & Bailey's Favorite"
       ]
     },
     {
@@ -136,7 +136,7 @@
     },
     {
       "orchestra": "Tonhalle-Orchester Zürich",
-      "position": "Solo-Tuba (1) – Fest ",
+      "position": "Solo-Tuba (1) - Fest ",
       "link": "https://www.muvac.com/de/vac/tonhalle-orchester-zuerich-f812658",
       "country": "Switzerland",
       "closingDate": "November 17, 2021",
@@ -251,6 +251,27 @@
       "excerpts": []
     },
     {
+      "orchestra": "The U.S. Army Band \"Pershing's Own\"",
+      "position": "Tuba",
+      "link": "https://www.usarmyband.com/vacancies/tuba-the-u-s-army-ceremonial-band",
+      "country": "USA",
+      "closingDate": "January 24, 2022",
+      "auditionDate": "February 7, 2022",
+      "excerpts": [
+        "Chambers - Boys of the Old Brigade",
+        "Grainger - Lincolnshire Posy",
+        "Grantham - J'ai ete au bal",
+        "holstFirstSuite",
+        "King - Barnum & Bailey's Favorite",
+        "sousaStarsAndStripes",
+        "Williams/Lavender - March of the Resistance",
+        "V. Williams - Toccata Marziale",
+        "brahms2",
+        "bruckner8",
+        "Lyte - Abide with Me"
+      ]
+    },
+    {
       "orchestra": "Fondazione Orchestra Sinfonica J. Haydn di Bolzano e Trento",
       "position": "Tuba",
       "link": "https://www.haydn.it/lavora-con-noi",
@@ -269,6 +290,24 @@
         "straussEulenspiegel",
         "mahler1",
         "hindemith - Symphonic Metamorphosis"
+      ]
+    },
+    {
+      "orchestra": "Civic Orchestra of Chicago",
+      "position": "Tuba",
+      "link": "https://cso.org/education-community/musician-training/civic-orchestra-of-chicago/civic-auditions/",
+      "country": "USA",
+      "closingDate": "February 25, 2022",
+      "auditionDate": "",
+      "excerpts": [
+        "berliozFaust",
+        "Gershwin - An American in Paris",
+        "mahler5",
+        "Prokofiev - Symphony No. 5",
+        "Revueltas - Sensemaya",
+        "Stravinsky - Petrouchka",
+        "wagnerMeistersinger",
+        "wagnerValkyrie"
       ]
     }
   ]

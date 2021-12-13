@@ -18,7 +18,7 @@
         "mahler3",
         "mozartRequiem",
         "ravelBolero",
-        "Ravel - L’enfant et les Sortileges",
+        "Ravel - L'enfant et les Sortileges",
         "rossiniWilliamTell",
         "schumann3",
         "schumann4",
@@ -193,7 +193,7 @@
     },
     {
       "orchestra": "Gewandhausorchester",
-      "position": "Solo-Bassposaune 100% (1) – Permanent",
+      "position": "Solo-Bassposaune 100% (1) - Permanent",
       "link": "https://www.muvac.com/en/vac/gewandhausorchester-0090436",
       "country": "Germany",
       "closingDate": "August 25, 2021",
@@ -567,7 +567,7 @@
     },
     {
       "orchestra": "Opéra National de Paris",
-      "position": "Trombone basse solo jouant le 3ème trombone – 1 poste",
+      "position": "Trombone basse solo jouant le 3ème trombone - 1 poste",
       "link": "https://www.operadeparis.fr/artistes/concours-et-auditions/orchestre",
       "country": "France",
       "closingDate": "November 30, 2021",
@@ -740,7 +740,7 @@
     },
     {
       "orchestra": "Philharmonie et Orchestre Philharmonique du Luxembourg",
-      "position": "Trombone solo jouant le 2ème trombone (1) – Permanent ",
+      "position": "Trombone solo jouant le 2ème trombone (1) - Permanent ",
       "link": "https://www.muvac.com/en/vac/orchestre-philharmonique-du-luxembourg-6f88fbe",
       "country": "Luxembourg",
       "closingDate": "January 3, 2022",
@@ -762,12 +762,89 @@
       ]
     },
     {
+      "orchestra": "Latvian National Opera",
+      "position": "2nd Trombone",
+      "link": "https://opera.lv/en/article/audition-2nd-trombone-full-time-2437/",
+      "country": "Latvia",
+      "closingDate": "January 7, 2022",
+      "auditionDate": "February 15, 2022",
+      "excerpts": []
+    },
+    {
       "orchestra": "Opéra de Marseille",
       "position": "DEUXIÈME TROMBONE JOUANT LE TROISIÈME",
       "link": "opera.marseille.fr",
       "country": "France",
       "closingDate": "January 11, 2022",
       "auditionDate": "January 21, 2022",
+      "excerpts": []
+    },
+    {
+      "orchestra": "Canton Symphony Orchestra",
+      "position": "Substitute Trombone",
+      "link": "https://www.cantonsymphony.org/audition-information-2/",
+      "country": "USA",
+      "closingDate": "",
+      "auditionDate": "January 18, 2022",
+      "excerpts": ["mozartRequiem", "straussEulenspiegel", "wagnerValkyrie"]
+    },
+    {
+      "orchestra": "Canton Symphony Orchestra",
+      "position": "Substitute Bass Trombone",
+      "link": "https://www.cantonsymphony.org/audition-information-2/",
+      "country": "USA",
+      "closingDate": "",
+      "auditionDate": "January 18, 2022",
+      "excerpts": [
+        "brahms1",
+        "straussHeldenleben",
+        "franckD",
+        "Wagner - Götterdämmerung"
+      ]
+    },
+    {
+      "orchestra": "Verbier Festival Junior Orchestra",
+      "position": "Trombone",
+      "link": "https://www.verbierfestival.com/en/academy/vfjo/",
+      "country": "Switzerland",
+      "closingDate": "January 19, 2022",
+      "auditionDate": "",
+      "excerpts": []
+    },
+    {
+      "orchestra": "Verbier Festival Orchestra",
+      "position": "Trombone",
+      "link": "https://www.verbierfestival.com/en/academy/vfo/",
+      "country": "Switzerland",
+      "closingDate": "January 19, 2022",
+      "auditionDate": "",
+      "excerpts": []
+    },
+    {
+      "orchestra": "Bozeman Symphony",
+      "position": "Second Trombone",
+      "link": "https://www.bozemansymphony.org/auditions.html",
+      "country": "USA",
+      "closingDate": "January 23, 2022",
+      "auditionDate": "",
+      "excerpts": []
+    },
+    {
+      "orchestra": "U.S. Navy Concert/Ceremonial Band",
+      "position": "Trombone",
+      "link": "https://www.navyband.navy.mil/career-opportunities/usnb-auditions",
+      "country": "USA",
+      "closingDate": "January 28, 2022",
+      "auditionDate": "",
+      "excerpts": []
+    },
+    {
+      "orchestra": "United States Coast Guard Band",
+      "position": "Second trombone",
+      "link": "www.uscg.mil/band",
+      "country": "USA",
+      "closingDate": "February 1, 2022",
+      "auditionDate": "",
       "excerpts": []
     },
     {
@@ -832,67 +909,23 @@
       ]
     },
     {
-      "orchestra": "Canton Symphony Orchestra",
-      "position": "Substitute Trombone",
-      "link": "https://www.cantonsymphony.org/audition-information-2/",
+      "orchestra": "Civic Orchestra of Chicago",
+      "position": "Trombone",
+      "link": "https://cso.org/education-community/musician-training/civic-orchestra-of-chicago/civic-auditions/",
       "country": "USA",
-      "closingDate": "",
-      "auditionDate": "January 18, 2022",
-      "excerpts": ["mozartRequiem", "straussEulenspiegel", "wagnerValkyrie"]
-    },
-    {
-      "orchestra": "Canton Symphony Orchestra",
-      "position": "Substitute Bass Trombone",
-      "link": "https://www.cantonsymphony.org/audition-information-2/",
-      "country": "USA",
-      "closingDate": "",
-      "auditionDate": "January 18, 2022",
+      "closingDate": "February 26, 2021",
+      "auditionDate": "",
       "excerpts": [
-        "brahms1",
-        "straussHeldenleben",
-        "franckD",
-        "Wagner - Götterdämmerung"
+        "mozartRequiem",
+        "ravelBolero",
+        "saintSaens3",
+        "berliozFaust",
+        "wagnerValkyrie"
       ]
     },
     {
-      "orchestra": "Verbier Festival Junior Orchestra",
-      "position": "Trombone",
-      "link": "https://www.verbierfestival.com/en/academy/vfjo/",
-      "country": "Switzerland",
-      "closingDate": "January 19, 2022",
-      "auditionDate": "",
-      "excerpts": []
-    },
-    {
-      "orchestra": "Verbier Festival Orchestra",
-      "position": "Trombone",
-      "link": "https://www.verbierfestival.com/en/academy/vfo/",
-      "country": "Switzerland",
-      "closingDate": "January 19, 2022",
-      "auditionDate": "",
-      "excerpts": []
-    },
-    {
-      "orchestra": "Bozeman Symphony",
-      "position": "Second Trombone",
-      "link": "https://www.bozemansymphony.org/auditions.html",
-      "country": "USA",
-      "closingDate": "January 23, 2022",
-      "auditionDate": "",
-      "excerpts": []
-    },
-    {
-      "orchestra": "United States Coast Guard Band",
-      "position": "Second trombone",
-      "link": "www.uscg.mil/band",
-      "country": "USA",
-      "closingDate": "February 1, 2022",
-      "auditionDate": "",
-      "excerpts": []
-    },
-    {
       "orchestra": "Het Balletorkest",
-      "position": "2. Trombone 70% (1) – Permanent",
+      "position": "2. Trombone 70% (1) - Permanent",
       "link": "https://www.muvac.com/en/vac/het-balletorkest-62438ec",
       "country": "Netherlands",
       "closingDate": "February 27, 2022",
