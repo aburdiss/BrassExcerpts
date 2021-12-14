@@ -6,7 +6,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import ExcerptListRow from '../ExcerptListRow/ExcerptListRow';
 import { PreferencesContext } from '../../../Model/Preferences';
 import { getInstrumentsSelected } from '../../../utils/getInstrumentsSelected/getInstrumentsSelected';
-import { useColors } from '../../../utils/CustomHooks/useColors/useColors';
+import { useColors } from '../../../utils/customHooks/useColors/useColors';
 
 /**
  * @namespace ExcerptListHeader

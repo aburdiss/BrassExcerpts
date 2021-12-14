@@ -4,7 +4,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { TRANSLATIONS } from '../../Model/AcknowledgementsModel/AcknowledgementsModel';
 import TextListItem from '../../Components/ListItems/TextListItem/TextListItem';
-import { useColors } from '../../utils/CustomHooks/useColors/useColors';
+import { useColors } from '../../utils/customHooks/useColors/useColors';
 
 /**
  * @namespace Acknowledgements

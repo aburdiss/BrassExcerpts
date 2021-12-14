@@ -20,7 +20,7 @@ import LinkListItem from '../../Components/ListItems/LinkListItem/LinkListItem';
 import InternalListItem from '../../Components/ListItems/InternalListItem/InternalListItem';
 import SegmentedFilterListItem from '../../Components/ListItems/SegmentedFilterListItem/SegmentedFilterListItem';
 import PickerListItem from '../../Components/ListItems/PickerListItem/PickerListItem';
-import { useColors } from '../../utils/CustomHooks/useColors/useColors';
+import { useColors } from '../../utils/customHooks/useColors/useColors';
 
 /**
  * @namespace More

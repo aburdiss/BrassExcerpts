@@ -9,7 +9,7 @@ import PastJobs from './PastJobs/PastJobs';
 import JobDetail from './JobDetail/JobDetail';
 import CreateCustomAudition from './CreateCustomAudition/CreateCustomAudition';
 import CustomAudition from './CustomAudition/CustomAudition';
-import { useColors } from '../utils/CustomHooks/useColors/useColors';
+import { useColors } from '../utils/customHooks/useColors/useColors';
 
 const Stack = createStackNavigator();
 

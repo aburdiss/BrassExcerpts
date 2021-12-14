@@ -2,7 +2,7 @@
 import React from 'react';
 import { Pressable, Text, StyleSheet } from 'react-native';
 
-import { useColors } from '../../utils/CustomHooks/useColors/useColors';
+import { useColors } from '../../utils/customHooks/useColors/useColors';
 
 /**
  * @namespace ActionButton

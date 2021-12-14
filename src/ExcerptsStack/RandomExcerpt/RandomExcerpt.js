@@ -14,11 +14,11 @@ import Pinchable from 'react-native-pinchable';
 
 import { PreferencesContext } from '../../Model/Preferences';
 import { generateRandomExcerpt } from './utils/generateRandomExcerpt/generateRandomExcerpt';
-import { useIdleScreen } from '../../utils/CustomHooks/useIdleScreen/useIdleScreen';
+import { useIdleScreen } from '../../utils/customHooks/useIdleScreen/useIdleScreen';
 
 import ActionButton from '../../Components/ActionButton/ActionButton';
 import RandomExcerptHeader from './RandomExcertHeader/RandomExcerptHeader';
-import { useColors } from '../../utils/CustomHooks/useColors/useColors';
+import { useColors } from '../../utils/customHooks/useColors/useColors';
 
 /**
  * @namespace RandomExcerpt

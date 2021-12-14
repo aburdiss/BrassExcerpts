@@ -4,7 +4,7 @@ import { useNavigation } from '@react-navigation/core';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-import { useColors } from '../../../utils/CustomHooks/useColors/useColors';
+import { useColors } from '../../../utils/customHooks/useColors/useColors';
 import { isFavorite } from '../../../utils/isFavorite/isFavorite';
 import { PreferencesContext } from '../../../Model/Preferences';
 

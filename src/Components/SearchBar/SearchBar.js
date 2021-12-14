@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, TextInput, View } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-import { useColors } from '../../utils/CustomHooks/useColors/useColors';
+import { useColors } from '../../utils/customHooks/useColors/useColors';
 
 /**
  * @function SearchBar

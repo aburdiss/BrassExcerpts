@@ -6,7 +6,7 @@ import { capitalize } from '../../../utils/captiatlize/capitalize';
 
 import { getNumberOfInstruments } from '../../../utils/getNumberOfInstruments/getNumberOfInstruments';
 import { PreferencesContext } from '../../../Model/Preferences';
-import { useColors } from '../../../utils/CustomHooks/useColors/useColors';
+import { useColors } from '../../../utils/customHooks/useColors/useColors';
 import ExcerptCollapsible from './ExcerptCollapsible/ExcerptCollapsible';
 
 /**

@@ -10,7 +10,7 @@ import {
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import Link from './Link/Link';
-import { useColors } from '../../../utils/CustomHooks/useColors/useColors';
+import { useColors } from '../../../utils/customHooks/useColors/useColors';
 
 /**
  * @namespace LicensesListItem

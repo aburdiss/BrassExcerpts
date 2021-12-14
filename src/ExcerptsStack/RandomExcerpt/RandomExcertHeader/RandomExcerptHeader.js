@@ -9,7 +9,7 @@ import {
 import { useNavigation } from '@react-navigation/core';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-import { useColors } from '../../../utils/CustomHooks/useColors/useColors';
+import { useColors } from '../../../utils/customHooks/useColors/useColors';
 
 /**
  * @namespace RandomExcerptHeader

@@ -4,7 +4,7 @@ import CalendarStrip from 'react-native-calendar-strip';
 import { useRoute } from '@react-navigation/core';
 
 import { getDateFromString } from '../../../utils/getDateFromString/getDateFromString';
-import { useColors } from '../../../utils/CustomHooks/useColors/useColors';
+import { useColors } from '../../../utils/customHooks/useColors/useColors';
 
 /**
  * @namespace Calendar

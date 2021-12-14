@@ -2,8 +2,8 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import SegmentedControl from '@react-native-segmented-control/segmented-control';
 
-import { useColors } from '../../../utils/CustomHooks/useColors/useColors';
-import { useTheme } from '../../../utils/CustomHooks/useTheme/useTheme';
+import { useColors } from '../../../utils/customHooks/useColors/useColors';
+import { useTheme } from '../../../utils/customHooks/useTheme/useTheme';
 import { getDarkOrLightTheme } from '../../../utils/getDarkOrLightTheme/getDarkOrLightTheme';
 
 /**

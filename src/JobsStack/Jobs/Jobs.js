@@ -14,8 +14,8 @@ import { PreferencesContext } from '../../Model/Preferences';
 import { openMusicalChairsLink } from './utils/openMusicalChairsLink/openMusicalChairsLink';
 import { fetchInstrumentJobs } from '../../utils/fetchInstrumentJobs/fetchInstrumentJobs';
 import { hasValidJobs } from './utils/hasValidJobs/hasValidJobs';
-import { useColors } from '../../utils/CustomHooks/useColors/useColors';
-import { useTheme } from '../../utils/CustomHooks/useTheme/useTheme';
+import { useColors } from '../../utils/customHooks/useColors/useColors';
+import { useTheme } from '../../utils/customHooks/useTheme/useTheme';
 import { getValidJobs } from './utils/getValidJobs/getValidJobs';
 
 /**

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Pressable, Text, Switch, StyleSheet, Platform } from 'react-native';
 
-import { useColors } from '../../../utils/CustomHooks/useColors/useColors';
+import { useColors } from '../../../utils/customHooks/useColors/useColors';
 
 /**
  * @namespace SwitchListItem

@@ -10,9 +10,9 @@ import Loading from '../../Components/Loading/Loading';
 import { PreferencesContext } from '../../Model/Preferences';
 import { isFavorite } from '../../utils/isFavorite/isFavorite';
 import { getExcerptData } from '../../utils/getExcerptData/getExcerptData';
-import { useColors } from '../../utils/CustomHooks/useColors/useColors';
-import { useTheme } from '../../utils/CustomHooks/useTheme/useTheme';
-import { useTopExcerpts } from '../../utils/CustomHooks/useTopExcerpts/useTopExcerpts';
+import { useColors } from '../../utils/customHooks/useColors/useColors';
+import { useTheme } from '../../utils/customHooks/useTheme/useTheme';
+import { useTopExcerpts } from '../../utils/customHooks/useTopExcerpts/useTopExcerpts';
 import { getInstrumentsSelected } from '../../utils/getInstrumentsSelected/getInstrumentsSelected';
 import { capitalize } from '../../utils/captiatlize/capitalize';
 /**

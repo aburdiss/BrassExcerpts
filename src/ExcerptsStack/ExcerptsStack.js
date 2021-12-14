@@ -4,7 +4,7 @@ import { Alert } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import { PreferencesContext } from '../Model/Preferences';
-import { useColors } from '../utils/CustomHooks/useColors/useColors';
+import { useColors } from '../utils/customHooks/useColors/useColors';
 
 import Excerpts from './Excerpts/Excerpts';
 import ExcerptDetail from './ExcerptDetail/ExcerptDetail';

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { View, StyleSheet, Appearance } from 'react-native';
 import RNPickerSelect from 'react-native-picker-select';
 
-import { useColors } from '../../../utils/CustomHooks/useColors/useColors';
+import { useColors } from '../../../utils/customHooks/useColors/useColors';
 
 /**
  * @description A rendered Picker list item that updates saved preferences.

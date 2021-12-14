@@ -7,7 +7,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { capitalize } from '../../utils/captiatlize/capitalize';
 import { isFavorite } from '../../utils/isFavorite/isFavorite';
 import { getExcerptData } from '../../utils/getExcerptData/getExcerptData';
-import { useColors } from '../../utils/CustomHooks/useColors/useColors';
+import { useColors } from '../../utils/customHooks/useColors/useColors';
 import { getInstrumentsSelected } from '../../utils/getInstrumentsSelected/getInstrumentsSelected';
 
 /**

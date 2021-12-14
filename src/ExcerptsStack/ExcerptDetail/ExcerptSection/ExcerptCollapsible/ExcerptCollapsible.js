@@ -18,7 +18,7 @@ import {
   useSafeAreaInsets,
 } from 'react-native-safe-area-context';
 
-import { useColors } from '../../../../utils/CustomHooks/useColors/useColors';
+import { useColors } from '../../../../utils/customHooks/useColors/useColors';
 
 /**
  * @namespace ExcerptCollapsible

@@ -14,8 +14,8 @@ import { composers as tromboneComposers } from '../../Model/Excerpts/TromboneExc
 import { composers as tubaComposers } from '../../Model/Excerpts/TubaExcerpts';
 import { PreferencesContext } from '../../Model/Preferences';
 import { getNumberOfInstruments } from '../../utils/getNumberOfInstruments/getNumberOfInstruments';
-import { useIdleScreen } from '../../utils/CustomHooks/useIdleScreen/useIdleScreen';
-import { useColors } from '../../utils/CustomHooks/useColors/useColors';
+import { useIdleScreen } from '../../utils/customHooks/useIdleScreen/useIdleScreen';
+import { useColors } from '../../utils/customHooks/useColors/useColors';
 
 /**
  * @namespace ComposerDetail

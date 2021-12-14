@@ -6,7 +6,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { QueryClient, QueryClientProvider } from 'react-query';
 
-import { useColors } from './src/utils/CustomHooks/useColors/useColors';
+import { useColors } from './src/utils/customHooks/useColors/useColors';
 
 import { PreferencesProvider } from './src/Model/Preferences';
 
@@ -14,7 +14,7 @@ import ExcerptsStack from './src/ExcerptsStack/ExcerptsStack';
 import ComposersStack from './src/ComposersStack/ComposersStack';
 import JobsStack from './src/JobsStack/JobsStack';
 import MoreStack from './src/MoreStack/MoreStack';
-import { useTheme } from './src/utils/CustomHooks/useTheme/useTheme';
+import { useTheme } from './src/utils/customHooks/useTheme/useTheme';
 import { StatusBar } from 'react-native';
 import { getDarkOrLightThemeInverse } from './src/utils/getDarkOrLightThemeInverse/getDarkOrLightThemeInverse';
 

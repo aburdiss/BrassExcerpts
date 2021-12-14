@@ -5,7 +5,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { PreferencesContext } from '../../../Model/Preferences';
 import { isFavorite } from '../../../utils/isFavorite/isFavorite';
-import { useColors } from '../../../utils/CustomHooks/useColors/useColors';
+import { useColors } from '../../../utils/customHooks/useColors/useColors';
 
 /**
  * @namespace ExcerptListRow

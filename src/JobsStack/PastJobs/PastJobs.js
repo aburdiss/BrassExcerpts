@@ -10,8 +10,8 @@ import SearchBar from '../../Components/SearchBar/SearchBar';
 import { fetchInstrumentJobs } from '../../utils/fetchInstrumentJobs/fetchInstrumentJobs';
 import { PreferencesContext } from '../../Model/Preferences';
 import { getDateFromString } from '../../utils/getDateFromString/getDateFromString';
-import { useColors } from '../../utils/CustomHooks/useColors/useColors';
-import { useTheme } from '../../utils/CustomHooks/useTheme/useTheme';
+import { useColors } from '../../utils/customHooks/useColors/useColors';
+import { useTheme } from '../../utils/customHooks/useTheme/useTheme';
 
 /**
  * @namespace PastJobs

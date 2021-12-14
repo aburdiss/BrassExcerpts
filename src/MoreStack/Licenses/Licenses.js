@@ -15,7 +15,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import Data from './licenses.json';
 
 import LicensesList from './LicensesList/LicensesList';
-import { useColors } from '../../utils/CustomHooks/useColors/useColors';
+import { useColors } from '../../utils/customHooks/useColors/useColors';
 
 import { extractNameFromGithubUrl } from '../../utils/extractNameFromGithubUrl/extractNameFromGithubUrl';
 

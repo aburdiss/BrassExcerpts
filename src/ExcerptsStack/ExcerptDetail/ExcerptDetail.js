@@ -19,8 +19,8 @@ import { excerpts as tubaExcerpts } from '../../Model/Excerpts/TubaExcerpts';
 import { getActiveInstrument } from '../../utils/getActiveInstrument/getActiveInstrument';
 import { getNumberOfInstruments } from '../../utils/getNumberOfInstruments/getNumberOfInstruments';
 import { isFavorite } from '../../utils/isFavorite/isFavorite';
-import { useIdleScreen } from '../../utils/CustomHooks/useIdleScreen/useIdleScreen';
-import { useColors } from '../../utils/CustomHooks/useColors/useColors';
+import { useIdleScreen } from '../../utils/customHooks/useIdleScreen/useIdleScreen';
+import { useColors } from '../../utils/customHooks/useColors/useColors';
 import { PreferencesContext } from '../../Model/Preferences';
 
 import ExcerptSection from './ExcerptSection/ExcerptSection';

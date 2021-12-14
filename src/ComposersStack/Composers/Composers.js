@@ -3,7 +3,7 @@ import { useNavigation } from '@react-navigation/core';
 import React from 'react';
 
 import { composers } from '../../Model/ComposerModel/ComposerModel';
-import { useColors } from '../../utils/CustomHooks/useColors/useColors';
+import { useColors } from '../../utils/customHooks/useColors/useColors';
 import ComposerListRow from './ComposerListRow/ComposerListRow';
 
 /**

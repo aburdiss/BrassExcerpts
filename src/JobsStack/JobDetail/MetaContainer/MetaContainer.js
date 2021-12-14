@@ -6,7 +6,7 @@ import MetaLabel from '../../../Components/MetaLabel/MetaLabel';
 
 import { getDaysUntilDate } from '../../../utils/getDaysUntilDate/getDaysUntilDate';
 import { getDateFromString } from '../../../utils/getDateFromString/getDateFromString';
-import { useColors } from '../../../utils/CustomHooks/useColors/useColors';
+import { useColors } from '../../../utils/customHooks/useColors/useColors';
 
 /**
  * @namespace MetaContainer

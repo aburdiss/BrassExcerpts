@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, Pressable, StyleSheet, Platform } from 'react-native';
 import { useNavigation } from '@react-navigation/core';
-import { useColors } from '../../../utils/CustomHooks/useColors/useColors';
+import { useColors } from '../../../utils/customHooks/useColors/useColors';
 import { getCountryFlagEmoji } from '../../../utils/getCountryFlagEmoji/getCountryFlagEmoji';
 
 /**

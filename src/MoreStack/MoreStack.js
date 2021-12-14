@@ -5,7 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import More from './More/More';
 import Licenses from './Licenses/Licenses';
 import Acknowledgements from './Acknowledgements/Acknowledgements';
-import { useColors } from '../utils/CustomHooks/useColors/useColors';
+import { useColors } from '../utils/customHooks/useColors/useColors';
 
 const Stack = createStackNavigator();
 

@@ -12,7 +12,7 @@ import { excerpts as hornExcerpts } from '../../Model/Excerpts/HornExcerpts';
 import { excerpts as trumpetExcerpts } from '../../Model/Excerpts/TrumpetExcerpts';
 import { excerpts as tromboneExcerpts } from '../../Model/Excerpts/TromboneExcerpts';
 import { excerpts as tubaExcerpts } from '../../Model/Excerpts/TubaExcerpts';
-import { useColors } from '../../utils/CustomHooks/useColors/useColors';
+import { useColors } from '../../utils/customHooks/useColors/useColors';
 
 /**
  * @namespace Excerpts
