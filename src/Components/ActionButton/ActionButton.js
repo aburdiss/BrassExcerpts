@@ -1,3 +1,4 @@
+// @ts-check
 import React from 'react';
 import { Pressable, Text, StyleSheet } from 'react-native';
 
@@ -10,10 +11,10 @@ import { useColors } from '../../utils/CustomHooks/useColors/useColors';
  * @author Alexander Burdiss
  * @since 3/28/21
  * @version 1.2.0
- * @param props The JSX props passed to this React component
- * @param {Function} props.onPress The function to call when this component is
+ * @param {object} props The JSX props passed to this React component
+ * @param {function} props.onPress The function to call when this component is
  * pressed
- * @param {String} children The text to render on this button.
+ * @param {string} props.children The text to render on this button.
  */
 export default function ActionButton({ onPress, children }) {
   const colors = useColors();
@@ -32,6 +33,7 @@ export default function ActionButton({ onPress, children }) {
 
   return (
     <Pressable
+      // @ts-ignore
       onPress={onPress}
       style={({ pressed }) => ({
         opacity: pressed ? 0.7 : 1,

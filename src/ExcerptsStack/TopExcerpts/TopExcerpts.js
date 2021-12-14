@@ -5,6 +5,8 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { useNavigation } from '@react-navigation/core';
 
+import Loading from '../../Components/Loading/Loading';
+
 import { PreferencesContext } from '../../Model/Preferences';
 import { isFavorite } from '../../utils/isFavorite/isFavorite';
 import { getExcerptData } from '../../utils/getExcerptData/getExcerptData';
@@ -125,7 +127,9 @@ const TopExcerpts = () => {
   const { state, dispatch } = useContext(PreferencesContext);
   const navigation = useNavigation();
 
-  const topExcerpts = useTopExcerpts(possibleInstruments[state.jobsIndex]);
+  const { loading, topExcerpts } = useTopExcerpts(
+    possibleInstruments[state.jobsIndex],
+  );
 
   /**
    * @function TopExcerpts~navigateToExcerptDetailPage
@@ -179,6 +183,7 @@ const TopExcerpts = () => {
         </View>
       </SafeAreaView>
       <ScrollView style={styles.contentContainer} ref={scrollViewRef}>
+        {loading && <Loading />}
         {topExcerpts &&
           topExcerpts.map((excerpt, index) => {
             const borderTop = index != 0 ? styles.buttonBorder : null;

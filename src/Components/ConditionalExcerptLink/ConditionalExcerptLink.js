@@ -1,3 +1,4 @@
+// @ts-check
 import React from 'react';
 import { Text, Pressable, View, StyleSheet } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -13,6 +14,16 @@ import { getInstrumentsSelected } from '../../utils/getInstrumentsSelected/getIn
  * @namespace ConditionalExcerptLink
  * @function ConditionalExcerptLink
  * @author Alexander Burdiss
+ * @param {object} props The JSX props passed to this React Component
+ * @param {string} props.instrument The instrument that this conditional link
+ * is being rendered for.
+ * @param {string} props.excerpt The name of the excerpt to be looked up in
+ * state.
+ * @param {number} props.index The index that this link is rendering as. This
+ * is used for styling purposes.
+ * @param {object} props.state The user state stored in Context.
+ * @param {function} props.navigateToExcerptDetail A function that will handle
+ * navigating the user to the Excerpt Detail screen.
  * @since 09/25/21
  * @version 1.0.1
  * @component
@@ -64,7 +75,7 @@ export default function ConditionalExcerptLink({
 
   if (excerptData && instrumentActive) {
     return (
-      <SafeAreaView edges={['left']} key={index}>
+      <SafeAreaView edges={['left']}>
         <Pressable
           accessible
           accessibilityRole="button"
@@ -92,12 +103,7 @@ export default function ConditionalExcerptLink({
           </Text>
           <SafeAreaView style={styles.iconContainer} edges={['right']}>
             {isFavorite(state, excerptData.composerLast, excerptData.name) && (
-              <Ionicons
-                name="heart"
-                size={24}
-                color={colors.red}
-                style={styles.favoriteIcon}
-              />
+              <Ionicons name="heart" size={24} color={colors.red} />
             )}
             <Ionicons
               name="chevron-forward"
@@ -111,7 +117,7 @@ export default function ConditionalExcerptLink({
     );
   } else if (excerptData && !instrumentActive) {
     return (
-      <SafeAreaView key={index} edges={['left']}>
+      <SafeAreaView edges={['left']}>
         <View
           accessibilityRole="text"
           style={[styles.excerptButton, borderTop]}
@@ -127,7 +133,7 @@ export default function ConditionalExcerptLink({
     );
   } else {
     return (
-      <SafeAreaView key={index} edges={['left']}>
+      <SafeAreaView edges={['left']}>
         <View
           accessibilityRole="text"
           style={[styles.excerptButton, borderTop]}

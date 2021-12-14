@@ -2,7 +2,7 @@
 # generateComponent.sh
 # Author: Alexander Burdiss
 # Since: 9/7/21
-# Version: 1.0.1
+# Version: 1.0.2
 # Description: Generates a React component and all the necessary files that go
 # along with it.
 
@@ -48,7 +48,8 @@ fi
 mkdir "src/$path/$component"
 
 # Make JS File
-echo "import React from 'react';
+echo "// @ts-check
+import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 
 /**
@@ -60,16 +61,17 @@ import { StyleSheet, View, Text } from 'react-native';
  * @component
  */
 export default function $component() {
+  const styles = StyleSheet.create({
+    container: {},
+  });
+
   return (
     <View style={styles.container}>
       <Text>$component Works!</Text>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {},
-});" > "src/$path/$component/$component.js"
+" > "src/$path/$component/$component.js"
 
 # Make Jest test file
 echo "import 'react-native';

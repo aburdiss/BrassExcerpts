@@ -19,7 +19,15 @@ const MockContext = ({ children }) => {
     tuba: true,
     favorites: [],
     jobsIndex: 0,
-    randomFavorites: true,
+    randomFavorites: 1,
+    randomHorn: true,
+    randomTrumpet: true,
+    randomTrombone: true,
+    randomTuba: true,
+    alwaysCollapse: false,
+    keepScreenOn: false,
+    theme: 'default',
+    renderedTheme: 'light',
   };
   // eslint-disable-next-line no-undef
   let dispatch = jest.fn();
