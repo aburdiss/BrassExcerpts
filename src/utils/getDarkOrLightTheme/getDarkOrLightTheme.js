@@ -7,13 +7,13 @@
  * theme.
  * @author Alexander Burdiss
  * @since 9/25/21
- * @version 1.0.0
+ * @version 1.1.0
  */
 export function getDarkOrLightTheme(theme) {
   switch (theme) {
-    case 'dracula':
-      return 'dark';
+    case 'light':
+      return 'light';
     default:
-      return theme;
+      return 'dark';
   }
 }

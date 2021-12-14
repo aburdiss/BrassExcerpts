@@ -12,6 +12,7 @@ import { PreferencesContext } from '../../Model/Preferences';
 import { getDateFromString } from '../../utils/getDateFromString/getDateFromString';
 import { useColors } from '../../utils/customHooks/useColors/useColors';
 import { useTheme } from '../../utils/customHooks/useTheme/useTheme';
+import { getDarkOrLightTheme } from '../../utils/getDarkOrLightTheme/getDarkOrLightTheme';
 
 /**
  * @namespace PastJobs
@@ -21,7 +22,7 @@ import { useTheme } from '../../utils/customHooks/useTheme/useTheme';
  * Jobs page.
  * @author Alexander Burdiss
  * @since 3/28/21
- * @version 1.3.0
+ * @version 1.3.1
  * @component
  * @example
  * <PastJobs />
@@ -151,9 +152,7 @@ export default function PastJobs() {
             accessibilityValue={{ now: possibleInstruments[state.jobsIndex] }}
             values={possibleInstruments}
             selectedIndex={state.jobsIndex}
-            appearance={
-              theme == 'dark' || theme == 'dracula' ? 'dark' : 'light'
-            }
+            appearance={getDarkOrLightTheme(theme)}
             onChange={(event) => {
               scrollViewRef.current.scrollTo({ x: 0, y: 0 });
               dispatch({

@@ -9,7 +9,7 @@ import { useColors } from '../../../utils/customHooks/useColors/useColors';
  * @description A rendered Picker list item that updates saved preferences.
  * @author Alexander Burdiss
  * @since 9/11/21
- * @version 1.1.0
+ * @version 1.2.0
  * @param {Object} props.item The data to be rendered inside this list row.
  * @param {Object} props.state The current app state, including user
  * preferences.
@@ -72,6 +72,11 @@ export default function PickerListItem({ item, state, dispatch }) {
         {
           label: 'Dracula Theme',
           value: 'dracula',
+          color: colors.green,
+        },
+        {
+          label: 'Monokai Theme',
+          value: 'monokai',
           color: colors.green,
         },
       ];

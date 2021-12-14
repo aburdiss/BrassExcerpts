@@ -15,12 +15,13 @@ import { useTheme } from '../../utils/customHooks/useTheme/useTheme';
 import { useTopExcerpts } from '../../utils/customHooks/useTopExcerpts/useTopExcerpts';
 import { getInstrumentsSelected } from '../../utils/getInstrumentsSelected/getInstrumentsSelected';
 import { capitalize } from '../../utils/captiatlize/capitalize';
+import { getDarkOrLightTheme } from '../../utils/getDarkOrLightTheme/getDarkOrLightTheme';
 /**
  * @function TopExcerpts
  * @description The top asked for excerpts for each instrument in the app.
  * @author Alexander Burdiss
  * @since 9/18/21
- * @version 1.2.0
+ * @version 1.2.1
  * @component
  * @example
  * <TopExcerpts />
@@ -157,9 +158,7 @@ const TopExcerpts = () => {
             accessibilityValue={{ now: possibleInstruments[state.jobsIndex] }}
             values={possibleInstruments}
             selectedIndex={state.jobsIndex}
-            appearance={
-              theme == 'dark' || theme == 'dracula' ? 'dark' : 'light'
-            }
+            appearance={getDarkOrLightTheme(theme)}
             onChange={(event) => {
               scrollViewRef.current.scrollTo({ x: 0, y: 0 });
               dispatch({

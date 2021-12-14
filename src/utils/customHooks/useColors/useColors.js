@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 
-import { light, dark, dracula } from '../../../Model/Model';
+import { light, dark, dracula, monokai } from '../../../Model/Model';
 import { PreferencesContext } from '../../../Model/Preferences';
 
 /**
@@ -11,7 +11,7 @@ import { PreferencesContext } from '../../../Model/Preferences';
  * directly
  * @author Alexander Burdiss
  * @since 9/11/21
- * @version 2.0.0
+ * @version 2.1.0
  */
 export function useColors() {
   const { state } = useContext(PreferencesContext);
@@ -21,6 +21,7 @@ export function useColors() {
       light: light,
       dark: dark,
       dracula: dracula,
+      monokai: monokai,
     }[state?.renderedTheme] ?? light
   );
 }

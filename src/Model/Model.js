@@ -44,6 +44,7 @@ export const colors = {
   reactColor: '#61dafb',
   javascriptColor: '#fcdc00',
 
+  // Dracula Specific Colors
   draculaBackground: 'rgb(40, 42, 54)',
   draculaCurrentLine: 'rgb(68, 71, 90)',
   draculaForeground: 'rgb(248, 248, 242)',
@@ -55,6 +56,18 @@ export const colors = {
   draculaPurple: 'rgb(189, 147, 249)',
   draculaRed: 'rgb(255, 85, 85)',
   draculaYellow: 'rgb(241, 250, 140)',
+
+  // Monokai Specific Colors
+  monokaiPink: '#F92672',
+  monokaiOrange: '#FD971F',
+  monokaiYellow: '#E6DB74',
+  monokaiGreen: '#A6E22E',
+  monokaiBlue: '#66D9EF',
+  monokaiPurple: '#AE81FF',
+  monokaiBlack: '#272822',
+  monokaiWhite: '#D6D6D6',
+  monokaiComment: '#797979',
+  monokaiBackground: '#2E2E2E',
 };
 
 export const light = {
@@ -131,6 +144,32 @@ export const dracula = {
   indigo: colors.draculaPurple,
   purple: colors.draculaPurple,
   pink: colors.draculaPink,
+  react: colors.reactColor,
+  javascript: colors.javascriptColor,
+};
+
+export const monokai = {
+  alwaysBlack: colors.monokaiBlack,
+  alwaysWhite: colors.monokaiWhite,
+  background: colors.monokaiBlack,
+  background2: colors.monokaiBackground,
+  text: colors.monokaiWhite,
+  textInverse: colors.monokaiBlack,
+  systemGray: colors.monokaiComment,
+  systemGray2: colors.monokaiComment,
+  systemGray3: colors.monokaiComment,
+  systemGray4: colors.monokaiBackground,
+  systemGray5: colors.monokaiComment,
+  systemGray6: colors.monokaiBackground,
+  red: colors.monokaiPink,
+  orange: colors.monokaiOrange,
+  yellow: colors.monokaiYellow,
+  green: colors.monokaiGreen,
+  teal: colors.monokaiGreen,
+  blue: colors.monokaiBlue,
+  indigo: colors.monokaiPurple,
+  purple: colors.monokaiPurple,
+  pink: colors.monokaiPink,
   react: colors.reactColor,
   javascript: colors.javascriptColor,
 };

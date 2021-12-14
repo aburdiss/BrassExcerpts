@@ -17,6 +17,7 @@ import { hasValidJobs } from './utils/hasValidJobs/hasValidJobs';
 import { useColors } from '../../utils/customHooks/useColors/useColors';
 import { useTheme } from '../../utils/customHooks/useTheme/useTheme';
 import { getValidJobs } from './utils/getValidJobs/getValidJobs';
+import { getDarkOrLightTheme } from '../../utils/getDarkOrLightTheme/getDarkOrLightTheme';
 
 /**
  * @todo Make section that user can add their own lists of excerpts inside the
@@ -29,7 +30,7 @@ import { getValidJobs } from './utils/getValidJobs/getValidJobs';
  * and display more information about that Job to the user.
  * @author Alexander Burdiss
  * @since 3/5/21
- * @version 1.3.0
+ * @version 1.3.1
  * @component
  * @example
  * <Jobs />
@@ -176,9 +177,7 @@ export default function Jobs() {
             accessibilityValue={{ now: possibleInstruments[state.jobsIndex] }}
             values={possibleInstruments}
             selectedIndex={state.jobsIndex}
-            appearance={
-              theme == 'dark' || theme == 'dracula' ? 'dark' : 'light'
-            }
+            appearance={getDarkOrLightTheme(theme)}
             onChange={(event) => {
               scrollViewRef.current.scrollTo({ x: 0, y: 0 });
               dispatch({
@@ -189,13 +188,8 @@ export default function Jobs() {
           />
         </View>
         <SearchBar
-          // textFieldBackgroundColor={colors.background}
-          // searchBarStyle="minimal"
           placeholder={searchPlaceholderText[state.jobsIndex]}
           onChangeText={(text) => setCurrentSearchTerm(text.toLowerCase())}
-          // tintColor={colors.green}
-          // textColor={colors.text}
-          // barTintColor={colors.background2}
         />
       </SafeAreaView>
       <ScrollView style={styles.contentContainer} ref={scrollViewRef}>
