@@ -33,7 +33,7 @@ let bachCelloSuite = {
   mutes: 'No',
   commonDifficulties: 'smooth leaps, breathing',
   professionalAdvice:
-    '"As to tempo, we are left to find a comfortable tempo that communicates the gravity of the music without becoming glacial and static. Many trombonists play the Sarabande as if it was in six rather than three – such weighting of each note results in a dull, ponderous performance that is impossible to sustain musically. A tempo of quarter note = 50 is typical of that taken by many of the world’s great cello players and allows us to maintain forward motion without hurrying.\n\nKeep in mind that every measure contains a five note theme; the sixth note in several bars serves simply as a reinforcement of the cadence, a melodic movement to the key of the downbeat of the next bar, or resolution of a fifth note passing tone.\n\nBars 16-19 require a decision by the performer: whether or not to phrase over the bar lines. Many players (including myself in my 2001 version of this movement that was first posted on my website} have phrased over the bar line, making the sixth note a pickup to the next bar. But over time, I have become persuaded – as the earliest manuscripts of the Suites support – that playing all six notes in those bars as a phrase rather than giving each bar a five note theme with a pickup to the next bar makes the most cogent musical sense." -Douglas Yeo',
+    '"As to tempo, we are left to find a comfortable tempo that communicates the gravity of the music without becoming glacial and static. Many trombonists play the Sarabande as if it was in six rather than three - such weighting of each note results in a dull, ponderous performance that is impossible to sustain musically. A tempo of quarter note = 50 is typical of that taken by many of the world\'s great cello players and allows us to maintain forward motion without hurrying.\n\nKeep in mind that every measure contains a five note theme; the sixth note in several bars serves simply as a reinforcement of the cadence, a melodic movement to the key of the downbeat of the next bar, or resolution of a fifth note passing tone.\n\nBars 16-19 require a decision by the performer: whether or not to phrase over the bar lines. Many players (including myself in my 2001 version of this movement that was first posted on my website} have phrased over the bar line, making the sixth note a pickup to the next bar. But over time, I have become persuaded - as the earliest manuscripts of the Suites support - that playing all six notes in those bars as a phrase rather than giving each bar a five note theme with a pickup to the next bar makes the most cogent musical sense." -Douglas Yeo',
   videos: 'bachCelloSuite',
 };
 
@@ -354,7 +354,7 @@ let borodinPolovetsian = {
       id: 17,
       description: 'Excerpt 2',
       avgTempo: '',
-      measures: 'No. 17, 4 mm. after ‘Allegro’ to [G]',
+      measures: "No. 17, 4 mm. after 'Allegro' to [G]",
       pictures: [
         ['Trombone 1', 'Trombone/BorodinPolovetsian/1046.png'],
         ['Trombone 2', 'Trombone/BorodinPolovetsian/1047.png'],

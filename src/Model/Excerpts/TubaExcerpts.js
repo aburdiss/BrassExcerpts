@@ -28,19 +28,19 @@ let berliozFaust = {
     {
       id: 2,
       description: 'Excerpt 2',
-      measures: 'Auerbach’s Cellar in Leipzig, mm. 1 - 14',
+      measures: "Auerbach's Cellar in Leipzig, mm. 1 - 14",
       pictures: [['Tuba', 'Tuba/BerliozFaust/1001.png']],
     },
     {
       id: 3,
       description: 'Excerpt 3',
-      measures: 'Auerbach’s Cellar in Leipzig, [39] - 8 mm. after [39] ',
+      measures: "Auerbach's Cellar in Leipzig, [39] - 8 mm. after [39] ",
       pictures: [['Tuba', 'Tuba/BerliozFaust/1002.png']],
     },
     {
       id: 4,
       description: 'Excerpt 4',
-      measures: 'Fugue on the Theme of Brander’s Song',
+      measures: "Fugue on the Theme of Brander's Song",
       pictures: [['Tuba', 'Tuba/BerliozFaust/1003.png']],
     },
   ],
@@ -982,7 +982,7 @@ let mahler9 = {
     {
       id: 106,
       description: 'Excerpt 3',
-      measures: 'Mov. III, Sempre l’istesso tempo after [32]',
+      measures: "Mov. III, Sempre l'istesso tempo after [32]",
       pictures: [['Tuba', 'Tuba/Mahler9/1118.png']],
     },
     {
@@ -1885,7 +1885,7 @@ let wagnerGotterdamerung = {
     {
       id: 180,
       description: 'Excerpt 2',
-      measures: 'Siegfried’s Funeral March, [43] - [44]',
+      measures: "Siegfried's Funeral March, [43] - [44]",
       pictures: [['Tuba', 'Tuba/WagnerGotterdammerung/1213.png']],
     },
   ],

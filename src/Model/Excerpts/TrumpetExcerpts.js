@@ -1727,7 +1727,7 @@ let stravinskyPetrushka = {
     {
       id: 112,
       description: 'Excerpt 1',
-      measures: 'Ballerina’s Dance, 1 mm. before [69] - [70]',
+      measures: "Ballerina's Dance, 1 mm. before [69] - [70]",
       pictures: [['B♭ Cornet 1', 'Trumpet/StravinskyPetrushka/1249.png']],
     },
     {
@@ -1745,7 +1745,7 @@ let stravinskyPetrushka = {
     {
       id: 115,
       description: 'Excerpt 4',
-      measures: 'Apparition Of Petrushka’s Ghost:, [132]  - End',
+      measures: "Apparition Of Petrushka's Ghost:, [132]  - End",
       pictures: [
         ['D Piccolo Trumpet 1', 'Trumpet/StravinskyPetrushka/1252.png'],
         ['B♭ Trumpet 2', 'Trumpet/StravinskyPetrushka/1253.png'],

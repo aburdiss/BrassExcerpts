@@ -197,7 +197,7 @@ let beethoven3 = {
     {
       id: 14,
       description: 'Excerpt 2',
-      measures: 'Mov. I, 16 mm. before [U] – 9 mm. after [V]',
+      measures: 'Mov. I, 16 mm. before [U] - 9 mm. after [V]',
       pictures: [
         ['E♭ Horn 1', 'Horn/Beethoven3/1030.png'],
         ['E♭ Horn 2', 'Horn/Beethoven3/1031.png'],
@@ -217,7 +217,7 @@ let beethoven3 = {
     {
       id: 16,
       description: 'Excerpt 4',
-      measures: 'Mov. IV, 9 mm. before [F] – 7 mm. after [G]',
+      measures: 'Mov. IV, 9 mm. before [F] - 7 mm. after [G]',
       pictures: [
         ['E♭ Horn 1', 'Horn/Beethoven3/1036.png'],
         ['E♭ Horn 2', 'Horn/Beethoven3/1037.png'],
@@ -289,7 +289,7 @@ let beethoven7 = {
     {
       id: 21,
       description: 'Excerpt 2',
-      measures: 'Mov. I, 23 mm. after [N] – End',
+      measures: 'Mov. I, 23 mm. after [N] - End',
       pictures: [
         ['A Horn 1', 'Horn/Beethoven7/1047.png'],
         ['A Horn 2', 'Horn/Beethoven7/1048.png'],
@@ -307,7 +307,7 @@ let beethoven7 = {
     {
       id: 23,
       description: 'Excerpt 4',
-      measures: 'Mov. IV, K – End',
+      measures: 'Mov. IV, K - End',
       pictures: [
         ['A Horn 1', 'Horn/Beethoven7/1051.png'],
         ['A Horn 2', 'Horn/Beethoven7/1052.png'],
@@ -353,7 +353,7 @@ let beethoven9 = {
     {
       id: 25,
       description: 'Excerpt 1',
-      measures: 'Mov. I, [Q] – 10 mm. after [Q]',
+      measures: 'Mov. I, [Q] - 10 mm. after [Q]',
       pictures: [
         ['D Horn 1', 'Horn/Beethoven9/1055.png'],
         ['D Horn 2', 'Horn/Beethoven9/1056.png'],
@@ -398,7 +398,7 @@ let berliozRomeoJuliet = {
     {
       id: 28,
       description: 'Excerpt 1',
-      measures: 'Mov. III, 9 mm. after 57 – 4 mm. after 62',
+      measures: 'Mov. III, 9 mm. after 57 - 4 mm. after 62',
       pictures: [
         ['F Horn 1', 'Horn/BerliozRomeoAndJuliet/1065.png'],
         ['C Horn 2', 'Horn/BerliozRomeoAndJuliet/1066.png'],
@@ -432,7 +432,7 @@ let brahmsAcademic = {
     {
       id: 30,
       description: 'Excerpt 2',
-      measures: '10 mm. after [F] – [G]',
+      measures: '10 mm. after [F] - [G]',
       pictures: [
         ['C Horn 1', 'Horn/BrahmsAcademic/1071.png'],
         ['C Horn 2', 'Horn/BrahmsAcademic/1072.png'],
