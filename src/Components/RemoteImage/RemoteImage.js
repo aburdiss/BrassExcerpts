@@ -21,7 +21,7 @@ import { getContrast } from '../../utils/getContrast/getContrast';
  * @param {string} props.source The remote source to pull the image in from.
  * @author Alexander Burdiss
  * @since 12/14/21
- * @version 1.0.0
+ * @version 1.0.1
  * @component
  * @example
  */
@@ -31,6 +31,7 @@ export default function RemoteImage({ description, source }) {
     errorContainer: {
       backgroundColor: colors.red,
       padding: 40,
+      borderRadius: 8,
     },
     errorTextBold: {
       textAlign: 'center',

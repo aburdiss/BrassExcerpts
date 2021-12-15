@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect, useRef } from 'react';
-import { ScrollView, StyleSheet, View } from 'react-native';
+import { ScrollView, StyleSheet, View, Text } from 'react-native';
 import SegmentedControl from '@react-native-segmented-control/segmented-control';
 import { useQuery } from 'react-query';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -13,6 +13,7 @@ import { getDateFromString } from '../../utils/getDateFromString/getDateFromStri
 import { useColors } from '../../utils/customHooks/useColors/useColors';
 import { useTheme } from '../../utils/customHooks/useTheme/useTheme';
 import { getDarkOrLightTheme } from '../../utils/getDarkOrLightTheme/getDarkOrLightTheme';
+import { getContrast } from '../../utils/getContrast/getContrast';
 
 /**
  * @namespace PastJobs
@@ -22,7 +23,7 @@ import { getDarkOrLightTheme } from '../../utils/getDarkOrLightTheme/getDarkOrLi
  * Jobs page.
  * @author Alexander Burdiss
  * @since 3/28/21
- * @version 1.3.1
+ * @version 1.4.0
  * @component
  * @example
  * <PastJobs />
@@ -43,6 +44,17 @@ export default function PastJobs() {
     contentContainer: {
       paddingHorizontal: 10,
       flex: 1,
+    },
+    errorContainer: {
+      marginVertical: 10,
+      marginHorizontal: 5,
+      padding: 40,
+      backgroundColor: colors.red,
+      borderRadius: 8,
+    },
+    errorText: {
+      textAlign: 'center',
+      color: getContrast(colors.red, colors),
     },
     pastJobsContainer: {
       backgroundColor: colors.background,
@@ -105,17 +117,20 @@ export default function PastJobs() {
      */
     function fetchCurrentJobs() {
       setCurrentJobs(
-        [hornJobs.data, trumpetJobs.data, tromboneJobs.data, tubaJobs.data][
-          state.jobsIndex
-        ],
+        [hornJobs, trumpetJobs, tromboneJobs, tubaJobs][state.jobsIndex],
       );
     },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [
       hornJobs.data,
       trumpetJobs.data,
       state.jobsIndex,
       tromboneJobs.data,
       tubaJobs.data,
+      hornJobs.isError,
+      trumpetJobs.isError,
+      tromboneJobs.isError,
+      tubaJobs.isError,
     ],
   );
 
@@ -143,6 +158,10 @@ export default function PastJobs() {
     }
   }
 
+  let currentInstrument = ['horn', 'trumpet', 'trombone', 'tuba'][
+    state.jobsIndex
+  ];
+
   return (
     <View style={styles.pastJobsContainer}>
       <SafeAreaView edges={['left', 'right']} style={styles.topContainer}>
@@ -169,7 +188,20 @@ export default function PastJobs() {
       </SafeAreaView>
       <ScrollView style={styles.contentContainer} ref={scrollViewRef}>
         <View>
-          {currentJobs?.map((job, index) => {
+          {currentJobs.isError && (
+            // Error
+            <SafeAreaView style={styles.errorContainer}>
+              <Text
+                style={styles.errorText}
+                accessibilityRole="text"
+                maxFontSizeMultiplier={2.0}
+              >
+                There was an error fetching {currentInstrument} jobs.{'\n'}If
+                this persists, please contact us.
+              </Text>
+            </SafeAreaView>
+          )}
+          {currentJobs.data?.map((job, index) => {
             const jobDate = new getDateFromString(job.closingDate);
             if (jobDate < new Date() && isValidSearchResult(job)) {
               return (

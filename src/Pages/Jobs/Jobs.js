@@ -9,6 +9,7 @@ import JobsListRow from './JobsListRow/JobsListRow';
 // eslint-disable-next-line no-unused-vars
 import ActionButton from '../../Components/ActionButton/ActionButton';
 import SearchBar from '../../Components/SearchBar/SearchBar';
+import Loading from '../../Components/Loading/Loading';
 
 import { PreferencesContext } from '../../Model/Preferences';
 import { openMusicalChairsLink } from './utils/openMusicalChairsLink/openMusicalChairsLink';
@@ -18,6 +19,7 @@ import { useColors } from '../../utils/customHooks/useColors/useColors';
 import { useTheme } from '../../utils/customHooks/useTheme/useTheme';
 import { getValidJobs } from './utils/getValidJobs/getValidJobs';
 import { getDarkOrLightTheme } from '../../utils/getDarkOrLightTheme/getDarkOrLightTheme';
+import { getContrast } from '../../utils/getContrast/getContrast';
 
 /**
  * @todo Make section that user can add their own lists of excerpts inside the
@@ -30,7 +32,7 @@ import { getDarkOrLightTheme } from '../../utils/getDarkOrLightTheme/getDarkOrLi
  * and display more information about that Job to the user.
  * @author Alexander Burdiss
  * @since 3/5/21
- * @version 1.3.1
+ * @version 1.4.0
  * @component
  * @example
  * <Jobs />
@@ -63,16 +65,27 @@ export default function Jobs() {
     },
     errorContainer: {
       marginVertical: 10,
+      marginHorizontal: 5,
       padding: 40,
+      backgroundColor: colors.red,
+      borderRadius: 8,
     },
     errorText: {
       textAlign: 'center',
-      color: colors.text,
+      color: getContrast(colors.red, colors),
     },
     linkText: {
       color: colors.green,
       textDecorationLine: 'underline',
       padding: 10,
+    },
+    noJobsContainer: {
+      marginVertical: 10,
+      padding: 40,
+    },
+    noJobsText: {
+      textAlign: 'center',
+      color: colors.text,
     },
     jobsContainer: {
       height: '100%',
@@ -133,21 +146,24 @@ export default function Jobs() {
      * the data to the current Job state variable.
      * @author Alexander Burdiss
      * @since 3/28/21
-     * @version 1.0.0
+     * @version 1.0.1
      */
     function fetchCurrentJobs() {
       setCurrentJobs(
-        [hornJobs.data, trumpetJobs.data, tromboneJobs.data, tubaJobs.data][
-          state.jobsIndex
-        ],
+        [hornJobs, trumpetJobs, tromboneJobs, tubaJobs][state.jobsIndex],
       );
     },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [
       hornJobs.data,
       trumpetJobs.data,
       state.jobsIndex,
       tromboneJobs.data,
       tubaJobs.data,
+      hornJobs.isError,
+      trumpetJobs.isError,
+      tromboneJobs.isError,
+      tubaJobs.isError,
     ],
   );
 
@@ -193,16 +209,37 @@ export default function Jobs() {
         />
       </SafeAreaView>
       <ScrollView style={styles.contentContainer} ref={scrollViewRef}>
-        {hasValidJobs(currentJobs) ? (
+        {hasValidJobs(currentJobs.data) && (
           <SafeAreaView edges={['left', 'right']}>
-            {getValidJobs(currentJobs, currentSearchTerm)?.map((job, index) => (
-              <JobsListRow key={index} job={job} />
-            ))}
+            {getValidJobs(currentJobs.data, currentSearchTerm)?.map(
+              (job, index) => (
+                <JobsListRow key={index} job={job} />
+              ),
+            )}
           </SafeAreaView>
-        ) : (
+        )}
+        {currentJobs.isLoading && (
+          // No data, but still loading
+          <Loading />
+        )}
+        {currentJobs.isError && (
+          // Error
           <SafeAreaView style={styles.errorContainer}>
             <Text
               style={styles.errorText}
+              accessibilityRole="text"
+              maxFontSizeMultiplier={2.0}
+            >
+              There was an error fetching {currentInstrument} jobs.{'\n'}If this
+              persists, please contact us.
+            </Text>
+          </SafeAreaView>
+        )}
+        {!currentJobs.isLoading && hasValidJobs(currentJobs.data) && (
+          // No data, but not loading and no error
+          <SafeAreaView style={styles.noJobsContainer}>
+            <Text
+              style={styles.noJobsText}
               accessibilityRole="text"
               maxFontSizeMultiplier={2.0}
             >
