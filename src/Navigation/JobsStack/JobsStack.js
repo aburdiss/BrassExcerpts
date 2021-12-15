@@ -2,14 +2,14 @@ import 'react-native-gesture-handler';
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import HeaderButton from '../Components/HeaderButton/HeaderButton';
-import ExcerptDetail from '../ExcerptsStack/ExcerptDetail/ExcerptDetail';
-import Jobs from './Jobs/Jobs';
-import PastJobs from './PastJobs/PastJobs';
-import JobDetail from './JobDetail/JobDetail';
-import CreateCustomAudition from './CreateCustomAudition/CreateCustomAudition';
-import CustomAudition from './CustomAudition/CustomAudition';
-import { useColors } from '../utils/customHooks/useColors/useColors';
+import HeaderButton from '../../Components/HeaderButton/HeaderButton';
+import ExcerptDetail from '../../Pages/ExcerptDetail/ExcerptDetail';
+import Jobs from '../../Pages/Jobs/Jobs';
+import PastJobs from '../../Pages/PastJobs/PastJobs';
+import JobDetail from '../../Pages/JobDetail/JobDetail';
+import CreateCustomAudition from '../../Pages/CreateCustomAudition/CreateCustomAudition';
+import CustomAudition from '../../Pages/CustomAudition/CustomAudition';
+import { useColors } from '../../utils/customHooks/useColors/useColors';
 
 const Stack = createStackNavigator();
 

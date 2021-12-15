@@ -2,10 +2,10 @@ import 'react-native-gesture-handler';
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import More from './More/More';
-import Licenses from './Licenses/Licenses';
-import Acknowledgements from './Acknowledgements/Acknowledgements';
-import { useColors } from '../utils/customHooks/useColors/useColors';
+import More from '../../Pages/More/More';
+import Licenses from '../../Pages/Licenses/Licenses';
+import Acknowledgements from '../../Pages/Acknowledgements/Acknowledgements';
+import { useColors } from '../../utils/customHooks/useColors/useColors';
 
 const Stack = createStackNavigator();
 

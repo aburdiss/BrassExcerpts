@@ -10,10 +10,10 @@ import { useColors } from './src/utils/customHooks/useColors/useColors';
 
 import { PreferencesProvider } from './src/Model/Preferences';
 
-import ExcerptsStack from './src/ExcerptsStack/ExcerptsStack';
-import ComposersStack from './src/ComposersStack/ComposersStack';
-import JobsStack from './src/JobsStack/JobsStack';
-import MoreStack from './src/MoreStack/MoreStack';
+import ExcerptsStack from './src/Navigation/ExcerptsStack/ExcerptsStack';
+import ComposersStack from './src/Navigation/ComposersStack/ComposersStack';
+import JobsStack from './src/Navigation/JobsStack/JobsStack';
+import MoreStack from './src/Navigation/MoreStack/MoreStack';
 import { useTheme } from './src/utils/customHooks/useTheme/useTheme';
 import { StatusBar } from 'react-native';
 import { getDarkOrLightThemeInverse } from './src/utils/getDarkOrLightThemeInverse/getDarkOrLightThemeInverse';

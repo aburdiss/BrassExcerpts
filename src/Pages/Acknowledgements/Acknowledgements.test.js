@@ -1,9 +1,9 @@
 import 'react-native';
 import React from 'react';
+import { render } from '@testing-library/react-native';
+
 import Acknowledgements from './Acknowledgements';
 import MockContext from '../../../jest/MockContext';
-
-import {render} from '@testing-library/react-native';
 
 test('Acknowledgements renders correctly', () => {
   render(

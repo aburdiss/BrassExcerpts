@@ -3,14 +3,14 @@ import React, { useContext } from 'react';
 import { Alert } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import { PreferencesContext } from '../Model/Preferences';
-import { useColors } from '../utils/customHooks/useColors/useColors';
+import { PreferencesContext } from '../../Model/Preferences';
+import { useColors } from '../../utils/customHooks/useColors/useColors';
 
-import Excerpts from './Excerpts/Excerpts';
-import ExcerptDetail from './ExcerptDetail/ExcerptDetail';
-import RandomExcerpt from './RandomExcerpt/RandomExcerpt';
-import HeaderButton from '../Components/HeaderButton/HeaderButton';
-import TopExcerpts from './TopExcerpts/TopExcerpts';
+import Excerpts from '../../Pages/Excerpts/Excerpts';
+import ExcerptDetail from '../../Pages/ExcerptDetail/ExcerptDetail';
+import RandomExcerpt from '../../Pages/RandomExcerpt/RandomExcerpt';
+import HeaderButton from '../../Components/HeaderButton/HeaderButton';
+import TopExcerpts from '../../Pages/TopExcerpts/TopExcerpts';
 
 const Stack = createStackNavigator();
 

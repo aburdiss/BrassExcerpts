@@ -1621,10 +1621,7 @@ const YouTubeModel = {
       ['Sir Simon Rattle, London Symphony Orchestra', 'EkwqPJZe8ms'],
     ],
     score: [
-      [
-        'Leonard B​e​r​n​ste​i​n, New York Philharmonic Orchestra',
-        'rP42C-4zL3w',
-      ],
+      ['Leonard Bernstein, New York Philharmonic Orchestra', 'rP42C-4zL3w'],
       ['Lorin Maazel, The Cleveland Orchestra', '0XyTWt82XQM'],
     ],
   },
@@ -1875,7 +1872,6 @@ const YouTubeModel = {
 
   wagnerFlying: {
     full: [
-      ['Andris Nelsons, Orchestra of the Royal Opera House', 'EW1yXBl_aQA'],
       ['Antal Dorati, Orchestra of the Royal Opera House', 'cum3HoVhMIs'],
       ['Christian Thielemann, Bayreuther Festspiele', 'mFqX_oZPL6g'],
       ['Franz Konwitschny, Staatskapelle Berlin', 'CvIIajk4M2k'],
