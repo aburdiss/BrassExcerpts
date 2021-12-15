@@ -6,19 +6,14 @@ import {
   Pressable,
   Animated,
   Easing,
-  useWindowDimensions,
   StyleSheet,
 } from 'react-native';
 import Collapsible from 'react-native-collapsible';
-import AutoHeightImage from 'react-native-auto-height-image';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import Pinchable from 'react-native-pinchable';
-import {
-  SafeAreaView,
-  useSafeAreaInsets,
-} from 'react-native-safe-area-context';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { useColors } from '../../../../utils/customHooks/useColors/useColors';
+import RemoteImage from '../../../../Components/RemoteImage/RemoteImage';
 
 /**
  * @namespace ExcerptCollapsible
@@ -32,7 +27,7 @@ import { useColors } from '../../../../utils/customHooks/useColors/useColors';
  * purposes.
  * @author Alexander Burdiss
  * @since 5/1/21
- * @version 1.2.0
+ * @version 1.3.0
  * @component
  * @example
  * <ExcerptCollapsible
@@ -89,9 +84,6 @@ export default function ExcerptCollapsible({ excerpt, startCollapsed, index }) {
 
   const [excerptIsCollapsed, setExcerptIsCollapsed] = useState(startCollapsed);
   const animatedController = useRef(new Animated.Value(0)).current;
-
-  const windowWidth = useWindowDimensions().width;
-  const windowInsets = useSafeAreaInsets();
 
   /**
    * @function ExcerptCollapsible~toggleChevron
@@ -181,22 +173,12 @@ export default function ExcerptCollapsible({ excerpt, startCollapsed, index }) {
             <Text style={styles.excerptCaption} maxFontSizeMultiplier={2.0}>
               {picture[0]}
             </Text>
-            <Pinchable>
-              <AutoHeightImage
-                accessibilityRole="image"
-                accessibilityLabel={
-                  excerpt.description +
-                  ' ' +
-                  excerpt.measuers +
-                  ' ' +
-                  picture[0]
-                }
-                width={windowWidth - windowInsets.left - windowInsets.right}
-                source={{
-                  uri: EXTERNAL_GITHUB_URL + picture[1],
-                }}
-              />
-            </Pinchable>
+            <RemoteImage
+              description={
+                excerpt.description + ' ' + excerpt.measuers + ' ' + picture[0]
+              }
+              source={EXTERNAL_GITHUB_URL + picture[1]}
+            />
           </SafeAreaView>
         ))}
       </Collapsible>
