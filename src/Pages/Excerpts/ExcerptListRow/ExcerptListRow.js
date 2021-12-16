@@ -1,3 +1,4 @@
+// @ts-check
 import React, { useContext } from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -11,14 +12,16 @@ import { useColors } from '../../../utils/customHooks/useColors/useColors';
  * @namespace ExcerptListRow
  * @function ExcerptListRow
  * @description One row in the Excerpts List.
- * @param {*} props JSX props passed to this React Component
- * @param {String} props.composer The composer of this Excerpt row
- * @param {String} props.composition The composition to navigate to
- * @param {Function} props.onPress The function to call when this component is
+ * @param {object} props JSX props passed to this React Component
+ * @param {string} props.composer The composer of this Excerpt row
+ * @param {string} props.composition The composition to navigate to
+ * @param {function} props.onPress The function to call when this component is
  * pressed.
+ * @param {string} props.color
+ * @param {string} props.backgroundColor
  * @author Alexander Burdiss
  * @since 3/6/21
- * @version 1.4.1
+ * @version 1.4.2
  */
 export default function ExcerptListRow({
   composer,
@@ -36,8 +39,8 @@ export default function ExcerptListRow({
       paddingVertical: 10,
       paddingLeft: 25,
       paddingRight: 10,
-      borderBottomColor: colors.systemGray5,
-      borderBottomWidth: 1,
+      borderTopColor: colors.systemGray5,
+      borderTopWidth: 1,
       flexDirection: 'row',
       justifyContent: 'space-between',
       alignItems: 'center',
@@ -75,6 +78,7 @@ export default function ExcerptListRow({
 
   return (
     <Pressable
+      // @ts-ignore
       onPress={onPress}
       accessible
       accessibilityRole="button"

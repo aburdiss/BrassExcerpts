@@ -1,3 +1,4 @@
+// @ts-check
 import React from 'react';
 import {
   Text,
@@ -21,21 +22,24 @@ import { useColors } from '../../../utils/customHooks/useColors/useColors';
  * [Created with help from an online article]{@link https://blog.expo.io/licenses-the-best-part-of-your-app-29e7285b544f}
  * @author Alexander Burdiss
  * @date 12/17/20
- * @version 1.3.0
- * @param {String} props.image The url of the image to display.
- * @param {String} props.userUrl The url of the author of this software.
- * @param {String} props.username The username of the author of the software
+ * @version 1.3.1
+ * @param {object} props The JSX props passed to this React component
+ * @param {string} props.image The url of the image to display.
+ * @param {string} props.userUrl The url of the author of this software.
+ * @param {string} props.username The username of the author of the software
  * using this license.
- * @param {String} props.name The name of the author of the software using this
+ * @param {string} props.name The name of the author of the software using this
  * license.
- * @param {String} props.version The version number of the software using this
+ * @param {string} props.version The version number of the software using this
  * license.
- * @param {String} props.licenses The text to render inside the main section
+ * @param {string} props.licenses The text to render inside the main section
  * of this license link.
- * @param {String} props.repository The url of the Github repository to link
+ * @param {string} props.repository The url of the Github repository to link
  * to.
- * @param {String} props.licenseUrl The url to the currently referenced
+ * @param {string} props.licenseUrl The url to the currently referenced
  * license.
+ * @param {number} props.index The index that this list item is being rendered
+ * at. Used for styling away the first index top border.
  * @component
  * @example
  * <LicensesListItem {...item} />
@@ -49,15 +53,17 @@ export default function LicensesListItem({
   licenses,
   repository,
   licenseUrl,
+  index,
 }) {
   const colors = useColors();
   const styles = StyleSheet.create({
-    arrow: { alignSelf: 'center' },
+    arrow: {
+      alignSelf: 'center',
+    },
     card: {
       overflow: 'hidden',
       flexDirection: 'row',
       backgroundColor: colors.background2,
-
       alignItems: 'center',
       paddingLeft: 12,
     },
@@ -70,10 +76,12 @@ export default function LicensesListItem({
       flexDirection: 'row',
       maxWidth: '100%',
       flexWrap: 'wrap',
-      borderBottomColor: colors.systemGray5,
-      borderBottomWidth: 1,
+      borderTopColor: colors.systemGray5,
+      borderTopWidth: index !== 0 ? 1 : 0,
     },
-    licenseText: { maxWidth: '88%' },
+    licenseText: {
+      maxWidth: '88%',
+    },
     name: {
       color: colors.text,
       fontWeight: 'bold',
@@ -85,7 +93,6 @@ export default function LicensesListItem({
       borderRadius: 29,
       backgroundColor: 'white',
     },
-
     text: {
       color: colors.systemGray,
       marginTop: 3,
@@ -101,7 +108,7 @@ export default function LicensesListItem({
 
   return (
     <View>
-      <View style={styles.cardShadow}>
+      <View>
         <View style={styles.card}>
           {image && (
             <Pressable
@@ -131,7 +138,9 @@ export default function LicensesListItem({
               <Link style={styles.text} url={licenseUrl}>
                 {licenses}
               </Link>
-              <Link style={styles.text}>{version}</Link>
+              <Link style={styles.text} url={repository}>
+                {version}
+              </Link>
             </View>
             <Ionicons
               style={styles.arrow}

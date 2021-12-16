@@ -1,3 +1,4 @@
+// @ts-check
 import React from 'react';
 import { FlatList, StyleSheet } from 'react-native';
 import LicensesListItem from '../LicensesListItem/LicensesListItem';
@@ -8,7 +9,8 @@ import LicensesListItem from '../LicensesListItem/LicensesListItem';
  * @author Alexander Burdiss
  * @since 12/17/2020
  * @version 1.0.2
- * @param {Array} props.licenses The list of licenses that will be displayed.
+ * @param {object} props The JSX props passed to this React component
+ * @param {object[]} props.licenses The list of licenses that will be displayed.
  *
  * @component
  * @example
@@ -26,7 +28,9 @@ export default function LicensesList({ licenses }) {
       style={styles.list}
       keyExtractor={({ key }) => key}
       data={licenses}
-      renderItem={({ item }) => <LicensesListItem {...item} />}
+      renderItem={({ item, index }) => (
+        <LicensesListItem {...item} index={index} />
+      )}
     />
   );
 }
