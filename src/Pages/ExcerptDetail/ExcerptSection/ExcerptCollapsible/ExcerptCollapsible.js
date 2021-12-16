@@ -63,7 +63,7 @@ export default function ExcerptCollapsible({ excerpt, startCollapsed, index }) {
     },
     excerptPressable: {
       paddingHorizontal: 20,
-      backgroundColor: colors.systemGray5,
+      backgroundColor: colors.background3,
       flexDirection: 'row',
       alignItems: 'center',
       justifyContent: 'space-between',

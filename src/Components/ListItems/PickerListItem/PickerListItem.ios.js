@@ -79,6 +79,16 @@ export default function PickerListItem({ item, state, dispatch }) {
           value: 'monokai',
           color: colors.green,
         },
+        {
+          label: 'Solarized Light Theme',
+          value: 'solarizedLight',
+          color: colors.green,
+        },
+        {
+          label: 'Solarized Dark Theme',
+          value: 'solarizedDark',
+          color: colors.green,
+        },
       ];
       break;
     default:
@@ -114,7 +124,7 @@ export default function PickerListItem({ item, state, dispatch }) {
             backgroundColor: colors.systemGray6,
           },
           modalViewBottom: {
-            backgroundColor: colors.textInverse,
+            backgroundColor: colors.systemGray6,
           },
         }}
         Icon={() => {

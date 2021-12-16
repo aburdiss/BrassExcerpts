@@ -12,6 +12,7 @@
 export function getDarkOrLightTheme(theme) {
   switch (theme) {
     case 'light':
+    case 'solarizedLight':
       return 'light';
     default:
       return 'dark';

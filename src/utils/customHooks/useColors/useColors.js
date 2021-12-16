@@ -1,6 +1,13 @@
 import { useContext } from 'react';
 
-import { light, dark, dracula, monokai } from '../../../Model/Model';
+import {
+  light,
+  dark,
+  dracula,
+  monokai,
+  solarizedLight,
+  solarizedDark,
+} from '../../../Model/Model';
 import { PreferencesContext } from '../../../Model/Preferences';
 
 /**
@@ -22,6 +29,8 @@ export function useColors() {
       dark: dark,
       dracula: dracula,
       monokai: monokai,
+      solarizedLight: solarizedLight,
+      solarizedDark: solarizedDark,
     }[state?.renderedTheme] ?? light
   );
 }
