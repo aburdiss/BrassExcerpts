@@ -309,6 +309,27 @@
         "wagnerMeistersinger",
         "wagnerValkyrie"
       ]
+    },
+    {
+      "orchestra": "York Symphony Orchestra",
+      "position": "Principal Tuba",
+      "link": "https://www.yorksymphony.org/auditions/",
+      "country": "USA",
+      "closingDate": "February 26, 2022",
+      "auditionDate": "March 12, 2022",
+      "excerpts": [
+        "berliozFaust",
+        "berliozSymphonie",
+        "Bernstein - Symphonic Dancesfrom West Side Story",
+        "brahms2",
+        "holstPlanets",
+        "mahler5",
+        "Prokofiev - Symphony No. 5",
+        "respighiFountains",
+        "straussHeldenleben",
+        "wagnerMeistersinger",
+        "wagnerValkyrie"
+      ]
     }
   ]
 }

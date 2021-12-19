@@ -67,6 +67,8 @@ export function getCountryFlagEmoji(country) {
       return '🇸🇮';
     case 'Spain':
       return '🇪🇸';
+    case 'South Africa':
+      return '🇿🇦';
     case 'Sweden':
       return '🇸🇪';
     case 'Switzerland':

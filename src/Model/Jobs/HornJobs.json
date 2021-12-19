@@ -878,6 +878,35 @@
       ]
     },
     {
+      "orchestra": "The Celveland Orchestra",
+      "position": "Assistant/Utility Horn",
+      "link": "https://www.clevelandorchestra.com/contact/auditions-careers/musician-auditions/",
+      "country": "USA",
+      "closingDate": "January 3, 2022",
+      "auditionDate": "May 9, 2022",
+      "excerpts": [
+        "beethovenFidelio",
+        "brahms1",
+        "brahms3",
+        "wagnerGotterdammerung",
+        "beethoven3",
+        "beethoven7",
+        "Bruckner - Symphony No. 9",
+        "mahler1",
+        "mahler3",
+        "mahler5",
+        "Prokofiev - Romeo and Juliet",
+        "schubert9",
+        "Shostakovich - Symphony No. 5",
+        "straussDonJuan",
+        "straussHeldenleben",
+        "Strauss - An Alpine Symphony",
+        "straussEulenspiegel",
+        "tchaikovsky4",
+        "wagnerRheingold"
+      ]
+    },
+    {
       "orchestra": "Orchestre Philharmonique de Strasbourg",
       "position": "un cor grave",
       "link": "https://philharmonique.strasbourg.eu/web/ops/-/6027510-1",
@@ -946,6 +975,15 @@
         "bruckner4",
         "Ravel - Pavane"
       ]
+    },
+    {
+      "orchestra": "Baltimore Symphony Orchestra",
+      "position": "Principal Horn",
+      "link": "https://www.bsomusic.org/about/employment-opportunities/orchestral-auditions/principal-horn/",
+      "country": "USA",
+      "closingDate": "January 10, 2022",
+      "auditionDate": "February 28, 2022",
+      "excerpts": []
     },
     {
       "orchestra": "Gävle Symphony Orchestra",
@@ -1114,6 +1152,15 @@
         "tchaikovsky4",
         "straussDonJuan"
       ]
+    },
+    {
+      "orchestra": "La Monnaie / De Munt",
+      "position": "Solo Horn",
+      "link": "https://www.lamonnaie.be/en/static-pages/2235-audition-solo-horn",
+      "country": "Belgium",
+      "closingDate": "February 17, 2022",
+      "auditionDate": "March 19, 2022",
+      "excerpts": []
     },
     {
       "orchestra": "Civic Orchestra of Chicago",

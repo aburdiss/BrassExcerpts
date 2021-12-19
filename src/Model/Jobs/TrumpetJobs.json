@@ -974,15 +974,6 @@
       ]
     },
     {
-      "orchestra": "Residentie Orkest Den Haag",
-      "position": "Immediate vacancy for Principal Trumpet (65%-75%)",
-      "link": "https://residentieorkest.nl/werken-bij/vacature-aanvoerder-trompet-65-75",
-      "country": "Netherlands",
-      "closingDate": "February 14, 2022",
-      "auditionDate": "March 22, 2022",
-      "excerpts": []
-    },
-    {
       "orchestra": "Royal Liverpool Philharmonic",
       "position": "Emerging Musicians Fellowship - Trumpet",
       "link": "https://www.liverpoolphil.com/take-part/royal-liverpool-philharmonic-orchestra-emerging-musicians-fellowship/",
@@ -997,6 +988,33 @@
         "brahms2",
         "Bartók - Concerto for Orchestra"
       ]
+    },
+    {
+      "orchestra": "KwaZulu-Natal Philharmonic Orchestra",
+      "position": "Principal Trumpet",
+      "link": "https://www.musicalchairs.info/jobs/36923?apply=1#ats-apply-form",
+      "country": "South Africa",
+      "closingDate": "January 31, 2022",
+      "auditionDate": "February 10, 2022",
+      "excerpts": [
+        "bachMagnificant",
+        "Bartók - Concerto for Orchestra",
+        "mahler3",
+        "mahler5",
+        "Mussorgsky - Pictures at an Exhibition",
+        "stravinskyPetrushka",
+        "stravinskyRite",
+        "straussHeldenleben"
+      ]
+    },
+    {
+      "orchestra": "Residentie Orkest Den Haag",
+      "position": "Immediate vacancy for Principal Trumpet (65%-75%)",
+      "link": "https://residentieorkest.nl/werken-bij/vacature-aanvoerder-trompet-65-75",
+      "country": "Netherlands",
+      "closingDate": "February 14, 2022",
+      "auditionDate": "March 22, 2022",
+      "excerpts": []
     },
     {
       "orchestra": "Civic Orchestra of Chicago",
