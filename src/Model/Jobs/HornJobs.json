@@ -1154,6 +1154,15 @@
       ]
     },
     {
+      "orchestra": "Orchestre de Paris",
+      "position": "French Horn (apprenticeship / academy position)",
+      "link": "https://www.orchestredeparis.com/index.php/fr/page/61/recrutement",
+      "country": "France",
+      "closingDate": "February 4, 2022",
+      "auditionDate": "",
+      "excerpts": ["beethoven8", "mahler1", "weberFreischutz", "tchaikovsky4"]
+    },
+    {
       "orchestra": "La Monnaie / De Munt",
       "position": "Solo Horn",
       "link": "https://www.lamonnaie.be/en/static-pages/2235-audition-solo-horn",

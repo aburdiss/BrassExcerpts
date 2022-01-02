@@ -1008,6 +1008,19 @@
       ]
     },
     {
+      "orchestra": "Orchestre de Paris",
+      "position": "Trumpet (apprenticeship / academy position)",
+      "link": "https://www.orchestredeparis.com/index.php/fr/page/61/recrutement",
+      "country": "France",
+      "closingDate": "February 4, 2022",
+      "auditionDate": "",
+      "excerpts": [
+        "Mussorgsky - Pictures at an Exhibition",
+        "Ravel - Piano Concerto",
+        "wagnerParsifal"
+      ]
+    },
+    {
       "orchestra": "Residentie Orkest Den Haag",
       "position": "Immediate vacancy for Principal Trumpet (65%-75%)",
       "link": "https://residentieorkest.nl/werken-bij/vacature-aanvoerder-trompet-65-75",
@@ -1032,6 +1045,15 @@
       ]
     },
     {
+      "orchestra": "Tampere Philharmonic Orchestra",
+      "position": "Principal Trumpet",
+      "link": "https://www.tamperefilharmonia.fi/en/jobs/",
+      "country": "Finland",
+      "closingDate": "February 27, 2022",
+      "auditionDate": "April 25, 2022",
+      "excerpts": ["mahler5", "stravinskyPetrushka", "Honnegar - Intrada"]
+    },
+    {
       "orchestra": "Orchestre national de Lille",
       "position": "Cornet solo",
       "link": "https://www.muvac.com/en/vac/orchestre-national-de-lille-620e748",
@@ -1039,6 +1061,46 @@
       "closingDate": "March 10, 2022",
       "auditionDate": "March 30, 2022",
       "excerpts": []
+    },
+    {
+      "orchestra": "Sioux City Symphony Orchestra",
+      "position": "Third Trumpet",
+      "link": "https://siouxcitysymphony.org/about-us/auditions/",
+      "country": "USA",
+      "closingDate": "April 1, 2022",
+      "auditionDate": "April 24, 2022",
+      "excerpts": []
+    },
+    {
+      "orchestra": "Euskadiko Orkestra - Basque National Orchestra",
+      "position": "Trompeta Solista (1) – Permanent ",
+      "link": "https://www.euskadikoorkestra.eus/",
+      "country": "Spain",
+      "closingDate": "April 24, 2022",
+      "auditionDate": "May 17, 2022",
+      "excerpts": [
+        "Bartók - Concerto for Orchestra",
+        "Mussorgsky - Pictures at an Exhibition",
+        "Ravel - Piano Concerto",
+        "stravinskyPetrushka",
+        "beethovenLeonore2",
+        "mahler5",
+        "Honnegar - Intrada",
+        "Shostakovich - Symphony No. 8",
+        "beethovenLeonore3",
+        "brahms2",
+        "mahler3",
+        "straussAlpine",
+        "bizetCarmen",
+        "Shostakovich - Symphony No. 11",
+        "rimskyKorsakovScheherazade",
+        "Ravel - Alborada del Gracioso",
+        "Ravel - Rapsodie espagnole",
+        "mahler7",
+        "straussHeldenleben",
+        "straussZarathustra",
+        "wagnerParsifal"
+      ]
     }
   ]
 }
