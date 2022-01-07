@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { View, Text, ScrollView, Image, StyleSheet } from 'react-native';
-import LinearGradient from 'react-native-linear-gradient';
 import { useRoute } from '@react-navigation/core';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
@@ -24,7 +23,7 @@ import { useColors } from '../../utils/customHooks/useColors/useColors';
  * instruments available for that composer.
  * @author Alexander Burdiss
  * @since 3/3/21
- * @version 1.2.1
+ * @version 1.2.2
  * @component
  * @example
  * <ComposerDetail />
@@ -38,7 +37,7 @@ export default function ComposerDetail() {
     },
     card: {
       margin: 20,
-      backgroundColor: colors.blue,
+      backgroundColor: colors.green,
       alignItems: 'center',
       shadowColor: colors.text,
       shadowOffset: {
@@ -61,7 +60,7 @@ export default function ComposerDetail() {
       padding: 10,
     },
     cardImageTop: {
-      backgroundColor: colors.blue,
+      backgroundColor: colors.green,
       width: '100%',
       padding: 10,
       borderTopLeftRadius: 4,
@@ -112,17 +111,14 @@ export default function ComposerDetail() {
               {composer.dates}
             </Text>
           </View>
-          <LinearGradient
-            colors={[colors.blue, colors.green]}
-            style={styles.linearGradient}
-          >
+          <View style={styles.linearGradient}>
             <Image
               source={composer.image}
               style={styles.image}
               accessibilityRole="image"
               accessibilityLabel={'A picture of ' + composer.name}
             />
-          </LinearGradient>
+          </View>
           <View style={styles.cardBottom}>
             <View style={styles.cardImageBottom}>
               <MetaLabel
