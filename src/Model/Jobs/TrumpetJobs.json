@@ -439,8 +439,8 @@
       "auditionDate": "October 4, 2021",
       "excerpts": [
         "dvorak9",
-        "Dvořák: Slavonic dance No. 4",
-        "Dvořák: Slavonic dances No. 5 and 9",
+        "Dvořák - Slavonic dance No. 4",
+        "Dvořák - Slavonic dances No. 5 and 9",
         "Suk: V nový život/Towards a New Life",
         "stravinskyPetrushka",
         "Mussorgsky - Pictures at an Exhibition",
@@ -487,7 +487,7 @@
         "Hindemith - Symphony in Bb",
         "Prokofiev - March Op. 99",
         "Hindemith - Symphonic Metamorphosis",
-        "Copland - An Outdoor Overture",
+        "Copland - Outdoor Overture",
         "Persichetti - Divertimento for Band",
         "Vaughan Williams - Toccata Marziale.",
         "Shostakovich/Hunsberger - Festive Overture",
@@ -974,6 +974,15 @@
       ]
     },
     {
+      "orchestra": "BBC Symphony Orchestra",
+      "position": "Co-Principal Trumpet",
+      "link": "https://careerssearch.bbc.co.uk/jobs/job/CoPrincipal-Trumpet-BBC-Symphony-Orchestra/49251",
+      "country": "United Kingdom",
+      "closingDate": "January 23, 2022",
+      "auditionDate": "",
+      "excerpts": []
+    },
+    {
       "orchestra": "Royal Liverpool Philharmonic",
       "position": "Emerging Musicians Fellowship - Trumpet",
       "link": "https://www.liverpoolphil.com/take-part/royal-liverpool-philharmonic-orchestra-emerging-musicians-fellowship/",
@@ -1021,6 +1030,15 @@
       ]
     },
     {
+      "orchestra": "Copenhagen Philharmonic Orchestra",
+      "position": "Associate Principal trumpet",
+      "link": "https://www.copenhagenphil.dk/jobs",
+      "country": "Denmark",
+      "closingDate": "February 6, 2022",
+      "auditionDate": "February 21, 2022",
+      "excerpts": []
+    },
+    {
       "orchestra": "Residentie Orkest Den Haag",
       "position": "Immediate vacancy for Principal Trumpet (65%-75%)",
       "link": "https://residentieorkest.nl/werken-bij/vacature-aanvoerder-trompet-65-75",
@@ -1028,6 +1046,69 @@
       "closingDate": "February 14, 2022",
       "auditionDate": "March 22, 2022",
       "excerpts": []
+    },
+    {
+      "orchestra": "Pilsen Philharmonic",
+      "position": "to the group of Trumpets",
+      "link": "https://www.plzenskafilharmonie.cz/en/an-audition-for-to-the-group-of-trumpets/",
+      "country": "Czech Republic",
+      "closingDate": "February 14, 2022",
+      "auditionDate": "February 21, 2022",
+      "excerpts": [
+        "Suk: V nový život/Towards a New Life",
+        "rimskyKorsakovScheherazade",
+        "dvorak9",
+        "stravinskyPetrushka",
+        "dvorak8",
+        "Smetana - Wallenstein's Camp",
+        "Mussorgsky - Pictures at an Exhibition",
+        "Ravel - Piano Concerto",
+        "mahler5",
+        "Bartók - Concerto for Orchestra"
+      ]
+    },
+    {
+      "orchestra": "London Philharmonic Orchestra",
+      "position": "Co Principal Trumpet",
+      "link": "https://www.lpo.org.uk/about/jobs.html",
+      "country": "United Kingdom",
+      "closingDate": "February 14, 2022",
+      "auditionDate": "",
+      "excerpts": [
+        "donizettiDonPasquale",
+        "tchaikovskySwanLake",
+        "Malcolm Arnold - Tam O'Shanter Overture",
+        "Shostakovich - Symphony No. 7",
+        "Britten - Four Sea Interludes from Peter Grimes"
+      ]
+    },
+    {
+      "orchestra": "United States Air Force Academy Band",
+      "position": "Trumpet",
+      "link": "https://www.music.af.mil/Auditions/Upcoming-Vacancies/",
+      "country": "USA",
+      "closingDate": "February 14, 2022",
+      "auditionDate": "April 4, 2022",
+      "excerpts": [
+        "Taps",
+        "Sousa - El Capitan",
+        "Charlier - Étude No. 6 “Du Style” from 36 Études Transcendantes",
+        "Basie - Fun Time",
+        "Jones - Groove Merchant"
+      ]
+    },
+    {
+      "orchestra": "Royal Liverpool Philharmonic",
+      "position": "Section Leader Trumpet",
+      "link": "https://www.liverpoolphil.com/about-us/careers/section-leader-trumpet/",
+      "country": "United Kingdom",
+      "closingDate": "February 24, 2022",
+      "auditionDate": "April 11, 2022",
+      "excerpts": [
+        "mahler5",
+        "wagnerParsifal",
+        "stravinskyPetrushka"
+      ]
     },
     {
       "orchestra": "Civic Orchestra of Chicago",
@@ -1054,6 +1135,62 @@
       "excerpts": ["mahler5", "stravinskyPetrushka", "Honnegar - Intrada"]
     },
     {
+      "orchestra": "Cairo Symphony Orchestra",
+      "position": "Principal Trumpet",
+      "link": "http://cairo-symphony.com/Auditions.aspx",
+      "country": "Egypt",
+      "closingDate": "March 1, 2022",
+      "auditionDate": "",
+      "excerpts": [
+        "beethovenLeonore3",
+        "debussyNocturnes",
+        "Mussorgsky - Pictures at an Exhibition",
+        "Ravel - Bolero",
+        "rimskyKorsakovScheherazade"
+      ]
+    },
+    {
+      "orchestra": "Moravian Philharmonic Olomouc",
+      "position": "II. trumpet with the duty of I. trumpet",
+      "link": "https://www.mfo.cz/orchestreng",
+      "country": "Czech Republic",
+      "closingDate": "March 6, 2022",
+      "auditionDate": "March 16, 2022",
+      "excerpts": [
+        "dvorak8",
+        "Dvořák - Slavonic dance No. 4",
+        "dvorak9",
+        "Dvořák - Slavonic dance No. 7",
+        "Dvořák - Slavonic dances No. 9",
+        "Smetana - Ma Vlast",
+        "Suk - Asrael Symphony",
+        "Mussorgsky - Pictures at an Exhibition",
+        "mahler5",
+        "Bartók - Concerto for Orchestra",
+        "rimskyKorsakovScheherazade",
+        "stravinskyPetrushka"
+      ]
+    },
+    {
+      "orchestra": "Jihočeská filharmonie",
+      "position": "Trumpet",
+      "link": "https://www.jcfilharmonie.cz/jihoceska-filharmonie/volna-mista/1.-trubka-s-povinnosti-2.-trubky/",
+      "country": "Czech Republic",
+      "closingDate": "March 8, 2022",
+      "auditionDate": "March 15, 2022",
+      "excerpts": [
+        "Stravinsky - Pulcinella",
+        "Ravel - Piano Concerto",
+        "Mussorgsky - Pictures at an Exhibition",
+        "rimskyKorsakovScheherazade",
+        "Beethoven - Symphony No. 3",
+        "beethoven5",
+        "beethoven9",
+        "Bach - Orchestral Suite No. 3",
+        "handelMessiah"
+      ]
+    },
+    {
       "orchestra": "Orchestre national de Lille",
       "position": "Cornet solo",
       "link": "https://www.muvac.com/en/vac/orchestre-national-de-lille-620e748",
@@ -1072,8 +1209,23 @@
       "excerpts": []
     },
     {
+      "orchestra": "USAF Band of Mid-America",
+      "position": "Regional Trumpet",
+      "link": "https://www.music.af.mil/Bands/US-Air-Force-Band-of-Mid-America/",
+      "country": "USA",
+      "closingDate": "April 6, 2022",
+      "auditionDate": "May 18, 2022",
+      "excerpts": [
+        "Smith - Festival Variations",
+        "Sousa - Gallant Seventh",
+        "Shostakovich - Festive Overture",
+        "Rimsky-Korsakov - Procession of the Nobles",
+        "Copland - Outdoor Overture"
+      ]
+    },
+    {
       "orchestra": "Euskadiko Orkestra - Basque National Orchestra",
-      "position": "Trompeta Solista (1) – Permanent ",
+      "position": "Trompeta Solista (1) - Permanent ",
       "link": "https://www.euskadikoorkestra.eus/",
       "country": "Spain",
       "closingDate": "April 24, 2022",

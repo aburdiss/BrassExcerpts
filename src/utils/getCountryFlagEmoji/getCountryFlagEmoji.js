@@ -23,6 +23,8 @@ export function getCountryFlagEmoji(country) {
       return '🇨🇦';
     case 'China':
       return '🇨🇳';
+    case 'Croatia':
+      return '🇭🇷';
     case 'Czech Republic':
       return '🇨🇿';
     case 'Denmark':

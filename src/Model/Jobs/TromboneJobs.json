@@ -872,6 +872,24 @@
       "excerpts": []
     },
     {
+      "orchestra": "Croatian National Theatre",
+      "position": "Principal Trombone with the Obligation of Second, Third, Alto and Bass Trombone",
+      "link": "hnk-zajc.hr/zaposljavanje",
+      "country": "Croatia",
+      "closingDate": "January 31, 2022",
+      "auditionDate": "",
+      "excerpts": [
+        "ravelBolero",
+        "mozartRequiem",
+        "mahler3",
+        "brahms1",
+        "rossiniWilliamTell",
+        "rossiniLaGazza",
+        "straussZarathustra",
+        "wagnerValkyrie"
+      ]
+    },
+    {
       "orchestra": "United States Coast Guard Band",
       "position": "Second trombone",
       "link": "www.uscg.mil/band",
@@ -899,6 +917,15 @@
         "wagnerValkyrie",
         "wagnerTannhauser"
       ]
+    },
+    {
+      "orchestra": "Seattle Symphony Orchestra",
+      "position": "Bass Trombon",
+      "link": "https://www.seattlesymphony.org/about/careers/auditions/bass-trombone",
+      "country": "USA",
+      "closingDate": "February 11, 2022",
+      "auditionDate": "March 25, 2022",
+      "excerpts": []
     },
     {
       "orchestra": "Fondazione Orchestra Sinfonica J. Haydn di Bolzano e Trento",
@@ -956,6 +983,35 @@
       ]
     },
     {
+      "orchestra": "United States Navy Music",
+      "position": "Trombone",
+      "link": "https://www.navyband.navy.mil/career-opportunities/fleet-band-auditions",
+      "country": "USA",
+      "closingDate": "February 16, 2022",
+      "auditionDate": "February 24, 2022",
+      "excerpts": [
+        "rossiniLaGazza",
+        "rossiniWilliamTell",
+        "ravelBolero",
+        "Goldman - Onward-Upward March",
+        "Fillmore - Rolling Thunder",
+        "mozartRequiem",
+        "stravinskyFirebird",
+        "Simons/Marks - All of Me"
+      ]
+    },
+    {
+      "orchestra": "BBC Scottish Symphony Orchestra",
+      "position": "Bass Trombone Principal",
+      "link": "https://careerssearch.bbc.co.uk/jobs/job/Bass-Trombone-Principal/58293",
+      "country": "United Kingdom",
+      "closingDate": "February 17, 2022",
+      "auditionDate": "March 22, 2022",
+      "excerpts": [
+        
+      ]
+    },
+    {
       "orchestra": "Civic Orchestra of Chicago",
       "position": "Trombone",
       "link": "https://cso.org/education-community/musician-training/civic-orchestra-of-chicago/civic-auditions/",
@@ -986,6 +1042,15 @@
       "country": "Israel",
       "closingDate": "February 28, 2022",
       "auditionDate": "March 30, 2022",
+      "excerpts": []
+    },
+    {
+      "orchestra": "De Munt, La Monnaie",
+      "position": "Trombone Second Soloist",
+      "link": "https://www.lamonnaie.be/en/static-pages/2230-audition-trombone-2nd-soloist",
+      "country": "Belgium",
+      "closingDate": "April 12, 2022",
+      "auditionDate": "May 13, 2022",
       "excerpts": []
     }
   ]
