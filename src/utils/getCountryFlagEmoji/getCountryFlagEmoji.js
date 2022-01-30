@@ -5,7 +5,7 @@
  * @returns {string}
  * @author Alexander Burdiss
  * @since 9/18/21
- * @version 1.1.0
+ * @version 1.2.0
  */
 export function getCountryFlagEmoji(country) {
   switch (country) {
@@ -75,6 +75,8 @@ export function getCountryFlagEmoji(country) {
       return '🇸🇪';
     case 'Switzerland':
       return '🇨🇭';
+    case 'Taiwan':
+      return '🇹🇼';
     case 'Turkey':
       return '🇹🇷';
     case 'United Kingdom':
