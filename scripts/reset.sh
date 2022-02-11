@@ -132,6 +132,11 @@ echo -e "${GREEN}Cleaned gradle build"
 
 cd ..
 
+# Clear Watchman Logs
+echo "Clearing watchman logs"
+watchman watch-del-all
+echo -e "${GREEN}Cleared watchman logs${NC}"
+
 # Reset react native cache
 echo "Resetting react native cache"
 gtimeout 3 npm start -- --reset-cache
