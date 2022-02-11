@@ -1104,11 +1104,7 @@
       "country": "United Kingdom",
       "closingDate": "February 24, 2022",
       "auditionDate": "April 11, 2022",
-      "excerpts": [
-        "mahler5",
-        "wagnerParsifal",
-        "stravinskyPetrushka"
-      ]
+      "excerpts": ["mahler5", "wagnerParsifal", "stravinskyPetrushka"]
     },
     {
       "orchestra": "Civic Orchestra of Chicago",
@@ -1209,6 +1205,58 @@
       "excerpts": []
     },
     {
+      "orchestra": "Quad City Symphony Orchestra",
+      "position": "Principal Trumpet",
+      "link": "https://qcso.org/about/employment/",
+      "country": "USA",
+      "closingDate": "April 1, 2022",
+      "auditionDate": "April 22, 2022",
+      "excerpts": [
+        "bachChristmasOratorio",
+        "Bartók - Concerto for Orchestra",
+        "beethovenLeonore3",
+        "brahms2",
+        "Gershwin - An American In Paris",
+        "mahler3",
+        "mahler5",
+        "Mussorgsky - Pictures at an Exhibition",
+        "Ravel - Piano Concerto",
+        "Respighi - Pines of Rome",
+        "rimskyKorsakovScheherazade",
+        "straussHeldenleben",
+        "straussDonJuan",
+        "stravinskyPetrushka"
+      ]
+    },
+    {
+      "orchestra": "Orchestre symphonique de Montréal",
+      "position": "4th Trumpet / Section Trumpet",
+      "link": "https://www.osm.ca/en/join-the-osm/#auditions",
+      "country": "Canada",
+      "closingDate": "April 1, 2022",
+      "auditionDate": "May 14, 2022",
+      "excerpts": [
+        "Bartók - Concerto for Orchestra",
+        "beethovenLeonore2",
+        "beethovenLeonore3",
+        "beethoven5",
+        "bizetCarmen",
+        "debussyNocturnes",
+        "donizettiDonPasquale",
+        "dvorak8",
+        "Gershwin - Piano Concerto in F",
+        "handelMessiah",
+        "Mussorgsky - Pictures at an Exhibition",
+        "Ravel - Piano Concerto",
+        "Respighi - Pines of Rome",
+        "schumann2",
+        "Shostakovich - Symphony No. 5",
+        "straussHeldenleben",
+        "straussEulenspiegel",
+        "stravinskyPetrushka"
+      ]
+    },
+    {
       "orchestra": "USAF Band of Mid-America",
       "position": "Regional Trumpet",
       "link": "https://www.music.af.mil/Bands/US-Air-Force-Band-of-Mid-America/",
@@ -1221,6 +1269,21 @@
         "Shostakovich - Festive Overture",
         "Rimsky-Korsakov - Procession of the Nobles",
         "Copland - Outdoor Overture"
+      ]
+    },
+    {
+      "orchestra": "Aalborg Symfoniorkester",
+      "position": "Solo Trompet/ Principal Trumpet",
+      "link": "https://www.aalborgsymfoni.dk/Trompet-2022.948.aspx",
+      "country": "Denmark",
+      "closingDate": "April 6, 2022",
+      "auditionDate": "April 22, 2022",
+      "excerpts": [
+        "mahler5",
+        "Lumbye - Petersborger Champagne Galop",
+        "straussDonJuan",
+        "berliozSymphonie",
+        "bachChristmasOratorio"
       ]
     },
     {
