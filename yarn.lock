@@ -5943,10 +5943,10 @@ react-native-collapsible@^1.6.0:
   resolved "https://registry.npmjs.org/react-native-collapsible/-/react-native-collapsible-1.6.0.tgz"
   integrity sha512-beZjdgbT9Y/Pg591Xy5XkKG20HffJiVad4n9bfcUF/f783A+tvOVXnqvbS58Lkaym93mi4jcDPMuW9Vc1t6rqg==
 
-react-native-device-info@^7.0.2:
-  version "7.4.0"
-  resolved "https://registry.npmjs.org/react-native-device-info/-/react-native-device-info-7.4.0.tgz"
-  integrity sha512-n5mrUuwUcPXAspLZcAOE+Q087yq+Gfvo8+soZIg1l7rUZUrLNWlFxFgOo/DMPNZA5vcBSv1TSGFFdiAZVHalLw==
+react-native-device-info@^8.4.9:
+  version "8.4.9"
+  resolved "https://registry.yarnpkg.com/react-native-device-info/-/react-native-device-info-8.4.9.tgz#3089ea0bf9c9a28327d3ba683469a32b093172dd"
+  integrity sha512-EEdeoaBhaLTOZmCy5xtfepVAfvodteiDHoIxBPUgnNe5p0JLv90BLKtVytbJhlllWScUO48+2u9S7M6WNYsXDQ==
 
 react-native-gesture-handler@^2.2.0:
   version "2.2.0"
@@ -5964,7 +5964,7 @@ react-native-idle-timer@^2.1.7:
   resolved "https://registry.yarnpkg.com/react-native-idle-timer/-/react-native-idle-timer-2.1.7.tgz#62e19217cf9b29482fa9ec7c4774bdfea422b765"
   integrity sha512-3i9yuHYuzaJmRHD6nGsvw8fj+VBMmwwqef0UIdUNJG9szhPRXvtN7rcyDTfchPHpYfRRhOYR62OgpOqHKFj+dw==
 
-react-native-localize@^2.1.19:
+react-native-localize@^2.1.9:
   version "2.1.9"
   resolved "https://registry.yarnpkg.com/react-native-localize/-/react-native-localize-2.1.9.tgz#47b13b2d7f8fea95a0e784cdc0269e2028c88857"
   integrity sha512-n2Bi5P0cII8BrnG23Fs9PmpYcufD3JRbr1IBn3ArIA3Z3cGWg4eebv6am+CgdFC4kTPWUlVzX9fEgEMA+X8d6w==

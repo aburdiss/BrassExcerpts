@@ -71,7 +71,7 @@
         "licenseUrl": "https://oblador@github.com/oblador/react-native-collapsible/raw/master/LICENSE",
         "parents": "brass-excerpts"
     },
-    "react-native-device-info@7.4.0": {
+    "react-native-device-info@8.4.9": {
         "licenses": "MIT",
         "repository": "https://github.com/react-native-device-info/react-native-device-info",
         "licenseUrl": "https://github.com/react-native-device-info/react-native-device-info/raw/master/LICENSE",
