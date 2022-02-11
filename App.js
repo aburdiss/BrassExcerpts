@@ -46,44 +46,43 @@ function AppInside() {
         screenOptions={({ route }) => ({
           tabBarIcon: ({ color, size }) => {
             let iconName;
-            if (route.name === 'Excerpts') {
+            if (route.name === 'ExcerptsStack') {
               iconName = 'musical-notes';
-            } else if (route.name === 'Composers') {
+            } else if (route.name === 'ComposersStack') {
               iconName = 'people-outline';
-            } else if (route.name === 'Jobs') {
+            } else if (route.name === 'JobsStack') {
               iconName = 'briefcase';
-            } else if (route.name === 'More') {
+            } else if (route.name === 'MoreStack') {
               iconName = 'options';
             }
             return <Ionicons name={iconName} size={size} color={color} />;
           },
-        })}
-        tabBarOptions={{
-          activeTintColor: colors.green,
-          inactiveTintColor: colors.systemGray,
-          style: {
+          tabBarActiveTintColor: colors.green,
+          tabBarInactiveTintColor: colors.systemGray,
+          tabBarStyle: {
             backgroundColor: colors.background2,
             borderTopColor: colors.systemGray5,
           },
-        }}
+          headerShown: false,
+        })}
       >
         <Tab.Screen
-          name="Excerpts"
+          name="ExcerptsStack"
           component={ExcerptsStack}
           options={{ title: 'Excerpts' }}
         />
         <Tab.Screen
-          name="Composers"
+          name="ComposersStack"
           component={ComposersStack}
           options={{ title: 'Composers' }}
         />
         <Tab.Screen
-          name="Jobs"
+          name="JobsStack"
           component={JobsStack}
           options={{ title: 'Jobs' }}
         />
         <Tab.Screen
-          name="More"
+          name="MoreStack"
           component={MoreStack}
           options={{ title: 'More' }}
         />
