@@ -1276,6 +1276,19 @@
       ]
     },
     {
+      "orchestra": "Orchestra of Lithuania “Trimitas”",
+      "position": "French Horn",
+      "link": "https://www.trimitas.lt/en/",
+      "country": "Lithuania",
+      "closingDate": "February 24, 2022",
+      "auditionDate": "",
+      "excerpts": [
+        "Reed - El Carmino Real",
+        "Gounod - Petite Symphonie",
+        "Gershwin - Cuban Overture"
+      ]
+    },
+    {
       "orchestra": "Israel Philharmonic Orchestra",
       "position": "Horn - Principal",
       "link": "https://www.ipo.co.il/en/%D7%90%D7%95%D7%93%D7%99%D7%A6%D7%99%D7%95%D7%AA-%D7%9C%D7%A0%D7%92%D7%A0%D7%99%D7%9D-2/",
@@ -1283,6 +1296,33 @@
       "closingDate": "February 28, 2022",
       "auditionDate": "March 28, 2022",
       "excerpts": []
+    },
+    {
+      "orchestra": "Stavanger Symfoniorkester",
+      "position": "Principal Horn with duty to 3rd horn (1) – Permanent",
+      "link": "https://www.muvac.com/en/vac/stavanger-symphony-orchestra-8be8725",
+      "country": "Norway",
+      "closingDate": "March 1, 2022",
+      "auditionDate": "",
+      "excerpts": [
+        "franckD",
+        "straussHeldenleben",
+        "beethoven7",
+        "haydn31",
+        "straussDonJuan",
+        "wagnerSigfried",
+        "tchaikovsky5",
+        "brahms2",
+        "Stravinsky - Le Baiser de la fée",
+        "straussEulenspiegel",
+        "mendelssohnMidsummer",
+        "Shostakovich - Symphony No. 5",
+        "mahler9",
+        "saintSaens3",
+        "bachBrandenburg1",
+        "beethoven6",
+        "bruckner4"
+      ]
     },
     {
       "orchestra": "Vancouver Symphony Orchestra",
@@ -1338,6 +1378,15 @@
       ]
     },
     {
+      "orchestra": "Orchestre Philharmonique de Nice",
+      "position": "1 deuxième cor (2ème catégorie)",
+      "link": "https://www.opera-nice.org/fr/artistes/orchestre/presentation",
+      "country": "France",
+      "closingDate": "March 7, 2022",
+      "auditionDate": "",
+      "excerpts": []
+    },
+    {
       "orchestra": "Warsaw Philharmonic Orchestra",
       "position": "French Horn - Soloist",
       "link": "filharmonia.pl/en/",
@@ -1357,6 +1406,15 @@
       ]
     },
     {
+      "orchestra": "New York Philharmonic",
+      "position": "Principal Horn",
+      "link": "https://nyphil.org/auditions",
+      "country": "USA",
+      "closingDate": "March 21, 2022",
+      "auditionDate": "April 24, 2022",
+      "excerpts": []
+    },
+    {
       "orchestra": "Norrlandsoperan Symphony Orchestra",
       "position": "Third Horn/Assistant Principal",
       "link": "https://norrlandsoperan.se/en/current-vacancies/",
@@ -1366,12 +1424,84 @@
       "excerpts": []
     },
     {
+      "orchestra": "Orchestre symphonique de Montréal",
+      "position": "Principal Horn",
+      "link": "https://www.osm.ca/en/join-the-osm/#auditions",
+      "country": "Canada",
+      "closingDate": "March 25, 2022",
+      "auditionDate": "May 6, 2022",
+      "excerpts": [
+        "bachMassB",
+        "beethoven2",
+        "beethoven6",
+        "beethoven7",
+        "brahms1",
+        "brahms2",
+        "brahms3",
+        "bruckner4",
+        "mahler1",
+        "mahler3",
+        "Mahler - Symphony No. 4",
+        "mahler5",
+        "mahler9",
+        "mendelssohnMidsummer",
+        "Ravel - Piano Concerto",
+        "Ravel - Pavane",
+        "Shostakovich - Symphony No. 5",
+        "straussDonJuan",
+        "straussHeldenleben",
+        "straussEulenspiegel",
+        "tchaikovsky5",
+        "wagnerGotterdammerung",
+        "wagnerSigfried"
+      ]
+    },
+    {
+      "orchestra": "Essener Philharmoniker ",
+      "position": "Koordiniertes 1. und Solo-Horn (1) - Permanent ",
+      "link": "https://www.muvac.com/en/vac/essener-philharmoniker-6c20ebc",
+      "country": "Germany",
+      "closingDate": "April 22, 2022",
+      "auditionDate": "May 19, 2022",
+      "excerpts": [
+        "beethoven6",
+        "beethoven7",
+        "beethoven8",
+        "brahms2",
+        "brahms3",
+        "mahler3",
+        "schumann3",
+        "straussEulenspiegel",
+        "Strauss - Arabella",
+        "tchaikovsky5",
+        "Wagner - Die Meistersinger von Nürnberg"
+      ]
+    },
+    {
       "orchestra": "Orchestre Philharmonique de Strasbourg",
       "position": "Un cor grave",
       "link": "https://philharmonique.strasbourg.eu/web/ops/-/cor-grave-concours",
       "country": "France",
       "closingDate": "April 13, 2022",
       "auditionDate": "April 23, 2022",
+      "excerpts": []
+    },
+    {
+      "orchestra": "Virginia Symphony Orchestra",
+      "position": "2nd Horn (core)",
+      "link": "https://virginiasymphony.org/about-us-2/jobs-auditions/",
+      "country": "USA",
+      "closingDate": "May 17, 2022",
+      "auditionDate": "May 31, 2022",
+      "excerpts": []
+    },
+    {
+      "orchestra": "Virginia Symphony Orchestra",
+      "position": "5th Horn (per-service)",
+      "link": "https://virginiasymphony.org/about-us-2/jobs-auditions/",
+      "country": "USA",
+      "closingDate": "May 17, 2022",
+      "auditionDate": "May 31, 2022",
       "excerpts": []
     }
   ]
