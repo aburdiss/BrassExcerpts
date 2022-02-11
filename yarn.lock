@@ -1149,9 +1149,9 @@
   resolved "https://registry.yarnpkg.com/@react-native-picker/picker/-/picker-2.2.1.tgz#32b9f540d8e88a73d8856f73cca88251cecb9614"
   integrity sha512-EC7yv22QLHlTfnbC1ez9IUdXTOh1W31x96Oir0PfskSGFFJMWWdLTg4VrcE2DsGLzbfjjkBk123c173vf2a5MQ==
 
-"@react-native-segmented-control/segmented-control@^2.3.0":
+"@react-native-segmented-control/segmented-control@^2.4.0":
   version "2.4.0"
-  resolved "https://registry.npmjs.org/@react-native-segmented-control/segmented-control/-/segmented-control-2.4.0.tgz"
+  resolved "https://registry.yarnpkg.com/@react-native-segmented-control/segmented-control/-/segmented-control-2.4.0.tgz#0a88f22ad2c0fe07ecc002ee1e5d62c55a3dd0ae"
   integrity sha512-2s1AaT6xk/Do5s6u7ioCXucqesAt02NQlLKBOM28dJWI7PTH9o89x6AwsGHIeMkTe4nQ6iENiJKzO7Y3SGG9Ew==
 
 "@react-native/assets@1.0.0":
@@ -2340,13 +2340,6 @@ cosmiconfig@^5.0.5, cosmiconfig@^5.1.0:
     js-yaml "^3.13.1"
     parse-json "^4.0.0"
 
-cross-fetch@^3.0.4:
-  version "3.1.4"
-  resolved "https://registry.npmjs.org/cross-fetch/-/cross-fetch-3.1.4.tgz"
-  integrity sha512-1eAtFWdIubi6T4XPy6ei9iUFoKpUkIF971QLN8lIvvvwueI65+Nw5haMNKUwfJxabqlIIDODJKGrQ66gxC0PbQ==
-  dependencies:
-    node-fetch "2.6.1"
-
 cross-spawn@^6.0.0, cross-spawn@^6.0.5:
   version "6.0.5"
   resolved "https://registry.npmjs.org/cross-spawn/-/cross-spawn-6.0.5.tgz"
@@ -3050,19 +3043,6 @@ fbjs@^1.0.0:
     core-js "^2.4.1"
     fbjs-css-vars "^1.0.0"
     isomorphic-fetch "^2.1.1"
-    loose-envify "^1.0.0"
-    object-assign "^4.1.0"
-    promise "^7.1.1"
-    setimmediate "^1.0.5"
-    ua-parser-js "^0.7.18"
-
-fbjs@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.npmjs.org/fbjs/-/fbjs-3.0.0.tgz"
-  integrity sha512-dJd4PiDOFuhe7vk4F80Mba83Vr2QuK86FoxtgPmzBqEJahncp+13YCmfoa53KHCo6OnlXLG7eeMWPfB5CrpVKg==
-  dependencies:
-    cross-fetch "^3.0.4"
-    fbjs-css-vars "^1.0.0"
     loose-envify "^1.0.0"
     object-assign "^4.1.0"
     promise "^7.1.1"
@@ -4745,7 +4725,7 @@ lodash.throttle@^4.1.1:
   resolved "https://registry.npmjs.org/lodash.throttle/-/lodash.throttle-4.1.1.tgz"
   integrity sha1-wj6RtxAkKscMN/HhzaknTMOb8vQ=
 
-lodash@^4.17.10, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19:
+lodash@^4.17.10, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.21:
   version "4.17.21"
   resolved "https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz"
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
@@ -5310,11 +5290,6 @@ node-dir@^0.1.17:
   integrity sha1-X1Zl2TNRM1yqvvjxxVRRbPXx5OU=
   dependencies:
     minimatch "^3.0.2"
-
-node-fetch@2.6.1:
-  version "2.6.1"
-  resolved "https://registry.npmjs.org/node-fetch/-/node-fetch-2.6.1.tgz"
-  integrity sha512-V4aYg89jEoVRxRb2fJdAg8FHvI7cEyYdVAh94HH0UIK8oJxUfkjlDQN9RbMx+bEjP7+ggMiFRprSti032Oipxw==
 
 node-fetch@^1.0.1:
   version "1.7.3"
@@ -5973,26 +5948,26 @@ react-native-device-info@^7.0.2:
   resolved "https://registry.npmjs.org/react-native-device-info/-/react-native-device-info-7.4.0.tgz"
   integrity sha512-n5mrUuwUcPXAspLZcAOE+Q087yq+Gfvo8+soZIg1l7rUZUrLNWlFxFgOo/DMPNZA5vcBSv1TSGFFdiAZVHalLw==
 
-react-native-gesture-handler@^1.8.0:
-  version "1.10.3"
-  resolved "https://registry.npmjs.org/react-native-gesture-handler/-/react-native-gesture-handler-1.10.3.tgz"
-  integrity sha512-cBGMi1IEsIVMgoox4RvMx7V2r6bNKw0uR1Mu1o7NbuHS6BRSVLq0dP34l2ecnPlC+jpWd3le6Yg1nrdCjby2Mw==
+react-native-gesture-handler@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/react-native-gesture-handler/-/react-native-gesture-handler-2.2.0.tgz#a551f9ca33d8766d0a24268f49e0f1b05191b105"
+  integrity sha512-WF25CNgn164bF9juW8N/jICIFXiEOgsxCuY7DRlnFdiH5ZfvMYtZHRC+zr1fFMap2ty1f2HWDQNVVSo0FDXP4A==
   dependencies:
     "@egjs/hammerjs" "^2.0.17"
-    fbjs "^3.0.0"
     hoist-non-react-statics "^3.3.0"
     invariant "^2.2.4"
+    lodash "^4.17.21"
     prop-types "^15.7.2"
 
-react-native-idle-timer@^2.1.6:
+react-native-idle-timer@^2.1.7:
   version "2.1.7"
-  resolved "https://registry.npmjs.org/react-native-idle-timer/-/react-native-idle-timer-2.1.7.tgz"
+  resolved "https://registry.yarnpkg.com/react-native-idle-timer/-/react-native-idle-timer-2.1.7.tgz#62e19217cf9b29482fa9ec7c4774bdfea422b765"
   integrity sha512-3i9yuHYuzaJmRHD6nGsvw8fj+VBMmwwqef0UIdUNJG9szhPRXvtN7rcyDTfchPHpYfRRhOYR62OgpOqHKFj+dw==
 
-react-native-localize@^2.0.0:
-  version "2.1.4"
-  resolved "https://registry.npmjs.org/react-native-localize/-/react-native-localize-2.1.4.tgz"
-  integrity sha512-Cvow7TSUsyIPj6ddxqT2GnKexQ//Q2Ur6KAQSXIcrjvE2K7KzbbveMpGsBK0oKvF9X+5DcVVED3EVdZXcrEoBw==
+react-native-localize@^2.1.19:
+  version "2.1.9"
+  resolved "https://registry.yarnpkg.com/react-native-localize/-/react-native-localize-2.1.9.tgz#47b13b2d7f8fea95a0e784cdc0269e2028c88857"
+  integrity sha512-n2Bi5P0cII8BrnG23Fs9PmpYcufD3JRbr1IBn3ArIA3Z3cGWg4eebv6am+CgdFC4kTPWUlVzX9fEgEMA+X8d6w==
 
 react-native-picker-select@^8.0.4:
   version "8.0.4"
@@ -6077,10 +6052,10 @@ react-native@0.67.2:
     whatwg-fetch "^3.0.0"
     ws "^6.1.4"
 
-react-query@^3.15.2:
-  version "3.24.4"
-  resolved "https://registry.npmjs.org/react-query/-/react-query-3.24.4.tgz"
-  integrity sha512-p/t18+FN5P//bk/xR39r4JRWEigYzia2+J3lmKWSZHYbcivQlygJixY+81NiTNxT1P+/P6cl173b1lEbh1R8yQ==
+react-query@^3.34.14:
+  version "3.34.14"
+  resolved "https://registry.yarnpkg.com/react-query/-/react-query-3.34.14.tgz#ba944c1c36bbeab3e7037c42e8e862acd73111ff"
+  integrity sha512-KVMnM8omt+81oO9fPZfM65pGhQilpWzGsNwAqeeLMB2sG3xwY3bpIEYbhDf7FFgsqhAQfSzmCL4gRSiJaWIDwA==
   dependencies:
     "@babel/runtime" "^7.5.5"
     broadcast-channel "^3.4.1"
