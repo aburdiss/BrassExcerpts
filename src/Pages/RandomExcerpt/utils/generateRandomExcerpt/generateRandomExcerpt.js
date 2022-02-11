@@ -1,4 +1,4 @@
-import { shuffle } from 'underscore';
+import { shuffle } from '../../../../utils/shuffle/shuffle';
 
 import { excerpts as hornExcerpts } from '../../../../Model/Excerpts/HornExcerpts';
 import { excerpts as trumpetExcerpts } from '../../../../Model/Excerpts/TrumpetExcerpts';

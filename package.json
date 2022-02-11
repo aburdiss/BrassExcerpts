@@ -10,7 +10,7 @@
     "test": "jest --watch",
     "coverage": "jest --coverage",
     "lint": "eslint .",
-    "licenses": "npm-license-crawler --onlyDirectDependencies --json src/MoreStack/Licenses/licenses.json",
+    "licenses": "npm-license-crawler --onlyDirectDependencies --json src/Pages/Licenses/licenses.json",
     "gen": "./scripts/generateComponent.sh",
     "reset": "./scripts/reset.sh"
   },
@@ -38,8 +38,7 @@
     "react-native-safe-area-context": "^3.3.2",
     "react-native-screens": "^3.11.0",
     "react-native-vector-icons": "^8.0.0",
-    "react-query": "^3.15.2",
-    "underscore": "^1.12.0"
+    "react-query": "^3.15.2"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
@@ -52,6 +51,7 @@
     "jest": "^25.1.0",
     "metro-react-native-babel-preset": "^0.66.2",
     "node-fetch": "^2.6.1",
+    "npm-license-crawler": "^0.2.1",
     "react-native-reanimated": "^1.13.3",
     "react-test-renderer": "17.0.2"
   },
