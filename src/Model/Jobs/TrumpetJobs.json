@@ -371,7 +371,7 @@
         "Sousa - Gallant Seventh",
         "Shostakovich - Festive Overture",
         "Rimsky-Korsakov - Procession of the Nobles",
-        "Copland - Outdoor Overture"
+        "Copland - An Outdoor Overture"
       ]
     },
     {
@@ -487,7 +487,7 @@
         "Hindemith - Symphony in Bb",
         "Prokofiev - March Op. 99",
         "Hindemith - Symphonic Metamorphosis",
-        "Copland - Outdoor Overture",
+        "Copland - An Outdoor Overture",
         "Persichetti - Divertimento for Band",
         "Vaughan Williams - Toccata Marziale.",
         "Shostakovich/Hunsberger - Festive Overture",
@@ -1196,6 +1196,24 @@
       "excerpts": []
     },
     {
+      "orchestra": "BBC National Orchestra of Wales",
+      "position": "Principal Trumpet No. 3",
+      "link": "https://careershub.bbc.co.uk/members/modules/job/detail.php?record=58962",
+      "country": "United Kingdom",
+      "closingDate": "March 11, 2022",
+      "auditionDate": "May 16, 2022",
+      "excerpts": []
+    },
+    {
+      "orchestra": "Estonian National Opera",
+      "position": "Section Trumpet",
+      "link": "www.opera.ee",
+      "country": "Estonia",
+      "closingDate": "March 18, 2022",
+      "auditionDate": "April 12, 2022",
+      "excerpts": []
+    },
+    {
       "orchestra": "Sioux City Symphony Orchestra",
       "position": "Third Trumpet",
       "link": "https://siouxcitysymphony.org/about-us/auditions/",
@@ -1257,6 +1275,15 @@
       ]
     },
     {
+      "orchestra": "Fondazione Arena di Verona",
+      "position": "Professori d'Orchestra | TROMBA di fila",
+      "link": "https://www.arena.it/it/arena-di-verona/ricerca-personale",
+      "country": "Italy",
+      "closingDate": "April 1, 2022",
+      "auditionDate": "",
+      "excerpts": ["Verdi - Aida", "Puccini - Turandot", "bizetCarmen"]
+    },
+    {
       "orchestra": "USAF Band of Mid-America",
       "position": "Regional Trumpet",
       "link": "https://www.music.af.mil/Bands/US-Air-Force-Band-of-Mid-America/",
@@ -1268,7 +1295,7 @@
         "Sousa - Gallant Seventh",
         "Shostakovich - Festive Overture",
         "Rimsky-Korsakov - Procession of the Nobles",
-        "Copland - Outdoor Overture"
+        "Copland - An Outdoor Overture"
       ]
     },
     {
@@ -1284,6 +1311,65 @@
         "straussDonJuan",
         "berliozSymphonie",
         "bachChristmasOratorio"
+      ]
+    },
+    {
+      "orchestra": "United States Army Band Pershin's Own",
+      "position": "Ceremonial Band Trumpet",
+      "link": "https://www.usarmyband.com/vacancies/trumpet-the-u-s-army-ceremonial-band",
+      "country": "USA",
+      "closingDate": "April 11, 2022",
+      "auditionDate": "April 25, 2022",
+      "excerpts": [
+        "Barber - Commando March",
+        "Bliss - Bliss Fanafare",
+        "Taps",
+        "Copland - An Outdoor Overture",
+        "Elliot - British Eighth",
+        "Grafulla - Washington Grays",
+        "Grainger - Lincolnshire Posy",
+        "Hindemith - Symphony in Bb",
+        "Ives - Variations on “America”",
+        "Smith - Festival Variations",
+        "Williams - Summon the Heroes",
+        "Vaughan Williams - Toccata Marziale."
+      ]
+    },
+
+    {
+      "orchestra": "United States Coast Guard Band",
+      "position": "Jazz/Section Trumpet",
+      "link": "https://www.uscg.mil/Community/Coast-Guard-Band/careers/vacancies/",
+      "country": "USA",
+      "closingDate": "April 18, 2022",
+      "auditionDate": "June 6, 2022",
+      "excerpts": [
+        "Charlier - Étude No. 6 “Du Style” from 36 Études Transcendantes",
+        "Ives - Variations on “America”",
+        "Hindemith - Symphony in Bb",
+        "Barber - Commando March",
+        "Copland - An Outdoor Overture",
+        "Gershwin - Piano Concerto in F",
+        "Sousa - Gallant Seventh",
+        "Taps"
+      ]
+    },
+    {
+      "orchestra": "Vaasa City Orchestra",
+      "position": "Principal for trumpet",
+      "link": "https://www.vaasa.fi/en/see-and-experience/culture-in-vaasa-and-vaasa-region/vasa-city-orchestra/rekry-eng/",
+      "country": "Finland",
+      "closingDate": "April 22, 2022",
+      "auditionDate": "May 16, 2022",
+      "excerpts": [
+        "Charlier - Étude No. 6 “Du Style” from 36 Études Transcendantes",
+        "bachChristmasOratorio",
+        "brahms2",
+        "schumann2",
+        "Shostakovich - Piano Concerto No. 1",
+        "Sibelius - Symphony No. 5",
+        "straussBorgeois",
+        "Stravinsky - Suite No. 2"
       ]
     },
     {

@@ -1325,6 +1325,15 @@
       ]
     },
     {
+      "orchestra": "Orchestre de la Suisse Romande",
+      "position": "French Horn (Academy Position)",
+      "link": "https://www.hesge.ch/hem/en/admissions/lifelong-learning-courses/admissions-das-orchestral-practice",
+      "country": "Switzerland",
+      "closingDate": "March 1, 2022",
+      "auditionDate": "March 13, 2022",
+      "excerpts": []
+    },
+    {
       "orchestra": "Vancouver Symphony Orchestra",
       "position": "Principal Horn & Third Horn/Assistant Principal Horn",
       "link": "https://www.vancouversymphony.ca/about/careers/",
@@ -1406,6 +1415,32 @@
       ]
     },
     {
+      "orchestra": "The Metropolitan Opera",
+      "position": "Principal Horn",
+      "link": "https://jobs.lever.co/metopera/7ffec1ee-d573-46a8-ac1d-084e87399f83",
+      "country": "USA",
+      "closingDate": "March 14, 2022",
+      "auditionDate": "May 31, 2022",
+      "excerpts": []
+    },
+    {
+      "orchestra": "U.S. Navy Fleet Bands",
+      "position": "French Horn",
+      "link": "https://www.navyband.navy.mil/career-opportunities/fleet-band-auditions",
+      "country": "USA",
+      "closingDate": "March 17, 2022",
+      "auditionDate": "March 24, 2022",
+      "excerpts": [
+        "Williams - Hymn to the Fallen",
+        "beethoven7",
+        "Jenkins - American Overture for Band",
+        "Nielsen - Quintet",
+        "mahler1",
+        "Shostakovich - Symphony No. 5",
+        "straussEulenspiegel"
+      ]
+    },
+    {
       "orchestra": "New York Philharmonic",
       "position": "Principal Horn",
       "link": "https://nyphil.org/auditions",
@@ -1455,6 +1490,32 @@
         "wagnerGotterdammerung",
         "wagnerSigfried"
       ]
+    },
+    {
+      "orchestra": "Fondazione Arena di Verona",
+      "position": "Professori d'Orchestra | CORNO di fila",
+      "link": "https://www.arena.it/it/arena-di-verona/ricerca-personale",
+      "country": "Italy",
+      "closingDate": "April 1, 2022",
+      "auditionDate": "",
+      "excerpts": [
+        "beethoven7",
+        "beethoven8",
+        "Shostakovich - Symphony No. 5",
+        "wagnerRheingold",
+        "wagnerGotterdammerung",
+        "Puccini - Tosca",
+        "Puccini - Turandot"
+      ]
+    },
+    {
+      "orchestra": "Czech Philharmonic Orchestra",
+      "position": "Orchestral Academy - French Horn",
+      "link": "https://www.ceskafilharmonie.cz/en/contact/vacancies/",
+      "country": "Czech Republic",
+      "closingDate": "April 2, 2022",
+      "auditionDate": "",
+      "excerpts": []
     },
     {
       "orchestra": "Essener Philharmoniker ",

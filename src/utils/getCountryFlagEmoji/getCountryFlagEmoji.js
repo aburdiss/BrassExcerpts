@@ -47,6 +47,8 @@ export function getCountryFlagEmoji(country) {
       return '🇯🇵';
     case 'Latvia':
       return '🇱🇻';
+    case 'Lithuania':
+      return '🇱🇹';
     case 'Luxembourg':
       return '🇱🇺';
     case 'Mexico':

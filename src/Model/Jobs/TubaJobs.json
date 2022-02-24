@@ -385,6 +385,61 @@
       ]
     },
     {
+      "orchestra": "Fondazione Arena di Verona",
+      "position": "Professori d'Orchestra | BASSOTUBA con obbligo del trombone contrabbasso",
+      "link": "https://www.arena.it/it/arena-di-verona/ricerca-personale",
+      "country": "Italy",
+      "closingDate": "April 1, 2022",
+      "auditionDate": "",
+      "excerpts": [
+        "verdiNabucco",
+        "Verdi - Aida",
+        "berliozFaust",
+        "Prokofiev - Symphony No. 5",
+        "respighiFountains",
+        "Stravinsky - Petrouchka",
+        "wagnerRheingold",
+        "Wagner - Sigfried",
+        "wagnerValkyrie",
+        "wagnerMeistersinger"
+      ]
+    },
+    {
+      "orchestra": "Czech Philharmonic Orchestra",
+      "position": "Orchestral Academy - Tuba",
+      "link": "https://www.ceskafilharmonie.cz/en/contact/vacancies/",
+      "country": "Czech Republic",
+      "closingDate": "April 2, 2022",
+      "auditionDate": "",
+      "excerpts": []
+    },
+    {
+      "orchestra": "Orchestre national d’Île-de-France",
+      "position": "Tuba, tuba contrebasse",
+      "link": "https://www.orchestre-ile.com/page/concours",
+      "country": "France",
+      "closingDate": "April 2, 2022",
+      "auditionDate": "April 14, 2022",
+      "excerpts": [
+        "respighiFountains",
+        "wagnerValkyrie",
+        "Prokofiev - Symphony No. 5",
+        "Stravinsky - Petrouchka",
+        "wagnerMeistersinger",
+        "berliozFaust",
+        "mahler1",
+        "wagnerLohengrin",
+        "berliozSymphonie",
+        "straussEulenspiegel",
+        "Delibes - Coppélia",
+        "hindemith - Symphonic Metamorphosis",
+        "bruckner7",
+        "mahler2",
+        "Gershwin - An American in Paris",
+        "straussHeldenleben"
+      ]
+    },
+    {
       "orchestra": "Ensemble Musikfabrik",
       "position": "Tuba",
       "link": "https://www.musikfabrik.eu/en/tuba/",
@@ -392,6 +447,25 @@
       "closingDate": "April 15, 2022",
       "auditionDate": "June 2, 2022",
       "excerpts": []
+    },
+    {
+      "orchestra": "United States Army Band Pershing’s Own",
+      "position": "Ceremonial Band Tuba",
+      "link": "https://www.usarmyband.com/vacancies/tuba-the-u-s-army-ceremonial-band",
+      "country": "USA",
+      "closingDate": "April 18, 2022",
+      "auditionDate": "May 2, 2022",
+      "excerpts": [
+        "Bernstein - Symphonic Dancesfrom West Side Story",
+        "Grainger - Lincolnshire Posy",
+        "Hindemith - Symphony in Bb",
+        "holstFirstSuite",
+        "King - Barnum & Bailey's Favorite",
+        "Liszt - Preludes",
+        "sousaStarsAndStripes",
+        "Williams/Lavender - March of the Resistance",
+        "V. Williams - Toccata Marziale"
+      ]
     }
   ]
 }
