@@ -1,5 +1,12 @@
 import React, { useContext, useEffect, useRef, useState } from 'react';
-import { View, ScrollView, Pressable, Text, StyleSheet } from 'react-native';
+import {
+  View,
+  ScrollView,
+  Pressable,
+  Text,
+  StyleSheet,
+  Linking,
+} from 'react-native';
 import SegmentedControl from '@react-native-segmented-control/segmented-control';
 import { useNavigation } from '@react-navigation/core';
 import { useQuery } from 'react-query';
@@ -32,7 +39,7 @@ import { getContrast } from '../../utils/getContrast/getContrast';
  * and display more information about that Job to the user.
  * @author Alexander Burdiss
  * @since 3/5/21
- * @version 1.4.0
+ * @version 1.5.0
  * @component
  * @example
  * <Jobs />
@@ -79,6 +86,11 @@ export default function Jobs() {
       textDecorationLine: 'underline',
       padding: 10,
     },
+    mailLinkText: {
+      color: colors.green,
+      textDecorationLine: 'underline',
+      textAlign: 'center',
+    },
     noJobsContainer: {
       marginVertical: 10,
       padding: 40,
@@ -86,6 +98,11 @@ export default function Jobs() {
     noJobsText: {
       textAlign: 'center',
       color: colors.text,
+    },
+    pleaseHelpText: {
+      color: colors.text,
+      textAlign: 'center',
+      marginTop: 30,
     },
     jobsContainer: {
       height: '100%',
@@ -184,6 +201,20 @@ export default function Jobs() {
     navigation.navigate('Create Custom Audition');
   }
 
+  /**
+   * @function emailAuthor
+   * @description Emails aburdiss@icloud.com with a pre-filled subject
+   * expressing interest in helping with the jobs.
+   * @author Alexander Burdiss
+   * @since 3/1/22
+   * @version 1.0.0
+   */
+  function emailAuthor() {
+    Linking.openURL(
+      'mailto:aburdiss@icloud.com?subject=I%20am%20interested%20in%20helping%20update%20jobs%20for%20BrassXcerpts!',
+    ).catch((err) => console.warn("Couldn't load page", err));
+  }
+
   return (
     <View style={styles.jobsContainer}>
       <SafeAreaView edges={['left', 'right']} style={styles.topContainer}>
@@ -246,6 +277,14 @@ export default function Jobs() {
               There are no {currentInstrument} jobs at this time.{'\n'}Check
               back later!
             </Text>
+            <Text style={styles.pleaseHelpText}>
+              Want to help keep this up to date?
+            </Text>
+            <Pressable onPress={emailAuthor}>
+              <Text style={styles.mailLinkText}>
+                Contact aburdiss@icloud.com to learn more
+              </Text>
+            </Pressable>
           </SafeAreaView>
         )}
         <SafeAreaView edges={['left', 'right']}>
