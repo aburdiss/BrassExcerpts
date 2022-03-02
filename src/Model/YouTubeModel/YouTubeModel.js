@@ -415,7 +415,7 @@ const YouTubeModel = {
       ['Herbert von Karajan, Berliner Philharmoniker', 'QWU1uj9WmOM'],
       ['Seiji Ozawa, Berliner Philharmoniker', '5mOPkNUVPmI'],
     ],
-    score: [['Herbert von Karajan, Berliner Philharmoniker', 'wcdp-YT79Ek']],
+    score: [],
   },
 
   brahmsAcademic: {
@@ -457,7 +457,6 @@ const YouTubeModel = {
         'cqd4NQ-ppCY',
       ],
       ['Herbert von Karajan, Berliner Philharmoniker', '45mWi4qY5v0'],
-      ['Leonard Bernstein, Vienna Philharmonic Orchestra', 'EGRqIGOAPcE'],
       ['Paavo Järvi, Orchestre de Paris', 'BRdEgS_OHAk'],
       [
         'Stanisław Skrowaczewski, Frankfurt Radio Symphony Orchestra',
@@ -495,7 +494,6 @@ const YouTubeModel = {
   brahms3: {
     full: [
       ['Andrés Orozco-Estrada, Frankfurt Radio Symphony', 'u68ETRjNQME'],
-      ['Bernard Haitink, Chamber Orchestra of Europe', 'GF260OjcAjE'],
       ['Daniel Barenboim, Chicago Symphony Orchestra', 'mAjvP_b0l7E'],
       ['Edo de Waart, The Netherlands Philharmonic Orchestra', 'a9TCjM9jhks'],
       ['Herbert von Karajan, Berliner Philharmoniker', 'QaItCES17AY'],
@@ -600,7 +598,6 @@ const YouTubeModel = {
       ['Bernard Haitink, The Orchestre National de France', 'MIJET6NO4-k'],
       ['Claudio Abbado, Berliner Philharmoniker Orchester', 'DKQCkmeWJAc'],
       ['Herbert Blomstedt, Gustav Mahler Jugendorchester', 'KBZgSC-8Yp0'],
-      ['Leonard Bernstein, Vienna Philharmonic Orchestra', 'Tw2LNhwnquk'],
       ['Nézet-Séguin, Wiener Philharmoniker', 'wcCamtD5ufs'],
       ['Sergiu Celibidache, Munich Philharmonic Orchestra', 'JvlkX4VGN-c'],
       [
@@ -822,7 +819,6 @@ const YouTubeModel = {
 
   mahlerDasLied: {
     full: [
-      ['Bruno Walter, Wiener Philharmoniker', 'iqCMTQ3uaPI'],
       ['Daniel Barenboim, Chicago Symphony Orchestra', 'kQZ51udFtrg'],
       ['Edward Gardner, BBC Symphony Orchestra', 'nItKF7byVGU'],
       ['Herbert von Karajan, Berliner Philharmoniker', 'SQk5ZiWXg0Y'],
@@ -836,10 +832,6 @@ const YouTubeModel = {
     full: [
       ['Andrés Orozco-Estrada, Frankfurt Radio Symphony', 'cqVIMEQfEd4'],
       ['Claudio Abbado, Chicago Symphony Orchestra', 'UUypHJHFBq4'],
-      [
-        'Daniel Harding, Royal Concertgebouw Orchestra Amsterdam',
-        '_JXMFbGRyII',
-      ],
       ['Lorin Maazel, Sinfónica de Galicia', 'IC56kGOgscI'],
       ['Marin Alsop, Peabody Symphony Orchestra', 'UkvYOTJg9sM'],
       ['Paul Haas, Boston University Tanglewood Institute', 'xoxI02g57TU'],
@@ -925,7 +917,6 @@ const YouTubeModel = {
   mahler6: {
     full: [
       ['Andrés Orozco-Estrada, Frankfurt Radio Symphony', '25tSq_dYL3c'],
-      ['Bernard Haitink, Chicago Symphony Orchestra', 'YUj_GAKWziE'],
       ['Claudio Abbado, Berlin Philharmonic', 'QmgUfF_DCLg'],
       ['Eliahu Inbal, Singapore Symphony Orchestra', 'KnjQNwKu36U'],
       ['Herbert von Karajan, Berliner Philharmoniker', 'DCIjasJaoOA'],
@@ -934,8 +925,6 @@ const YouTubeModel = {
         'bhl2a8egHxg',
       ],
       ['Klaus Tennstedt, London Philharmonic Orchestra', 'DrhsSYhuoUQ'],
-
-      ['Leonard Bernstein, Wiener Philharmoniker', 'rypHeVr_X7c'],
     ],
     score: [
       ['Leonard Bernstein cond/ Vienna Philharmonic Orchestra', 'oep5Rude4mQ'],
@@ -953,7 +942,6 @@ const YouTubeModel = {
       ['Claudio Abbado, Lucerne Festival Orchestra', 'QdxvC7NNSLQ'],
       ['Edo de Waart, The Radio Philharmonic Orchestra', 'tGeJRmd0MSA'],
       ['James Levine, Chicago Symphony Orchestra', 'zUZz38kq4pw'],
-      ['Leonard Bernstein, Wiener Philharmoniker', 'OCiKqIsF2IQ'],
       ['Otto Klemperer, New Philharmonia Orchestra', '0wMdEGIdZPU'],
       ['Paavo Järvi, Frankfurt Radio Symphony Orchestra', 'b0TsG3rIOU8'],
       ['Riccardo Chailly, Leipzig Gewandhaus Orchestra', 'bXjaGRJNsqs'],
@@ -999,7 +987,6 @@ const YouTubeModel = {
       ['Leonard Bernstein, New York Philharmonic', 'hPM14CM8HUs'],
       ['Otto Klemperer, Philharmonia Orchestra', '4nP0gqKmWuY'],
       ['Rumon Gamba, Orquesta Sinfónica de Galicia', 'FbH95mO_o3A'],
-      ['Sir Georg Solti, Chicago Symphony Orchestra', 'vRe3zSKolIY'],
     ],
   },
 
@@ -1165,7 +1152,6 @@ const YouTubeModel = {
   rossiniLaGazza: {
     full: [
       ['Boian Videnoff, Mannheimer Philharmoniker', 'KYfaKAIf-SU'],
-      ['Daniel Harding, Orchestra del Teatro La Fenice', 'UjDXNqG0Deg'],
       ['Gustavo Dudamel, Wiener Philharmoniker', '3MIbDR1QRHs'],
       ['Michael Halasz, Zagreb Festival Orchestra', 'Qqa_NADTVQw'],
     ],
@@ -1231,7 +1217,6 @@ const YouTubeModel = {
         'oBPwpX3VDZE',
       ],
       ['Elisabeth Fuchs, Philharmonie Salzburg', 'YU3b723XEVY'],
-      ['Georg Solti, Chicago Symphony Orchestra', '1-p58OSYhG0'],
       ['Leonard Bernstein, Concertgebouw Orchestra', 'uWnKMzAedK4'],
       ['Philippe Jordan, Wiener Symphoniker', 'TgZj4Vd3HHk'],
       ['Seiji Ozawa, Westminster Philharmonic Orchestra', 'Ip4cBnYJ1Hw'],
@@ -1251,7 +1236,6 @@ const YouTubeModel = {
       ['Josef Krips, London Symphony Orchestra', 'Vi85_BDRFXo'],
       ['Lorin Maazel, Bavarian Radio Symphony', '5kQTHhcIWnI'],
       ['Riccardo Muti, Vienna Philharmonic Orchestra', 'bA6pzRx6gBE'],
-      ['Wolfgang Sawallisch, Wiener Philharmoniker', 'kNocKxKd8-I'],
     ],
     trombone: [['Ralph Sauer', 'neudoAIzgaw']],
   },
@@ -1285,7 +1269,6 @@ const YouTubeModel = {
   schumann3: {
     full: [
       ['Leonard Bernstein, New York Philharmonic', 'TmKfrccpny0'],
-      ['Leonard Bernstein, Wiener Philharmoniker', 'OfR8d3aJKEs'],
       ['Marek Janowski, Frankfurt Radio Symphony', '3lRdCGIp-rg'],
       ['Paavo Järvi, NHK Symphony Orchestra', 'PEuM0c5U5W8'],
       ['Sergiu Celibidache, Munich Philharmonic Orchestra', '7GB8K5uSIJo'],
@@ -1309,7 +1292,6 @@ const YouTubeModel = {
     full: [
       ['George Szell, The Cleveland Orchestra', 'i5A_FFahysY'],
       ['Herbert von Karajan, Staatskapelle Dresden', '3GSN0a0z_O8'],
-      ['Leonard Bernstein, Vienna Philharmonic Orchestra', 'yunhjIVTG_U'],
       ['Marek Janowski, Frankfurt Radio Symphony', 'GOKN3hh6mGE'],
       [
         'Philippe Herreweghe, Frankfurt Radio Symphony Orchestra',
@@ -1410,10 +1392,6 @@ const YouTubeModel = {
       ['Herbert von Karajan, Vienna Philharmonic', 'h3eEHZCahVU'],
       ['Jonathan Nott, Gustav Mahler Youth Orchestra', '6RdZ7rO_cr0'],
       ['Mariss Jansons, Royal Concertgebouw Orchestra', 'D4d88IgvhK4'],
-      [
-        'Mariss Jansons, Symphonieorchester des Bayerischen Rundfunks',
-        'hC-PA0YGzK0',
-      ],
     ],
     score: [
       ['Herbert von Karajan, Berlin Philharmonic Orchestra', 'c8r_pZoaZf0'],
@@ -1427,7 +1405,6 @@ const YouTubeModel = {
 
   straussBorgeois: {
     full: [
-      ['JoAnn Falletta, Norrlandsoperans Symfoniorkester', '7YG5vvsW1u0'],
       ['Klaus Tennstedt, London Philharmonic Orchestra', '_0BIEdy9WNU'],
       ['Lorin Maazel, Royal Concertgebouw Orchestra', 'CheXfDxIm5Y'],
       ['Oscar Shumsky, Glenn Gould', 'hZIq116v6uc'],
@@ -1458,7 +1435,7 @@ const YouTubeModel = {
       ['Georg Solti, Chicago Symphony Orchestra', '_um5yLJx-RM'],
       ['Herbert von Karajan, Osaka Philharmonic Orchestra', 'F_V5KhUxWG8'],
     ],
-    score: [['Thomas Schippers, Cincinnati Symphony Orchestra', '8woshq-F21s']],
+    score: [],
     trumpet: [['Philip Smith', '_YiZaERf5Is']],
     tuba: [['Michael Mulcahy', 'oHsbvs-xn6o']],
   },
@@ -1469,7 +1446,6 @@ const YouTubeModel = {
         'Bernard Haitink, Symphonieorchester des Bayerischen Rundfunks',
         '_u5Zq769TJ4',
       ],
-      ['Herbert von Karajan, Berliner Philharmoniker', '_6P1WHXKAlk'],
       ['Seiji Ozawa, Boston Symphony Orchestra', 'Un6zfgAJi8I'],
       ['Wolfgang Sawallisch, NHK Symphony', 'dJNEuvfeshg'],
     ],
@@ -1572,7 +1548,7 @@ const YouTubeModel = {
         'bB018B3uKKo',
       ],
     ],
-    score: [['Leo Geyer, Constella Ballet & Orchestra', 'JgSGTO36zUs']],
+    score: [],
   },
 
   stravinskyFireworks: {
@@ -1913,7 +1889,6 @@ const YouTubeModel = {
     full: [
       ['Adam Fischer, Vienna State Opera', 'kLly5R4gDiM'],
       ['Joseph Keilberth, Bayreuth Festival Orchestra', 'KtQ40fqs6Kc'],
-      ['Karl Böhm, Bayreuth Festival Orchestra', '9_TKIStwoQI'],
       ['Marek Janowski, Bayreuth Festival Orchestra', 'ZKv8J_4jdSI'],
       ['Zubin Mehta, Valencian Community Orchestra', 'ebhrZZJ-mLg'],
     ],
@@ -1925,7 +1900,6 @@ const YouTubeModel = {
       ['Andris Nelsons, Bayreuth Festival', 'VXwSV0sjYzg'],
       ['Daniel Barenboim, Orchestra of the Milan Scala', 'kSzkYafY0pM'],
       ['Georg Solti, Vienna Philharmonic Orchestra', 'zUrXqwmf3ZU'],
-      ['Silvio Varviso, Bayreuth Festival Orchestra and Chorus', '_ReY89_fM0g'],
     ],
     trombone: [['Ralph Sauer', 'b83be3aogOM']],
     tuba: [['Gene Pokorny', 'KfCz8iPL96I']],
@@ -1956,15 +1930,11 @@ const YouTubeModel = {
 
   wagnerParsifal: {
     full: [
-      ['Hans Knappertsbusch, Bayreuth Festival Orchestra', 'vaANPNrAtpA'],
       ['Herbert Kegel, Rundfunk-Sinfonie-Orchester Leipzig', 'JsqPWZNEQvY'],
       ['Horst Stein, Bayreuth Festival Orchestra', 'eqOBEH-JRhs'],
-      ['James Levine, The Metropolitan Opera', 'HhCMzZEHlEc'],
       ['Philippe Jordan, Bayreuth Festival Orchestra', 'bTaQu7ivsRM'],
     ],
-    score: [
-      ['Hans Knappertsbusch, Bayreuth Festival Orchestra', 'RfNWxq7wuZk'],
-    ],
+    score: [],
     trumpet: [['Philip Smith', '4CxSCVNzaFE']],
   },
 
@@ -1992,7 +1962,6 @@ const YouTubeModel = {
     full: [
       ['Adam Fischer, Vienna State Opera', 'xlCtT5zSs2M'],
       ['Marek Janowski, Bayreuth Festival Orchestra', 'uxVPG5MkS4M'],
-      ['Pierre Boulez, Bayreuther Festspiele', 'sPHlpPwoUnA'],
       ['Zubin Mehta, Valencian Community Orchestra', 'BaF8zdfS0q8'],
     ],
     score: [['Georg Solti, Vienna Philharmonic Orchestra', 'j5pATBWOsLc']],
