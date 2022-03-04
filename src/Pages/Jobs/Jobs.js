@@ -39,7 +39,7 @@ import { getContrast } from '../../utils/getContrast/getContrast';
  * and display more information about that Job to the user.
  * @author Alexander Burdiss
  * @since 3/5/21
- * @version 1.5.0
+ * @version 1.5.1
  * @component
  * @example
  * <Jobs />
@@ -266,7 +266,7 @@ export default function Jobs() {
             </Text>
           </SafeAreaView>
         )}
-        {!currentJobs.isLoading && hasValidJobs(currentJobs.data) && (
+        {!currentJobs.isLoading && !hasValidJobs(currentJobs.data) && (
           // No data, but not loading and no error
           <SafeAreaView style={styles.noJobsContainer}>
             <Text
