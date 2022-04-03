@@ -2,7 +2,7 @@
 # reset.sh
 # Author: Alexander Burdiss
 # Since: 9/22/21
-# Version: 1.0.0
+# Version: 1.0.1
 # Description: Performs a hard reset of the project.
 
 GREEN="\033[01;32m"
@@ -27,14 +27,6 @@ if [[ ! $currentPath -eq 'BrassExcerpts' ]]; then
   echo -e "${RED}This script must be run from the root directory of BrassXcerpts!${NC}"
   exit 1;
 fi
-
-# Make sure the right dependencies are installed
-if ! command -v gtimeout &> /dev/null; then
-    echo -e "${RED}coreutils module not installed${NC}"
-    echo "Please install coreutils with \`brew install coreutils\` before continuing"
-    exit 1
-fi
-
 
 # Remove DerivedData from Xcode
 echo -e "${BLUE}Would you like to remove ~/Library/Developer/Xcode/DerivedData (y/N)?${NC}"
@@ -139,10 +131,11 @@ echo -e "${GREEN}Cleared watchman logs${NC}"
 
 # Reset react native cache
 echo "Resetting react native cache"
-gtimeout 3 npm start -- --reset-cache
+echo "${GREEN}The following command will need to be cancelled.${NC}"
+npm start -- --reset-cache
 echo -e "${GREEN}Reset react native cache${NC}"
 
 echo
-echo -e "${GREEN}** BrassX has been reset! **${NC}"
+echo -e "${GREEN}** BrassXcerpts has been reset! **${NC}"
 echo
 exit 0
