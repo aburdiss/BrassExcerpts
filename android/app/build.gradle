@@ -126,6 +126,10 @@ def enableHermes = project.ext.react.get("enableHermes", false);
 def nativeArchitectures = project.getProperties().get("reactNativeDebugArchitectures")
 
 android {
+    /* https://stackoverflow.com/questions/67135414/w-detected-multiple-kotlin-daemon-sessions-at-build-kotlin-sessions */
+    dexOptions {
+       javaMaxHeapSize "3g"
+    }
     ndkVersion rootProject.ext.ndkVersion
 
     compileSdkVersion rootProject.ext.compileSdkVersion
@@ -134,8 +138,8 @@ android {
         applicationId "com.brassexcerpts"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 3
-        versionName "1.1.0"
+        versionCode 4
+        versionName "1.1.1"
     }
     splits {
         abi {
