@@ -12,7 +12,8 @@
     "lint": "eslint .",
     "licenses": "npm-license-crawler --onlyDirectDependencies --json src/Pages/Licenses/licenses.json",
     "gen": "./scripts/generateComponent.sh",
-    "reset": "./scripts/reset.sh"
+    "reset": "./scripts/reset.sh",
+    "check-packages": "node ./scripts/checkForMaliciousPackages.js"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.16.1",
@@ -46,6 +47,7 @@
     "@react-native-community/eslint-config": "^1.1.0",
     "@testing-library/react-native": "^7.2.0",
     "babel-jest": "^25.1.0",
+    "colors": "^1.1.2",
     "eslint": "^6.5.1",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^25.1.0",
