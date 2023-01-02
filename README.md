@@ -1,4 +1,4 @@
-<img align="right" src="img/AppIconRound.png" width="70" alt="Scale Practice">
+<img align="right" src="android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" width="70" alt="Brass Excerpts">
 
 # Brass Excerpts
 
@@ -12,8 +12,8 @@ available on the <a href="https://apps.apple.com/us/app/brassxcerpts/id150390798
 
 ## Requirements
 
-- iOS 10.0+
-- Xcode 14.0+
+- iOS 11.0+
+- Android SDK 21 (Android 5.0 Lollipop)
 
 ## Contributing
 
