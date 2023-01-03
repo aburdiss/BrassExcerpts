@@ -1,4 +1,4 @@
-import {getInstrumentsSelected} from './getInstrumentsSelected';
+import { getInstrumentsSelected } from './getInstrumentsSelected';
 
 describe('getInstrumentsSelected returns correct instruments', () => {
   describe('one instrument', () => {

@@ -4,7 +4,7 @@ import Excerpts from './Excerpts';
 import MockNavigator from '../../../jest/MockNavigator';
 import MockContext from '../../../jest/MockContext';
 
-import {render} from '@testing-library/react-native';
+import { render } from '@testing-library/react-native';
 
 test('Excerpts renders correctly', () => {
   render(

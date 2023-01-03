@@ -1,20 +1,20 @@
-import {getActiveInstrument} from './getActiveInstrument';
+import { getActiveInstrument } from './getActiveInstrument';
 
 describe('returns correct active instrument', () => {
   test('horn', () => {
-    let activeInstrument = getActiveInstrument({horn: true});
+    let activeInstrument = getActiveInstrument({ horn: true });
     expect(activeInstrument).toEqual('horn');
   });
   test('trumpet', () => {
-    let activeInstrument = getActiveInstrument({trumpet: true});
+    let activeInstrument = getActiveInstrument({ trumpet: true });
     expect(activeInstrument).toEqual('trumpet');
   });
   test('trombone', () => {
-    let activeInstrument = getActiveInstrument({trombone: true});
+    let activeInstrument = getActiveInstrument({ trombone: true });
     expect(activeInstrument).toEqual('trombone');
   });
   test('tuba', () => {
-    let activeInstrument = getActiveInstrument({tuba: true});
+    let activeInstrument = getActiveInstrument({ tuba: true });
     expect(activeInstrument).toEqual('tuba');
   });
   test('none', () => {

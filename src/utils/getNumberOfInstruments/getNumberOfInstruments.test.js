@@ -1,4 +1,4 @@
-import {getNumberOfInstruments} from './getNumberOfInstruments';
+import { getNumberOfInstruments } from './getNumberOfInstruments';
 
 describe('getNumberOfInstruments returns correct number of instruments', () => {
   test('none', () => {
@@ -6,7 +6,7 @@ describe('getNumberOfInstruments returns correct number of instruments', () => {
     expect(numberOfInstruments).toEqual(0);
   });
   test('horn only', () => {
-    let numberOfInstruments = getNumberOfInstruments({horn: true});
+    let numberOfInstruments = getNumberOfInstruments({ horn: true });
     expect(numberOfInstruments).toEqual(1);
   });
   test('horn and trumpet only', () => {

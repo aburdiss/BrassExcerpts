@@ -1,6 +1,6 @@
 import React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
-import {createStackNavigator} from '@react-navigation/stack';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
 const Stack = createStackNavigator();
 /**
@@ -15,7 +15,7 @@ const Stack = createStackNavigator();
  * @since 5/7/21
  * @version 1.0.0
  */
-const MockNavigator = ({children, params = {}}) => {
+const MockNavigator = ({ children, params = {} }) => {
   return (
     <NavigationContainer>
       <Stack.Navigator>

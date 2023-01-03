@@ -92,6 +92,7 @@ export default function Licenses() {
   return (
     <SafeAreaView
       edges={['left', 'right']}
+      // eslint-disable-next-line react-native/no-inline-styles
       style={{
         flex: 1,
         backgroundColor: colors.background,

@@ -1,13 +1,13 @@
 import 'react-native';
 import React from 'react';
 
-import {render} from '@testing-library/react-native';
+import { render } from '@testing-library/react-native';
 
 import ScrollViewBounceContainer from './ScrollViewBounceContainer';
 
 describe('renders ScrollViewBounceContainer correctly', () => {
   test('contains top section colors', () => {
-    const {getByTestId} = render(
+    const { getByTestId } = render(
       <ScrollViewBounceContainer topBounceColor="#000" bottomBounceColor="#FFF">
         Hello
       </ScrollViewBounceContainer>,
@@ -16,7 +16,7 @@ describe('renders ScrollViewBounceContainer correctly', () => {
     expect(topBounceColor).not.toBeNull();
   });
   test('contains bottom section colors', () => {
-    const {getByTestId} = render(
+    const { getByTestId } = render(
       <ScrollViewBounceContainer topBounceColor="#000" bottomBounceColor="#FFF">
         Hello
       </ScrollViewBounceContainer>,
