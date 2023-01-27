@@ -61,7 +61,7 @@
     "prettier": "^2.7.1",
     "react-native-reanimated": "^1.13.3",
     "react-test-renderer": "17.0.2",
-    "ua-parser-js": "0.7.31"
+    "ua-parser-js": "0.7.33"
   },
   "prettier": {
     "trailingComma": "all",
