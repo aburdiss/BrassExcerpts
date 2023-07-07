@@ -17,14 +17,17 @@ import { useIdleScreen } from '../../utils/customHooks/useIdleScreen/useIdleScre
 import { useColors } from '../../utils/customHooks/useColors/useColors';
 
 /**
- * @namespace ComposerDetail
  * @function ComposerDetail
+ * @component
  * @description A listing of one composer, and the exerpts for the different
  * instruments available for that composer.
+ * Created 3/3/21
+ * @returns {JSX.Element} JSX render instructions
+ *
+ * @copyright 2023 Alexander Burdiss
  * @author Alexander Burdiss
- * @since 3/3/21
+ * @since 7/7/23
  * @version 1.2.2
- * @component
  * @example
  * <ComposerDetail />
  */

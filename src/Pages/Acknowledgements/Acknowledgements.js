@@ -7,15 +7,18 @@ import TextListItem from '../../Components/ListItems/TextListItem/TextListItem';
 import { useColors } from '../../utils/customHooks/useColors/useColors';
 
 /**
- * @namespace Acknowledgements
  * @function Acknowledgements
+ * @component
  * @description A View that displays the people who directly assisted with
  * this project
+ * Created 12/14/20
+ * @returns {JSX.Element} JSX render instructions
+ *
+ * @copyright 2023 Alexander Burdiss
  * @author Alexander Burdiss
- * @since 12/14/20
+ * @since 7/7/23
  * @version 1.2.0
  *
- * @component
  * @example
  * <Acknowledgements />
  */

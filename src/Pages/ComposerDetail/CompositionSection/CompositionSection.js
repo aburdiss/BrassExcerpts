@@ -9,15 +9,19 @@ import { isFavorite } from '../../../utils/isFavorite/isFavorite';
 import { PreferencesContext } from '../../../Model/Preferences';
 
 /**
- * @namespace CompositionSection
  * @function CompositionSection
+ * @component
  * @description A section of the different compositions that the composer has
  * created.
- * @param props The JSX props passed to this React component.
+ * Created 3/9/21
+ * @param {Object} props The JSX props passed to this React component.
  * @param {Object[]} props.excerpts The list of excerpts to be displayed in this
  * section.
+ * @returns {JSX.Element} JSX render instructions
+ *
+ * @copyright 2023 Alexander Burdiss
  * @author Alexander Burdiss
- * @since 3/9/21
+ * @since 7/7/23
  * @version 1.1.2
  */
 export default function CompositionSection({ excerpts }) {
