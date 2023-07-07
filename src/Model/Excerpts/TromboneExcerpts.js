@@ -1,11 +1,11 @@
 /**
  * @file TromboneExcerpts.js
- * @namespace TromboneExcerpts
  * @description Trombone Excerpts to be used in the app.
+ *
+ * @copyright 2021 Alexander Burdiss
  * @author Alexander Burdiss
  * @since 3/4/21
  * @version 1.0.0
- * @copyright 2021 Alexander Burdiss
  */
 
 //Mark: Last Composer No: 26

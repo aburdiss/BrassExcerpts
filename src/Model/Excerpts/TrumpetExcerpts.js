@@ -1,11 +1,11 @@
 /**
  * @file TrumpetExcerpts.js
- * @namespace TrumpetExcerpts
  * @description Trumpet Excerpts to be used in the app.
+ *
+ * @copyright 2021 Alexander Burdiss
  * @author Alexander Burdiss
  * @since 3/4/21
  * @version 1.0.1
- * @copyright 2021 Alexander Burdiss
  */
 
 // MARK: Last Composer: 21
