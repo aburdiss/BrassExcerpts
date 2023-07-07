@@ -15,14 +15,18 @@ const Stack = createStackNavigator();
 
 /**
  * @function JobsStack
+ * @component
  * @description The stack of all of the screens on the Job stack of the app.
- * @author Alexander Burdiss
- * @since 4/2/21
- * @version 1.0.0
- * @param props The JSX props passed to this React Component
+ * Created 4/2/21
+ * @param {Object} props The JSX props passed to this React Component
  * @param {Object} props.navigation The navigation object passed to this stack
  * from the Tab Navigator.
- * @component
+ * @returns {JSX.Element} JSX render instructions
+ *
+ * @copyright 2023 Alexander Burdiss
+ * @author Alexander Burdiss
+ * @since 7/7/23
+ * @version 1.0.0
  * @example
  * <JobsStack />
  */

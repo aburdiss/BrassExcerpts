@@ -10,14 +10,17 @@ import { useColors } from '../../utils/customHooks/useColors/useColors';
 const Stack = createStackNavigator();
 
 /**
- * @namespace MoreStack
  * @function MoreStack
+ * @component
  * @description All of the screens on the More Tab of the app, collected into
  * a stack to be used by React Navigation
+ * Created 4/2/21
+ * @returns {JSX.Element} JSX render instructions
+ *
+ * @copyright 2023 Alexander Burdiss
  * @author Alexander Burdiss
- * @since 4/2/21
+ * @since 7/7/23
  * @version 1.2.0
- * @component
  * @example
  * <MoreStack />
  */

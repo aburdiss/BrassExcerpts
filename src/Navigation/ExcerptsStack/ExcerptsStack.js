@@ -15,15 +15,19 @@ import TopExcerpts from '../../Pages/TopExcerpts/TopExcerpts';
 const Stack = createStackNavigator();
 
 /**
- * @namespace ExcerptsStack
  * @function ExcerptsStack
+ * @component
  * @description A Stack Navigator that handles all of the screens on the
  * Excerpts stack.
- * @param props The JSX props passed to this React Component
+ * Created 4/2/21
+ * @param {Object} props The JSX props passed to this React Component
  * @param {Object} props.navigation The navigation object passed directly to
  * this screen from the Tab Navigator in App.js
+ * @returns {JSX.Element} JSX render instructions
+ *
+ * @copyright 2023 Alexander Burdiss
  * @author Alexander Burdiss
- * @since 4/2/21
+ * @since 7/7/23
  * @version 1.2.0
  */
 export default function ExcerptsStack({ navigation }) {

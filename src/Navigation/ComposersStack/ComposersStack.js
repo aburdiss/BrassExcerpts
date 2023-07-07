@@ -10,15 +10,18 @@ import { useColors } from '../../utils/customHooks/useColors/useColors';
 const Stack = createStackNavigator();
 
 /**
- * @namespace ComposersStack
  * @function ComposersStack
+ * @component
  * @description A react component that holds all of the different screens to
  * display on the composers' stack, and provides them context and proper
  * navigation
+ * Created 4/2/21
+ * @returns {JSX.Element} JSX Render instructions
+ *
+ * @copyright 2023 Alexander Burdiss
  * @author Alexander Burdiss
- * @since 4/2/21
+ * @since 7/7/23
  * @version 1.0.1
- * @component
  * @example
  * <ComposersStack />
  */
