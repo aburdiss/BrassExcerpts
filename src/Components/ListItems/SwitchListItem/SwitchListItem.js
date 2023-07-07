@@ -4,19 +4,21 @@ import { Pressable, Text, Switch, StyleSheet, Platform } from 'react-native';
 import { useColors } from '../../../utils/customHooks/useColors/useColors';
 
 /**
- * @namespace SwitchListItem
  * @function SwitchListItem
  * @description A rendered Switch list item that updates saved preferences.
- * @author Alexander Burdiss
- * @since 1/5/21
- * @version 1.1.1
+ * Created 1/5/21
+ * @param {Object} props JSX props passed to this React component
  * @param {Object} props.item The data to be rendered in this component.
  * @param {Object} props.state The current state of the app, including user
  * preferences.
  * @param {Function} props.dispatch A function to make a reducer call to update
  * state.
+ * @returns {JSX.Element} JSX render instructions
  *
- * @component
+ * @copyright 2023 Alexander Burdiss
+ * @author Alexander Burdiss
+ * @since 7/7/23
+ * @version 1.1.1
  * @example
  * <SwitchListItem
  * item={item}

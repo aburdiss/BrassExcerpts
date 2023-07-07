@@ -5,17 +5,20 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import { useColors } from '../../../utils/customHooks/useColors/useColors';
 
 /**
- * @namespace LinkListItem
  * @function LinkListItem
+ * @component
  * @description A rendered Link list item with a chevron and theme colored text
- * @author Alexander Burdiss
- * @since 11/15/20
- * @version 1.1.0
+ * Created 11/15/2020
+ * @param {Object} props The JSX props passed to this React component
  * @param {Object} props.item The list item containing a link and some text.
  * @param {Object} props.state The app state, containing all of the user's
  * preferences.
+ * @returns {JSX.Element} JSX render instructions
  *
- * @component
+ * @copyright 2023 Alexander Burdiss
+ * @author Alexander Burdiss
+ * @since 7/7/23
+ * @version 1.1.0
  * @example
  * <LinkListItem
  *   item={item}

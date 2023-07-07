@@ -2,20 +2,23 @@ import React from 'react';
 import { View, StyleSheet } from 'react-native';
 
 /**
- * @namespace ScrollViewBounceContainer
  * @function ScrollViewBounceContainer
+ * @component
  * @description A container for a scrollview that provides different colors
  * on the top and the bottom. This is useful for making the bounce look better
  * on top and bottom.
- * @param {*} props The JSX props passed to this React component
- * @param {React.Component} props.children Any child to be rendered inside this
+ * Created 5/4/21
+ * @param {Object} props The JSX props passed to this React component
+ * @param {*} props.children Any child to be rendered inside this
  * wrapper
  * @param {string} props.topBounceColor
  * @param {string} props.bottomBounceColor
+ * @returns {JSX.Element} JSX render instructions
+ *
+ * @copyright 2023 Alexander Burdiss
  * @author Alexander Burdiss
- * @since 5/4/21
+ * @since 7/7/23
  * @version 1.1.0
- * @component
  */
 export default function ScrollViewBounceContainer({
   children,

@@ -7,19 +7,22 @@ import { useTheme } from '../../../utils/customHooks/useTheme/useTheme';
 import { getDarkOrLightTheme } from '../../../utils/getDarkOrLightTheme/getDarkOrLightTheme';
 
 /**
- * @namespace SegmentedFilterListItem
  * @function SegmentedFilterListItem
+ * @component
  * @description A rendered Segmented filter list item that updates saved
  * preferences.
- * @author Alexander Burdiss
- * @since 12/17/20
- * @version 1.1.1
+ * Created 12/17/20
+ * @param {Object} props The JSX props passed to this React component
  * @param {Object} props.item The data to render in this list item
  * @param {Object} props.state The current user app state
  * @param {Function} props.dispatch A function to call to the reducer to
  * update the user state of the app.
+ * @returns {JSX.Element} JSX Render Instructions
  *
- * @component
+ * @copyright 2023 Alexander Burdiss
+ * @author Alexander Burdiss
+ * @since 7/7/23
+ * @version 1.1.1
  * @example
  * <SegmentedFilterListItem
  *   item={item}

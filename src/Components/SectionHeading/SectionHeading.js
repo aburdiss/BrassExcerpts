@@ -4,15 +4,18 @@ import React from 'react';
 import { useColors } from '../../utils/customHooks/useColors/useColors';
 
 /**
- * @namespace SectionHeading
  * @function SectionHeading
- * @description A prestyled section header that can be used across the app
- * @author Alexander Burdiss
- * @since 5/22/21
- * @version 1.2.0
- * @param props The JSX props passed to this React component
- * @param {String} props.children the text to render in this component
  * @component
+ * @description A prestyled section header that can be used across the app
+ * Created 5/22/21
+ * @param {Object} props The JSX props passed to this React component
+ * @param {*} props.children the text to render in this component
+ * @returns {JSX.Element} JSX render instructions
+ *
+ * @copyright 2023 Alexander Burdiss
+ * @author Alexander Burdiss
+ * @since 7/7/23
+ * @version 1.2.0
  * @example
  * <SectionHeading>Tuba</SectionHeading />
  */

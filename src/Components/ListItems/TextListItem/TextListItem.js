@@ -4,14 +4,19 @@ import { View, Text, StyleSheet } from 'react-native';
 import { useColors } from '../../../utils/customHooks/useColors/useColors';
 
 /**
+ * @function TextListItem
+ * @component
  * @description A rendered Text list item. This will not translate
  * copyright information.
- * @author Alexander Burdiss
- * @since 1/3/21
- * @version 1.2.0
+ * Created 1/3/21
+ * @param {Object} props JSX props passed to this React component
  * @param {Object} props.item The text to be rendered in the list item.
+ * @returns {JSX.Element} JSX render instructions
  *
- * @component
+ * @copyright 2023 Alexander Burdiss
+ * @author Alexander Burdiss
+ * @since 7/7/23
+ * @version 1.2.0
  * @example
  * <TextListItem item={item} />
  */

@@ -4,16 +4,22 @@ import { StyleSheet, Text } from 'react-native';
 import { useColors } from '../../utils/customHooks/useColors/useColors';
 
 /**
+ * @function MetaLabel
+ * @component
  * @description Renders a bold label with a colon, and the meta data
- * @author Alexander Burdiss
- * @since 3/6/21
- * @version 1.4.0
- * @param props The JSX props passed to this React component
- * @param {String} props.label The meta label for this data
- * @param {String} props.data The meta data to render
- * @param {String} [props.labelColor] The color to make the label
+ * Created 3/6/21
+ * @param {Object} props The JSX props passed to this React component
+ * @param {string} props.label The meta label for this data
+ * @param {string} props.data The meta data to render
+ * @param {string} [props.labelColor] The color to make the label
  * @param {string} [props.color] A color to apply to the entire component if
  * passed. props.labelColor will still take precedence over this.
+ * @returns {JSX.Element} JSX render instructions
+ *
+ * @copyright 2023 Alexander Burdiss
+ * @author Alexander Burdiss
+ * @since 7/7/23
+ * @version 1.4.0
  */
 export default function MetaLabel({ label, data, labelColor, color }) {
   const colors = useColors();

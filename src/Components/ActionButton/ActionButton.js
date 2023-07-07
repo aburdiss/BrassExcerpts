@@ -5,16 +5,20 @@ import { Pressable, Text, StyleSheet } from 'react-native';
 import { useColors } from '../../utils/customHooks/useColors/useColors';
 
 /**
- * @namespace ActionButton
  * @function ActionButton
+ * @component
  * @description A styled button that is used for actions throughout the app.
- * @author Alexander Burdiss
- * @since 3/28/21
- * @version 1.2.0
- * @param {object} props The JSX props passed to this React component
- * @param {function} props.onPress The function to call when this component is
+ * Created 3/28/23
+ * @param {Object} props The JSX props passed to this React component
+ * @param {Function} props.onPress The function to call when this component is
  * pressed
  * @param {string} props.children The text to render on this button.
+ * @returns {JSX.Element} JSX render instructions
+ *
+ * @copyright 2023 Alexander Burdiss
+ * @author Alexander Burdiss
+ * @since 7/7/23
+ * @version 1.2.0
  */
 export default function ActionButton({ onPress, children }) {
   const colors = useColors();

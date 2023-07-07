@@ -3,16 +3,19 @@ import React from 'react';
 import { StyleSheet, View, ActivityIndicator } from 'react-native';
 
 /**
- * @namespace Loading
  * @function Loading
+ * @component
  * @description A styled Loading component for the BrassXcerpts application.
- * @param {object} props The JSX props passed to this React component
+ * Created 12/13/21
+ * @param {Object} props The JSX props passed to this React component
  * @param {boolean} [props.large=true] Whether or not to load the large loading
  * component.
+ * @returns {JSX.Element} JSX render instructions
+ *
+ * @copyright 2023 Alexander Burdiss
  * @author Alexander Burdiss
- * @since 12/13/21
+ * @since 7/7/23
  * @version 1.1.0
- * @component
  */
 export default function Loading({ large = true }) {
   const styles = StyleSheet.create({

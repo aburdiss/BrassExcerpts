@@ -5,17 +5,20 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import { useColors } from '../../../utils/customHooks/useColors/useColors';
 
 /**
- * @namespace ButtonListItem
  * @function ButtonlistItem
+ * @component
  * @description A rendered Button list item that updates saved preferences.
- * @author Alexander Burdiss
- * @since 12/17/20
- * @version 1.1.0
+ * Created 12/17/2020
+ * @param {Object} props The JSX props passed to this React Component
  * @param {Object} props.item The data to be rendered in this list item
  * @param {Function} props.dispatch A function to call a reducer and update
  * app state.
+ * @returns {JSX.Element} JSX render instructions
  *
- * @component
+ * @copyright 2023 Alexander Burdiss
+ * @author Alexander Burdiss
+ * @since 7/7/23
+ * @version 1.1.0
  * @example
  * <ButtonListItem
  * item={item}

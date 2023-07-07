@@ -5,17 +5,22 @@ import RNPickerSelect from 'react-native-picker-select';
 import { useColors } from '../../../utils/customHooks/useColors/useColors';
 
 /**
+ * @function PickerListItemAndroid
+ * @component
  * @description A rendered Picker list item that updates saved preferences.
- * @author Alexander Burdiss
- * @since 9/11/21
- * @version 1.2.0
+ * Created 9/11/21
+ * @param {Object} props The JSX props passed to this React component
  * @param {Object} props.item The data to be rendered inside this list row.
  * @param {Object} props.state The current app state, including user
  * preferences.
  * @param {Function} props.dispatch A funciton to call to the reducer to update
  * app state.
+ * @returns {JSX.Element} JSX render instructions
  *
- * @component
+ * @copyright 2023 Alexander Burdiss
+ * @author Alexander Burdiss
+ * @since 7/7/23
+ * @version 1.2.0
  * @example
  * <PickerListItem
  *   item={item}
@@ -23,7 +28,7 @@ import { useColors } from '../../../utils/customHooks/useColors/useColors';
  *   dispatch={dispatch}
  * />
  */
-export default function PickerListItem({ item, state, dispatch }) {
+export default function PickerListItemAndroid({ item, state, dispatch }) {
   const colors = useColors();
   const styles = StyleSheet.create({
     listSegmentedRowContainer: {

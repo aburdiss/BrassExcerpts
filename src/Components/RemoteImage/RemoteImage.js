@@ -11,19 +11,21 @@ import { useColors } from '../../utils/customHooks/useColors/useColors';
 import { getContrast } from '../../utils/getContrast/getContrast';
 
 /**
- * @namespace RemoteImage
  * @function RemoteImage
+ * @component RemoteImage
  * @description A wrapper for a remote image, with loading and error states
  * styled for the application.
- * @param {object} props The JSX props passed to this React component
+ * Created 12/14/21
+ * @param {Object} props The JSX props passed to this React component
  * @param {string} props.description The Accessibility Label used on this
  * component
  * @param {string} props.source The remote source to pull the image in from.
+ * @returns {JSX.Element} JSX render instructions
+ *
+ * @copyright 2023 Alexander Burdiss
  * @author Alexander Burdiss
- * @since 12/14/21
+ * @since 7/7/23
  * @version 1.0.1
- * @component
- * @example
  */
 export default function RemoteImage({ description, source }) {
   const colors = useColors();

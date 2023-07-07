@@ -5,19 +5,22 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import { useColors } from '../../utils/customHooks/useColors/useColors';
 
 /**
- * @namespace HeaderButton
  * @function HeaderButton
+ * @component
  * @description A simple button to live on the header and provide additional
  * navigation options in the app. This component handles translation of the
  * text that is passed in to it.
- * @author Alexander Burdiss
- * @since 3/3/21
- * @version 1.2.0
+ * Created 3/3/2021
+ * @param {Object} props The JSX props passed to this React component
  * @param {Function} props.handler The function to call when the button is
  * pressed.
- * @param {String} props.children The Text to render in the header button.
+ * @param {string} props.children The Text to render in the header button.
+ * @returns {JSX.Element} JSX Render instructions
  *
- * @component
+ * @copyright 2023 Alexander Burdiss
+ * @author Alexander Burdiss
+ * @since 7/7/23
+ * @version 1.2.0
  * @example
  * <HeaderButton handler={handler}>
  *   Hello, World!
