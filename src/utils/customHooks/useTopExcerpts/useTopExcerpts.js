@@ -5,13 +5,16 @@ import { fetchInstrumentJobs } from '../../fetchInstrumentJobs/fetchInstrumentJo
 import { processTopExcerpts } from './processTopExcerpts/processTopExcerpts';
 
 /**
- * @function getTopExcerpts
+ * @function useTopExcerpts
  * @description Gets the top excerpts from the app.
+ * Created 9/19/21
  * @param {string} instrument
- * @returns {object} An array containing objects with the name of each excerpt
+ * @returns {Object} An array containing objects with the name of each excerpt
  * and the count that it is found in the jobs.
+ *
+ * @copyright 2023 Alexander Burdiss
  * @author Alexander Burdiss
- * @since 9/19/21
+ * @since 7/9/23
  * @version 1.1.2
  */
 export function useTopExcerpts(instrument) {

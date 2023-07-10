@@ -2,12 +2,14 @@
  * @function right
  * @description The right side of the either monad. Generally affiliated with
  * a successful action.
+ * Created 10/22/21
  * @param {*} x
  * @see https://codepen.io/drboolean/pen/xgoeWR
+ *
+ * @copyright 2023 Alexander Burdiss
  * @author Alexander Burdiss
- * @since 10/22/21
+ * @since 7/9/23
  * @version 1.0.0
- * @returns
  */
 export const right = (x) => ({
   chain: (f) => f(x),
@@ -21,12 +23,14 @@ export const right = (x) => ({
  * @funciton left
  * @description The left side of the either monad. Generally affiliated with
  * an unsuccessful action.
+ * Created 10/22/21
  * @param {*} x
  * @see https://codepen.io/drboolean/pen/xgoeWR
+ *
+ * @copyright 2023 Alexander Burdiss
  * @author Alexander Burdiss
- * @since 10/22/21
+ * @since 7/9/23
  * @version 1.0.0
- * @returns
  */
 export const left = (x) => ({
   chain: (f) => left(x),
@@ -41,11 +45,14 @@ export const left = (x) => ({
  * @description A function that gracefully handles a value that could
  * potentially be null. Returns a right wrapping the value if it is not null,
  * and a left wrapping null if it is.
+ * Created 10/22/21
  * @param {*} x
  * @returns {right|left}
  * @see https://codepen.io/drboolean/pen/xgoeWR
+ *
+ * @copyright 2023 Alexander Burdiss
  * @author Alexander Burdiss
- * @since 10/22/21
+ * @since 7/9/23
  * @version 1.0.0
  */
 export const fromNullable = (x) => (x != null ? right(x) : left(null));
@@ -55,11 +62,14 @@ export const fromNullable = (x) => (x != null ? right(x) : left(null));
  * @description A wrapper for the try catch statement that returns an either
  * monad (a right wrapping the return of the function if the function was
  * successful, and a left wrapping the error if not).
+ * Created 10/22/21
  * @param {Function} f A funciton that may throw an error
  * @returns {right|left}
  * @see https://codepen.io/drboolean/pen/xgoeWR
+ *
+ * @copyright 2023 Alexander Burdiss
  * @author Alexander Burdiss
- * @since 10/22/21
+ * @since 7/9/23
  * @version 1.0.0
  */
 export const tryCatch = (f) => {
@@ -73,11 +83,14 @@ export const tryCatch = (f) => {
 /**
  * @function logit
  * @description passes the value through and logs it.
+ * Created 10/22/21
  * @param {*} x
  * @returns {*} x The same value passed in.
  * @see https://codepen.io/drboolean/pen/xgoeWR
+ *
+ * @copyright 2023 Alexander Burdiss
  * @author Alexander Burdiss
- * @since 10/22/21
+ * @since 7/9/23
  * @version 1.0.0
  */
 export const logit = (x) => {

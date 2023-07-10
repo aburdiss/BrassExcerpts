@@ -1,10 +1,13 @@
 /**
  * @function getCountryFlagEmoji
  * @description Returns the Flag of the country as an emoji.
- * @param {string} country
- * @returns {string}
+ * Created 9/18/21
+ * @param {string} country The name of the country to get the flag of
+ * @returns {string} An emoji representing the flag of that country
+ *
+ * @copyright 2023 Alexander Burdiss
  * @author Alexander Burdiss
- * @since 9/18/21
+ * @since 7/9/23
  * @version 1.2.0
  */
 export function getCountryFlagEmoji(country) {

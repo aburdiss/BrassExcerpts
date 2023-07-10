@@ -4,10 +4,13 @@
  * @description Takes a list of jobs returned from React Query, and parses
  * through them, returning a list of the jobs with the number of them present
  * in the auditions in this app attached on the object
- * @param {object} jobs The jobs object returned from React Query
- * @returns {object[]} An array of all the temp
+ * Created 12/13/21
+ * @param {Object} jobs The jobs object returned from React Query
+ * @returns {Object[]} An array of all the temp
+ *
+ * @copyright 2023 Alexander Burdiss
  * @author Alexander Burdiss
- * @since 12/13/21
+ * @since 7/9/23
  * @version 1.0.0
  */
 export function processTopExcerpts(jobs) {

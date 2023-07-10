@@ -1,10 +1,14 @@
 /**
  * @function rgbToHex
- * @see https://stackoverflow.com/questions/13070054/convert-rgb-strings-to-hex-in-javascript
+ * @description Converts an RGB string to a hex color value
+ * Created 9/17/23
  * @param {string} rgbString The RGB string to parse into a hex color
  * @returns {string} The hex verison of the inputted rgb color
+ * @see https://stackoverflow.com/questions/13070054/convert-rgb-strings-to-hex-in-javascript
+ *
+ * @copyright 2023 Alexander Burdiss
  * @author Alexander Burdiss
- * @since 9/17/21
+ * @since 7/9/23
  * @version 1.0.0
  */
 export function rgbToHex(rgbString) {
