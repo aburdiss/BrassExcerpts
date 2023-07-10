@@ -1,14 +1,18 @@
 /**
  * @function processListData
+ * @memberof Excerpts
  * @description Processes the list data to remove duplicates from the array,
  * and sort it alphabetically by composer and composition.
- * @author Alexander Burdiss
- * @since 4/30/21
- * @version 1.0.0
+ * Created 4/30/21
  * @param {Object[]} initialData The unsorted array of all data to display on
  * the Excerpt screen.
  * @returns {Object[]} A sorted version of the initial array with duplicates
  * removed.
+ *
+ * @copyright 2023 Alexander Burdiss
+ * @author Alexander Burdiss
+ * @since 7/9/23
+ * @version 1.0.0
  */
 export function processListData(initialData) {
   let tempData = [];

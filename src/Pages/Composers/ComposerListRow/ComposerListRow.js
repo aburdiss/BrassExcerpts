@@ -6,22 +6,26 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import { useColors } from '../../../utils/customHooks/useColors/useColors';
 
 /**
- * @namespace ComposerListRow
  * @function ComposerListRow
+ * @memberof Composers
+ * @component
  * @description A styled list row, designed to look like a contact on an iOS
  * device. This is used when displaying a list of composers.
- * @param props The JSX props passed to this React component
- * @param {String} props.name The name of the composer to display
- * @param {Number} props.index The index of the composer. This is used to style
+ * Created 3/18/21
+ * @param {Object} props The JSX props passed to this React component
+ * @param {string} props.name The name of the composer to display
+ * @param {number} props.index The index of the composer. This is used to style
  * the first composer slightly differently.
- * @param {String} props.imageSource The URL of the image to display on the
+ * @param {string} props.imageSource The URL of the image to display on the
  * list.
  * @param {Function} props.onPress The function to call when this list row is
  * pressed.
+ * @returns {JSX.Element} JSX Render Instructions
+ *
+ * @copyright 2023 Alexander Burdiss
  * @author Alexander Burdiss
- * @since 3/18/21
+ * @since 7/9/23
  * @version 1.2.0
- * @component
  * @example
  * <ComposerListRow
  *   name={item.name}

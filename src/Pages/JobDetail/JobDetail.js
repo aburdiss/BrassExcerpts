@@ -25,14 +25,21 @@ import { capitalize } from '../../utils/captiatlize/capitalize';
 
 /**
  * @namespace JobDetail
+ */
+
+/**
  * @function JobDetail
+ * @memberof JobDetail
+ * @component
  * @description A detailed view of one of the jobs in the app, with a list of
  * excerpts. When clicked, if the excerpt exists in the app, it will lead the
  * user directly to that excerpt.
+ * Created 3/28/21
+ *
+ * @copyright 2023 Alexander Burdiss
  * @author Alexander Burdiss
- * @since 3/28/21
+ * @since 7/9/23
  * @version 1.4.0
- * @component
  * @example
  * <JobDetail />
  */
@@ -97,7 +104,8 @@ export default function JobDetail() {
   const { state } = useContext(PreferencesContext);
 
   /**
-   * @function JobDetail~openAuditionWebsite
+   * @function openAuditionWebsite
+   * @memberof JobDetail
    * @description Opens the audition website, if possible. Console logs if not.
    * @author Alexander Burdiss
    * @since 3/28/21
@@ -110,10 +118,11 @@ export default function JobDetail() {
   }
 
   /**
-   * @function JobDetail~isPhonePortrait
+   * @function isPhonePortrait
+   * @memberof JobDetail
    * @description A function that determines if the display is a phone portrait
    * or not.
-   * @returns {Boolean} Whether or not the display is a phone portrait.
+   * @returns {boolean} Whether or not the display is a phone portrait.
    * @author Alexander Burdiss
    * @since 5/29/21
    * @version 1.0.0
@@ -124,10 +133,11 @@ export default function JobDetail() {
   }
 
   /**
-   * @function JobDetail~shouldCalendarDisplay
+   * @function shouldCalendarDisplay
+   * @memberof JobDetail
    * @description A function that determines whether or not the calendar should
    * display on the Job Detail screen.
-   * @returns {Boolean} Whether or not the calendar should appear on the job
+   * @returns {boolean} Whether or not the calendar should appear on the job
    * view.
    * @author Alexander Burdiss
    * @since 5/29/21
@@ -143,13 +153,14 @@ export default function JobDetail() {
   }
 
   /**
-   * @function JobDetail~navigateToExcerptDetailPage
+   * @function navigateToExcerptDetailPage
+   * @memberof JobDetail
    * @description Opens the excerpt detail page with the appropriate excerpt
    * data passed in
+   * @param {Object} excerpt The excerpt to display in detail
    * @author Alexander Burdiss
    * @since 3/28/21
    * @version 1.0.0
-   * @param {Object} excerpt The excerpt to display in detail
    */
   function navigateToExcerptDetailPage(excerpt) {
     navigation.navigate('Jobs Excerpt Detail', excerpt);

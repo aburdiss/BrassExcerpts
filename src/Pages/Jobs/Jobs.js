@@ -29,18 +29,26 @@ import { getDarkOrLightTheme } from '../../utils/getDarkOrLightTheme/getDarkOrLi
 import { getContrast } from '../../utils/getContrast/getContrast';
 
 /**
+ * @namespace Jobs
+ */
+
+/**
  * @todo Make section that user can add their own lists of excerpts inside the
  * app.
  *
- * @namespace Jobs
  * @function Jobs
+ * @memberof Jobs
+ * @component
  * @description A component that lists recent jobs available for each
  * instrument. When each item is clicked, it will open the JobDetail component
  * and display more information about that Job to the user.
+ * Created 3/5/21
+ * @returns {JSX.Element} JSX render instructions
+ *
+ * @copyright 2023 Alexander Burdiss
  * @author Alexander Burdiss
  * @since 3/5/21
  * @version 1.5.1
- * @component
  * @example
  * <Jobs />
  */
@@ -158,7 +166,8 @@ export default function Jobs() {
 
   useEffect(
     /**
-     * @function Jobs~useEffect~fetchCurrentJobs
+     * @function fetchCurrentJobs
+     * @memberof Jobs
      * @description Fetches the current Jobs from the Github server, and sets
      * the data to the current Job state variable.
      * @author Alexander Burdiss
@@ -189,7 +198,8 @@ export default function Jobs() {
   ];
 
   /**
-   * @function Jobs~openCreateCustomAudition
+   * @function openCreateCustomAudition
+   * @memberof Jobs
    * @description Opens the Create Custom page, so that custom auditions
    * can be added to the list.
    * @author Alexander Burdiss
@@ -203,6 +213,7 @@ export default function Jobs() {
 
   /**
    * @function emailAuthor
+   * @memberof Jobs
    * @description Emails aburdiss@icloud.com with a pre-filled subject
    * expressing interest in helping with the jobs.
    * @author Alexander Burdiss

@@ -9,15 +9,19 @@ import { getDateFromString } from '../../../utils/getDateFromString/getDateFromS
 import { useColors } from '../../../utils/customHooks/useColors/useColors';
 
 /**
- * @namespace MetaContainer
  * @function MetaContainer
+ * @memberof JobDetail
+ * @component
  * @description The Meta Container pulled out into a separate conainer so that
  * it only needs updated once when props change, because it is rendered in
  * two different modes.
+ * Created 6/11/21
+ * @returns {JSX.Element} JSX render instructions
+ *
+ * @copyright 2023 Alexander Burdiss
  * @author Alexander Burdiss
- * @since 6/11/21
+ * @since 7/9/23
  * @version 1.2.0
- * @component
  * @example
  * <MetaContainer />
  */

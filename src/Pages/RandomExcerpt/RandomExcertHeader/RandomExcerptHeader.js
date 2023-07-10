@@ -12,18 +12,22 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import { useColors } from '../../../utils/customHooks/useColors/useColors';
 
 /**
- * @namespace RandomExcerptHeader
  * @function RandomExcerptHeader
+ * @memberof RandomExcerpt
  * @description The header information to display on the Random Excerpt screen.
- * @param props The JSX props passed to this React Component
+ * Created 5/8/21
+ * @param {Object} props The JSX props passed to this React Component
  * @param {Object} props.composition The data object for the composition that
  * is being displayed
- * @param {Number} props.excerptIndex The index of the excerpt that has been
+ * @param {number} props.excerptIndex The index of the excerpt that has been
  * randomly chosen
- * @param {Number} props.partIndex The index of the part that has been
+ * @param {number} props.partIndex The index of the part that has been
  * randomly chosen
+ * @returns {JSX.Element} JSX render instructions
+ *
+ * @copyright 2023 Alexander Burdiss
  * @author Alexander Burdiss
- * @since 5/8/21
+ * @since 7/9/23
  * @version 1.3.0
  */
 export default function RandomExcerptHeader({

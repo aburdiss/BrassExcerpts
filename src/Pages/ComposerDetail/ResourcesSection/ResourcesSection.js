@@ -7,11 +7,12 @@ import ActionButton from '../../../Components/ActionButton/ActionButton';
 
 /**
  * @namespace ResourcesSection
+ * @memberof ComposerDetail
  */
 
 /**
  * @function ResourcesSection
- * @memberof ResourcesSection
+ * @memberof ComposerDetail.ResourcesSection
  * @description Handles the logic for the Resources section on the Composer
  * Detail Page
  * Created 9/17/21

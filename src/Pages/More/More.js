@@ -23,14 +23,17 @@ import PickerListItem from '../../Components/ListItems/PickerListItem/PickerList
 import { useColors } from '../../utils/customHooks/useColors/useColors';
 
 /**
- * @namespace More
  * @function More
+ * @component
  * @description A View that allows the user to set custom settings, or view
  * additional resources.
+ * @created 12/14/20
+ * @returns {JSX.Element} JSX render instructions
+ *
+ * @copyright 2023 Alexander Burdiss
  * @author Alexander Burdiss
- * @since 12/14/20
+ * @since 7/9/23
  * @version 1.2.0
- * @component
  * @example
  * <More />
  */

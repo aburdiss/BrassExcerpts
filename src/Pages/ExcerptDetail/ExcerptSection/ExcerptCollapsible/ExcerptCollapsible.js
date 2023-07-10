@@ -17,18 +17,26 @@ import RemoteImage from '../../../../Components/RemoteImage/RemoteImage';
 
 /**
  * @namespace ExcerptCollapsible
+ */
+
+/**
  * @function ExcerptCollapsible
- * @description An animated collapsed section of excerpts, that can be disabled
- * @param props The JSX props passed to this react component
- * @param {Object} props.excerpt The excerpt to be rendered in this collapsible
- * @param {Boolean} props.startCollapsed A prop to determine if this collapsible
- * should start in the collapsed state.
- * @param {Number} props.index The index of this collapsible, used for styling]
- * purposes.
- * @author Alexander Burdiss
- * @since 5/1/21
- * @version 1.3.0
+ * @memberof ExcerptDetail
  * @component
+ * @description An animated collapsed section of excerpts, that can be disabled
+ * Created 5/1/21
+ * @param {Object} props The JSX props passed to this react component
+ * @param {Object} props.excerpt The excerpt to be rendered in this collapsible
+ * @param {boolean} props.startCollapsed A prop to determine if this collapsible
+ * should start in the collapsed state.
+ * @param {number} props.index The index of this collapsible, used for styling]
+ * purposes.
+ * @returns {JSX.Element} JSX render instructions
+ *
+ * @copyright 2023 Alexander Burdiss
+ * @author Alexander Burdiss
+ * @since 7/9/23
+ * @version 1.3.0
  * @example
  * <ExcerptCollapsible
  *   excerpt={excerpt}
@@ -86,7 +94,8 @@ export default function ExcerptCollapsible({ excerpt, startCollapsed, index }) {
   const animatedController = useRef(new Animated.Value(0)).current;
 
   /**
-   * @function ExcerptCollapsible~toggleChevron
+   * @function toggleChevron
+   * @memberof ExcerptDetail.ExcerptCollapsible
    * @description Animates the chevron open or closed based on the position of
    * the accordion. This will only show or be triggered if there are more
    * than six excerpts showing for any one composition.

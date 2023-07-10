@@ -22,13 +22,21 @@ import { useColors } from '../../utils/customHooks/useColors/useColors';
 
 /**
  * @namespace RandomExcerpt
+ */
+
+/**
  * @function RandomExcerpt
+ * @memberof RandomExcerpt
+ * @component
  * @description Displays a random excerpt based on the settings the user has
  * chosen.
+ * Created 5/3/21
+ * @returns {JSX.Element} JSX render instructions
+ *
+ * @copyright 2023 Alexander Burdiss
  * @author Alexander Burdiss
- * @since 5/3/21
+ * @since 7/9/23
  * @version 1.3.0
- * @component
  * @example
  * <RandomExcerpt />
  */
@@ -58,7 +66,8 @@ export default function RandomExcerpt() {
 
   useEffect(
     /**
-     * @function RandomExcerpt~useEffect~updateRandomExcerpt
+     * @function updateRandomExcerpt
+     * @memberof RandomExcerpt
      * @description Updates the random excerpt that is displaying if the state
      * changes, so that a new excerpt is always present.
      * @author Alexander Burdiss

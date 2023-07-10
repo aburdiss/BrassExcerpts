@@ -17,14 +17,22 @@ import { getContrast } from '../../utils/getContrast/getContrast';
 
 /**
  * @namespace PastJobs
+ */
+
+/**
  * @function PastJobs
+ * @memberof PastJobs
+ * @component
  * @description A component that displays the jobs that are available from the
  * server, but are past their closing date, and won't be shown on the regular
  * Jobs page.
+ * Created 3/28/21
+ * @returns {JSX.Element} JSX render instructions
+ *
+ * @copyright 2023 Alexander Burdiss
  * @author Alexander Burdiss
- * @since 3/28/21
+ * @since 7/9/23
  * @version 1.4.0
- * @component
  * @example
  * <PastJobs />
  */
@@ -108,7 +116,8 @@ export default function PastJobs() {
 
   useEffect(
     /**
-     * @function PastJobs~useEffect~fetchCurrentJobs
+     * @function fetchCurrentJobs
+     * @memberof PastJobs
      * @description Fetches the current jobs from the Github server, and stores
      * the data in the state variable CurrentJobs
      * @author Alexander Burdiss
@@ -135,7 +144,8 @@ export default function PastJobs() {
   );
 
   /**
-   * @function PastJobs~isValidSearchResult
+   * @function isValidSearchResult
+   * @memberof PastJobs
    * @param {Object} job A job object fetched from the server
    * @returns {boolean} whether the job should show or not (if searched)
    * @author Alexander Burdiss

@@ -16,14 +16,22 @@ import { useColors } from '../../utils/customHooks/useColors/useColors';
 
 /**
  * @namespace Excerpts
+ */
+
+/**
  * @function Excerpts
+ * @memberof Excerpts
+ * @component
  * @description A list of excerpts sorted in alphabetical order. When pressed,
  * each excerpt leads to the ExcerptDetail view with more information on each
  * excerpt.
+ * Created 3/3/21
+ * @returns {JSX.Element} JSX render instructions
+ *
+ * @copyright 2023 Alexander Burdiss
  * @author Alexander Burdiss
  * @since 3/3/21
  * @version 1.2.0
- * @component
  * @example
  * <Excerpts />
  */
@@ -35,7 +43,8 @@ const Excerpts = () => {
   const [listData, setListData] = useState([]);
   useEffect(
     /**
-     * @function Excerpts~useEffect~updateData
+     * @function updateData
+     * @memberof Excerpts
      * @description Updates the data in the excerpts row if a different
      * instrument is selected in the users' preferences.
      * @author Alexander Burdiss
@@ -68,7 +77,8 @@ const Excerpts = () => {
   );
 
   /**
-   * @function Excerpts~navigateToExcerptDetail
+   * @function navigateToExcerptDetail
+   * @memberof Excerpts
    * @description Navigates to the Excerpt Detail view and passes in the
    * appropriate data.
    * @author Alexander Burdiss

@@ -14,16 +14,15 @@ import Link from './Link/Link';
 import { useColors } from '../../../utils/customHooks/useColors/useColors';
 
 /**
- * @namespace LicensesListItem
  * @function LicensesListItem
+ * @memberof Licenses
+ * @component
  * @description A styled list item that contains links to the authors of the
  * various softwares used throughout the app, and the users who contributed
  * to them.
  * [Created with help from an online article]{@link https://blog.expo.io/licenses-the-best-part-of-your-app-29e7285b544f}
- * @author Alexander Burdiss
- * @date 12/17/20
- * @version 1.3.1
- * @param {object} props The JSX props passed to this React component
+ * Created 12/17/20
+ * @param {Object} props The JSX props passed to this React component
  * @param {string} props.image The url of the image to display.
  * @param {string} props.userUrl The url of the author of this software.
  * @param {string} props.username The username of the author of the software
@@ -40,7 +39,11 @@ import { useColors } from '../../../utils/customHooks/useColors/useColors';
  * license.
  * @param {number} props.index The index that this list item is being rendered
  * at. Used for styling away the first index top border.
- * @component
+ *
+ * @copyright 2023 Alexander Burdiss
+ * @author Alexander Burdiss
+ * @date 7/9/23
+ * @version 1.3.1
  * @example
  * <LicensesListItem {...item} />
  */

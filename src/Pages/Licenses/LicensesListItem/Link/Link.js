@@ -3,20 +3,23 @@ import React from 'react';
 import { Text, Linking } from 'react-native';
 
 /**
- * @namespace Link
  * @function Link
+ * @memberof Licenses
+ * @component
  * @description One link item that opens the main software link in the
  * LicensesListItem component. Text is limited to one line.
  * [Created with help from an online article]{@link https://blog.expo.io/licenses-the-best-part-of-your-app-29e7285b544f}
- * @author Alexander Burdiss
- * @since 12/17/20
- * @version 1.0.2
- * @param {object} props The JSX props passed to this React component
+ * Created 12/17/20
+ *
+ * @param {Object} props The JSX props passed to this React component
  * @param {string} props.url The url to open when the element is tapped.
- * @param {object} props.style Style to be applied to the element
+ * @param {Object} props.style Style to be applied to the element
  * @param {string} props.children Text to be rendered inside this element.
  *
- * @component
+ * @copyright 2023 Alexander Burdiss
+ * @author Alexander Burdiss
+ * @since 7/9/23
+ * @version 1.0.2
  * @example
  * <Link style={styles.text} url={licenseUrl}>
  *   {licenses}

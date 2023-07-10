@@ -10,13 +10,22 @@ import { useColors } from '../../../utils/customHooks/useColors/useColors';
 
 /**
  * @namespace ExcerptListHeader
+ * @memberof Excerpts
+ */
+
+/**
  * @function ExcerptListHeader
+ * @memberof Excerpts.ExcerptListHeader
+ * @component
  * @description The header for the Excerpts list view.
+ * Created 3/7/21
+ * @returns {JSX.Element} JSX Render instructions
+ *
+ * @copyright 2023 Alexander Burdiss
  * @author Alexander Burdiss
- * @since 3/7/21
+ * @since 7/9/23
  * @version 1.3.1
  *
- * @component
  * @example
  * <ExcerptListHeader />
  */
@@ -65,7 +74,8 @@ export default function ExcerptListHeader() {
   );
 
   /**
-   * @function ExcerptListHeader~openTopExcerptsComponent
+   * @function openTopExcerptsComponent
+   * @memberof Excerpts.ExcerptListHeader
    * @description Opens the top excerpts component
    * @author Alexander Burdiss
    * @since 3/28/21
@@ -76,7 +86,8 @@ export default function ExcerptListHeader() {
   }
 
   /**
-   * @function ExcerptListHeader~navigateToSettings
+   * @function navigateToSettings
+   * @memberof Excerpts.ExcerptListHeader
    * @description Navigates the user from the home tab to the settings tab so
    * that they can change instruments.
    * @author Alexander Burdiss

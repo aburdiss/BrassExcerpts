@@ -6,19 +6,23 @@ import { useColors } from '../../../../utils/customHooks/useColors/useColors';
 import { getContrast } from '../../../../utils/getContrast/getContrast';
 
 /**
- * @namespace YoutubeLink
  * @function YoutubeLink
+ * @memberof ExcerptsDetail
+ * @component
  * @description One link in the YouTube link section.
- * @param props The JSX props passed to this React component.
- * @param {String[]} props.video An array, where the first index is the
+ * Created 3/10/21
+ * @param {Object} props The JSX props passed to this React component.
+ * @param {string[]} props.video An array, where the first index is the
  * instrument part name, and the second is the YouTube code, to be attached
  * to the end of a Youtube URL.
- * @param {String} props.type The type of YouTube link that this is. This
+ * @param {string} props.type The type of YouTube link that this is. This
  * affects the color of the link button.
+ * @returns {JSX.Element} JSX render instructions
+ *
+ * @copyright 2023 Alexander Burdiss
  * @author Alexander Burdiss
- * @since 3/10/21
+ * @since 7/9/23
  * @version 1.3.2
- * @component
  * @example
  * <YoutubeLink video={video} type="band" />
  */

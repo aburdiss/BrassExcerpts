@@ -9,18 +9,21 @@ import { isFavorite } from '../../../utils/isFavorite/isFavorite';
 import { useColors } from '../../../utils/customHooks/useColors/useColors';
 
 /**
- * @namespace ExcerptListRow
  * @function ExcerptListRow
  * @description One row in the Excerpts List.
- * @param {object} props JSX props passed to this React Component
+ * Created 3/6/21
+ * @param {Object} props JSX props passed to this React Component
  * @param {string} props.composer The composer of this Excerpt row
  * @param {string} props.composition The composition to navigate to
  * @param {function} props.onPress The function to call when this component is
  * pressed.
  * @param {string} props.color
  * @param {string} props.backgroundColor
+ * @returns {JSX.Element} JSX render instructions
+ *
+ * @copyright 2023 Alexander Burdiss
  * @author Alexander Burdiss
- * @since 3/6/21
+ * @since 7/9/23
  * @version 1.4.2
  */
 export default function ExcerptListRow({

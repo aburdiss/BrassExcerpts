@@ -8,13 +8,21 @@ import AllExcerptDataModel from '../../../Model/AllExcerptDataModel/AllExcerptDa
 
 /**
  * @namespace ResourcesSection
+ */
+
+/**
  * @function ResourcesSection
+ * @memberof ExcerptsDetail.ResourcesSection
  * @description The section of the ExcerptsDetail that renders additional
  * resources for the excerpt.
- * @param {*} props The JSX props passed to this React component
+ * Created 9/17/21
+ * @param {Object} props The JSX props passed to this React component
  * @param {string} props.data The key to pull from the AllExcerptDataModel
+ * @returns {JSX.Element} JSX Render instructions
+ *
+ * @copyright 2023 Alexander Burdiss
  * @author Alexander Burdiss
- * @since 9/17/21
+ * @since 7/9/23
  * @version 1.0.0
  */
 export default function ResourcesSection({ data }) {
@@ -26,7 +34,8 @@ export default function ResourcesSection({ data }) {
   });
 
   /**
-   * @function ResourcesSection~openImslpLink
+   * @function openImslpLink
+   * @memberof ExcerptsDetail.ResourcesSection
    * @description Opens the IMSLP link in the default browser.
    * @author Alexander Burdiss
    * @since 9/17/21

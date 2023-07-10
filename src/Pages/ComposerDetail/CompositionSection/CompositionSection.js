@@ -10,6 +10,7 @@ import { PreferencesContext } from '../../../Model/Preferences';
 
 /**
  * @function CompositionSection
+ * @memberof ComposerDetail
  * @component
  * @description A section of the different compositions that the composer has
  * created.

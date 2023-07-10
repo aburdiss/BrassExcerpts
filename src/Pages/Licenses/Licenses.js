@@ -1,10 +1,6 @@
 /*
 
-Download this lib: https://www.npmjs.com/package/npm-license-crawler
-I did it globally: `npm i npm-license-crawler -g`
 
-Run this command to update the data.
-`npm-license-crawler --onlyDirectDependencies --json src/MoreStack/Licenses/licenses.json`
 
 */
 
@@ -20,15 +16,24 @@ import { useColors } from '../../utils/customHooks/useColors/useColors';
 import { extractNameFromGithubUrl } from '../../utils/extractNameFromGithubUrl/extractNameFromGithubUrl';
 
 /**
+ * @namespace Licenses
+ */
+
+/**
+ * @todo Refactor this functionality so it does not modify the passed in array
  * @function sortDataByKey
+ * @memberof Licences
  * @description Sorts the licenses data by key.
+ * Created 12/17/20
  * [Created with help from an online article]{@link https://blog.expo.io/licenses-the-best-part-of-your-app-29e7285b544f}
+ *
+ * @copyright 2023 Alexander Burdiss
  * @author Alexander Burdiss
- * @since 12/17/20
+ * @since 7/9/23
  * @version 1.0.1
- * @param {Array} data The list of licenses.
- * @param {String|Number} key An object key inside each member of data.
- * @returns {Array} A sorted version of the data array that is passed in.
+ * @param {Object[]} data The list of licenses.
+ * @param {string|number} key An object key inside each member of data.
+ * @returns {Object[]} A sorted version of the data array that is passed in.
  */
 function sortDataByKey(data, key) {
   data.sort(function (a, b) {
@@ -74,16 +79,27 @@ let allLicenses = Object.keys(Data).map((key) => {
 sortDataByKey(allLicenses, 'username');
 
 /**
- * @namespace Licenses
  * @function Licenses
+ * @memberof Licenses
+ * @component
  * @description A wrapper for the LicensesList component that processes the
  * data and passes it in.
+ * Created 12/17/20
  * [Created with help from an online article]{@link https://blog.expo.io/licenses-the-best-part-of-your-app-29e7285b544f}
+ *
+ * Download this lib: https://www.npmjs.com/package/npm-license-crawler
+ * I did it globally: `npm i npm-license-crawler -g`
+ *
+ * Run this command to update the data.
+ * `npm-license-crawler --onlyDirectDependencies --json src/MoreStack/Licenses/licenses.json`
+ *
+ * @returns {JSX.Element} JSX render instructions
+ *
+ * @copyright 2023 Alexander Burdiss
  * @author Alexander Burdiss
- * @since 12/17/20
+ * @since 7/9/23
  * @version 1.1.0
  *
- * @component
  * @example
  * <Licenses />
  */

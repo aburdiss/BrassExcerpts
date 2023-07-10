@@ -11,22 +11,26 @@ import ExcerptCollapsible from './ExcerptCollapsible/ExcerptCollapsible';
 
 /**
  * @function ExcerptSection
+ * @memberof ExcerptDetail
  * @description One Excerpt from a composition. If there are too many excerpts,
  * they get collapsed, or if the user has set them to always collapse.
- * @author Alexander Burdiss
- * @since 5/1/21
- * @version 1.2.0
- * @param props The JSX props passed to this React component
+ * Created 5/1/21
+ * @param {Object} props The JSX props passed to this React component
  * @param {Object} props.instrumentExcerpt The object that contains the excerpts
  * for this instrument.
- * @param {String} props.instrumentName The name of the instrument this excerpt
+ * @param {string} props.instrumentName The name of the instrument this excerpt
  * is for.
  * @param {Function} props.addToFavorites A function that adds the current
  * excerpt/instrument to favorites.
- * @param {Boolean} props.shouldStartCollapsed A flag that determines if the
+ * @param {boolean} props.shouldStartCollapsed A flag that determines if the
  * excerpts should start collapsed.
  * @param {Object} props.item The Composition Item object.
- * @component
+ * @returns {JSX.Element} JSX Render instructions
+ *
+ * @copyright 2023 Alexander Burdiss
+ * @author Alexander Burdiss
+ * @since 7/9/23
+ * @version 1.2.0
  * @example
  * <ExcerptSection
  *   instrumentExcerpt={tubaExcerpt}

@@ -8,13 +8,20 @@ import ComposerListRow from './ComposerListRow/ComposerListRow';
 
 /**
  * @namespace Composers
+ */
+/**
  * @function Composers
+ * @memberof Composers
+ * @component
  * @description A list of composers of all of the different compositions in the
  * app.
+ * Created 3/3/21
+ * @returns {JSX.Element} JSX render Instructions
+ *
+ * @copyright 2023 Alexander Burdiss
  * @author Alexander Burdiss
- * @since 3/3/21
+ * @since 7/9/23
  * @version 1.2.0
- * @component
  * @example
  * <Composers />
  */
@@ -29,7 +36,8 @@ export default function Composers() {
   const navigation = useNavigation();
 
   /**
-   * @function Composers~navigateToComposerDetail
+   * @function navigateToComposerDetail
+   * @memberof Composers
    * @description Opens the composer detail with more information about a
    * certain composer
    * @param {Object} item The composer object to open in more detail

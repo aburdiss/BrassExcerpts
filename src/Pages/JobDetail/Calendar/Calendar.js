@@ -7,15 +7,19 @@ import { getDateFromString } from '../../../utils/getDateFromString/getDateFromS
 import { useColors } from '../../../utils/customHooks/useColors/useColors';
 
 /**
- * @namespace Calendar
  * @function Calendar
+ * @memberof JobDetail
+ * @component
  * @description The calendar from the display, removed from the display so
  * that props only need to be updated once when the component is rendered
  * in two different modes.
+ * Created 6/11/21
+ * @returns {JSX.Element} JSX render instructions
+ *
+ * @copyright 2023 Alexander Burdiss
  * @author Alexander Burdiss
- * @since 6/11/21
+ * @since 7/9/23
  * @version 1.2.0
- * @component
  * @example
  * <Calendar />
  */

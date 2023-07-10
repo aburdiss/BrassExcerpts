@@ -4,15 +4,20 @@ import { FlatList, StyleSheet } from 'react-native';
 import LicensesListItem from '../LicensesListItem/LicensesListItem';
 
 /**
+ * @function LicensesList
+ * @memberof Licenses
+ * @component
  * @description The list of licenses of dependencies used in this app.
  * [Created with help from an online article]{@link https://blog.expo.io/licenses-the-best-part-of-your-app-29e7285b544f}
- * @author Alexander Burdiss
- * @since 12/17/2020
- * @version 1.0.2
- * @param {object} props The JSX props passed to this React component
- * @param {object[]} props.licenses The list of licenses that will be displayed.
+ * Created 12/17/20
+ * @param {Object} props The JSX props passed to this React component
+ * @param {Object[]} props.licenses The list of licenses that will be displayed.
  *
- * @component
+ * @copyright 2023 Alexander Burdiss
+ * @author Alexander Burdiss
+ * @since 7/9/23
+ * @version 1.0.2
+ *
  * @example
  * <LicensesList licenses={licenses} />
  */

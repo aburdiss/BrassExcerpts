@@ -8,16 +8,19 @@ import YouTubeModel from '../../../Model/YouTubeModel/YouTubeModel';
 import MainHeading from '../../../Components/MainHeading/MainHeading';
 
 /**
- * @namespace YoutubeSection
  * @function YoutubeSection
+ * @component
  * @description One section of Youtube videos. This section takes care of
  * separating all of the colors for the different section.
+ * Created 3/10/21
+ * @param {Object} props The JSX props passed to this React component
+ * @param {string} props.data A key used to retrieve data from YouTubeModel.js
+ * @returns {JSX.Element} JSX render instructions
+ *
+ * @copyright 2023 Alexander Burdiss
  * @author Alexander Burdiss
- * @since 3/10/21
+ * @since 7/9/23
  * @version 1.1.0
- * @param props The JSX props passed to this React component
- * @param {String} props.data A key used to retrieve data from YouTubeModel.js
- * @component
  * @example
  * <YoutubeSection data={item.videos} />
  */

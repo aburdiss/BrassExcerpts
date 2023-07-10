@@ -17,7 +17,12 @@ import { useIdleScreen } from '../../utils/customHooks/useIdleScreen/useIdleScre
 import { useColors } from '../../utils/customHooks/useColors/useColors';
 
 /**
+ * @namespace ComposerDetail
+ */
+
+/**
  * @function ComposerDetail
+ * @memberof ComposerDetail
  * @component
  * @description A listing of one composer, and the exerpts for the different
  * instruments available for that composer.

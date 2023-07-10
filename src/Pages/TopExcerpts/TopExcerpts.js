@@ -16,17 +16,26 @@ import { useTopExcerpts } from '../../utils/customHooks/useTopExcerpts/useTopExc
 import { getInstrumentsSelected } from '../../utils/getInstrumentsSelected/getInstrumentsSelected';
 import { capitalize } from '../../utils/captiatlize/capitalize';
 import { getDarkOrLightTheme } from '../../utils/getDarkOrLightTheme/getDarkOrLightTheme';
+
+/**
+ * @namespace TopExcerpts
+ */
+
 /**
  * @function TopExcerpts
- * @description The top asked for excerpts for each instrument in the app.
- * @author Alexander Burdiss
- * @since 9/18/21
- * @version 1.2.1
  * @component
+ * @description The top asked for excerpts for each instrument in the app.
+ * Created 9/18/21
+ * @returns {JSX.Element} JSX render instructions
+ *
+ * @copyright 2023 Alexander Burdiss
+ * @author Alexander Burdiss
+ * @since 7/9/23
+ * @version 1.2.1
  * @example
  * <TopExcerpts />
  */
-const TopExcerpts = () => {
+export default function TopExcerpts() {
   const colors = useColors();
   const theme = useTheme();
   const styles = StyleSheet.create({
@@ -133,13 +142,14 @@ const TopExcerpts = () => {
   );
 
   /**
-   * @function TopExcerpts~navigateToExcerptDetailPage
+   * @function navigateToExcerptDetailPage
+   * @memberof TopExcerpts
    * @description Opens the excerpt detail page with the appropriate excerpt
    * data passed in
+   * @param {Object} excerpt The excerpt to display in detail
    * @author Alexander Burdiss
    * @since 9/19/21
    * @version 1.0.0
-   * @param {Object} excerpt The excerpt to display in detail
    */
   function navigateToExcerptDetailPage(excerpt) {
     navigation.navigate('Excerpt Detail', excerpt);
@@ -319,6 +329,4 @@ const TopExcerpts = () => {
       </ScrollView>
     </View>
   );
-};
-
-export default TopExcerpts;
+}

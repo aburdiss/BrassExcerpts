@@ -30,14 +30,20 @@ import ResourcesSection from './ResourcesSection/ResourcesSection';
 
 /**
  * @namespace ExcerptDetail
+ */
+/**
  * @function ExcerptDetail
+ * @memberof ExcerptDetail
  * @description A component that displays all of the details about one of the
  * excerpts in the app. When clicking on each image, it opens a separate view
  * where the image is rotated.
+ * Created 3/3/21
+ * @returns {JSX.Element} JSX Render Instructions
+ *
+ * @copyright 2023 Alexander Burdiss
  * @author Alexander Burdiss
- * @since 3/3/21
+ * @since 7/9/23
  * @version 1.5.0
- * @component
  * @example
  * <ExcerptDetail />
  */
@@ -98,9 +104,11 @@ export default function ExcerptDetail() {
 
   useEffect(
     /**
-     * @function ExcerptDetail~useEffect~getAllExcerptData
+     * @function getAllExcerptData
+     * @memberof ExcerptDetail
      * @description Collects all of the data about the current excerpt from the
      * Model, and sets it as the state variables.
+     *
      * @author Alexander Burdiss
      * @since 4/30/21
      * @version 1.0.0
@@ -154,11 +162,13 @@ export default function ExcerptDetail() {
   );
 
   /**
-   * @function ExcerptDetail~addToFavorites
+   * @function addToFavorites
+   * @memberof ExcerptDetail
    * @description Adds a selected excerpt/instrument combo to the user's
    * favorites.
-   * @param {String} instrument The current instrument attached to the excerpt,
+   * @param {string} instrument The current instrument attached to the excerpt,
    * so that when added to the favorites it is only added for that instrument.
+   *
    * @author Alexander Burdiss
    * @since 4/30/21
    * @version 1.0.0
@@ -186,11 +196,13 @@ export default function ExcerptDetail() {
   }
 
   /**
-   * @function ExcerptDetail~shouldStartCollapsed
+   * @function shouldStartCollapsed
+   * @memberof ExcerptDetail
    * @description Returns whether or not on the initial load the excerpt should
    * start collapsed.
-   * @returns {Boolean} Whether or not the excerpt should be collapsed when the
+   * @returns {boolean} Whether or not the excerpt should be collapsed when the
    * screen mounts.
+   *
    * @author Alexander Burdiss
    * @since 5/1/21
    * @version 1.0.0
