@@ -1,6 +1,8 @@
 package com.brassexcerpts;
 
 import android.app.Application;
+// https://github.com/facebook/react-native/issues/33623#issuecomment-1306882181
+import com.brassexcerpts.BuildConfig;
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
 import com.facebook.react.ReactNativeHost;
