@@ -1,7 +1,7 @@
 // @ts-check
 import React, { useState } from 'react';
 import { useWindowDimensions, View, Text, StyleSheet } from 'react-native';
-import AutoHeightImage from 'react-native-auto-height-image';
+import AutoHeightImage from '../AutoHeightImage/AutoHeightImage';
 import Pinchable from 'react-native-pinchable';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 

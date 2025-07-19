@@ -9,7 +9,7 @@ import {
   SafeAreaView,
   useSafeAreaInsets,
 } from 'react-native-safe-area-context';
-import AutoHeightImage from 'react-native-auto-height-image';
+import AutoHeightImage from '../../Components/AutoHeightImage/AutoHeightImage';
 import Pinchable from 'react-native-pinchable';
 
 import { PreferencesContext } from '../../Model/Preferences';

@@ -53,12 +53,6 @@
     "licenseUrl": "https://github.com/lodash/lodash/raw/master/LICENSE",
     "parents": "brass-excerpts"
   },
-  "react-native-auto-height-image@3.2.4": {
-    "licenses": "MIT",
-    "repository": "https://github.com/vivaxy/react-native-auto-height-image",
-    "licenseUrl": "https://github.com/vivaxy/react-native-auto-height-image/raw/master/LICENSE",
-    "parents": "brass-excerpts"
-  },
   "react-native-calendar-strip@2.2.5": {
     "licenses": "MIT",
     "repository": "https://github.com/BugiDev/react-native-calendar-strip",
