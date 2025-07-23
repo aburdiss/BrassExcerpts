@@ -1,4 +1,3 @@
-// @ts-check
 import React from 'react';
 import { Pressable, Text, StyleSheet } from 'react-native';
 
@@ -20,7 +19,10 @@ import { useColors } from '../../utils/customHooks/useColors/useColors';
  * @since 7/7/23
  * @version 1.2.0
  */
-export default function ActionButton({ onPress, children }) {
+export default function ActionButton({
+  onPress = Function,
+  children = String,
+}) {
   const colors = useColors();
   const styles = StyleSheet.create({
     button: {
@@ -37,7 +39,6 @@ export default function ActionButton({ onPress, children }) {
 
   return (
     <Pressable
-      // @ts-ignore
       onPress={onPress}
       style={({ pressed }) => ({
         opacity: pressed ? 0.7 : 1,
