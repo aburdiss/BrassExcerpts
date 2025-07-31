@@ -28,7 +28,15 @@ import { useColors } from '../../../utils/customHooks/useColors/useColors';
  *   dispatch={dispatch}
  * />
  */
-export default function PickerListItemAndroid({ item, state, dispatch }) {
+export default function PickerListItemAndroid({
+  item,
+  state,
+  dispatch,
+}: {
+  item: Object;
+  state: Object;
+  dispatch: Function;
+}) {
   const colors = useColors();
   const styles = StyleSheet.create({
     listSegmentedRowContainer: {

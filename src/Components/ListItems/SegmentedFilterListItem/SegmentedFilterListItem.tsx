@@ -30,7 +30,15 @@ import { getDarkOrLightTheme } from '../../../utils/getDarkOrLightTheme/getDarkO
  *   dispatch={dispatch}
  * />
  */
-export default function SegmentedFilterListItem({ item, state, dispatch }) {
+export default function SegmentedFilterListItem({
+  item,
+  state,
+  dispatch,
+}: {
+  item: Object;
+  state: Object;
+  dispatch: Function;
+}) {
   const theme = useTheme();
   const colors = useColors();
   const styles = StyleSheet.create({

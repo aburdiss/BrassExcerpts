@@ -19,7 +19,7 @@ import { useColors } from '../../utils/customHooks/useColors/useColors';
  * @example
  * <SectionHeading>Tuba</SectionHeading />
  */
-export default function SectionHeading({ children }) {
+export default function SectionHeading({ children }: { children: any }) {
   const colors = useColors();
   const styles = StyleSheet.create({
     text: {

@@ -39,6 +39,12 @@ export default function ConditionalExcerptLink({
   index,
   state,
   navigateToExcerptDetail,
+}: {
+  instrument: string;
+  excerpt: string;
+  index: number;
+  state: Object;
+  navigateToExcerptDetail: Function;
 }) {
   const colors = useColors();
   const styles = StyleSheet.create({

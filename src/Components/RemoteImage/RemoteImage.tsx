@@ -27,7 +27,13 @@ import { getContrast } from '../../utils/getContrast/getContrast';
  * @since 7/7/23
  * @version 1.0.1
  */
-export default function RemoteImage({ description, source }) {
+export default function RemoteImage({
+  description,
+  source,
+}: {
+  description: String;
+  source: String;
+}) {
   const colors = useColors();
   const styles = StyleSheet.create({
     errorContainer: {

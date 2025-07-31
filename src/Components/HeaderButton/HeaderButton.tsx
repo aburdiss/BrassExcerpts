@@ -26,7 +26,13 @@ import { useColors } from '../../utils/customHooks/useColors/useColors';
  *   Hello, World!
  * </HeaderButton />
  */
-export default function HeaderButton({ children, handler }) {
+export default function HeaderButton({
+  children,
+  handler,
+}: {
+  children: any;
+  handler: Function;
+}) {
   const colors = useColors();
   const styles = StyleSheet.create({
     buttonTextContainer: {

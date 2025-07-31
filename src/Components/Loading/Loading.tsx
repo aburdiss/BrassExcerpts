@@ -17,7 +17,7 @@ import { StyleSheet, View, ActivityIndicator } from 'react-native';
  * @since 7/7/23
  * @version 1.1.0
  */
-export default function Loading({ large = true }) {
+export default function Loading({ large = true }: { large?: Boolean }) {
   const styles = StyleSheet.create({
     container: {
       padding: 40,

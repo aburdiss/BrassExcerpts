@@ -20,8 +20,11 @@ import { useColors } from '../../utils/customHooks/useColors/useColors';
  * @version 1.2.0
  */
 export default function ActionButton({
-  onPress = Function,
-  children = String,
+  onPress,
+  children,
+}: {
+  onPress: Function;
+  children: any;
 }) {
   const colors = useColors();
   const styles = StyleSheet.create({

@@ -25,7 +25,13 @@ import { useColors } from '../../../utils/customHooks/useColors/useColors';
  * dispatch={dispatch}
  * />
  */
-export default function ButtonListItem({ item, dispatch }) {
+export default function ButtonListItem({
+  item,
+  dispatch,
+}: {
+  item: Object;
+  dispatch: Function;
+}) {
   const colors = useColors();
   const styles = StyleSheet.create({
     listButtonRowContainer: {

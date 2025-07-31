@@ -20,7 +20,7 @@ import { useColors } from '../../../utils/customHooks/useColors/useColors';
  * @example
  * <TextListItem item={item} />
  */
-export default function TextListItem({ item }) {
+export default function TextListItem({ item }: { item: Object }) {
   const colors = useColors();
   const styles = StyleSheet.create({
     listRowContainer: {

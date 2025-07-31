@@ -20,7 +20,7 @@ import { useColors } from '../../utils/customHooks/useColors/useColors';
  * @since 7/7/23
  * @version 1.0.1
  */
-export default function MainHeading({ children }) {
+export default function MainHeading({ children }: { children?: any }) {
   const colors = useColors();
   const styles = StyleSheet.create({
     heading: {

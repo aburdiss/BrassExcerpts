@@ -71,7 +71,7 @@ const PreferencesContext = createContext();
  * @since 7/7/23
  * @version 1.0.0
  */
-function handleRandomFavoritesInstruments(state, action) {
+function handleRandomFavoritesInstruments(state: Object, action: Object) {
   if (action.payload.randomFavorites == 0) {
     // Favorites Only
     if (state.favorites.length == 0) {
@@ -142,7 +142,7 @@ function handleRandomFavoritesInstruments(state, action) {
  * @since 7/7/23
  * @version 1.0.0
  */
-function handleFavoritesUpdateInstruments(state, action) {
+function handleFavoritesUpdateInstruments(state: Object, action: Object) {
   let hasHorn = false;
   let hasTrumpet = false;
   let hasTrombone = false;
@@ -186,7 +186,7 @@ function handleFavoritesUpdateInstruments(state, action) {
  * @since 7/7/23
  * @version 1.1.1
  */
-const preferencesReducer = (state, action) => {
+const preferencesReducer = (state: Object, action: Object) => {
   // Deal with Random Favorites Instruments
   if (
     action.type == 'SET_SETTING' &&
@@ -273,7 +273,7 @@ const initialPreferencesState = {
  *     {..}
  *   </PreferencesProvider>
  */
-const PreferencesProvider = ({ children }) => {
+const PreferencesProvider = ({ children }: { children: any }) => {
   const [state, dispatch] = useReducer(preferencesReducer);
 
   useEffect(() => {

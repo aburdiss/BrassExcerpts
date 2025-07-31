@@ -1,31 +1,30 @@
 import React from 'react';
-import { View, Pressable, Text, Linking, StyleSheet } from 'react-native';
+import { View, Pressable, Text, StyleSheet } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
+import { useNavigation } from '@react-navigation/native';
 import { useColors } from '../../../utils/customHooks/useColors/useColors';
 
 /**
- * @function LinkListItem
+ * @function InternalListItem
  * @component
- * @description A rendered Link list item with a chevron and theme colored text
- * Created 11/15/2020
+ * @description A rendered link list item that opens a page inside the app on
+ * the current stack. This is rendered the same as a LinkListItem, and performs
+ * a similar function.
+ * Created 12/17/2020
  * @param {Object} props The JSX props passed to this React component
- * @param {Object} props.item The list item containing a link and some text.
- * @param {Object} props.state The app state, containing all of the user's
- * preferences.
+ * @param {Object} props.item The Internal list item to be rendered containing
+ * a Component name to render to, and the text to be rendered.
  * @returns {JSX.Element} JSX render instructions
  *
  * @copyright 2023 Alexander Burdiss
  * @author Alexander Burdiss
  * @since 7/7/23
- * @version 1.1.0
+ * @version 1.0.2
  * @example
- * <LinkListItem
- *   item={item}
- *   state={state}
- * />
+ * <InternalListItem item={item} />
  */
-export default function LinkListItem({ item, state }) {
+export default function InternalListItem({ item }: { item: Object }) {
   const colors = useColors();
   const styles = StyleSheet.create({
     listRowContainer: {
@@ -43,9 +42,9 @@ export default function LinkListItem({ item, state }) {
       paddingRight: 5,
     },
   });
-  const isHidden = item.instrument && state.instrument != item.instrument;
+  const navigation = useNavigation();
 
-  return isHidden ? null : (
+  return (
     <Pressable
       style={({ pressed }) => ({
         opacity: pressed ? 0.7 : 1,
@@ -53,10 +52,11 @@ export default function LinkListItem({ item, state }) {
       accessible={true}
       accessibilityLabel={item.value}
       accessibilityRole="link"
+      android_ripple={{
+        color: styles.linkText.color,
+      }}
       onPress={() => {
-        Linking.openURL(item.link).catch((err) =>
-          console.warn("Couldn't load page", err),
-        );
+        navigation.navigate(item.component);
       }}
     >
       <View style={styles.listRowContainer}>

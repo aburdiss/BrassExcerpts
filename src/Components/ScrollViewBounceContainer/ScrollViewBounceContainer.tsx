@@ -24,6 +24,10 @@ export default function ScrollViewBounceContainer({
   children,
   topBounceColor,
   bottomBounceColor,
+}: {
+  children: any;
+  topBounceColor: String;
+  bottomBounceColor: String;
 }) {
   const styles = StyleSheet.create({
     backgroundContainer: {

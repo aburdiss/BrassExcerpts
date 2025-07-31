@@ -21,7 +21,13 @@ import { useColors } from '../../utils/customHooks/useColors/useColors';
  * @since 7/7/23
  * @version 1.0.0
  */
-export default function SearchBar({ onChangeText, placeholder }) {
+export default function SearchBar({
+  onChangeText,
+  placeholder,
+}: {
+  onChangeText: Function;
+  placeholder: String;
+}) {
   const colors = useColors();
   const styles = StyleSheet.create({
     input: {
