@@ -25,7 +25,7 @@ import ActionButton from '../../../Components/ActionButton/ActionButton';
  * @since 7/7/23
  * @version 1.0.0
  */
-export default function ResourcesSection({ data }) {
+export default function ResourcesSection({ data }: { data: String }) {
   /**
    * @function openImslpLink
    * @memberof ResourcesSection

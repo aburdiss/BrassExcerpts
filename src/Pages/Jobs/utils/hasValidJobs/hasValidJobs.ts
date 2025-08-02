@@ -19,7 +19,7 @@ import { getDateFromString } from '../../../../utils/getDateFromString/getDateFr
  * @since 7/9/23
  * @version 1.0.1
  */
-function isJobValidReducer(areAnyJobsValid, thisJob) {
+function isJobValidReducer(areAnyJobsValid: Boolean, thisJob: Object) {
   if (areAnyJobsValid) {
     return true;
   }

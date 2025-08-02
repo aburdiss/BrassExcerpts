@@ -26,7 +26,13 @@ import { getContrast } from '../../../../utils/getContrast/getContrast';
  * @example
  * <YoutubeLink video={video} type="band" />
  */
-export default function YoutubeLink({ video, type }) {
+export default function YoutubeLink({
+  video,
+  type,
+}: {
+  video: String[];
+  type: String;
+}) {
   const colors = useColors();
 
   const backgroundColors = {

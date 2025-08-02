@@ -35,7 +35,7 @@ import { extractNameFromGithubUrl } from '../../utils/extractNameFromGithubUrl/e
  * @param {string|number} key An object key inside each member of data.
  * @returns {Object[]} A sorted version of the data array that is passed in.
  */
-function sortDataByKey(data, key) {
+function sortDataByKey(data: Object[], key: string | number) {
   data.sort(function (a, b) {
     return a[key] > b[key] ? 1 : b[key] > a[key] ? -1 : 0;
   });

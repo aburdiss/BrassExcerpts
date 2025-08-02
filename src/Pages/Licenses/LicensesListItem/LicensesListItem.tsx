@@ -57,6 +57,16 @@ export default function LicensesListItem({
   repository,
   licenseUrl,
   index,
+}: {
+  image: string;
+  userUrl: string;
+  username: string;
+  name: string;
+  version: string;
+  licenses: string;
+  repository: string;
+  licenseUrl: string;
+  index: number;
 }) {
   const colors = useColors();
   const styles = StyleSheet.create({

@@ -24,7 +24,7 @@ import { getCountryFlagEmoji } from '../../../utils/getCountryFlagEmoji/getCount
  * @example
  * <JobsListRow job={job} />
  */
-export default function JobsListRow({ job }) {
+export default function JobsListRow({ job }: { job: Object }) {
   const colors = useColors();
   const styles = StyleSheet.create({
     closingDate: {

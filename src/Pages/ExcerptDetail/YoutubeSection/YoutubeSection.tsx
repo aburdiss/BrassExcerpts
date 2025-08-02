@@ -24,7 +24,7 @@ import MainHeading from '../../../Components/MainHeading/MainHeading';
  * @example
  * <YoutubeSection data={item.videos} />
  */
-export default function YoutubeSection({ data }) {
+export default function YoutubeSection({ data }: { data: String }) {
   const excerptVideos = YouTubeModel[data];
 
   const styles = StyleSheet.create({

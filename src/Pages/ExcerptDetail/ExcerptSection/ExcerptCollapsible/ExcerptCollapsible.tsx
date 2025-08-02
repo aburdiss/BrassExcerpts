@@ -44,7 +44,15 @@ import RemoteImage from '../../../../Components/RemoteImage/RemoteImage';
  *   index={index}
  * />
  */
-export default function ExcerptCollapsible({ excerpt, startCollapsed, index }) {
+export default function ExcerptCollapsible({
+  excerpt,
+  startCollapsed,
+  index,
+}: {
+  excerpt: Object;
+  startCollapsed: Boolean;
+  index: Number;
+}) {
   const colors = useColors();
   const styles = StyleSheet.create({
     excerptCaption: {

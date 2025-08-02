@@ -29,8 +29,8 @@ export default function MetaLabel({
 }: {
   label: String;
   data: String;
-  labelColor: String;
-  color: String;
+  labelColor?: String;
+  color?: String;
 }) {
   const colors = useColors();
   const styles = StyleSheet.create({

@@ -18,7 +18,7 @@ import {
  * @since 7/9/23
  * @version 2.0.0
  */
-function isValidSearchResult(job, currentSearchTerm) {
+function isValidSearchResult(job: Object, currentSearchTerm: String) {
   if (!currentSearchTerm) {
     return right(job);
   }

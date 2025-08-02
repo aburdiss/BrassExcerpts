@@ -13,7 +13,7 @@ import { Linking } from 'react-native';
  * @since 7/9/23
  * @version 1.0.1
  */
-export function openMusicalChairsLink(state) {
+export function openMusicalChairsLink(state: Object) {
   const musicalChairsHornLink =
     'https://www.musicalchairs.info/french-horn/jobs';
   const musicalChairsTrumpetLink =

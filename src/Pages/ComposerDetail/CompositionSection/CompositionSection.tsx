@@ -25,7 +25,11 @@ import { PreferencesContext } from '../../../Model/Preferences';
  * @since 7/7/23
  * @version 1.1.2
  */
-export default function CompositionSection({ excerpts }) {
+export default function CompositionSection({
+  excerpts,
+}: {
+  excerpts: Object[];
+}) {
   const colors = useColors();
   const styles = StyleSheet.create({
     accentColor: { color: colors.green },

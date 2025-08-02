@@ -25,7 +25,15 @@ import { Text, Linking } from 'react-native';
  *   {licenses}
  * </Link>
  */
-export default function Link({ url, style, children }) {
+export default function Link({
+  url,
+  style,
+  children,
+}: {
+  url: string;
+  style: Object;
+  children: string;
+}) {
   return (
     <Text
       style={style}

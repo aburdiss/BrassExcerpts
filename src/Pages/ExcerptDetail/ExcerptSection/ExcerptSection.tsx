@@ -46,6 +46,12 @@ export default function ExcerptSection({
   addToFavorites,
   shouldStartCollapsed,
   item,
+}: {
+  instrumentExcerpt: Object;
+  instrumentName: String;
+  addToFavorites: Function;
+  shouldStartCollapsed: Boolean;
+  item: Object;
 }) {
   const colors = useColors();
   const styles = StyleSheet.create({

@@ -14,7 +14,7 @@
  * @since 7/9/23
  * @version 1.0.0
  */
-export function processListData(initialData) {
+export function processListData(initialData: Object[]) {
   let tempData = [];
   initialData.forEach((excerpt) => {
     let exists = tempData.find(

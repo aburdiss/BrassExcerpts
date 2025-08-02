@@ -1,6 +1,12 @@
 // @ts-check
 import React, { useContext } from 'react';
-import { Pressable, StyleSheet, Text, View } from 'react-native';
+import {
+  GestureResponderEvent,
+  Pressable,
+  StyleSheet,
+  Text,
+  View,
+} from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
@@ -15,7 +21,7 @@ import { useColors } from '../../../utils/customHooks/useColors/useColors';
  * @param {Object} props JSX props passed to this React Component
  * @param {string} props.composer The composer of this Excerpt row
  * @param {string} props.composition The composition to navigate to
- * @param {function} props.onPress The function to call when this component is
+ * @param {Function} props.onPress The function to call when this component is
  * pressed.
  * @param {string} props.color
  * @param {string} props.backgroundColor
@@ -32,6 +38,12 @@ export default function ExcerptListRow({
   onPress,
   color,
   backgroundColor,
+}: {
+  composer: String;
+  composition: String;
+  onPress: (event: GestureResponderEvent) => void;
+  color: String;
+  backgroundColor: String;
 }) {
   const colors = useColors();
   const styles = StyleSheet.create({

@@ -1,4 +1,4 @@
-import { View, Text, Image, Pressable, StyleSheet } from 'react-native';
+import { View, Text, Image, Pressable, StyleSheet, GestureResponderEvent } from 'react-native';
 import React from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -36,7 +36,17 @@ import { useColors } from '../../../utils/customHooks/useColors/useColors';
  *   }}
  * />
  */
-export default function ComposerListRow({ name, index, imageSource, onPress }) {
+export default function ComposerListRow({
+  name,
+  index,
+  imageSource,
+  onPress,
+}: {
+  name: String;
+  index: Number;
+  imageSource: String;
+  onPress: (event: GestureResponderEvent) => void;
+}) {
   const colors = useColors();
   const styles = StyleSheet.create({
     androidRipple: {

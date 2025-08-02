@@ -25,7 +25,7 @@ import AllExcerptDataModel from '../../../Model/AllExcerptDataModel/AllExcerptDa
  * @since 7/9/23
  * @version 1.0.0
  */
-export default function ResourcesSection({ data }) {
+export default function ResourcesSection({ data }: { data: String }) {
   const styles = StyleSheet.create({
     linksContainer: {
       paddingHorizontal: 20,

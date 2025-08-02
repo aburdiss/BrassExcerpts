@@ -21,7 +21,7 @@ import LicensesListItem from '../LicensesListItem/LicensesListItem';
  * @example
  * <LicensesList licenses={licenses} />
  */
-export default function LicensesList({ licenses }) {
+export default function LicensesList({ licenses }: { licenses: Object[] }) {
   const styles = StyleSheet.create({
     list: {
       flex: 1,
