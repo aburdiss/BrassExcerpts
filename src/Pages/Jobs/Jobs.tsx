@@ -13,7 +13,7 @@ import { useQuery } from 'react-query';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import JobsListRow from './JobsListRow/JobsListRow';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import ActionButton from '../../Components/ActionButton/ActionButton';
 import SearchBar from '../../Components/SearchBar/SearchBar';
 import Loading from '../../Components/Loading/Loading';
@@ -206,7 +206,7 @@ export default function Jobs() {
    * @since 3/28/21
    * @version 1.0.0
    */
-  // eslint-disable-next-line no-unused-vars
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   function openCreateCustomAudition() {
     navigation.navigate('Create Custom Audition');
   }
