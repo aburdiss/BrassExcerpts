@@ -4,6 +4,7 @@ import { excerpts as hornExcerpts } from '../../../../Model/Excerpts/HornExcerpt
 import { excerpts as trumpetExcerpts } from '../../../../Model/Excerpts/TrumpetExcerpts';
 import { excerpts as tromboneExcerpts } from '../../../../Model/Excerpts/TromboneExcerpts';
 import { excerpts as tubaExcerpts } from '../../../../Model/Excerpts/TubaExcerpts';
+import { Instrument } from '../../../../Enums/instrument';
 
 /**
  * @todo Make work with only favorites as well
@@ -44,13 +45,19 @@ export function generateRandomExcerpt(
 
     // Get possible excerpts here.
     for (let excerpt of state.favorites) {
-      if (state.randomHorn && excerpt.startsWith('horn')) {
+      if (state.randomHorn && excerpt.startsWith(Instrument.Horn)) {
         possibleCompositions.push(excerpt);
-      } else if (state.randomTrumpet && excerpt.startsWith('trumpet')) {
+      } else if (
+        state.randomTrumpet &&
+        excerpt.startsWith(Instrument.Trumpet)
+      ) {
         possibleCompositions.push(excerpt);
-      } else if (state.randomTrombone && excerpt.startsWith('trombone')) {
+      } else if (
+        state.randomTrombone &&
+        excerpt.startsWith(Instrument.Trombone)
+      ) {
         possibleCompositions.push(excerpt);
-      } else if (state.randomTuba && excerpt.startsWith('tuba')) {
+      } else if (state.randomTuba && excerpt.startsWith(Instrument.Tuba)) {
         possibleCompositions.push(excerpt);
       }
     }
@@ -67,25 +74,25 @@ export function generateRandomExcerpt(
 
     randomCompositionKey = possibleCompositions[0];
 
-    if (randomCompositionKey.startsWith('horn')) {
+    if (randomCompositionKey.startsWith(Instrument.Horn)) {
       randomComposition = hornExcerpts.find(
         (excerpt) =>
           randomCompositionKey.includes(excerpt.name) &&
           randomCompositionKey.includes(excerpt.composerLast),
       );
-    } else if (randomCompositionKey.startsWith('trumpet')) {
+    } else if (randomCompositionKey.startsWith(Instrument.Trumpet)) {
       randomComposition = trumpetExcerpts.find(
         (excerpt) =>
           randomCompositionKey.includes(excerpt.name) &&
           randomCompositionKey.includes(excerpt.composerLast),
       );
-    } else if (randomCompositionKey.startsWith('trombone')) {
+    } else if (randomCompositionKey.startsWith(Instrument.Trombone)) {
       randomComposition = tromboneExcerpts.find(
         (excerpt) =>
           randomCompositionKey.includes(excerpt.name) &&
           randomCompositionKey.includes(excerpt.composerLast),
       );
-    } else if (randomCompositionKey.startsWith('tuba')) {
+    } else if (randomCompositionKey.startsWith(Instrument.Tuba)) {
       randomComposition = tubaExcerpts.find(
         (excerpt) =>
           randomCompositionKey.includes(excerpt.name) &&
@@ -113,29 +120,29 @@ export function generateRandomExcerpt(
     let randomPartIndex;
     let possibleCompositions;
     const excerpts = {
-      horn: hornExcerpts,
-      trumpet: trumpetExcerpts,
-      trombone: tromboneExcerpts,
-      tuba: tubaExcerpts,
+      [Instrument.Horn]: hornExcerpts,
+      [Instrument.Trumpet]: trumpetExcerpts,
+      [Instrument.Trombone]: tromboneExcerpts,
+      [Instrument.Tuba]: tubaExcerpts,
     };
     if (state.randomHorn) {
-      possibleInstruments.push('horn');
+      possibleInstruments.push(Instrument.Horn);
     }
     if (state.randomTrumpet) {
-      possibleInstruments.push('trumpet');
+      possibleInstruments.push(Instrument.Trumpet);
     }
     if (state.randomTrombone) {
-      possibleInstruments.push('trombone');
+      possibleInstruments.push(Instrument.Trombone);
     }
     if (state.randomTuba) {
-      possibleInstruments.push('tuba');
+      possibleInstruments.push(Instrument.Tuba);
     }
 
     if (possibleInstruments.length === 1) {
       randomSelectedInstrument = possibleInstruments[0];
     } else {
       if (possibleInstruments.length === 0) {
-        possibleInstruments = ['horn', 'trumpet', 'trombone', 'tuba'];
+        possibleInstruments = Object.values(Instrument);
       }
       possibleInstruments = shuffle(possibleInstruments);
       randomSelectedInstrument = possibleInstruments[0];

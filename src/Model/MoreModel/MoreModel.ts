@@ -1,4 +1,5 @@
 import DeviceInfo from 'react-native-device-info';
+import { Instrument } from '../../Enums/instrument';
 
 const GOOGLE_PLAY_LINK =
   'https://play.google.com/store/apps/developer?id=Alexander+Burdiss';
@@ -12,25 +13,25 @@ export const INSTRUMENT = [
     id: 'A',
     type: 'switch',
     setting: 'horn',
-    value: 'Horn',
+    value: Instrument.Horn,
   },
   {
     id: 'B',
     type: 'switch',
     setting: 'trumpet',
-    value: 'Trumpet',
+    value: Instrument.Trumpet,
   },
   {
     id: 'C',
     type: 'switch',
     setting: 'trombone',
-    value: 'Trombone',
+    value: Instrument.Trombone,
   },
   {
     id: 'D',
     type: 'switch',
     setting: 'tuba',
-    value: 'Tuba',
+    value: Instrument.Tuba,
   },
 ];
 
@@ -54,25 +55,25 @@ export const RANDOM = [
     id: '10A',
     type: 'switch',
     setting: 'randomHorn',
-    value: 'Horn',
+    value: Instrument.Horn,
   },
   {
     id: '10B',
     type: 'switch',
     setting: 'randomTrumpet',
-    value: 'Trumpet',
+    value: Instrument.Trumpet,
   },
   {
     id: '10C',
     type: 'switch',
     setting: 'randomTrombone',
-    value: 'Trombone',
+    value: Instrument.Trombone,
   },
   {
     id: '10D',
     type: 'switch',
     setting: 'randomTuba',
-    value: 'Tuba',
+    value: Instrument.Tuba,
   },
 ];
 

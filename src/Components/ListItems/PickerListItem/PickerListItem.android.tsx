@@ -3,6 +3,7 @@ import { View, StyleSheet, Appearance } from 'react-native';
 import RNPickerSelect from 'react-native-picker-select';
 
 import { useColors } from '../../../utils/customHooks/useColors/useColors';
+import { PreferencesActions } from '../../../Enums/preferencesActions';
 
 /**
  * @function PickerListItemAndroid
@@ -117,7 +118,7 @@ export default function PickerListItemAndroid({
             renderedTheme = Appearance.getColorScheme();
           }
           dispatch({
-            type: 'SET_SETTING',
+            type: PreferencesActions.SET_SETTING,
             payload: { theme: value, renderedTheme: renderedTheme },
           });
         }}

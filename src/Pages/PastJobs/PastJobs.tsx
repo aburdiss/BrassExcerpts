@@ -9,11 +9,14 @@ import SearchBar from '../../Components/SearchBar/SearchBar';
 
 import { fetchInstrumentJobs } from '../../utils/fetchInstrumentJobs/fetchInstrumentJobs';
 import { PreferencesContext } from '../../Model/Preferences';
-import { getDateFromString } from '../../utils/getDateFromString/getDateFromString.ts/index.ios';
+import { getDateFromString } from '../../utils/getDateFromString/getDateFromString';
 import { useColors } from '../../utils/customHooks/useColors/useColors';
 import { useTheme } from '../../utils/customHooks/useTheme/useTheme';
 import { getDarkOrLightTheme } from '../../utils/getDarkOrLightTheme/getDarkOrLightTheme';
 import { getContrast } from '../../utils/getContrast/getContrast';
+import { Instrument } from '../../Enums/instrument';
+import { Jobs } from '../../Types/jobs';
+import { PreferencesActions } from '../../Enums/preferencesActions';
 
 /**
  * @namespace PastJobs
@@ -82,14 +85,6 @@ export default function PastJobs() {
   const [currentSearchTerm, setCurrentSearchTerm] = useState('');
   const scrollViewRef = useRef(null);
 
-  const possibleInstruments = ['Horn', 'Trumpet', 'Trombone', 'Tuba'];
-  const searchPlaceholderText = [
-    'Filter Past Horn Jobs',
-    'Filter Past Trumpet Jobs',
-    'Filter Past Trombone Jobs',
-    'Filter Past Tuba Jobs',
-  ];
-
   const queryPreferences = {
     staleTime: 1000 * 60 * 60, // One Hour
   };
@@ -126,14 +121,19 @@ export default function PastJobs() {
      */
     function fetchCurrentJobs() {
       setCurrentJobs(
-        [hornJobs, trumpetJobs, tromboneJobs, tubaJobs][state.jobsIndex],
+        {
+          [Instrument.Horn]: hornJobs,
+          [Instrument.Trumpet]: trumpetJobs,
+          [Instrument.Trombone]: tromboneJobs,
+          [Instrument.Tuba]: tubaJobs,
+        }[state.jobsInstrument],
       );
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [
       hornJobs.data,
       trumpetJobs.data,
-      state.jobsIndex,
+      state.jobsInstrument,
       tromboneJobs.data,
       tubaJobs.data,
       hornJobs.isError,
@@ -152,14 +152,14 @@ export default function PastJobs() {
    * @since 9/18/21
    * @version 1.0.0
    */
-  function isValidSearchResult(job) {
+  function isValidSearchResult(job: Jobs) {
     if (!currentSearchTerm) {
       return true;
     }
 
     if (
-      job.auditionDate.toLowerCase().includes(currentSearchTerm) ||
-      job.closingDate.toLowerCase().includes(currentSearchTerm) ||
+      job.auditionDate?.toLowerCase().includes(currentSearchTerm) ||
+      job.closingDate?.toLowerCase().includes(currentSearchTerm) ||
       job.country.toLowerCase().includes(currentSearchTerm) ||
       job.orchestra.toLowerCase().includes(currentSearchTerm) ||
       job.position.toLowerCase().includes(currentSearchTerm)
@@ -168,32 +168,36 @@ export default function PastJobs() {
     }
   }
 
-  let currentInstrument = ['horn', 'trumpet', 'trombone', 'tuba'][
-    state.jobsIndex
-  ];
-
   return (
     <View style={styles.pastJobsContainer}>
       <SafeAreaView edges={['left', 'right']} style={styles.topContainer}>
         <View style={styles.segmentedControlContainer}>
           <SegmentedControl
             accessibilityRole="menu"
-            accessibilityValue={{ now: possibleInstruments[state.jobsIndex] }}
-            values={possibleInstruments}
-            selectedIndex={state.jobsIndex}
+            accessibilityValue={{
+              now: Object.values(Instrument).findIndex(
+                (inst) => inst === state.jobsInstrument,
+              ),
+            }}
+            values={Object.values(Instrument)}
+            selectedIndex={Object.values(Instrument).findIndex(
+              (inst) => inst === state.jobsInstrument,
+            )}
             appearance={getDarkOrLightTheme(theme)}
-            onChange={(event) => {
+            onValueChange={(newVal) => {
               scrollViewRef.current.scrollTo({ x: 0, y: 0 });
               dispatch({
-                type: 'SET_SETTING',
-                payload: { jobsIndex: event.nativeEvent.selectedSegmentIndex },
+                type: PreferencesActions.SET_SETTING,
+                payload: { jobsInstrument: newVal },
               });
             }}
           />
         </View>
         <SearchBar
-          placeholder={searchPlaceholderText[state.jobsIndex]}
-          onChangeText={(text) => setCurrentSearchTerm(text.toLowerCase())}
+          placeholder={`Filter Past ${state.jobsInstrument} Jobs`}
+          onChangeText={(text: string) =>
+            setCurrentSearchTerm(text.toLowerCase())
+          }
         />
       </SafeAreaView>
       <ScrollView style={styles.contentContainer} ref={scrollViewRef}>
@@ -206,7 +210,7 @@ export default function PastJobs() {
                 accessibilityRole="text"
                 maxFontSizeMultiplier={2.0}
               >
-                There was an error fetching {currentInstrument} jobs.{'\n'}If
+                There was an error fetching {state.jobsInstrument} jobs.{'\n'}If
                 this persists, please contact us.
               </Text>
             </SafeAreaView>

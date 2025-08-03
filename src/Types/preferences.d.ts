@@ -6,7 +6,7 @@ export type Preferences = {
   trombone: boolean;
   tuba: boolean;
   favorites: string[];
-  jobsIndex: number;
+  jobsInstrument: Instrument;
   randomFavorites: number;
   randomHorn: boolean;
   randomTrumpet: boolean;

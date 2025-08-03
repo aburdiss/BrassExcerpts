@@ -8,6 +8,7 @@ import { getNumberOfInstruments } from '../../../utils/getNumberOfInstruments/ge
 import { PreferencesContext } from '../../../Model/Preferences';
 import { useColors } from '../../../utils/customHooks/useColors/useColors';
 import ExcerptCollapsible from './ExcerptCollapsible/ExcerptCollapsible';
+import { Instrument } from '../../../Enums/instrument';
 
 /**
  * @function ExcerptSection
@@ -48,7 +49,7 @@ export default function ExcerptSection({
   item,
 }: {
   instrumentExcerpt: Object;
-  instrumentName: String;
+  instrumentName: Instrument;
   addToFavorites: Function;
   shouldStartCollapsed: Boolean;
   item: Object;

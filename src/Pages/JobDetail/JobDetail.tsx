@@ -18,10 +18,9 @@ import ConditionalExcerptLink from '../../Components/ConditionalExcerptLink/Cond
 
 import { PreferencesContext } from '../../Model/Preferences';
 import { useIdleScreen } from '../../utils/customHooks/useIdleScreen/useIdleScreen';
-import { getDateFromString } from '../../utils/getDateFromString/getDateFromString.ts/index.ios';
+import { getDateFromString } from '../../utils/getDateFromString/getDateFromString';
 import { useColors } from '../../utils/customHooks/useColors/useColors';
 import { getInstrumentsSelected } from '../../utils/getInstrumentsSelected/getInstrumentsSelected';
-import { capitalize } from '../../utils/captiatlize/capitalize';
 
 /**
  * @namespace JobDetail
@@ -166,9 +165,8 @@ export default function JobDetail() {
     navigation.navigate('Jobs Excerpt Detail', excerpt);
   }
 
-  const instrument = ['horn', 'trumpet', 'trombone', 'tuba'][state.jobsIndex];
   const activeInstruments = getInstrumentsSelected(state);
-  const instrumentActive = activeInstruments.includes(capitalize(instrument));
+  const instrumentActive = activeInstruments.includes(state.jobsInstrument);
   const hasExcerpts = route.params.excerpts?.length > 0;
 
   return (

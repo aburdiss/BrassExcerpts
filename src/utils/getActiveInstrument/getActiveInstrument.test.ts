@@ -1,24 +1,30 @@
+import { Instrument } from '../../Enums/instrument';
+import { Preferences } from '../../Types/preferences';
 import { getActiveInstrument } from './getActiveInstrument';
 
 describe('returns correct active instrument', () => {
   test('horn', () => {
-    let activeInstrument = getActiveInstrument({ horn: true });
-    expect(activeInstrument).toEqual('horn');
+    let activeInstrument = getActiveInstrument({ horn: true } as Preferences);
+    expect(activeInstrument).toEqual(Instrument.Horn);
   });
   test('trumpet', () => {
-    let activeInstrument = getActiveInstrument({ trumpet: true });
-    expect(activeInstrument).toEqual('trumpet');
+    let activeInstrument = getActiveInstrument({
+      trumpet: true,
+    } as Preferences);
+    expect(activeInstrument).toEqual(Instrument.Trumpet);
   });
   test('trombone', () => {
-    let activeInstrument = getActiveInstrument({ trombone: true });
-    expect(activeInstrument).toEqual('trombone');
+    let activeInstrument = getActiveInstrument({
+      trombone: true,
+    } as Preferences);
+    expect(activeInstrument).toEqual(Instrument.Trombone);
   });
   test('tuba', () => {
-    let activeInstrument = getActiveInstrument({ tuba: true });
-    expect(activeInstrument).toEqual('tuba');
+    let activeInstrument = getActiveInstrument({ tuba: true } as Preferences);
+    expect(activeInstrument).toEqual(Instrument.Tuba);
   });
   test('none', () => {
-    let activeInstrument = getActiveInstrument({});
+    let activeInstrument = getActiveInstrument({} as Preferences);
     expect(activeInstrument).toEqual(undefined);
   });
 });

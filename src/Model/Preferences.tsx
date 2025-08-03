@@ -4,6 +4,7 @@ import { Alert, Appearance } from 'react-native';
 import { Preferences } from '../Types/preferences';
 import { PreferencesActions } from '../Enums/preferencesActions';
 import { Themes } from '../Enums/themes';
+import { Instrument } from '../Enums/instrument';
 
 /**
  * @namespace Preferences
@@ -19,7 +20,7 @@ const initialPreferencesState = {
   trombone: true,
   tuba: true,
   favorites: [],
-  jobsIndex: 0,
+  jobsInstrument: Instrument.Horn,
   randomFavorites: 1,
   randomHorn: true,
   randomTrumpet: true,
@@ -27,7 +28,7 @@ const initialPreferencesState = {
   randomTuba: true,
   alwaysCollapse: false,
   keepScreenOn: false,
-  theme: 'default',
+  theme: Themes.default,
   renderedTheme: Appearance.getColorScheme(),
 };
 
@@ -122,13 +123,13 @@ function handleRandomFavoritesInstruments(
       let hasTuba = false;
 
       for (let excerpt of state.favorites) {
-        if (excerpt.startsWith('horn')) {
+        if (excerpt.startsWith(Instrument.Horn)) {
           hasHorn = true;
-        } else if (excerpt.startsWith('trumpet')) {
+        } else if (excerpt.startsWith(Instrument.Trumpet)) {
           hasTrumpet = true;
-        } else if (excerpt.startsWith('trombone')) {
+        } else if (excerpt.startsWith(Instrument.Trombone)) {
           hasTrombone = true;
-        } else if (excerpt.startsWith('tuba')) {
+        } else if (excerpt.startsWith(Instrument.Tuba)) {
           hasTuba = true;
         }
       }
@@ -181,13 +182,13 @@ function handleFavoritesUpdateInstruments(
   let hasTuba = false;
 
   for (let excerpt of action.payload) {
-    if (excerpt.startsWith('horn')) {
+    if (excerpt.startsWith(Instrument.Horn)) {
       hasHorn = true;
-    } else if (excerpt.startsWith('trumpet')) {
+    } else if (excerpt.startsWith(Instrument.Trumpet)) {
       hasTrumpet = true;
-    } else if (excerpt.startsWith('trombone')) {
+    } else if (excerpt.startsWith(Instrument.Trombone)) {
       hasTrombone = true;
-    } else if (excerpt.startsWith('tuba')) {
+    } else if (excerpt.startsWith(Instrument.Tuba)) {
       hasTuba = true;
     }
   }

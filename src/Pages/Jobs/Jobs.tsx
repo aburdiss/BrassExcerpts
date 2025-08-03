@@ -27,6 +27,8 @@ import { useTheme } from '../../utils/customHooks/useTheme/useTheme';
 import { getValidJobs } from './utils/getValidJobs/getValidJobs';
 import { getDarkOrLightTheme } from '../../utils/getDarkOrLightTheme/getDarkOrLightTheme';
 import { getContrast } from '../../utils/getContrast/getContrast';
+import { Instrument } from '../../Enums/instrument';
+import { PreferencesActions } from '../../Enums/preferencesActions';
 
 /**
  * @namespace Jobs
@@ -131,14 +133,6 @@ export default function Jobs() {
   const navigation = useNavigation();
   const scrollViewRef = useRef(null);
 
-  const possibleInstruments = ['Horn', 'Trumpet', 'Trombone', 'Tuba'];
-  const searchPlaceholderText = [
-    'Filter Current Horn Jobs',
-    'Filter Current Trumpet Jobs',
-    'Filter Current Trombone Jobs',
-    'Filter Current Tuba Jobs',
-  ];
-
   const queryPreferences = {
     staleTime: 1000 * 60 * 60, // One Hour
   };
@@ -176,14 +170,19 @@ export default function Jobs() {
      */
     function fetchCurrentJobs() {
       setCurrentJobs(
-        [hornJobs, trumpetJobs, tromboneJobs, tubaJobs][state.jobsIndex],
+        {
+          [Instrument.Horn]: hornJobs,
+          [Instrument.Trumpet]: trumpetJobs,
+          [Instrument.Trombone]: tromboneJobs,
+          [Instrument.Tuba]: tubaJobs,
+        }[state.jobsInstrument],
       );
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [
       hornJobs.data,
       trumpetJobs.data,
-      state.jobsIndex,
+      state.jobsInstrument,
       tromboneJobs.data,
       tubaJobs.data,
       hornJobs.isError,
@@ -192,10 +191,6 @@ export default function Jobs() {
       tubaJobs.isError,
     ],
   );
-
-  let currentInstrument = ['horn', 'trumpet', 'trombone', 'tuba'][
-    state.jobsIndex
-  ];
 
   /**
    * @function openCreateCustomAudition
@@ -232,22 +227,30 @@ export default function Jobs() {
         <View style={styles.segmentedControlContainer}>
           <SegmentedControl
             accessibilityRole="menu"
-            accessibilityValue={{ now: possibleInstruments[state.jobsIndex] }}
-            values={possibleInstruments}
-            selectedIndex={state.jobsIndex}
+            accessibilityValue={{
+              now: Object.values(Instrument).findIndex(
+                (inst) => inst === state.jobsInstrument,
+              ),
+            }}
+            values={Object.values(Instrument)}
+            selectedIndex={Object.values(Instrument).findIndex(
+              (inst) => inst === state.jobsInstrument,
+            )}
             appearance={getDarkOrLightTheme(theme)}
-            onChange={(event) => {
+            onValueChange={(newVal) => {
               scrollViewRef.current.scrollTo({ x: 0, y: 0 });
               dispatch({
-                type: 'SET_SETTING',
-                payload: { jobsIndex: event.nativeEvent.selectedSegmentIndex },
+                type: PreferencesActions.SET_SETTING,
+                payload: { jobsInstrument: newVal },
               });
             }}
           />
         </View>
         <SearchBar
-          placeholder={searchPlaceholderText[state.jobsIndex]}
-          onChangeText={(text) => setCurrentSearchTerm(text.toLowerCase())}
+          placeholder={`Filter Current ${state.jobsInstrument} Jobs`}
+          onChangeText={(text: string) =>
+            setCurrentSearchTerm(text.toLowerCase())
+          }
         />
       </SafeAreaView>
       <ScrollView style={styles.contentContainer} ref={scrollViewRef}>
@@ -272,8 +275,8 @@ export default function Jobs() {
               accessibilityRole="text"
               maxFontSizeMultiplier={2.0}
             >
-              There was an error fetching {currentInstrument} jobs.{'\n'}If this
-              persists, please contact us.
+              There was an error fetching {state.jobsInstrument} jobs.{'\n'}If
+              this persists, please contact us.
             </Text>
           </SafeAreaView>
         )}
@@ -285,7 +288,7 @@ export default function Jobs() {
               accessibilityRole="text"
               maxFontSizeMultiplier={2.0}
             >
-              There are no {currentInstrument} jobs at this time.{'\n'}Check
+              There are no {state.jobsInstrument} jobs at this time.{'\n'}Check
               back later!
             </Text>
             <Text style={styles.pleaseHelpText}>
@@ -309,7 +312,7 @@ export default function Jobs() {
             style={({ pressed }) => ({ opacity: pressed ? 0.7 : 1 })}
           >
             <Text style={styles.linkText} maxFontSizeMultiplier={2.0}>
-              View {currentInstrument} job openings on Musical Chairs
+              View {state.jobsInstrument} job openings on Musical Chairs
             </Text>
           </Pressable>
           <Text

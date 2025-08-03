@@ -14,8 +14,9 @@ import { useColors } from '../../utils/customHooks/useColors/useColors';
 import { useTheme } from '../../utils/customHooks/useTheme/useTheme';
 import { useTopExcerpts } from '../../utils/customHooks/useTopExcerpts/useTopExcerpts';
 import { getInstrumentsSelected } from '../../utils/getInstrumentsSelected/getInstrumentsSelected';
-import { capitalize } from '../../utils/captiatlize/capitalize';
 import { getDarkOrLightTheme } from '../../utils/getDarkOrLightTheme/getDarkOrLightTheme';
+import { Instrument } from '../../Enums/instrument';
+import { PreferencesActions } from '../../Enums/preferencesActions';
 
 /**
  * @namespace TopExcerpts
@@ -131,15 +132,11 @@ export default function TopExcerpts() {
     },
   });
 
-  const possibleInstruments = ['Horn', 'Trumpet', 'Trombone', 'Tuba'];
-
   const scrollViewRef = useRef();
   const { state, dispatch } = useContext(PreferencesContext);
   const navigation = useNavigation();
 
-  const { loading, topExcerpts } = useTopExcerpts(
-    possibleInstruments[state.jobsIndex],
-  );
+  const { loading, topExcerpts } = useTopExcerpts(state.jobsInstrument);
 
   /**
    * @function navigateToExcerptDetailPage
@@ -155,9 +152,9 @@ export default function TopExcerpts() {
     navigation.navigate('Excerpt Detail', excerpt);
   }
 
-  const instrument = ['horn', 'trumpet', 'trombone', 'tuba'][state.jobsIndex];
+  const instrument = state.jobsInstrument;
   const activeInstruments = getInstrumentsSelected(state);
-  const instrumentActive = activeInstruments.includes(capitalize(instrument));
+  const instrumentActive = activeInstruments.includes(instrument);
 
   return (
     <View style={styles.container}>
@@ -165,15 +162,21 @@ export default function TopExcerpts() {
         <View style={styles.segmentedControlContainer}>
           <SegmentedControl
             accessibilityRole="menu"
-            accessibilityValue={{ now: possibleInstruments[state.jobsIndex] }}
-            values={possibleInstruments}
-            selectedIndex={state.jobsIndex}
+            accessibilityValue={{
+              now: Object.values(Instrument).findIndex(
+                (inst) => inst === state.jobsInstrument,
+              ),
+            }}
+            values={Object.values(Instrument)}
+            selectedIndex={Object.values(Instrument).findIndex(
+              (inst) => inst === state.jobsInstrument,
+            )}
             appearance={getDarkOrLightTheme(theme)}
-            onChange={(event) => {
+            onValueChange={(newVal) => {
               scrollViewRef.current.scrollTo({ x: 0, y: 0 });
               dispatch({
-                type: 'SET_SETTING',
-                payload: { jobsIndex: event.nativeEvent.selectedSegmentIndex },
+                type: PreferencesActions.SET_SETTING,
+                payload: { jobsInstrument: newVal },
               });
             }}
           />
@@ -197,7 +200,7 @@ export default function TopExcerpts() {
           topExcerpts.map((excerpt, index) => {
             const borderTop = index != 0 ? styles.buttonBorder : null;
             const excerptData = getExcerptData(
-              ['horn', 'trumpet', 'trombone', 'tuba'][state.jobsIndex],
+              state.jobsInstrument,
               excerpt.name,
             );
             if (excerptData && instrumentActive) {
@@ -245,10 +248,11 @@ export default function TopExcerpts() {
                       {isFavorite(
                         {
                           ...state,
-                          horn: state.jobsIndex == 0,
-                          trumpet: state.jobsIndex == 1,
-                          trombone: state.jobsIndex == 2,
-                          tuba: state.jobsIndex == 3,
+                          horn: state.jobsInstrument === Instrument.Horn,
+                          trumpet: state.jobsInstrument === Instrument.Trumpet,
+                          trombone:
+                            state.jobsInstrument === Instrument.Trombone,
+                          tuba: state.jobsInstrument === Instrument.Tuba,
                         },
                         excerptData.composerLast,
                         excerptData.name,

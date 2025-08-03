@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import { PreferencesContext } from '../../../Model/Preferences';
+import { Themes } from '../../../Enums/themes';
 
 /**
  * @function useTheme
@@ -12,8 +13,12 @@ import { PreferencesContext } from '../../../Model/Preferences';
  * @since 7/9/23
  * @version 2.0.0
  */
-export function useTheme() {
+export function useTheme(): Themes {
   const { state } = useContext(PreferencesContext);
 
-  return state?.renderedTheme;
+  const savedTheme = state?.renderedTheme;
+  if (savedTheme === undefined || savedTheme === null) {
+    return Themes.default;
+  }
+  return savedTheme;
 }

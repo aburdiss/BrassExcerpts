@@ -1,3 +1,4 @@
+import { Instrument } from '../../Enums/instrument';
 import { Preferences } from '../../Types/preferences';
 
 /**
@@ -21,10 +22,10 @@ export function isFavorite(
   composer: string,
   composition: string,
 ) {
-  const hornKey = 'horn' + composer + composition;
-  const trumpetKey = 'trumpet' + composer + composition;
-  const tromboneKey = 'trombone' + composer + composition;
-  const tubaKey = 'tuba' + composer + composition;
+  const hornKey = Instrument.Horn + composer + composition;
+  const trumpetKey = Instrument.Trumpet + composer + composition;
+  const tromboneKey = Instrument.Trombone + composer + composition;
+  const tubaKey = Instrument.Tuba + composer + composition;
 
   let keyArray = [];
   state?.horn && keyArray.push(hornKey);

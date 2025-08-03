@@ -4,6 +4,7 @@ import RNPickerSelect from 'react-native-picker-select';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import { useColors } from '../../../utils/customHooks/useColors/useColors';
+import { PreferencesActions } from '../../../Enums/preferencesActions';
 
 /**
  * @function PickerListItemIos
@@ -118,7 +119,7 @@ export default function PickerListItemIos({
             renderedTheme = Appearance.getColorScheme();
           }
           dispatch({
-            type: 'SET_SETTING',
+            type: PreferencesActions.SET_SETTING,
             payload: { theme: value, renderedTheme: renderedTheme },
           });
         }}

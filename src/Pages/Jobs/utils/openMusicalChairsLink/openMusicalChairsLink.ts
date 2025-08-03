@@ -1,4 +1,6 @@
 import { Linking } from 'react-native';
+import { Instrument } from '../../../../Enums/instrument';
+import { Preferences } from '../../../../Types/preferences';
 
 /**
  * @function openMusicalChairsLink
@@ -13,7 +15,7 @@ import { Linking } from 'react-native';
  * @since 7/9/23
  * @version 1.0.1
  */
-export function openMusicalChairsLink(state: Object) {
+export function openMusicalChairsLink(state: Preferences) {
   const musicalChairsHornLink =
     'https://www.musicalchairs.info/french-horn/jobs';
   const musicalChairsTrumpetLink =
@@ -22,12 +24,12 @@ export function openMusicalChairsLink(state: Object) {
     'https://www.musicalchairs.info/trombone/jobs';
   const musicalChairsTubaLink = 'https://www.musicalchairs.info/tuba/jobs';
 
-  let urlToOpen = [
-    musicalChairsHornLink,
-    musicalChairsTrumpetLink,
-    musicalChairsTromboneLink,
-    musicalChairsTubaLink,
-  ][state.jobsIndex];
+  let urlToOpen = {
+    [Instrument.Horn]: musicalChairsHornLink,
+    [Instrument.Trumpet]: musicalChairsTrumpetLink,
+    [Instrument.Trombone]: musicalChairsTromboneLink,
+    [Instrument.Tuba]: musicalChairsTubaLink,
+  }[state.jobsInstrument];
 
   Linking.openURL(urlToOpen).catch((err) =>
     console.warn("Couldn't load page", err),

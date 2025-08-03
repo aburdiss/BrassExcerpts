@@ -27,6 +27,8 @@ import ExcerptSection from './ExcerptSection/ExcerptSection';
 import YoutubeSection from './YoutubeSection/YoutubeSection';
 import MetaLabel from '../../Components/MetaLabel/MetaLabel';
 import ResourcesSection from './ResourcesSection/ResourcesSection';
+import { Instrument } from '../../Enums/instrument';
+import { PreferencesActions } from '../../Enums/preferencesActions';
 
 /**
  * @namespace ExcerptDetail
@@ -184,12 +186,12 @@ export default function ExcerptDetail() {
         return favorite != favoriteKey;
       });
       dispatch({
-        type: 'REMOVE_FROM_FAVORITES',
+        type: PreferencesActions.REMOVE_FROM_FAVORITES,
         payload: tempFavorites,
       });
     } else {
       dispatch({
-        type: 'ADD_TO_FAVORITES',
+        type: PreferencesActions.ADD_TO_FAVORITES,
         payload: [...state.favorites, favoriteKey],
       });
     }
@@ -314,28 +316,28 @@ export default function ExcerptDetail() {
       <View>
         <ExcerptSection
           instrumentExcerpt={hornExcerpt}
-          instrumentName={'horn'}
+          instrumentName={Instrument.Horn}
           addToFavorites={addToFavorites}
           shouldStartCollapsed={shouldStartCollapsed}
           item={item}
         />
         <ExcerptSection
           instrumentExcerpt={trumpetExcerpt}
-          instrumentName={'trumpet'}
+          instrumentName={Instrument.Trumpet}
           addToFavorites={addToFavorites}
           shouldStartCollapsed={shouldStartCollapsed}
           item={item}
         />
         <ExcerptSection
           instrumentExcerpt={tromboneExcerpt}
-          instrumentName={'trombone'}
+          instrumentName={Instrument.Trombone}
           addToFavorites={addToFavorites}
           shouldStartCollapsed={shouldStartCollapsed}
           item={item}
         />
         <ExcerptSection
           instrumentExcerpt={tubaExcerpt}
-          instrumentName={'tuba'}
+          instrumentName={Instrument.Tuba}
           addToFavorites={addToFavorites}
           shouldStartCollapsed={shouldStartCollapsed}
           item={item}

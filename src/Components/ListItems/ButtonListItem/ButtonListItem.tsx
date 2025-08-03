@@ -3,6 +3,7 @@ import { View, Pressable, Text, Alert, StyleSheet } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import { useColors } from '../../../utils/customHooks/useColors/useColors';
+import { PreferencesActions } from '../../../Enums/preferencesActions';
 
 /**
  * @function ButtonlistItem
@@ -67,7 +68,7 @@ export default function ButtonListItem({
                 text: 'Reset',
                 style: 'destructive',
                 onPress: () => {
-                  dispatch({ type: 'RESET_FAVORITES' });
+                  dispatch({ type: PreferencesActions.RESET_FAVORITES });
                 },
               },
             ],
@@ -85,7 +86,7 @@ export default function ButtonListItem({
                 text: 'Reset',
                 style: 'destructive',
                 onPress: () => {
-                  dispatch({ type: 'RESET_PREFERENCES' });
+                  dispatch({ type: PreferencesActions.RESET_PREFERENCES });
                 },
               },
             ],

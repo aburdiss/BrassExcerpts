@@ -42,7 +42,7 @@ describe('getInstrumentsSelected returns correct instruments', () => {
         trumpet: false,
         trombone: false,
         tuba: true,
-      } as Preferences;
+      };
       const expectedResult = 'Tuba';
       const instrumentsSelected = getInstrumentsSelected(mockState);
       expect(instrumentsSelected).toEqual(expectedResult);
