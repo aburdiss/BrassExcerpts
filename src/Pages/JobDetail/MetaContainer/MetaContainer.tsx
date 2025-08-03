@@ -4,8 +4,8 @@ import { useRoute } from '@react-navigation/core';
 
 import MetaLabel from '../../../Components/MetaLabel/MetaLabel';
 
-import { getDaysUntilDate } from '../../../utils/getDaysUntilDate/getDaysUntilDate';
-import { getDateFromString } from '../../../utils/getDateFromString/getDateFromString';
+import { getDaysUntilDate } from '../../../utils/getDaysUntilDate/getDaysUntilDate.ts/index.ios';
+import { getDateFromString } from '../../../utils/getDateFromString/getDateFromString.ts/index.ios';
 import { useColors } from '../../../utils/customHooks/useColors/useColors';
 
 /**

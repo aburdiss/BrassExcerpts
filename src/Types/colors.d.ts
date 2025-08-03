@@ -1,0 +1,26 @@
+export type Colors = {
+  alwaysBlack: string;
+  alwaysWhite: string;
+  background: string;
+  background2: string;
+  background3: string;
+  text: string;
+  textInverse: string;
+  systemGray: string;
+  systemGray2: string;
+  systemGray3: string;
+  systemGray4: string;
+  systemGray5: string;
+  systemGray6: string;
+  red: string;
+  orange: string;
+  yellow: string;
+  green: string;
+  teal: string;
+  blue: string;
+  indigo: string;
+  purple: string;
+  pink: string;
+  react: string;
+  javascript: string;
+};

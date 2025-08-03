@@ -1,12 +1,40 @@
 import React, { createContext, useReducer, useEffect } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Alert, Appearance } from 'react-native';
+import { Preferences } from '../Types/preferences';
+import { PreferencesActions } from '../Enums/preferencesActions';
+import { Themes } from '../Enums/themes';
 
 /**
  * @namespace Preferences
  * @description The Preferences logic that handles storing things in local
  * storage
  */
+
+const PREFERENCES_STORAGE_KEY = 'preferences';
+
+const initialPreferencesState = {
+  horn: true,
+  trumpet: true,
+  trombone: true,
+  tuba: true,
+  favorites: [],
+  jobsIndex: 0,
+  randomFavorites: 1,
+  randomHorn: true,
+  randomTrumpet: true,
+  randomTrombone: true,
+  randomTuba: true,
+  alwaysCollapse: false,
+  keepScreenOn: false,
+  theme: 'default',
+  renderedTheme: Appearance.getColorScheme(),
+};
+
+const PreferencesContext = createContext({
+  state: initialPreferencesState,
+  dispatch: (_: { type: PreferencesActions; payload: any }) => {},
+});
 
 /**
  * @function load
@@ -22,10 +50,10 @@ import { Alert, Appearance } from 'react-native';
  * @since 7/7/23
  * @version 1.0.2
  */
-export async function load() {
+export async function load(): Promise<Preferences | undefined> {
   try {
-    const jsonValue = await AsyncStorage.getItem('preferences');
-    return jsonValue != null ? JSON.parse(jsonValue) : null;
+    const jsonValue = await AsyncStorage.getItem(PREFERENCES_STORAGE_KEY);
+    return jsonValue != null ? JSON.parse(jsonValue) : undefined;
   } catch (e) {
     console.log(e);
   }
@@ -44,16 +72,14 @@ export async function load() {
  * @since 7/7/23
  * @version 1.0.1
  */
-export async function save(data) {
+export async function save(data: Preferences) {
   try {
     const jsonValue = JSON.stringify(data);
-    await AsyncStorage.setItem('preferences', jsonValue);
+    await AsyncStorage.setItem(PREFERENCES_STORAGE_KEY, jsonValue);
   } catch (e) {
     console.log(e);
   }
 }
-
-const PreferencesContext = createContext();
 
 /**
  * @function handleRandomFavoritesInstruments
@@ -71,7 +97,10 @@ const PreferencesContext = createContext();
  * @since 7/7/23
  * @version 1.0.0
  */
-function handleRandomFavoritesInstruments(state: Object, action: Object) {
+function handleRandomFavoritesInstruments(
+  state: Preferences,
+  action: { type: PreferencesActions; payload: any },
+) {
   if (action.payload.randomFavorites == 0) {
     // Favorites Only
     if (state.favorites.length == 0) {
@@ -142,7 +171,10 @@ function handleRandomFavoritesInstruments(state: Object, action: Object) {
  * @since 7/7/23
  * @version 1.0.0
  */
-function handleFavoritesUpdateInstruments(state: Object, action: Object) {
+function handleFavoritesUpdateInstruments(
+  state: Preferences,
+  action: { type: PreferencesActions; payload: any },
+) {
   let hasHorn = false;
   let hasTrumpet = false;
   let hasTrombone = false;
@@ -186,10 +218,13 @@ function handleFavoritesUpdateInstruments(state: Object, action: Object) {
  * @since 7/7/23
  * @version 1.1.1
  */
-const preferencesReducer = (state: Object, action: Object) => {
+const preferencesReducer = (
+  state: Preferences,
+  action: { type: PreferencesActions; payload: any },
+) => {
   // Deal with Random Favorites Instruments
   if (
-    action.type == 'SET_SETTING' &&
+    action.type == PreferencesActions.SET_SETTING &&
     Object.keys(action.payload)[0] == 'randomFavorites'
   ) {
     const newState = handleRandomFavoritesInstruments(state, action);
@@ -200,8 +235,8 @@ const preferencesReducer = (state: Object, action: Object) => {
   // Handle updating random instruments when favorites update
   if (
     state?.randomFavorites == 0 &&
-    (action.type == 'ADD_TO_FAVORITES' ||
-      action.type == 'REMOVE_FROM_FAVORITES')
+    (action.type == PreferencesActions.ADD_TO_FAVORITES ||
+      action.type == PreferencesActions.REMOVE_FROM_FAVORITES)
   ) {
     const newState = handleFavoritesUpdateInstruments(state, action);
     save(newState);
@@ -210,22 +245,22 @@ const preferencesReducer = (state: Object, action: Object) => {
 
   let newState;
   switch (action.type) {
-    case 'SET_ALL_PREFERENCES':
+    case PreferencesActions.SET_ALL_PREFERENCES:
       newState = { ...action.payload };
       break;
-    case 'SET_SETTING':
+    case PreferencesActions.SET_SETTING:
       newState = { ...state, ...action.payload };
       break;
-    case 'ADD_TO_FAVORITES':
+    case PreferencesActions.ADD_TO_FAVORITES:
       newState = { ...state, favorites: action.payload };
       break;
-    case 'REMOVE_FROM_FAVORITES':
+    case PreferencesActions.REMOVE_FROM_FAVORITES:
       newState = { ...state, favorites: action.payload };
       break;
-    case 'RESET_FAVORITES':
+    case PreferencesActions.RESET_FAVORITES:
       newState = { ...state, favorites: [] };
       break;
-    case 'RESET_PREFERENCES':
+    case PreferencesActions.RESET_PREFERENCES:
       newState = initialPreferencesState;
       break;
     default:
@@ -233,24 +268,6 @@ const preferencesReducer = (state: Object, action: Object) => {
   }
   save(newState);
   return newState;
-};
-
-const initialPreferencesState = {
-  horn: true,
-  trumpet: true,
-  trombone: true,
-  tuba: true,
-  favorites: [],
-  jobsIndex: 0,
-  randomFavorites: 1,
-  randomHorn: true,
-  randomTrumpet: true,
-  randomTrombone: true,
-  randomTuba: true,
-  alwaysCollapse: false,
-  keepScreenOn: false,
-  theme: 'default',
-  renderedTheme: Appearance.getColorScheme(),
 };
 
 /**
@@ -274,11 +291,14 @@ const initialPreferencesState = {
  *   </PreferencesProvider>
  */
 const PreferencesProvider = ({ children }: { children: any }) => {
-  const [state, dispatch] = useReducer(preferencesReducer);
+  const [state, dispatch] = useReducer(
+    preferencesReducer,
+    initialPreferencesState,
+  );
 
   useEffect(() => {
     load().then((data) => {
-      if (data !== null) {
+      if (data !== null && data !== undefined) {
         let tempData = { ...data, favorites: [...data.favorites] };
         // Ensure that newer portions of data exist
         if (!data.renderedTheme) {
@@ -288,16 +308,25 @@ const PreferencesProvider = ({ children }: { children: any }) => {
             tempData.renderedTheme = data.theme;
           } else {
             // Otherwise, use the system defaults
-            tempData.renderedTheme = Appearance.getColorScheme();
+            const defaultColorScheme = Appearance.getColorScheme() as Themes;
+            if (
+              defaultColorScheme !== undefined &&
+              defaultColorScheme !== null
+            ) {
+              tempData.renderedTheme = defaultColorScheme;
+            }
           }
         }
         if (!data.theme) {
-          tempData.theme = 'default';
+          tempData.theme = Themes.default;
         }
-        dispatch({ type: 'SET_ALL_PREFERENCES', payload: tempData });
+        dispatch({
+          type: PreferencesActions.SET_ALL_PREFERENCES,
+          payload: tempData,
+        });
       } else {
         dispatch({
-          type: 'SET_ALL_PREFERENCES',
+          type: PreferencesActions.SET_ALL_PREFERENCES,
           payload: initialPreferencesState,
         });
       }

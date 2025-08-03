@@ -18,7 +18,7 @@ import ConditionalExcerptLink from '../../Components/ConditionalExcerptLink/Cond
 
 import { PreferencesContext } from '../../Model/Preferences';
 import { useIdleScreen } from '../../utils/customHooks/useIdleScreen/useIdleScreen';
-import { getDateFromString } from '../../utils/getDateFromString/getDateFromString';
+import { getDateFromString } from '../../utils/getDateFromString/getDateFromString.ts/index.ios';
 import { useColors } from '../../utils/customHooks/useColors/useColors';
 import { getInstrumentsSelected } from '../../utils/getInstrumentsSelected/getInstrumentsSelected';
 import { capitalize } from '../../utils/captiatlize/capitalize';

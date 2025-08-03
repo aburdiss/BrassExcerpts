@@ -1,5 +1,5 @@
 // iOS System Colors
-export const colors = {
+const colors = {
   white: 'rgb(255, 255, 255)',
   systemGray6Light: 'rgb(242, 242, 247)',
   systemGray5Light: 'rgb(229, 229, 234)',
