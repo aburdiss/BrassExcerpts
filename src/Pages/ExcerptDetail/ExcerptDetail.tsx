@@ -29,6 +29,7 @@ import MetaLabel from '../../Components/MetaLabel/MetaLabel';
 import ResourcesSection from './ResourcesSection/ResourcesSection';
 import { Instrument } from '../../Enums/instrument';
 import { PreferencesActions } from '../../Enums/preferencesActions';
+import { ExcerptGroup } from '../../Types/excerpt';
 
 /**
  * @namespace ExcerptDetail
@@ -99,10 +100,18 @@ export default function ExcerptDetail() {
   const item = route.params;
 
   const { state, dispatch } = useContext(PreferencesContext);
-  const [hornExcerpt, setHornExcerpt] = useState(undefined);
-  const [trumpetExcerpt, setTrumpetExcerpt] = useState(undefined);
-  const [tromboneExcerpt, setTromboneExcerpt] = useState(undefined);
-  const [tubaExcerpt, setTubaExcerpt] = useState(undefined);
+  const [hornExcerpt, setHornExcerpt] = useState<ExcerptGroup | undefined>(
+    undefined,
+  );
+  const [trumpetExcerpt, setTrumpetExcerpt] = useState<
+    ExcerptGroup | undefined
+  >(undefined);
+  const [tromboneExcerpt, setTromboneExcerpt] = useState<
+    ExcerptGroup | undefined
+  >(undefined);
+  const [tubaExcerpt, setTubaExcerpt] = useState<ExcerptGroup | undefined>(
+    undefined,
+  );
 
   useEffect(
     /**
@@ -168,14 +177,14 @@ export default function ExcerptDetail() {
    * @memberof ExcerptDetail
    * @description Adds a selected excerpt/instrument combo to the user's
    * favorites.
-   * @param {string} instrument The current instrument attached to the excerpt,
+   * @param {Instrument} instrument The current instrument attached to the excerpt,
    * so that when added to the favorites it is only added for that instrument.
    *
    * @author Alexander Burdiss
    * @since 4/30/21
    * @version 1.0.0
    */
-  function addToFavorites(instrument) {
+  function addToFavorites(instrument?: Instrument) {
     let activeInstrument = instrument;
     if (getNumberOfInstruments(state) == 1) {
       activeInstrument = getActiveInstrument(state);

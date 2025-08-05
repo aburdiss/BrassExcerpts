@@ -9,6 +9,7 @@ import { PreferencesContext } from '../../../Model/Preferences';
 import { useColors } from '../../../utils/customHooks/useColors/useColors';
 import ExcerptCollapsible from './ExcerptCollapsible/ExcerptCollapsible';
 import { Instrument } from '../../../Enums/instrument';
+import { Composition } from '../../../Types/excerpt';
 
 /**
  * @function ExcerptSection
@@ -48,11 +49,11 @@ export default function ExcerptSection({
   shouldStartCollapsed,
   item,
 }: {
-  instrumentExcerpt: Object;
+  instrumentExcerpt: Composition;
   instrumentName: Instrument;
   addToFavorites: Function;
-  shouldStartCollapsed: Boolean;
-  item: Object;
+  shouldStartCollapsed: Function;
+  item: Composition;
 }) {
   const colors = useColors();
   const styles = StyleSheet.create({

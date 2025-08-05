@@ -17,6 +17,7 @@ import { getInstrumentsSelected } from '../../utils/getInstrumentsSelected/getIn
 import { getDarkOrLightTheme } from '../../utils/getDarkOrLightTheme/getDarkOrLightTheme';
 import { Instrument } from '../../Enums/instrument';
 import { PreferencesActions } from '../../Enums/preferencesActions';
+import { Composition } from '../../Types/excerpt';
 
 /**
  * @namespace TopExcerpts
@@ -132,7 +133,7 @@ export default function TopExcerpts() {
     },
   });
 
-  const scrollViewRef = useRef();
+  const scrollViewRef = useRef(null);
   const { state, dispatch } = useContext(PreferencesContext);
   const navigation = useNavigation();
 
@@ -148,13 +149,13 @@ export default function TopExcerpts() {
    * @since 9/19/21
    * @version 1.0.0
    */
-  function navigateToExcerptDetailPage(excerpt) {
+  function navigateToExcerptDetailPage(excerpt: Composition) {
     navigation.navigate('Excerpt Detail', excerpt);
   }
 
   const instrument = state.jobsInstrument;
   const activeInstruments = getInstrumentsSelected(state);
-  const instrumentActive = activeInstruments.includes(instrument);
+  const instrumentActive = activeInstruments?.includes(instrument);
 
   return (
     <View style={styles.container}>
@@ -197,7 +198,7 @@ export default function TopExcerpts() {
       <ScrollView style={styles.contentContainer} ref={scrollViewRef}>
         {loading && <Loading />}
         {topExcerpts &&
-          topExcerpts.map((excerpt, index) => {
+          topExcerpts.map((excerpt: Composition, index: number) => {
             const borderTop = index != 0 ? styles.buttonBorder : null;
             const excerptData = getExcerptData(
               state.jobsInstrument,

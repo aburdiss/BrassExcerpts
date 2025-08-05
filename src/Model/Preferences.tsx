@@ -30,7 +30,7 @@ const initialPreferencesState = {
   keepScreenOn: false,
   theme: Themes.default,
   renderedTheme: Appearance.getColorScheme(),
-};
+} as Preferences;
 
 const PreferencesContext = createContext({
   state: initialPreferencesState,

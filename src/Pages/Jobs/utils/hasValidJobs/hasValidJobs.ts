@@ -1,4 +1,4 @@
-import { getDateFromString } from '../../../../utils/getDateFromString/getDateFromString.ts/index.ios';
+import { getDateFromString } from '../../../../utils/getDateFromString/getDateFromString';
 
 /**
  * @function isJobValidReducer
