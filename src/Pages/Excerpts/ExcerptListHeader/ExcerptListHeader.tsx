@@ -7,6 +7,7 @@ import ExcerptListRow from '../ExcerptListRow/ExcerptListRow';
 import { PreferencesContext } from '../../../Model/Preferences';
 import { getInstrumentsSelected } from '../../../utils/getInstrumentsSelected/getInstrumentsSelected';
 import { useColors } from '../../../utils/customHooks/useColors/useColors';
+import { StackNavigation } from '../../../Types/navigation';
 
 /**
  * @namespace ExcerptListHeader
@@ -59,7 +60,7 @@ export default function ExcerptListHeader() {
     },
   });
 
-  const navigation = useNavigation();
+  const navigation = useNavigation<StackNavigation>();
   const { state } = useContext(PreferencesContext);
 
   const [instrumentsSelected, setInstrumentsSelected] = useState(

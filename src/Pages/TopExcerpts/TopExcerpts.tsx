@@ -18,6 +18,7 @@ import { getDarkOrLightTheme } from '../../utils/getDarkOrLightTheme/getDarkOrLi
 import { Instrument } from '../../Enums/instrument';
 import { PreferencesActions } from '../../Enums/preferencesActions';
 import { Composition } from '../../Types/excerpt';
+import { StackNavigation } from '../../Types/navigation';
 
 /**
  * @namespace TopExcerpts
@@ -135,7 +136,7 @@ export default function TopExcerpts() {
 
   const scrollViewRef = useRef(null);
   const { state, dispatch } = useContext(PreferencesContext);
-  const navigation = useNavigation();
+  const navigation = useNavigation<StackNavigation>();
 
   const { loading, topExcerpts } = useTopExcerpts(state.jobsInstrument);
 

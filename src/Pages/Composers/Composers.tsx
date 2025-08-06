@@ -5,6 +5,7 @@ import React from 'react';
 import { composers } from '../../Model/ComposerModel/ComposerModel';
 import { useColors } from '../../utils/customHooks/useColors/useColors';
 import ComposerListRow from './ComposerListRow/ComposerListRow';
+import { StackNavigation } from '../../Types/navigation';
 
 /**
  * @namespace Composers
@@ -33,7 +34,7 @@ export default function Composers() {
     },
   });
 
-  const navigation = useNavigation();
+  const navigation = useNavigation<StackNavigation>();
 
   /**
    * @function navigateToComposerDetail

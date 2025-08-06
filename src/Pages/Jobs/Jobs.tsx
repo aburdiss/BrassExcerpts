@@ -29,6 +29,7 @@ import { getDarkOrLightTheme } from '../../utils/getDarkOrLightTheme/getDarkOrLi
 import { getContrast } from '../../utils/getContrast/getContrast';
 import { Instrument } from '../../Enums/instrument';
 import { PreferencesActions } from '../../Enums/preferencesActions';
+import { StackNavigation } from '../../Types/navigation';
 
 /**
  * @namespace Jobs
@@ -130,7 +131,7 @@ export default function Jobs() {
   const { state, dispatch } = useContext(PreferencesContext);
   const [currentJobs, setCurrentJobs] = useState([]);
   const [currentSearchTerm, setCurrentSearchTerm] = useState('');
-  const navigation = useNavigation();
+  const navigation = useNavigation<StackNavigation>();
   const scrollViewRef = useRef(null);
 
   const queryPreferences = {

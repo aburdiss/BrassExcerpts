@@ -6,8 +6,9 @@ import Composers from '../../Pages/Composers/Composers';
 import ComposerDetail from '../../Pages/ComposerDetail/ComposerDetail';
 import ExcerptDetail from '../../Pages/ExcerptDetail/ExcerptDetail';
 import { useColors } from '../../utils/customHooks/useColors/useColors';
+import { RootStackParamList } from '../../Types/navigation';
 
-const Stack = createStackNavigator();
+const Stack = createStackNavigator<RootStackParamList>();
 
 /**
  * @function ComposersStack

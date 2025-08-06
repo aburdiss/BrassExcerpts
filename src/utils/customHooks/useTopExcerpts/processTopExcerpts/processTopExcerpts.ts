@@ -14,10 +14,12 @@ import { UseQueryResult } from 'react-query';
  * @since 7/9/23
  * @version 1.0.0
  */
-export function processTopExcerpts(jobs: UseQueryResult<Object[], unknown>) {
+export function processTopExcerpts(
+  jobs: UseQueryResult<{ excerpts: string[] }[], unknown>,
+) {
   let tempExcerptsArray = [];
 
-  let excerptsUsed = {};
+  let excerptsUsed = {} as Record<string, number>;
   if (jobs.isLoading || jobs.status == 'error' || jobs.data === undefined) {
     // Nothing
     return [];

@@ -10,7 +10,14 @@ import { useNavigation } from '@react-navigation/core';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import { useColors } from '../../../utils/customHooks/useColors/useColors';
+import { StackNavigation } from '../../../Types/navigation';
+import { Composition } from '../../../Types/excerpt';
 
+export type RandomExcerptHeaderProps = {
+  composition: Composition;
+  excerptIndex: number;
+  partIndex: number;
+};
 /**
  * @function RandomExcerptHeader
  * @memberof RandomExcerpt
@@ -34,11 +41,7 @@ export default function RandomExcerptHeader({
   composition,
   excerptIndex,
   partIndex,
-}: {
-  composition: Object;
-  excerptIndex: number;
-  partIndex: number;
-}) {
+}: RandomExcerptHeaderProps) {
   const colors = useColors();
   const styles = StyleSheet.create({
     composer: {
@@ -101,7 +104,7 @@ export default function RandomExcerptHeader({
     },
     pressableTextContainer: { flexDirection: 'row' },
   });
-  const navigation = useNavigation();
+  const navigation = useNavigation<StackNavigation>();
   const windowWidth = useWindowDimensions().width;
 
   return (

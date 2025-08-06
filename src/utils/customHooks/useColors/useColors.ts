@@ -32,6 +32,7 @@ export function useColors(): Colors {
 
   return (
     {
+      default: light,
       light: light,
       dark: dark,
       dracula: dracula,

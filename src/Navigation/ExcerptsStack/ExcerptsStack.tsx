@@ -11,8 +11,9 @@ import ExcerptDetail from '../../Pages/ExcerptDetail/ExcerptDetail';
 import RandomExcerpt from '../../Pages/RandomExcerpt/RandomExcerpt';
 import HeaderButton from '../../Components/HeaderButton/HeaderButton';
 import TopExcerpts from '../../Pages/TopExcerpts/TopExcerpts';
+import { RootStackParamList } from '../../Types/navigation';
 
-const Stack = createStackNavigator();
+const Stack = createStackNavigator<RootStackParamList>();
 
 /**
  * @function ExcerptsStack

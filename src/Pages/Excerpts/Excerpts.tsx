@@ -13,6 +13,7 @@ import { excerpts as trumpetExcerpts } from '../../Model/Excerpts/TrumpetExcerpt
 import { excerpts as tromboneExcerpts } from '../../Model/Excerpts/TromboneExcerpts';
 import { excerpts as tubaExcerpts } from '../../Model/Excerpts/TubaExcerpts';
 import { useColors } from '../../utils/customHooks/useColors/useColors';
+import { StackNavigation } from '../../Types/navigation';
 
 /**
  * @namespace Excerpts
@@ -37,7 +38,7 @@ import { useColors } from '../../utils/customHooks/useColors/useColors';
  */
 const Excerpts = () => {
   const { state } = useContext(PreferencesContext);
-  const navigation = useNavigation();
+  const navigation = useNavigation<StackNavigation>();
   const colors = useColors();
 
   const [listData, setListData] = useState([]);

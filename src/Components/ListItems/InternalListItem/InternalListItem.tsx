@@ -4,6 +4,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import { useNavigation } from '@react-navigation/native';
 import { useColors } from '../../../utils/customHooks/useColors/useColors';
+import { StackNavigation } from '../../../Types/navigation';
 
 /**
  * @function InternalListItem
@@ -42,7 +43,7 @@ export default function InternalListItem({ item }: { item: Object }) {
       paddingRight: 5,
     },
   });
-  const navigation = useNavigation();
+  const navigation = useNavigation<StackNavigation>();
 
   return (
     <Pressable

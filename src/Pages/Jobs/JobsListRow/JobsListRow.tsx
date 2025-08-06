@@ -3,6 +3,7 @@ import { View, Text, Pressable, StyleSheet, Platform } from 'react-native';
 import { useNavigation } from '@react-navigation/core';
 import { useColors } from '../../../utils/customHooks/useColors/useColors';
 import { getCountryFlagEmoji } from '../../../utils/getCountryFlagEmoji/getCountryFlagEmoji';
+import { StackNavigation } from '../../../Types/navigation';
 
 /**
  * @namespace JobsListRow
@@ -57,7 +58,7 @@ export default function JobsListRow({ job }: { job: Object }) {
       flexShrink: 10,
     },
   });
-  const navigation = useNavigation();
+  const navigation = useNavigation<StackNavigation>();
 
   /**
    * @function navigateToJobDetail

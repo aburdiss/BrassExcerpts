@@ -1,12 +1,15 @@
 import 'react-native';
 import React from 'react';
-import RandomExcerptHeaderComponent from './RandomExcerptHeader';
+import RandomExcerptHeaderComponent, {
+  RandomExcerptHeaderProps,
+} from './RandomExcerptHeader';
 import MockContext from '../../../../jest/MockContext';
 import MockNavigator from '../../../../jest/MockNavigator';
 
 import { render } from '@testing-library/react-native';
+import { Composition } from '../../../Types/excerpt';
 
-function RandomExcerptHeader(props) {
+function RandomExcerptHeader(props: RandomExcerptHeaderProps) {
   return (
     <MockContext>
       <MockNavigator>
@@ -33,7 +36,7 @@ describe('RandomExcerptHeader renders all text components', () => {
       },
     ],
     composer: testComposer,
-  };
+  } as Composition;
 
   test('composition', () => {
     const { queryByText } = render(

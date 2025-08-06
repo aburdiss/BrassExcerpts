@@ -10,7 +10,7 @@
  * @since 7/9/23
  * @version 1.0.0
  */
-export function shuffle<Type>(input: Type[]): Type {
+export function shuffle<Type>(input: Type[]): Type[] {
   const array = [...input];
   for (var i = array.length - 1; i > 0; i--) {
     // Generate random number

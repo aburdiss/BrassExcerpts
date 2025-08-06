@@ -10,8 +10,9 @@ import JobDetail from '../../Pages/JobDetail/JobDetail';
 import CreateCustomAudition from '../../Pages/CreateCustomAudition/CreateCustomAudition';
 import CustomAudition from '../../Pages/CustomAudition/CustomAudition';
 import { useColors } from '../../utils/customHooks/useColors/useColors';
+import { RootStackParamList } from '../../Types/navigation';
 
-const Stack = createStackNavigator();
+const Stack = createStackNavigator<RootStackParamList>();
 
 /**
  * @function JobsStack

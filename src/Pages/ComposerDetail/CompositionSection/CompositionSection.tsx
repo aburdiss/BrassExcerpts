@@ -7,6 +7,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { useColors } from '../../../utils/customHooks/useColors/useColors';
 import { isFavorite } from '../../../utils/isFavorite/isFavorite';
 import { PreferencesContext } from '../../../Model/Preferences';
+import { StackNavigation } from '../../../Types/navigation';
 
 /**
  * @function CompositionSection
@@ -63,7 +64,7 @@ export default function CompositionSection({
   });
 
   const { state } = useContext(PreferencesContext);
-  const navigation = useNavigation();
+  const navigation = useNavigation<StackNavigation>();
 
   return (
     <View style={styles.container}>

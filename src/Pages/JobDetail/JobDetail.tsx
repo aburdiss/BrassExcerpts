@@ -21,6 +21,7 @@ import { useIdleScreen } from '../../utils/customHooks/useIdleScreen/useIdleScre
 import { getDateFromString } from '../../utils/getDateFromString/getDateFromString';
 import { useColors } from '../../utils/customHooks/useColors/useColors';
 import { getInstrumentsSelected } from '../../utils/getInstrumentsSelected/getInstrumentsSelected';
+import { StackNavigation } from '../../Types/navigation';
 
 /**
  * @namespace JobDetail
@@ -99,7 +100,7 @@ export default function JobDetail() {
 
   const route = useRoute();
   const width = useWindowDimensions().width;
-  const navigation = useNavigation();
+  const navigation = useNavigation<StackNavigation>();
   const { state } = useContext(PreferencesContext);
 
   /**

@@ -6,8 +6,9 @@ import More from '../../Pages/More/More';
 import Licenses from '../../Pages/Licenses/Licenses';
 import Acknowledgements from '../../Pages/Acknowledgements/Acknowledgements';
 import { useColors } from '../../utils/customHooks/useColors/useColors';
+import { RootStackParamList } from '../../Types/navigation';
 
-const Stack = createStackNavigator();
+const Stack = createStackNavigator<RootStackParamList>();
 
 /**
  * @function MoreStack
