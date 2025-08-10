@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect, useRef } from 'react';
 import { ScrollView, StyleSheet, View, Text } from 'react-native';
 import SegmentedControl from '@react-native-segmented-control/segmented-control';
-import { useQuery } from 'react-query';
+import { useQuery } from '@tanstack/react-query';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import JobsListRow from '../Jobs/JobsListRow/JobsListRow';

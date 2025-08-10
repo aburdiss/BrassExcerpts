@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import SegmentedControl from '@react-native-segmented-control/segmented-control';
 import { useNavigation } from '@react-navigation/core';
-import { useQuery } from 'react-query';
+import { useQuery } from '@tanstack/react-query';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import JobsListRow from './JobsListRow/JobsListRow';

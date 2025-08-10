@@ -1,5 +1,5 @@
 // @ts-check
-import { useQuery } from 'react-query';
+import { useQuery } from '@tanstack/react-query';
 
 import { fetchInstrumentJobs } from '../../fetchInstrumentJobs/fetchInstrumentJobs';
 import { processTopExcerpts } from './processTopExcerpts/processTopExcerpts';
