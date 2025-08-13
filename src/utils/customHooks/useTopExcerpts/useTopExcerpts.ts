@@ -1,4 +1,3 @@
-// @ts-check
 import { useQuery } from '@tanstack/react-query';
 
 import { fetchInstrumentJobs } from '../../fetchInstrumentJobs/fetchInstrumentJobs';
@@ -34,26 +33,26 @@ export function useTopExcerpts(instrument: Instrument) {
     staleTime: 1000 * 60 * 60, // One Hour
   };
 
-  const hornJobs = useQuery(
-    'hornJobs',
-    () => fetchInstrumentJobs(internalHornJobsLink),
-    queryPreferences,
-  );
-  const trumpetJobs = useQuery(
-    'trumpetJobs',
-    () => fetchInstrumentJobs(internalTrumpetJobsLink),
-    queryPreferences,
-  );
-  const tromboneJobs = useQuery(
-    'tromboneJobs',
-    () => fetchInstrumentJobs(internalTromboneJobsLink),
-    queryPreferences,
-  );
-  const tubaJobs = useQuery(
-    'tubaJobs',
-    () => fetchInstrumentJobs(internalTubaJobsLink),
-    queryPreferences,
-  );
+  const hornJobs = useQuery({
+    queryKey: ['hornJobs'],
+    queryFn: () => fetchInstrumentJobs(internalHornJobsLink),
+    ...queryPreferences,
+  });
+  const trumpetJobs = useQuery({
+    queryKey: ['trumpetJobs'],
+    queryFn: () => fetchInstrumentJobs(internalTrumpetJobsLink),
+    ...queryPreferences,
+  });
+  const tromboneJobs = useQuery({
+    queryKey: ['tromboneJobs'],
+    queryFn: () => fetchInstrumentJobs(internalTromboneJobsLink),
+    ...queryPreferences,
+  });
+  const tubaJobs = useQuery({
+    queryKey: ['tubaJobs'],
+    queryFn: () => fetchInstrumentJobs(internalTubaJobsLink),
+    ...queryPreferences,
+  });
 
   let jobs = {
     [Instrument.Horn]: hornJobs,

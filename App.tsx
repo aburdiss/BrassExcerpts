@@ -4,7 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import { QueryClient, QueryClientProvider } from 'react-query';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 import { useColors } from './src/utils/customHooks/useColors/useColors';
 
@@ -55,7 +55,7 @@ function AppInside() {
             } else if (route.name === 'MoreStack') {
               iconName = 'options';
             }
-            return <Ionicons name={iconName} size={size} color={color} />;
+            return <Ionicons name={iconName ?? ''} size={size} color={color} />;
           },
           tabBarActiveTintColor: colors.green,
           tabBarInactiveTintColor: colors.systemGray,
