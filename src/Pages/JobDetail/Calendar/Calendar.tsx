@@ -58,7 +58,7 @@ export default function Calendar() {
           lines: [{ color: colors?.green ?? 'rgb(255, 255, 255)' }],
         },
         {
-          date: getDateFromString(route.params.closingDate),
+          date: getDateFromString(route.params?.closingDate),
           lines: [
             {
               color:

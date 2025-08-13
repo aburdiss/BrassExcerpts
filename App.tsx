@@ -35,6 +35,28 @@ const App = () => {
   );
 };
 
+function getTabBarIcon({
+  color,
+  size,
+  route,
+}: {
+  color: string;
+  size: number;
+  route: { name: string };
+}) {
+  let iconName = '';
+  if (route.name === 'ExcerptsStack') {
+    iconName = 'musical-notes';
+  } else if (route.name === 'ComposersStack') {
+    iconName = 'people-outline';
+  } else if (route.name === 'JobsStack') {
+    iconName = 'briefcase';
+  } else if (route.name === 'MoreStack') {
+    iconName = 'options';
+  }
+  return <Ionicons name={iconName} size={size} color={color} />;
+}
+
 function AppInside() {
   const colors = useColors();
   const theme = useTheme();
@@ -44,19 +66,8 @@ function AppInside() {
       <StatusBar barStyle={`${getDarkOrLightThemeInverse(theme)}-content`} />
       <Tab.Navigator
         screenOptions={({ route }) => ({
-          tabBarIcon: ({ color, size }) => {
-            let iconName;
-            if (route.name === 'ExcerptsStack') {
-              iconName = 'musical-notes';
-            } else if (route.name === 'ComposersStack') {
-              iconName = 'people-outline';
-            } else if (route.name === 'JobsStack') {
-              iconName = 'briefcase';
-            } else if (route.name === 'MoreStack') {
-              iconName = 'options';
-            }
-            return <Ionicons name={iconName ?? ''} size={size} color={color} />;
-          },
+          tabBarIcon: ({ color, size }) =>
+            getTabBarIcon({ color, size, route }),
           tabBarActiveTintColor: colors.green,
           tabBarInactiveTintColor: colors.systemGray,
           tabBarStyle: {
